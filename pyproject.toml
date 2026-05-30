@@ -1,0 +1,21 @@
+[project]
+name = "orion"
+version = "0.1.0"
+description = "Ontology Recognition and Inference from Open Narratives"
+requires-python = ">=3.10"
+dependencies = [
+  "spacy",
+  "rdflib",
+  "owlready2",
+  "pyshacl",
+  "owlrl",
+  "pydantic",
+  "typer",
+  "pyyaml",
+  "rapidfuzz",
+  "stanza",
+  "nltk",
+]
+
+[tool.uv]
+package = false
