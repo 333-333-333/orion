@@ -1,0 +1,264 @@
+{
+  "strategy": "rdf",
+  "format": "rdf",
+  "graph": {
+    "facts": [
+      {
+        "subject": "https://orion.local/resource/reader",
+        "predicate": "orion:request",
+        "object": "https://orion.local/resource/loan",
+        "evidence_span": {
+          "start_offset": 90,
+          "end_offset": 136
+        },
+        "confidence": 0.9
+      },
+      {
+        "subject": "https://orion.local/resource/librarian",
+        "predicate": "orion:record",
+        "object": "https://orion.local/resource/loan",
+        "evidence_span": {
+          "start_offset": 137,
+          "end_offset": 188
+        },
+        "confidence": 0.9
+      },
+      {
+        "subject": "https://orion.local/resource/book",
+        "predicate": "orion:have",
+        "object": "https://orion.local/resource/author",
+        "evidence_span": {
+          "start_offset": 51,
+          "end_offset": 89
+        },
+        "confidence": 0.9
+      },
+      {
+        "subject": "https://orion.local/resource/author",
+        "predicate": "orion:publish",
+        "object": "https://orion.local/resource/book",
+        "evidence_span": {
+          "start_offset": 189,
+          "end_offset": 241
+        },
+        "confidence": 0.9
+      },
+      {
+        "subject": "https://orion.local/resource/library",
+        "predicate": "orion:manage",
+        "object": "https://orion.local/resource/book",
+        "evidence_span": {
+          "start_offset": 0,
+          "end_offset": 50
+        },
+        "confidence": 0.9
+      }
+    ],
+    "instance_facts": [],
+    "type_assertions": [],
+    "subclass_facts": [],
+    "classes": [
+      {
+        "iri": "https://orion.local/resource/author",
+        "label": "Author"
+      },
+      {
+        "iri": "https://orion.local/resource/book",
+        "label": "Book"
+      },
+      {
+        "iri": "https://orion.local/resource/catalog",
+        "label": "Catalog"
+      },
+      {
+        "iri": "https://orion.local/resource/category",
+        "label": "Category"
+      },
+      {
+        "iri": "https://orion.local/resource/daily",
+        "label": "Daily"
+      },
+      {
+        "iri": "https://orion.local/resource/date",
+        "label": "Date"
+      },
+      {
+        "iri": "https://orion.local/resource/history",
+        "label": "History"
+      },
+      {
+        "iri": "https://orion.local/resource/librarian",
+        "label": "Librarian"
+      },
+      {
+        "iri": "https://orion.local/resource/library",
+        "label": "Library"
+      },
+      {
+        "iri": "https://orion.local/resource/loan",
+        "label": "Loan"
+      },
+      {
+        "iri": "https://orion.local/resource/reader",
+        "label": "Reader"
+      },
+      {
+        "iri": "https://orion.local/resource/return",
+        "label": "Return"
+      },
+      {
+        "iri": "https://orion.local/resource/science",
+        "label": "Science"
+      }
+    ],
+    "object_property_schema": [
+      {
+        "predicate": "orion:request",
+        "domain": "https://orion.local/resource/reader",
+        "range": "https://orion.local/resource/loan"
+      },
+      {
+        "predicate": "orion:record",
+        "domain": "https://orion.local/resource/librarian",
+        "range": "https://orion.local/resource/loan"
+      },
+      {
+        "predicate": "orion:have",
+        "domain": "https://orion.local/resource/book",
+        "range": "https://orion.local/resource/author"
+      },
+      {
+        "predicate": "orion:publish",
+        "domain": "https://orion.local/resource/author",
+        "range": "https://orion.local/resource/book"
+      },
+      {
+        "predicate": "orion:manage",
+        "domain": "https://orion.local/resource/library",
+        "range": "https://orion.local/resource/book"
+      }
+    ],
+    "restrictions": [
+      {
+        "domain": "https://orion.local/resource/reader",
+        "property": "orion:request",
+        "range": "https://orion.local/resource/loan"
+      },
+      {
+        "domain": "https://orion.local/resource/librarian",
+        "property": "orion:record",
+        "range": "https://orion.local/resource/loan"
+      },
+      {
+        "domain": "https://orion.local/resource/book",
+        "property": "orion:have",
+        "range": "https://orion.local/resource/author"
+      },
+      {
+        "domain": "https://orion.local/resource/author",
+        "property": "orion:publish",
+        "range": "https://orion.local/resource/book"
+      },
+      {
+        "domain": "https://orion.local/resource/library",
+        "property": "orion:manage",
+        "range": "https://orion.local/resource/book"
+      }
+    ],
+    "schema": {
+      "classes": [
+        {
+          "iri": "https://orion.local/resource/author",
+          "label": "Author"
+        },
+        {
+          "iri": "https://orion.local/resource/book",
+          "label": "Book"
+        },
+        {
+          "iri": "https://orion.local/resource/catalog",
+          "label": "Catalog"
+        },
+        {
+          "iri": "https://orion.local/resource/category",
+          "label": "Category"
+        },
+        {
+          "iri": "https://orion.local/resource/daily",
+          "label": "Daily"
+        },
+        {
+          "iri": "https://orion.local/resource/date",
+          "label": "Date"
+        },
+        {
+          "iri": "https://orion.local/resource/history",
+          "label": "History"
+        },
+        {
+          "iri": "https://orion.local/resource/librarian",
+          "label": "Librarian"
+        },
+        {
+          "iri": "https://orion.local/resource/library",
+          "label": "Library"
+        },
+        {
+          "iri": "https://orion.local/resource/loan",
+          "label": "Loan"
+        },
+        {
+          "iri": "https://orion.local/resource/reader",
+          "label": "Reader"
+        },
+        {
+          "iri": "https://orion.local/resource/return",
+          "label": "Return"
+        },
+        {
+          "iri": "https://orion.local/resource/science",
+          "label": "Science"
+        }
+      ],
+      "object_properties": [
+        {
+          "iri": "orion:request",
+          "label": "Request",
+          "domain": "https://orion.local/resource/reader",
+          "range": "https://orion.local/resource/loan"
+        },
+        {
+          "iri": "orion:record",
+          "label": "Record",
+          "domain": "https://orion.local/resource/librarian",
+          "range": "https://orion.local/resource/loan"
+        },
+        {
+          "iri": "orion:have",
+          "label": "Have",
+          "domain": "https://orion.local/resource/book",
+          "range": "https://orion.local/resource/author"
+        },
+        {
+          "iri": "orion:publish",
+          "label": "Publish",
+          "domain": "https://orion.local/resource/author",
+          "range": "https://orion.local/resource/book"
+        },
+        {
+          "iri": "orion:manage",
+          "label": "Manage",
+          "domain": "https://orion.local/resource/library",
+          "range": "https://orion.local/resource/book"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "source": {
+      "kind": "string",
+      "start_offset": 0,
+      "end_offset": 295
+    }
+  }
+}

@@ -112,3 +112,19 @@ The same input, same config, and same pinned dependencies must produce the same 
 - YAML is not the main configuration format.
 - CLI usage is not part of the contract.
 - ORION is meant to be embedded in other Python systems.
+
+
+## Developer static linter
+
+Optional static check for Python source:
+
+```bash
+python3 src/tooling/python_ast_linter.py src tests
+```
+
+Rules:
+- function/async function longer than 30 lines
+- control-flow depth greater than 4
+- missing docstring in function/async function
+
+Exit code is non-zero when warnings exist.

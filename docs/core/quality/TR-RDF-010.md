@@ -1,0 +1,7 @@
+# TR-RDF-010 WebVOWL Visual Contract Anti-Noise RED
+
+- UC-SMOKE-001 AF-19 -> test_infosec_3k_webvowl_visual_contract_reified_statements_must_be_named_and_meaningful_red_smoke
+- FUN-SMOKE-001 AC-21 -> test_infosec_3k_webvowl_visual_contract_reified_statements_must_be_named_and_meaningful_red_smoke
+- CON-SMOKE-RDF-017 AC-1 -> test_infosec_3k_webvowl_visual_contract_reified_statements_must_be_named_and_meaningful_red_smoke
+- BR-SMOKE-049 -> test_infosec_3k_webvowl_visual_contract_reified_statements_must_be_named_and_meaningful_red_smoke
+- BR-SMOKE-050 -> test_infosec_3k_webvowl_visual_contract_reified_statements_must_be_named_and_meaningful_red_smoke

@@ -1,0 +1,6 @@
+The central library manages books and daily loans.
+Each book has an author and a catalog.
+A reader requests a loan of an available book.
+The librarian records the loan and the return date.
+The authors publish books about history and science.
+The catalog links books with authors and categories.

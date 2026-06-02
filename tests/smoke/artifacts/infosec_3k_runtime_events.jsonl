@@ -1,0 +1,93 @@
+{"phase": "input_intake", "event_type": "started", "status": "started", "metadata": {"safe": true}}
+{"phase": "input_intake", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "use_case_id": "UC-002", "requirement_id": "FUN-014", "metadata": {"safe": true}}
+{"phase": "preprocessing", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "preprocessing", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "sentence_segmentation", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "sentence_segmentation", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "tokenization", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "tokenization", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "linguistic_annotation", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "linguistic_annotation", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "entity_extraction", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "entity_extraction", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "concept_extraction", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "concept_extraction", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "coreference_resolution", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "coreference_resolution", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "relation_extraction", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "relation_extraction", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "triple_extraction", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "triple_extraction", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "taxonomy_induction", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "taxonomy_induction", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "type_assertion", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "type_assertion", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "semantic_quality", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "semantic_quality", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "output_generation", "event_type": "started", "status": "started", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "output_generation", "event_type": "completed", "status": "completed", "source_context_id": "312c5295fd560317974ddbb6d9f94a86b751b0b6b2efb813ed73496d6563d57b", "metadata": {"safe": true}}
+{"phase": "input_intake", "event_type": "started", "status": "started", "metadata": {"safe": true}}
+{"phase": "input_intake", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "use_case_id": "UC-002", "requirement_id": "FUN-014", "metadata": {"safe": true}}
+{"phase": "preprocessing", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "preprocessing", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "sentence_segmentation", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "sentence_segmentation", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "tokenization", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "tokenization", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "linguistic_annotation", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "linguistic_annotation", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "entity_extraction", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "entity_extraction", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "concept_extraction", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "concept_extraction", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "coreference_resolution", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "coreference_resolution", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "relation_extraction", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "relation_extraction", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "triple_extraction", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "triple_extraction", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "taxonomy_induction", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "taxonomy_induction", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "type_assertion", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "type_assertion", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "semantic_quality", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "semantic_quality", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "output_generation", "event_type": "started", "status": "started", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "output_generation", "event_type": "completed", "status": "completed", "source_context_id": "242891ddbe56782d3d7d76ab46a9ab06dab31fc0aa03e7651527a74f983721cc", "metadata": {"safe": true}}
+{"phase": "input_intake", "event_type": "started", "status": "started", "metadata": {"safe": true}}
+{"phase": "input_intake", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "use_case_id": "UC-002", "requirement_id": "FUN-014", "metadata": {"safe": true}}
+{"phase": "preprocessing", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "preprocessing", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "sentence_segmentation", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "sentence_segmentation", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "tokenization", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "tokenization", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "linguistic_annotation", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "linguistic_annotation", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "entity_extraction", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "entity_extraction", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "concept_extraction", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "concept_extraction", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "coreference_resolution", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "coreference_resolution", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "relation_extraction", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "relation_extraction", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "triple_extraction", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "triple_extraction", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "taxonomy_induction", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "taxonomy_induction", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "type_assertion", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "type_assertion", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "semantic_quality", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "semantic_quality", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "output_generation", "event_type": "started", "status": "started", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "output_generation", "event_type": "completed", "status": "completed", "source_context_id": "1e88131d56e65458639b7758a0c741eb484acba0b42a3e8fa821046e3fa1c4ec", "metadata": {"safe": true}}
+{"phase": "input_intake", "event_type": "started", "status": "started", "metadata": {"safe": true}}
+{"phase": "input_intake", "event_type": "completed", "status": "completed", "source_context_id": "ea2b4bb192afbfd01348690fcb4b42038fa2ea2557487d1b3bd5853d40da9d20", "use_case_id": "UC-002", "requirement_id": "FUN-014", "metadata": {"safe": true}}
+{"phase": "preprocessing", "event_type": "started", "status": "started", "source_context_id": "ea2b4bb192afbfd01348690fcb4b42038fa2ea2557487d1b3bd5853d40da9d20", "metadata": {"safe": true}}
+{"phase": "preprocessing", "event_type": "completed", "status": "completed", "source_context_id": "ea2b4bb192afbfd01348690fcb4b42038fa2ea2557487d1b3bd5853d40da9d20", "metadata": {"safe": true}}
+{"phase": "sentence_segmentation", "event_type": "started", "status": "started", "source_context_id": "ea2b4bb192afbfd01348690fcb4b42038fa2ea2557487d1b3bd5853d40da9d20", "metadata": {"safe": true}}
+{"phase": "sentence_segmentation", "event_type": "completed", "status": "completed", "source_context_id": "ea2b4bb192afbfd01348690fcb4b42038fa2ea2557487d1b3bd5853d40da9d20", "metadata": {"safe": true}}
+{"phase": "tokenization", "event_type": "started", "status": "started", "source_context_id": "ea2b4bb192afbfd01348690fcb4b42038fa2ea2557487d1b3bd5853d40da9d20", "metadata": {"safe": true}}
+{"phase": "tokenization", "event_type": "completed", "status": "completed", "source_context_id": "ea2b4bb192afbfd01348690fcb4b42038fa2ea2557487d1b3bd5853d40da9d20", "metadata": {"safe": true}}
+{"phase": "linguistic_annotation", "event_type": "started", "status": "started", "source_context_id": "ea2b4bb192afbfd01348690fcb4b42038fa2ea2557487d1b3bd5853d40da9d20", "metadata": {"safe": true}}
