@@ -1,0 +1,727 @@
+{
+  "classes": [
+    {
+      "comments": [
+        "Access modification changes the permissions assigned to an identity."
+      ],
+      "iri": "orion:AccessModification",
+      "label": "AccessModification"
+    },
+    {
+      "iri": "orion:AccessRisk",
+      "label": "AccessRisk"
+    },
+    {
+      "iri": "orion:Account",
+      "label": "Account"
+    },
+    {
+      "iri": "orion:ActionOverAResource",
+      "label": "ActionOverAResource"
+    },
+    {
+      "iri": "orion:ChangeAccessWhenAPersonChangeRole",
+      "label": "ChangeAccessWhenAPersonChangeRole"
+    },
+    {
+      "iri": "orion:CollectionOfIdentities",
+      "label": "CollectionOfIdentities"
+    },
+    {
+      "iri": "orion:CollectionOfPermissions",
+      "label": "CollectionOfPermissions"
+    },
+    {
+      "iri": "orion:CommonPermission",
+      "label": "CommonPermission"
+    },
+    {
+      "iri": "orion:CreateAccessForANewEmployee",
+      "label": "CreateAccessForANewEmployee"
+    },
+    {
+      "iri": "orion:Credential",
+      "label": "Credential"
+    },
+    {
+      "comments": [
+        "Dormant account access is a type of access risk."
+      ],
+      "iri": "orion:DormantAccountAccess",
+      "label": "DormantAccountAccess"
+    },
+    {
+      "comments": [
+        "Excessive permission is a type of access risk."
+      ],
+      "iri": "orion:ExcessivePermission",
+      "label": "ExcessivePermission"
+    },
+    {
+      "comments": [
+        "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials."
+      ],
+      "iri": "orion:IdentityAnd",
+      "label": "IdentityAnd"
+    },
+    {
+      "comments": [
+        "The identity management system stores identity records."
+      ],
+      "iri": "orion:IdentityManagementSystem",
+      "label": "IdentityManagementSystem"
+    },
+    {
+      "iri": "orion:IdentityRecord",
+      "label": "IdentityRecord"
+    },
+    {
+      "comments": [
+        "A joiner process creates access for a new employee."
+      ],
+      "iri": "orion:Joiner",
+      "label": "Joiner"
+    },
+    {
+      "comments": [
+        "A leaver process removes access when a person leaves the organization."
+      ],
+      "iri": "orion:Leaver",
+      "label": "Leaver"
+    },
+    {
+      "iri": "orion:ManagementControlTheLifecycleOfIdentities",
+      "label": "ManagementControlTheLifecycleOfIdentities"
+    },
+    {
+      "comments": [
+        "A mover process changes access when a person changes role."
+      ],
+      "iri": "orion:Mover",
+      "label": "Mover"
+    },
+    {
+      "iri": "orion:NewUserAccount",
+      "label": "NewUserAccount"
+    },
+    {
+      "comments": [
+        "Orphaned account access is a type of access risk."
+      ],
+      "iri": "orion:OrphanedAccountAccess",
+      "label": "OrphanedAccountAccess"
+    },
+    {
+      "comments": [
+        "A permission grants an action over a resource."
+      ],
+      "iri": "orion:Permission",
+      "label": "Permission"
+    },
+    {
+      "iri": "orion:PermissionAssignedToAnIdentity",
+      "label": "PermissionAssignedToAnIdentity"
+    },
+    {
+      "comments": [
+        "A permission review verifies whether assigned permissions remain necessary."
+      ],
+      "iri": "orion:PermissionReview",
+      "label": "PermissionReview"
+    },
+    {
+      "iri": "orion:PreventOnePersonFromControllingIncompatibleActivity",
+      "label": "PreventOnePersonFromControllingIncompatibleActivity"
+    },
+    {
+      "iri": "orion:RemoveAccessForAUser",
+      "label": "RemoveAccessForAUser"
+    },
+    {
+      "iri": "orion:RemoveAccessWhenAPersonLeaveTheOrganization",
+      "label": "RemoveAccessWhenAPersonLeaveTheOrganization"
+    },
+    {
+      "comments": [
+        "A role is a collection of permissions."
+      ],
+      "iri": "orion:Role",
+      "label": "Role"
+    },
+    {
+      "comments": [
+        "A role assignment links a role to an identity."
+      ],
+      "iri": "orion:RoleAssignment",
+      "label": "RoleAssignment"
+    },
+    {
+      "iri": "orion:RoleToAnIdentity",
+      "label": "RoleToAnIdentity"
+    },
+    {
+      "comments": [
+        "Segregation of duties prevents one person from controlling incompatible activities."
+      ],
+      "iri": "orion:SegregationOf",
+      "label": "SegregationOf"
+    },
+    {
+      "comments": [
+        "User deprovisioning disables or removes access for a user who no longer requires it."
+      ],
+      "iri": "orion:UserDeprovisioning",
+      "label": "UserDeprovisioning"
+    },
+    {
+      "comments": [
+        "A user group is a collection of identities that share common permissions."
+      ],
+      "iri": "orion:UserGroup",
+      "label": "UserGroup"
+    },
+    {
+      "comments": [
+        "User provisioning creates a new user account."
+      ],
+      "iri": "orion:UserProvisioning",
+      "label": "UserProvisioning"
+    },
+    {
+      "iri": "orion:WhetherAssignedPermissionRemainNecessary",
+      "label": "WhetherAssignedPermissionRemainNecessary"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:IdentityAnd",
+      "predicate": "orion:access",
+      "range": "orion:Account"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "predicate": "orion:access",
+      "range": "orion:Credential"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "predicate": "orion:access",
+      "range": "orion:ManagementControlTheLifecycleOfIdentities"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "predicate": "orion:access",
+      "range": "orion:Permission"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "predicate": "orion:access",
+      "range": "orion:Role"
+    },
+    {
+      "domain": "orion:AccessModification",
+      "predicate": "orion:changes",
+      "range": "orion:PermissionAssignedToAnIdentity"
+    },
+    {
+      "domain": "orion:UserProvisioning",
+      "predicate": "orion:creates",
+      "range": "orion:NewUserAccount"
+    },
+    {
+      "domain": "orion:UserDeprovisioning",
+      "predicate": "orion:disables",
+      "range": "orion:RemoveAccessForAUser"
+    },
+    {
+      "domain": "orion:SegregationOf",
+      "predicate": "orion:duties",
+      "range": "orion:PreventOnePersonFromControllingIncompatibleActivity"
+    },
+    {
+      "domain": "orion:Permission",
+      "predicate": "orion:grants",
+      "range": "orion:ActionOverAResource"
+    },
+    {
+      "domain": "orion:RoleAssignment",
+      "predicate": "orion:links",
+      "range": "orion:RoleToAnIdentity"
+    },
+    {
+      "domain": "orion:Joiner",
+      "predicate": "orion:process",
+      "range": "orion:CreateAccessForANewEmployee"
+    },
+    {
+      "domain": "orion:Leaver",
+      "predicate": "orion:process",
+      "range": "orion:RemoveAccessWhenAPersonLeaveTheOrganization"
+    },
+    {
+      "domain": "orion:Mover",
+      "predicate": "orion:process",
+      "range": "orion:ChangeAccessWhenAPersonChangeRole"
+    },
+    {
+      "domain": "orion:UserGroup",
+      "predicate": "orion:shares",
+      "range": "orion:CommonPermission"
+    },
+    {
+      "domain": "orion:IdentityManagementSystem",
+      "predicate": "orion:stores",
+      "range": "orion:IdentityRecord"
+    },
+    {
+      "domain": "orion:PermissionReview",
+      "predicate": "orion:verifies",
+      "range": "orion:WhetherAssignedPermissionRemainNecessary"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-12e2bcca5206eea3",
+      "claim-4a71c07e2b2d65fd",
+      "claim-f310d29049939301",
+      "claim-3f741a8eca83f0d9",
+      "claim-651d62061fa289cd",
+      "claim-ea5468acac6b2cf9",
+      "claim-79c5d8d1f292a51c",
+      "claim-34a51ff00dfc08f1",
+      "claim-901077b593488f90",
+      "claim-ddd68b752ec11d8b",
+      "claim-60ebed41d3ab487f",
+      "claim-f9b06c5e910ceb14",
+      "claim-d9ebb0335760c4fb",
+      "claim-ff00607e38b629f9",
+      "claim-f21806c0e7744930",
+      "claim-2553e3e5e54a2411",
+      "claim-53bbc837874f8085",
+      "claim-767dc74c137f2f4f",
+      "claim-c8f09f0ef9bd45f2",
+      "claim-5d112df75f79fb95",
+      "claim-485d06fe2b7eebe6",
+      "claim-37062f2dfc43d425",
+      "claim-2056ab50980a2fc3",
+      "claim-f8f7e33293db457b"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:IdentityAnd",
+      "property": "orion:access",
+      "range": "orion:Account"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "property": "orion:access",
+      "range": "orion:Credential"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "property": "orion:access",
+      "range": "orion:ManagementControlTheLifecycleOfIdentities"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "property": "orion:access",
+      "range": "orion:Permission"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "property": "orion:access",
+      "range": "orion:Role"
+    },
+    {
+      "domain": "orion:AccessModification",
+      "property": "orion:changes",
+      "range": "orion:PermissionAssignedToAnIdentity"
+    },
+    {
+      "domain": "orion:UserProvisioning",
+      "property": "orion:creates",
+      "range": "orion:NewUserAccount"
+    },
+    {
+      "domain": "orion:UserDeprovisioning",
+      "property": "orion:disables",
+      "range": "orion:RemoveAccessForAUser"
+    },
+    {
+      "domain": "orion:SegregationOf",
+      "property": "orion:duties",
+      "range": "orion:PreventOnePersonFromControllingIncompatibleActivity"
+    },
+    {
+      "domain": "orion:Permission",
+      "property": "orion:grants",
+      "range": "orion:ActionOverAResource"
+    },
+    {
+      "domain": "orion:RoleAssignment",
+      "property": "orion:links",
+      "range": "orion:RoleToAnIdentity"
+    },
+    {
+      "domain": "orion:Joiner",
+      "property": "orion:process",
+      "range": "orion:CreateAccessForANewEmployee"
+    },
+    {
+      "domain": "orion:Leaver",
+      "property": "orion:process",
+      "range": "orion:RemoveAccessWhenAPersonLeaveTheOrganization"
+    },
+    {
+      "domain": "orion:Mover",
+      "property": "orion:process",
+      "range": "orion:ChangeAccessWhenAPersonChangeRole"
+    },
+    {
+      "domain": "orion:UserGroup",
+      "property": "orion:shares",
+      "range": "orion:CommonPermission"
+    },
+    {
+      "domain": "orion:IdentityManagementSystem",
+      "property": "orion:stores",
+      "range": "orion:IdentityRecord"
+    },
+    {
+      "domain": "orion:PermissionReview",
+      "property": "orion:verifies",
+      "range": "orion:WhetherAssignedPermissionRemainNecessary"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "comments": [
+          "Access modification changes the permissions assigned to an identity."
+        ],
+        "iri": "orion:AccessModification",
+        "label": "AccessModification"
+      },
+      {
+        "iri": "orion:AccessRisk",
+        "label": "AccessRisk"
+      },
+      {
+        "iri": "orion:Account",
+        "label": "Account"
+      },
+      {
+        "iri": "orion:ActionOverAResource",
+        "label": "ActionOverAResource"
+      },
+      {
+        "iri": "orion:ChangeAccessWhenAPersonChangeRole",
+        "label": "ChangeAccessWhenAPersonChangeRole"
+      },
+      {
+        "iri": "orion:CollectionOfIdentities",
+        "label": "CollectionOfIdentities"
+      },
+      {
+        "iri": "orion:CollectionOfPermissions",
+        "label": "CollectionOfPermissions"
+      },
+      {
+        "iri": "orion:CommonPermission",
+        "label": "CommonPermission"
+      },
+      {
+        "iri": "orion:CreateAccessForANewEmployee",
+        "label": "CreateAccessForANewEmployee"
+      },
+      {
+        "iri": "orion:Credential",
+        "label": "Credential"
+      },
+      {
+        "comments": [
+          "Dormant account access is a type of access risk."
+        ],
+        "iri": "orion:DormantAccountAccess",
+        "label": "DormantAccountAccess"
+      },
+      {
+        "comments": [
+          "Excessive permission is a type of access risk."
+        ],
+        "iri": "orion:ExcessivePermission",
+        "label": "ExcessivePermission"
+      },
+      {
+        "comments": [
+          "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials."
+        ],
+        "iri": "orion:IdentityAnd",
+        "label": "IdentityAnd"
+      },
+      {
+        "comments": [
+          "The identity management system stores identity records."
+        ],
+        "iri": "orion:IdentityManagementSystem",
+        "label": "IdentityManagementSystem"
+      },
+      {
+        "iri": "orion:IdentityRecord",
+        "label": "IdentityRecord"
+      },
+      {
+        "comments": [
+          "A joiner process creates access for a new employee."
+        ],
+        "iri": "orion:Joiner",
+        "label": "Joiner"
+      },
+      {
+        "comments": [
+          "A leaver process removes access when a person leaves the organization."
+        ],
+        "iri": "orion:Leaver",
+        "label": "Leaver"
+      },
+      {
+        "iri": "orion:ManagementControlTheLifecycleOfIdentities",
+        "label": "ManagementControlTheLifecycleOfIdentities"
+      },
+      {
+        "comments": [
+          "A mover process changes access when a person changes role."
+        ],
+        "iri": "orion:Mover",
+        "label": "Mover"
+      },
+      {
+        "iri": "orion:NewUserAccount",
+        "label": "NewUserAccount"
+      },
+      {
+        "comments": [
+          "Orphaned account access is a type of access risk."
+        ],
+        "iri": "orion:OrphanedAccountAccess",
+        "label": "OrphanedAccountAccess"
+      },
+      {
+        "comments": [
+          "A permission grants an action over a resource."
+        ],
+        "iri": "orion:Permission",
+        "label": "Permission"
+      },
+      {
+        "iri": "orion:PermissionAssignedToAnIdentity",
+        "label": "PermissionAssignedToAnIdentity"
+      },
+      {
+        "comments": [
+          "A permission review verifies whether assigned permissions remain necessary."
+        ],
+        "iri": "orion:PermissionReview",
+        "label": "PermissionReview"
+      },
+      {
+        "iri": "orion:PreventOnePersonFromControllingIncompatibleActivity",
+        "label": "PreventOnePersonFromControllingIncompatibleActivity"
+      },
+      {
+        "iri": "orion:RemoveAccessForAUser",
+        "label": "RemoveAccessForAUser"
+      },
+      {
+        "iri": "orion:RemoveAccessWhenAPersonLeaveTheOrganization",
+        "label": "RemoveAccessWhenAPersonLeaveTheOrganization"
+      },
+      {
+        "comments": [
+          "A role is a collection of permissions."
+        ],
+        "iri": "orion:Role",
+        "label": "Role"
+      },
+      {
+        "comments": [
+          "A role assignment links a role to an identity."
+        ],
+        "iri": "orion:RoleAssignment",
+        "label": "RoleAssignment"
+      },
+      {
+        "iri": "orion:RoleToAnIdentity",
+        "label": "RoleToAnIdentity"
+      },
+      {
+        "comments": [
+          "Segregation of duties prevents one person from controlling incompatible activities."
+        ],
+        "iri": "orion:SegregationOf",
+        "label": "SegregationOf"
+      },
+      {
+        "comments": [
+          "User deprovisioning disables or removes access for a user who no longer requires it."
+        ],
+        "iri": "orion:UserDeprovisioning",
+        "label": "UserDeprovisioning"
+      },
+      {
+        "comments": [
+          "A user group is a collection of identities that share common permissions."
+        ],
+        "iri": "orion:UserGroup",
+        "label": "UserGroup"
+      },
+      {
+        "comments": [
+          "User provisioning creates a new user account."
+        ],
+        "iri": "orion:UserProvisioning",
+        "label": "UserProvisioning"
+      },
+      {
+        "iri": "orion:WhetherAssignedPermissionRemainNecessary",
+        "label": "WhetherAssignedPermissionRemainNecessary"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:IdentityAnd",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:Account"
+      },
+      {
+        "domain": "orion:IdentityAnd",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:Credential"
+      },
+      {
+        "domain": "orion:IdentityAnd",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:ManagementControlTheLifecycleOfIdentities"
+      },
+      {
+        "domain": "orion:IdentityAnd",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:Permission"
+      },
+      {
+        "domain": "orion:IdentityAnd",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:Role"
+      },
+      {
+        "domain": "orion:AccessModification",
+        "iri": "orion:changes",
+        "label": "Changes",
+        "range": "orion:PermissionAssignedToAnIdentity"
+      },
+      {
+        "domain": "orion:UserProvisioning",
+        "iri": "orion:creates",
+        "label": "Creates",
+        "range": "orion:NewUserAccount"
+      },
+      {
+        "domain": "orion:UserDeprovisioning",
+        "iri": "orion:disables",
+        "label": "Disables",
+        "range": "orion:RemoveAccessForAUser"
+      },
+      {
+        "domain": "orion:SegregationOf",
+        "iri": "orion:duties",
+        "label": "Duties",
+        "range": "orion:PreventOnePersonFromControllingIncompatibleActivity"
+      },
+      {
+        "domain": "orion:Permission",
+        "iri": "orion:grants",
+        "label": "Grants",
+        "range": "orion:ActionOverAResource"
+      },
+      {
+        "domain": "orion:RoleAssignment",
+        "iri": "orion:links",
+        "label": "Links",
+        "range": "orion:RoleToAnIdentity"
+      },
+      {
+        "domain": "orion:Joiner",
+        "iri": "orion:process",
+        "label": "Process",
+        "range": "orion:CreateAccessForANewEmployee"
+      },
+      {
+        "domain": "orion:Leaver",
+        "iri": "orion:process",
+        "label": "Process",
+        "range": "orion:RemoveAccessWhenAPersonLeaveTheOrganization"
+      },
+      {
+        "domain": "orion:Mover",
+        "iri": "orion:process",
+        "label": "Process",
+        "range": "orion:ChangeAccessWhenAPersonChangeRole"
+      },
+      {
+        "domain": "orion:UserGroup",
+        "iri": "orion:shares",
+        "label": "Shares",
+        "range": "orion:CommonPermission"
+      },
+      {
+        "domain": "orion:IdentityManagementSystem",
+        "iri": "orion:stores",
+        "label": "Stores",
+        "range": "orion:IdentityRecord"
+      },
+      {
+        "domain": "orion:PermissionReview",
+        "iri": "orion:verifies",
+        "label": "Verifies",
+        "range": "orion:WhetherAssignedPermissionRemainNecessary"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:AccessRisk",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DormantAccountAccess"
+    },
+    {
+      "object": "orion:AccessRisk",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ExcessivePermission"
+    },
+    {
+      "object": "orion:AccessRisk",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:OrphanedAccountAccess"
+    },
+    {
+      "object": "orion:CollectionOfPermissions",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Role"
+    },
+    {
+      "object": "orion:CollectionOfIdentities",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:UserGroup"
+    }
+  ],
+  "type_assertions": []
+}

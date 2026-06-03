@@ -1,0 +1,420 @@
+{
+  "claim_count": 24,
+  "claims": [
+    {
+      "claim_id": "claim-c9df5d66d29888ae",
+      "kind": "relation",
+      "normalized_statement": "PhishingScenario illustrates HowThreat",
+      "object": "HowThreat",
+      "paragraph_id": "p039",
+      "predicate": "illustrates",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "A phishing scenario illustrates how threats, vulnerabilities, controls, and incidents relate to each other.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-a2b1127a3466ded3",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "PhishingScenario illustrates HowThreat",
+      "subject": "PhishingScenario"
+    },
+    {
+      "claim_id": "claim-3480f700101bd2c9",
+      "kind": "relation",
+      "normalized_statement": "PhishingScenario illustrates Vulnerability",
+      "object": "Vulnerability",
+      "paragraph_id": "p039",
+      "predicate": "illustrates",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "A phishing scenario illustrates how threats, vulnerabilities, controls, and incidents relate to each other.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-a2b1127a3466ded3",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "PhishingScenario illustrates Vulnerability",
+      "subject": "PhishingScenario"
+    },
+    {
+      "claim_id": "claim-856bd3a832a7c453",
+      "kind": "relation",
+      "normalized_statement": "PhishingScenario illustrates Control",
+      "object": "Control",
+      "paragraph_id": "p039",
+      "predicate": "illustrates",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "A phishing scenario illustrates how threats, vulnerabilities, controls, and incidents relate to each other.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-a2b1127a3466ded3",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "PhishingScenario illustrates Control",
+      "subject": "PhishingScenario"
+    },
+    {
+      "claim_id": "claim-018a0387d6ca79f8",
+      "kind": "relation",
+      "normalized_statement": "PhishingScenario incidents RelateToEachOther",
+      "object": "RelateToEachOther",
+      "paragraph_id": "p039",
+      "predicate": "incidents",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "A phishing scenario illustrates how threats, vulnerabilities, controls, and incidents relate to each other.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-a2b1127a3466ded3",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "PhishingScenario incidents RelateToEachOther",
+      "subject": "PhishingScenario"
+    },
+    {
+      "claim_id": "claim-1925fbb162128746",
+      "kind": "relation",
+      "normalized_statement": "ThreatActor sends PhishingEmailToAnEmployee",
+      "object": "PhishingEmailToAnEmployee",
+      "paragraph_id": "p039",
+      "predicate": "sends",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "A threat actor sends a phishing email to an employee.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-eecd1af0011daf59",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "ThreatActor sends PhishingEmailToAnEmployee",
+      "subject": "ThreatActor"
+    },
+    {
+      "claim_id": "claim-c37128f9f7b4a366",
+      "kind": "relation",
+      "normalized_statement": "PhishingEmail contains MaliciousLink",
+      "object": "MaliciousLink",
+      "paragraph_id": "p039",
+      "predicate": "contains",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "The phishing email contains a malicious link.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-1077199333fb80e6",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "PhishingEmail contains MaliciousLink",
+      "subject": "PhishingEmail"
+    },
+    {
+      "claim_id": "claim-501cce3b6cc96079",
+      "kind": "relation",
+      "normalized_statement": "Employee clicks MaliciousLink",
+      "object": "MaliciousLink",
+      "paragraph_id": "p039",
+      "predicate": "clicks",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "The employee clicks the malicious link and submits a password.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-de0dfc95d4bc3e3f",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "Employee clicks MaliciousLink",
+      "subject": "Employee"
+    },
+    {
+      "claim_id": "claim-dd79099f06a926f7",
+      "kind": "relation",
+      "normalized_statement": "Employee submits SubmittedPassword",
+      "object": "SubmittedPassword",
+      "paragraph_id": "p039",
+      "predicate": "submits",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "The employee clicks the malicious link and submits a password.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-de0dfc95d4bc3e3f",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "Employee submits SubmittedPassword",
+      "subject": "Employee"
+    },
+    {
+      "claim_id": "claim-afee236cf5ac17a5",
+      "kind": "relation",
+      "normalized_statement": "SubmittedPassword becomes CompromisedCredential",
+      "object": "CompromisedCredential",
+      "paragraph_id": "p039",
+      "predicate": "becomes",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "The submitted password becomes a compromised credential.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-8b054685f105fd45",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "SubmittedPassword becomes CompromisedCredential",
+      "subject": "SubmittedPassword"
+    },
+    {
+      "claim_id": "claim-b5281f2b888fbc37",
+      "kind": "relation",
+      "normalized_statement": "Attacker uses CompromisedCredentialToAccessACloudAccount",
+      "object": "CompromisedCredentialToAccessACloudAccount",
+      "paragraph_id": "p039",
+      "predicate": "uses",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "The attacker uses the compromised credential to access a cloud account.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-8fc7cddf1b0da3c7",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "Attacker uses CompromisedCredentialToAccessACloudAccount",
+      "subject": "Attacker"
+    },
+    {
+      "claim_id": "claim-0f2cdddd38c4559a",
+      "kind": "relation",
+      "normalized_statement": "Security awareness TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink",
+      "object": "TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink",
+      "paragraph_id": "p039",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "Security awareness training may reduce the likelihood of clicking the malicious link.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-9f2955af21746310",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "Security awareness TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink",
+      "subject": "Security"
+    },
+    {
+      "claim_id": "claim-f0a3f79eae57efc3",
+      "kind": "relation",
+      "normalized_statement": "LogMonitoringMayIdentify suspicious LoginActivity",
+      "object": "LoginActivity",
+      "paragraph_id": "p039",
+      "predicate": "suspicious",
+      "source": {
+        "asset_id": "p039",
+        "evidence": "Log monitoring may identify suspicious login activity.",
+        "paragraph_id": "p039",
+        "sentence_id": "sent-dae359be471b7423",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "LogMonitoringMayIdentify suspicious LoginActivity",
+      "subject": "LogMonitoringMayIdentify"
+    },
+    {
+      "claim_id": "claim-03bcd431146fe3ce",
+      "kind": "relation",
+      "normalized_statement": "RansomwareScenario illustrates ImportanceOfBackups",
+      "object": "ImportanceOfBackups",
+      "paragraph_id": "p040",
+      "predicate": "illustrates",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "A ransomware scenario illustrates the importance of backups, monitoring, and response.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-e96db72f8d44f6fb",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "RansomwareScenario illustrates ImportanceOfBackups",
+      "subject": "RansomwareScenario"
+    },
+    {
+      "claim_id": "claim-d94a018a040fbe70",
+      "kind": "relation",
+      "normalized_statement": "RansomwareScenario illustrates Monitoring",
+      "object": "Monitoring",
+      "paragraph_id": "p040",
+      "predicate": "illustrates",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "A ransomware scenario illustrates the importance of backups, monitoring, and response.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-e96db72f8d44f6fb",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "RansomwareScenario illustrates Monitoring",
+      "subject": "RansomwareScenario"
+    },
+    {
+      "claim_id": "claim-b78437f8e1428eba",
+      "kind": "relation",
+      "normalized_statement": "RansomwareScenario illustrates Response",
+      "object": "Response",
+      "paragraph_id": "p040",
+      "predicate": "illustrates",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "A ransomware scenario illustrates the importance of backups, monitoring, and response.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-e96db72f8d44f6fb",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "RansomwareScenario illustrates Response",
+      "subject": "RansomwareScenario"
+    },
+    {
+      "claim_id": "claim-8b8bb977dd97b3fb",
+      "kind": "relation",
+      "normalized_statement": "Malware encrypts FileOnAFileServer",
+      "object": "FileOnAFileServer",
+      "paragraph_id": "p040",
+      "predicate": "encrypts",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "Malware encrypts files on a file server.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-7b4c9bdfc950bf40",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "Malware encrypts FileOnAFileServer",
+      "subject": "Malware"
+    },
+    {
+      "claim_id": "claim-81c05c675d8c2db3",
+      "kind": "relation",
+      "normalized_statement": "FileServer becomes UnavailableToBusinessUser",
+      "object": "UnavailableToBusinessUser",
+      "paragraph_id": "p040",
+      "predicate": "becomes",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "The file server becomes unavailable to business users.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-c39514bddb0da11c",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "FileServer becomes UnavailableToBusinessUser",
+      "subject": "FileServer"
+    },
+    {
+      "claim_id": "claim-b3cfb2ceb2d0719a",
+      "kind": "relation",
+      "normalized_statement": "Event affects Availability",
+      "object": "Availability",
+      "paragraph_id": "p040",
+      "predicate": "affects",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "The event affects availability and may affect integrity.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-9c0a7b3e50b56a03",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "Event affects Availability",
+      "subject": "Event"
+    },
+    {
+      "claim_id": "claim-65add0a1426a3711",
+      "kind": "relation",
+      "normalized_statement": "Event affects MayAffectIntegrity",
+      "object": "MayAffectIntegrity",
+      "paragraph_id": "p040",
+      "predicate": "affects",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "The event affects availability and may affect integrity.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-9c0a7b3e50b56a03",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "Event affects MayAffectIntegrity",
+      "subject": "Event"
+    },
+    {
+      "claim_id": "claim-50a76b959f4ba0cf",
+      "kind": "relation",
+      "normalized_statement": "PostIncidentReviewMayIdentifyMissingPatchWeak access Control",
+      "object": "Control",
+      "paragraph_id": "p040",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "The post-incident review may identify missing patches, weak access controls, or insufficient monitoring.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-75e3c0ad1073e028",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "PostIncidentReviewMayIdentifyMissingPatchWeak access Control",
+      "subject": "PostIncidentReviewMayIdentifyMissingPatchWeak"
+    },
+    {
+      "claim_id": "claim-1611034070ba4fc3",
+      "kind": "relation",
+      "normalized_statement": "PostIncidentReviewMayIdentifyMissingPatchWeak access InsufficientMonitoring",
+      "object": "InsufficientMonitoring",
+      "paragraph_id": "p040",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "The post-incident review may identify missing patches, weak access controls, or insufficient monitoring.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-75e3c0ad1073e028",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "PostIncidentReviewMayIdentifyMissingPatchWeak access InsufficientMonitoring",
+      "subject": "PostIncidentReviewMayIdentifyMissingPatchWeak"
+    },
+    {
+      "claim_id": "claim-a79b335483c13241",
+      "kind": "relation",
+      "normalized_statement": "Corrective actions MayIncludePatchDeployment",
+      "object": "MayIncludePatchDeployment",
+      "paragraph_id": "p040",
+      "predicate": "actions",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "Corrective actions may include patch deployment, privilege reduction, and improved detection rules.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-1dcb767a4f5632f0",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "Corrective actions MayIncludePatchDeployment",
+      "subject": "Corrective"
+    },
+    {
+      "claim_id": "claim-92e567c425aadc2a",
+      "kind": "relation",
+      "normalized_statement": "Corrective actions PrivilegeReduction",
+      "object": "PrivilegeReduction",
+      "paragraph_id": "p040",
+      "predicate": "actions",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "Corrective actions may include patch deployment, privilege reduction, and improved detection rules.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-1dcb767a4f5632f0",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "Corrective actions PrivilegeReduction",
+      "subject": "Corrective"
+    },
+    {
+      "claim_id": "claim-0665599c1eccf8cd",
+      "kind": "relation",
+      "normalized_statement": "Corrective actions ImprovedDetectionRule",
+      "object": "ImprovedDetectionRule",
+      "paragraph_id": "p040",
+      "predicate": "actions",
+      "source": {
+        "asset_id": "p040",
+        "evidence": "Corrective actions may include patch deployment, privilege reduction, and improved detection rules.",
+        "paragraph_id": "p040",
+        "sentence_id": "sent-1dcb767a4f5632f0",
+        "source_text_id": "2ff9eb6e6ae7d07f1532f9811dd1ebf442c0f21c5c2f23e5953a6dbb1357dd2d"
+      },
+      "statement": "Corrective actions ImprovedDetectionRule",
+      "subject": "Corrective"
+    }
+  ],
+  "contract_required_stage": "semantic_claims",
+  "observed_stage": "semantic_claims",
+  "paragraph_asset_ids": [
+    "p039",
+    "p040"
+  ],
+  "stage": "semantic_claims"
+}

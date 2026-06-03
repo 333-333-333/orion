@@ -1,0 +1,534 @@
+{
+  "classes": [
+    {
+      "iri": "orion:AccessPoint",
+      "label": "AccessPoint"
+    },
+    {
+      "iri": "orion:DataAtRest",
+      "label": "DataAtRest"
+    },
+    {
+      "comments": [
+        "Defense in depth applies multiple layers of security controls."
+      ],
+      "iri": "orion:DefenseInDepth",
+      "label": "DefenseInDepth"
+    },
+    {
+      "comments": [
+        "Encryption protects data at rest and in transit."
+      ],
+      "iri": "orion:Encryption",
+      "label": "Encryption"
+    },
+    {
+      "iri": "orion:Environment",
+      "label": "Environment"
+    },
+    {
+      "iri": "orion:InTransit",
+      "label": "InTransit"
+    },
+    {
+      "iri": "orion:InformationAsset",
+      "label": "InformationAsset"
+    },
+    {
+      "iri": "orion:LateralMovement",
+      "label": "LateralMovement"
+    },
+    {
+      "comments": [
+        "Monitoring detects suspicious activity."
+      ],
+      "iri": "orion:Monitoring",
+      "label": "Monitoring"
+    },
+    {
+      "iri": "orion:MultipleLayerOfSecurityControl",
+      "label": "MultipleLayerOfSecurityControl"
+    },
+    {
+      "comments": [
+        "Network segmentation limits lateral movement."
+      ],
+      "iri": "orion:NetworkSegmentation",
+      "label": "NetworkSegmentation"
+    },
+    {
+      "iri": "orion:NoImplicitTrustBasedOnNetworkLocation",
+      "label": "NoImplicitTrustBasedOnNetworkLocation"
+    },
+    {
+      "iri": "orion:RegulatoryObligation",
+      "label": "RegulatoryObligation"
+    },
+    {
+      "iri": "orion:Requirement",
+      "label": "Requirement"
+    },
+    {
+      "iri": "orion:RiskAppetite",
+      "label": "RiskAppetite"
+    },
+    {
+      "comments": [
+        "Secure architecture integrates security into the design of systems and environments."
+      ],
+      "iri": "orion:SecureArchitecture",
+      "label": "SecureArchitecture"
+    },
+    {
+      "comments": [
+        "Secure architecture must align with business requirements, risk appetite, and regulatory obligations."
+      ],
+      "iri": "orion:SecureArchitectureMustAlignWith",
+      "label": "SecureArchitectureMustAlignWith"
+    },
+    {
+      "iri": "orion:SecurityIntoTheDesignOfSystems",
+      "label": "SecurityIntoTheDesignOfSystems"
+    },
+    {
+      "comments": [
+        "Zero trust is a security model that assumes no implicit trust based on network location."
+      ],
+      "iri": "orion:SecurityModel",
+      "label": "SecurityModel"
+    },
+    {
+      "comments": [
+        "Strong authentication protects access points."
+      ],
+      "iri": "orion:StrongAuthentication",
+      "label": "StrongAuthentication"
+    },
+    {
+      "iri": "orion:SuspiciousActivity",
+      "label": "SuspiciousActivity"
+    },
+    {
+      "iri": "orion:System",
+      "label": "System"
+    },
+    {
+      "comments": [
+        "A system can process one or more information assets."
+      ],
+      "iri": "orion:SystemCan",
+      "label": "SystemCan"
+    },
+    {
+      "comments": [
+        "A user can access one or more systems."
+      ],
+      "iri": "orion:UserCan",
+      "label": "UserCan"
+    },
+    {
+      "comments": [
+        "Zero trust is a security model that assumes no implicit trust based on network location."
+      ],
+      "iri": "orion:ZeroTrust",
+      "label": "ZeroTrust"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:UserCan",
+      "predicate": "orion:access",
+      "range": "orion:System"
+    },
+    {
+      "domain": "orion:DefenseInDepth",
+      "predicate": "orion:applies",
+      "range": "orion:MultipleLayerOfSecurityControl"
+    },
+    {
+      "domain": "orion:ZeroTrust",
+      "predicate": "orion:assumes",
+      "range": "orion:NoImplicitTrustBasedOnNetworkLocation"
+    },
+    {
+      "domain": "orion:SecureArchitectureMustAlignWith",
+      "predicate": "orion:business",
+      "range": "orion:RegulatoryObligation"
+    },
+    {
+      "domain": "orion:SecureArchitectureMustAlignWith",
+      "predicate": "orion:business",
+      "range": "orion:Requirement"
+    },
+    {
+      "domain": "orion:SecureArchitectureMustAlignWith",
+      "predicate": "orion:business",
+      "range": "orion:RiskAppetite"
+    },
+    {
+      "domain": "orion:Monitoring",
+      "predicate": "orion:detects",
+      "range": "orion:SuspiciousActivity"
+    },
+    {
+      "domain": "orion:SecureArchitecture",
+      "predicate": "orion:integrates",
+      "range": "orion:Environment"
+    },
+    {
+      "domain": "orion:SecureArchitecture",
+      "predicate": "orion:integrates",
+      "range": "orion:SecurityIntoTheDesignOfSystems"
+    },
+    {
+      "domain": "orion:NetworkSegmentation",
+      "predicate": "orion:limits",
+      "range": "orion:LateralMovement"
+    },
+    {
+      "domain": "orion:SystemCan",
+      "predicate": "orion:process",
+      "range": "orion:InformationAsset"
+    },
+    {
+      "domain": "orion:Encryption",
+      "predicate": "orion:protects",
+      "range": "orion:DataAtRest"
+    },
+    {
+      "domain": "orion:Encryption",
+      "predicate": "orion:protects",
+      "range": "orion:InTransit"
+    },
+    {
+      "domain": "orion:StrongAuthentication",
+      "predicate": "orion:protects",
+      "range": "orion:AccessPoint"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-6d9a226d61e3ad46",
+      "claim-2d10bc7ae1ca808a",
+      "claim-536075d82f76526b",
+      "claim-72e83013dd228c3d",
+      "claim-641c2b7c8611e1a8",
+      "claim-d5fdef63adabaaa7",
+      "claim-81edb68a6dccf9bd",
+      "claim-a778132f4863ec6a",
+      "claim-4f5029b99d574271",
+      "claim-6fd1f87b36173959",
+      "claim-2429eaa207305f5a",
+      "claim-72459d1eb506772d",
+      "claim-42c57f1f9d67052b",
+      "claim-dd9dd10fbaa014d6",
+      "claim-e4f7a4676a018f77"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:UserCan",
+      "property": "orion:access",
+      "range": "orion:System"
+    },
+    {
+      "domain": "orion:DefenseInDepth",
+      "property": "orion:applies",
+      "range": "orion:MultipleLayerOfSecurityControl"
+    },
+    {
+      "domain": "orion:ZeroTrust",
+      "property": "orion:assumes",
+      "range": "orion:NoImplicitTrustBasedOnNetworkLocation"
+    },
+    {
+      "domain": "orion:SecureArchitectureMustAlignWith",
+      "property": "orion:business",
+      "range": "orion:RegulatoryObligation"
+    },
+    {
+      "domain": "orion:SecureArchitectureMustAlignWith",
+      "property": "orion:business",
+      "range": "orion:Requirement"
+    },
+    {
+      "domain": "orion:SecureArchitectureMustAlignWith",
+      "property": "orion:business",
+      "range": "orion:RiskAppetite"
+    },
+    {
+      "domain": "orion:Monitoring",
+      "property": "orion:detects",
+      "range": "orion:SuspiciousActivity"
+    },
+    {
+      "domain": "orion:SecureArchitecture",
+      "property": "orion:integrates",
+      "range": "orion:Environment"
+    },
+    {
+      "domain": "orion:SecureArchitecture",
+      "property": "orion:integrates",
+      "range": "orion:SecurityIntoTheDesignOfSystems"
+    },
+    {
+      "domain": "orion:NetworkSegmentation",
+      "property": "orion:limits",
+      "range": "orion:LateralMovement"
+    },
+    {
+      "domain": "orion:SystemCan",
+      "property": "orion:process",
+      "range": "orion:InformationAsset"
+    },
+    {
+      "domain": "orion:Encryption",
+      "property": "orion:protects",
+      "range": "orion:DataAtRest"
+    },
+    {
+      "domain": "orion:Encryption",
+      "property": "orion:protects",
+      "range": "orion:InTransit"
+    },
+    {
+      "domain": "orion:StrongAuthentication",
+      "property": "orion:protects",
+      "range": "orion:AccessPoint"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:AccessPoint",
+        "label": "AccessPoint"
+      },
+      {
+        "iri": "orion:DataAtRest",
+        "label": "DataAtRest"
+      },
+      {
+        "comments": [
+          "Defense in depth applies multiple layers of security controls."
+        ],
+        "iri": "orion:DefenseInDepth",
+        "label": "DefenseInDepth"
+      },
+      {
+        "comments": [
+          "Encryption protects data at rest and in transit."
+        ],
+        "iri": "orion:Encryption",
+        "label": "Encryption"
+      },
+      {
+        "iri": "orion:Environment",
+        "label": "Environment"
+      },
+      {
+        "iri": "orion:InTransit",
+        "label": "InTransit"
+      },
+      {
+        "iri": "orion:InformationAsset",
+        "label": "InformationAsset"
+      },
+      {
+        "iri": "orion:LateralMovement",
+        "label": "LateralMovement"
+      },
+      {
+        "comments": [
+          "Monitoring detects suspicious activity."
+        ],
+        "iri": "orion:Monitoring",
+        "label": "Monitoring"
+      },
+      {
+        "iri": "orion:MultipleLayerOfSecurityControl",
+        "label": "MultipleLayerOfSecurityControl"
+      },
+      {
+        "comments": [
+          "Network segmentation limits lateral movement."
+        ],
+        "iri": "orion:NetworkSegmentation",
+        "label": "NetworkSegmentation"
+      },
+      {
+        "iri": "orion:NoImplicitTrustBasedOnNetworkLocation",
+        "label": "NoImplicitTrustBasedOnNetworkLocation"
+      },
+      {
+        "iri": "orion:RegulatoryObligation",
+        "label": "RegulatoryObligation"
+      },
+      {
+        "iri": "orion:Requirement",
+        "label": "Requirement"
+      },
+      {
+        "iri": "orion:RiskAppetite",
+        "label": "RiskAppetite"
+      },
+      {
+        "comments": [
+          "Secure architecture integrates security into the design of systems and environments."
+        ],
+        "iri": "orion:SecureArchitecture",
+        "label": "SecureArchitecture"
+      },
+      {
+        "comments": [
+          "Secure architecture must align with business requirements, risk appetite, and regulatory obligations."
+        ],
+        "iri": "orion:SecureArchitectureMustAlignWith",
+        "label": "SecureArchitectureMustAlignWith"
+      },
+      {
+        "iri": "orion:SecurityIntoTheDesignOfSystems",
+        "label": "SecurityIntoTheDesignOfSystems"
+      },
+      {
+        "comments": [
+          "Zero trust is a security model that assumes no implicit trust based on network location."
+        ],
+        "iri": "orion:SecurityModel",
+        "label": "SecurityModel"
+      },
+      {
+        "comments": [
+          "Strong authentication protects access points."
+        ],
+        "iri": "orion:StrongAuthentication",
+        "label": "StrongAuthentication"
+      },
+      {
+        "iri": "orion:SuspiciousActivity",
+        "label": "SuspiciousActivity"
+      },
+      {
+        "iri": "orion:System",
+        "label": "System"
+      },
+      {
+        "comments": [
+          "A system can process one or more information assets."
+        ],
+        "iri": "orion:SystemCan",
+        "label": "SystemCan"
+      },
+      {
+        "comments": [
+          "A user can access one or more systems."
+        ],
+        "iri": "orion:UserCan",
+        "label": "UserCan"
+      },
+      {
+        "comments": [
+          "Zero trust is a security model that assumes no implicit trust based on network location."
+        ],
+        "iri": "orion:ZeroTrust",
+        "label": "ZeroTrust"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:UserCan",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:System"
+      },
+      {
+        "domain": "orion:DefenseInDepth",
+        "iri": "orion:applies",
+        "label": "Applies",
+        "range": "orion:MultipleLayerOfSecurityControl"
+      },
+      {
+        "domain": "orion:ZeroTrust",
+        "iri": "orion:assumes",
+        "label": "Assumes",
+        "range": "orion:NoImplicitTrustBasedOnNetworkLocation"
+      },
+      {
+        "domain": "orion:SecureArchitectureMustAlignWith",
+        "iri": "orion:business",
+        "label": "Business",
+        "range": "orion:RegulatoryObligation"
+      },
+      {
+        "domain": "orion:SecureArchitectureMustAlignWith",
+        "iri": "orion:business",
+        "label": "Business",
+        "range": "orion:Requirement"
+      },
+      {
+        "domain": "orion:SecureArchitectureMustAlignWith",
+        "iri": "orion:business",
+        "label": "Business",
+        "range": "orion:RiskAppetite"
+      },
+      {
+        "domain": "orion:Monitoring",
+        "iri": "orion:detects",
+        "label": "Detects",
+        "range": "orion:SuspiciousActivity"
+      },
+      {
+        "domain": "orion:SecureArchitecture",
+        "iri": "orion:integrates",
+        "label": "Integrates",
+        "range": "orion:Environment"
+      },
+      {
+        "domain": "orion:SecureArchitecture",
+        "iri": "orion:integrates",
+        "label": "Integrates",
+        "range": "orion:SecurityIntoTheDesignOfSystems"
+      },
+      {
+        "domain": "orion:NetworkSegmentation",
+        "iri": "orion:limits",
+        "label": "Limits",
+        "range": "orion:LateralMovement"
+      },
+      {
+        "domain": "orion:SystemCan",
+        "iri": "orion:process",
+        "label": "Process",
+        "range": "orion:InformationAsset"
+      },
+      {
+        "domain": "orion:Encryption",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:DataAtRest"
+      },
+      {
+        "domain": "orion:Encryption",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:InTransit"
+      },
+      {
+        "domain": "orion:StrongAuthentication",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:AccessPoint"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:SecurityModel",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ZeroTrust"
+    }
+  ],
+  "type_assertions": []
+}

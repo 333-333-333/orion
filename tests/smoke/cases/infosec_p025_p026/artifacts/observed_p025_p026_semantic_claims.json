@@ -1,0 +1,607 @@
+{
+  "claim_count": 35,
+  "claims": [
+    {
+      "claim_id": "claim-a5bdee5080064fb6",
+      "kind": "relation",
+      "normalized_statement": "SupplierSecurity manages RiskAssociated",
+      "object": "RiskAssociated",
+      "paragraph_id": "p025",
+      "predicate": "manages",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "Supplier security manages risks associated with external parties.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-35fe8e0fd0782f69",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "SupplierSecurity manages RiskAssociated",
+      "subject": "SupplierSecurity"
+    },
+    {
+      "claim_id": "claim-53da481190d60b26",
+      "kind": "relation",
+      "normalized_statement": "RiskAssociated checked_against ExternalParty",
+      "object": "ExternalParty",
+      "paragraph_id": "p025",
+      "predicate": "checked_against",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "Supplier security manages risks associated with external parties.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-35fe8e0fd0782f69",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "RiskAssociated checked_against ExternalParty",
+      "subject": "RiskAssociated"
+    },
+    {
+      "claim_id": "claim-ef6bcae94d5a2d7c",
+      "kind": "definition",
+      "normalized_statement": "Supplier is a ExternalEntity",
+      "object": "ExternalEntity",
+      "paragraph_id": "p025",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A supplier is an external entity that provides goods or services.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-142003b36828c49c",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Supplier is a ExternalEntity",
+      "subject": "Supplier"
+    },
+    {
+      "claim_id": "claim-53036ae6d4beaf3c",
+      "kind": "relation",
+      "normalized_statement": "Supplier provides Good",
+      "object": "Good",
+      "paragraph_id": "p025",
+      "predicate": "provides",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A supplier is an external entity that provides goods or services.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-142003b36828c49c",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Supplier provides Good",
+      "subject": "Supplier"
+    },
+    {
+      "claim_id": "claim-3bdaf281d08238a2",
+      "kind": "relation",
+      "normalized_statement": "Supplier provides Service",
+      "object": "Service",
+      "paragraph_id": "p025",
+      "predicate": "provides",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A supplier is an external entity that provides goods or services.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-142003b36828c49c",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Supplier provides Service",
+      "subject": "Supplier"
+    },
+    {
+      "claim_id": "claim-cb694607edd3da09",
+      "kind": "definition",
+      "normalized_statement": "CloudProvider is a Supplier",
+      "object": "Supplier",
+      "paragraph_id": "p025",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A cloud provider is a type of supplier.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-ef3a4c9a62128780",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "CloudProvider is a Supplier",
+      "subject": "CloudProvider"
+    },
+    {
+      "claim_id": "claim-8913f39c8b58c475",
+      "kind": "definition",
+      "normalized_statement": "ManagedServiceProvider is a Supplier",
+      "object": "Supplier",
+      "paragraph_id": "p025",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A managed service provider is a type of supplier.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-d9b71d61ee9bb3e6",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "ManagedServiceProvider is a Supplier",
+      "subject": "ManagedServiceProvider"
+    },
+    {
+      "claim_id": "claim-354552755ae24917",
+      "kind": "definition",
+      "normalized_statement": "SoftwareVendor is a Supplier",
+      "object": "Supplier",
+      "paragraph_id": "p025",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A software vendor is a type of supplier.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-578e7d6c6230019c",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "SoftwareVendor is a Supplier",
+      "subject": "SoftwareVendor"
+    },
+    {
+      "claim_id": "claim-0344c0c2723d530e",
+      "kind": "relation",
+      "normalized_statement": "SupplierAssessment evaluates SecurityPostureOfASupplier",
+      "object": "SecurityPostureOfASupplier",
+      "paragraph_id": "p025",
+      "predicate": "evaluates",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A supplier assessment evaluates the security posture of a supplier.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-28052f6e4ac5e7d0",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "SupplierAssessment evaluates SecurityPostureOfASupplier",
+      "subject": "SupplierAssessment"
+    },
+    {
+      "claim_id": "claim-c640b802dda35397",
+      "kind": "relation",
+      "normalized_statement": "Contract defines ObligationBetweenTheOrganization",
+      "object": "ObligationBetweenTheOrganization",
+      "paragraph_id": "p025",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A contract defines obligations between the organization and the supplier.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-c0e7031fc6fbbaa0",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Contract defines ObligationBetweenTheOrganization",
+      "subject": "Contract"
+    },
+    {
+      "claim_id": "claim-7dd51d01b3f9551f",
+      "kind": "relation",
+      "normalized_statement": "Contract defines Supplier",
+      "object": "Supplier",
+      "paragraph_id": "p025",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A contract defines obligations between the organization and the supplier.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-c0e7031fc6fbbaa0",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Contract defines Supplier",
+      "subject": "Contract"
+    },
+    {
+      "claim_id": "claim-69b56fdbe04405ee",
+      "kind": "relation",
+      "normalized_statement": "DataProcessingAgreement defines ResponsibilityRelatedToPersonalData",
+      "object": "ResponsibilityRelatedToPersonalData",
+      "paragraph_id": "p025",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A data processing agreement defines responsibilities related to personal data.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-e207ad584bcf5b71",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "DataProcessingAgreement defines ResponsibilityRelatedToPersonalData",
+      "subject": "DataProcessingAgreement"
+    },
+    {
+      "claim_id": "claim-3c7c4fb77a9d3f94",
+      "kind": "relation",
+      "normalized_statement": "ServiceLevelAgreement defines ExpectedServicePerformance",
+      "object": "ExpectedServicePerformance",
+      "paragraph_id": "p025",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A service-level agreement defines expected service performance and availability.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-80963221a195c425",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "ServiceLevelAgreement defines ExpectedServicePerformance",
+      "subject": "ServiceLevelAgreement"
+    },
+    {
+      "claim_id": "claim-76b7b822b6d42b99",
+      "kind": "relation",
+      "normalized_statement": "ServiceLevelAgreement defines Availability",
+      "object": "Availability",
+      "paragraph_id": "p025",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "A service-level agreement defines expected service performance and availability.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-80963221a195c425",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "ServiceLevelAgreement defines Availability",
+      "subject": "ServiceLevelAgreement"
+    },
+    {
+      "claim_id": "claim-6951c7bbce82eae4",
+      "kind": "relation",
+      "normalized_statement": "ThirdParty access MustBeApproved",
+      "object": "MustBeApproved",
+      "paragraph_id": "p025",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "Third-party access must be approved, monitored, and revoked when no longer required.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-e5ebe326d2c7466c",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "ThirdParty access MustBeApproved",
+      "subject": "ThirdParty"
+    },
+    {
+      "claim_id": "claim-285e523a2fb89589",
+      "kind": "relation",
+      "normalized_statement": "ThirdParty access Monitored",
+      "object": "Monitored",
+      "paragraph_id": "p025",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "Third-party access must be approved, monitored, and revoked when no longer required.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-e5ebe326d2c7466c",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "ThirdParty access Monitored",
+      "subject": "ThirdParty"
+    },
+    {
+      "claim_id": "claim-45e69ddbb80e43d6",
+      "kind": "relation",
+      "normalized_statement": "ThirdParty access RevokedWhenNoLonger",
+      "object": "RevokedWhenNoLonger",
+      "paragraph_id": "p025",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p025",
+        "evidence": "Third-party access must be approved, monitored, and revoked when no longer required.",
+        "paragraph_id": "p025",
+        "sentence_id": "sent-e5ebe326d2c7466c",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "ThirdParty access RevokedWhenNoLonger",
+      "subject": "ThirdParty"
+    },
+    {
+      "claim_id": "claim-fc2aa2639afebcc1",
+      "kind": "relation",
+      "normalized_statement": "PhysicalSecurity protects Facility",
+      "object": "Facility",
+      "paragraph_id": "p026",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "Physical security protects facilities, equipment, people, and physical assets.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-2bb22bd6b02f4881",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "PhysicalSecurity protects Facility",
+      "subject": "PhysicalSecurity"
+    },
+    {
+      "claim_id": "claim-1ec604ca7ccc7dcc",
+      "kind": "relation",
+      "normalized_statement": "PhysicalSecurity protects Equipment",
+      "object": "Equipment",
+      "paragraph_id": "p026",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "Physical security protects facilities, equipment, people, and physical assets.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-2bb22bd6b02f4881",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "PhysicalSecurity protects Equipment",
+      "subject": "PhysicalSecurity"
+    },
+    {
+      "claim_id": "claim-4dd44d8f2625f940",
+      "kind": "relation",
+      "normalized_statement": "PhysicalSecurity protects People",
+      "object": "People",
+      "paragraph_id": "p026",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "Physical security protects facilities, equipment, people, and physical assets.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-2bb22bd6b02f4881",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "PhysicalSecurity protects People",
+      "subject": "PhysicalSecurity"
+    },
+    {
+      "claim_id": "claim-f31e42dd42cc2f2e",
+      "kind": "relation",
+      "normalized_statement": "PhysicalSecurity protects PhysicalAsset",
+      "object": "PhysicalAsset",
+      "paragraph_id": "p026",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "Physical security protects facilities, equipment, people, and physical assets.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-2bb22bd6b02f4881",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "PhysicalSecurity protects PhysicalAsset",
+      "subject": "PhysicalSecurity"
+    },
+    {
+      "claim_id": "claim-2b3efc89bdd72f5e",
+      "kind": "definition",
+      "normalized_statement": "DataCenter is a Facility",
+      "object": "Facility",
+      "paragraph_id": "p026",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "A data center is a type of facility that hosts computing infrastructure.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-3b7464540dc358e3",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "DataCenter is a Facility",
+      "subject": "DataCenter"
+    },
+    {
+      "claim_id": "claim-33f989bacabed40d",
+      "kind": "relation",
+      "normalized_statement": "DataCenter hosts ComputingInfrastructure",
+      "object": "ComputingInfrastructure",
+      "paragraph_id": "p026",
+      "predicate": "hosts",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "A data center is a type of facility that hosts computing infrastructure.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-3b7464540dc358e3",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "DataCenter hosts ComputingInfrastructure",
+      "subject": "DataCenter"
+    },
+    {
+      "claim_id": "claim-a8c6d9394b1c7823",
+      "kind": "definition",
+      "normalized_statement": "Office is a FacilityWhereEmployeePerformBusinessActivity",
+      "object": "FacilityWhereEmployeePerformBusinessActivity",
+      "paragraph_id": "p026",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "An office is a type of facility where employees perform business activities.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-1d4ec95a33994879",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Office is a FacilityWhereEmployeePerformBusinessActivity",
+      "subject": "Office"
+    },
+    {
+      "claim_id": "claim-c4eb648bf8cfb26a",
+      "kind": "definition",
+      "normalized_statement": "BadgeReader is a PhysicalAccessControl",
+      "object": "PhysicalAccessControl",
+      "paragraph_id": "p026",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "A badge reader is a type of physical access control.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-56fbf6a50651af0a",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "BadgeReader is a PhysicalAccessControl",
+      "subject": "BadgeReader"
+    },
+    {
+      "claim_id": "claim-17447ff68bfff6e4",
+      "kind": "definition",
+      "normalized_statement": "SecurityCamera is a MonitoringControl",
+      "object": "MonitoringControl",
+      "paragraph_id": "p026",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "A security camera is a type of monitoring control.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-807389b94aacc689",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "SecurityCamera is a MonitoringControl",
+      "subject": "SecurityCamera"
+    },
+    {
+      "claim_id": "claim-4dc4cbbe847515cc",
+      "kind": "relation",
+      "normalized_statement": "VisitorLog records ExternalPersonEnteringAFacility",
+      "object": "ExternalPersonEnteringAFacility",
+      "paragraph_id": "p026",
+      "predicate": "records",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "A visitor log records external persons entering a facility.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-e5930d7a821d56bf",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "VisitorLog records ExternalPersonEnteringAFacility",
+      "subject": "VisitorLog"
+    },
+    {
+      "claim_id": "claim-7a7f450ee2a62c09",
+      "kind": "relation",
+      "normalized_statement": "LockedCabinet protects PhysicalDocument",
+      "object": "PhysicalDocument",
+      "paragraph_id": "p026",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "A locked cabinet protects physical documents and removable media.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-32c7d1bd300259ae",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "LockedCabinet protects PhysicalDocument",
+      "subject": "LockedCabinet"
+    },
+    {
+      "claim_id": "claim-63f71f4b8a5bf579",
+      "kind": "relation",
+      "normalized_statement": "LockedCabinet protects RemovableMedia",
+      "object": "RemovableMedia",
+      "paragraph_id": "p026",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "A locked cabinet protects physical documents and removable media.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-32c7d1bd300259ae",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "LockedCabinet protects RemovableMedia",
+      "subject": "LockedCabinet"
+    },
+    {
+      "claim_id": "claim-5d96a03e91f80779",
+      "kind": "relation",
+      "normalized_statement": "Environmental controls ProtectEquipmentFromFire",
+      "object": "ProtectEquipmentFromFire",
+      "paragraph_id": "p026",
+      "predicate": "controls",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "Environmental controls protect equipment from fire, humidity, temperature, and power failures.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-eec24064dd519296",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Environmental controls ProtectEquipmentFromFire",
+      "subject": "Environmental"
+    },
+    {
+      "claim_id": "claim-e8ea34482a977d95",
+      "kind": "relation",
+      "normalized_statement": "Environmental controls Humidity",
+      "object": "Humidity",
+      "paragraph_id": "p026",
+      "predicate": "controls",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "Environmental controls protect equipment from fire, humidity, temperature, and power failures.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-eec24064dd519296",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Environmental controls Humidity",
+      "subject": "Environmental"
+    },
+    {
+      "claim_id": "claim-6fd32677066072f0",
+      "kind": "relation",
+      "normalized_statement": "Environmental controls Temperature",
+      "object": "Temperature",
+      "paragraph_id": "p026",
+      "predicate": "controls",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "Environmental controls protect equipment from fire, humidity, temperature, and power failures.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-eec24064dd519296",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Environmental controls Temperature",
+      "subject": "Environmental"
+    },
+    {
+      "claim_id": "claim-a1b55eb694c28b14",
+      "kind": "relation",
+      "normalized_statement": "Environmental controls PowerFailure",
+      "object": "PowerFailure",
+      "paragraph_id": "p026",
+      "predicate": "controls",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "Environmental controls protect equipment from fire, humidity, temperature, and power failures.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-eec24064dd519296",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Environmental controls PowerFailure",
+      "subject": "Environmental"
+    },
+    {
+      "claim_id": "claim-256bbb219e1aae3e",
+      "kind": "relation",
+      "normalized_statement": "Physical access ToRestrictedAreaMustBeAuthorized",
+      "object": "ToRestrictedAreaMustBeAuthorized",
+      "paragraph_id": "p026",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "Physical access to restricted areas must be authorized and monitored.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-2bf5efd8f975a2e1",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Physical access ToRestrictedAreaMustBeAuthorized",
+      "subject": "Physical"
+    },
+    {
+      "claim_id": "claim-65fa5dcac4801b15",
+      "kind": "relation",
+      "normalized_statement": "Physical access Monitored",
+      "object": "Monitored",
+      "paragraph_id": "p026",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p026",
+        "evidence": "Physical access to restricted areas must be authorized and monitored.",
+        "paragraph_id": "p026",
+        "sentence_id": "sent-2bf5efd8f975a2e1",
+        "source_text_id": "9e2bc1fcf7f6eba1f6b5c7f623725210b352d2fcf4225c691f00ccf6cc6eee45"
+      },
+      "statement": "Physical access Monitored",
+      "subject": "Physical"
+    }
+  ],
+  "contract_required_stage": "semantic_claims",
+  "observed_stage": "semantic_claims",
+  "paragraph_asset_ids": [
+    "p025",
+    "p026"
+  ],
+  "stage": "semantic_claims"
+}

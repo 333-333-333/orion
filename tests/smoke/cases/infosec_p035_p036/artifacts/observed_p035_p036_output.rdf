@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <owl:Class rdf:about="https://orion.local/resource/accesspoint">
+    <rdfs:label>AccessPoint</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/dataatrest">
+    <rdfs:label>DataAtRest</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/defenseindepth">
+    <rdfs:label>DefenseInDepth</rdfs:label>
+    <rdfs:comment>Defense in depth applies multiple layers of security controls.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/encryption">
+    <rdfs:label>Encryption</rdfs:label>
+    <rdfs:comment>Encryption protects data at rest and in transit.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/environment">
+    <rdfs:label>Environment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/informationasset">
+    <rdfs:label>InformationAsset</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/intransit">
+    <rdfs:label>InTransit</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/lateralmovement">
+    <rdfs:label>LateralMovement</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/monitoring">
+    <rdfs:label>Monitoring</rdfs:label>
+    <rdfs:comment>Monitoring detects suspicious activity.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/multiplelayerofsecuritycontrol">
+    <rdfs:label>MultipleLayerOfSecurityControl</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/networksegmentation">
+    <rdfs:label>NetworkSegmentation</rdfs:label>
+    <rdfs:comment>Network segmentation limits lateral movement.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/noimplicittrustbasedonnetworklocation">
+    <rdfs:label>NoImplicitTrustBasedOnNetworkLocation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/regulatoryobligation">
+    <rdfs:label>RegulatoryObligation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/requirement">
+    <rdfs:label>Requirement</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/riskappetite">
+    <rdfs:label>RiskAppetite</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securearchitecture">
+    <rdfs:label>SecureArchitecture</rdfs:label>
+    <rdfs:comment>Secure architecture integrates security into the design of systems and environments.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securearchitecturemustalignwith">
+    <rdfs:label>SecureArchitectureMustAlignWith</rdfs:label>
+    <rdfs:comment>Secure architecture must align with business requirements, risk appetite, and regulatory obligations.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securityintothedesignofsystems">
+    <rdfs:label>SecurityIntoTheDesignOfSystems</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securitymodel">
+    <rdfs:label>SecurityModel</rdfs:label>
+    <rdfs:comment>Zero trust is a security model that assumes no implicit trust based on network location.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/strongauthentication">
+    <rdfs:label>StrongAuthentication</rdfs:label>
+    <rdfs:comment>Strong authentication protects access points.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/suspiciousactivity">
+    <rdfs:label>SuspiciousActivity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/system">
+    <rdfs:label>System</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/systemcan">
+    <rdfs:label>SystemCan</rdfs:label>
+    <rdfs:comment>A system can process one or more information assets.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/usercan">
+    <rdfs:label>UserCan</rdfs:label>
+    <rdfs:comment>A user can access one or more systems.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/zerotrust">
+    <rdfs:label>ZeroTrust</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securitymodel"/>
+    <rdfs:comment>Zero trust is a security model that assumes no implicit trust based on network location.</rdfs:comment>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/access">
+    <rdfs:label>Access</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/usercan"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/system"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/applies">
+    <rdfs:label>Applies</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/defenseindepth"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/multiplelayerofsecuritycontrol"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/assumes">
+    <rdfs:label>Assumes</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/zerotrust"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/noimplicittrustbasedonnetworklocation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/business">
+    <rdfs:label>Business</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/securearchitecturemustalignwith"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/regulatoryobligation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/business">
+    <rdfs:label>Business</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/securearchitecturemustalignwith"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/requirement"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/business">
+    <rdfs:label>Business</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/securearchitecturemustalignwith"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/riskappetite"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/detects">
+    <rdfs:label>Detects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/monitoring"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/suspiciousactivity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/integrates">
+    <rdfs:label>Integrates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/securearchitecture"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/environment"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/integrates">
+    <rdfs:label>Integrates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/securearchitecture"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/securityintothedesignofsystems"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/limits">
+    <rdfs:label>Limits</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/networksegmentation"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/lateralmovement"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/process">
+    <rdfs:label>Process</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/systemcan"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/informationasset"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/protects">
+    <rdfs:label>Protects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/encryption"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/dataatrest"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/protects">
+    <rdfs:label>Protects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/encryption"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/intransit"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/protects">
+    <rdfs:label>Protects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/strongauthentication"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/accesspoint"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="https://orion.local/resource/accesspoint">
+    <rdfs:label>AccessPoint</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/dataatrest">
+    <rdfs:label>DataAtRest</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/defenseindepth">
+    <rdfs:label>DefenseInDepth</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/encryption">
+    <rdfs:label>Encryption</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/environment">
+    <rdfs:label>Environment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/informationasset">
+    <rdfs:label>InformationAsset</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/intransit">
+    <rdfs:label>InTransit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/lateralmovement">
+    <rdfs:label>LateralMovement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/monitoring">
+    <rdfs:label>Monitoring</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/multiplelayerofsecuritycontrol">
+    <rdfs:label>MultipleLayerOfSecurityControl</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/networksegmentation">
+    <rdfs:label>NetworkSegmentation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/noimplicittrustbasedonnetworklocation">
+    <rdfs:label>NoImplicitTrustBasedOnNetworkLocation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/regulatoryobligation">
+    <rdfs:label>RegulatoryObligation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/requirement">
+    <rdfs:label>Requirement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/riskappetite">
+    <rdfs:label>RiskAppetite</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securearchitecture">
+    <rdfs:label>SecureArchitecture</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securearchitecturemustalignwith">
+    <rdfs:label>SecureArchitectureMustAlignWith</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityintothedesignofsystems">
+    <rdfs:label>SecurityIntoTheDesignOfSystems</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securitymodel">
+    <rdfs:label>SecurityModel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/strongauthentication">
+    <rdfs:label>StrongAuthentication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/suspiciousactivity">
+    <rdfs:label>SuspiciousActivity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/system">
+    <rdfs:label>System</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/systemcan">
+    <rdfs:label>SystemCan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/usercan">
+    <rdfs:label>UserCan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/zerotrust">
+    <rdfs:label>ZeroTrust</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

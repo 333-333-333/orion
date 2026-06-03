@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <owl:Class rdf:about="https://orion.local/resource/authorizedentity">
+    <rdfs:label>AuthorizedEntity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/availability">
+    <rdfs:label>Availability</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securityproperty"/>
+    <rdfs:comment>Availability is a security property that ensures information and systems are accessible when needed.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/backuparchive">
+    <rdfs:label>BackupArchive</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:comment>A backup archive is a type of information asset.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/businessreport">
+    <rdfs:label>BusinessReport</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:comment>A business report is a type of information asset.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/ciatriad">
+    <rdfs:label>CiaTriad</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/foundationalmodel"/>
+    <rdfs:comment>Confidentiality, integrity, and availability form the CIA triad.</rdfs:comment>
+    <rdfs:comment>The CIA triad is a foundational model for information security.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/confidentialdocument">
+    <rdfs:label>ConfidentialDocument</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:comment>A confidential document is a type of information asset.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/confidentiality">
+    <rdfs:label>Confidentiality</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securityproperty"/>
+    <rdfs:comment>Confidentiality is a security property that ensures information is accessible only to authorized entities.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/corporatedatabase">
+    <rdfs:label>CorporateDatabase</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:comment>A corporate database is a type of information asset.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/customerrecord">
+    <rdfs:label>CustomerRecord</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:comment>A customer record is a type of information asset.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/discipline">
+    <rdfs:label>Discipline</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/externalthreat">
+    <rdfs:label>ExternalThreat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/threat"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/foundationalmodel">
+    <rdfs:label>FoundationalModel</rdfs:label>
+    <rdfs:comment>The CIA triad is a foundational model for information security.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/information">
+    <rdfs:label>Information</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/informationasset">
+    <rdfs:label>InformationAsset</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/resource"/>
+    <rdfs:comment>An information asset is any resource that has value for an organization and that stores, processes, transmits, or represents information.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/informationsecurity">
+    <rdfs:label>InformationSecurity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/discipline"/>
+    <rdfs:comment>Information security is a discipline focused on protecting information assets against internal and external threats.</rdfs:comment>
+    <rdfs:comment>The purpose of information security is to preserve confidentiality, integrity, and availability.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/integrity">
+    <rdfs:label>Integrity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securityproperty"/>
+    <rdfs:comment>Integrity is a security property that ensures information is accurate, complete, and protected against unauthorized modification.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/internalthreat">
+    <rdfs:label>InternalThreat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/threat"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/organization">
+    <rdfs:label>Organization</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/resource">
+    <rdfs:label>Resource</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securityproperty">
+    <rdfs:label>SecurityProperty</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/sourcecoderepository">
+    <rdfs:label>SourceCodeRepository</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:comment>A source code repository is a type of information asset.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/system">
+    <rdfs:label>System</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/systemconfigurationfile">
+    <rdfs:label>SystemConfigurationFile</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:comment>A system configuration file is a type of information asset.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/threat">
+    <rdfs:label>Threat</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/ensuresAccessibleTo">
+    <rdfs:label>ensuresAccessibleTo</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/confidentiality"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/authorizedentity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/ensuresAccuracyOf">
+    <rdfs:label>ensuresAccuracyOf</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/integrity"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/information"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/ensuresAvailabilityOf">
+    <rdfs:label>ensuresAvailabilityOf</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/availability"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/system"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/forms">
+    <rdfs:label>Forms</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/securityproperty"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/ciatriad"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/hasValueFor">
+    <rdfs:label>hasValueFor</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resource"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/organization"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/models">
+    <rdfs:label>Models</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/ciatriad"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/informationsecurity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/preserves">
+    <rdfs:label>Preserves</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/informationsecurity"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/securityproperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/processes">
+    <rdfs:label>Processes</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/information"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/protects">
+    <rdfs:label>Protects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/informationsecurity"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/informationasset"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/protectsAgainst">
+    <rdfs:label>protectsAgainst</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/informationsecurity"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/threat"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/represents">
+    <rdfs:label>Represents</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/information"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/stores">
+    <rdfs:label>Stores</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/information"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/transmits">
+    <rdfs:label>Transmits</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/informationasset"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/information"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="https://orion.local/resource/authorizedentity">
+    <rdfs:label>AuthorizedEntity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/availability">
+    <rdfs:label>Availability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/backuparchive">
+    <rdfs:label>BackupArchive</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/businessreport">
+    <rdfs:label>BusinessReport</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/ciatriad">
+    <rdfs:label>CiaTriad</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/confidentialdocument">
+    <rdfs:label>ConfidentialDocument</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/confidentiality">
+    <rdfs:label>Confidentiality</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/corporatedatabase">
+    <rdfs:label>CorporateDatabase</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/customerrecord">
+    <rdfs:label>CustomerRecord</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/discipline">
+    <rdfs:label>Discipline</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/externalthreat">
+    <rdfs:label>ExternalThreat</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/foundationalmodel">
+    <rdfs:label>FoundationalModel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/information">
+    <rdfs:label>Information</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/informationasset">
+    <rdfs:label>InformationAsset</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/informationsecurity">
+    <rdfs:label>InformationSecurity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/integrity">
+    <rdfs:label>Integrity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/internalthreat">
+    <rdfs:label>InternalThreat</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/organization">
+    <rdfs:label>Organization</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/resource">
+    <rdfs:label>Resource</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityproperty">
+    <rdfs:label>SecurityProperty</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/sourcecoderepository">
+    <rdfs:label>SourceCodeRepository</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/system">
+    <rdfs:label>System</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/systemconfigurationfile">
+    <rdfs:label>SystemConfigurationFile</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/threat">
+    <rdfs:label>Threat</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,418 @@
+{
+  "claim_count": 24,
+  "claims": [
+    {
+      "claim_id": "claim-12e2bcca5206eea3",
+      "kind": "relation",
+      "normalized_statement": "Permission grants ActionOverAResource",
+      "object": "ActionOverAResource",
+      "paragraph_id": "p011",
+      "predicate": "grants",
+      "source": {
+        "asset_id": "p011",
+        "evidence": "A permission grants an action over a resource.",
+        "paragraph_id": "p011",
+        "sentence_id": "sent-c0dac5a65044831a",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "Permission grants ActionOverAResource",
+      "subject": "Permission"
+    },
+    {
+      "claim_id": "claim-4a71c07e2b2d65fd",
+      "kind": "definition",
+      "normalized_statement": "Role is a CollectionOfPermissions",
+      "object": "CollectionOfPermissions",
+      "paragraph_id": "p011",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p011",
+        "evidence": "A role is a collection of permissions.",
+        "paragraph_id": "p011",
+        "sentence_id": "sent-0a91860024e18549",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "Role is a CollectionOfPermissions",
+      "subject": "Role"
+    },
+    {
+      "claim_id": "claim-f310d29049939301",
+      "kind": "definition",
+      "normalized_statement": "UserGroup is a CollectionOfIdentities",
+      "object": "CollectionOfIdentities",
+      "paragraph_id": "p011",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p011",
+        "evidence": "A user group is a collection of identities that share common permissions.",
+        "paragraph_id": "p011",
+        "sentence_id": "sent-29871844d0c2a41f",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "UserGroup is a CollectionOfIdentities",
+      "subject": "UserGroup"
+    },
+    {
+      "claim_id": "claim-3f741a8eca83f0d9",
+      "kind": "relation",
+      "normalized_statement": "UserGroup shares CommonPermission",
+      "object": "CommonPermission",
+      "paragraph_id": "p011",
+      "predicate": "shares",
+      "source": {
+        "asset_id": "p011",
+        "evidence": "A user group is a collection of identities that share common permissions.",
+        "paragraph_id": "p011",
+        "sentence_id": "sent-29871844d0c2a41f",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "UserGroup shares CommonPermission",
+      "subject": "UserGroup"
+    },
+    {
+      "claim_id": "claim-651d62061fa289cd",
+      "kind": "relation",
+      "normalized_statement": "RoleAssignment links RoleToAnIdentity",
+      "object": "RoleToAnIdentity",
+      "paragraph_id": "p011",
+      "predicate": "links",
+      "source": {
+        "asset_id": "p011",
+        "evidence": "A role assignment links a role to an identity.",
+        "paragraph_id": "p011",
+        "sentence_id": "sent-c247fd122cf1b997",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "RoleAssignment links RoleToAnIdentity",
+      "subject": "RoleAssignment"
+    },
+    {
+      "claim_id": "claim-ea5468acac6b2cf9",
+      "kind": "relation",
+      "normalized_statement": "PermissionReview verifies WhetherAssignedPermissionRemainNecessary",
+      "object": "WhetherAssignedPermissionRemainNecessary",
+      "paragraph_id": "p011",
+      "predicate": "verifies",
+      "source": {
+        "asset_id": "p011",
+        "evidence": "A permission review verifies whether assigned permissions remain necessary.",
+        "paragraph_id": "p011",
+        "sentence_id": "sent-71b56d0824bdfeee",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "PermissionReview verifies WhetherAssignedPermissionRemainNecessary",
+      "subject": "PermissionReview"
+    },
+    {
+      "claim_id": "claim-79c5d8d1f292a51c",
+      "kind": "relation",
+      "normalized_statement": "SegregationOf duties PreventOnePersonFromControllingIncompatibleActivity",
+      "object": "PreventOnePersonFromControllingIncompatibleActivity",
+      "paragraph_id": "p011",
+      "predicate": "duties",
+      "source": {
+        "asset_id": "p011",
+        "evidence": "Segregation of duties prevents one person from controlling incompatible activities.",
+        "paragraph_id": "p011",
+        "sentence_id": "sent-f8ea7d7731ee110b",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "SegregationOf duties PreventOnePersonFromControllingIncompatibleActivity",
+      "subject": "SegregationOf"
+    },
+    {
+      "claim_id": "claim-34a51ff00dfc08f1",
+      "kind": "definition",
+      "normalized_statement": "ExcessivePermission is a AccessRisk",
+      "object": "AccessRisk",
+      "paragraph_id": "p011",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p011",
+        "evidence": "Excessive permission is a type of access risk.",
+        "paragraph_id": "p011",
+        "sentence_id": "sent-1513e6f27b455cb8",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "ExcessivePermission is a AccessRisk",
+      "subject": "ExcessivePermission"
+    },
+    {
+      "claim_id": "claim-901077b593488f90",
+      "kind": "definition",
+      "normalized_statement": "DormantAccountAccess is a AccessRisk",
+      "object": "AccessRisk",
+      "paragraph_id": "p011",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p011",
+        "evidence": "Dormant account access is a type of access risk.",
+        "paragraph_id": "p011",
+        "sentence_id": "sent-2b273c92e1d76e4b",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "DormantAccountAccess is a AccessRisk",
+      "subject": "DormantAccountAccess"
+    },
+    {
+      "claim_id": "claim-ddd68b752ec11d8b",
+      "kind": "definition",
+      "normalized_statement": "OrphanedAccountAccess is a AccessRisk",
+      "object": "AccessRisk",
+      "paragraph_id": "p011",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p011",
+        "evidence": "Orphaned account access is a type of access risk.",
+        "paragraph_id": "p011",
+        "sentence_id": "sent-bb27eaa3d93ab34a",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "OrphanedAccountAccess is a AccessRisk",
+      "subject": "OrphanedAccountAccess"
+    },
+    {
+      "claim_id": "claim-60ebed41d3ab487f",
+      "kind": "relation",
+      "normalized_statement": "IdentityAnd access ManagementControlTheLifecycleOfIdentities",
+      "object": "ManagementControlTheLifecycleOfIdentities",
+      "paragraph_id": "p012",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-6899d8a8f1c22613",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "IdentityAnd access ManagementControlTheLifecycleOfIdentities",
+      "subject": "IdentityAnd"
+    },
+    {
+      "claim_id": "claim-f9b06c5e910ceb14",
+      "kind": "relation",
+      "normalized_statement": "IdentityAnd access Account",
+      "object": "Account",
+      "paragraph_id": "p012",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-6899d8a8f1c22613",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "IdentityAnd access Account",
+      "subject": "IdentityAnd"
+    },
+    {
+      "claim_id": "claim-d9ebb0335760c4fb",
+      "kind": "relation",
+      "normalized_statement": "IdentityAnd access Role",
+      "object": "Role",
+      "paragraph_id": "p012",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-6899d8a8f1c22613",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "IdentityAnd access Role",
+      "subject": "IdentityAnd"
+    },
+    {
+      "claim_id": "claim-ff00607e38b629f9",
+      "kind": "relation",
+      "normalized_statement": "IdentityAnd access Permission",
+      "object": "Permission",
+      "paragraph_id": "p012",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-6899d8a8f1c22613",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "IdentityAnd access Permission",
+      "subject": "IdentityAnd"
+    },
+    {
+      "claim_id": "claim-f21806c0e7744930",
+      "kind": "relation",
+      "normalized_statement": "IdentityAnd access Credential",
+      "object": "Credential",
+      "paragraph_id": "p012",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-6899d8a8f1c22613",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "IdentityAnd access Credential",
+      "subject": "IdentityAnd"
+    },
+    {
+      "claim_id": "claim-2553e3e5e54a2411",
+      "kind": "relation",
+      "normalized_statement": "UserProvisioning creates NewUserAccount",
+      "object": "NewUserAccount",
+      "paragraph_id": "p012",
+      "predicate": "creates",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "User provisioning creates a new user account.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-4868502c195d0bb8",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "UserProvisioning creates NewUserAccount",
+      "subject": "UserProvisioning"
+    },
+    {
+      "claim_id": "claim-53bbc837874f8085",
+      "kind": "relation",
+      "normalized_statement": "UserDeprovisioning disables RemoveAccessForAUser",
+      "object": "RemoveAccessForAUser",
+      "paragraph_id": "p012",
+      "predicate": "disables",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "User deprovisioning disables or removes access for a user who no longer requires it.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-ce1068b612d9a39e",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "UserDeprovisioning disables RemoveAccessForAUser",
+      "subject": "UserDeprovisioning"
+    },
+    {
+      "claim_id": "claim-767dc74c137f2f4f",
+      "kind": "relation",
+      "normalized_statement": "AccessModification changes PermissionAssignedToAnIdentity",
+      "object": "PermissionAssignedToAnIdentity",
+      "paragraph_id": "p012",
+      "predicate": "changes",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "Access modification changes the permissions assigned to an identity.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-b1fa9b5c6a4da6fc",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "AccessModification changes PermissionAssignedToAnIdentity",
+      "subject": "AccessModification"
+    },
+    {
+      "claim_id": "claim-c8f09f0ef9bd45f2",
+      "kind": "relation",
+      "normalized_statement": "Joiner process CreateAccessForANewEmployee",
+      "object": "CreateAccessForANewEmployee",
+      "paragraph_id": "p012",
+      "predicate": "process",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "A joiner process creates access for a new employee.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-211347ad5697c8ca",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "Joiner process CreateAccessForANewEmployee",
+      "subject": "Joiner"
+    },
+    {
+      "claim_id": "claim-5d112df75f79fb95",
+      "kind": "relation",
+      "normalized_statement": "Mover process ChangeAccessWhenAPersonChangeRole",
+      "object": "ChangeAccessWhenAPersonChangeRole",
+      "paragraph_id": "p012",
+      "predicate": "process",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "A mover process changes access when a person changes role.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-781ca1246fc9815d",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "Mover process ChangeAccessWhenAPersonChangeRole",
+      "subject": "Mover"
+    },
+    {
+      "claim_id": "claim-485d06fe2b7eebe6",
+      "kind": "relation",
+      "normalized_statement": "Leaver process RemoveAccessWhenAPersonLeaveTheOrganization",
+      "object": "RemoveAccessWhenAPersonLeaveTheOrganization",
+      "paragraph_id": "p012",
+      "predicate": "process",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "A leaver process removes access when a person leaves the organization.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-a7de1e3caa4e43db",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "Leaver process RemoveAccessWhenAPersonLeaveTheOrganization",
+      "subject": "Leaver"
+    },
+    {
+      "claim_id": "claim-37062f2dfc43d425",
+      "kind": "relation",
+      "normalized_statement": "IdentityManagementSystem stores IdentityRecord",
+      "object": "IdentityRecord",
+      "paragraph_id": "p012",
+      "predicate": "stores",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "The identity management system stores identity records.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-4c20dbd18ea21f44",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": "IdentityManagementSystem stores IdentityRecord",
+      "subject": "IdentityManagementSystem"
+    },
+    {
+      "claim_id": "claim-2056ab50980a2fc3",
+      "kind": "relation",
+      "normalized_statement": " access ManagementSystemEnforceAuthentication",
+      "object": "ManagementSystemEnforceAuthentication",
+      "paragraph_id": "p012",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "The access management system enforces authentication and authorization decisions.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-0c043c30f9a3a0b8",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": " access ManagementSystemEnforceAuthentication"
+    },
+    {
+      "claim_id": "claim-f8f7e33293db457b",
+      "kind": "relation",
+      "normalized_statement": " access AuthorizationDecision",
+      "object": "AuthorizationDecision",
+      "paragraph_id": "p012",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p012",
+        "evidence": "The access management system enforces authentication and authorization decisions.",
+        "paragraph_id": "p012",
+        "sentence_id": "sent-0c043c30f9a3a0b8",
+        "source_text_id": "32c7af8bef345afcf4c1264dfb9fdaf07bb531380271f6243e3b1b917f89410f"
+      },
+      "statement": " access AuthorizationDecision"
+    }
+  ],
+  "contract_required_stage": "semantic_claims",
+  "observed_stage": "semantic_claims",
+  "paragraph_asset_ids": [
+    "p011",
+    "p012"
+  ],
+  "stage": "semantic_claims"
+}

@@ -1,0 +1,608 @@
+{
+  "classes": [
+    {
+      "iri": "orion:AvailabilityIncident",
+      "label": "AvailabilityIncident"
+    },
+    {
+      "comments": [
+        "A backup is a copy of data used for recovery."
+      ],
+      "iri": "orion:Backup",
+      "label": "Backup"
+    },
+    {
+      "iri": "orion:BackupFrequency",
+      "label": "BackupFrequency"
+    },
+    {
+      "comments": [
+        "A backup policy defines backup frequency, retention, protection, and restoration requirements."
+      ],
+      "iri": "orion:BackupPolicy",
+      "label": "BackupPolicy"
+    },
+    {
+      "comments": [
+        "Business continuity is the capability to continue critical operations during disruption."
+      ],
+      "iri": "orion:BusinessContinuity",
+      "label": "BusinessContinuity"
+    },
+    {
+      "iri": "orion:CapabilityToContinueCriticalOperationDuringDisruption",
+      "label": "CapabilityToContinueCriticalOperationDuringDisruption"
+    },
+    {
+      "iri": "orion:CopyOfData",
+      "label": "CopyOfData"
+    },
+    {
+      "comments": [
+        "A data breach is a type of security incident that involves unauthorized access to or disclosure of data."
+      ],
+      "iri": "orion:DataBreach",
+      "label": "DataBreach"
+    },
+    {
+      "comments": [
+        "A denial-of-service attack is a type of availability incident."
+      ],
+      "iri": "orion:DenialOfServiceAttack",
+      "label": "DenialOfServiceAttack"
+    },
+    {
+      "comments": [
+        "Disaster recovery is the process of restoring technology services after a disruptive event."
+      ],
+      "iri": "orion:DisasterRecovery",
+      "label": "DisasterRecovery"
+    },
+    {
+      "comments": [
+        "A disaster recovery test verifies whether recovery procedures work as expected."
+      ],
+      "iri": "orion:DisasterRecoveryTest",
+      "label": "DisasterRecoveryTest"
+    },
+    {
+      "iri": "orion:DisclosureOfData",
+      "label": "DisclosureOfData"
+    },
+    {
+      "comments": [
+        "Insider misuse is a type of security incident caused by an internal actor."
+      ],
+      "iri": "orion:InsiderMisuse",
+      "label": "InsiderMisuse"
+    },
+    {
+      "comments": [
+        "A lost device incident is a type of physical and information security incident."
+      ],
+      "iri": "orion:LostDeviceIncident",
+      "label": "LostDeviceIncident"
+    },
+    {
+      "iri": "orion:MalwareIncident",
+      "label": "MalwareIncident"
+    },
+    {
+      "comments": [
+        "A malware infection is a type of security incident."
+      ],
+      "iri": "orion:MalwareInfection",
+      "label": "MalwareInfection"
+    },
+    {
+      "iri": "orion:MaximumAcceptableAmountOfDataLossMeasuredInTime",
+      "label": "MaximumAcceptableAmountOfDataLossMeasuredInTime"
+    },
+    {
+      "iri": "orion:MaximumAcceptableTimeToRestoreAService",
+      "label": "MaximumAcceptableTimeToRestoreAService"
+    },
+    {
+      "comments": [
+        "A phishing attack is a type of social engineering incident."
+      ],
+      "iri": "orion:PhishingAttack",
+      "label": "PhishingAttack"
+    },
+    {
+      "iri": "orion:PhysicalAndInformationSecurityIncident",
+      "label": "PhysicalAndInformationSecurityIncident"
+    },
+    {
+      "iri": "orion:ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
+      "label": "ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent"
+    },
+    {
+      "iri": "orion:Protection",
+      "label": "Protection"
+    },
+    {
+      "comments": [
+        "A ransomware attack is a type of malware incident."
+      ],
+      "iri": "orion:RansomwareAttack",
+      "label": "RansomwareAttack"
+    },
+    {
+      "comments": [
+        "A recovery point objective defines the maximum acceptable amount of data loss measured in time."
+      ],
+      "iri": "orion:RecoveryPointObjective",
+      "label": "RecoveryPointObjective"
+    },
+    {
+      "comments": [
+        "A recovery time objective defines the maximum acceptable time to restore a service."
+      ],
+      "iri": "orion:RecoveryTimeObjective",
+      "label": "RecoveryTimeObjective"
+    },
+    {
+      "iri": "orion:RestorationRequirement",
+      "label": "RestorationRequirement"
+    },
+    {
+      "iri": "orion:Retention",
+      "label": "Retention"
+    },
+    {
+      "iri": "orion:SecurityIncident",
+      "label": "SecurityIncident"
+    },
+    {
+      "iri": "orion:SecurityIncidentCausedByAnInternalActor",
+      "label": "SecurityIncidentCausedByAnInternalActor"
+    },
+    {
+      "iri": "orion:SecurityIncidentInvolvingAccessByAnUnapprovedIdentity",
+      "label": "SecurityIncidentInvolvingAccessByAnUnapprovedIdentity"
+    },
+    {
+      "iri": "orion:SocialEngineeringIncident",
+      "label": "SocialEngineeringIncident"
+    },
+    {
+      "comments": [
+        "Unauthorized access is a type of security incident involving access by an unapproved identity."
+      ],
+      "iri": "orion:UnauthorizedAccess",
+      "label": "UnauthorizedAccess"
+    },
+    {
+      "iri": "orion:UnauthorizedAccessTo",
+      "label": "UnauthorizedAccessTo"
+    },
+    {
+      "iri": "orion:WhetherRecoveryProcedureWorkAsExpected",
+      "label": "WhetherRecoveryProcedureWorkAsExpected"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:BackupPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:BackupFrequency"
+    },
+    {
+      "domain": "orion:BackupPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:Protection"
+    },
+    {
+      "domain": "orion:BackupPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:RestorationRequirement"
+    },
+    {
+      "domain": "orion:BackupPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:Retention"
+    },
+    {
+      "domain": "orion:RecoveryPointObjective",
+      "predicate": "orion:defines",
+      "range": "orion:MaximumAcceptableAmountOfDataLossMeasuredInTime"
+    },
+    {
+      "domain": "orion:RecoveryTimeObjective",
+      "predicate": "orion:defines",
+      "range": "orion:MaximumAcceptableTimeToRestoreAService"
+    },
+    {
+      "domain": "orion:DataBreach",
+      "predicate": "orion:involves",
+      "range": "orion:DisclosureOfData"
+    },
+    {
+      "domain": "orion:DataBreach",
+      "predicate": "orion:involves",
+      "range": "orion:UnauthorizedAccessTo"
+    },
+    {
+      "domain": "orion:DisasterRecoveryTest",
+      "predicate": "orion:verifies",
+      "range": "orion:WhetherRecoveryProcedureWorkAsExpected"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-0d5a1673fe042c5c",
+      "claim-c6ae56949eaddec4",
+      "claim-c0b5776fc4d6ba30",
+      "claim-24eceea2d67f6660",
+      "claim-24464ab0615baafd",
+      "claim-78a29a867061ef7c",
+      "claim-d5553a605f685028",
+      "claim-f0863555ef67e93f",
+      "claim-4a39d218b5971173",
+      "claim-f62e0f3f8f279267",
+      "claim-e8a10a2eab180bfa",
+      "claim-a1d11496ce22aae8",
+      "claim-0977c5679d372666",
+      "claim-fa7d2b1a0a1b0f1f",
+      "claim-a04dd9a12bc03291",
+      "claim-a750fafb923edcf2",
+      "claim-780a945dc4d5e3e6",
+      "claim-6e5ea18d7b4d746c",
+      "claim-93971b360eccb022",
+      "claim-a9f51a290ce00754",
+      "claim-4a130cbb2fbe2b48",
+      "claim-8d1ce3b91258a29e",
+      "claim-f0c2880899194bac"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:BackupPolicy",
+      "property": "orion:defines",
+      "range": "orion:BackupFrequency"
+    },
+    {
+      "domain": "orion:BackupPolicy",
+      "property": "orion:defines",
+      "range": "orion:Protection"
+    },
+    {
+      "domain": "orion:BackupPolicy",
+      "property": "orion:defines",
+      "range": "orion:RestorationRequirement"
+    },
+    {
+      "domain": "orion:BackupPolicy",
+      "property": "orion:defines",
+      "range": "orion:Retention"
+    },
+    {
+      "domain": "orion:RecoveryPointObjective",
+      "property": "orion:defines",
+      "range": "orion:MaximumAcceptableAmountOfDataLossMeasuredInTime"
+    },
+    {
+      "domain": "orion:RecoveryTimeObjective",
+      "property": "orion:defines",
+      "range": "orion:MaximumAcceptableTimeToRestoreAService"
+    },
+    {
+      "domain": "orion:DataBreach",
+      "property": "orion:involves",
+      "range": "orion:DisclosureOfData"
+    },
+    {
+      "domain": "orion:DataBreach",
+      "property": "orion:involves",
+      "range": "orion:UnauthorizedAccessTo"
+    },
+    {
+      "domain": "orion:DisasterRecoveryTest",
+      "property": "orion:verifies",
+      "range": "orion:WhetherRecoveryProcedureWorkAsExpected"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:AvailabilityIncident",
+        "label": "AvailabilityIncident"
+      },
+      {
+        "comments": [
+          "A backup is a copy of data used for recovery."
+        ],
+        "iri": "orion:Backup",
+        "label": "Backup"
+      },
+      {
+        "iri": "orion:BackupFrequency",
+        "label": "BackupFrequency"
+      },
+      {
+        "comments": [
+          "A backup policy defines backup frequency, retention, protection, and restoration requirements."
+        ],
+        "iri": "orion:BackupPolicy",
+        "label": "BackupPolicy"
+      },
+      {
+        "comments": [
+          "Business continuity is the capability to continue critical operations during disruption."
+        ],
+        "iri": "orion:BusinessContinuity",
+        "label": "BusinessContinuity"
+      },
+      {
+        "iri": "orion:CapabilityToContinueCriticalOperationDuringDisruption",
+        "label": "CapabilityToContinueCriticalOperationDuringDisruption"
+      },
+      {
+        "iri": "orion:CopyOfData",
+        "label": "CopyOfData"
+      },
+      {
+        "comments": [
+          "A data breach is a type of security incident that involves unauthorized access to or disclosure of data."
+        ],
+        "iri": "orion:DataBreach",
+        "label": "DataBreach"
+      },
+      {
+        "comments": [
+          "A denial-of-service attack is a type of availability incident."
+        ],
+        "iri": "orion:DenialOfServiceAttack",
+        "label": "DenialOfServiceAttack"
+      },
+      {
+        "comments": [
+          "Disaster recovery is the process of restoring technology services after a disruptive event."
+        ],
+        "iri": "orion:DisasterRecovery",
+        "label": "DisasterRecovery"
+      },
+      {
+        "comments": [
+          "A disaster recovery test verifies whether recovery procedures work as expected."
+        ],
+        "iri": "orion:DisasterRecoveryTest",
+        "label": "DisasterRecoveryTest"
+      },
+      {
+        "iri": "orion:DisclosureOfData",
+        "label": "DisclosureOfData"
+      },
+      {
+        "comments": [
+          "Insider misuse is a type of security incident caused by an internal actor."
+        ],
+        "iri": "orion:InsiderMisuse",
+        "label": "InsiderMisuse"
+      },
+      {
+        "comments": [
+          "A lost device incident is a type of physical and information security incident."
+        ],
+        "iri": "orion:LostDeviceIncident",
+        "label": "LostDeviceIncident"
+      },
+      {
+        "iri": "orion:MalwareIncident",
+        "label": "MalwareIncident"
+      },
+      {
+        "comments": [
+          "A malware infection is a type of security incident."
+        ],
+        "iri": "orion:MalwareInfection",
+        "label": "MalwareInfection"
+      },
+      {
+        "iri": "orion:MaximumAcceptableAmountOfDataLossMeasuredInTime",
+        "label": "MaximumAcceptableAmountOfDataLossMeasuredInTime"
+      },
+      {
+        "iri": "orion:MaximumAcceptableTimeToRestoreAService",
+        "label": "MaximumAcceptableTimeToRestoreAService"
+      },
+      {
+        "comments": [
+          "A phishing attack is a type of social engineering incident."
+        ],
+        "iri": "orion:PhishingAttack",
+        "label": "PhishingAttack"
+      },
+      {
+        "iri": "orion:PhysicalAndInformationSecurityIncident",
+        "label": "PhysicalAndInformationSecurityIncident"
+      },
+      {
+        "iri": "orion:ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
+        "label": "ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent"
+      },
+      {
+        "iri": "orion:Protection",
+        "label": "Protection"
+      },
+      {
+        "comments": [
+          "A ransomware attack is a type of malware incident."
+        ],
+        "iri": "orion:RansomwareAttack",
+        "label": "RansomwareAttack"
+      },
+      {
+        "comments": [
+          "A recovery point objective defines the maximum acceptable amount of data loss measured in time."
+        ],
+        "iri": "orion:RecoveryPointObjective",
+        "label": "RecoveryPointObjective"
+      },
+      {
+        "comments": [
+          "A recovery time objective defines the maximum acceptable time to restore a service."
+        ],
+        "iri": "orion:RecoveryTimeObjective",
+        "label": "RecoveryTimeObjective"
+      },
+      {
+        "iri": "orion:RestorationRequirement",
+        "label": "RestorationRequirement"
+      },
+      {
+        "iri": "orion:Retention",
+        "label": "Retention"
+      },
+      {
+        "iri": "orion:SecurityIncident",
+        "label": "SecurityIncident"
+      },
+      {
+        "iri": "orion:SecurityIncidentCausedByAnInternalActor",
+        "label": "SecurityIncidentCausedByAnInternalActor"
+      },
+      {
+        "iri": "orion:SecurityIncidentInvolvingAccessByAnUnapprovedIdentity",
+        "label": "SecurityIncidentInvolvingAccessByAnUnapprovedIdentity"
+      },
+      {
+        "iri": "orion:SocialEngineeringIncident",
+        "label": "SocialEngineeringIncident"
+      },
+      {
+        "comments": [
+          "Unauthorized access is a type of security incident involving access by an unapproved identity."
+        ],
+        "iri": "orion:UnauthorizedAccess",
+        "label": "UnauthorizedAccess"
+      },
+      {
+        "iri": "orion:UnauthorizedAccessTo",
+        "label": "UnauthorizedAccessTo"
+      },
+      {
+        "iri": "orion:WhetherRecoveryProcedureWorkAsExpected",
+        "label": "WhetherRecoveryProcedureWorkAsExpected"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:BackupPolicy",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:BackupFrequency"
+      },
+      {
+        "domain": "orion:BackupPolicy",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:Protection"
+      },
+      {
+        "domain": "orion:BackupPolicy",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:RestorationRequirement"
+      },
+      {
+        "domain": "orion:BackupPolicy",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:Retention"
+      },
+      {
+        "domain": "orion:RecoveryPointObjective",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:MaximumAcceptableAmountOfDataLossMeasuredInTime"
+      },
+      {
+        "domain": "orion:RecoveryTimeObjective",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:MaximumAcceptableTimeToRestoreAService"
+      },
+      {
+        "domain": "orion:DataBreach",
+        "iri": "orion:involves",
+        "label": "Involves",
+        "range": "orion:DisclosureOfData"
+      },
+      {
+        "domain": "orion:DataBreach",
+        "iri": "orion:involves",
+        "label": "Involves",
+        "range": "orion:UnauthorizedAccessTo"
+      },
+      {
+        "domain": "orion:DisasterRecoveryTest",
+        "iri": "orion:verifies",
+        "label": "Verifies",
+        "range": "orion:WhetherRecoveryProcedureWorkAsExpected"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:CopyOfData",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Backup"
+    },
+    {
+      "object": "orion:CapabilityToContinueCriticalOperationDuringDisruption",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:BusinessContinuity"
+    },
+    {
+      "object": "orion:SecurityIncident",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DataBreach"
+    },
+    {
+      "object": "orion:AvailabilityIncident",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DenialOfServiceAttack"
+    },
+    {
+      "object": "orion:ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DisasterRecovery"
+    },
+    {
+      "object": "orion:SecurityIncidentCausedByAnInternalActor",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:InsiderMisuse"
+    },
+    {
+      "object": "orion:PhysicalAndInformationSecurityIncident",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:LostDeviceIncident"
+    },
+    {
+      "object": "orion:SecurityIncident",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:MalwareInfection"
+    },
+    {
+      "object": "orion:SocialEngineeringIncident",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:PhishingAttack"
+    },
+    {
+      "object": "orion:MalwareIncident",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:RansomwareAttack"
+    },
+    {
+      "object": "orion:SecurityIncidentInvolvingAccessByAnUnapprovedIdentity",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:UnauthorizedAccess"
+    }
+  ],
+  "type_assertions": []
+}

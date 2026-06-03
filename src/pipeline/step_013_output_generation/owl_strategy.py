@@ -17,6 +17,20 @@ def _normalize_predicate(value: str | None) -> str:
     return re.sub(r'[^a-z0-9]+', '_', normalized).strip('_')
 
 
+_TAXONOMY_SCAFFOLD_HEADS = {'type', 'kind', 'category', 'form'}
+_PHRASE_ARTICLES = {'a', 'an', 'the'}
+
+
+def _is_taxonomy_scaffold(value: str | None) -> bool:
+    normalized = _normalize_text(value)
+    if not normalized:
+        return False
+    tokens = [token for token in re.sub(r'[^a-z0-9]+', ' ', normalized).split(' ') if token]
+    while tokens and tokens[0] in _PHRASE_ARTICLES:
+        tokens.pop(0)
+    return len(tokens) >= 3 and tokens[0] in _TAXONOMY_SCAFFOLD_HEADS and tokens[1] == 'of'
+
+
 def _dedupe_strings(values: list[str]) -> list[str]:
     seen: set[str] = set()
     unique: list[str] = []
@@ -62,7 +76,8 @@ class OwlOutputStrategy:
         if self._namespace_mode:
             classes = _dedupe_strings([
                 self._compact(concept.get('normalized_text') or concept.get('lemma') or concept.get('text') or '', 'class')
-                for concept in payload.get('concepts', []) if isinstance(concept, dict)
+                for concept in payload.get('concepts', [])
+                if isinstance(concept, dict) and not _is_taxonomy_scaffold(concept.get('normalized_text') or concept.get('lemma') or concept.get('text'))
             ])
             individuals = _dedupe_strings([
                 self._compact(entity.get('normalized_text') or entity.get('text') or '', 'individual')
@@ -104,6 +119,8 @@ class OwlOutputStrategy:
                 class_name = _normalize_text(assertion.get('type') or assertion.get('class'))
             if not individual or not class_name:
                 continue
+            if _is_taxonomy_scaffold(assertion.get('type') or assertion.get('class')):
+                continue
             class_assertions.append({'individual': individual, 'class': class_name})
 
         subclass_axioms: list[dict[str, str]] = []
@@ -111,11 +128,17 @@ class OwlOutputStrategy:
             if not isinstance(relation, dict):
                 continue
             if self._namespace_mode:
-                child = self._compact(relation.get('child') or '', 'class')
-                parent = self._compact(relation.get('parent') or '', 'class')
+                child_raw = relation.get('child') or ''
+                parent_raw = relation.get('parent') or ''
+                if _is_taxonomy_scaffold(parent_raw):
+                    continue
+                child = self._compact(child_raw, 'class')
+                parent = self._compact(parent_raw, 'class')
             else:
                 child = _normalize_text(relation.get('child'))
                 parent = _normalize_text(relation.get('parent'))
+                if _is_taxonomy_scaffold(parent):
+                    continue
             if not child or not parent:
                 continue
             subclass_axioms.append({'child': child, 'parent': parent})

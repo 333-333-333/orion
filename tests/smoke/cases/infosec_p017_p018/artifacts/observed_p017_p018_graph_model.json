@@ -1,0 +1,862 @@
+{
+  "classes": [
+    {
+      "iri": "orion:AdministrativeBoundaryForCloudResource",
+      "label": "AdministrativeBoundaryForCloudResource"
+    },
+    {
+      "comments": [
+        "Asymmetric encryption is a type of encryption that uses a public key and a private key."
+      ],
+      "iri": "orion:AsymmetricEncryption",
+      "label": "AsymmetricEncryption"
+    },
+    {
+      "iri": "orion:Authenticity",
+      "label": "Authenticity"
+    },
+    {
+      "comments": [
+        "A cloud access security broker monitors and controls cloud service usage."
+      ],
+      "iri": "orion:Cloud",
+      "label": "Cloud"
+    },
+    {
+      "comments": [
+        "A cloud account is an administrative boundary for cloud resources."
+      ],
+      "iri": "orion:CloudAccount",
+      "label": "CloudAccount"
+    },
+    {
+      "iri": "orion:CloudData",
+      "label": "CloudData"
+    },
+    {
+      "comments": [
+        "A cloud identity is an identity used to access cloud services."
+      ],
+      "iri": "orion:CloudIdentity",
+      "label": "CloudIdentity"
+    },
+    {
+      "iri": "orion:CloudInfrastructure",
+      "label": "CloudInfrastructure"
+    },
+    {
+      "comments": [
+        "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data."
+      ],
+      "iri": "orion:CloudSecurity",
+      "label": "CloudSecurity"
+    },
+    {
+      "comments": [
+        "A cloud security posture management tool detects misconfigurations in cloud environments."
+      ],
+      "iri": "orion:CloudSecurityPostureManagementTool",
+      "label": "CloudSecurityPostureManagementTool"
+    },
+    {
+      "iri": "orion:CloudService",
+      "label": "CloudService"
+    },
+    {
+      "iri": "orion:CloudServiceUsage",
+      "label": "CloudServiceUsage"
+    },
+    {
+      "iri": "orion:CloudStorageResource",
+      "label": "CloudStorageResource"
+    },
+    {
+      "comments": [
+        "A cloud workload is a type of computing resource hosted in a cloud environment."
+      ],
+      "iri": "orion:CloudWorkload",
+      "label": "CloudWorkload"
+    },
+    {
+      "iri": "orion:ComputingResourceHostedInACloudEnvironment",
+      "label": "ComputingResourceHostedInACloudEnvironment"
+    },
+    {
+      "iri": "orion:Confidentiality",
+      "label": "Confidentiality"
+    },
+    {
+      "comments": [
+        "A container is a type of cloud workload."
+      ],
+      "iri": "orion:Container",
+      "label": "Container"
+    },
+    {
+      "comments": [
+        "A cryptographic key is a value used by a cryptographic algorithm."
+      ],
+      "iri": "orion:CryptographicKey",
+      "label": "CryptographicKey"
+    },
+    {
+      "iri": "orion:CryptographicMechanism",
+      "label": "CryptographicMechanism"
+    },
+    {
+      "comments": [
+        "Cryptography protects information through mathematical techniques."
+      ],
+      "iri": "orion:Cryptography",
+      "label": "Cryptography"
+    },
+    {
+      "comments": [
+        "Decryption is the process that converts encrypted data back into readable data."
+      ],
+      "iri": "orion:Decryption",
+      "label": "Decryption"
+    },
+    {
+      "comments": [
+        "A digital signature is a cryptographic mechanism that verifies authenticity and integrity."
+      ],
+      "iri": "orion:DigitalSignature",
+      "label": "DigitalSignature"
+    },
+    {
+      "iri": "orion:EncryptedDataBackIntoReadableData",
+      "label": "EncryptedDataBackIntoReadableData"
+    },
+    {
+      "comments": [
+        "Encryption is a cryptographic mechanism that protects confidentiality."
+      ],
+      "iri": "orion:Encryption",
+      "label": "Encryption"
+    },
+    {
+      "iri": "orion:FixedLengthDigestFromInputData",
+      "label": "FixedLengthDigestFromInputData"
+    },
+    {
+      "comments": [
+        "A hash function generates a fixed-length digest from input data."
+      ],
+      "iri": "orion:HashFunction",
+      "label": "HashFunction"
+    },
+    {
+      "iri": "orion:InformationThroughMathematicalTechnique",
+      "label": "InformationThroughMathematicalTechnique"
+    },
+    {
+      "iri": "orion:Integrity",
+      "label": "Integrity"
+    },
+    {
+      "comments": [
+        "A message authentication code verifies message integrity and authenticity."
+      ],
+      "iri": "orion:MessageAuthenticationCode",
+      "label": "MessageAuthenticationCode"
+    },
+    {
+      "iri": "orion:MessageIntegrity",
+      "label": "MessageIntegrity"
+    },
+    {
+      "iri": "orion:MisconfigurationInCloudEnvironment",
+      "label": "MisconfigurationInCloudEnvironment"
+    },
+    {
+      "comments": [
+        "An object storage bucket is a type of cloud storage resource."
+      ],
+      "iri": "orion:ObjectStorageBucket",
+      "label": "ObjectStorageBucket"
+    },
+    {
+      "iri": "orion:PrivateKey",
+      "label": "PrivateKey"
+    },
+    {
+      "iri": "orion:Process",
+      "label": "Process"
+    },
+    {
+      "iri": "orion:PublicKey",
+      "label": "PublicKey"
+    },
+    {
+      "iri": "orion:SameKeyForEncryption",
+      "label": "SameKeyForEncryption"
+    },
+    {
+      "iri": "orion:SecurityBrokerMonitor",
+      "label": "SecurityBrokerMonitor"
+    },
+    {
+      "comments": [
+        "A serverless function is a type of cloud workload."
+      ],
+      "iri": "orion:ServerlessFunction",
+      "label": "ServerlessFunction"
+    },
+    {
+      "comments": [
+        "Symmetric encryption is a type of encryption that uses the same key for encryption and decryption."
+      ],
+      "iri": "orion:SymmetricEncryption",
+      "label": "SymmetricEncryption"
+    },
+    {
+      "iri": "orion:Value",
+      "label": "Value"
+    },
+    {
+      "comments": [
+        "A virtual machine is a type of cloud workload."
+      ],
+      "iri": "orion:VirtualMachine",
+      "label": "VirtualMachine"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:Cloud",
+      "predicate": "orion:access",
+      "range": "orion:SecurityBrokerMonitor"
+    },
+    {
+      "domain": "orion:Cloud",
+      "predicate": "orion:controls",
+      "range": "orion:CloudServiceUsage"
+    },
+    {
+      "domain": "orion:Decryption",
+      "predicate": "orion:converts",
+      "range": "orion:EncryptedDataBackIntoReadableData"
+    },
+    {
+      "domain": "orion:CloudSecurityPostureManagementTool",
+      "predicate": "orion:detects",
+      "range": "orion:MisconfigurationInCloudEnvironment"
+    },
+    {
+      "domain": "orion:HashFunction",
+      "predicate": "orion:generates",
+      "range": "orion:FixedLengthDigestFromInputData"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:CloudData"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:CloudInfrastructure"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:CloudService"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:CloudWorkload"
+    },
+    {
+      "domain": "orion:Cryptography",
+      "predicate": "orion:protects",
+      "range": "orion:InformationThroughMathematicalTechnique"
+    },
+    {
+      "domain": "orion:Encryption",
+      "predicate": "orion:protects",
+      "range": "orion:Confidentiality"
+    },
+    {
+      "domain": "orion:AsymmetricEncryption",
+      "predicate": "orion:uses",
+      "range": "orion:PrivateKey"
+    },
+    {
+      "domain": "orion:AsymmetricEncryption",
+      "predicate": "orion:uses",
+      "range": "orion:PublicKey"
+    },
+    {
+      "domain": "orion:SymmetricEncryption",
+      "predicate": "orion:uses",
+      "range": "orion:Decryption"
+    },
+    {
+      "domain": "orion:SymmetricEncryption",
+      "predicate": "orion:uses",
+      "range": "orion:SameKeyForEncryption"
+    },
+    {
+      "domain": "orion:DigitalSignature",
+      "predicate": "orion:verifies",
+      "range": "orion:Authenticity"
+    },
+    {
+      "domain": "orion:DigitalSignature",
+      "predicate": "orion:verifies",
+      "range": "orion:Integrity"
+    },
+    {
+      "domain": "orion:MessageAuthenticationCode",
+      "predicate": "orion:verifies",
+      "range": "orion:Authenticity"
+    },
+    {
+      "domain": "orion:MessageAuthenticationCode",
+      "predicate": "orion:verifies",
+      "range": "orion:MessageIntegrity"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-97b87088fe8964d3",
+      "claim-be4823af671a0c3e",
+      "claim-0c9dbbc8d638e0a6",
+      "claim-bab71cb6f749c5e5",
+      "claim-e7a94fa1a0b594f9",
+      "claim-74f563dda4566e28",
+      "claim-53b29be1ebd450f0",
+      "claim-6e99206b3adda3a4",
+      "claim-0135210bc4afa58e",
+      "claim-cc52334c3d884235",
+      "claim-5c4335926acadad5",
+      "claim-b01195bb22b92131",
+      "claim-7d41958c071fa6dd",
+      "claim-4183b87d7ac64c72",
+      "claim-ededbdb6c3595af9",
+      "claim-c15b623d57b49fc6",
+      "claim-3be4a007fb1b543d",
+      "claim-b4074b557692d2d1",
+      "claim-6a8119041e69a60c",
+      "claim-7fadd48695b703ba",
+      "claim-ea7b77abb29a3020",
+      "claim-6ab7e24f59fb2e4a",
+      "claim-5cf0a3e966cec62d",
+      "claim-6b82fed71f12bc5f",
+      "claim-92fbc4a38ad39b2c",
+      "claim-3101e6cb7f5b3dd8",
+      "claim-3744b7d64c846fb1",
+      "claim-33a39df60451d821",
+      "claim-4be7cf0bb1eaeefb",
+      "claim-19cb907493aab777",
+      "claim-9ff2cbbb4bdc7c1e",
+      "claim-f9216755c5720d01"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:Cloud",
+      "property": "orion:access",
+      "range": "orion:SecurityBrokerMonitor"
+    },
+    {
+      "domain": "orion:Cloud",
+      "property": "orion:controls",
+      "range": "orion:CloudServiceUsage"
+    },
+    {
+      "domain": "orion:Decryption",
+      "property": "orion:converts",
+      "range": "orion:EncryptedDataBackIntoReadableData"
+    },
+    {
+      "domain": "orion:CloudSecurityPostureManagementTool",
+      "property": "orion:detects",
+      "range": "orion:MisconfigurationInCloudEnvironment"
+    },
+    {
+      "domain": "orion:HashFunction",
+      "property": "orion:generates",
+      "range": "orion:FixedLengthDigestFromInputData"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "property": "orion:protects",
+      "range": "orion:CloudData"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "property": "orion:protects",
+      "range": "orion:CloudInfrastructure"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "property": "orion:protects",
+      "range": "orion:CloudService"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "property": "orion:protects",
+      "range": "orion:CloudWorkload"
+    },
+    {
+      "domain": "orion:Cryptography",
+      "property": "orion:protects",
+      "range": "orion:InformationThroughMathematicalTechnique"
+    },
+    {
+      "domain": "orion:Encryption",
+      "property": "orion:protects",
+      "range": "orion:Confidentiality"
+    },
+    {
+      "domain": "orion:AsymmetricEncryption",
+      "property": "orion:uses",
+      "range": "orion:PrivateKey"
+    },
+    {
+      "domain": "orion:AsymmetricEncryption",
+      "property": "orion:uses",
+      "range": "orion:PublicKey"
+    },
+    {
+      "domain": "orion:SymmetricEncryption",
+      "property": "orion:uses",
+      "range": "orion:Decryption"
+    },
+    {
+      "domain": "orion:SymmetricEncryption",
+      "property": "orion:uses",
+      "range": "orion:SameKeyForEncryption"
+    },
+    {
+      "domain": "orion:DigitalSignature",
+      "property": "orion:verifies",
+      "range": "orion:Authenticity"
+    },
+    {
+      "domain": "orion:DigitalSignature",
+      "property": "orion:verifies",
+      "range": "orion:Integrity"
+    },
+    {
+      "domain": "orion:MessageAuthenticationCode",
+      "property": "orion:verifies",
+      "range": "orion:Authenticity"
+    },
+    {
+      "domain": "orion:MessageAuthenticationCode",
+      "property": "orion:verifies",
+      "range": "orion:MessageIntegrity"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:AdministrativeBoundaryForCloudResource",
+        "label": "AdministrativeBoundaryForCloudResource"
+      },
+      {
+        "comments": [
+          "Asymmetric encryption is a type of encryption that uses a public key and a private key."
+        ],
+        "iri": "orion:AsymmetricEncryption",
+        "label": "AsymmetricEncryption"
+      },
+      {
+        "iri": "orion:Authenticity",
+        "label": "Authenticity"
+      },
+      {
+        "comments": [
+          "A cloud access security broker monitors and controls cloud service usage."
+        ],
+        "iri": "orion:Cloud",
+        "label": "Cloud"
+      },
+      {
+        "comments": [
+          "A cloud account is an administrative boundary for cloud resources."
+        ],
+        "iri": "orion:CloudAccount",
+        "label": "CloudAccount"
+      },
+      {
+        "iri": "orion:CloudData",
+        "label": "CloudData"
+      },
+      {
+        "comments": [
+          "A cloud identity is an identity used to access cloud services."
+        ],
+        "iri": "orion:CloudIdentity",
+        "label": "CloudIdentity"
+      },
+      {
+        "iri": "orion:CloudInfrastructure",
+        "label": "CloudInfrastructure"
+      },
+      {
+        "comments": [
+          "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data."
+        ],
+        "iri": "orion:CloudSecurity",
+        "label": "CloudSecurity"
+      },
+      {
+        "comments": [
+          "A cloud security posture management tool detects misconfigurations in cloud environments."
+        ],
+        "iri": "orion:CloudSecurityPostureManagementTool",
+        "label": "CloudSecurityPostureManagementTool"
+      },
+      {
+        "iri": "orion:CloudService",
+        "label": "CloudService"
+      },
+      {
+        "iri": "orion:CloudServiceUsage",
+        "label": "CloudServiceUsage"
+      },
+      {
+        "iri": "orion:CloudStorageResource",
+        "label": "CloudStorageResource"
+      },
+      {
+        "comments": [
+          "A cloud workload is a type of computing resource hosted in a cloud environment."
+        ],
+        "iri": "orion:CloudWorkload",
+        "label": "CloudWorkload"
+      },
+      {
+        "iri": "orion:ComputingResourceHostedInACloudEnvironment",
+        "label": "ComputingResourceHostedInACloudEnvironment"
+      },
+      {
+        "iri": "orion:Confidentiality",
+        "label": "Confidentiality"
+      },
+      {
+        "comments": [
+          "A container is a type of cloud workload."
+        ],
+        "iri": "orion:Container",
+        "label": "Container"
+      },
+      {
+        "comments": [
+          "A cryptographic key is a value used by a cryptographic algorithm."
+        ],
+        "iri": "orion:CryptographicKey",
+        "label": "CryptographicKey"
+      },
+      {
+        "iri": "orion:CryptographicMechanism",
+        "label": "CryptographicMechanism"
+      },
+      {
+        "comments": [
+          "Cryptography protects information through mathematical techniques."
+        ],
+        "iri": "orion:Cryptography",
+        "label": "Cryptography"
+      },
+      {
+        "comments": [
+          "Decryption is the process that converts encrypted data back into readable data."
+        ],
+        "iri": "orion:Decryption",
+        "label": "Decryption"
+      },
+      {
+        "comments": [
+          "A digital signature is a cryptographic mechanism that verifies authenticity and integrity."
+        ],
+        "iri": "orion:DigitalSignature",
+        "label": "DigitalSignature"
+      },
+      {
+        "iri": "orion:EncryptedDataBackIntoReadableData",
+        "label": "EncryptedDataBackIntoReadableData"
+      },
+      {
+        "comments": [
+          "Encryption is a cryptographic mechanism that protects confidentiality."
+        ],
+        "iri": "orion:Encryption",
+        "label": "Encryption"
+      },
+      {
+        "iri": "orion:FixedLengthDigestFromInputData",
+        "label": "FixedLengthDigestFromInputData"
+      },
+      {
+        "comments": [
+          "A hash function generates a fixed-length digest from input data."
+        ],
+        "iri": "orion:HashFunction",
+        "label": "HashFunction"
+      },
+      {
+        "iri": "orion:InformationThroughMathematicalTechnique",
+        "label": "InformationThroughMathematicalTechnique"
+      },
+      {
+        "iri": "orion:Integrity",
+        "label": "Integrity"
+      },
+      {
+        "comments": [
+          "A message authentication code verifies message integrity and authenticity."
+        ],
+        "iri": "orion:MessageAuthenticationCode",
+        "label": "MessageAuthenticationCode"
+      },
+      {
+        "iri": "orion:MessageIntegrity",
+        "label": "MessageIntegrity"
+      },
+      {
+        "iri": "orion:MisconfigurationInCloudEnvironment",
+        "label": "MisconfigurationInCloudEnvironment"
+      },
+      {
+        "comments": [
+          "An object storage bucket is a type of cloud storage resource."
+        ],
+        "iri": "orion:ObjectStorageBucket",
+        "label": "ObjectStorageBucket"
+      },
+      {
+        "iri": "orion:PrivateKey",
+        "label": "PrivateKey"
+      },
+      {
+        "iri": "orion:Process",
+        "label": "Process"
+      },
+      {
+        "iri": "orion:PublicKey",
+        "label": "PublicKey"
+      },
+      {
+        "iri": "orion:SameKeyForEncryption",
+        "label": "SameKeyForEncryption"
+      },
+      {
+        "iri": "orion:SecurityBrokerMonitor",
+        "label": "SecurityBrokerMonitor"
+      },
+      {
+        "comments": [
+          "A serverless function is a type of cloud workload."
+        ],
+        "iri": "orion:ServerlessFunction",
+        "label": "ServerlessFunction"
+      },
+      {
+        "comments": [
+          "Symmetric encryption is a type of encryption that uses the same key for encryption and decryption."
+        ],
+        "iri": "orion:SymmetricEncryption",
+        "label": "SymmetricEncryption"
+      },
+      {
+        "iri": "orion:Value",
+        "label": "Value"
+      },
+      {
+        "comments": [
+          "A virtual machine is a type of cloud workload."
+        ],
+        "iri": "orion:VirtualMachine",
+        "label": "VirtualMachine"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:Cloud",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:SecurityBrokerMonitor"
+      },
+      {
+        "domain": "orion:Cloud",
+        "iri": "orion:controls",
+        "label": "Controls",
+        "range": "orion:CloudServiceUsage"
+      },
+      {
+        "domain": "orion:Decryption",
+        "iri": "orion:converts",
+        "label": "Converts",
+        "range": "orion:EncryptedDataBackIntoReadableData"
+      },
+      {
+        "domain": "orion:CloudSecurityPostureManagementTool",
+        "iri": "orion:detects",
+        "label": "Detects",
+        "range": "orion:MisconfigurationInCloudEnvironment"
+      },
+      {
+        "domain": "orion:HashFunction",
+        "iri": "orion:generates",
+        "label": "Generates",
+        "range": "orion:FixedLengthDigestFromInputData"
+      },
+      {
+        "domain": "orion:CloudSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:CloudData"
+      },
+      {
+        "domain": "orion:CloudSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:CloudInfrastructure"
+      },
+      {
+        "domain": "orion:CloudSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:CloudService"
+      },
+      {
+        "domain": "orion:CloudSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:CloudWorkload"
+      },
+      {
+        "domain": "orion:Cryptography",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:InformationThroughMathematicalTechnique"
+      },
+      {
+        "domain": "orion:Encryption",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:Confidentiality"
+      },
+      {
+        "domain": "orion:AsymmetricEncryption",
+        "iri": "orion:uses",
+        "label": "Uses",
+        "range": "orion:PrivateKey"
+      },
+      {
+        "domain": "orion:AsymmetricEncryption",
+        "iri": "orion:uses",
+        "label": "Uses",
+        "range": "orion:PublicKey"
+      },
+      {
+        "domain": "orion:SymmetricEncryption",
+        "iri": "orion:uses",
+        "label": "Uses",
+        "range": "orion:Decryption"
+      },
+      {
+        "domain": "orion:SymmetricEncryption",
+        "iri": "orion:uses",
+        "label": "Uses",
+        "range": "orion:SameKeyForEncryption"
+      },
+      {
+        "domain": "orion:DigitalSignature",
+        "iri": "orion:verifies",
+        "label": "Verifies",
+        "range": "orion:Authenticity"
+      },
+      {
+        "domain": "orion:DigitalSignature",
+        "iri": "orion:verifies",
+        "label": "Verifies",
+        "range": "orion:Integrity"
+      },
+      {
+        "domain": "orion:MessageAuthenticationCode",
+        "iri": "orion:verifies",
+        "label": "Verifies",
+        "range": "orion:Authenticity"
+      },
+      {
+        "domain": "orion:MessageAuthenticationCode",
+        "iri": "orion:verifies",
+        "label": "Verifies",
+        "range": "orion:MessageIntegrity"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:Encryption",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:AsymmetricEncryption"
+    },
+    {
+      "object": "orion:AdministrativeBoundaryForCloudResource",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CloudAccount"
+    },
+    {
+      "object": "orion:ComputingResourceHostedInACloudEnvironment",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CloudWorkload"
+    },
+    {
+      "object": "orion:CloudWorkload",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Container"
+    },
+    {
+      "object": "orion:Value",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CryptographicKey"
+    },
+    {
+      "object": "orion:Process",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Decryption"
+    },
+    {
+      "object": "orion:CryptographicMechanism",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DigitalSignature"
+    },
+    {
+      "object": "orion:CryptographicMechanism",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Encryption"
+    },
+    {
+      "object": "orion:CloudStorageResource",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ObjectStorageBucket"
+    },
+    {
+      "object": "orion:CloudWorkload",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ServerlessFunction"
+    },
+    {
+      "object": "orion:Encryption",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:SymmetricEncryption"
+    },
+    {
+      "object": "orion:CloudWorkload",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:VirtualMachine"
+    }
+  ],
+  "type_assertions": []
+}

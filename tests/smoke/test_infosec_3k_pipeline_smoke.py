@@ -6,12 +6,14 @@ import pytest
 
 from observability import JsonlFileLogSink
 from orion import ORION
+from pipeline.step_013_output_generation.rdf_strategy import serialize_graph_to_rdf_xml
 
 
 _FIXTURE = Path(__file__).parent / "fixtures" / "infosec_3k_input.txt"
 _ARTIFACT = Path(__file__).parent / "artifacts" / "infosec_3k_orion_events.jsonl"
-_RDF_OUTPUT_ARTIFACT = Path(__file__).parent / "artifacts" / "infosec_3k_output.rdf"
-_DEBUG_RDF_OUTPUT_ARTIFACT = Path(__file__).parent / "artifacts" / "infosec_3k_rdf_output.json"
+_PARAGRAPH_DIR = Path(__file__).parent / "fixtures" / "infosec_3k_paragraphs"
+_RDF_OUTPUT_ARTIFACT_DIR = Path(__file__).parent / "artifacts" / "infosec_3k_rdf_groups"
+_DEBUG_RDF_OUTPUT_ARTIFACT_DIR = Path(__file__).parent / "artifacts" / "infosec_3k_rdf_group_debug"
 _STAGE_RESULTS_ARTIFACT = Path(__file__).parent / "artifacts" / "infosec_3k_pipeline_stage_results.jsonl"
 _SENTINEL = "ORION_SMOKE_SENTINEL_DO_NOT_LOG"
 _STAGE_ORDER = [
@@ -30,6 +32,100 @@ _STAGE_ORDER = [
     "semantic_quality",
     "output_generation",
 ]
+
+
+def _paragraph_groups(size: int = 2) -> list[tuple[str, str]]:
+    paths = sorted(_PARAGRAPH_DIR.glob("p*.txt"))
+    groups: list[tuple[str, str]] = []
+    for index in range(0, len(paths), size):
+        chunk = paths[index:index + size]
+        group_id = "_".join(path.stem for path in chunk)
+        text = "\n\n".join(path.read_text(encoding="utf-8").strip() for path in chunk)
+        groups.append((group_id, text))
+    return groups
+
+
+def _merge_graphs(graphs: list[dict]) -> dict:
+    merged: dict = {}
+    for graph in graphs:
+        if not isinstance(graph, dict):
+            continue
+        for key, value in graph.items():
+            if isinstance(value, list):
+                merged.setdefault(key, []).extend(value)
+            elif isinstance(value, dict):
+                nested = merged.setdefault(key, {})
+                for nested_key, nested_value in value.items():
+                    if isinstance(nested_value, list):
+                        nested.setdefault(nested_key, []).extend(nested_value)
+                    else:
+                        nested[nested_key] = nested_value
+            else:
+                merged[key] = value
+    return merged
+
+
+def _merge_results(strategy: str, results: list[dict]) -> dict:
+    merged: dict = {"output": {"strategy": strategy, "format": strategy, "graph": _merge_graphs([r.get("output", {}).get("graph", {}) for r in results])}}
+    for key in ("sentences", "tokens", "entities", "concepts", "relations", "coreferences", "triples", "taxonomy_relations", "type_assertions", "operations_applied"):
+        merged[key] = []
+        for result in results:
+            merged[key].extend(result.get(key, []))
+    reports = [r.get("semantic_quality_report", {}) for r in results if isinstance(r.get("semantic_quality_report", {}), dict)]
+    merged["semantic_quality_report"] = {
+        "quality_score": min([r.get("quality_score", 1.0) for r in reports] or [1.0]),
+        "rdf_readiness": all(r.get("rdf_readiness", True) for r in reports),
+        "warnings": [w for r in reports for w in r.get("warnings", [])],
+        "entity_noise": [w for r in reports for w in r.get("entity_noise", [])],
+        "concept_noise": [w for r in reports for w in r.get("concept_noise", [])],
+        "relation_gaps": [w for r in reports for w in r.get("relation_gaps", [])],
+        "excluded_entities": [w for r in reports for w in r.get("excluded_entities", [])],
+        "excluded_concepts": [w for r in reports for w in r.get("excluded_concepts", [])],
+    }
+    merged["preprocessed_text"] = "\n\n".join(r.get("preprocessed_text", "") for r in results)
+    return merged
+
+
+def _rdf_artifact_paths() -> list[Path]:
+    return sorted(_RDF_OUTPUT_ARTIFACT_DIR.glob("*.rdf"))
+
+
+def _runtime_artifact_paths() -> list[Path]:
+    return sorted(_ARTIFACT.parent.glob("infosec_3k_p*_orion_events.jsonl"))
+
+
+def _debug_artifact_paths() -> list[Path]:
+    return sorted(_DEBUG_RDF_OUTPUT_ARTIFACT_DIR.glob("*.json"))
+
+
+def _rdf_output_artifacts_exist() -> bool:
+    return _RDF_OUTPUT_ARTIFACT_DIR.exists() and bool(_rdf_artifact_paths())
+
+
+def _debug_output_artifacts_exist() -> bool:
+    return _DEBUG_RDF_OUTPUT_ARTIFACT_DIR.exists() and bool(_debug_artifact_paths())
+
+
+def _combined_rdf_xml() -> str:
+    docs = [path.read_text(encoding="utf-8") for path in _rdf_artifact_paths()]
+    assert docs, "falta artifacts RDF por grupos de dos párrafos"
+    ET.register_namespace("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+    ET.register_namespace("rdfs", "http://www.w3.org/2000/01/rdf-schema#")
+    ET.register_namespace("owl", "http://www.w3.org/2002/07/owl#")
+    combined = ET.Element("{http://www.w3.org/1999/02/22-rdf-syntax-ns#}RDF")
+    for doc in docs:
+        root = ET.fromstring(doc)
+        for child in list(root):
+            combined.append(child)
+    return "<?xml version='1.0' encoding='utf-8'?>\n" + ET.tostring(combined, encoding="unicode")
+
+
+def _merged_debug_output() -> dict:
+    outputs = [json.loads(path.read_text(encoding="utf-8")) for path in _debug_artifact_paths()]
+    assert outputs, "falta debug JSON por grupos de dos párrafos"
+    strategy = outputs[0].get("strategy", "rdf")
+    fmt = outputs[0].get("format", "rdf")
+    return {"strategy": strategy, "format": fmt, "graph": _merge_graphs([o.get("graph", {}) for o in outputs])}
 
 
 def _load_jsonl(path: Path) -> list[dict]:
@@ -190,7 +286,7 @@ def _build_stage_rows(text: str, result: dict) -> list[dict]:
                     "format": output.get("format"),
                     "graph_counts": _graph_counts(graph),
                 },
-                "rdf_artifact_path": str(_RDF_OUTPUT_ARTIFACT),
+                "rdf_artifact_path": str(_RDF_OUTPUT_ARTIFACT_DIR),
             },
         },
     ]
@@ -203,6 +299,45 @@ def _write_stage_rows(path: Path, rows: list[dict]) -> None:
     path.write_text(payload, encoding="utf-8")
 
 
+def _persist_rdf_artifacts(group_results: list[tuple[str, dict]]) -> None:
+    _RDF_OUTPUT_ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
+    _DEBUG_RDF_OUTPUT_ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
+    for stale in list(_RDF_OUTPUT_ARTIFACT_DIR.glob("*.rdf")) + list(_DEBUG_RDF_OUTPUT_ARTIFACT_DIR.glob("*.json")):
+        stale.unlink()
+    for group_id, result in group_results:
+        output = result.get("output", {}) if isinstance(result, dict) else {}
+        graph = output.get("graph", {}) if isinstance(output, dict) else {}
+        rdf_xml = serialize_graph_to_rdf_xml(graph)
+        (_RDF_OUTPUT_ARTIFACT_DIR / f"infosec_3k_{group_id}.rdf").write_text(rdf_xml, encoding="utf-8")
+        (_DEBUG_RDF_OUTPUT_ARTIFACT_DIR / f"infosec_3k_{group_id}.json").write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+# UC-SMOKE-001 AF-1 | FUN-SMOKE-001 AC-2 | NFR-SMOKE-001 AC-4 | BR-SMOKE-002 | BR-SMOKE-006
+@pytest.fixture(scope="module", autouse=True)
+def infosec_3k_full_results() -> dict[str, dict]:
+    text = _FIXTURE.read_text(encoding="utf-8")
+    groups = _paragraph_groups(size=2)
+
+    rdf_group_results: list[tuple[str, dict]] = []
+    for group_id, group_text in groups:
+        runtime_log = _ARTIFACT.with_name(f"infosec_3k_{group_id}_orion_events.jsonl")
+        rdf_sut = ORION(config={"logging": {"sink": JsonlFileLogSink(runtime_log)}, "spacy_model": "en_core_web_lg", "output_strategy": "rdf"})
+        rdf_group_results.append((group_id, rdf_sut.process(group_text)))
+    _persist_rdf_artifacts(rdf_group_results)
+    rdf_result = _merge_results("rdf", [result for _, result in rdf_group_results])
+    stage_rows = _build_stage_rows(text, rdf_result)
+    _write_stage_rows(_STAGE_RESULTS_ARTIFACT, stage_rows)
+
+    owl_group_results: list[dict] = []
+    for group_id, group_text in groups:
+        owl_runtime_log = _ARTIFACT.with_name(f"infosec_3k_{group_id}_owl_runtime_events.jsonl")
+        owl_sut = ORION(config={"logging": {"sink": JsonlFileLogSink(owl_runtime_log)}, "spacy_model": "en_core_web_lg", "output_strategy": "owl"})
+        owl_group_results.append(owl_sut.process(group_text))
+    owl_result = _merge_results("owl", owl_group_results)
+
+    return {"rdf": rdf_result, "owl": owl_result, "text": text, "stage_rows": stage_rows}
+
+
 # UC-SMOKE-001 MF-1 | FUN-SMOKE-001 AC-1 | NFR-SMOKE-001 AC-1 | CON-SMOKE-001 AC-1 | BR-SMOKE-001
 def test_infosec_3k_fixture_exists_and_word_count_is_about_3000():
     text = _FIXTURE.read_text(encoding="utf-8")
@@ -213,12 +348,8 @@ def test_infosec_3k_fixture_exists_and_word_count_is_about_3000():
 
 # UC-SMOKE-001 AF-1 | FUN-SMOKE-001 AC-2 | NFR-SMOKE-001 AC-2 | CON-SMOKE-001 AC-2 | BR-SMOKE-002
 @pytest.mark.parametrize("strategy", ["rdf", "owl"])
-def test_infosec_3k_pipeline_no_crash_common_output_and_reasonable_counts(strategy, tmp_path):
-    text = _FIXTURE.read_text(encoding="utf-8")
-    runtime_log = tmp_path / f"{strategy}-runtime-events.jsonl"
-    sut = ORION(config={"logging": {"sink": JsonlFileLogSink(runtime_log)}, "spacy_model": "en_core_web_lg", "output_strategy": strategy})
-
-    result = sut.process(text)
+def test_infosec_3k_pipeline_no_crash_common_output_and_reasonable_counts(strategy, infosec_3k_full_results):
+    result = infosec_3k_full_results[strategy]
 
     assert "output" in result
     assert result["output"]["strategy"] == strategy
@@ -232,8 +363,9 @@ def test_infosec_3k_pipeline_no_crash_common_output_and_reasonable_counts(strate
 
 # UC-SMOKE-001 EF-1 | FUN-SMOKE-001 AC-3 | NFR-SMOKE-SEC-001 AC-1 | CON-SMOKE-SEC-001 AC-1 | BR-SMOKE-003
 def test_infosec_3k_persisted_artifact_log_is_sanitized_and_stable_shape():
-    assert _ARTIFACT.exists()
-    events = _load_jsonl(_ARTIFACT)
+    runtime_paths = _runtime_artifact_paths()
+    assert runtime_paths
+    events = [event for path in runtime_paths for event in _load_jsonl(path)]
     assert len(events) >= 20
 
     serialized = "\n".join(json.dumps(e, ensure_ascii=False) for e in events)
@@ -252,12 +384,22 @@ def test_infosec_3k_persisted_artifact_log_is_sanitized_and_stable_shape():
 
 # UC-SMOKE-001 AF-2 | FUN-SMOKE-001 AC-4 | NFR-SMOKE-001 AC-3 | CON-SMOKE-001 AC-3 | BR-SMOKE-004
 def test_infosec_3k_persisted_rdf_output_artifact_exists_and_is_real_rdf_xml_sanitized():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
-    rdf_xml = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    assert _rdf_output_artifacts_exist()
+    rdf_xml = _combined_rdf_xml()
 
     stripped = rdf_xml.lstrip()
     assert not stripped.startswith("{")
     assert not stripped.startswith("[")
+
+    paths = _rdf_artifact_paths()
+    assert len(paths) == len(_paragraph_groups(size=2))
+    assert len(paths) > 1
+    for path in paths:
+        group_xml = path.read_text(encoding="utf-8")
+        assert group_xml.count("<?xml") == 1
+        assert group_xml.count("<rdf:RDF") == 1
+        assert group_xml.count("</rdf:RDF>") == 1
+        ET.fromstring(group_xml)
 
     assert rdf_xml.count("<?xml") == 1
     assert rdf_xml.count("<rdf:RDF") == 1
@@ -284,25 +426,17 @@ def test_infosec_3k_persisted_rdf_output_artifact_exists_and_is_real_rdf_xml_san
 
 # UC-SMOKE-001 AF-3 | FUN-SMOKE-001 AC-5 | CON-SMOKE-001 AC-4 | BR-SMOKE-005
 def test_infosec_3k_debug_json_artifact_optional_when_present_is_not_sensitive():
-    if not _DEBUG_RDF_OUTPUT_ARTIFACT.exists():
+    if not _debug_output_artifacts_exist():
         pytest.skip("optional debug artifact not present")
 
-    output = json.loads(_DEBUG_RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8"))
+    output = _merged_debug_output()
     serialized = json.dumps(output, ensure_ascii=False)
     assert "raw_text" not in serialized
     assert _SENTINEL not in serialized
 
 
 # UC-SMOKE-001 AF-4 | FUN-SMOKE-001 AC-6 | NFR-SMOKE-001 AC-4 | CON-SMOKE-001 AC-5 | BR-SMOKE-006
-def test_infosec_3k_pipeline_stage_log_artifact_has_13_stages_order_and_useful_snapshots(tmp_path):
-    text = _FIXTURE.read_text(encoding="utf-8")
-    runtime_log = tmp_path / "rdf-runtime-events.jsonl"
-    sut = ORION(config={"logging": {"sink": JsonlFileLogSink(runtime_log)}, "spacy_model": "en_core_web_lg", "output_strategy": "rdf"})
-
-    result = sut.process(text)
-    rows = _build_stage_rows(text, result)
-    _write_stage_rows(_STAGE_RESULTS_ARTIFACT, rows)
-
+def test_infosec_3k_pipeline_stage_log_artifact_has_13_stages_order_and_useful_snapshots(infosec_3k_full_results):
     assert _STAGE_RESULTS_ARTIFACT.exists()
     stage_rows = _load_jsonl(_STAGE_RESULTS_ARTIFACT)
 
@@ -323,7 +457,7 @@ def test_infosec_3k_pipeline_stage_log_artifact_has_13_stages_order_and_useful_s
     assert output_stage["stage"] == "output_generation"
     assert output_stage["result_snapshot"]["output"]["strategy"] == "rdf"
     assert output_stage["result_snapshot"]["output"]["format"] == "rdf"
-    assert output_stage["result_snapshot"]["rdf_artifact_path"] == str(_RDF_OUTPUT_ARTIFACT)
+    assert output_stage["result_snapshot"]["rdf_artifact_path"] == str(_RDF_OUTPUT_ARTIFACT_DIR)
 
     serialized = "\n".join(json.dumps(row, ensure_ascii=False) for row in stage_rows)
     assert _SENTINEL not in serialized
@@ -345,13 +479,13 @@ def test_infosec_3k_stage_results_show_relation_gap_against_concept_signal():
 # UC-SMOKE-001 AF-6 | FUN-SMOKE-001 AC-8 | CON-SMOKE-RDF-001 AC-1 | BR-SMOKE-008 | BR-SMOKE-009
 def test_infosec_3k_taxonomy_candidates_must_reach_rdf_as_real_rdfxml_subclass_contract():
     assert _STAGE_RESULTS_ARTIFACT.exists()
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
     stage_rows = _load_jsonl(_STAGE_RESULTS_ARTIFACT)
     by_stage = {row["stage"]: row for row in stage_rows}
 
     output_subclass_total = by_stage["output_generation"]["summary"]["subclass_facts_count"]
-    rdf_xml = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml = _combined_rdf_xml()
 
     stripped = rdf_xml.lstrip()
     assert not stripped.startswith("{")
@@ -372,7 +506,7 @@ def test_infosec_3k_taxonomy_candidates_must_reach_rdf_as_real_rdfxml_subclass_c
 # UC-SMOKE-001 AF-7 | FUN-SMOKE-001 AC-9 | CON-SMOKE-RDF-002 AC-1 | BR-SMOKE-010
 def test_infosec_3k_non_taxonomic_predicate_present_when_relation_signal_exists():
     assert _STAGE_RESULTS_ARTIFACT.exists()
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
     stage_rows = _load_jsonl(_STAGE_RESULTS_ARTIFACT)
     by_stage = {row["stage"]: row for row in stage_rows}
@@ -385,8 +519,8 @@ def test_infosec_3k_non_taxonomic_predicate_present_when_relation_signal_exists(
     assert concept_total > 0
     assert facts_total > 0, "contrato roto: relation_extraction>0 debe implicar graph.facts>0"
 
-    rdf_xml = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
-    rdf_json = json.loads(_DEBUG_RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8"))
+    rdf_xml = _combined_rdf_xml()
+    rdf_json = _merged_debug_output()
     facts = rdf_json.get("graph", {}).get("facts", [])
     non_taxonomic_facts = [
         f for f in facts
@@ -403,9 +537,9 @@ def test_infosec_3k_non_taxonomic_predicate_present_when_relation_signal_exists(
 
 # UC-SMOKE-001 AF-8 | FUN-SMOKE-001 AC-10 | CON-SMOKE-RDF-003 AC-1 | BR-SMOKE-011
 def test_infosec_3k_guard_against_massive_subclassof_type_fallback():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml = _combined_rdf_xml()
     root = ET.fromstring(rdf_xml)
 
     ns = {
@@ -487,7 +621,7 @@ def test_infosec_3k_guard_against_massive_subclassof_type_fallback():
 # UC-SMOKE-001 AF-9 | FUN-SMOKE-001 AC-11 | CON-SMOKE-RDF-004 AC-1 | BR-SMOKE-012 | BR-SMOKE-013
 def test_infosec_3k_ontology_contract_not_everything_is_subclass_and_class_only_modeling():
     assert _STAGE_RESULTS_ARTIFACT.exists()
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
     stage_rows = _load_jsonl(_STAGE_RESULTS_ARTIFACT)
     by_stage = {row["stage"]: row for row in stage_rows}
@@ -496,7 +630,7 @@ def test_infosec_3k_ontology_contract_not_everything_is_subclass_and_class_only_
     taxonomy_total = by_stage["output_generation"]["summary"]["subclass_facts_count"]
     assert facts_total > 0
 
-    rdf_xml = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml = _combined_rdf_xml()
 
     object_property_edges = rdf_xml.count("<owl:ObjectProperty")
     subclass_edges = rdf_xml.count("rdfs:subClassOf")
@@ -519,9 +653,9 @@ def test_infosec_3k_ontology_contract_not_everything_is_subclass_and_class_only_
 
 # UC-SMOKE-001 AF-10 | FUN-SMOKE-001 AC-12 | CON-SMOKE-RDF-005 AC-1 | BR-SMOKE-014 | BR-SMOKE-015
 def test_infosec_3k_rdfxml_webvowl_contract_standard_vocab_only_and_object_property_schema():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml = _combined_rdf_xml()
 
     assert "<orion:" not in rdf_xml
     assert "xmlns:orion" not in rdf_xml
@@ -586,12 +720,12 @@ def test_infosec_3k_rdfxml_webvowl_contract_standard_vocab_only_and_object_prope
 
 # UC-SMOKE-001 AF-11 | FUN-SMOKE-001 AC-13 | CON-SMOKE-RDF-006 AC-1 | BR-SMOKE-016 | BR-SMOKE-017 | BR-SMOKE-018 | BR-SMOKE-019 | BR-SMOKE-020 | BR-SMOKE-021 | BR-SMOKE-022 | BR-SMOKE-023
 def test_infosec_3k_min_semantic_core_coverage_from_full_fixture_document():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
-    assert _DEBUG_RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
+    assert _debug_output_artifacts_exist()
     assert _STAGE_RESULTS_ARTIFACT.exists()
 
-    rdf_xml = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8").lower()
-    rdf_json = json.loads(_DEBUG_RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8"))
+    rdf_xml = _combined_rdf_xml().lower()
+    rdf_json = _merged_debug_output()
     stage_rows = _load_jsonl(_STAGE_RESULTS_ARTIFACT)
 
     facts = rdf_json.get("graph", {}).get("facts", [])
@@ -671,13 +805,13 @@ def test_infosec_3k_min_semantic_core_coverage_from_full_fixture_document():
 
 # UC-SMOKE-001 AF-12 | FUN-SMOKE-001 AC-14 | NFR-SMOKE-SEC-002 AC-1 | CON-SMOKE-RDF-007 AC-1 | BR-SMOKE-024 | BR-SMOKE-025 | BR-SMOKE-026 | BR-SMOKE-027 | BR-SMOKE-028 | BR-SMOKE-029
 def test_infosec_3k_strict_full_document_semantic_contract_red_gate():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
-    assert _DEBUG_RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
+    assert _debug_output_artifacts_exist()
     assert _STAGE_RESULTS_ARTIFACT.exists()
 
-    rdf_xml_raw = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml_raw = _combined_rdf_xml()
     rdf_xml = rdf_xml_raw.lower()
-    rdf_json = json.loads(_DEBUG_RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8"))
+    rdf_json = _merged_debug_output()
     stage_rows = _load_jsonl(_STAGE_RESULTS_ARTIFACT)
 
     assert "<orion:" not in rdf_xml_raw
@@ -857,9 +991,9 @@ def test_infosec_3k_strict_full_document_semantic_contract_red_gate():
 
 # UC-SMOKE-001 AF-13 | FUN-SMOKE-001 AC-15 | CON-SMOKE-RDF-008 AC-1 | BR-SMOKE-030 | BR-SMOKE-031
 def test_infosec_3k_rdfxml_blocks_canonical_duplicate_entities_by_casing_or_namespace_role_conflict():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml_raw = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml_raw = _combined_rdf_xml()
     root = ET.fromstring(rdf_xml_raw)
     ns = {
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -927,9 +1061,9 @@ def test_infosec_3k_rdfxml_blocks_canonical_duplicate_entities_by_casing_or_name
 
 # UC-SMOKE-001 AF-14 | FUN-SMOKE-001 AC-16 | CON-SMOKE-RDF-009 AC-1 | BR-SMOKE-032 | BR-SMOKE-033
 def test_infosec_3k_risk_must_not_be_semantically_isolated_when_present():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml_raw = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml_raw = _combined_rdf_xml()
     root = ET.fromstring(rdf_xml_raw)
     ns = {
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -1013,9 +1147,9 @@ def test_infosec_3k_risk_must_not_be_semantically_isolated_when_present():
 
 # UC-SMOKE-001 AF-15 | FUN-SMOKE-001 AC-17 | CON-SMOKE-RDF-010 AC-1 | BR-SMOKE-034 | BR-SMOKE-035
 def test_infosec_3k_log_and_logging_must_stay_distinct_but_explicitly_connected():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml_raw = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml_raw = _combined_rdf_xml()
     root = ET.fromstring(rdf_xml_raw)
     ns = {
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -1078,9 +1212,9 @@ def test_infosec_3k_log_and_logging_must_stay_distinct_but_explicitly_connected(
 
 # UC-SMOKE-001 AF-16 | FUN-SMOKE-001 AC-18 | CON-SMOKE-RDF-011 AC-1 | BR-SMOKE-036 | BR-SMOKE-037
 def test_infosec_3k_webvowl_min_labels_and_restriction_identifiability_contract_red_smoke():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml_raw = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml_raw = _combined_rdf_xml()
     root = ET.fromstring(rdf_xml_raw)
     ns = {
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -1178,9 +1312,9 @@ def test_infosec_3k_webvowl_min_labels_and_restriction_identifiability_contract_
 
 # UC-SMOKE-001 AF-17 | FUN-SMOKE-001 AC-19 | CON-SMOKE-RDF-012 AC-1 | BR-SMOKE-038 | BR-SMOKE-039
 def test_infosec_3k_webvowl_restriction_domain_contract_no_top_level_orphans_red_smoke():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml_raw = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml_raw = _combined_rdf_xml()
     root = ET.fromstring(rdf_xml_raw)
     ns = {
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -1254,9 +1388,9 @@ def test_infosec_3k_webvowl_restriction_domain_contract_no_top_level_orphans_red
 
 # UC-SMOKE-001 AF-18 | FUN-SMOKE-001 AC-20 | CON-SMOKE-RDF-013 AC-1 | BR-SMOKE-040 | BR-SMOKE-041
 def test_infosec_3k_webvowl_no_duplicated_visible_domain_edges_by_modeling_style_red_smoke():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml_raw = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml_raw = _combined_rdf_xml()
     root = ET.fromstring(rdf_xml_raw)
     ns = {
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -1309,10 +1443,10 @@ def test_infosec_3k_webvowl_no_duplicated_visible_domain_edges_by_modeling_style
 
 # UC-SMOKE-001 AF-16 | FUN-SMOKE-001 AC-18 | CON-SMOKE-RDF-016 AC-1 | BR-SMOKE-046 | BR-SMOKE-047
 def test_infosec_3k_output_graph_must_publish_explicit_owl_schema_from_evidence_red():
-    assert _DEBUG_RDF_OUTPUT_ARTIFACT.exists()
+    assert _debug_output_artifacts_exist()
     assert _STAGE_RESULTS_ARTIFACT.exists()
 
-    rdf_json = json.loads(_DEBUG_RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8"))
+    rdf_json = _merged_debug_output()
     stage_rows = _load_jsonl(_STAGE_RESULTS_ARTIFACT)
     by_stage = {row.get("stage"): row for row in stage_rows if isinstance(row, dict)}
 
@@ -1344,9 +1478,9 @@ def test_infosec_3k_output_graph_must_publish_explicit_owl_schema_from_evidence_
 
 # UC-SMOKE-001 AF-19 | FUN-SMOKE-001 AC-21 | CON-SMOKE-RDF-017 AC-1 | BR-SMOKE-049 | BR-SMOKE-050
 def test_infosec_3k_webvowl_visual_contract_reified_statements_must_be_named_and_meaningful_red_smoke():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml_raw = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml_raw = _combined_rdf_xml()
     root = ET.fromstring(rdf_xml_raw)
     ns = {
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -1484,9 +1618,9 @@ def test_infosec_3k_webvowl_visual_contract_reified_statements_must_be_named_and
 
 # UC-SMOKE-001 AF-20 | FUN-SMOKE-001 AC-22 | CON-SMOKE-RDF-018 AC-1 | BR-SMOKE-051 | BR-SMOKE-052
 def test_infosec_3k_webvowl_reified_context_nodes_must_have_visual_name_contract_red_smoke():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml_raw = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml_raw = _combined_rdf_xml()
     root = ET.fromstring(rdf_xml_raw)
     ns = {
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -1541,9 +1675,9 @@ def test_infosec_3k_webvowl_reified_context_nodes_must_have_visual_name_contract
 
 # UC-SMOKE-001 AF-24 | FUN-SMOKE-001 AC-26 | CON-SMOKE-RDF-021 AC-1 | BR-SMOKE-055 | BR-SMOKE-056
 def test_infosec_3k_webvowl_objectproperty_must_not_publish_multi_domain_or_multi_range_red_smoke():
-    assert _RDF_OUTPUT_ARTIFACT.exists()
+    assert _rdf_output_artifacts_exist()
 
-    rdf_xml_raw = _RDF_OUTPUT_ARTIFACT.read_text(encoding="utf-8")
+    rdf_xml_raw = _combined_rdf_xml()
     root = ET.fromstring(rdf_xml_raw)
     ns = {
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -1596,3 +1730,93 @@ def test_infosec_3k_webvowl_objectproperty_must_not_publish_multi_domain_or_mult
         'contrato WebVOWL roto: misma owl:ObjectProperty visible no puede acumular múltiples domain/range globales; '
         f'overloaded_count={len(overloaded_sorted)} sample={overloaded_sorted[:8]}'
     )
+
+
+
+def _tb_ont_inf_local(value: str) -> str:
+    token = str(value or '').strip().rstrip('/#').rsplit('/', 1)[-1].split(':')[-1]
+    return token.replace('_', '-').casefold()
+
+
+def _tb_ont_inf_graph_payload() -> tuple[str, dict]:
+    assert _rdf_output_artifacts_exist(), 'falta artifact RDF infosec_3k_output.rdf'
+    assert _debug_output_artifacts_exist(), 'falta debug JSON RDF por grupos de dos párrafos'
+    return _combined_rdf_xml(), _merged_debug_output()
+
+
+# TB-ORION-ONT-INF-001 TASK-001 | TASK-002 | CON-ONT-INF-001 AC-1 | BR-ONT-INF-001 | BR-ONT-INF-002
+# TB-ORION-ONT-INF-001 TASK-002 ajuste aprobado: desactivar NER genérico; sin EntityRuler ni glosario ahora.
+def test_tb_orion_ont_inf_001_closed_infosec_ontology_blocks_generic_ner_and_scaffolds_red():
+    rdf_xml_raw, rdf_json = _tb_ont_inf_graph_payload()
+    graph = rdf_json.get('graph', {}) if isinstance(rdf_json, dict) else {}
+    serialized_graph = json.dumps(graph, ensure_ascii=False).casefold()
+
+    forbidden_locals = {'a', 'an', 'the', 'any', 'each', 'one-or-more', 'that', 'which', 'who'}
+    local_values = []
+    for collection in ('classes', 'facts', 'instance_facts', 'type_assertions', 'subclass_facts', 'object_property_schema'):
+        for item in graph.get(collection, []):
+            if not isinstance(item, dict):
+                continue
+            for key in ('iri', 'id', 'subject', 'predicate', 'object', 'entity', 'type', 'domain', 'range'):
+                if item.get(key):
+                    local_values.append(_tb_ont_inf_local(item.get(key)))
+
+    determiners_or_relatives = sorted({value for value in local_values if value in forbidden_locals or value.startswith('resource-that')})
+    type_scaffolds = sorted({value for value in local_values if value.startswith('type-of') or 'typeof' in value})
+    generic_organization_types = sorted(
+        f"{_tb_ont_inf_local(item.get('entity'))}->{_tb_ont_inf_local(item.get('type'))}"
+        for item in graph.get('type_assertions', [])
+        if isinstance(item, dict)
+        and _tb_ont_inf_local(item.get('entity')) in {'api', 'cia', 'rdf', 'orion'}
+        and _tb_ont_inf_local(item.get('type')) == 'organization'
+    )
+
+    assert determiners_or_relatives == [], f'recursos gramaticales prohibidos visibles: {determiners_or_relatives[:12]}'
+    assert type_scaffolds == [], f'TypeOf* scaffolding prohibido visible: {type_scaffolds[:12]}'
+    assert 'orion:be' not in rdf_xml_raw and 'orion:be' not in serialized_graph, 'orion:be final prohibido en RDF/graph'
+    assert generic_organization_types == [], f'NER genérico filtrado mal: {generic_organization_types}'
+
+
+# TB-ORION-ONT-INF-001 TASK-003 | FUN-ONT-INF-001 AC-1 | BR-ONT-INF-003 | BR-ONT-INF-004
+def test_tb_orion_ont_inf_001_taxonomy_direction_and_definition_comments_red():
+    _, rdf_json = _tb_ont_inf_graph_payload()
+    graph = rdf_json.get('graph', {}) if isinstance(rdf_json, dict) else {}
+    subclass_edges = graph.get('subclass_facts', [])
+
+    bad_superclasses = sorted(
+        f"{item.get('subject')}->{item.get('object')}"
+        for item in subclass_edges
+        if isinstance(item, dict)
+        and (_tb_ont_inf_local(item.get('object')).startswith('type-of') or 'typeof' in _tb_ont_inf_local(item.get('object')))
+    )
+    definition_as_false_taxonomy = sorted(
+        f"{item.get('subject')}->{item.get('object')}"
+        for item in subclass_edges
+        if isinstance(item, dict)
+        and any(fragment in _tb_ont_inf_local(item.get('object')) for fragment in ('potential-cause', 'possibility-that', 'ability', 'process-of', 'consequence-produced'))
+    )
+
+    assert bad_superclasses == [], f'taxonomía X is a type/kind of Y debe apuntar a Y, no TypeOf*: {bad_superclasses[:12]}'
+    assert definition_as_false_taxonomy == [], f'definiciones deben quedar comentario, no subclass falsa: {definition_as_false_taxonomy[:12]}'
+
+
+# TB-ORION-ONT-INF-001 TASK-004 | FUN-ONT-INF-002 AC-1 | CON-ONT-INF-002 AC-1 | BR-ONT-INF-005
+def test_tb_orion_ont_inf_001_expected_infosec_relations_have_domain_range_red():
+    _, rdf_json = _tb_ont_inf_graph_payload()
+    graph = rdf_json.get('graph', {}) if isinstance(rdf_json, dict) else {}
+    schema_edges = {
+        (_tb_ont_inf_local(item.get('predicate')), _tb_ont_inf_local(item.get('domain')), _tb_ont_inf_local(item.get('range')))
+        for item in graph.get('object_property_schema', [])
+        if isinstance(item, dict)
+    }
+
+    expected = {
+        ('accesses', 'user', 'information-system'),
+        ('includes', 'role', 'permission'),
+        ('exploits', 'threat', 'vulnerability'),
+        ('reduces', 'security-control', 'risk'),
+        ('affects', 'security-incident', 'information-asset'),
+    }
+    missing = sorted(expected - schema_edges)
+
+    assert missing == [], f'relaciones infosec esperadas sin domain/range correcto: {missing}'

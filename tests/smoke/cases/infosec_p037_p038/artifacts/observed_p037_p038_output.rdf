@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <owl:Class rdf:about="https://orion.local/resource/accessbasedonroleassignment">
+    <rdfs:label>AccessBasedOnRoleAssignment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/alertrelatedtothecustomerdatabase">
+    <rdfs:label>AlertRelatedToTheCustomerDatabase</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/anotherexample">
+    <rdfs:label>AnotherExample</rdfs:label>
+    <rdfs:comment>Another example involves remote access.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/assetowner">
+    <rdfs:label>AssetOwner</rdfs:label>
+    <rdfs:comment>The asset owner classifies the customer database as restricted information.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/auditlogfromthedatabaseserver">
+    <rdfs:label>AuditLogFromTheDatabaseServer</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/authorizationservice">
+    <rdfs:label>AuthorizationService</rdfs:label>
+    <rdfs:comment>The authorization service grants access based on role assignments.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/communicationchannel">
+    <rdfs:label>CommunicationChannel</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/corporateapplication">
+    <rdfs:label>CorporateApplication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/webapplication"/>
+    <rdfs:comment>The corporate application is a web application.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/cryptographickey">
+    <rdfs:label>CryptographicKey</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/storedinakeymanagementservice"/>
+    <rdfs:comment>The cryptographic key is stored in a key management service.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/customerdatabase">
+    <rdfs:label>CustomerDatabase</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/encryptedusingacryptographickey"/>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/hostedonadatabaseserver"/>
+    <rdfs:comment>The customer database is hosted on a database server.</rdfs:comment>
+    <rdfs:comment>The customer database is encrypted using a cryptographic key.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/customerdatabaseasrestrictedinformation">
+    <rdfs:label>CustomerDatabaseAsRestrictedInformation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/databaseserver">
+    <rdfs:label>DatabaseServer</rdfs:label>
+    <rdfs:comment>The database server runs inside a production network.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/employeeidentity">
+    <rdfs:label>EmployeeIdentity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/encryptedusingacryptographickey">
+    <rdfs:label>EncryptedUsingACryptographicKey</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/endpoint">
+    <rdfs:label>Endpoint</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/endpointdetectionandresponsetool">
+    <rdfs:label>EndpointDetectionAndResponseTool</rdfs:label>
+    <rdfs:comment>The endpoint detection and response tool monitors the laptop.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/financialdata">
+    <rdfs:label>FinancialData</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/firewall">
+    <rdfs:label>Firewall</rdfs:label>
+    <rdfs:comment>The firewall enforces network access rules.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/forexampleacustomerdatabase">
+    <rdfs:label>ForExampleACustomerDatabase</rdfs:label>
+    <rdfs:comment>For example, a customer database stores personal data and financial data.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/hostedonadatabaseserver">
+    <rdfs:label>HostedOnADatabaseServer</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/identityprovider">
+    <rdfs:label>IdentityProvider</rdfs:label>
+    <rdfs:comment>The identity provider verifies the employee identity.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/insideaproductionnetwork">
+    <rdfs:label>InsideAProductionNetwork</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/laptop">
+    <rdfs:label>Laptop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/endpoint"/>
+    <rdfs:comment>The laptop is an endpoint.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/laptoptoaccessacorporateapplication">
+    <rdfs:label>LaptopToAccessACorporateApplication</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/networkaccessrule">
+    <rdfs:label>NetworkAccessRule</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/personaldata">
+    <rdfs:label>PersonalData</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/productionnetwork">
+    <rdfs:label>ProductionNetwork</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/protectedbyafirewall"/>
+    <rdfs:comment>The production network is protected by a firewall.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/protectedbyafirewall">
+    <rdfs:label>ProtectedByAFirewall</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/remoteaccess">
+    <rdfs:label>RemoteAccess</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/remoteemployee">
+    <rdfs:label>RemoteEmployee</rdfs:label>
+    <rdfs:comment>A remote employee uses a laptop to access a corporate application.</rdfs:comment>
+    <rdfs:comment>The remote employee authenticates through multi-factor authentication.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/remoteemployeetoreportlostdeviceimmediately">
+    <rdfs:label>RemoteEmployeeToReportLostDeviceImmediately</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securityanalyst">
+    <rdfs:label>SecurityAnalyst</rdfs:label>
+    <rdfs:comment>A security analyst reviews alerts related to the customer database.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securityinformationandeventmanagementsystem">
+    <rdfs:label>SecurityInformationAndEventManagementSystem</rdfs:label>
+    <rdfs:comment>The security information and event management system collects audit logs from the database server.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securitypolicy">
+    <rdfs:label>SecurityPolicy</rdfs:label>
+    <rdfs:comment>The security policy requires remote employees to report lost devices immediately.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/storedinakeymanagementservice">
+    <rdfs:label>StoredInAKeyManagementService</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/throughmultifactorauthentication">
+    <rdfs:label>ThroughMultiFactorAuthentication</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/virtualprivatenetwork">
+    <rdfs:label>VirtualPrivateNetwork</rdfs:label>
+    <rdfs:comment>The virtual private network encrypts the communication channel.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/webapplication">
+    <rdfs:label>WebApplication</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/authenticates">
+    <rdfs:label>Authenticates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/remoteemployee"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/throughmultifactorauthentication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/classifies">
+    <rdfs:label>Classifies</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/assetowner"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/customerdatabaseasrestrictedinformation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/collects">
+    <rdfs:label>Collects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/securityinformationandeventmanagementsystem"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/auditlogfromthedatabaseserver"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/encrypts">
+    <rdfs:label>Encrypts</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/virtualprivatenetwork"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/communicationchannel"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/enforces">
+    <rdfs:label>Enforces</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/firewall"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/networkaccessrule"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/grants">
+    <rdfs:label>Grants</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/authorizationservice"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/accessbasedonroleassignment"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/involves">
+    <rdfs:label>Involves</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/anotherexample"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/remoteaccess"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/monitors">
+    <rdfs:label>Monitors</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/endpointdetectionandresponsetool"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/laptop"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/requires">
+    <rdfs:label>Requires</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/securitypolicy"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/remoteemployeetoreportlostdeviceimmediately"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/reviews">
+    <rdfs:label>Reviews</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/securityanalyst"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/alertrelatedtothecustomerdatabase"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/runs">
+    <rdfs:label>Runs</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/databaseserver"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/insideaproductionnetwork"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/stores">
+    <rdfs:label>Stores</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/forexampleacustomerdatabase"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/financialdata"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/stores">
+    <rdfs:label>Stores</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/forexampleacustomerdatabase"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/personaldata"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/uses">
+    <rdfs:label>Uses</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/remoteemployee"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/laptoptoaccessacorporateapplication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/verifies">
+    <rdfs:label>Verifies</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/identityprovider"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/employeeidentity"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="https://orion.local/resource/accessbasedonroleassignment">
+    <rdfs:label>AccessBasedOnRoleAssignment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/alertrelatedtothecustomerdatabase">
+    <rdfs:label>AlertRelatedToTheCustomerDatabase</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/anotherexample">
+    <rdfs:label>AnotherExample</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/assetowner">
+    <rdfs:label>AssetOwner</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/auditlogfromthedatabaseserver">
+    <rdfs:label>AuditLogFromTheDatabaseServer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/authorizationservice">
+    <rdfs:label>AuthorizationService</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/communicationchannel">
+    <rdfs:label>CommunicationChannel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/corporateapplication">
+    <rdfs:label>CorporateApplication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/cryptographickey">
+    <rdfs:label>CryptographicKey</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/customerdatabase">
+    <rdfs:label>CustomerDatabase</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/customerdatabaseasrestrictedinformation">
+    <rdfs:label>CustomerDatabaseAsRestrictedInformation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/databaseserver">
+    <rdfs:label>DatabaseServer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/employeeidentity">
+    <rdfs:label>EmployeeIdentity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/encryptedusingacryptographickey">
+    <rdfs:label>EncryptedUsingACryptographicKey</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/endpoint">
+    <rdfs:label>Endpoint</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/endpointdetectionandresponsetool">
+    <rdfs:label>EndpointDetectionAndResponseTool</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/financialdata">
+    <rdfs:label>FinancialData</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/firewall">
+    <rdfs:label>Firewall</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/forexampleacustomerdatabase">
+    <rdfs:label>ForExampleACustomerDatabase</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/hostedonadatabaseserver">
+    <rdfs:label>HostedOnADatabaseServer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/identityprovider">
+    <rdfs:label>IdentityProvider</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/insideaproductionnetwork">
+    <rdfs:label>InsideAProductionNetwork</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/laptop">
+    <rdfs:label>Laptop</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/laptoptoaccessacorporateapplication">
+    <rdfs:label>LaptopToAccessACorporateApplication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/networkaccessrule">
+    <rdfs:label>NetworkAccessRule</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/personaldata">
+    <rdfs:label>PersonalData</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/productionnetwork">
+    <rdfs:label>ProductionNetwork</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/protectedbyafirewall">
+    <rdfs:label>ProtectedByAFirewall</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/remoteaccess">
+    <rdfs:label>RemoteAccess</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/remoteemployee">
+    <rdfs:label>RemoteEmployee</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/remoteemployeetoreportlostdeviceimmediately">
+    <rdfs:label>RemoteEmployeeToReportLostDeviceImmediately</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityanalyst">
+    <rdfs:label>SecurityAnalyst</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityinformationandeventmanagementsystem">
+    <rdfs:label>SecurityInformationAndEventManagementSystem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securitypolicy">
+    <rdfs:label>SecurityPolicy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/storedinakeymanagementservice">
+    <rdfs:label>StoredInAKeyManagementService</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/throughmultifactorauthentication">
+    <rdfs:label>ThroughMultiFactorAuthentication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/virtualprivatenetwork">
+    <rdfs:label>VirtualPrivateNetwork</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/webapplication">
+    <rdfs:label>WebApplication</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

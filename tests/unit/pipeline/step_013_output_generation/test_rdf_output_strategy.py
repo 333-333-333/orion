@@ -222,3 +222,49 @@ def test_serialize_graph_to_rdf_xml_reified_statement_has_visual_type_and_webvow
     assert '<rdfs:comment>' in rdf_xml
     assert '<rdfs:label>' in rdf_xml
     assert '<meta:confidence>0.9</meta:confidence>' in rdf_xml
+
+# TB-ONT-001 | TB-ONT-002
+
+def test_rdf_output_strategy_canonicalizes_determiners_and_skips_taxonomy_scaffolds():
+    from pipeline.step_013_output_generation.rdf_strategy import RdfOutputStrategy
+
+    payload = {
+        'raw_text': 'A backup archive is a type of information asset. A virtual machine/container/serverless function is a type of cloud workload.',
+        'source_text_id': 'src-ont-004',
+        'triples': [],
+        'type_assertions': [],
+        'taxonomy_relations': [
+            {'child': 'backup archive', 'parent': 'information asset'},
+            {'child': 'virtual machine', 'parent': 'cloud workload'},
+            {'child': 'container', 'parent': 'cloud workload'},
+            {'child': 'serverless function', 'parent': 'cloud workload'},
+        ],
+        'concepts': [
+            {'concept_id': 'con-0001', 'text': 'A backup archive', 'normalized_text': 'a backup archive'},
+            {'concept_id': 'con-0002', 'text': 'A virtual machine', 'normalized_text': 'a virtual machine'},
+            {'concept_id': 'con-0003', 'text': 'A container', 'normalized_text': 'a container'},
+            {'concept_id': 'con-0004', 'text': 'A serverless function', 'normalized_text': 'a serverless function'},
+            {'concept_id': 'con-0005', 'text': 'A type of information asset', 'normalized_text': 'a type of information asset'},
+            {'concept_id': 'con-0006', 'text': 'A type of cloud workload', 'normalized_text': 'a type of cloud workload'},
+        ],
+        'entities': [],
+        'metadata': {'pipeline_version': '1'},
+    }
+
+    out = RdfOutputStrategy(base_iri='https://orion.local/resource/').generate(payload)
+    graph = out['output']['graph']
+    schema_rows = graph['schema']['classes']
+    schema_iris = {row['iri'] for row in schema_rows}
+    schema_labels = {row['label'] for row in schema_rows}
+    subclass_facts = {(row['subject'], row['object']) for row in graph['subclass_facts']}
+
+    assert {'BackupArchive', 'InformationAsset', 'VirtualMachine', 'Container', 'ServerlessFunction', 'CloudWorkload'} <= schema_labels
+    assert all('TypeOfInformationAsset' not in row['label'] for row in schema_rows)
+    assert all('TypeOfCloudWorkload' not in row['label'] for row in schema_rows)
+    assert all('/a-' not in iri for iri in schema_iris)
+    assert all('/type-of-' not in iri for iri in schema_iris)
+    assert ('orion:BackupArchive', 'orion:InformationAsset') in subclass_facts
+    assert ('orion:VirtualMachine', 'orion:CloudWorkload') in subclass_facts
+    assert ('orion:Container', 'orion:CloudWorkload') in subclass_facts
+    assert ('orion:ServerlessFunction', 'orion:CloudWorkload') in subclass_facts
+

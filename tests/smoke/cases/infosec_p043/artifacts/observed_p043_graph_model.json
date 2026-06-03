@@ -1,0 +1,540 @@
+{
+  "classes": [
+    {
+      "iri": "orion:AccessSystem",
+      "label": "AccessSystem"
+    },
+    {
+      "iri": "orion:BackupSupportAvailability",
+      "label": "BackupSupportAvailability"
+    },
+    {
+      "iri": "orion:Confidentiality",
+      "label": "Confidentiality"
+    },
+    {
+      "iri": "orion:ControlReduceRisk",
+      "label": "ControlReduceRisk"
+    },
+    {
+      "iri": "orion:EvaluateCompliance",
+      "label": "EvaluateCompliance"
+    },
+    {
+      "iri": "orion:IncidentAffectAsset",
+      "label": "IncidentAffectAsset"
+    },
+    {
+      "iri": "orion:LoggingSupportAccountability",
+      "label": "LoggingSupportAccountability"
+    },
+    {
+      "iri": "orion:MakeTheGeneratedRdf",
+      "label": "MakeTheGeneratedRdf"
+    },
+    {
+      "iri": "orion:Mining",
+      "label": "Mining"
+    },
+    {
+      "iri": "orion:MonitoringDetectSuspiciousActivity",
+      "label": "MonitoringDetectSuspiciousActivity"
+    },
+    {
+      "comments": [
+        "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity."
+      ],
+      "iri": "orion:OntologyShouldAlsoRepresent",
+      "label": "OntologyShouldAlsoRepresent"
+    },
+    {
+      "iri": "orion:OwlGraphSuitableForQuerying",
+      "label": "OwlGraphSuitableForQuerying"
+    },
+    {
+      "iri": "orion:PolicyDefineRequirement",
+      "label": "PolicyDefineRequirement"
+    },
+    {
+      "iri": "orion:Reasoning",
+      "label": "Reasoning"
+    },
+    {
+      "iri": "orion:RequirementAreSatisfiedByControl",
+      "label": "RequirementAreSatisfiedByControl"
+    },
+    {
+      "comments": [
+        "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance."
+      ],
+      "iri": "orion:ResultingOntologyShouldRepresent",
+      "label": "ResultingOntologyShouldRepresent"
+    },
+    {
+      "iri": "orion:RoleIncludePermission",
+      "label": "RoleIncludePermission"
+    },
+    {
+      "iri": "orion:SupplierProvideService",
+      "label": "SupplierProvideService"
+    },
+    {
+      "iri": "orion:SystemProcessInformationAsset",
+      "label": "SystemProcessInformationAsset"
+    },
+    {
+      "comments": [
+        "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining."
+      ],
+      "iri": "orion:These",
+      "label": "These"
+    },
+    {
+      "iri": "orion:ThreatExploitVulnerability",
+      "label": "ThreatExploitVulnerability"
+    },
+    {
+      "iri": "orion:Validation",
+      "label": "Validation"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "predicate": "orion:auditors",
+      "range": "orion:EvaluateCompliance"
+    },
+    {
+      "domain": "orion:OntologyShouldAlsoRepresent",
+      "predicate": "orion:protects",
+      "range": "orion:BackupSupportAvailability"
+    },
+    {
+      "domain": "orion:OntologyShouldAlsoRepresent",
+      "predicate": "orion:protects",
+      "range": "orion:Confidentiality"
+    },
+    {
+      "domain": "orion:OntologyShouldAlsoRepresent",
+      "predicate": "orion:protects",
+      "range": "orion:LoggingSupportAccountability"
+    },
+    {
+      "domain": "orion:OntologyShouldAlsoRepresent",
+      "predicate": "orion:protects",
+      "range": "orion:MonitoringDetectSuspiciousActivity"
+    },
+    {
+      "domain": "orion:These",
+      "predicate": "orion:relationships",
+      "range": "orion:MakeTheGeneratedRdf"
+    },
+    {
+      "domain": "orion:These",
+      "predicate": "orion:relationships",
+      "range": "orion:Mining"
+    },
+    {
+      "domain": "orion:These",
+      "predicate": "orion:relationships",
+      "range": "orion:OwlGraphSuitableForQuerying"
+    },
+    {
+      "domain": "orion:These",
+      "predicate": "orion:relationships",
+      "range": "orion:Reasoning"
+    },
+    {
+      "domain": "orion:These",
+      "predicate": "orion:relationships",
+      "range": "orion:Validation"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "predicate": "orion:users",
+      "range": "orion:AccessSystem"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "predicate": "orion:users",
+      "range": "orion:ControlReduceRisk"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "predicate": "orion:users",
+      "range": "orion:IncidentAffectAsset"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "predicate": "orion:users",
+      "range": "orion:PolicyDefineRequirement"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "predicate": "orion:users",
+      "range": "orion:RequirementAreSatisfiedByControl"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "predicate": "orion:users",
+      "range": "orion:RoleIncludePermission"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "predicate": "orion:users",
+      "range": "orion:SupplierProvideService"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "predicate": "orion:users",
+      "range": "orion:SystemProcessInformationAsset"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "predicate": "orion:users",
+      "range": "orion:ThreatExploitVulnerability"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-fbb82bd5e177933b",
+      "claim-9376b41a4b34862d",
+      "claim-3f36746d40862a2d",
+      "claim-6c78ab4306c4ae26",
+      "claim-169155c91415357a",
+      "claim-0b10639e5c152c20",
+      "claim-258be67d7d1b3cf2",
+      "claim-a648e63795c93c45",
+      "claim-727398c59872a17f",
+      "claim-a216610119104b77",
+      "claim-e9e5d40b2e2a9e6e",
+      "claim-f7e9018d287f0cb4",
+      "claim-40b97ddd51da0e47",
+      "claim-0bc965c18e85a84d",
+      "claim-95e21e1afb45a2b9",
+      "claim-69d9633f84d4ac30",
+      "claim-7bc7f1275f04cc32",
+      "claim-b3663dc04fbfb1ea",
+      "claim-48714fafffaa4e83"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "property": "orion:auditors",
+      "range": "orion:EvaluateCompliance"
+    },
+    {
+      "domain": "orion:OntologyShouldAlsoRepresent",
+      "property": "orion:protects",
+      "range": "orion:BackupSupportAvailability"
+    },
+    {
+      "domain": "orion:OntologyShouldAlsoRepresent",
+      "property": "orion:protects",
+      "range": "orion:Confidentiality"
+    },
+    {
+      "domain": "orion:OntologyShouldAlsoRepresent",
+      "property": "orion:protects",
+      "range": "orion:LoggingSupportAccountability"
+    },
+    {
+      "domain": "orion:OntologyShouldAlsoRepresent",
+      "property": "orion:protects",
+      "range": "orion:MonitoringDetectSuspiciousActivity"
+    },
+    {
+      "domain": "orion:These",
+      "property": "orion:relationships",
+      "range": "orion:MakeTheGeneratedRdf"
+    },
+    {
+      "domain": "orion:These",
+      "property": "orion:relationships",
+      "range": "orion:Mining"
+    },
+    {
+      "domain": "orion:These",
+      "property": "orion:relationships",
+      "range": "orion:OwlGraphSuitableForQuerying"
+    },
+    {
+      "domain": "orion:These",
+      "property": "orion:relationships",
+      "range": "orion:Reasoning"
+    },
+    {
+      "domain": "orion:These",
+      "property": "orion:relationships",
+      "range": "orion:Validation"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "property": "orion:users",
+      "range": "orion:AccessSystem"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "property": "orion:users",
+      "range": "orion:ControlReduceRisk"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "property": "orion:users",
+      "range": "orion:IncidentAffectAsset"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "property": "orion:users",
+      "range": "orion:PolicyDefineRequirement"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "property": "orion:users",
+      "range": "orion:RequirementAreSatisfiedByControl"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "property": "orion:users",
+      "range": "orion:RoleIncludePermission"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "property": "orion:users",
+      "range": "orion:SupplierProvideService"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "property": "orion:users",
+      "range": "orion:SystemProcessInformationAsset"
+    },
+    {
+      "domain": "orion:ResultingOntologyShouldRepresent",
+      "property": "orion:users",
+      "range": "orion:ThreatExploitVulnerability"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:AccessSystem",
+        "label": "AccessSystem"
+      },
+      {
+        "iri": "orion:BackupSupportAvailability",
+        "label": "BackupSupportAvailability"
+      },
+      {
+        "iri": "orion:Confidentiality",
+        "label": "Confidentiality"
+      },
+      {
+        "iri": "orion:ControlReduceRisk",
+        "label": "ControlReduceRisk"
+      },
+      {
+        "iri": "orion:EvaluateCompliance",
+        "label": "EvaluateCompliance"
+      },
+      {
+        "iri": "orion:IncidentAffectAsset",
+        "label": "IncidentAffectAsset"
+      },
+      {
+        "iri": "orion:LoggingSupportAccountability",
+        "label": "LoggingSupportAccountability"
+      },
+      {
+        "iri": "orion:MakeTheGeneratedRdf",
+        "label": "MakeTheGeneratedRdf"
+      },
+      {
+        "iri": "orion:Mining",
+        "label": "Mining"
+      },
+      {
+        "iri": "orion:MonitoringDetectSuspiciousActivity",
+        "label": "MonitoringDetectSuspiciousActivity"
+      },
+      {
+        "comments": [
+          "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity."
+        ],
+        "iri": "orion:OntologyShouldAlsoRepresent",
+        "label": "OntologyShouldAlsoRepresent"
+      },
+      {
+        "iri": "orion:OwlGraphSuitableForQuerying",
+        "label": "OwlGraphSuitableForQuerying"
+      },
+      {
+        "iri": "orion:PolicyDefineRequirement",
+        "label": "PolicyDefineRequirement"
+      },
+      {
+        "iri": "orion:Reasoning",
+        "label": "Reasoning"
+      },
+      {
+        "iri": "orion:RequirementAreSatisfiedByControl",
+        "label": "RequirementAreSatisfiedByControl"
+      },
+      {
+        "comments": [
+          "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance."
+        ],
+        "iri": "orion:ResultingOntologyShouldRepresent",
+        "label": "ResultingOntologyShouldRepresent"
+      },
+      {
+        "iri": "orion:RoleIncludePermission",
+        "label": "RoleIncludePermission"
+      },
+      {
+        "iri": "orion:SupplierProvideService",
+        "label": "SupplierProvideService"
+      },
+      {
+        "iri": "orion:SystemProcessInformationAsset",
+        "label": "SystemProcessInformationAsset"
+      },
+      {
+        "comments": [
+          "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining."
+        ],
+        "iri": "orion:These",
+        "label": "These"
+      },
+      {
+        "iri": "orion:ThreatExploitVulnerability",
+        "label": "ThreatExploitVulnerability"
+      },
+      {
+        "iri": "orion:Validation",
+        "label": "Validation"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:ResultingOntologyShouldRepresent",
+        "iri": "orion:auditors",
+        "label": "Auditors",
+        "range": "orion:EvaluateCompliance"
+      },
+      {
+        "domain": "orion:OntologyShouldAlsoRepresent",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:BackupSupportAvailability"
+      },
+      {
+        "domain": "orion:OntologyShouldAlsoRepresent",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:Confidentiality"
+      },
+      {
+        "domain": "orion:OntologyShouldAlsoRepresent",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:LoggingSupportAccountability"
+      },
+      {
+        "domain": "orion:OntologyShouldAlsoRepresent",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:MonitoringDetectSuspiciousActivity"
+      },
+      {
+        "domain": "orion:These",
+        "iri": "orion:relationships",
+        "label": "Relationships",
+        "range": "orion:MakeTheGeneratedRdf"
+      },
+      {
+        "domain": "orion:These",
+        "iri": "orion:relationships",
+        "label": "Relationships",
+        "range": "orion:Mining"
+      },
+      {
+        "domain": "orion:These",
+        "iri": "orion:relationships",
+        "label": "Relationships",
+        "range": "orion:OwlGraphSuitableForQuerying"
+      },
+      {
+        "domain": "orion:These",
+        "iri": "orion:relationships",
+        "label": "Relationships",
+        "range": "orion:Reasoning"
+      },
+      {
+        "domain": "orion:These",
+        "iri": "orion:relationships",
+        "label": "Relationships",
+        "range": "orion:Validation"
+      },
+      {
+        "domain": "orion:ResultingOntologyShouldRepresent",
+        "iri": "orion:users",
+        "label": "Users",
+        "range": "orion:AccessSystem"
+      },
+      {
+        "domain": "orion:ResultingOntologyShouldRepresent",
+        "iri": "orion:users",
+        "label": "Users",
+        "range": "orion:ControlReduceRisk"
+      },
+      {
+        "domain": "orion:ResultingOntologyShouldRepresent",
+        "iri": "orion:users",
+        "label": "Users",
+        "range": "orion:IncidentAffectAsset"
+      },
+      {
+        "domain": "orion:ResultingOntologyShouldRepresent",
+        "iri": "orion:users",
+        "label": "Users",
+        "range": "orion:PolicyDefineRequirement"
+      },
+      {
+        "domain": "orion:ResultingOntologyShouldRepresent",
+        "iri": "orion:users",
+        "label": "Users",
+        "range": "orion:RequirementAreSatisfiedByControl"
+      },
+      {
+        "domain": "orion:ResultingOntologyShouldRepresent",
+        "iri": "orion:users",
+        "label": "Users",
+        "range": "orion:RoleIncludePermission"
+      },
+      {
+        "domain": "orion:ResultingOntologyShouldRepresent",
+        "iri": "orion:users",
+        "label": "Users",
+        "range": "orion:SupplierProvideService"
+      },
+      {
+        "domain": "orion:ResultingOntologyShouldRepresent",
+        "iri": "orion:users",
+        "label": "Users",
+        "range": "orion:SystemProcessInformationAsset"
+      },
+      {
+        "domain": "orion:ResultingOntologyShouldRepresent",
+        "iri": "orion:users",
+        "label": "Users",
+        "range": "orion:ThreatExploitVulnerability"
+      }
+    ]
+  },
+  "subclass_facts": [],
+  "type_assertions": []
+}

@@ -1,0 +1,731 @@
+{
+  "classes": [
+    {
+      "iri": "orion:AccessBasedOnRoleAssignment",
+      "label": "AccessBasedOnRoleAssignment"
+    },
+    {
+      "iri": "orion:AlertRelatedToTheCustomerDatabase",
+      "label": "AlertRelatedToTheCustomerDatabase"
+    },
+    {
+      "comments": [
+        "Another example involves remote access."
+      ],
+      "iri": "orion:AnotherExample",
+      "label": "AnotherExample"
+    },
+    {
+      "comments": [
+        "The asset owner classifies the customer database as restricted information."
+      ],
+      "iri": "orion:AssetOwner",
+      "label": "AssetOwner"
+    },
+    {
+      "iri": "orion:AuditLogFromTheDatabaseServer",
+      "label": "AuditLogFromTheDatabaseServer"
+    },
+    {
+      "comments": [
+        "The authorization service grants access based on role assignments."
+      ],
+      "iri": "orion:AuthorizationService",
+      "label": "AuthorizationService"
+    },
+    {
+      "iri": "orion:CommunicationChannel",
+      "label": "CommunicationChannel"
+    },
+    {
+      "comments": [
+        "The corporate application is a web application."
+      ],
+      "iri": "orion:CorporateApplication",
+      "label": "CorporateApplication"
+    },
+    {
+      "comments": [
+        "The cryptographic key is stored in a key management service."
+      ],
+      "iri": "orion:CryptographicKey",
+      "label": "CryptographicKey"
+    },
+    {
+      "comments": [
+        "The customer database is hosted on a database server.",
+        "The customer database is encrypted using a cryptographic key."
+      ],
+      "iri": "orion:CustomerDatabase",
+      "label": "CustomerDatabase"
+    },
+    {
+      "iri": "orion:CustomerDatabaseAsRestrictedInformation",
+      "label": "CustomerDatabaseAsRestrictedInformation"
+    },
+    {
+      "comments": [
+        "The database server runs inside a production network."
+      ],
+      "iri": "orion:DatabaseServer",
+      "label": "DatabaseServer"
+    },
+    {
+      "iri": "orion:EmployeeIdentity",
+      "label": "EmployeeIdentity"
+    },
+    {
+      "iri": "orion:EncryptedUsingACryptographicKey",
+      "label": "EncryptedUsingACryptographicKey"
+    },
+    {
+      "iri": "orion:Endpoint",
+      "label": "Endpoint"
+    },
+    {
+      "comments": [
+        "The endpoint detection and response tool monitors the laptop."
+      ],
+      "iri": "orion:EndpointDetectionAndResponseTool",
+      "label": "EndpointDetectionAndResponseTool"
+    },
+    {
+      "iri": "orion:FinancialData",
+      "label": "FinancialData"
+    },
+    {
+      "comments": [
+        "The firewall enforces network access rules."
+      ],
+      "iri": "orion:Firewall",
+      "label": "Firewall"
+    },
+    {
+      "comments": [
+        "For example, a customer database stores personal data and financial data."
+      ],
+      "iri": "orion:ForExampleACustomerDatabase",
+      "label": "ForExampleACustomerDatabase"
+    },
+    {
+      "iri": "orion:HostedOnADatabaseServer",
+      "label": "HostedOnADatabaseServer"
+    },
+    {
+      "comments": [
+        "The identity provider verifies the employee identity."
+      ],
+      "iri": "orion:IdentityProvider",
+      "label": "IdentityProvider"
+    },
+    {
+      "iri": "orion:InsideAProductionNetwork",
+      "label": "InsideAProductionNetwork"
+    },
+    {
+      "comments": [
+        "The laptop is an endpoint."
+      ],
+      "iri": "orion:Laptop",
+      "label": "Laptop"
+    },
+    {
+      "iri": "orion:LaptopToAccessACorporateApplication",
+      "label": "LaptopToAccessACorporateApplication"
+    },
+    {
+      "iri": "orion:NetworkAccessRule",
+      "label": "NetworkAccessRule"
+    },
+    {
+      "iri": "orion:PersonalData",
+      "label": "PersonalData"
+    },
+    {
+      "comments": [
+        "The production network is protected by a firewall."
+      ],
+      "iri": "orion:ProductionNetwork",
+      "label": "ProductionNetwork"
+    },
+    {
+      "iri": "orion:ProtectedByAFirewall",
+      "label": "ProtectedByAFirewall"
+    },
+    {
+      "iri": "orion:RemoteAccess",
+      "label": "RemoteAccess"
+    },
+    {
+      "comments": [
+        "A remote employee uses a laptop to access a corporate application.",
+        "The remote employee authenticates through multi-factor authentication."
+      ],
+      "iri": "orion:RemoteEmployee",
+      "label": "RemoteEmployee"
+    },
+    {
+      "iri": "orion:RemoteEmployeeToReportLostDeviceImmediately",
+      "label": "RemoteEmployeeToReportLostDeviceImmediately"
+    },
+    {
+      "comments": [
+        "A security analyst reviews alerts related to the customer database."
+      ],
+      "iri": "orion:SecurityAnalyst",
+      "label": "SecurityAnalyst"
+    },
+    {
+      "comments": [
+        "The security information and event management system collects audit logs from the database server."
+      ],
+      "iri": "orion:SecurityInformationAndEventManagementSystem",
+      "label": "SecurityInformationAndEventManagementSystem"
+    },
+    {
+      "comments": [
+        "The security policy requires remote employees to report lost devices immediately."
+      ],
+      "iri": "orion:SecurityPolicy",
+      "label": "SecurityPolicy"
+    },
+    {
+      "iri": "orion:StoredInAKeyManagementService",
+      "label": "StoredInAKeyManagementService"
+    },
+    {
+      "iri": "orion:ThroughMultiFactorAuthentication",
+      "label": "ThroughMultiFactorAuthentication"
+    },
+    {
+      "comments": [
+        "The virtual private network encrypts the communication channel."
+      ],
+      "iri": "orion:VirtualPrivateNetwork",
+      "label": "VirtualPrivateNetwork"
+    },
+    {
+      "iri": "orion:WebApplication",
+      "label": "WebApplication"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:RemoteEmployee",
+      "predicate": "orion:authenticates",
+      "range": "orion:ThroughMultiFactorAuthentication"
+    },
+    {
+      "domain": "orion:AssetOwner",
+      "predicate": "orion:classifies",
+      "range": "orion:CustomerDatabaseAsRestrictedInformation"
+    },
+    {
+      "domain": "orion:SecurityInformationAndEventManagementSystem",
+      "predicate": "orion:collects",
+      "range": "orion:AuditLogFromTheDatabaseServer"
+    },
+    {
+      "domain": "orion:VirtualPrivateNetwork",
+      "predicate": "orion:encrypts",
+      "range": "orion:CommunicationChannel"
+    },
+    {
+      "domain": "orion:Firewall",
+      "predicate": "orion:enforces",
+      "range": "orion:NetworkAccessRule"
+    },
+    {
+      "domain": "orion:AuthorizationService",
+      "predicate": "orion:grants",
+      "range": "orion:AccessBasedOnRoleAssignment"
+    },
+    {
+      "domain": "orion:AnotherExample",
+      "predicate": "orion:involves",
+      "range": "orion:RemoteAccess"
+    },
+    {
+      "domain": "orion:EndpointDetectionAndResponseTool",
+      "predicate": "orion:monitors",
+      "range": "orion:Laptop"
+    },
+    {
+      "domain": "orion:SecurityPolicy",
+      "predicate": "orion:requires",
+      "range": "orion:RemoteEmployeeToReportLostDeviceImmediately"
+    },
+    {
+      "domain": "orion:SecurityAnalyst",
+      "predicate": "orion:reviews",
+      "range": "orion:AlertRelatedToTheCustomerDatabase"
+    },
+    {
+      "domain": "orion:DatabaseServer",
+      "predicate": "orion:runs",
+      "range": "orion:InsideAProductionNetwork"
+    },
+    {
+      "domain": "orion:ForExampleACustomerDatabase",
+      "predicate": "orion:stores",
+      "range": "orion:FinancialData"
+    },
+    {
+      "domain": "orion:ForExampleACustomerDatabase",
+      "predicate": "orion:stores",
+      "range": "orion:PersonalData"
+    },
+    {
+      "domain": "orion:RemoteEmployee",
+      "predicate": "orion:uses",
+      "range": "orion:LaptopToAccessACorporateApplication"
+    },
+    {
+      "domain": "orion:IdentityProvider",
+      "predicate": "orion:verifies",
+      "range": "orion:EmployeeIdentity"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-2d2c39efd2f42c18",
+      "claim-792dbd37f895e238",
+      "claim-098164afd0a123f3",
+      "claim-d0dae7046d5dd13f",
+      "claim-4df18a443850a75e",
+      "claim-88a46c1aee613fd7",
+      "claim-85b8180c6908dcc7",
+      "claim-7aac63c82e512772",
+      "claim-a67529637be94573",
+      "claim-797d023df93a7355",
+      "claim-041e67b0a3b29419",
+      "claim-9b8964f44a45d0e7",
+      "claim-61dc0f3a332eb765",
+      "claim-2644fe30ba30d931",
+      "claim-62c0b58f449b034b",
+      "claim-97026dcf89e84c27",
+      "claim-fe5b7b1c9165133a",
+      "claim-5410626aed9dc3f7",
+      "claim-3a7b9e321d7096f0",
+      "claim-a47fa7d6640672be",
+      "claim-160cade351e47224"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:RemoteEmployee",
+      "property": "orion:authenticates",
+      "range": "orion:ThroughMultiFactorAuthentication"
+    },
+    {
+      "domain": "orion:AssetOwner",
+      "property": "orion:classifies",
+      "range": "orion:CustomerDatabaseAsRestrictedInformation"
+    },
+    {
+      "domain": "orion:SecurityInformationAndEventManagementSystem",
+      "property": "orion:collects",
+      "range": "orion:AuditLogFromTheDatabaseServer"
+    },
+    {
+      "domain": "orion:VirtualPrivateNetwork",
+      "property": "orion:encrypts",
+      "range": "orion:CommunicationChannel"
+    },
+    {
+      "domain": "orion:Firewall",
+      "property": "orion:enforces",
+      "range": "orion:NetworkAccessRule"
+    },
+    {
+      "domain": "orion:AuthorizationService",
+      "property": "orion:grants",
+      "range": "orion:AccessBasedOnRoleAssignment"
+    },
+    {
+      "domain": "orion:AnotherExample",
+      "property": "orion:involves",
+      "range": "orion:RemoteAccess"
+    },
+    {
+      "domain": "orion:EndpointDetectionAndResponseTool",
+      "property": "orion:monitors",
+      "range": "orion:Laptop"
+    },
+    {
+      "domain": "orion:SecurityPolicy",
+      "property": "orion:requires",
+      "range": "orion:RemoteEmployeeToReportLostDeviceImmediately"
+    },
+    {
+      "domain": "orion:SecurityAnalyst",
+      "property": "orion:reviews",
+      "range": "orion:AlertRelatedToTheCustomerDatabase"
+    },
+    {
+      "domain": "orion:DatabaseServer",
+      "property": "orion:runs",
+      "range": "orion:InsideAProductionNetwork"
+    },
+    {
+      "domain": "orion:ForExampleACustomerDatabase",
+      "property": "orion:stores",
+      "range": "orion:FinancialData"
+    },
+    {
+      "domain": "orion:ForExampleACustomerDatabase",
+      "property": "orion:stores",
+      "range": "orion:PersonalData"
+    },
+    {
+      "domain": "orion:RemoteEmployee",
+      "property": "orion:uses",
+      "range": "orion:LaptopToAccessACorporateApplication"
+    },
+    {
+      "domain": "orion:IdentityProvider",
+      "property": "orion:verifies",
+      "range": "orion:EmployeeIdentity"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:AccessBasedOnRoleAssignment",
+        "label": "AccessBasedOnRoleAssignment"
+      },
+      {
+        "iri": "orion:AlertRelatedToTheCustomerDatabase",
+        "label": "AlertRelatedToTheCustomerDatabase"
+      },
+      {
+        "comments": [
+          "Another example involves remote access."
+        ],
+        "iri": "orion:AnotherExample",
+        "label": "AnotherExample"
+      },
+      {
+        "comments": [
+          "The asset owner classifies the customer database as restricted information."
+        ],
+        "iri": "orion:AssetOwner",
+        "label": "AssetOwner"
+      },
+      {
+        "iri": "orion:AuditLogFromTheDatabaseServer",
+        "label": "AuditLogFromTheDatabaseServer"
+      },
+      {
+        "comments": [
+          "The authorization service grants access based on role assignments."
+        ],
+        "iri": "orion:AuthorizationService",
+        "label": "AuthorizationService"
+      },
+      {
+        "iri": "orion:CommunicationChannel",
+        "label": "CommunicationChannel"
+      },
+      {
+        "comments": [
+          "The corporate application is a web application."
+        ],
+        "iri": "orion:CorporateApplication",
+        "label": "CorporateApplication"
+      },
+      {
+        "comments": [
+          "The cryptographic key is stored in a key management service."
+        ],
+        "iri": "orion:CryptographicKey",
+        "label": "CryptographicKey"
+      },
+      {
+        "comments": [
+          "The customer database is hosted on a database server.",
+          "The customer database is encrypted using a cryptographic key."
+        ],
+        "iri": "orion:CustomerDatabase",
+        "label": "CustomerDatabase"
+      },
+      {
+        "iri": "orion:CustomerDatabaseAsRestrictedInformation",
+        "label": "CustomerDatabaseAsRestrictedInformation"
+      },
+      {
+        "comments": [
+          "The database server runs inside a production network."
+        ],
+        "iri": "orion:DatabaseServer",
+        "label": "DatabaseServer"
+      },
+      {
+        "iri": "orion:EmployeeIdentity",
+        "label": "EmployeeIdentity"
+      },
+      {
+        "iri": "orion:EncryptedUsingACryptographicKey",
+        "label": "EncryptedUsingACryptographicKey"
+      },
+      {
+        "iri": "orion:Endpoint",
+        "label": "Endpoint"
+      },
+      {
+        "comments": [
+          "The endpoint detection and response tool monitors the laptop."
+        ],
+        "iri": "orion:EndpointDetectionAndResponseTool",
+        "label": "EndpointDetectionAndResponseTool"
+      },
+      {
+        "iri": "orion:FinancialData",
+        "label": "FinancialData"
+      },
+      {
+        "comments": [
+          "The firewall enforces network access rules."
+        ],
+        "iri": "orion:Firewall",
+        "label": "Firewall"
+      },
+      {
+        "comments": [
+          "For example, a customer database stores personal data and financial data."
+        ],
+        "iri": "orion:ForExampleACustomerDatabase",
+        "label": "ForExampleACustomerDatabase"
+      },
+      {
+        "iri": "orion:HostedOnADatabaseServer",
+        "label": "HostedOnADatabaseServer"
+      },
+      {
+        "comments": [
+          "The identity provider verifies the employee identity."
+        ],
+        "iri": "orion:IdentityProvider",
+        "label": "IdentityProvider"
+      },
+      {
+        "iri": "orion:InsideAProductionNetwork",
+        "label": "InsideAProductionNetwork"
+      },
+      {
+        "comments": [
+          "The laptop is an endpoint."
+        ],
+        "iri": "orion:Laptop",
+        "label": "Laptop"
+      },
+      {
+        "iri": "orion:LaptopToAccessACorporateApplication",
+        "label": "LaptopToAccessACorporateApplication"
+      },
+      {
+        "iri": "orion:NetworkAccessRule",
+        "label": "NetworkAccessRule"
+      },
+      {
+        "iri": "orion:PersonalData",
+        "label": "PersonalData"
+      },
+      {
+        "comments": [
+          "The production network is protected by a firewall."
+        ],
+        "iri": "orion:ProductionNetwork",
+        "label": "ProductionNetwork"
+      },
+      {
+        "iri": "orion:ProtectedByAFirewall",
+        "label": "ProtectedByAFirewall"
+      },
+      {
+        "iri": "orion:RemoteAccess",
+        "label": "RemoteAccess"
+      },
+      {
+        "comments": [
+          "A remote employee uses a laptop to access a corporate application.",
+          "The remote employee authenticates through multi-factor authentication."
+        ],
+        "iri": "orion:RemoteEmployee",
+        "label": "RemoteEmployee"
+      },
+      {
+        "iri": "orion:RemoteEmployeeToReportLostDeviceImmediately",
+        "label": "RemoteEmployeeToReportLostDeviceImmediately"
+      },
+      {
+        "comments": [
+          "A security analyst reviews alerts related to the customer database."
+        ],
+        "iri": "orion:SecurityAnalyst",
+        "label": "SecurityAnalyst"
+      },
+      {
+        "comments": [
+          "The security information and event management system collects audit logs from the database server."
+        ],
+        "iri": "orion:SecurityInformationAndEventManagementSystem",
+        "label": "SecurityInformationAndEventManagementSystem"
+      },
+      {
+        "comments": [
+          "The security policy requires remote employees to report lost devices immediately."
+        ],
+        "iri": "orion:SecurityPolicy",
+        "label": "SecurityPolicy"
+      },
+      {
+        "iri": "orion:StoredInAKeyManagementService",
+        "label": "StoredInAKeyManagementService"
+      },
+      {
+        "iri": "orion:ThroughMultiFactorAuthentication",
+        "label": "ThroughMultiFactorAuthentication"
+      },
+      {
+        "comments": [
+          "The virtual private network encrypts the communication channel."
+        ],
+        "iri": "orion:VirtualPrivateNetwork",
+        "label": "VirtualPrivateNetwork"
+      },
+      {
+        "iri": "orion:WebApplication",
+        "label": "WebApplication"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:RemoteEmployee",
+        "iri": "orion:authenticates",
+        "label": "Authenticates",
+        "range": "orion:ThroughMultiFactorAuthentication"
+      },
+      {
+        "domain": "orion:AssetOwner",
+        "iri": "orion:classifies",
+        "label": "Classifies",
+        "range": "orion:CustomerDatabaseAsRestrictedInformation"
+      },
+      {
+        "domain": "orion:SecurityInformationAndEventManagementSystem",
+        "iri": "orion:collects",
+        "label": "Collects",
+        "range": "orion:AuditLogFromTheDatabaseServer"
+      },
+      {
+        "domain": "orion:VirtualPrivateNetwork",
+        "iri": "orion:encrypts",
+        "label": "Encrypts",
+        "range": "orion:CommunicationChannel"
+      },
+      {
+        "domain": "orion:Firewall",
+        "iri": "orion:enforces",
+        "label": "Enforces",
+        "range": "orion:NetworkAccessRule"
+      },
+      {
+        "domain": "orion:AuthorizationService",
+        "iri": "orion:grants",
+        "label": "Grants",
+        "range": "orion:AccessBasedOnRoleAssignment"
+      },
+      {
+        "domain": "orion:AnotherExample",
+        "iri": "orion:involves",
+        "label": "Involves",
+        "range": "orion:RemoteAccess"
+      },
+      {
+        "domain": "orion:EndpointDetectionAndResponseTool",
+        "iri": "orion:monitors",
+        "label": "Monitors",
+        "range": "orion:Laptop"
+      },
+      {
+        "domain": "orion:SecurityPolicy",
+        "iri": "orion:requires",
+        "label": "Requires",
+        "range": "orion:RemoteEmployeeToReportLostDeviceImmediately"
+      },
+      {
+        "domain": "orion:SecurityAnalyst",
+        "iri": "orion:reviews",
+        "label": "Reviews",
+        "range": "orion:AlertRelatedToTheCustomerDatabase"
+      },
+      {
+        "domain": "orion:DatabaseServer",
+        "iri": "orion:runs",
+        "label": "Runs",
+        "range": "orion:InsideAProductionNetwork"
+      },
+      {
+        "domain": "orion:ForExampleACustomerDatabase",
+        "iri": "orion:stores",
+        "label": "Stores",
+        "range": "orion:FinancialData"
+      },
+      {
+        "domain": "orion:ForExampleACustomerDatabase",
+        "iri": "orion:stores",
+        "label": "Stores",
+        "range": "orion:PersonalData"
+      },
+      {
+        "domain": "orion:RemoteEmployee",
+        "iri": "orion:uses",
+        "label": "Uses",
+        "range": "orion:LaptopToAccessACorporateApplication"
+      },
+      {
+        "domain": "orion:IdentityProvider",
+        "iri": "orion:verifies",
+        "label": "Verifies",
+        "range": "orion:EmployeeIdentity"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:WebApplication",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CorporateApplication"
+    },
+    {
+      "object": "orion:StoredInAKeyManagementService",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CryptographicKey"
+    },
+    {
+      "object": "orion:EncryptedUsingACryptographicKey",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CustomerDatabase"
+    },
+    {
+      "object": "orion:HostedOnADatabaseServer",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CustomerDatabase"
+    },
+    {
+      "object": "orion:Endpoint",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Laptop"
+    },
+    {
+      "object": "orion:ProtectedByAFirewall",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ProductionNetwork"
+    }
+  ],
+  "type_assertions": []
+}

@@ -21,3 +21,21 @@ def test_triple_extraction_never_emits_broken_satisfi_predicate_or_object():
     assert triple["predicate"] != "satisfi"
     assert triple["object"] != "satisfi"
     assert triple["predicate"] in {"satisfy", "satisfied", "satisfies"}
+
+
+# UC-TRIPLE-003 AF-1 | FUN-TRIPLE-003 AC-2 | BR-TRIPLE-004 | TB-TRIPLE-003
+def test_triple_extraction_canonicalizes_requirement_control_objects_to_head_noun():
+    from pipeline.step_009_triple_extraction import extract_triples_from_payload
+
+    payload = {
+        "source_text_id": "src-tri-004",
+        "relations": [
+            {"relation_id": "rel-0002", "subject_text": "policies", "subject_ref": None, "predicate": "defines", "object_text": "mandatory requirements", "object_ref": None, "sentence_id": "sent-0002", "source_text_id": "src-tri-004", "confidence": 0.8, "evidence_span": {"start_offset": 0, "end_offset": 30}},
+            {"relation_id": "rel-0003", "subject_text": "policy", "subject_ref": None, "predicate": "requires", "object_text": "one or more controls", "object_ref": None, "sentence_id": "sent-0003", "source_text_id": "src-tri-004", "confidence": 0.8, "evidence_span": {"start_offset": 0, "end_offset": 30}},
+        ],
+    }
+
+    result = extract_triples_from_payload(payload)
+    objects = {triple["object"] for triple in result["triples"]}
+    assert "requirement" in objects
+    assert "control" in objects

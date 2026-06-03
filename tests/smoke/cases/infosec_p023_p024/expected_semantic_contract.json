@@ -1,0 +1,28 @@
+{
+  "case_id": "p023_p024",
+  "contract_type": "observational_metrics_only",
+  "deterministic_expectations": {
+    "paragraph_ids": [
+      "p023",
+      "p024"
+    ],
+    "required_artifacts": [
+      "artifacts/observed_p023_p024_semantic_claims.json",
+      "artifacts/observed_p023_p024_graph_model.json",
+      "artifacts/observed_p023_p024_output.rdf",
+      "artifacts/observed_p023_p024_metrics.json"
+    ],
+    "required_claim_stage": "semantic_claims"
+  },
+  "domain_expected_claims": [],
+  "domain_expected_reason": "No domain expected inventado; caso mide precisión observada. Expected semántico se deja vacío salvo shape/artifacts derivados de fixtures leídos.",
+  "fixture_sha256": {
+    "p023": "f660f0dc521fccb314796ef277808ac11863a0d9c49024d27be1725c99803cb1",
+    "p024": "6080eecac6234dd94f2569c3acf0c0ce56dc0d25f3f2895610e1ef5e17c8fcd6"
+  },
+  "paragraph_ids": [
+    "p023",
+    "p024"
+  ],
+  "schema_version": 1
+}

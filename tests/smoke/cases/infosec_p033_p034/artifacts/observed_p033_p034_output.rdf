@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <owl:Class rdf:about="https://orion.local/resource/application">
+    <rdfs:label>Application</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/approved">
+    <rdfs:label>Approved</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/configurationchange">
+    <rdfs:label>ConfigurationChange</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/remediation"/>
+    <rdfs:comment>Configuration change is a type of remediation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/cybercriminalgroup">
+    <rdfs:label>CybercriminalGroup</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/threatactor"/>
+    <rdfs:comment>A cybercriminal group is a type of threat actor.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/detectedweakness">
+    <rdfs:label>DetectedWeakness</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/detection">
+    <rdfs:label>Detection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/entity">
+    <rdfs:label>Entity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/evidence">
+    <rdfs:label>Evidence</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/exposure">
+    <rdfs:label>Exposure</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/fixavulnerability">
+    <rdfs:label>FixAVulnerability</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/hacktivist">
+    <rdfs:label>Hacktivist</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/threatactor"/>
+    <rdfs:comment>A hacktivist is a type of threat actor.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/howathreatactorachieveanobjective">
+    <rdfs:label>HowAThreatActorAchieveAnObjective</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/impact">
+    <rdfs:label>Impact</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/indicator">
+    <rdfs:label>Indicator</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/indicatorofcompromise">
+    <rdfs:label>IndicatorOfCompromise</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/evidence"/>
+    <rdfs:comment>An indicator of compromise is evidence that a system may be compromised.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/informationaboutthreat">
+    <rdfs:label>InformationAboutThreat</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/insider">
+    <rdfs:label>Insider</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/threatactor"/>
+    <rdfs:comment>An insider is a type of threat actor.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/intentionallycauseharm">
+    <rdfs:label>IntentionallyCauseHarm</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/knownvulnerabilityinsystem">
+    <rdfs:label>KnownVulnerabilityInSystem</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/likelihood">
+    <rdfs:label>Likelihood</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/mitigationreducetheriskwhenremediation">
+    <rdfs:label>MitigationReduceTheRiskWhenRemediation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/notimmediatelypossible"/>
+    <rdfs:comment>Mitigation reduces the risk when remediation is not immediately possible.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/mustbedocumented">
+    <rdfs:label>MustBeDocumented</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/nationstateactor">
+    <rdfs:label>NationStateActor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/threatactor"/>
+    <rdfs:comment>A nation-state actor is a type of threat actor.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/notimmediatelypossible">
+    <rdfs:label>NotImmediatelyPossible</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/patchdeployment">
+    <rdfs:label>PatchDeployment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/remediation"/>
+    <rdfs:comment>Patch deployment is a type of remediation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/prevention">
+    <rdfs:label>Prevention</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/remediation">
+    <rdfs:label>Remediation</rdfs:label>
+    <rdfs:comment>Remediation removes or fixes a vulnerability.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/responseactivity">
+    <rdfs:label>ResponseActivity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/reviewed">
+    <rdfs:label>Reviewed</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/riskrating">
+    <rdfs:label>RiskRating</rdfs:label>
+    <rdfs:comment>A risk rating combines severity, exposure, likelihood, and business impact.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/severity">
+    <rdfs:label>Severity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/severityrating">
+    <rdfs:label>SeverityRating</rdfs:label>
+    <rdfs:comment>A severity rating estimates the technical seriousness of a vulnerability.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/systemmaybecompromised">
+    <rdfs:label>SystemMayBeCompromised</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/tactic">
+    <rdfs:label>Tactic</rdfs:label>
+    <rdfs:comment>A tactic describes a threat actor objective.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/technicalseriousnessofavulnerability">
+    <rdfs:label>TechnicalSeriousnessOfAVulnerability</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/technique">
+    <rdfs:label>Technique</rdfs:label>
+    <rdfs:comment>A technique describes how a threat actor achieves an objective.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/threatactor">
+    <rdfs:label>ThreatActor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/entity"/>
+    <rdfs:comment>A threat actor is an entity that can intentionally cause harm.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/threatactorobjective">
+    <rdfs:label>ThreatActorObjective</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/threatintelligence">
+    <rdfs:label>ThreatIntelligence</rdfs:label>
+    <rdfs:comment>Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.</rdfs:comment>
+    <rdfs:comment>Threat intelligence supports detection, prevention, and response activities.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/vulnerability">
+    <rdfs:label>Vulnerability</rdfs:label>
+    <rdfs:comment>Vulnerability exceptions must be documented, approved, and reviewed.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/vulnerabilityfinding">
+    <rdfs:label>VulnerabilityFinding</rdfs:label>
+    <rdfs:comment>A vulnerability finding describes a detected weakness.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/vulnerabilitymanagementidentifyevaluateprioritizand">
+    <rdfs:label>VulnerabilityManagementIdentifyEvaluatePrioritizAnd</rdfs:label>
+    <rdfs:comment>Vulnerability management identifies, evaluates, prioritizes, and remediates weaknesses.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/vulnerabilityscan">
+    <rdfs:label>VulnerabilityScan</rdfs:label>
+    <rdfs:comment>A vulnerability scan detects known vulnerabilities in systems and applications.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/weakness">
+    <rdfs:label>Weakness</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/as">
+    <rdfs:label>As</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/indicatorofcompromise"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/systemmaybecompromised"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/business">
+    <rdfs:label>Business</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/riskrating"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/impact"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/cans">
+    <rdfs:label>Cans</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/threatactor"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/intentionallycauseharm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/combines">
+    <rdfs:label>Combines</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/riskrating"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/exposure"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/combines">
+    <rdfs:label>Combines</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/riskrating"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/likelihood"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/combines">
+    <rdfs:label>Combines</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/riskrating"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/severity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/describes">
+    <rdfs:label>Describes</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/tactic"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/threatactorobjective"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/describes">
+    <rdfs:label>Describes</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/technique"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/howathreatactorachieveanobjective"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/describes">
+    <rdfs:label>Describes</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/vulnerabilityfinding"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/detectedweakness"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/detects">
+    <rdfs:label>Detects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/vulnerabilityscan"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/application"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/detects">
+    <rdfs:label>Detects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/vulnerabilityscan"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/knownvulnerabilityinsystem"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/estimates">
+    <rdfs:label>Estimates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/severityrating"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/technicalseriousnessofavulnerability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/exceptions">
+    <rdfs:label>Exceptions</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/vulnerability"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/approved"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/exceptions">
+    <rdfs:label>Exceptions</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/vulnerability"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/mustbedocumented"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/exceptions">
+    <rdfs:label>Exceptions</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/vulnerability"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/reviewed"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/provides">
+    <rdfs:label>Provides</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/threatintelligence"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/indicator"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/provides">
+    <rdfs:label>Provides</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/threatintelligence"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/informationaboutthreat"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/provides">
+    <rdfs:label>Provides</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/threatintelligence"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/tactic"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/provides">
+    <rdfs:label>Provides</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/threatintelligence"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/technique"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/provides">
+    <rdfs:label>Provides</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/threatintelligence"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/threatactor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/remediates">
+    <rdfs:label>Remediates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/vulnerabilitymanagementidentifyevaluateprioritizand"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/weakness"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/removes">
+    <rdfs:label>Removes</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/remediation"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/fixavulnerability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/supports">
+    <rdfs:label>Supports</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/threatintelligence"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/detection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/supports">
+    <rdfs:label>Supports</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/threatintelligence"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/prevention"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/supports">
+    <rdfs:label>Supports</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/threatintelligence"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/responseactivity"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="https://orion.local/resource/application">
+    <rdfs:label>Application</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/approved">
+    <rdfs:label>Approved</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/configurationchange">
+    <rdfs:label>ConfigurationChange</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/cybercriminalgroup">
+    <rdfs:label>CybercriminalGroup</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/detectedweakness">
+    <rdfs:label>DetectedWeakness</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/detection">
+    <rdfs:label>Detection</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/entity">
+    <rdfs:label>Entity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/evidence">
+    <rdfs:label>Evidence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/exposure">
+    <rdfs:label>Exposure</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/fixavulnerability">
+    <rdfs:label>FixAVulnerability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/hacktivist">
+    <rdfs:label>Hacktivist</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/howathreatactorachieveanobjective">
+    <rdfs:label>HowAThreatActorAchieveAnObjective</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/impact">
+    <rdfs:label>Impact</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/indicator">
+    <rdfs:label>Indicator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/indicatorofcompromise">
+    <rdfs:label>IndicatorOfCompromise</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/informationaboutthreat">
+    <rdfs:label>InformationAboutThreat</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/insider">
+    <rdfs:label>Insider</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/intentionallycauseharm">
+    <rdfs:label>IntentionallyCauseHarm</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/knownvulnerabilityinsystem">
+    <rdfs:label>KnownVulnerabilityInSystem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/likelihood">
+    <rdfs:label>Likelihood</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/mitigationreducetheriskwhenremediation">
+    <rdfs:label>MitigationReduceTheRiskWhenRemediation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/mustbedocumented">
+    <rdfs:label>MustBeDocumented</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/nationstateactor">
+    <rdfs:label>NationStateActor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/notimmediatelypossible">
+    <rdfs:label>NotImmediatelyPossible</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/patchdeployment">
+    <rdfs:label>PatchDeployment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/prevention">
+    <rdfs:label>Prevention</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/remediation">
+    <rdfs:label>Remediation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/responseactivity">
+    <rdfs:label>ResponseActivity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/reviewed">
+    <rdfs:label>Reviewed</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/riskrating">
+    <rdfs:label>RiskRating</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/severity">
+    <rdfs:label>Severity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/severityrating">
+    <rdfs:label>SeverityRating</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/systemmaybecompromised">
+    <rdfs:label>SystemMayBeCompromised</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/tactic">
+    <rdfs:label>Tactic</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/technicalseriousnessofavulnerability">
+    <rdfs:label>TechnicalSeriousnessOfAVulnerability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/technique">
+    <rdfs:label>Technique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/threatactor">
+    <rdfs:label>ThreatActor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/threatactorobjective">
+    <rdfs:label>ThreatActorObjective</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/threatintelligence">
+    <rdfs:label>ThreatIntelligence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerability">
+    <rdfs:label>Vulnerability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerabilityfinding">
+    <rdfs:label>VulnerabilityFinding</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerabilitymanagementidentifyevaluateprioritizand">
+    <rdfs:label>VulnerabilityManagementIdentifyEvaluatePrioritizAnd</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerabilityscan">
+    <rdfs:label>VulnerabilityScan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/weakness">
+    <rdfs:label>Weakness</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

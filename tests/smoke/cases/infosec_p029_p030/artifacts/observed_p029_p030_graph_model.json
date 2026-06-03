@@ -1,0 +1,792 @@
+{
+  "classes": [
+    {
+      "comments": [
+        "An audit evaluates whether controls satisfy requirements."
+      ],
+      "iri": "orion:Audit",
+      "label": "Audit"
+    },
+    {
+      "iri": "orion:BeSatisfied",
+      "label": "BeSatisfied"
+    },
+    {
+      "comments": [
+        "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements."
+      ],
+      "iri": "orion:Compliance",
+      "label": "Compliance"
+    },
+    {
+      "comments": [
+        "A compliance requirement is an obligation that must be satisfied."
+      ],
+      "iri": "orion:ComplianceRequirement",
+      "label": "ComplianceRequirement"
+    },
+    {
+      "iri": "orion:ComplianceRequirementDefinedByTheOrganization",
+      "label": "ComplianceRequirementDefinedByTheOrganization"
+    },
+    {
+      "iri": "orion:ComplianceRequirementDefinedInAnAgreement",
+      "label": "ComplianceRequirementDefinedInAnAgreement"
+    },
+    {
+      "iri": "orion:ComplianceRequirementDerivedFromLaw",
+      "label": "ComplianceRequirementDerivedFromLaw"
+    },
+    {
+      "iri": "orion:ComplianceRequirementImposedByARegulator",
+      "label": "ComplianceRequirementImposedByARegulator"
+    },
+    {
+      "comments": [
+        "Consent is a lawful basis for processing in some contexts."
+      ],
+      "iri": "orion:Consent",
+      "label": "Consent"
+    },
+    {
+      "iri": "orion:Contractual",
+      "label": "Contractual"
+    },
+    {
+      "comments": [
+        "A contractual requirement is a type of compliance requirement defined in an agreement."
+      ],
+      "iri": "orion:ContractualRequirement",
+      "label": "ContractualRequirement"
+    },
+    {
+      "comments": [
+        "A corrective action addresses a nonconformity."
+      ],
+      "iri": "orion:CorrectiveAction",
+      "label": "CorrectiveAction"
+    },
+    {
+      "comments": [
+        "A data controller determines the purposes and means of processing personal data."
+      ],
+      "iri": "orion:DataController",
+      "label": "DataController"
+    },
+    {
+      "comments": [
+        "Data deletion removes personal data when it is no longer needed."
+      ],
+      "iri": "orion:DataDeletionRemovePersonalDataWhenIt",
+      "label": "DataDeletionRemovePersonalDataWhenIt"
+    },
+    {
+      "comments": [
+        "Data minimization limits personal data to what is necessary."
+      ],
+      "iri": "orion:DataMinimizationLimitPersonalDataToWhat",
+      "label": "DataMinimizationLimitPersonalDataToWhat"
+    },
+    {
+      "comments": [
+        "A data processor processes personal data on behalf of a controller."
+      ],
+      "iri": "orion:DataProcessor",
+      "label": "DataProcessor"
+    },
+    {
+      "comments": [
+        "A data subject is a person whose personal data is processed."
+      ],
+      "iri": "orion:DataSubject",
+      "label": "DataSubject"
+    },
+    {
+      "iri": "orion:DataSubjectAboutProcessingActivity",
+      "label": "DataSubjectAboutProcessingActivity"
+    },
+    {
+      "iri": "orion:DemonstrationOfCompliance",
+      "label": "DemonstrationOfCompliance"
+    },
+    {
+      "comments": [
+        "Evidence supports the demonstration of compliance."
+      ],
+      "iri": "orion:Evidence",
+      "label": "Evidence"
+    },
+    {
+      "iri": "orion:FailureToMeetARequirement",
+      "label": "FailureToMeetARequirement"
+    },
+    {
+      "comments": [
+        "An internal requirement is a type of compliance requirement defined by the organization."
+      ],
+      "iri": "orion:InternalRequirement",
+      "label": "InternalRequirement"
+    },
+    {
+      "iri": "orion:LawfulBasisForProcessingInSomeContext",
+      "label": "LawfulBasisForProcessingInSomeContext"
+    },
+    {
+      "comments": [
+        "A legal requirement is a type of compliance requirement derived from law."
+      ],
+      "iri": "orion:LegalRequirement",
+      "label": "LegalRequirement"
+    },
+    {
+      "iri": "orion:Necessary",
+      "label": "Necessary"
+    },
+    {
+      "iri": "orion:NoLongerNeeded",
+      "label": "NoLongerNeeded"
+    },
+    {
+      "comments": [
+        "A nonconformity is a failure to meet a requirement."
+      ],
+      "iri": "orion:Nonconformity",
+      "label": "Nonconformity"
+    },
+    {
+      "iri": "orion:Obligation",
+      "label": "Obligation"
+    },
+    {
+      "iri": "orion:OfProcessingPersonalData",
+      "label": "OfProcessingPersonalData"
+    },
+    {
+      "iri": "orion:PersonWhosePersonalDataIsProcessed",
+      "label": "PersonWhosePersonalDataIsProcessed"
+    },
+    {
+      "iri": "orion:PersonalData",
+      "label": "PersonalData"
+    },
+    {
+      "iri": "orion:PersonalDataOnBehalfOfAController",
+      "label": "PersonalDataOnBehalfOfAController"
+    },
+    {
+      "comments": [
+        "Privacy protects personal data and the rights of individuals."
+      ],
+      "iri": "orion:Privacy",
+      "label": "Privacy"
+    },
+    {
+      "comments": [
+        "A privacy notice informs data subjects about processing activities."
+      ],
+      "iri": "orion:PrivacyNotice",
+      "label": "PrivacyNotice"
+    },
+    {
+      "iri": "orion:ProcessingToDefinedPurpos",
+      "label": "ProcessingToDefinedPurpos"
+    },
+    {
+      "iri": "orion:Purpos",
+      "label": "Purpos"
+    },
+    {
+      "comments": [
+        "Purpose limitation restricts processing to defined purposes."
+      ],
+      "iri": "orion:PurposeLimitation",
+      "label": "PurposeLimitation"
+    },
+    {
+      "iri": "orion:Regulatory",
+      "label": "Regulatory"
+    },
+    {
+      "comments": [
+        "A regulatory requirement is a type of compliance requirement imposed by a regulator."
+      ],
+      "iri": "orion:RegulatoryRequirement",
+      "label": "RegulatoryRequirement"
+    },
+    {
+      "comments": [
+        "Retention limitation restricts how long personal data is stored."
+      ],
+      "iri": "orion:RetentionLimitationRestrictHowLongPersonalData",
+      "label": "RetentionLimitationRestrictHowLongPersonalData"
+    },
+    {
+      "iri": "orion:RightOfIndividuals",
+      "label": "RightOfIndividuals"
+    },
+    {
+      "iri": "orion:Stored",
+      "label": "Stored"
+    },
+    {
+      "iri": "orion:WhetherControlSatisfyRequirement",
+      "label": "WhetherControlSatisfyRequirement"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:CorrectiveAction",
+      "predicate": "orion:addresses",
+      "range": "orion:Nonconformity"
+    },
+    {
+      "domain": "orion:DataController",
+      "predicate": "orion:determines",
+      "range": "orion:Purpos"
+    },
+    {
+      "domain": "orion:Compliance",
+      "predicate": "orion:ensures",
+      "range": "orion:Contractual"
+    },
+    {
+      "domain": "orion:Compliance",
+      "predicate": "orion:ensures",
+      "range": "orion:InternalRequirement"
+    },
+    {
+      "domain": "orion:Compliance",
+      "predicate": "orion:ensures",
+      "range": "orion:Regulatory"
+    },
+    {
+      "domain": "orion:Audit",
+      "predicate": "orion:evaluates",
+      "range": "orion:WhetherControlSatisfyRequirement"
+    },
+    {
+      "domain": "orion:PrivacyNotice",
+      "predicate": "orion:informs",
+      "range": "orion:DataSubjectAboutProcessingActivity"
+    },
+    {
+      "domain": "orion:DataController",
+      "predicate": "orion:means",
+      "range": "orion:OfProcessingPersonalData"
+    },
+    {
+      "domain": "orion:ComplianceRequirement",
+      "predicate": "orion:musts",
+      "range": "orion:BeSatisfied"
+    },
+    {
+      "domain": "orion:DataProcessor",
+      "predicate": "orion:processes",
+      "range": "orion:PersonalDataOnBehalfOfAController"
+    },
+    {
+      "domain": "orion:Privacy",
+      "predicate": "orion:protects",
+      "range": "orion:PersonalData"
+    },
+    {
+      "domain": "orion:Privacy",
+      "predicate": "orion:protects",
+      "range": "orion:RightOfIndividuals"
+    },
+    {
+      "domain": "orion:PurposeLimitation",
+      "predicate": "orion:restricts",
+      "range": "orion:ProcessingToDefinedPurpos"
+    },
+    {
+      "domain": "orion:Evidence",
+      "predicate": "orion:supports",
+      "range": "orion:DemonstrationOfCompliance"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-5f9e85a04814d744",
+      "claim-2c36210b5d0250e8",
+      "claim-3b0c818f7e0be711",
+      "claim-1d10d7b2dd1bfd34",
+      "claim-d721bf1c48a7373e",
+      "claim-4f39f88455899199",
+      "claim-a0bff5fbcf324dd2",
+      "claim-0553c3aadd6b45cd",
+      "claim-4909795184c02075",
+      "claim-98dc03f682e3185b",
+      "claim-8d12fd4cba3f1556",
+      "claim-b40b1db7ae2897f2",
+      "claim-efc36ef96f15c146",
+      "claim-d29e0f01f82c717d",
+      "claim-7cbda386560e7c2e",
+      "claim-a23ac42bf745ba5f",
+      "claim-4ef44bf7c3bf5ad5",
+      "claim-f0eea5e8a82b63f0",
+      "claim-6b23ec38ed0b8a9a",
+      "claim-7913e2c0525d51f0",
+      "claim-0ab345b592a14916",
+      "claim-7a6cdf6bafca29da",
+      "claim-9b183450801612c9",
+      "claim-f6f7e7b518a2eabb",
+      "claim-8ea732f1f93eba1a"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:CorrectiveAction",
+      "property": "orion:addresses",
+      "range": "orion:Nonconformity"
+    },
+    {
+      "domain": "orion:DataController",
+      "property": "orion:determines",
+      "range": "orion:Purpos"
+    },
+    {
+      "domain": "orion:Compliance",
+      "property": "orion:ensures",
+      "range": "orion:Contractual"
+    },
+    {
+      "domain": "orion:Compliance",
+      "property": "orion:ensures",
+      "range": "orion:InternalRequirement"
+    },
+    {
+      "domain": "orion:Compliance",
+      "property": "orion:ensures",
+      "range": "orion:Regulatory"
+    },
+    {
+      "domain": "orion:Audit",
+      "property": "orion:evaluates",
+      "range": "orion:WhetherControlSatisfyRequirement"
+    },
+    {
+      "domain": "orion:PrivacyNotice",
+      "property": "orion:informs",
+      "range": "orion:DataSubjectAboutProcessingActivity"
+    },
+    {
+      "domain": "orion:DataController",
+      "property": "orion:means",
+      "range": "orion:OfProcessingPersonalData"
+    },
+    {
+      "domain": "orion:ComplianceRequirement",
+      "property": "orion:musts",
+      "range": "orion:BeSatisfied"
+    },
+    {
+      "domain": "orion:DataProcessor",
+      "property": "orion:processes",
+      "range": "orion:PersonalDataOnBehalfOfAController"
+    },
+    {
+      "domain": "orion:Privacy",
+      "property": "orion:protects",
+      "range": "orion:PersonalData"
+    },
+    {
+      "domain": "orion:Privacy",
+      "property": "orion:protects",
+      "range": "orion:RightOfIndividuals"
+    },
+    {
+      "domain": "orion:PurposeLimitation",
+      "property": "orion:restricts",
+      "range": "orion:ProcessingToDefinedPurpos"
+    },
+    {
+      "domain": "orion:Evidence",
+      "property": "orion:supports",
+      "range": "orion:DemonstrationOfCompliance"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "comments": [
+          "An audit evaluates whether controls satisfy requirements."
+        ],
+        "iri": "orion:Audit",
+        "label": "Audit"
+      },
+      {
+        "iri": "orion:BeSatisfied",
+        "label": "BeSatisfied"
+      },
+      {
+        "comments": [
+          "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements."
+        ],
+        "iri": "orion:Compliance",
+        "label": "Compliance"
+      },
+      {
+        "comments": [
+          "A compliance requirement is an obligation that must be satisfied."
+        ],
+        "iri": "orion:ComplianceRequirement",
+        "label": "ComplianceRequirement"
+      },
+      {
+        "iri": "orion:ComplianceRequirementDefinedByTheOrganization",
+        "label": "ComplianceRequirementDefinedByTheOrganization"
+      },
+      {
+        "iri": "orion:ComplianceRequirementDefinedInAnAgreement",
+        "label": "ComplianceRequirementDefinedInAnAgreement"
+      },
+      {
+        "iri": "orion:ComplianceRequirementDerivedFromLaw",
+        "label": "ComplianceRequirementDerivedFromLaw"
+      },
+      {
+        "iri": "orion:ComplianceRequirementImposedByARegulator",
+        "label": "ComplianceRequirementImposedByARegulator"
+      },
+      {
+        "comments": [
+          "Consent is a lawful basis for processing in some contexts."
+        ],
+        "iri": "orion:Consent",
+        "label": "Consent"
+      },
+      {
+        "iri": "orion:Contractual",
+        "label": "Contractual"
+      },
+      {
+        "comments": [
+          "A contractual requirement is a type of compliance requirement defined in an agreement."
+        ],
+        "iri": "orion:ContractualRequirement",
+        "label": "ContractualRequirement"
+      },
+      {
+        "comments": [
+          "A corrective action addresses a nonconformity."
+        ],
+        "iri": "orion:CorrectiveAction",
+        "label": "CorrectiveAction"
+      },
+      {
+        "comments": [
+          "A data controller determines the purposes and means of processing personal data."
+        ],
+        "iri": "orion:DataController",
+        "label": "DataController"
+      },
+      {
+        "comments": [
+          "Data deletion removes personal data when it is no longer needed."
+        ],
+        "iri": "orion:DataDeletionRemovePersonalDataWhenIt",
+        "label": "DataDeletionRemovePersonalDataWhenIt"
+      },
+      {
+        "comments": [
+          "Data minimization limits personal data to what is necessary."
+        ],
+        "iri": "orion:DataMinimizationLimitPersonalDataToWhat",
+        "label": "DataMinimizationLimitPersonalDataToWhat"
+      },
+      {
+        "comments": [
+          "A data processor processes personal data on behalf of a controller."
+        ],
+        "iri": "orion:DataProcessor",
+        "label": "DataProcessor"
+      },
+      {
+        "comments": [
+          "A data subject is a person whose personal data is processed."
+        ],
+        "iri": "orion:DataSubject",
+        "label": "DataSubject"
+      },
+      {
+        "iri": "orion:DataSubjectAboutProcessingActivity",
+        "label": "DataSubjectAboutProcessingActivity"
+      },
+      {
+        "iri": "orion:DemonstrationOfCompliance",
+        "label": "DemonstrationOfCompliance"
+      },
+      {
+        "comments": [
+          "Evidence supports the demonstration of compliance."
+        ],
+        "iri": "orion:Evidence",
+        "label": "Evidence"
+      },
+      {
+        "iri": "orion:FailureToMeetARequirement",
+        "label": "FailureToMeetARequirement"
+      },
+      {
+        "comments": [
+          "An internal requirement is a type of compliance requirement defined by the organization."
+        ],
+        "iri": "orion:InternalRequirement",
+        "label": "InternalRequirement"
+      },
+      {
+        "iri": "orion:LawfulBasisForProcessingInSomeContext",
+        "label": "LawfulBasisForProcessingInSomeContext"
+      },
+      {
+        "comments": [
+          "A legal requirement is a type of compliance requirement derived from law."
+        ],
+        "iri": "orion:LegalRequirement",
+        "label": "LegalRequirement"
+      },
+      {
+        "iri": "orion:Necessary",
+        "label": "Necessary"
+      },
+      {
+        "iri": "orion:NoLongerNeeded",
+        "label": "NoLongerNeeded"
+      },
+      {
+        "comments": [
+          "A nonconformity is a failure to meet a requirement."
+        ],
+        "iri": "orion:Nonconformity",
+        "label": "Nonconformity"
+      },
+      {
+        "iri": "orion:Obligation",
+        "label": "Obligation"
+      },
+      {
+        "iri": "orion:OfProcessingPersonalData",
+        "label": "OfProcessingPersonalData"
+      },
+      {
+        "iri": "orion:PersonWhosePersonalDataIsProcessed",
+        "label": "PersonWhosePersonalDataIsProcessed"
+      },
+      {
+        "iri": "orion:PersonalData",
+        "label": "PersonalData"
+      },
+      {
+        "iri": "orion:PersonalDataOnBehalfOfAController",
+        "label": "PersonalDataOnBehalfOfAController"
+      },
+      {
+        "comments": [
+          "Privacy protects personal data and the rights of individuals."
+        ],
+        "iri": "orion:Privacy",
+        "label": "Privacy"
+      },
+      {
+        "comments": [
+          "A privacy notice informs data subjects about processing activities."
+        ],
+        "iri": "orion:PrivacyNotice",
+        "label": "PrivacyNotice"
+      },
+      {
+        "iri": "orion:ProcessingToDefinedPurpos",
+        "label": "ProcessingToDefinedPurpos"
+      },
+      {
+        "iri": "orion:Purpos",
+        "label": "Purpos"
+      },
+      {
+        "comments": [
+          "Purpose limitation restricts processing to defined purposes."
+        ],
+        "iri": "orion:PurposeLimitation",
+        "label": "PurposeLimitation"
+      },
+      {
+        "iri": "orion:Regulatory",
+        "label": "Regulatory"
+      },
+      {
+        "comments": [
+          "A regulatory requirement is a type of compliance requirement imposed by a regulator."
+        ],
+        "iri": "orion:RegulatoryRequirement",
+        "label": "RegulatoryRequirement"
+      },
+      {
+        "comments": [
+          "Retention limitation restricts how long personal data is stored."
+        ],
+        "iri": "orion:RetentionLimitationRestrictHowLongPersonalData",
+        "label": "RetentionLimitationRestrictHowLongPersonalData"
+      },
+      {
+        "iri": "orion:RightOfIndividuals",
+        "label": "RightOfIndividuals"
+      },
+      {
+        "iri": "orion:Stored",
+        "label": "Stored"
+      },
+      {
+        "iri": "orion:WhetherControlSatisfyRequirement",
+        "label": "WhetherControlSatisfyRequirement"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:CorrectiveAction",
+        "iri": "orion:addresses",
+        "label": "Addresses",
+        "range": "orion:Nonconformity"
+      },
+      {
+        "domain": "orion:DataController",
+        "iri": "orion:determines",
+        "label": "Determines",
+        "range": "orion:Purpos"
+      },
+      {
+        "domain": "orion:Compliance",
+        "iri": "orion:ensures",
+        "label": "Ensures",
+        "range": "orion:Contractual"
+      },
+      {
+        "domain": "orion:Compliance",
+        "iri": "orion:ensures",
+        "label": "Ensures",
+        "range": "orion:InternalRequirement"
+      },
+      {
+        "domain": "orion:Compliance",
+        "iri": "orion:ensures",
+        "label": "Ensures",
+        "range": "orion:Regulatory"
+      },
+      {
+        "domain": "orion:Audit",
+        "iri": "orion:evaluates",
+        "label": "Evaluates",
+        "range": "orion:WhetherControlSatisfyRequirement"
+      },
+      {
+        "domain": "orion:PrivacyNotice",
+        "iri": "orion:informs",
+        "label": "Informs",
+        "range": "orion:DataSubjectAboutProcessingActivity"
+      },
+      {
+        "domain": "orion:DataController",
+        "iri": "orion:means",
+        "label": "Means",
+        "range": "orion:OfProcessingPersonalData"
+      },
+      {
+        "domain": "orion:ComplianceRequirement",
+        "iri": "orion:musts",
+        "label": "Musts",
+        "range": "orion:BeSatisfied"
+      },
+      {
+        "domain": "orion:DataProcessor",
+        "iri": "orion:processes",
+        "label": "Processes",
+        "range": "orion:PersonalDataOnBehalfOfAController"
+      },
+      {
+        "domain": "orion:Privacy",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:PersonalData"
+      },
+      {
+        "domain": "orion:Privacy",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:RightOfIndividuals"
+      },
+      {
+        "domain": "orion:PurposeLimitation",
+        "iri": "orion:restricts",
+        "label": "Restricts",
+        "range": "orion:ProcessingToDefinedPurpos"
+      },
+      {
+        "domain": "orion:Evidence",
+        "iri": "orion:supports",
+        "label": "Supports",
+        "range": "orion:DemonstrationOfCompliance"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:Obligation",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ComplianceRequirement"
+    },
+    {
+      "object": "orion:LawfulBasisForProcessingInSomeContext",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Consent"
+    },
+    {
+      "object": "orion:ComplianceRequirementDefinedInAnAgreement",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ContractualRequirement"
+    },
+    {
+      "object": "orion:NoLongerNeeded",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DataDeletionRemovePersonalDataWhenIt"
+    },
+    {
+      "object": "orion:Necessary",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DataMinimizationLimitPersonalDataToWhat"
+    },
+    {
+      "object": "orion:PersonWhosePersonalDataIsProcessed",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DataSubject"
+    },
+    {
+      "object": "orion:ComplianceRequirementDefinedByTheOrganization",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:InternalRequirement"
+    },
+    {
+      "object": "orion:ComplianceRequirementDerivedFromLaw",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:LegalRequirement"
+    },
+    {
+      "object": "orion:FailureToMeetARequirement",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Nonconformity"
+    },
+    {
+      "object": "orion:ComplianceRequirementImposedByARegulator",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:RegulatoryRequirement"
+    },
+    {
+      "object": "orion:Stored",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:RetentionLimitationRestrictHowLongPersonalData"
+    }
+  ],
+  "type_assertions": []
+}

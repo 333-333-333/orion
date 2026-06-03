@@ -1,0 +1,795 @@
+{
+  "classes": [
+    {
+      "comments": [
+        "The attacker uses the compromised credential to access a cloud account."
+      ],
+      "iri": "orion:Attacker",
+      "label": "Attacker"
+    },
+    {
+      "iri": "orion:Availability",
+      "label": "Availability"
+    },
+    {
+      "iri": "orion:CompromisedCredential",
+      "label": "CompromisedCredential"
+    },
+    {
+      "iri": "orion:CompromisedCredentialToAccessACloudAccount",
+      "label": "CompromisedCredentialToAccessACloudAccount"
+    },
+    {
+      "iri": "orion:Control",
+      "label": "Control"
+    },
+    {
+      "comments": [
+        "Corrective actions may include patch deployment, privilege reduction, and improved detection rules."
+      ],
+      "iri": "orion:Corrective",
+      "label": "Corrective"
+    },
+    {
+      "comments": [
+        "The employee clicks the malicious link and submits a password."
+      ],
+      "iri": "orion:Employee",
+      "label": "Employee"
+    },
+    {
+      "comments": [
+        "The event affects availability and may affect integrity."
+      ],
+      "iri": "orion:Event",
+      "label": "Event"
+    },
+    {
+      "iri": "orion:FileOnAFileServer",
+      "label": "FileOnAFileServer"
+    },
+    {
+      "comments": [
+        "The file server becomes unavailable to business users."
+      ],
+      "iri": "orion:FileServer",
+      "label": "FileServer"
+    },
+    {
+      "iri": "orion:HowThreat",
+      "label": "HowThreat"
+    },
+    {
+      "iri": "orion:ImportanceOfBackups",
+      "label": "ImportanceOfBackups"
+    },
+    {
+      "iri": "orion:ImprovedDetectionRule",
+      "label": "ImprovedDetectionRule"
+    },
+    {
+      "iri": "orion:InsufficientMonitoring",
+      "label": "InsufficientMonitoring"
+    },
+    {
+      "comments": [
+        "Log monitoring may identify suspicious login activity."
+      ],
+      "iri": "orion:LogMonitoringMayIdentify",
+      "label": "LogMonitoringMayIdentify"
+    },
+    {
+      "iri": "orion:LoginActivity",
+      "label": "LoginActivity"
+    },
+    {
+      "iri": "orion:MaliciousLink",
+      "label": "MaliciousLink"
+    },
+    {
+      "comments": [
+        "Malware encrypts files on a file server."
+      ],
+      "iri": "orion:Malware",
+      "label": "Malware"
+    },
+    {
+      "iri": "orion:MayAffectIntegrity",
+      "label": "MayAffectIntegrity"
+    },
+    {
+      "iri": "orion:MayIncludePatchDeployment",
+      "label": "MayIncludePatchDeployment"
+    },
+    {
+      "iri": "orion:Monitoring",
+      "label": "Monitoring"
+    },
+    {
+      "comments": [
+        "The phishing email contains a malicious link."
+      ],
+      "iri": "orion:PhishingEmail",
+      "label": "PhishingEmail"
+    },
+    {
+      "iri": "orion:PhishingEmailToAnEmployee",
+      "label": "PhishingEmailToAnEmployee"
+    },
+    {
+      "comments": [
+        "A phishing scenario illustrates how threats, vulnerabilities, controls, and incidents relate to each other."
+      ],
+      "iri": "orion:PhishingScenario",
+      "label": "PhishingScenario"
+    },
+    {
+      "comments": [
+        "The post-incident review may identify missing patches, weak access controls, or insufficient monitoring."
+      ],
+      "iri": "orion:PostIncidentReviewMayIdentifyMissingPatchWeak",
+      "label": "PostIncidentReviewMayIdentifyMissingPatchWeak"
+    },
+    {
+      "iri": "orion:PrivilegeReduction",
+      "label": "PrivilegeReduction"
+    },
+    {
+      "comments": [
+        "A ransomware scenario illustrates the importance of backups, monitoring, and response."
+      ],
+      "iri": "orion:RansomwareScenario",
+      "label": "RansomwareScenario"
+    },
+    {
+      "iri": "orion:RelateToEachOther",
+      "label": "RelateToEachOther"
+    },
+    {
+      "iri": "orion:Response",
+      "label": "Response"
+    },
+    {
+      "comments": [
+        "Security awareness training may reduce the likelihood of clicking the malicious link."
+      ],
+      "iri": "orion:Security",
+      "label": "Security"
+    },
+    {
+      "comments": [
+        "The submitted password becomes a compromised credential."
+      ],
+      "iri": "orion:SubmittedPassword",
+      "label": "SubmittedPassword"
+    },
+    {
+      "comments": [
+        "A threat actor sends a phishing email to an employee."
+      ],
+      "iri": "orion:ThreatActor",
+      "label": "ThreatActor"
+    },
+    {
+      "iri": "orion:TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink",
+      "label": "TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink"
+    },
+    {
+      "iri": "orion:UnavailableToBusinessUser",
+      "label": "UnavailableToBusinessUser"
+    },
+    {
+      "iri": "orion:Vulnerability",
+      "label": "Vulnerability"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:PostIncidentReviewMayIdentifyMissingPatchWeak",
+      "predicate": "orion:access",
+      "range": "orion:Control"
+    },
+    {
+      "domain": "orion:PostIncidentReviewMayIdentifyMissingPatchWeak",
+      "predicate": "orion:access",
+      "range": "orion:InsufficientMonitoring"
+    },
+    {
+      "domain": "orion:Corrective",
+      "predicate": "orion:actions",
+      "range": "orion:ImprovedDetectionRule"
+    },
+    {
+      "domain": "orion:Corrective",
+      "predicate": "orion:actions",
+      "range": "orion:MayIncludePatchDeployment"
+    },
+    {
+      "domain": "orion:Corrective",
+      "predicate": "orion:actions",
+      "range": "orion:PrivilegeReduction"
+    },
+    {
+      "domain": "orion:Event",
+      "predicate": "orion:affects",
+      "range": "orion:Availability"
+    },
+    {
+      "domain": "orion:Event",
+      "predicate": "orion:affects",
+      "range": "orion:MayAffectIntegrity"
+    },
+    {
+      "domain": "orion:Security",
+      "predicate": "orion:awareness",
+      "range": "orion:TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink"
+    },
+    {
+      "domain": "orion:FileServer",
+      "predicate": "orion:becomes",
+      "range": "orion:UnavailableToBusinessUser"
+    },
+    {
+      "domain": "orion:SubmittedPassword",
+      "predicate": "orion:becomes",
+      "range": "orion:CompromisedCredential"
+    },
+    {
+      "domain": "orion:Employee",
+      "predicate": "orion:clicks",
+      "range": "orion:MaliciousLink"
+    },
+    {
+      "domain": "orion:PhishingEmail",
+      "predicate": "orion:contains",
+      "range": "orion:MaliciousLink"
+    },
+    {
+      "domain": "orion:Malware",
+      "predicate": "orion:encrypts",
+      "range": "orion:FileOnAFileServer"
+    },
+    {
+      "domain": "orion:PhishingScenario",
+      "predicate": "orion:illustrates",
+      "range": "orion:Control"
+    },
+    {
+      "domain": "orion:PhishingScenario",
+      "predicate": "orion:illustrates",
+      "range": "orion:HowThreat"
+    },
+    {
+      "domain": "orion:PhishingScenario",
+      "predicate": "orion:illustrates",
+      "range": "orion:Vulnerability"
+    },
+    {
+      "domain": "orion:RansomwareScenario",
+      "predicate": "orion:illustrates",
+      "range": "orion:ImportanceOfBackups"
+    },
+    {
+      "domain": "orion:RansomwareScenario",
+      "predicate": "orion:illustrates",
+      "range": "orion:Monitoring"
+    },
+    {
+      "domain": "orion:RansomwareScenario",
+      "predicate": "orion:illustrates",
+      "range": "orion:Response"
+    },
+    {
+      "domain": "orion:PhishingScenario",
+      "predicate": "orion:incidents",
+      "range": "orion:RelateToEachOther"
+    },
+    {
+      "domain": "orion:ThreatActor",
+      "predicate": "orion:sends",
+      "range": "orion:PhishingEmailToAnEmployee"
+    },
+    {
+      "domain": "orion:Employee",
+      "predicate": "orion:submits",
+      "range": "orion:SubmittedPassword"
+    },
+    {
+      "domain": "orion:LogMonitoringMayIdentify",
+      "predicate": "orion:suspicious",
+      "range": "orion:LoginActivity"
+    },
+    {
+      "domain": "orion:Attacker",
+      "predicate": "orion:uses",
+      "range": "orion:CompromisedCredentialToAccessACloudAccount"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-c9df5d66d29888ae",
+      "claim-3480f700101bd2c9",
+      "claim-856bd3a832a7c453",
+      "claim-018a0387d6ca79f8",
+      "claim-1925fbb162128746",
+      "claim-c37128f9f7b4a366",
+      "claim-501cce3b6cc96079",
+      "claim-dd79099f06a926f7",
+      "claim-afee236cf5ac17a5",
+      "claim-b5281f2b888fbc37",
+      "claim-0f2cdddd38c4559a",
+      "claim-f0a3f79eae57efc3",
+      "claim-03bcd431146fe3ce",
+      "claim-d94a018a040fbe70",
+      "claim-b78437f8e1428eba",
+      "claim-8b8bb977dd97b3fb",
+      "claim-81c05c675d8c2db3",
+      "claim-b3cfb2ceb2d0719a",
+      "claim-65add0a1426a3711",
+      "claim-50a76b959f4ba0cf",
+      "claim-1611034070ba4fc3",
+      "claim-a79b335483c13241",
+      "claim-92e567c425aadc2a",
+      "claim-0665599c1eccf8cd"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:PostIncidentReviewMayIdentifyMissingPatchWeak",
+      "property": "orion:access",
+      "range": "orion:Control"
+    },
+    {
+      "domain": "orion:PostIncidentReviewMayIdentifyMissingPatchWeak",
+      "property": "orion:access",
+      "range": "orion:InsufficientMonitoring"
+    },
+    {
+      "domain": "orion:Corrective",
+      "property": "orion:actions",
+      "range": "orion:ImprovedDetectionRule"
+    },
+    {
+      "domain": "orion:Corrective",
+      "property": "orion:actions",
+      "range": "orion:MayIncludePatchDeployment"
+    },
+    {
+      "domain": "orion:Corrective",
+      "property": "orion:actions",
+      "range": "orion:PrivilegeReduction"
+    },
+    {
+      "domain": "orion:Event",
+      "property": "orion:affects",
+      "range": "orion:Availability"
+    },
+    {
+      "domain": "orion:Event",
+      "property": "orion:affects",
+      "range": "orion:MayAffectIntegrity"
+    },
+    {
+      "domain": "orion:Security",
+      "property": "orion:awareness",
+      "range": "orion:TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink"
+    },
+    {
+      "domain": "orion:FileServer",
+      "property": "orion:becomes",
+      "range": "orion:UnavailableToBusinessUser"
+    },
+    {
+      "domain": "orion:SubmittedPassword",
+      "property": "orion:becomes",
+      "range": "orion:CompromisedCredential"
+    },
+    {
+      "domain": "orion:Employee",
+      "property": "orion:clicks",
+      "range": "orion:MaliciousLink"
+    },
+    {
+      "domain": "orion:PhishingEmail",
+      "property": "orion:contains",
+      "range": "orion:MaliciousLink"
+    },
+    {
+      "domain": "orion:Malware",
+      "property": "orion:encrypts",
+      "range": "orion:FileOnAFileServer"
+    },
+    {
+      "domain": "orion:PhishingScenario",
+      "property": "orion:illustrates",
+      "range": "orion:Control"
+    },
+    {
+      "domain": "orion:PhishingScenario",
+      "property": "orion:illustrates",
+      "range": "orion:HowThreat"
+    },
+    {
+      "domain": "orion:PhishingScenario",
+      "property": "orion:illustrates",
+      "range": "orion:Vulnerability"
+    },
+    {
+      "domain": "orion:RansomwareScenario",
+      "property": "orion:illustrates",
+      "range": "orion:ImportanceOfBackups"
+    },
+    {
+      "domain": "orion:RansomwareScenario",
+      "property": "orion:illustrates",
+      "range": "orion:Monitoring"
+    },
+    {
+      "domain": "orion:RansomwareScenario",
+      "property": "orion:illustrates",
+      "range": "orion:Response"
+    },
+    {
+      "domain": "orion:PhishingScenario",
+      "property": "orion:incidents",
+      "range": "orion:RelateToEachOther"
+    },
+    {
+      "domain": "orion:ThreatActor",
+      "property": "orion:sends",
+      "range": "orion:PhishingEmailToAnEmployee"
+    },
+    {
+      "domain": "orion:Employee",
+      "property": "orion:submits",
+      "range": "orion:SubmittedPassword"
+    },
+    {
+      "domain": "orion:LogMonitoringMayIdentify",
+      "property": "orion:suspicious",
+      "range": "orion:LoginActivity"
+    },
+    {
+      "domain": "orion:Attacker",
+      "property": "orion:uses",
+      "range": "orion:CompromisedCredentialToAccessACloudAccount"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "comments": [
+          "The attacker uses the compromised credential to access a cloud account."
+        ],
+        "iri": "orion:Attacker",
+        "label": "Attacker"
+      },
+      {
+        "iri": "orion:Availability",
+        "label": "Availability"
+      },
+      {
+        "iri": "orion:CompromisedCredential",
+        "label": "CompromisedCredential"
+      },
+      {
+        "iri": "orion:CompromisedCredentialToAccessACloudAccount",
+        "label": "CompromisedCredentialToAccessACloudAccount"
+      },
+      {
+        "iri": "orion:Control",
+        "label": "Control"
+      },
+      {
+        "comments": [
+          "Corrective actions may include patch deployment, privilege reduction, and improved detection rules."
+        ],
+        "iri": "orion:Corrective",
+        "label": "Corrective"
+      },
+      {
+        "comments": [
+          "The employee clicks the malicious link and submits a password."
+        ],
+        "iri": "orion:Employee",
+        "label": "Employee"
+      },
+      {
+        "comments": [
+          "The event affects availability and may affect integrity."
+        ],
+        "iri": "orion:Event",
+        "label": "Event"
+      },
+      {
+        "iri": "orion:FileOnAFileServer",
+        "label": "FileOnAFileServer"
+      },
+      {
+        "comments": [
+          "The file server becomes unavailable to business users."
+        ],
+        "iri": "orion:FileServer",
+        "label": "FileServer"
+      },
+      {
+        "iri": "orion:HowThreat",
+        "label": "HowThreat"
+      },
+      {
+        "iri": "orion:ImportanceOfBackups",
+        "label": "ImportanceOfBackups"
+      },
+      {
+        "iri": "orion:ImprovedDetectionRule",
+        "label": "ImprovedDetectionRule"
+      },
+      {
+        "iri": "orion:InsufficientMonitoring",
+        "label": "InsufficientMonitoring"
+      },
+      {
+        "comments": [
+          "Log monitoring may identify suspicious login activity."
+        ],
+        "iri": "orion:LogMonitoringMayIdentify",
+        "label": "LogMonitoringMayIdentify"
+      },
+      {
+        "iri": "orion:LoginActivity",
+        "label": "LoginActivity"
+      },
+      {
+        "iri": "orion:MaliciousLink",
+        "label": "MaliciousLink"
+      },
+      {
+        "comments": [
+          "Malware encrypts files on a file server."
+        ],
+        "iri": "orion:Malware",
+        "label": "Malware"
+      },
+      {
+        "iri": "orion:MayAffectIntegrity",
+        "label": "MayAffectIntegrity"
+      },
+      {
+        "iri": "orion:MayIncludePatchDeployment",
+        "label": "MayIncludePatchDeployment"
+      },
+      {
+        "iri": "orion:Monitoring",
+        "label": "Monitoring"
+      },
+      {
+        "comments": [
+          "The phishing email contains a malicious link."
+        ],
+        "iri": "orion:PhishingEmail",
+        "label": "PhishingEmail"
+      },
+      {
+        "iri": "orion:PhishingEmailToAnEmployee",
+        "label": "PhishingEmailToAnEmployee"
+      },
+      {
+        "comments": [
+          "A phishing scenario illustrates how threats, vulnerabilities, controls, and incidents relate to each other."
+        ],
+        "iri": "orion:PhishingScenario",
+        "label": "PhishingScenario"
+      },
+      {
+        "comments": [
+          "The post-incident review may identify missing patches, weak access controls, or insufficient monitoring."
+        ],
+        "iri": "orion:PostIncidentReviewMayIdentifyMissingPatchWeak",
+        "label": "PostIncidentReviewMayIdentifyMissingPatchWeak"
+      },
+      {
+        "iri": "orion:PrivilegeReduction",
+        "label": "PrivilegeReduction"
+      },
+      {
+        "comments": [
+          "A ransomware scenario illustrates the importance of backups, monitoring, and response."
+        ],
+        "iri": "orion:RansomwareScenario",
+        "label": "RansomwareScenario"
+      },
+      {
+        "iri": "orion:RelateToEachOther",
+        "label": "RelateToEachOther"
+      },
+      {
+        "iri": "orion:Response",
+        "label": "Response"
+      },
+      {
+        "comments": [
+          "Security awareness training may reduce the likelihood of clicking the malicious link."
+        ],
+        "iri": "orion:Security",
+        "label": "Security"
+      },
+      {
+        "comments": [
+          "The submitted password becomes a compromised credential."
+        ],
+        "iri": "orion:SubmittedPassword",
+        "label": "SubmittedPassword"
+      },
+      {
+        "comments": [
+          "A threat actor sends a phishing email to an employee."
+        ],
+        "iri": "orion:ThreatActor",
+        "label": "ThreatActor"
+      },
+      {
+        "iri": "orion:TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink",
+        "label": "TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink"
+      },
+      {
+        "iri": "orion:UnavailableToBusinessUser",
+        "label": "UnavailableToBusinessUser"
+      },
+      {
+        "iri": "orion:Vulnerability",
+        "label": "Vulnerability"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:PostIncidentReviewMayIdentifyMissingPatchWeak",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:Control"
+      },
+      {
+        "domain": "orion:PostIncidentReviewMayIdentifyMissingPatchWeak",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:InsufficientMonitoring"
+      },
+      {
+        "domain": "orion:Corrective",
+        "iri": "orion:actions",
+        "label": "Actions",
+        "range": "orion:ImprovedDetectionRule"
+      },
+      {
+        "domain": "orion:Corrective",
+        "iri": "orion:actions",
+        "label": "Actions",
+        "range": "orion:MayIncludePatchDeployment"
+      },
+      {
+        "domain": "orion:Corrective",
+        "iri": "orion:actions",
+        "label": "Actions",
+        "range": "orion:PrivilegeReduction"
+      },
+      {
+        "domain": "orion:Event",
+        "iri": "orion:affects",
+        "label": "Affects",
+        "range": "orion:Availability"
+      },
+      {
+        "domain": "orion:Event",
+        "iri": "orion:affects",
+        "label": "Affects",
+        "range": "orion:MayAffectIntegrity"
+      },
+      {
+        "domain": "orion:Security",
+        "iri": "orion:awareness",
+        "label": "Awareness",
+        "range": "orion:TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink"
+      },
+      {
+        "domain": "orion:FileServer",
+        "iri": "orion:becomes",
+        "label": "Becomes",
+        "range": "orion:UnavailableToBusinessUser"
+      },
+      {
+        "domain": "orion:SubmittedPassword",
+        "iri": "orion:becomes",
+        "label": "Becomes",
+        "range": "orion:CompromisedCredential"
+      },
+      {
+        "domain": "orion:Employee",
+        "iri": "orion:clicks",
+        "label": "Clicks",
+        "range": "orion:MaliciousLink"
+      },
+      {
+        "domain": "orion:PhishingEmail",
+        "iri": "orion:contains",
+        "label": "Contains",
+        "range": "orion:MaliciousLink"
+      },
+      {
+        "domain": "orion:Malware",
+        "iri": "orion:encrypts",
+        "label": "Encrypts",
+        "range": "orion:FileOnAFileServer"
+      },
+      {
+        "domain": "orion:PhishingScenario",
+        "iri": "orion:illustrates",
+        "label": "Illustrates",
+        "range": "orion:Control"
+      },
+      {
+        "domain": "orion:PhishingScenario",
+        "iri": "orion:illustrates",
+        "label": "Illustrates",
+        "range": "orion:HowThreat"
+      },
+      {
+        "domain": "orion:PhishingScenario",
+        "iri": "orion:illustrates",
+        "label": "Illustrates",
+        "range": "orion:Vulnerability"
+      },
+      {
+        "domain": "orion:RansomwareScenario",
+        "iri": "orion:illustrates",
+        "label": "Illustrates",
+        "range": "orion:ImportanceOfBackups"
+      },
+      {
+        "domain": "orion:RansomwareScenario",
+        "iri": "orion:illustrates",
+        "label": "Illustrates",
+        "range": "orion:Monitoring"
+      },
+      {
+        "domain": "orion:RansomwareScenario",
+        "iri": "orion:illustrates",
+        "label": "Illustrates",
+        "range": "orion:Response"
+      },
+      {
+        "domain": "orion:PhishingScenario",
+        "iri": "orion:incidents",
+        "label": "Incidents",
+        "range": "orion:RelateToEachOther"
+      },
+      {
+        "domain": "orion:ThreatActor",
+        "iri": "orion:sends",
+        "label": "Sends",
+        "range": "orion:PhishingEmailToAnEmployee"
+      },
+      {
+        "domain": "orion:Employee",
+        "iri": "orion:submits",
+        "label": "Submits",
+        "range": "orion:SubmittedPassword"
+      },
+      {
+        "domain": "orion:LogMonitoringMayIdentify",
+        "iri": "orion:suspicious",
+        "label": "Suspicious",
+        "range": "orion:LoginActivity"
+      },
+      {
+        "domain": "orion:Attacker",
+        "iri": "orion:uses",
+        "label": "Uses",
+        "range": "orion:CompromisedCredentialToAccessACloudAccount"
+      }
+    ]
+  },
+  "subclass_facts": [],
+  "type_assertions": []
+}

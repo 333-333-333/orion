@@ -1,0 +1,420 @@
+{
+  "classes": [
+    {
+      "comments": [
+        "An access token is a type of temporary credential."
+      ],
+      "iri": "orion:AccessToken",
+      "label": "AccessToken"
+    },
+    {
+      "comments": [
+        "An API key is a type of credential used by applications to authenticate requests."
+      ],
+      "iri": "orion:ApiKey",
+      "label": "ApiKey"
+    },
+    {
+      "iri": "orion:AuthenticationFactorBasedOnSomethingTheUserHas",
+      "label": "AuthenticationFactorBasedOnSomethingTheUserHas"
+    },
+    {
+      "iri": "orion:AuthenticationFactorBasedOnSomethingTheUserIs",
+      "label": "AuthenticationFactorBasedOnSomethingTheUserIs"
+    },
+    {
+      "iri": "orion:AuthenticationFactorBasedOnSomethingTheUserKnow",
+      "label": "AuthenticationFactorBasedOnSomethingTheUserKnow"
+    },
+    {
+      "iri": "orion:AuthenticationStrength",
+      "label": "AuthenticationStrength"
+    },
+    {
+      "comments": [
+        "A certificate is a type of cryptographic credential."
+      ],
+      "iri": "orion:Certificate",
+      "label": "Certificate"
+    },
+    {
+      "comments": [
+        "A credential is evidence used to prove an identity."
+      ],
+      "iri": "orion:Credential",
+      "label": "Credential"
+    },
+    {
+      "iri": "orion:CryptographicCredential",
+      "label": "CryptographicCredential"
+    },
+    {
+      "iri": "orion:CryptographicSecret",
+      "label": "CryptographicSecret"
+    },
+    {
+      "iri": "orion:Evidence",
+      "label": "Evidence"
+    },
+    {
+      "comments": [
+        "A fingerprint is an inherence factor."
+      ],
+      "iri": "orion:Fingerprint",
+      "label": "Fingerprint"
+    },
+    {
+      "comments": [
+        "A hardware token is a possession factor."
+      ],
+      "iri": "orion:HardwareToken",
+      "label": "HardwareToken"
+    },
+    {
+      "comments": [
+        "An inherence factor is a type of authentication factor based on something the user is."
+      ],
+      "iri": "orion:InherenceFactor",
+      "label": "InherenceFactor"
+    },
+    {
+      "comments": [
+        "A knowledge factor is a type of authentication factor based on something the user knows."
+      ],
+      "iri": "orion:KnowledgeFactor",
+      "label": "KnowledgeFactor"
+    },
+    {
+      "comments": [
+        "A mobile authenticator application is a possession factor."
+      ],
+      "iri": "orion:MobileAuthenticatorApplication",
+      "label": "MobileAuthenticatorApplication"
+    },
+    {
+      "comments": [
+        "Multi-factor authentication improves authentication strength by requiring more than one verification factor.",
+        "Multi-factor authentication reduces the risk of unauthorized access caused by stolen passwords."
+      ],
+      "iri": "orion:MultiFactorAuthentication",
+      "label": "MultiFactorAuthentication"
+    },
+    {
+      "comments": [
+        "A password is a type of credential.",
+        "A password is a knowledge factor."
+      ],
+      "iri": "orion:Password",
+      "label": "Password"
+    },
+    {
+      "comments": [
+        "A possession factor is a type of authentication factor based on something the user has."
+      ],
+      "iri": "orion:PossessionFactor",
+      "label": "PossessionFactor"
+    },
+    {
+      "comments": [
+        "A private key is a type of cryptographic secret."
+      ],
+      "iri": "orion:PrivateKey",
+      "label": "PrivateKey"
+    },
+    {
+      "iri": "orion:RiskOfUnauthorizedAccessCausedByStolenPassword",
+      "label": "RiskOfUnauthorizedAccessCausedByStolenPassword"
+    },
+    {
+      "iri": "orion:TemporaryCredential",
+      "label": "TemporaryCredential"
+    },
+    {
+      "iri": "orion:ThanOneVerificationFactor",
+      "label": "ThanOneVerificationFactor"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:MultiFactorAuthentication",
+      "predicate": "orion:improves",
+      "range": "orion:AuthenticationStrength"
+    },
+    {
+      "domain": "orion:MultiFactorAuthentication",
+      "predicate": "orion:reduces",
+      "range": "orion:RiskOfUnauthorizedAccessCausedByStolenPassword"
+    },
+    {
+      "domain": "orion:MultiFactorAuthentication",
+      "predicate": "orion:requirs",
+      "range": "orion:ThanOneVerificationFactor"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-2b02b9218e04c61c",
+      "claim-24fdd9d31c5ae7e5",
+      "claim-c035c013b5f8f6dd",
+      "claim-2ae1b9c7e02aa5ac",
+      "claim-bba54b46c98ceccf",
+      "claim-5fc5bb760e8d3f3a",
+      "claim-001fd7bd08810d4a",
+      "claim-418828796f34e961",
+      "claim-cfe9af5f686a88a6",
+      "claim-ef4aa916330e6cca",
+      "claim-882d012d9cc83090",
+      "claim-cadad074405cd160",
+      "claim-86460cae3e7a9b8b",
+      "claim-7a4aa5f1422f2f6a",
+      "claim-c3813819468134c5",
+      "claim-6313b64a46f56f59",
+      "claim-283f111a1710fd29"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:MultiFactorAuthentication",
+      "property": "orion:improves",
+      "range": "orion:AuthenticationStrength"
+    },
+    {
+      "domain": "orion:MultiFactorAuthentication",
+      "property": "orion:reduces",
+      "range": "orion:RiskOfUnauthorizedAccessCausedByStolenPassword"
+    },
+    {
+      "domain": "orion:MultiFactorAuthentication",
+      "property": "orion:requirs",
+      "range": "orion:ThanOneVerificationFactor"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "comments": [
+          "An access token is a type of temporary credential."
+        ],
+        "iri": "orion:AccessToken",
+        "label": "AccessToken"
+      },
+      {
+        "comments": [
+          "An API key is a type of credential used by applications to authenticate requests."
+        ],
+        "iri": "orion:ApiKey",
+        "label": "ApiKey"
+      },
+      {
+        "iri": "orion:AuthenticationFactorBasedOnSomethingTheUserHas",
+        "label": "AuthenticationFactorBasedOnSomethingTheUserHas"
+      },
+      {
+        "iri": "orion:AuthenticationFactorBasedOnSomethingTheUserIs",
+        "label": "AuthenticationFactorBasedOnSomethingTheUserIs"
+      },
+      {
+        "iri": "orion:AuthenticationFactorBasedOnSomethingTheUserKnow",
+        "label": "AuthenticationFactorBasedOnSomethingTheUserKnow"
+      },
+      {
+        "iri": "orion:AuthenticationStrength",
+        "label": "AuthenticationStrength"
+      },
+      {
+        "comments": [
+          "A certificate is a type of cryptographic credential."
+        ],
+        "iri": "orion:Certificate",
+        "label": "Certificate"
+      },
+      {
+        "comments": [
+          "A credential is evidence used to prove an identity."
+        ],
+        "iri": "orion:Credential",
+        "label": "Credential"
+      },
+      {
+        "iri": "orion:CryptographicCredential",
+        "label": "CryptographicCredential"
+      },
+      {
+        "iri": "orion:CryptographicSecret",
+        "label": "CryptographicSecret"
+      },
+      {
+        "iri": "orion:Evidence",
+        "label": "Evidence"
+      },
+      {
+        "comments": [
+          "A fingerprint is an inherence factor."
+        ],
+        "iri": "orion:Fingerprint",
+        "label": "Fingerprint"
+      },
+      {
+        "comments": [
+          "A hardware token is a possession factor."
+        ],
+        "iri": "orion:HardwareToken",
+        "label": "HardwareToken"
+      },
+      {
+        "comments": [
+          "An inherence factor is a type of authentication factor based on something the user is."
+        ],
+        "iri": "orion:InherenceFactor",
+        "label": "InherenceFactor"
+      },
+      {
+        "comments": [
+          "A knowledge factor is a type of authentication factor based on something the user knows."
+        ],
+        "iri": "orion:KnowledgeFactor",
+        "label": "KnowledgeFactor"
+      },
+      {
+        "comments": [
+          "A mobile authenticator application is a possession factor."
+        ],
+        "iri": "orion:MobileAuthenticatorApplication",
+        "label": "MobileAuthenticatorApplication"
+      },
+      {
+        "comments": [
+          "Multi-factor authentication improves authentication strength by requiring more than one verification factor.",
+          "Multi-factor authentication reduces the risk of unauthorized access caused by stolen passwords."
+        ],
+        "iri": "orion:MultiFactorAuthentication",
+        "label": "MultiFactorAuthentication"
+      },
+      {
+        "comments": [
+          "A password is a type of credential.",
+          "A password is a knowledge factor."
+        ],
+        "iri": "orion:Password",
+        "label": "Password"
+      },
+      {
+        "comments": [
+          "A possession factor is a type of authentication factor based on something the user has."
+        ],
+        "iri": "orion:PossessionFactor",
+        "label": "PossessionFactor"
+      },
+      {
+        "comments": [
+          "A private key is a type of cryptographic secret."
+        ],
+        "iri": "orion:PrivateKey",
+        "label": "PrivateKey"
+      },
+      {
+        "iri": "orion:RiskOfUnauthorizedAccessCausedByStolenPassword",
+        "label": "RiskOfUnauthorizedAccessCausedByStolenPassword"
+      },
+      {
+        "iri": "orion:TemporaryCredential",
+        "label": "TemporaryCredential"
+      },
+      {
+        "iri": "orion:ThanOneVerificationFactor",
+        "label": "ThanOneVerificationFactor"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:MultiFactorAuthentication",
+        "iri": "orion:improves",
+        "label": "Improves",
+        "range": "orion:AuthenticationStrength"
+      },
+      {
+        "domain": "orion:MultiFactorAuthentication",
+        "iri": "orion:reduces",
+        "label": "Reduces",
+        "range": "orion:RiskOfUnauthorizedAccessCausedByStolenPassword"
+      },
+      {
+        "domain": "orion:MultiFactorAuthentication",
+        "iri": "orion:requirs",
+        "label": "Requirs",
+        "range": "orion:ThanOneVerificationFactor"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:TemporaryCredential",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:AccessToken"
+    },
+    {
+      "object": "orion:Credential",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ApiKey"
+    },
+    {
+      "object": "orion:CryptographicCredential",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Certificate"
+    },
+    {
+      "object": "orion:Evidence",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Credential"
+    },
+    {
+      "object": "orion:InherenceFactor",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Fingerprint"
+    },
+    {
+      "object": "orion:PossessionFactor",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:HardwareToken"
+    },
+    {
+      "object": "orion:AuthenticationFactorBasedOnSomethingTheUserIs",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:InherenceFactor"
+    },
+    {
+      "object": "orion:AuthenticationFactorBasedOnSomethingTheUserKnow",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:KnowledgeFactor"
+    },
+    {
+      "object": "orion:PossessionFactor",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:MobileAuthenticatorApplication"
+    },
+    {
+      "object": "orion:Credential",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Password"
+    },
+    {
+      "object": "orion:KnowledgeFactor",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Password"
+    },
+    {
+      "object": "orion:AuthenticationFactorBasedOnSomethingTheUserHas",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:PossessionFactor"
+    },
+    {
+      "object": "orion:CryptographicSecret",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:PrivateKey"
+    }
+  ],
+  "type_assertions": []
+}

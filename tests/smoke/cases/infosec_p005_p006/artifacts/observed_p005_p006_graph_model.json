@@ -1,0 +1,771 @@
+{
+  "classes": [
+    {
+      "comments": [
+        "Access control is a preventive control."
+      ],
+      "iri": "orion:AccessControl",
+      "label": "AccessControl"
+    },
+    {
+      "iri": "orion:AffectAnAsset",
+      "label": "AffectAnAsset"
+    },
+    {
+      "iri": "orion:AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented",
+      "label": "AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented"
+    },
+    {
+      "comments": [
+        "Backup restoration is a corrective control."
+      ],
+      "iri": "orion:BackupRestoration",
+      "label": "BackupRestoration"
+    },
+    {
+      "iri": "orion:BeExploitedByAThreat",
+      "label": "BeExploitedByAThreat"
+    },
+    {
+      "iri": "orion:CausHarmToAnAsset",
+      "label": "CausHarmToAnAsset"
+    },
+    {
+      "comments": [
+        "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented."
+      ],
+      "iri": "orion:CompensatingControl",
+      "label": "CompensatingControl"
+    },
+    {
+      "iri": "orion:CompensatingControlWhenAutomatedEnforcementIsNotAvailable",
+      "label": "CompensatingControlWhenAutomatedEnforcementIsNotAvailable"
+    },
+    {
+      "iri": "orion:CompensatingForSecurityWeakness",
+      "label": "CompensatingForSecurityWeakness"
+    },
+    {
+      "iri": "orion:ConsequenceProducedByASecurityEventOrIncident",
+      "label": "ConsequenceProducedByASecurityEventOrIncident"
+    },
+    {
+      "comments": [
+        "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses."
+      ],
+      "iri": "orion:Control",
+      "label": "Control"
+    },
+    {
+      "iri": "orion:CoreProcessInInformationSecurity",
+      "label": "CoreProcessInInformationSecurity"
+    },
+    {
+      "iri": "orion:Correcting",
+      "label": "Correcting"
+    },
+    {
+      "comments": [
+        "A corrective control is a type of security control that restores normal operations after an incident."
+      ],
+      "iri": "orion:CorrectiveControl",
+      "label": "CorrectiveControl"
+    },
+    {
+      "iri": "orion:Detecting",
+      "label": "Detecting"
+    },
+    {
+      "comments": [
+        "A detective control is a type of security control that identifies suspicious activity or policy violations."
+      ],
+      "iri": "orion:DetectiveControl",
+      "label": "DetectiveControl"
+    },
+    {
+      "iri": "orion:HowAThreatMayExploitAVulnerability",
+      "label": "HowAThreatMayExploitAVulnerability"
+    },
+    {
+      "comments": [
+        "An impact is the consequence produced by a security event or incident."
+      ],
+      "iri": "orion:Impact",
+      "label": "Impact"
+    },
+    {
+      "comments": [
+        "A likelihood is the probability that a risk scenario occurs."
+      ],
+      "iri": "orion:Likelihood",
+      "label": "Likelihood"
+    },
+    {
+      "comments": [
+        "Logging is a detective control."
+      ],
+      "iri": "orion:Logging",
+      "label": "Logging"
+    },
+    {
+      "comments": [
+        "Manual approval is a compensating control when automated enforcement is not available."
+      ],
+      "iri": "orion:ManualApproval",
+      "label": "ManualApproval"
+    },
+    {
+      "iri": "orion:NormalOperationAfterAnIncident",
+      "label": "NormalOperationAfterAnIncident"
+    },
+    {
+      "iri": "orion:PolicyViolation",
+      "label": "PolicyViolation"
+    },
+    {
+      "iri": "orion:Possibility",
+      "label": "Possibility"
+    },
+    {
+      "iri": "orion:PotentialCauseOfAnUnwantedIncident",
+      "label": "PotentialCauseOfAnUnwantedIncident"
+    },
+    {
+      "comments": [
+        "A preventive control is a type of security control that reduces the probability of an incident."
+      ],
+      "iri": "orion:PreventiveControl",
+      "label": "PreventiveControl"
+    },
+    {
+      "iri": "orion:Probability",
+      "label": "Probability"
+    },
+    {
+      "iri": "orion:ProbabilityOfAnIncident",
+      "label": "ProbabilityOfAnIncident"
+    },
+    {
+      "comments": [
+        "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset."
+      ],
+      "iri": "orion:Risk",
+      "label": "Risk"
+    },
+    {
+      "iri": "orion:RiskByPreventing",
+      "label": "RiskByPreventing"
+    },
+    {
+      "comments": [
+        "Risk management is a core process in information security."
+      ],
+      "iri": "orion:RiskManagement",
+      "label": "RiskManagement"
+    },
+    {
+      "comments": [
+        "A risk scenario describes how a threat may exploit a vulnerability and affect an asset."
+      ],
+      "iri": "orion:RiskScenario",
+      "label": "RiskScenario"
+    },
+    {
+      "iri": "orion:RiskScenarioOccur",
+      "label": "RiskScenarioOccur"
+    },
+    {
+      "iri": "orion:SecurityControl",
+      "label": "SecurityControl"
+    },
+    {
+      "iri": "orion:SuspiciousActivity",
+      "label": "SuspiciousActivity"
+    },
+    {
+      "comments": [
+        "A threat is a potential cause of an unwanted incident."
+      ],
+      "iri": "orion:Threat",
+      "label": "Threat"
+    },
+    {
+      "iri": "orion:ThreatExploitAVulnerability",
+      "label": "ThreatExploitAVulnerability"
+    },
+    {
+      "comments": [
+        "A vulnerability is a weakness that can be exploited by a threat."
+      ],
+      "iri": "orion:Vulnerability",
+      "label": "Vulnerability"
+    },
+    {
+      "iri": "orion:Weakness",
+      "label": "Weakness"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:Likelihood",
+      "predicate": "orion:as",
+      "range": "orion:RiskScenarioOccur"
+    },
+    {
+      "domain": "orion:Risk",
+      "predicate": "orion:as",
+      "range": "orion:CausHarmToAnAsset"
+    },
+    {
+      "domain": "orion:Risk",
+      "predicate": "orion:as",
+      "range": "orion:ThreatExploitAVulnerability"
+    },
+    {
+      "domain": "orion:Vulnerability",
+      "predicate": "orion:cans",
+      "range": "orion:BeExploitedByAThreat"
+    },
+    {
+      "domain": "orion:RiskScenario",
+      "predicate": "orion:describes",
+      "range": "orion:AffectAnAsset"
+    },
+    {
+      "domain": "orion:RiskScenario",
+      "predicate": "orion:describes",
+      "range": "orion:HowAThreatMayExploitAVulnerability"
+    },
+    {
+      "domain": "orion:DetectiveControl",
+      "predicate": "orion:identifies",
+      "range": "orion:PolicyViolation"
+    },
+    {
+      "domain": "orion:DetectiveControl",
+      "predicate": "orion:identifies",
+      "range": "orion:SuspiciousActivity"
+    },
+    {
+      "domain": "orion:CompensatingControl",
+      "predicate": "orion:provides",
+      "range": "orion:AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented"
+    },
+    {
+      "domain": "orion:Control",
+      "predicate": "orion:reduces",
+      "range": "orion:CompensatingForSecurityWeakness"
+    },
+    {
+      "domain": "orion:Control",
+      "predicate": "orion:reduces",
+      "range": "orion:Correcting"
+    },
+    {
+      "domain": "orion:Control",
+      "predicate": "orion:reduces",
+      "range": "orion:Detecting"
+    },
+    {
+      "domain": "orion:Control",
+      "predicate": "orion:reduces",
+      "range": "orion:RiskByPreventing"
+    },
+    {
+      "domain": "orion:PreventiveControl",
+      "predicate": "orion:reduces",
+      "range": "orion:ProbabilityOfAnIncident"
+    },
+    {
+      "domain": "orion:CorrectiveControl",
+      "predicate": "orion:restores",
+      "range": "orion:NormalOperationAfterAnIncident"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-487593029810df2f",
+      "claim-06d4b07379c11644",
+      "claim-a9235b3b235757a1",
+      "claim-9e5a9adca8c7bacd",
+      "claim-692d702ae9792f9b",
+      "claim-c48128dfbca15a45",
+      "claim-6535ec7613bf8d95",
+      "claim-9829705889709feb",
+      "claim-a6cefc29dbe9302e",
+      "claim-ea1f5c87bcd51088",
+      "claim-3a92d71a09c0c6f4",
+      "claim-4f603c85879d0d4f",
+      "claim-357d4335d8aa5bc5",
+      "claim-c6c9def3e524f212",
+      "claim-c6871c75cddc54c3",
+      "claim-e38ad29c2683f08c",
+      "claim-3fa98ee2c2dc802f",
+      "claim-01b615a0cec123da",
+      "claim-a3458602d7e6b59c",
+      "claim-60815382c3223a77",
+      "claim-341a27875444db30",
+      "claim-b9a9f0ddfe347171",
+      "claim-94b1bc038dfcc1d8",
+      "claim-14c84c12d21d85c0",
+      "claim-b7cb5e0181b35692",
+      "claim-1dc869d9f8faa4f1",
+      "claim-992d5a749a008f93",
+      "claim-339709132c3cecbb",
+      "claim-2f9ae24c283e9fb9"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:Likelihood",
+      "property": "orion:as",
+      "range": "orion:RiskScenarioOccur"
+    },
+    {
+      "domain": "orion:Risk",
+      "property": "orion:as",
+      "range": "orion:CausHarmToAnAsset"
+    },
+    {
+      "domain": "orion:Risk",
+      "property": "orion:as",
+      "range": "orion:ThreatExploitAVulnerability"
+    },
+    {
+      "domain": "orion:Vulnerability",
+      "property": "orion:cans",
+      "range": "orion:BeExploitedByAThreat"
+    },
+    {
+      "domain": "orion:RiskScenario",
+      "property": "orion:describes",
+      "range": "orion:AffectAnAsset"
+    },
+    {
+      "domain": "orion:RiskScenario",
+      "property": "orion:describes",
+      "range": "orion:HowAThreatMayExploitAVulnerability"
+    },
+    {
+      "domain": "orion:DetectiveControl",
+      "property": "orion:identifies",
+      "range": "orion:PolicyViolation"
+    },
+    {
+      "domain": "orion:DetectiveControl",
+      "property": "orion:identifies",
+      "range": "orion:SuspiciousActivity"
+    },
+    {
+      "domain": "orion:CompensatingControl",
+      "property": "orion:provides",
+      "range": "orion:AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented"
+    },
+    {
+      "domain": "orion:Control",
+      "property": "orion:reduces",
+      "range": "orion:CompensatingForSecurityWeakness"
+    },
+    {
+      "domain": "orion:Control",
+      "property": "orion:reduces",
+      "range": "orion:Correcting"
+    },
+    {
+      "domain": "orion:Control",
+      "property": "orion:reduces",
+      "range": "orion:Detecting"
+    },
+    {
+      "domain": "orion:Control",
+      "property": "orion:reduces",
+      "range": "orion:RiskByPreventing"
+    },
+    {
+      "domain": "orion:PreventiveControl",
+      "property": "orion:reduces",
+      "range": "orion:ProbabilityOfAnIncident"
+    },
+    {
+      "domain": "orion:CorrectiveControl",
+      "property": "orion:restores",
+      "range": "orion:NormalOperationAfterAnIncident"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "comments": [
+          "Access control is a preventive control."
+        ],
+        "iri": "orion:AccessControl",
+        "label": "AccessControl"
+      },
+      {
+        "iri": "orion:AffectAnAsset",
+        "label": "AffectAnAsset"
+      },
+      {
+        "iri": "orion:AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented",
+        "label": "AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented"
+      },
+      {
+        "comments": [
+          "Backup restoration is a corrective control."
+        ],
+        "iri": "orion:BackupRestoration",
+        "label": "BackupRestoration"
+      },
+      {
+        "iri": "orion:BeExploitedByAThreat",
+        "label": "BeExploitedByAThreat"
+      },
+      {
+        "iri": "orion:CausHarmToAnAsset",
+        "label": "CausHarmToAnAsset"
+      },
+      {
+        "comments": [
+          "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented."
+        ],
+        "iri": "orion:CompensatingControl",
+        "label": "CompensatingControl"
+      },
+      {
+        "iri": "orion:CompensatingControlWhenAutomatedEnforcementIsNotAvailable",
+        "label": "CompensatingControlWhenAutomatedEnforcementIsNotAvailable"
+      },
+      {
+        "iri": "orion:CompensatingForSecurityWeakness",
+        "label": "CompensatingForSecurityWeakness"
+      },
+      {
+        "iri": "orion:ConsequenceProducedByASecurityEventOrIncident",
+        "label": "ConsequenceProducedByASecurityEventOrIncident"
+      },
+      {
+        "comments": [
+          "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses."
+        ],
+        "iri": "orion:Control",
+        "label": "Control"
+      },
+      {
+        "iri": "orion:CoreProcessInInformationSecurity",
+        "label": "CoreProcessInInformationSecurity"
+      },
+      {
+        "iri": "orion:Correcting",
+        "label": "Correcting"
+      },
+      {
+        "comments": [
+          "A corrective control is a type of security control that restores normal operations after an incident."
+        ],
+        "iri": "orion:CorrectiveControl",
+        "label": "CorrectiveControl"
+      },
+      {
+        "iri": "orion:Detecting",
+        "label": "Detecting"
+      },
+      {
+        "comments": [
+          "A detective control is a type of security control that identifies suspicious activity or policy violations."
+        ],
+        "iri": "orion:DetectiveControl",
+        "label": "DetectiveControl"
+      },
+      {
+        "iri": "orion:HowAThreatMayExploitAVulnerability",
+        "label": "HowAThreatMayExploitAVulnerability"
+      },
+      {
+        "comments": [
+          "An impact is the consequence produced by a security event or incident."
+        ],
+        "iri": "orion:Impact",
+        "label": "Impact"
+      },
+      {
+        "comments": [
+          "A likelihood is the probability that a risk scenario occurs."
+        ],
+        "iri": "orion:Likelihood",
+        "label": "Likelihood"
+      },
+      {
+        "comments": [
+          "Logging is a detective control."
+        ],
+        "iri": "orion:Logging",
+        "label": "Logging"
+      },
+      {
+        "comments": [
+          "Manual approval is a compensating control when automated enforcement is not available."
+        ],
+        "iri": "orion:ManualApproval",
+        "label": "ManualApproval"
+      },
+      {
+        "iri": "orion:NormalOperationAfterAnIncident",
+        "label": "NormalOperationAfterAnIncident"
+      },
+      {
+        "iri": "orion:PolicyViolation",
+        "label": "PolicyViolation"
+      },
+      {
+        "iri": "orion:Possibility",
+        "label": "Possibility"
+      },
+      {
+        "iri": "orion:PotentialCauseOfAnUnwantedIncident",
+        "label": "PotentialCauseOfAnUnwantedIncident"
+      },
+      {
+        "comments": [
+          "A preventive control is a type of security control that reduces the probability of an incident."
+        ],
+        "iri": "orion:PreventiveControl",
+        "label": "PreventiveControl"
+      },
+      {
+        "iri": "orion:Probability",
+        "label": "Probability"
+      },
+      {
+        "iri": "orion:ProbabilityOfAnIncident",
+        "label": "ProbabilityOfAnIncident"
+      },
+      {
+        "comments": [
+          "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset."
+        ],
+        "iri": "orion:Risk",
+        "label": "Risk"
+      },
+      {
+        "iri": "orion:RiskByPreventing",
+        "label": "RiskByPreventing"
+      },
+      {
+        "comments": [
+          "Risk management is a core process in information security."
+        ],
+        "iri": "orion:RiskManagement",
+        "label": "RiskManagement"
+      },
+      {
+        "comments": [
+          "A risk scenario describes how a threat may exploit a vulnerability and affect an asset."
+        ],
+        "iri": "orion:RiskScenario",
+        "label": "RiskScenario"
+      },
+      {
+        "iri": "orion:RiskScenarioOccur",
+        "label": "RiskScenarioOccur"
+      },
+      {
+        "iri": "orion:SecurityControl",
+        "label": "SecurityControl"
+      },
+      {
+        "iri": "orion:SuspiciousActivity",
+        "label": "SuspiciousActivity"
+      },
+      {
+        "comments": [
+          "A threat is a potential cause of an unwanted incident."
+        ],
+        "iri": "orion:Threat",
+        "label": "Threat"
+      },
+      {
+        "iri": "orion:ThreatExploitAVulnerability",
+        "label": "ThreatExploitAVulnerability"
+      },
+      {
+        "comments": [
+          "A vulnerability is a weakness that can be exploited by a threat."
+        ],
+        "iri": "orion:Vulnerability",
+        "label": "Vulnerability"
+      },
+      {
+        "iri": "orion:Weakness",
+        "label": "Weakness"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:Likelihood",
+        "iri": "orion:as",
+        "label": "As",
+        "range": "orion:RiskScenarioOccur"
+      },
+      {
+        "domain": "orion:Risk",
+        "iri": "orion:as",
+        "label": "As",
+        "range": "orion:CausHarmToAnAsset"
+      },
+      {
+        "domain": "orion:Risk",
+        "iri": "orion:as",
+        "label": "As",
+        "range": "orion:ThreatExploitAVulnerability"
+      },
+      {
+        "domain": "orion:Vulnerability",
+        "iri": "orion:cans",
+        "label": "Cans",
+        "range": "orion:BeExploitedByAThreat"
+      },
+      {
+        "domain": "orion:RiskScenario",
+        "iri": "orion:describes",
+        "label": "Describes",
+        "range": "orion:AffectAnAsset"
+      },
+      {
+        "domain": "orion:RiskScenario",
+        "iri": "orion:describes",
+        "label": "Describes",
+        "range": "orion:HowAThreatMayExploitAVulnerability"
+      },
+      {
+        "domain": "orion:DetectiveControl",
+        "iri": "orion:identifies",
+        "label": "Identifies",
+        "range": "orion:PolicyViolation"
+      },
+      {
+        "domain": "orion:DetectiveControl",
+        "iri": "orion:identifies",
+        "label": "Identifies",
+        "range": "orion:SuspiciousActivity"
+      },
+      {
+        "domain": "orion:CompensatingControl",
+        "iri": "orion:provides",
+        "label": "Provides",
+        "range": "orion:AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented"
+      },
+      {
+        "domain": "orion:Control",
+        "iri": "orion:reduces",
+        "label": "Reduces",
+        "range": "orion:CompensatingForSecurityWeakness"
+      },
+      {
+        "domain": "orion:Control",
+        "iri": "orion:reduces",
+        "label": "Reduces",
+        "range": "orion:Correcting"
+      },
+      {
+        "domain": "orion:Control",
+        "iri": "orion:reduces",
+        "label": "Reduces",
+        "range": "orion:Detecting"
+      },
+      {
+        "domain": "orion:Control",
+        "iri": "orion:reduces",
+        "label": "Reduces",
+        "range": "orion:RiskByPreventing"
+      },
+      {
+        "domain": "orion:PreventiveControl",
+        "iri": "orion:reduces",
+        "label": "Reduces",
+        "range": "orion:ProbabilityOfAnIncident"
+      },
+      {
+        "domain": "orion:CorrectiveControl",
+        "iri": "orion:restores",
+        "label": "Restores",
+        "range": "orion:NormalOperationAfterAnIncident"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:PreventiveControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:AccessControl"
+    },
+    {
+      "object": "orion:CorrectiveControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:BackupRestoration"
+    },
+    {
+      "object": "orion:SecurityControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CompensatingControl"
+    },
+    {
+      "object": "orion:SecurityControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CorrectiveControl"
+    },
+    {
+      "object": "orion:SecurityControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DetectiveControl"
+    },
+    {
+      "object": "orion:ConsequenceProducedByASecurityEventOrIncident",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Impact"
+    },
+    {
+      "object": "orion:Probability",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Likelihood"
+    },
+    {
+      "object": "orion:DetectiveControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Logging"
+    },
+    {
+      "object": "orion:CompensatingControlWhenAutomatedEnforcementIsNotAvailable",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ManualApproval"
+    },
+    {
+      "object": "orion:SecurityControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:PreventiveControl"
+    },
+    {
+      "object": "orion:Possibility",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Risk"
+    },
+    {
+      "object": "orion:CoreProcessInInformationSecurity",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:RiskManagement"
+    },
+    {
+      "object": "orion:PotentialCauseOfAnUnwantedIncident",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Threat"
+    },
+    {
+      "object": "orion:Weakness",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Vulnerability"
+    }
+  ],
+  "type_assertions": []
+}

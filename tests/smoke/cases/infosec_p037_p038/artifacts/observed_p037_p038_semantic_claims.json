@@ -1,0 +1,369 @@
+{
+  "claim_count": 21,
+  "claims": [
+    {
+      "claim_id": "claim-2d2c39efd2f42c18",
+      "kind": "relation",
+      "normalized_statement": "ForExampleACustomerDatabase stores PersonalData",
+      "object": "PersonalData",
+      "paragraph_id": "p037",
+      "predicate": "stores",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "For example, a customer database stores personal data and financial data.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-a4929a2ff871dfa8",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "ForExampleACustomerDatabase stores PersonalData",
+      "subject": "ForExampleACustomerDatabase"
+    },
+    {
+      "claim_id": "claim-792dbd37f895e238",
+      "kind": "relation",
+      "normalized_statement": "ForExampleACustomerDatabase stores FinancialData",
+      "object": "FinancialData",
+      "paragraph_id": "p037",
+      "predicate": "stores",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "For example, a customer database stores personal data and financial data.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-a4929a2ff871dfa8",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "ForExampleACustomerDatabase stores FinancialData",
+      "subject": "ForExampleACustomerDatabase"
+    },
+    {
+      "claim_id": "claim-098164afd0a123f3",
+      "kind": "definition",
+      "normalized_statement": "CustomerDatabase is a HostedOnADatabaseServer",
+      "object": "HostedOnADatabaseServer",
+      "paragraph_id": "p037",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "The customer database is hosted on a database server.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-21c4db80717754b8",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "CustomerDatabase is a HostedOnADatabaseServer",
+      "subject": "CustomerDatabase"
+    },
+    {
+      "claim_id": "claim-d0dae7046d5dd13f",
+      "kind": "relation",
+      "normalized_statement": "DatabaseServer runs InsideAProductionNetwork",
+      "object": "InsideAProductionNetwork",
+      "paragraph_id": "p037",
+      "predicate": "runs",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "The database server runs inside a production network.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-ecc492e800266a95",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "DatabaseServer runs InsideAProductionNetwork",
+      "subject": "DatabaseServer"
+    },
+    {
+      "claim_id": "claim-4df18a443850a75e",
+      "kind": "definition",
+      "normalized_statement": "ProductionNetwork is a ProtectedByAFirewall",
+      "object": "ProtectedByAFirewall",
+      "paragraph_id": "p037",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "The production network is protected by a firewall.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-197238fa71e1ab54",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "ProductionNetwork is a ProtectedByAFirewall",
+      "subject": "ProductionNetwork"
+    },
+    {
+      "claim_id": "claim-88a46c1aee613fd7",
+      "kind": "relation",
+      "normalized_statement": "Firewall enforces NetworkAccessRule",
+      "object": "NetworkAccessRule",
+      "paragraph_id": "p037",
+      "predicate": "enforces",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "The firewall enforces network access rules.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-8f6dec2dfd4f3dd4",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "Firewall enforces NetworkAccessRule",
+      "subject": "Firewall"
+    },
+    {
+      "claim_id": "claim-85b8180c6908dcc7",
+      "kind": "definition",
+      "normalized_statement": "CustomerDatabase is a EncryptedUsingACryptographicKey",
+      "object": "EncryptedUsingACryptographicKey",
+      "paragraph_id": "p037",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "The customer database is encrypted using a cryptographic key.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-41ed7e1cbfad4df3",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "CustomerDatabase is a EncryptedUsingACryptographicKey",
+      "subject": "CustomerDatabase"
+    },
+    {
+      "claim_id": "claim-7aac63c82e512772",
+      "kind": "definition",
+      "normalized_statement": "CryptographicKey is a StoredInAKeyManagementService",
+      "object": "StoredInAKeyManagementService",
+      "paragraph_id": "p037",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "The cryptographic key is stored in a key management service.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-a6399015133bb7b9",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "CryptographicKey is a StoredInAKeyManagementService",
+      "subject": "CryptographicKey"
+    },
+    {
+      "claim_id": "claim-a67529637be94573",
+      "kind": "relation",
+      "normalized_statement": "SecurityInformationAndEventManagementSystem collects AuditLogFromTheDatabaseServer",
+      "object": "AuditLogFromTheDatabaseServer",
+      "paragraph_id": "p037",
+      "predicate": "collects",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "The security information and event management system collects audit logs from the database server.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-062bd1be69724af4",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "SecurityInformationAndEventManagementSystem collects AuditLogFromTheDatabaseServer",
+      "subject": "SecurityInformationAndEventManagementSystem"
+    },
+    {
+      "claim_id": "claim-797d023df93a7355",
+      "kind": "relation",
+      "normalized_statement": "SecurityAnalyst reviews AlertRelatedToTheCustomerDatabase",
+      "object": "AlertRelatedToTheCustomerDatabase",
+      "paragraph_id": "p037",
+      "predicate": "reviews",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "A security analyst reviews alerts related to the customer database.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-624c4e21a09b6853",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "SecurityAnalyst reviews AlertRelatedToTheCustomerDatabase",
+      "subject": "SecurityAnalyst"
+    },
+    {
+      "claim_id": "claim-041e67b0a3b29419",
+      "kind": "relation",
+      "normalized_statement": "AssetOwner classifies CustomerDatabaseAsRestrictedInformation",
+      "object": "CustomerDatabaseAsRestrictedInformation",
+      "paragraph_id": "p037",
+      "predicate": "classifies",
+      "source": {
+        "asset_id": "p037",
+        "evidence": "The asset owner classifies the customer database as restricted information.",
+        "paragraph_id": "p037",
+        "sentence_id": "sent-cd2c1065039e0bba",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "AssetOwner classifies CustomerDatabaseAsRestrictedInformation",
+      "subject": "AssetOwner"
+    },
+    {
+      "claim_id": "claim-9b8964f44a45d0e7",
+      "kind": "relation",
+      "normalized_statement": "AnotherExample involves RemoteAccess",
+      "object": "RemoteAccess",
+      "paragraph_id": "p038",
+      "predicate": "involves",
+      "source": {
+        "asset_id": "p038",
+        "evidence": "Another example involves remote access.",
+        "paragraph_id": "p038",
+        "sentence_id": "sent-14d13a99f68149b6",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "AnotherExample involves RemoteAccess",
+      "subject": "AnotherExample"
+    },
+    {
+      "claim_id": "claim-61dc0f3a332eb765",
+      "kind": "relation",
+      "normalized_statement": "RemoteEmployee uses LaptopToAccessACorporateApplication",
+      "object": "LaptopToAccessACorporateApplication",
+      "paragraph_id": "p038",
+      "predicate": "uses",
+      "source": {
+        "asset_id": "p038",
+        "evidence": "A remote employee uses a laptop to access a corporate application.",
+        "paragraph_id": "p038",
+        "sentence_id": "sent-ae207e9eb1882db1",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "RemoteEmployee uses LaptopToAccessACorporateApplication",
+      "subject": "RemoteEmployee"
+    },
+    {
+      "claim_id": "claim-2644fe30ba30d931",
+      "kind": "definition",
+      "normalized_statement": "Laptop is a Endpoint",
+      "object": "Endpoint",
+      "paragraph_id": "p038",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p038",
+        "evidence": "The laptop is an endpoint.",
+        "paragraph_id": "p038",
+        "sentence_id": "sent-ca1905b67e98180d",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "Laptop is a Endpoint",
+      "subject": "Laptop"
+    },
+    {
+      "claim_id": "claim-62c0b58f449b034b",
+      "kind": "definition",
+      "normalized_statement": "CorporateApplication is a WebApplication",
+      "object": "WebApplication",
+      "paragraph_id": "p038",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p038",
+        "evidence": "The corporate application is a web application.",
+        "paragraph_id": "p038",
+        "sentence_id": "sent-57e9b27f2d768b1e",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "CorporateApplication is a WebApplication",
+      "subject": "CorporateApplication"
+    },
+    {
+      "claim_id": "claim-97026dcf89e84c27",
+      "kind": "relation",
+      "normalized_statement": "RemoteEmployee authenticates ThroughMultiFactorAuthentication",
+      "object": "ThroughMultiFactorAuthentication",
+      "paragraph_id": "p038",
+      "predicate": "authenticates",
+      "source": {
+        "asset_id": "p038",
+        "evidence": "The remote employee authenticates through multi-factor authentication.",
+        "paragraph_id": "p038",
+        "sentence_id": "sent-d79821d3d778e3a0",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "RemoteEmployee authenticates ThroughMultiFactorAuthentication",
+      "subject": "RemoteEmployee"
+    },
+    {
+      "claim_id": "claim-fe5b7b1c9165133a",
+      "kind": "relation",
+      "normalized_statement": "IdentityProvider verifies EmployeeIdentity",
+      "object": "EmployeeIdentity",
+      "paragraph_id": "p038",
+      "predicate": "verifies",
+      "source": {
+        "asset_id": "p038",
+        "evidence": "The identity provider verifies the employee identity.",
+        "paragraph_id": "p038",
+        "sentence_id": "sent-a80130e716dc41d2",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "IdentityProvider verifies EmployeeIdentity",
+      "subject": "IdentityProvider"
+    },
+    {
+      "claim_id": "claim-5410626aed9dc3f7",
+      "kind": "relation",
+      "normalized_statement": "AuthorizationService grants AccessBasedOnRoleAssignment",
+      "object": "AccessBasedOnRoleAssignment",
+      "paragraph_id": "p038",
+      "predicate": "grants",
+      "source": {
+        "asset_id": "p038",
+        "evidence": "The authorization service grants access based on role assignments.",
+        "paragraph_id": "p038",
+        "sentence_id": "sent-4c5eed220281d045",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "AuthorizationService grants AccessBasedOnRoleAssignment",
+      "subject": "AuthorizationService"
+    },
+    {
+      "claim_id": "claim-3a7b9e321d7096f0",
+      "kind": "relation",
+      "normalized_statement": "VirtualPrivateNetwork encrypts CommunicationChannel",
+      "object": "CommunicationChannel",
+      "paragraph_id": "p038",
+      "predicate": "encrypts",
+      "source": {
+        "asset_id": "p038",
+        "evidence": "The virtual private network encrypts the communication channel.",
+        "paragraph_id": "p038",
+        "sentence_id": "sent-40b878293b9458d0",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "VirtualPrivateNetwork encrypts CommunicationChannel",
+      "subject": "VirtualPrivateNetwork"
+    },
+    {
+      "claim_id": "claim-a47fa7d6640672be",
+      "kind": "relation",
+      "normalized_statement": "EndpointDetectionAndResponseTool monitors Laptop",
+      "object": "Laptop",
+      "paragraph_id": "p038",
+      "predicate": "monitors",
+      "source": {
+        "asset_id": "p038",
+        "evidence": "The endpoint detection and response tool monitors the laptop.",
+        "paragraph_id": "p038",
+        "sentence_id": "sent-d8410e77a60d11ce",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "EndpointDetectionAndResponseTool monitors Laptop",
+      "subject": "EndpointDetectionAndResponseTool"
+    },
+    {
+      "claim_id": "claim-160cade351e47224",
+      "kind": "relation",
+      "normalized_statement": "SecurityPolicy requires RemoteEmployeeToReportLostDeviceImmediately",
+      "object": "RemoteEmployeeToReportLostDeviceImmediately",
+      "paragraph_id": "p038",
+      "predicate": "requires",
+      "source": {
+        "asset_id": "p038",
+        "evidence": "The security policy requires remote employees to report lost devices immediately.",
+        "paragraph_id": "p038",
+        "sentence_id": "sent-08d3875e4a6b192d",
+        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+      },
+      "statement": "SecurityPolicy requires RemoteEmployeeToReportLostDeviceImmediately",
+      "subject": "SecurityPolicy"
+    }
+  ],
+  "contract_required_stage": "semantic_claims",
+  "observed_stage": "semantic_claims",
+  "paragraph_asset_ids": [
+    "p037",
+    "p038"
+  ],
+  "stage": "semantic_claims"
+}

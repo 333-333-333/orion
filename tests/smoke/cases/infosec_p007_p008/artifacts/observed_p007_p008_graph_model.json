@@ -1,0 +1,629 @@
+{
+  "classes": [
+    {
+      "iri": "orion:AbilityToTraceActionToASpecificIdentity",
+      "label": "AbilityToTraceActionToASpecificIdentity"
+    },
+    {
+      "comments": [
+        "Access control regulates who can access which resource and under which conditions."
+      ],
+      "iri": "orion:AccessControl",
+      "label": "AccessControl"
+    },
+    {
+      "iri": "orion:AccountWithElevatedPermission",
+      "label": "AccountWithElevatedPermission"
+    },
+    {
+      "comments": [
+        "Accountability is the ability to trace actions to a specific identity."
+      ],
+      "iri": "orion:Accountability",
+      "label": "Accountability"
+    },
+    {
+      "comments": [
+        "Authentication is the process of verifying an identity."
+      ],
+      "iri": "orion:Authentication",
+      "label": "Authentication"
+    },
+    {
+      "comments": [
+        "Authentication data is a type of restricted information because it can grant access to systems."
+      ],
+      "iri": "orion:AuthenticationData",
+      "label": "AuthenticationData"
+    },
+    {
+      "comments": [
+        "Authorization is the process of determining what actions an authenticated identity may perform."
+      ],
+      "iri": "orion:Authorization",
+      "label": "Authorization"
+    },
+    {
+      "iri": "orion:BeDisclosedWithoutCausingHarm",
+      "label": "BeDisclosedWithoutCausingHarm"
+    },
+    {
+      "iri": "orion:CanIdentifyANaturalPerson",
+      "label": "CanIdentifyANaturalPerson"
+    },
+    {
+      "comments": [
+        "Confidential information is a type of information whose unauthorized disclosure may harm the organization, customers, employees, or partners."
+      ],
+      "iri": "orion:ConfidentialInformation",
+      "label": "ConfidentialInformation"
+    },
+    {
+      "iri": "orion:DigitalIdentity",
+      "label": "DigitalIdentity"
+    },
+    {
+      "comments": [
+        "Financial data is a type of sensitive information related to payments, accounts, budgets, or financial transactions."
+      ],
+      "iri": "orion:FinancialData",
+      "label": "FinancialData"
+    },
+    {
+      "iri": "orion:HighlySensitiveInformation",
+      "label": "HighlySensitiveInformation"
+    },
+    {
+      "comments": [
+        "Identification is the process of claiming an identity."
+      ],
+      "iri": "orion:Identification",
+      "label": "Identification"
+    },
+    {
+      "comments": [
+        "Information classification helps organizations apply appropriate protection levels to different kinds of information."
+      ],
+      "iri": "orion:InformationClassification",
+      "label": "InformationClassification"
+    },
+    {
+      "iri": "orion:InformationWhoseUnauthorizedDisclosureMayHarmTheOrganizationCustomerEmployeeOrPartner",
+      "label": "InformationWhoseUnauthorizedDisclosureMayHarmTheOrganizationCustomerEmployeeOrPartner"
+    },
+    {
+      "comments": [
+        "Internal information is a type of information intended for use inside the organization."
+      ],
+      "iri": "orion:InternalInformation",
+      "label": "InternalInformation"
+    },
+    {
+      "iri": "orion:NonHumanAccount",
+      "label": "NonHumanAccount"
+    },
+    {
+      "iri": "orion:OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation",
+      "label": "OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation"
+    },
+    {
+      "comments": [
+        "Personal data is a type of sensitive information that identifies or can identify a natural person."
+      ],
+      "iri": "orion:PersonalData",
+      "label": "PersonalData"
+    },
+    {
+      "comments": [
+        "A privileged account is a type of account with elevated permissions."
+      ],
+      "iri": "orion:PrivilegedAccount",
+      "label": "PrivilegedAccount"
+    },
+    {
+      "iri": "orion:ProcessOfClaimingAnIdentity",
+      "label": "ProcessOfClaimingAnIdentity"
+    },
+    {
+      "iri": "orion:ProcessOfDeterminingWhatActionAnAuthenticatedIdentityMayPerform",
+      "label": "ProcessOfDeterminingWhatActionAnAuthenticatedIdentityMayPerform"
+    },
+    {
+      "iri": "orion:ProcessOfVerifyingAnIdentity",
+      "label": "ProcessOfVerifyingAnIdentity"
+    },
+    {
+      "comments": [
+        "Public information is a type of information that can be disclosed without causing harm."
+      ],
+      "iri": "orion:PublicInformation",
+      "label": "PublicInformation"
+    },
+    {
+      "comments": [
+        "Restricted information is a type of highly sensitive information that requires strict access, storage, and transmission controls."
+      ],
+      "iri": "orion:RestrictedInformation",
+      "label": "RestrictedInformation"
+    },
+    {
+      "iri": "orion:RestrictedInformationBecauseItCanGrantAccessToSystem",
+      "label": "RestrictedInformationBecauseItCanGrantAccessToSystem"
+    },
+    {
+      "iri": "orion:SensitiveInformation",
+      "label": "SensitiveInformation"
+    },
+    {
+      "iri": "orion:SensitiveInformationRelatedToPaymentAccountBudgetOrFinancialTransaction",
+      "label": "SensitiveInformationRelatedToPaymentAccountBudgetOrFinancialTransaction"
+    },
+    {
+      "comments": [
+        "A service account is a type of non-human account used by applications, scripts, integrations, or automated processes."
+      ],
+      "iri": "orion:ServiceAccount",
+      "label": "ServiceAccount"
+    },
+    {
+      "comments": [
+        "A shared account is a type of account used by multiple individuals and creates accountability risk."
+      ],
+      "iri": "orion:SharedAccount",
+      "label": "SharedAccount"
+    },
+    {
+      "iri": "orion:Storage",
+      "label": "Storage"
+    },
+    {
+      "iri": "orion:StrictAccess",
+      "label": "StrictAccess"
+    },
+    {
+      "iri": "orion:TransmissionControl",
+      "label": "TransmissionControl"
+    },
+    {
+      "iri": "orion:Under",
+      "label": "Under"
+    },
+    {
+      "comments": [
+        "A user account represents a digital identity."
+      ],
+      "iri": "orion:UserAccount",
+      "label": "UserAccount"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:PublicInformation",
+      "predicate": "orion:cans",
+      "range": "orion:BeDisclosedWithoutCausingHarm"
+    },
+    {
+      "domain": "orion:InformationClassification",
+      "predicate": "orion:helps",
+      "range": "orion:OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation"
+    },
+    {
+      "domain": "orion:PersonalData",
+      "predicate": "orion:identifies",
+      "range": "orion:CanIdentifyANaturalPerson"
+    },
+    {
+      "domain": "orion:AccessControl",
+      "predicate": "orion:regulates",
+      "range": "orion:Under"
+    },
+    {
+      "domain": "orion:UserAccount",
+      "predicate": "orion:represents",
+      "range": "orion:DigitalIdentity"
+    },
+    {
+      "domain": "orion:RestrictedInformation",
+      "predicate": "orion:requires",
+      "range": "orion:Storage"
+    },
+    {
+      "domain": "orion:RestrictedInformation",
+      "predicate": "orion:requires",
+      "range": "orion:StrictAccess"
+    },
+    {
+      "domain": "orion:RestrictedInformation",
+      "predicate": "orion:requires",
+      "range": "orion:TransmissionControl"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-8ad3c5cd2aa6f8c9",
+      "claim-e6b462d8aea691d5",
+      "claim-faeb04806cfcde4b",
+      "claim-292e4f64b30c6f4f",
+      "claim-5431b1ff1feafa4b",
+      "claim-2e4763336d7f13c0",
+      "claim-f07d1e5c7d18d1ee",
+      "claim-ab458aabde6f1e9d",
+      "claim-685f4715eeeedc55",
+      "claim-e42337af2d9ea4d8",
+      "claim-798d555004958282",
+      "claim-b420d2c9e3837435",
+      "claim-25d2b1ef1debe8f6",
+      "claim-ac08c5cdbfa33b66",
+      "claim-054891ed2029b888",
+      "claim-c8aa5311b186cbd3",
+      "claim-c392f65acabc2ad4",
+      "claim-ee2158bc4cb54631",
+      "claim-c3d8327db0adfb68",
+      "claim-dba0157c1a2f218a",
+      "claim-bd5cf2d718609a07",
+      "claim-75faf59b0ddd2f24"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:PublicInformation",
+      "property": "orion:cans",
+      "range": "orion:BeDisclosedWithoutCausingHarm"
+    },
+    {
+      "domain": "orion:InformationClassification",
+      "property": "orion:helps",
+      "range": "orion:OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation"
+    },
+    {
+      "domain": "orion:PersonalData",
+      "property": "orion:identifies",
+      "range": "orion:CanIdentifyANaturalPerson"
+    },
+    {
+      "domain": "orion:AccessControl",
+      "property": "orion:regulates",
+      "range": "orion:Under"
+    },
+    {
+      "domain": "orion:UserAccount",
+      "property": "orion:represents",
+      "range": "orion:DigitalIdentity"
+    },
+    {
+      "domain": "orion:RestrictedInformation",
+      "property": "orion:requires",
+      "range": "orion:Storage"
+    },
+    {
+      "domain": "orion:RestrictedInformation",
+      "property": "orion:requires",
+      "range": "orion:StrictAccess"
+    },
+    {
+      "domain": "orion:RestrictedInformation",
+      "property": "orion:requires",
+      "range": "orion:TransmissionControl"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:AbilityToTraceActionToASpecificIdentity",
+        "label": "AbilityToTraceActionToASpecificIdentity"
+      },
+      {
+        "comments": [
+          "Access control regulates who can access which resource and under which conditions."
+        ],
+        "iri": "orion:AccessControl",
+        "label": "AccessControl"
+      },
+      {
+        "iri": "orion:AccountWithElevatedPermission",
+        "label": "AccountWithElevatedPermission"
+      },
+      {
+        "comments": [
+          "Accountability is the ability to trace actions to a specific identity."
+        ],
+        "iri": "orion:Accountability",
+        "label": "Accountability"
+      },
+      {
+        "comments": [
+          "Authentication is the process of verifying an identity."
+        ],
+        "iri": "orion:Authentication",
+        "label": "Authentication"
+      },
+      {
+        "comments": [
+          "Authentication data is a type of restricted information because it can grant access to systems."
+        ],
+        "iri": "orion:AuthenticationData",
+        "label": "AuthenticationData"
+      },
+      {
+        "comments": [
+          "Authorization is the process of determining what actions an authenticated identity may perform."
+        ],
+        "iri": "orion:Authorization",
+        "label": "Authorization"
+      },
+      {
+        "iri": "orion:BeDisclosedWithoutCausingHarm",
+        "label": "BeDisclosedWithoutCausingHarm"
+      },
+      {
+        "iri": "orion:CanIdentifyANaturalPerson",
+        "label": "CanIdentifyANaturalPerson"
+      },
+      {
+        "comments": [
+          "Confidential information is a type of information whose unauthorized disclosure may harm the organization, customers, employees, or partners."
+        ],
+        "iri": "orion:ConfidentialInformation",
+        "label": "ConfidentialInformation"
+      },
+      {
+        "iri": "orion:DigitalIdentity",
+        "label": "DigitalIdentity"
+      },
+      {
+        "comments": [
+          "Financial data is a type of sensitive information related to payments, accounts, budgets, or financial transactions."
+        ],
+        "iri": "orion:FinancialData",
+        "label": "FinancialData"
+      },
+      {
+        "iri": "orion:HighlySensitiveInformation",
+        "label": "HighlySensitiveInformation"
+      },
+      {
+        "comments": [
+          "Identification is the process of claiming an identity."
+        ],
+        "iri": "orion:Identification",
+        "label": "Identification"
+      },
+      {
+        "comments": [
+          "Information classification helps organizations apply appropriate protection levels to different kinds of information."
+        ],
+        "iri": "orion:InformationClassification",
+        "label": "InformationClassification"
+      },
+      {
+        "iri": "orion:InformationWhoseUnauthorizedDisclosureMayHarmTheOrganizationCustomerEmployeeOrPartner",
+        "label": "InformationWhoseUnauthorizedDisclosureMayHarmTheOrganizationCustomerEmployeeOrPartner"
+      },
+      {
+        "comments": [
+          "Internal information is a type of information intended for use inside the organization."
+        ],
+        "iri": "orion:InternalInformation",
+        "label": "InternalInformation"
+      },
+      {
+        "iri": "orion:NonHumanAccount",
+        "label": "NonHumanAccount"
+      },
+      {
+        "iri": "orion:OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation",
+        "label": "OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation"
+      },
+      {
+        "comments": [
+          "Personal data is a type of sensitive information that identifies or can identify a natural person."
+        ],
+        "iri": "orion:PersonalData",
+        "label": "PersonalData"
+      },
+      {
+        "comments": [
+          "A privileged account is a type of account with elevated permissions."
+        ],
+        "iri": "orion:PrivilegedAccount",
+        "label": "PrivilegedAccount"
+      },
+      {
+        "iri": "orion:ProcessOfClaimingAnIdentity",
+        "label": "ProcessOfClaimingAnIdentity"
+      },
+      {
+        "iri": "orion:ProcessOfDeterminingWhatActionAnAuthenticatedIdentityMayPerform",
+        "label": "ProcessOfDeterminingWhatActionAnAuthenticatedIdentityMayPerform"
+      },
+      {
+        "iri": "orion:ProcessOfVerifyingAnIdentity",
+        "label": "ProcessOfVerifyingAnIdentity"
+      },
+      {
+        "comments": [
+          "Public information is a type of information that can be disclosed without causing harm."
+        ],
+        "iri": "orion:PublicInformation",
+        "label": "PublicInformation"
+      },
+      {
+        "comments": [
+          "Restricted information is a type of highly sensitive information that requires strict access, storage, and transmission controls."
+        ],
+        "iri": "orion:RestrictedInformation",
+        "label": "RestrictedInformation"
+      },
+      {
+        "iri": "orion:RestrictedInformationBecauseItCanGrantAccessToSystem",
+        "label": "RestrictedInformationBecauseItCanGrantAccessToSystem"
+      },
+      {
+        "iri": "orion:SensitiveInformation",
+        "label": "SensitiveInformation"
+      },
+      {
+        "iri": "orion:SensitiveInformationRelatedToPaymentAccountBudgetOrFinancialTransaction",
+        "label": "SensitiveInformationRelatedToPaymentAccountBudgetOrFinancialTransaction"
+      },
+      {
+        "comments": [
+          "A service account is a type of non-human account used by applications, scripts, integrations, or automated processes."
+        ],
+        "iri": "orion:ServiceAccount",
+        "label": "ServiceAccount"
+      },
+      {
+        "comments": [
+          "A shared account is a type of account used by multiple individuals and creates accountability risk."
+        ],
+        "iri": "orion:SharedAccount",
+        "label": "SharedAccount"
+      },
+      {
+        "iri": "orion:Storage",
+        "label": "Storage"
+      },
+      {
+        "iri": "orion:StrictAccess",
+        "label": "StrictAccess"
+      },
+      {
+        "iri": "orion:TransmissionControl",
+        "label": "TransmissionControl"
+      },
+      {
+        "iri": "orion:Under",
+        "label": "Under"
+      },
+      {
+        "comments": [
+          "A user account represents a digital identity."
+        ],
+        "iri": "orion:UserAccount",
+        "label": "UserAccount"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:PublicInformation",
+        "iri": "orion:cans",
+        "label": "Cans",
+        "range": "orion:BeDisclosedWithoutCausingHarm"
+      },
+      {
+        "domain": "orion:InformationClassification",
+        "iri": "orion:helps",
+        "label": "Helps",
+        "range": "orion:OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation"
+      },
+      {
+        "domain": "orion:PersonalData",
+        "iri": "orion:identifies",
+        "label": "Identifies",
+        "range": "orion:CanIdentifyANaturalPerson"
+      },
+      {
+        "domain": "orion:AccessControl",
+        "iri": "orion:regulates",
+        "label": "Regulates",
+        "range": "orion:Under"
+      },
+      {
+        "domain": "orion:UserAccount",
+        "iri": "orion:represents",
+        "label": "Represents",
+        "range": "orion:DigitalIdentity"
+      },
+      {
+        "domain": "orion:RestrictedInformation",
+        "iri": "orion:requires",
+        "label": "Requires",
+        "range": "orion:Storage"
+      },
+      {
+        "domain": "orion:RestrictedInformation",
+        "iri": "orion:requires",
+        "label": "Requires",
+        "range": "orion:StrictAccess"
+      },
+      {
+        "domain": "orion:RestrictedInformation",
+        "iri": "orion:requires",
+        "label": "Requires",
+        "range": "orion:TransmissionControl"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:AbilityToTraceActionToASpecificIdentity",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Accountability"
+    },
+    {
+      "object": "orion:ProcessOfVerifyingAnIdentity",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Authentication"
+    },
+    {
+      "object": "orion:RestrictedInformationBecauseItCanGrantAccessToSystem",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:AuthenticationData"
+    },
+    {
+      "object": "orion:ProcessOfDeterminingWhatActionAnAuthenticatedIdentityMayPerform",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Authorization"
+    },
+    {
+      "object": "orion:InformationWhoseUnauthorizedDisclosureMayHarmTheOrganizationCustomerEmployeeOrPartner",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ConfidentialInformation"
+    },
+    {
+      "object": "orion:SensitiveInformationRelatedToPaymentAccountBudgetOrFinancialTransaction",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:FinancialData"
+    },
+    {
+      "object": "orion:ProcessOfClaimingAnIdentity",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Identification"
+    },
+    {
+      "object": "orion:PublicInformation",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:InternalInformation"
+    },
+    {
+      "object": "orion:SensitiveInformation",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:PersonalData"
+    },
+    {
+      "object": "orion:AccountWithElevatedPermission",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:PrivilegedAccount"
+    },
+    {
+      "object": "orion:HighlySensitiveInformation",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:RestrictedInformation"
+    },
+    {
+      "object": "orion:NonHumanAccount",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ServiceAccount"
+    },
+    {
+      "object": "orion:UserAccount",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:SharedAccount"
+    }
+  ],
+  "type_assertions": []
+}

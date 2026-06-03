@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "contract_id": "CON-SEMANTIC-CLAIMS-P003-P004",
+  "spec_refs": {
+    "task": "TASK-SEMANTIC-CLAIMS-P003-P004",
+    "fun": "FUN-SEMANTIC-CLAIMS-P003-P004",
+    "con": "CON-SEMANTIC-CLAIMS-P003-P004",
+    "br": [
+      "BR-SEMANTIC-CLAIMS-P003-P004-001",
+      "BR-SEMANTIC-CLAIMS-P003-P004-002",
+      "BR-SEMANTIC-CLAIMS-P003-P004-003",
+      "BR-SEMANTIC-CLAIMS-P003-P004-004",
+      "BR-SEMANTIC-CLAIMS-P003-P004-005",
+      "BR-SEMANTIC-CLAIMS-P003-P004-006"
+    ]
+  },
+  "paragraphs": [
+    "p003",
+    "p004"
+  ],
+  "required_stage": "semantic_claims",
+  "claim_shape": {
+    "required_claim_fields": [
+      "claim_id",
+      "kind",
+      "subject",
+      "predicate",
+      "object",
+      "source"
+    ],
+    "required_source_fields": [
+      "asset_id",
+      "paragraph_id",
+      "sentence_id",
+      "evidence"
+    ],
+    "forbidden_claim_fields": [
+      "rdf",
+      "rdf_xml",
+      "triple",
+      "triples",
+      "graph"
+    ],
+    "required_reference_resolution": true
+  },
+  "expected_claims": [
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "Organization",
+      "predicate": "protects",
+      "object": "Information",
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "Organization",
+      "predicate": "implements",
+      "object": "Governance",
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "Organization",
+      "predicate": "implements",
+      "object": "SecurityPolicy",
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "Organization",
+      "predicate": "implements",
+      "object": "SecurityProcedure",
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "Organization",
+      "predicate": "implements",
+      "object": "Control",
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "Organization",
+      "predicate": "implements",
+      "object": "MonitoringMechanism",
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "Organization",
+      "predicate": "implements",
+      "object": "IncidentResponseProcess",
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "definition",
+      "subject": "SecurityPolicy",
+      "predicate": "is_a",
+      "object": "FormalDocument",
+      "evidence": "A security policy is a formal document that defines rules and expectations for protecting information."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "SecurityPolicy",
+      "predicate": "defines",
+      "object": "Rule",
+      "evidence": "A security policy is a formal document that defines rules and expectations for protecting information."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "SecurityPolicy",
+      "predicate": "defines",
+      "object": "Expectation",
+      "evidence": "A security policy is a formal document that defines rules and expectations for protecting information."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "SecurityPolicy",
+      "predicate": "protects",
+      "object": "Information",
+      "evidence": "A security policy is a formal document that defines rules and expectations for protecting information."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "definition",
+      "subject": "SecurityStandard",
+      "predicate": "is_a",
+      "object": "ControlDocument",
+      "evidence": "A security standard is a type of control document that defines mandatory requirements."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "SecurityStandard",
+      "predicate": "defines",
+      "object": "MandatoryRequirement",
+      "evidence": "A security standard is a type of control document that defines mandatory requirements."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "definition",
+      "subject": "SecurityProcedure",
+      "predicate": "is_a",
+      "object": "OperationalDocument",
+      "evidence": "A security procedure is a type of operational document that defines step-by-step activities."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "SecurityProcedure",
+      "predicate": "defines",
+      "object": "StepByStepActivity",
+      "evidence": "A security procedure is a type of operational document that defines step-by-step activities."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "definition",
+      "subject": "SecurityGuideline",
+      "predicate": "is_a",
+      "object": "AdvisoryDocument",
+      "evidence": "A security guideline is a type of advisory document that recommends good practices."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "SecurityGuideline",
+      "predicate": "recommends",
+      "object": "GoodPractice",
+      "evidence": "A security guideline is a type of advisory document that recommends good practices."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "definition",
+      "subject": "SecurityBaseline",
+      "predicate": "is_a",
+      "object": "MinimumSetOfControls",
+      "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "SecurityBaseline",
+      "predicate": "required_for",
+      "object": "System",
+      "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "SecurityBaseline",
+      "predicate": "required_for",
+      "object": "Application",
+      "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "SecurityBaseline",
+      "predicate": "required_for",
+      "object": "InfrastructureComponent",
+      "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "BoardOfDirectors",
+      "predicate": "provides_oversight_for",
+      "object": "InformationSecurity",
+      "evidence": "The board of directors provides strategic oversight for information security."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "SeniorManagement",
+      "predicate": "approves",
+      "object": "SecurityPolicy",
+      "evidence": "Senior management approves security policies and allocates resources for security initiatives."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "SeniorManagement",
+      "predicate": "allocates",
+      "object": "Resource",
+      "evidence": "Senior management approves security policies and allocates resources for security initiatives."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "Resource",
+      "predicate": "supports",
+      "object": "SecurityInitiative",
+      "evidence": "Senior management approves security policies and allocates resources for security initiatives."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "InformationSecurityManager",
+      "predicate": "coordinates",
+      "object": "InformationSecurityProgram",
+      "evidence": "The information security manager coordinates the information security program."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "AssetOwner",
+      "predicate": "classifies",
+      "object": "InformationAsset",
+      "evidence": "The asset owner classifies information assets and defines protection requirements."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "AssetOwner",
+      "predicate": "defines",
+      "object": "ProtectionRequirement",
+      "evidence": "The asset owner classifies information assets and defines protection requirements."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "AssetCustodian",
+      "predicate": "operates",
+      "object": "TechnicalEnvironment",
+      "evidence": "The asset custodian operates and maintains the technical environment that stores or processes information."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "AssetCustodian",
+      "predicate": "maintains",
+      "object": "TechnicalEnvironment",
+      "evidence": "The asset custodian operates and maintains the technical environment that stores or processes information."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "TechnicalEnvironment",
+      "predicate": "stores",
+      "object": "Information",
+      "evidence": "The asset custodian operates and maintains the technical environment that stores or processes information."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "TechnicalEnvironment",
+      "predicate": "processes",
+      "object": "Information",
+      "evidence": "The asset custodian operates and maintains the technical environment that stores or processes information."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "SystemAdministrator",
+      "predicate": "manages",
+      "object": "Server",
+      "evidence": "The system administrator manages servers, networks, operating systems, and technical services."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "SystemAdministrator",
+      "predicate": "manages",
+      "object": "Network",
+      "evidence": "The system administrator manages servers, networks, operating systems, and technical services."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "SystemAdministrator",
+      "predicate": "manages",
+      "object": "OperatingSystem",
+      "evidence": "The system administrator manages servers, networks, operating systems, and technical services."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "SystemAdministrator",
+      "predicate": "manages",
+      "object": "TechnicalService",
+      "evidence": "The system administrator manages servers, networks, operating systems, and technical services."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "SecurityAnalyst",
+      "predicate": "monitors",
+      "object": "SecurityEvent",
+      "evidence": "The security analyst monitors security events and investigates suspicious activity."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "SecurityAnalyst",
+      "predicate": "investigates",
+      "object": "SuspiciousActivity",
+      "evidence": "The security analyst monitors security events and investigates suspicious activity."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "Auditor",
+      "predicate": "evaluates",
+      "object": "Compliance",
+      "evidence": "The auditor evaluates compliance with security requirements."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "Compliance",
+      "predicate": "checked_against",
+      "object": "SecurityRequirement",
+      "evidence": "The auditor evaluates compliance with security requirements."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "EndUser",
+      "predicate": "accesses",
+      "object": "System",
+      "evidence": "The end user accesses systems and must follow security policies."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "EndUser",
+      "predicate": "follows",
+      "object": "SecurityPolicy",
+      "evidence": "The end user accesses systems and must follow security policies."
+    }
+  ],
+  "definition_subjects": [
+    "SecurityPolicy",
+    "SecurityStandard",
+    "SecurityProcedure",
+    "SecurityGuideline",
+    "SecurityBaseline"
+  ],
+  "relation_predicates": [
+    "protects",
+    "implements",
+    "defines",
+    "recommends",
+    "required_for",
+    "provides_oversight_for",
+    "approves",
+    "allocates",
+    "supports",
+    "coordinates",
+    "classifies",
+    "operates",
+    "maintains",
+    "stores",
+    "processes",
+    "manages",
+    "monitors",
+    "investigates",
+    "evaluates",
+    "checked_against",
+    "accesses",
+    "follows"
+  ],
+  "projection": {
+    "required_source_stage": "semantic_claims",
+    "forbidden_source_stages": [
+      "noun_chunks",
+      "concepts",
+      "entities_only"
+    ]
+  },
+  "banned_tokens": [
+    "MinimumSetOfControlRequired",
+    "minimum-set-of-control-required",
+    "type-of-",
+    "TypeOfFormalDocument",
+    "resource-for-security-initiative",
+    "chunk",
+    "noun_chunk",
+    "noun-chunk"
+  ]
+}

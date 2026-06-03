@@ -1,0 +1,556 @@
+{
+  "claim_count": 32,
+  "claims": [
+    {
+      "claim_id": "claim-e8fb4a8a8bf6e723",
+      "kind": "relation",
+      "normalized_statement": "NetworkSecurity protects CommunicationChannel",
+      "object": "CommunicationChannel",
+      "paragraph_id": "p013",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "Network security protects communication channels, network devices, and network services.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-0eabefead48375a7",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "NetworkSecurity protects CommunicationChannel",
+      "subject": "NetworkSecurity"
+    },
+    {
+      "claim_id": "claim-79a4e8fd0a051551",
+      "kind": "relation",
+      "normalized_statement": "NetworkSecurity protects NetworkDevice",
+      "object": "NetworkDevice",
+      "paragraph_id": "p013",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "Network security protects communication channels, network devices, and network services.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-0eabefead48375a7",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "NetworkSecurity protects NetworkDevice",
+      "subject": "NetworkSecurity"
+    },
+    {
+      "claim_id": "claim-6d42b2f48e1e27f2",
+      "kind": "relation",
+      "normalized_statement": "NetworkSecurity protects NetworkService",
+      "object": "NetworkService",
+      "paragraph_id": "p013",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "Network security protects communication channels, network devices, and network services.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-0eabefead48375a7",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "NetworkSecurity protects NetworkService",
+      "subject": "NetworkSecurity"
+    },
+    {
+      "claim_id": "claim-b4a9223d3cb930f2",
+      "kind": "definition",
+      "normalized_statement": "Firewall is a NetworkSecurityControl",
+      "object": "NetworkSecurityControl",
+      "paragraph_id": "p013",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "A firewall is a type of network security control.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-7872b2f7d6bdd716",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "Firewall is a NetworkSecurityControl",
+      "subject": "Firewall"
+    },
+    {
+      "claim_id": "claim-f414bf1864489abc",
+      "kind": "definition",
+      "normalized_statement": "NetworkAccessControlSystem is a NetworkSecurityControl",
+      "object": "NetworkSecurityControl",
+      "paragraph_id": "p013",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "A network access control system is a type of network security control.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-42def6ac779abd97",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "NetworkAccessControlSystem is a NetworkSecurityControl",
+      "subject": "NetworkAccessControlSystem"
+    },
+    {
+      "claim_id": "claim-52dd93b752de8203",
+      "kind": "definition",
+      "normalized_statement": "IntrusionDetectionSystem is a DetectiveNetworkControl",
+      "object": "DetectiveNetworkControl",
+      "paragraph_id": "p013",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "An intrusion detection system is a type of detective network control.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-93760077d1ac7d1e",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "IntrusionDetectionSystem is a DetectiveNetworkControl",
+      "subject": "IntrusionDetectionSystem"
+    },
+    {
+      "claim_id": "claim-ee7a4d776195a990",
+      "kind": "definition",
+      "normalized_statement": "IntrusionPreventionSystem is a PreventiveNetworkControl",
+      "object": "PreventiveNetworkControl",
+      "paragraph_id": "p013",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "An intrusion prevention system is a type of preventive network control.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-9e6a1d0a52db3e4a",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "IntrusionPreventionSystem is a PreventiveNetworkControl",
+      "subject": "IntrusionPreventionSystem"
+    },
+    {
+      "claim_id": "claim-12b5d2937d5ba162",
+      "kind": "relation",
+      "normalized_statement": "VirtualPrivateNetwork protects RemoteAccess",
+      "object": "RemoteAccess",
+      "paragraph_id": "p013",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "A virtual private network protects remote access by creating an encrypted communication tunnel.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-3500d28727f22e2d",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "VirtualPrivateNetwork protects RemoteAccess",
+      "subject": "VirtualPrivateNetwork"
+    },
+    {
+      "claim_id": "claim-2cdfdb63ba92c67e",
+      "kind": "relation",
+      "normalized_statement": "VirtualPrivateNetwork creats EncryptedCommunicationTunnel",
+      "object": "EncryptedCommunicationTunnel",
+      "paragraph_id": "p013",
+      "predicate": "creats",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "A virtual private network protects remote access by creating an encrypted communication tunnel.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-3500d28727f22e2d",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "VirtualPrivateNetwork creats EncryptedCommunicationTunnel",
+      "subject": "VirtualPrivateNetwork"
+    },
+    {
+      "claim_id": "claim-21a3932d0a590fc3",
+      "kind": "relation",
+      "normalized_statement": "NetworkSegmentation separates SystemIntoDifferentZone",
+      "object": "SystemIntoDifferentZone",
+      "paragraph_id": "p013",
+      "predicate": "separates",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "Network segmentation separates systems into different zones.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-c697b12cac57f7ef",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "NetworkSegmentation separates SystemIntoDifferentZone",
+      "subject": "NetworkSegmentation"
+    },
+    {
+      "claim_id": "claim-2c8bdb7a24a3d039",
+      "kind": "definition",
+      "normalized_statement": "DemilitarizedZone is a NetworkSegment",
+      "object": "NetworkSegment",
+      "paragraph_id": "p013",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "A demilitarized zone is a type of network segment that exposes controlled services to external networks.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-2ba8aa0bba6c7857",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "DemilitarizedZone is a NetworkSegment",
+      "subject": "DemilitarizedZone"
+    },
+    {
+      "claim_id": "claim-cb615cde01274a1c",
+      "kind": "relation",
+      "normalized_statement": "DemilitarizedZone exposes ControlledServiceToExternalNetwork",
+      "object": "ControlledServiceToExternalNetwork",
+      "paragraph_id": "p013",
+      "predicate": "exposes",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "A demilitarized zone is a type of network segment that exposes controlled services to external networks.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-2ba8aa0bba6c7857",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "DemilitarizedZone exposes ControlledServiceToExternalNetwork",
+      "subject": "DemilitarizedZone"
+    },
+    {
+      "claim_id": "claim-ffd7fc0c3a8cb3ed",
+      "kind": "definition",
+      "normalized_statement": "ProductionNetwork is a NetworkSegment",
+      "object": "NetworkSegment",
+      "paragraph_id": "p013",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "A production network is a type of network segment that hosts business systems.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-9b4f3d0cce14de9b",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "ProductionNetwork is a NetworkSegment",
+      "subject": "ProductionNetwork"
+    },
+    {
+      "claim_id": "claim-2d821f115e936373",
+      "kind": "relation",
+      "normalized_statement": "ProductionNetwork hosts BusinessSystem",
+      "object": "BusinessSystem",
+      "paragraph_id": "p013",
+      "predicate": "hosts",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "A production network is a type of network segment that hosts business systems.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-9b4f3d0cce14de9b",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "ProductionNetwork hosts BusinessSystem",
+      "subject": "ProductionNetwork"
+    },
+    {
+      "claim_id": "claim-b78af31ae040aaec",
+      "kind": "definition",
+      "normalized_statement": "ManagementNetwork is a NetworkSegment",
+      "object": "NetworkSegment",
+      "paragraph_id": "p013",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p013",
+        "evidence": "A management network is a type of network segment used for administrative access.",
+        "paragraph_id": "p013",
+        "sentence_id": "sent-6ab8b0d4020509c7",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "ManagementNetwork is a NetworkSegment",
+      "subject": "ManagementNetwork"
+    },
+    {
+      "claim_id": "claim-e36ffb944cb74f71",
+      "kind": "relation",
+      "normalized_statement": "EndpointSecurity protects Laptop",
+      "object": "Laptop",
+      "paragraph_id": "p014",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Endpoint security protects laptops, desktops, mobile devices, and servers.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-25ae192423c2f1c7",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "EndpointSecurity protects Laptop",
+      "subject": "EndpointSecurity"
+    },
+    {
+      "claim_id": "claim-2bad069fac579796",
+      "kind": "relation",
+      "normalized_statement": "EndpointSecurity protects Desktop",
+      "object": "Desktop",
+      "paragraph_id": "p014",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Endpoint security protects laptops, desktops, mobile devices, and servers.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-25ae192423c2f1c7",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "EndpointSecurity protects Desktop",
+      "subject": "EndpointSecurity"
+    },
+    {
+      "claim_id": "claim-287b838655c31b3d",
+      "kind": "relation",
+      "normalized_statement": "EndpointSecurity protects MobileDevice",
+      "object": "MobileDevice",
+      "paragraph_id": "p014",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Endpoint security protects laptops, desktops, mobile devices, and servers.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-25ae192423c2f1c7",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "EndpointSecurity protects MobileDevice",
+      "subject": "EndpointSecurity"
+    },
+    {
+      "claim_id": "claim-57bc4196bc9fcc7f",
+      "kind": "relation",
+      "normalized_statement": "EndpointSecurity protects Server",
+      "object": "Server",
+      "paragraph_id": "p014",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Endpoint security protects laptops, desktops, mobile devices, and servers.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-25ae192423c2f1c7",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "EndpointSecurity protects Server",
+      "subject": "EndpointSecurity"
+    },
+    {
+      "claim_id": "claim-c77cd28eabb9cc62",
+      "kind": "definition",
+      "normalized_statement": "Endpoint is a DeviceConnectedToTheOrganizationalNetwork",
+      "object": "DeviceConnectedToTheOrganizationalNetwork",
+      "paragraph_id": "p014",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "An endpoint is a device connected to the organizational network.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-b7c49c42deed4c1d",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "Endpoint is a DeviceConnectedToTheOrganizationalNetwork",
+      "subject": "Endpoint"
+    },
+    {
+      "claim_id": "claim-492092eeae7bda60",
+      "kind": "definition",
+      "normalized_statement": "AntivirusSoftware is a EndpointProtectionControl",
+      "object": "EndpointProtectionControl",
+      "paragraph_id": "p014",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Antivirus software is a type of endpoint protection control.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-e065858410cfde5c",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "AntivirusSoftware is a EndpointProtectionControl",
+      "subject": "AntivirusSoftware"
+    },
+    {
+      "claim_id": "claim-6db1af3ed09ddec2",
+      "kind": "definition",
+      "normalized_statement": "EndpointDetectionAndResponse is a EndpointSecurityTechnology",
+      "object": "EndpointSecurityTechnology",
+      "paragraph_id": "p014",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Endpoint detection and response is a type of endpoint security technology.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-4f461a3abb80b2a9",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "EndpointDetectionAndResponse is a EndpointSecurityTechnology",
+      "subject": "EndpointDetectionAndResponse"
+    },
+    {
+      "claim_id": "claim-a9a5adffe26b34cb",
+      "kind": "relation",
+      "normalized_statement": "DeviceEncryption protects DataStoredOnAnEndpoint",
+      "object": "DataStoredOnAnEndpoint",
+      "paragraph_id": "p014",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Device encryption protects data stored on an endpoint.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-ea97162491aed812",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "DeviceEncryption protects DataStoredOnAnEndpoint",
+      "subject": "DeviceEncryption"
+    },
+    {
+      "claim_id": "claim-f31319ceedb75f93",
+      "kind": "relation",
+      "normalized_statement": "PatchManagement reduces Vulnerability",
+      "object": "Vulnerability",
+      "paragraph_id": "p014",
+      "predicate": "reduces",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Patch management reduces vulnerabilities by applying software updates.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-5d7944cd07df8b88",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "PatchManagement reduces Vulnerability",
+      "subject": "PatchManagement"
+    },
+    {
+      "claim_id": "claim-7f7e6329c8589de4",
+      "kind": "relation",
+      "normalized_statement": "PatchManagement applies SoftwareUpdate",
+      "object": "SoftwareUpdate",
+      "paragraph_id": "p014",
+      "predicate": "applies",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Patch management reduces vulnerabilities by applying software updates.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-5d7944cd07df8b88",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "PatchManagement applies SoftwareUpdate",
+      "subject": "PatchManagement"
+    },
+    {
+      "claim_id": "claim-e3f9b80456372291",
+      "kind": "relation",
+      "normalized_statement": "ConfigurationHardening reduces AttackSurface",
+      "object": "AttackSurface",
+      "paragraph_id": "p014",
+      "predicate": "reduces",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Configuration hardening reduces attack surface by disabling unnecessary services and applying secure settings.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-9ffc068a22c2ad02",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "ConfigurationHardening reduces AttackSurface",
+      "subject": "ConfigurationHardening"
+    },
+    {
+      "claim_id": "claim-88a089bec7d44b0b",
+      "kind": "relation",
+      "normalized_statement": "ConfigurationHardening disabls UnnecessaryService",
+      "object": "UnnecessaryService",
+      "paragraph_id": "p014",
+      "predicate": "disabls",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Configuration hardening reduces attack surface by disabling unnecessary services and applying secure settings.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-9ffc068a22c2ad02",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "ConfigurationHardening disabls UnnecessaryService",
+      "subject": "ConfigurationHardening"
+    },
+    {
+      "claim_id": "claim-003853fa683041ea",
+      "kind": "relation",
+      "normalized_statement": "ConfigurationHardening disabls ApplyingSecureSetting",
+      "object": "ApplyingSecureSetting",
+      "paragraph_id": "p014",
+      "predicate": "disabls",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "Configuration hardening reduces attack surface by disabling unnecessary services and applying secure settings.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-9ffc068a22c2ad02",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "ConfigurationHardening disabls ApplyingSecureSetting",
+      "subject": "ConfigurationHardening"
+    },
+    {
+      "claim_id": "claim-09be4519530aa2b8",
+      "kind": "definition",
+      "normalized_statement": "Laptop is a Endpoint",
+      "object": "Endpoint",
+      "paragraph_id": "p014",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "A laptop is a type of endpoint.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-49616c1923fdcb50",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "Laptop is a Endpoint",
+      "subject": "Laptop"
+    },
+    {
+      "claim_id": "claim-0e49748a1ccc4bb6",
+      "kind": "definition",
+      "normalized_statement": "Workstation is a Endpoint",
+      "object": "Endpoint",
+      "paragraph_id": "p014",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "A workstation is a type of endpoint.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-8ecd7a50225a9dd1",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "Workstation is a Endpoint",
+      "subject": "Workstation"
+    },
+    {
+      "claim_id": "claim-0a9ed507cb09b9e2",
+      "kind": "definition",
+      "normalized_statement": "MobilePhone is a Endpoint",
+      "object": "Endpoint",
+      "paragraph_id": "p014",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "A mobile phone is a type of endpoint.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-dee6071765f31f67",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "MobilePhone is a Endpoint",
+      "subject": "MobilePhone"
+    },
+    {
+      "claim_id": "claim-2ac4ec2ffe43f7c9",
+      "kind": "definition",
+      "normalized_statement": "Server is a Endpoint",
+      "object": "Endpoint",
+      "paragraph_id": "p014",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p014",
+        "evidence": "A server is a type of endpoint.",
+        "paragraph_id": "p014",
+        "sentence_id": "sent-31b24f234bf2afe3",
+        "source_text_id": "bacb50f21439bc84edfaeca10bbe90053233a0b74190272345a8552b23cf2b13"
+      },
+      "statement": "Server is a Endpoint",
+      "subject": "Server"
+    }
+  ],
+  "contract_required_stage": "semantic_claims",
+  "observed_stage": "semantic_claims",
+  "paragraph_asset_ids": [
+    "p013",
+    "p014"
+  ],
+  "stage": "semantic_claims"
+}

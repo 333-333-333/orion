@@ -1,0 +1,556 @@
+{
+  "claim_count": 32,
+  "claims": [
+    {
+      "claim_id": "claim-97b87088fe8964d3",
+      "kind": "relation",
+      "normalized_statement": "CloudSecurity protects CloudService",
+      "object": "CloudService",
+      "paragraph_id": "p017",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-a2516bd2a990bd82",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "CloudSecurity protects CloudService",
+      "subject": "CloudSecurity"
+    },
+    {
+      "claim_id": "claim-be4823af671a0c3e",
+      "kind": "relation",
+      "normalized_statement": "CloudSecurity protects CloudInfrastructure",
+      "object": "CloudInfrastructure",
+      "paragraph_id": "p017",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-a2516bd2a990bd82",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "CloudSecurity protects CloudInfrastructure",
+      "subject": "CloudSecurity"
+    },
+    {
+      "claim_id": "claim-0c9dbbc8d638e0a6",
+      "kind": "relation",
+      "normalized_statement": "CloudSecurity protects CloudWorkload",
+      "object": "CloudWorkload",
+      "paragraph_id": "p017",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-a2516bd2a990bd82",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "CloudSecurity protects CloudWorkload",
+      "subject": "CloudSecurity"
+    },
+    {
+      "claim_id": "claim-bab71cb6f749c5e5",
+      "kind": "relation",
+      "normalized_statement": "CloudSecurity protects CloudData",
+      "object": "CloudData",
+      "paragraph_id": "p017",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-a2516bd2a990bd82",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "CloudSecurity protects CloudData",
+      "subject": "CloudSecurity"
+    },
+    {
+      "claim_id": "claim-e7a94fa1a0b594f9",
+      "kind": "definition",
+      "normalized_statement": "CloudAccount is a AdministrativeBoundaryForCloudResource",
+      "object": "AdministrativeBoundaryForCloudResource",
+      "paragraph_id": "p017",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "A cloud account is an administrative boundary for cloud resources.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-d41d3f51745baa4c",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "CloudAccount is a AdministrativeBoundaryForCloudResource",
+      "subject": "CloudAccount"
+    },
+    {
+      "claim_id": "claim-74f563dda4566e28",
+      "kind": "definition",
+      "normalized_statement": "CloudWorkload is a ComputingResourceHostedInACloudEnvironment",
+      "object": "ComputingResourceHostedInACloudEnvironment",
+      "paragraph_id": "p017",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "A cloud workload is a type of computing resource hosted in a cloud environment.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-843c9cb4f8b29cc4",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "CloudWorkload is a ComputingResourceHostedInACloudEnvironment",
+      "subject": "CloudWorkload"
+    },
+    {
+      "claim_id": "claim-53b29be1ebd450f0",
+      "kind": "definition",
+      "normalized_statement": "VirtualMachine is a CloudWorkload",
+      "object": "CloudWorkload",
+      "paragraph_id": "p017",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "A virtual machine is a type of cloud workload.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-bfdcb61d69964d5b",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "VirtualMachine is a CloudWorkload",
+      "subject": "VirtualMachine"
+    },
+    {
+      "claim_id": "claim-6e99206b3adda3a4",
+      "kind": "definition",
+      "normalized_statement": "Container is a CloudWorkload",
+      "object": "CloudWorkload",
+      "paragraph_id": "p017",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "A container is a type of cloud workload.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-afb137de3a4baec4",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "Container is a CloudWorkload",
+      "subject": "Container"
+    },
+    {
+      "claim_id": "claim-0135210bc4afa58e",
+      "kind": "definition",
+      "normalized_statement": "ServerlessFunction is a CloudWorkload",
+      "object": "CloudWorkload",
+      "paragraph_id": "p017",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "A serverless function is a type of cloud workload.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-4320722fe92e04ab",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "ServerlessFunction is a CloudWorkload",
+      "subject": "ServerlessFunction"
+    },
+    {
+      "claim_id": "claim-cc52334c3d884235",
+      "kind": "definition",
+      "normalized_statement": "ObjectStorageBucket is a CloudStorageResource",
+      "object": "CloudStorageResource",
+      "paragraph_id": "p017",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "An object storage bucket is a type of cloud storage resource.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-aaa643b3cabad8ed",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "ObjectStorageBucket is a CloudStorageResource",
+      "subject": "ObjectStorageBucket"
+    },
+    {
+      "claim_id": "claim-5c4335926acadad5",
+      "kind": "definition",
+      "normalized_statement": "CloudIdentity is_a CloudIdentity",
+      "object": "CloudIdentity",
+      "paragraph_id": "p017",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "A cloud identity is an identity used to access cloud services.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-7b25ca786327692f",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "CloudIdentity is_a CloudIdentity",
+      "subject": "CloudIdentity"
+    },
+    {
+      "claim_id": "claim-b01195bb22b92131",
+      "kind": "relation",
+      "normalized_statement": "CloudSecurityPostureManagementTool detects MisconfigurationInCloudEnvironment",
+      "object": "MisconfigurationInCloudEnvironment",
+      "paragraph_id": "p017",
+      "predicate": "detects",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "A cloud security posture management tool detects misconfigurations in cloud environments.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-6d2157a6fb9e76a6",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "CloudSecurityPostureManagementTool detects MisconfigurationInCloudEnvironment",
+      "subject": "CloudSecurityPostureManagementTool"
+    },
+    {
+      "claim_id": "claim-7d41958c071fa6dd",
+      "kind": "relation",
+      "normalized_statement": "Cloud access SecurityBrokerMonitor",
+      "object": "SecurityBrokerMonitor",
+      "paragraph_id": "p017",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "A cloud access security broker monitors and controls cloud service usage.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-8edd437e75862e08",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "Cloud access SecurityBrokerMonitor",
+      "subject": "Cloud"
+    },
+    {
+      "claim_id": "claim-4183b87d7ac64c72",
+      "kind": "relation",
+      "normalized_statement": "Cloud controls CloudServiceUsage",
+      "object": "CloudServiceUsage",
+      "paragraph_id": "p017",
+      "predicate": "controls",
+      "source": {
+        "asset_id": "p017",
+        "evidence": "A cloud access security broker monitors and controls cloud service usage.",
+        "paragraph_id": "p017",
+        "sentence_id": "sent-8edd437e75862e08",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "Cloud controls CloudServiceUsage",
+      "subject": "Cloud"
+    },
+    {
+      "claim_id": "claim-ededbdb6c3595af9",
+      "kind": "relation",
+      "normalized_statement": "Cryptography protects InformationThroughMathematicalTechnique",
+      "object": "InformationThroughMathematicalTechnique",
+      "paragraph_id": "p018",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Cryptography protects information through mathematical techniques.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-86a1513c06816c14",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "Cryptography protects InformationThroughMathematicalTechnique",
+      "subject": "Cryptography"
+    },
+    {
+      "claim_id": "claim-c15b623d57b49fc6",
+      "kind": "definition",
+      "normalized_statement": "Encryption is a CryptographicMechanism",
+      "object": "CryptographicMechanism",
+      "paragraph_id": "p018",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Encryption is a cryptographic mechanism that protects confidentiality.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-ed46a6f0effdeacc",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "Encryption is a CryptographicMechanism",
+      "subject": "Encryption"
+    },
+    {
+      "claim_id": "claim-3be4a007fb1b543d",
+      "kind": "relation",
+      "normalized_statement": "Encryption protects Confidentiality",
+      "object": "Confidentiality",
+      "paragraph_id": "p018",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Encryption is a cryptographic mechanism that protects confidentiality.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-ed46a6f0effdeacc",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "Encryption protects Confidentiality",
+      "subject": "Encryption"
+    },
+    {
+      "claim_id": "claim-b4074b557692d2d1",
+      "kind": "definition",
+      "normalized_statement": "Decryption is a Process",
+      "object": "Process",
+      "paragraph_id": "p018",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Decryption is the process that converts encrypted data back into readable data.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-162ee4a96f1038ee",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "Decryption is a Process",
+      "subject": "Decryption"
+    },
+    {
+      "claim_id": "claim-6a8119041e69a60c",
+      "kind": "relation",
+      "normalized_statement": "Decryption converts EncryptedDataBackIntoReadableData",
+      "object": "EncryptedDataBackIntoReadableData",
+      "paragraph_id": "p018",
+      "predicate": "converts",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Decryption is the process that converts encrypted data back into readable data.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-162ee4a96f1038ee",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "Decryption converts EncryptedDataBackIntoReadableData",
+      "subject": "Decryption"
+    },
+    {
+      "claim_id": "claim-7fadd48695b703ba",
+      "kind": "definition",
+      "normalized_statement": "CryptographicKey is a Value",
+      "object": "Value",
+      "paragraph_id": "p018",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "A cryptographic key is a value used by a cryptographic algorithm.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-fbd6873342918fa5",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "CryptographicKey is a Value",
+      "subject": "CryptographicKey"
+    },
+    {
+      "claim_id": "claim-ea7b77abb29a3020",
+      "kind": "definition",
+      "normalized_statement": "SymmetricEncryption is a Encryption",
+      "object": "Encryption",
+      "paragraph_id": "p018",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Symmetric encryption is a type of encryption that uses the same key for encryption and decryption.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-766680bc936dc258",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "SymmetricEncryption is a Encryption",
+      "subject": "SymmetricEncryption"
+    },
+    {
+      "claim_id": "claim-6ab7e24f59fb2e4a",
+      "kind": "relation",
+      "normalized_statement": "SymmetricEncryption uses SameKeyForEncryption",
+      "object": "SameKeyForEncryption",
+      "paragraph_id": "p018",
+      "predicate": "uses",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Symmetric encryption is a type of encryption that uses the same key for encryption and decryption.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-766680bc936dc258",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "SymmetricEncryption uses SameKeyForEncryption",
+      "subject": "SymmetricEncryption"
+    },
+    {
+      "claim_id": "claim-5cf0a3e966cec62d",
+      "kind": "relation",
+      "normalized_statement": "SymmetricEncryption uses Decryption",
+      "object": "Decryption",
+      "paragraph_id": "p018",
+      "predicate": "uses",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Symmetric encryption is a type of encryption that uses the same key for encryption and decryption.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-766680bc936dc258",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "SymmetricEncryption uses Decryption",
+      "subject": "SymmetricEncryption"
+    },
+    {
+      "claim_id": "claim-6b82fed71f12bc5f",
+      "kind": "definition",
+      "normalized_statement": "AsymmetricEncryption is a Encryption",
+      "object": "Encryption",
+      "paragraph_id": "p018",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Asymmetric encryption is a type of encryption that uses a public key and a private key.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-5e56cb2feb1683c9",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "AsymmetricEncryption is a Encryption",
+      "subject": "AsymmetricEncryption"
+    },
+    {
+      "claim_id": "claim-92fbc4a38ad39b2c",
+      "kind": "relation",
+      "normalized_statement": "AsymmetricEncryption uses PublicKey",
+      "object": "PublicKey",
+      "paragraph_id": "p018",
+      "predicate": "uses",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Asymmetric encryption is a type of encryption that uses a public key and a private key.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-5e56cb2feb1683c9",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "AsymmetricEncryption uses PublicKey",
+      "subject": "AsymmetricEncryption"
+    },
+    {
+      "claim_id": "claim-3101e6cb7f5b3dd8",
+      "kind": "relation",
+      "normalized_statement": "AsymmetricEncryption uses PrivateKey",
+      "object": "PrivateKey",
+      "paragraph_id": "p018",
+      "predicate": "uses",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "Asymmetric encryption is a type of encryption that uses a public key and a private key.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-5e56cb2feb1683c9",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "AsymmetricEncryption uses PrivateKey",
+      "subject": "AsymmetricEncryption"
+    },
+    {
+      "claim_id": "claim-3744b7d64c846fb1",
+      "kind": "definition",
+      "normalized_statement": "DigitalSignature is a CryptographicMechanism",
+      "object": "CryptographicMechanism",
+      "paragraph_id": "p018",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "A digital signature is a cryptographic mechanism that verifies authenticity and integrity.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-b8101c058e7ef0bf",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "DigitalSignature is a CryptographicMechanism",
+      "subject": "DigitalSignature"
+    },
+    {
+      "claim_id": "claim-33a39df60451d821",
+      "kind": "relation",
+      "normalized_statement": "DigitalSignature verifies Authenticity",
+      "object": "Authenticity",
+      "paragraph_id": "p018",
+      "predicate": "verifies",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "A digital signature is a cryptographic mechanism that verifies authenticity and integrity.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-b8101c058e7ef0bf",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "DigitalSignature verifies Authenticity",
+      "subject": "DigitalSignature"
+    },
+    {
+      "claim_id": "claim-4be7cf0bb1eaeefb",
+      "kind": "relation",
+      "normalized_statement": "DigitalSignature verifies Integrity",
+      "object": "Integrity",
+      "paragraph_id": "p018",
+      "predicate": "verifies",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "A digital signature is a cryptographic mechanism that verifies authenticity and integrity.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-b8101c058e7ef0bf",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "DigitalSignature verifies Integrity",
+      "subject": "DigitalSignature"
+    },
+    {
+      "claim_id": "claim-19cb907493aab777",
+      "kind": "relation",
+      "normalized_statement": "HashFunction generates FixedLengthDigestFromInputData",
+      "object": "FixedLengthDigestFromInputData",
+      "paragraph_id": "p018",
+      "predicate": "generates",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "A hash function generates a fixed-length digest from input data.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-31002462b55f439c",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "HashFunction generates FixedLengthDigestFromInputData",
+      "subject": "HashFunction"
+    },
+    {
+      "claim_id": "claim-9ff2cbbb4bdc7c1e",
+      "kind": "relation",
+      "normalized_statement": "MessageAuthenticationCode verifies MessageIntegrity",
+      "object": "MessageIntegrity",
+      "paragraph_id": "p018",
+      "predicate": "verifies",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "A message authentication code verifies message integrity and authenticity.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-c30029f37e409663",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "MessageAuthenticationCode verifies MessageIntegrity",
+      "subject": "MessageAuthenticationCode"
+    },
+    {
+      "claim_id": "claim-f9216755c5720d01",
+      "kind": "relation",
+      "normalized_statement": "MessageAuthenticationCode verifies Authenticity",
+      "object": "Authenticity",
+      "paragraph_id": "p018",
+      "predicate": "verifies",
+      "source": {
+        "asset_id": "p018",
+        "evidence": "A message authentication code verifies message integrity and authenticity.",
+        "paragraph_id": "p018",
+        "sentence_id": "sent-c30029f37e409663",
+        "source_text_id": "e4439a344f54d17703d8df05ff5a78d18d4c8a74da5f5ca327422f5ad9828115"
+      },
+      "statement": "MessageAuthenticationCode verifies Authenticity",
+      "subject": "MessageAuthenticationCode"
+    }
+  ],
+  "contract_required_stage": "semantic_claims",
+  "observed_stage": "semantic_claims",
+  "paragraph_asset_ids": [
+    "p017",
+    "p018"
+  ],
+  "stage": "semantic_claims"
+}

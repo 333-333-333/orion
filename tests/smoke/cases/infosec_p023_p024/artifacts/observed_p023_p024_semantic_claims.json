@@ -1,0 +1,400 @@
+{
+  "claim_count": 23,
+  "claims": [
+    {
+      "claim_id": "claim-0d5a1673fe042c5c",
+      "kind": "definition",
+      "normalized_statement": "MalwareInfection is a SecurityIncident",
+      "object": "SecurityIncident",
+      "paragraph_id": "p023",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A malware infection is a type of security incident.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-e01cba9aa9a97a73",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "MalwareInfection is a SecurityIncident",
+      "subject": "MalwareInfection"
+    },
+    {
+      "claim_id": "claim-c6ae56949eaddec4",
+      "kind": "definition",
+      "normalized_statement": "PhishingAttack is a SocialEngineeringIncident",
+      "object": "SocialEngineeringIncident",
+      "paragraph_id": "p023",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A phishing attack is a type of social engineering incident.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-2f9317c3f8220682",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "PhishingAttack is a SocialEngineeringIncident",
+      "subject": "PhishingAttack"
+    },
+    {
+      "claim_id": "claim-c0b5776fc4d6ba30",
+      "kind": "definition",
+      "normalized_statement": "RansomwareAttack is a MalwareIncident",
+      "object": "MalwareIncident",
+      "paragraph_id": "p023",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A ransomware attack is a type of malware incident.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-d881418b3bd15157",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "RansomwareAttack is a MalwareIncident",
+      "subject": "RansomwareAttack"
+    },
+    {
+      "claim_id": "claim-24eceea2d67f6660",
+      "kind": "definition",
+      "normalized_statement": "DataBreach is a SecurityIncident",
+      "object": "SecurityIncident",
+      "paragraph_id": "p023",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-9a5c826cc6a18ec1",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "DataBreach is a SecurityIncident",
+      "subject": "DataBreach"
+    },
+    {
+      "claim_id": "claim-24464ab0615baafd",
+      "kind": "relation",
+      "normalized_statement": "DataBreach involves UnauthorizedAccessTo",
+      "object": "UnauthorizedAccessTo",
+      "paragraph_id": "p023",
+      "predicate": "involves",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-9a5c826cc6a18ec1",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "DataBreach involves UnauthorizedAccessTo",
+      "subject": "DataBreach"
+    },
+    {
+      "claim_id": "claim-78a29a867061ef7c",
+      "kind": "relation",
+      "normalized_statement": "DataBreach involves DisclosureOfData",
+      "object": "DisclosureOfData",
+      "paragraph_id": "p023",
+      "predicate": "involves",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-9a5c826cc6a18ec1",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "DataBreach involves DisclosureOfData",
+      "subject": "DataBreach"
+    },
+    {
+      "claim_id": "claim-d5553a605f685028",
+      "kind": "definition",
+      "normalized_statement": "DenialOfServiceAttack is a AvailabilityIncident",
+      "object": "AvailabilityIncident",
+      "paragraph_id": "p023",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A denial-of-service attack is a type of availability incident.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-2c33808a1abb436c",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "DenialOfServiceAttack is a AvailabilityIncident",
+      "subject": "DenialOfServiceAttack"
+    },
+    {
+      "claim_id": "claim-f0863555ef67e93f",
+      "kind": "definition",
+      "normalized_statement": "UnauthorizedAccess is a SecurityIncidentInvolvingAccessByAnUnapprovedIdentity",
+      "object": "SecurityIncidentInvolvingAccessByAnUnapprovedIdentity",
+      "paragraph_id": "p023",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "Unauthorized access is a type of security incident involving access by an unapproved identity.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-d50bf0a734d1fa6e",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "UnauthorizedAccess is a SecurityIncidentInvolvingAccessByAnUnapprovedIdentity",
+      "subject": "UnauthorizedAccess"
+    },
+    {
+      "claim_id": "claim-4a39d218b5971173",
+      "kind": "definition",
+      "normalized_statement": "InsiderMisuse is a SecurityIncidentCausedByAnInternalActor",
+      "object": "SecurityIncidentCausedByAnInternalActor",
+      "paragraph_id": "p023",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "Insider misuse is a type of security incident caused by an internal actor.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-0ee03049fc81b298",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "InsiderMisuse is a SecurityIncidentCausedByAnInternalActor",
+      "subject": "InsiderMisuse"
+    },
+    {
+      "claim_id": "claim-f62e0f3f8f279267",
+      "kind": "definition",
+      "normalized_statement": "LostDeviceIncident is a PhysicalAndInformationSecurityIncident",
+      "object": "PhysicalAndInformationSecurityIncident",
+      "paragraph_id": "p023",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A lost device incident is a type of physical and information security incident.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-6c6984888b9903d3",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "LostDeviceIncident is a PhysicalAndInformationSecurityIncident",
+      "subject": "LostDeviceIncident"
+    },
+    {
+      "claim_id": "claim-e8a10a2eab180bfa",
+      "kind": "definition",
+      "normalized_statement": "BusinessContinuity is a CapabilityToContinueCriticalOperationDuringDisruption",
+      "object": "CapabilityToContinueCriticalOperationDuringDisruption",
+      "paragraph_id": "p024",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "Business continuity is the capability to continue critical operations during disruption.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-61e7769ad89df90b",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "BusinessContinuity is a CapabilityToContinueCriticalOperationDuringDisruption",
+      "subject": "BusinessContinuity"
+    },
+    {
+      "claim_id": "claim-a1d11496ce22aae8",
+      "kind": "definition",
+      "normalized_statement": "DisasterRecovery is a ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
+      "object": "ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
+      "paragraph_id": "p024",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "Disaster recovery is the process of restoring technology services after a disruptive event.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-5d27068a7e69b4f8",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "DisasterRecovery is a ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
+      "subject": "DisasterRecovery"
+    },
+    {
+      "claim_id": "claim-0977c5679d372666",
+      "kind": "relation",
+      "normalized_statement": " business ImpactAnalysisIdentifyCriticalProcess",
+      "object": "ImpactAnalysisIdentifyCriticalProcess",
+      "paragraph_id": "p024",
+      "predicate": "business",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A business impact analysis identifies critical processes, dependencies, and recovery priorities.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-9d26f2f327d1fc0d",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": " business ImpactAnalysisIdentifyCriticalProcess"
+    },
+    {
+      "claim_id": "claim-fa7d2b1a0a1b0f1f",
+      "kind": "relation",
+      "normalized_statement": " business Dependency",
+      "object": "Dependency",
+      "paragraph_id": "p024",
+      "predicate": "business",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A business impact analysis identifies critical processes, dependencies, and recovery priorities.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-9d26f2f327d1fc0d",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": " business Dependency"
+    },
+    {
+      "claim_id": "claim-a04dd9a12bc03291",
+      "kind": "relation",
+      "normalized_statement": " business RecoveryPriority",
+      "object": "RecoveryPriority",
+      "paragraph_id": "p024",
+      "predicate": "business",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A business impact analysis identifies critical processes, dependencies, and recovery priorities.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-9d26f2f327d1fc0d",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": " business RecoveryPriority"
+    },
+    {
+      "claim_id": "claim-a750fafb923edcf2",
+      "kind": "relation",
+      "normalized_statement": "RecoveryTimeObjective defines MaximumAcceptableTimeToRestoreAService",
+      "object": "MaximumAcceptableTimeToRestoreAService",
+      "paragraph_id": "p024",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A recovery time objective defines the maximum acceptable time to restore a service.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-5bcd9e2636f605bd",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "RecoveryTimeObjective defines MaximumAcceptableTimeToRestoreAService",
+      "subject": "RecoveryTimeObjective"
+    },
+    {
+      "claim_id": "claim-780a945dc4d5e3e6",
+      "kind": "relation",
+      "normalized_statement": "RecoveryPointObjective defines MaximumAcceptableAmountOfDataLossMeasuredInTime",
+      "object": "MaximumAcceptableAmountOfDataLossMeasuredInTime",
+      "paragraph_id": "p024",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A recovery point objective defines the maximum acceptable amount of data loss measured in time.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-5a3e70a4bc550f9e",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "RecoveryPointObjective defines MaximumAcceptableAmountOfDataLossMeasuredInTime",
+      "subject": "RecoveryPointObjective"
+    },
+    {
+      "claim_id": "claim-6e5ea18d7b4d746c",
+      "kind": "definition",
+      "normalized_statement": "Backup is a CopyOfData",
+      "object": "CopyOfData",
+      "paragraph_id": "p024",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A backup is a copy of data used for recovery.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-e426fc60b9efc01a",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "Backup is a CopyOfData",
+      "subject": "Backup"
+    },
+    {
+      "claim_id": "claim-93971b360eccb022",
+      "kind": "relation",
+      "normalized_statement": "BackupPolicy defines BackupFrequency",
+      "object": "BackupFrequency",
+      "paragraph_id": "p024",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-73460460a34eaa66",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "BackupPolicy defines BackupFrequency",
+      "subject": "BackupPolicy"
+    },
+    {
+      "claim_id": "claim-a9f51a290ce00754",
+      "kind": "relation",
+      "normalized_statement": "BackupPolicy defines Retention",
+      "object": "Retention",
+      "paragraph_id": "p024",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-73460460a34eaa66",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "BackupPolicy defines Retention",
+      "subject": "BackupPolicy"
+    },
+    {
+      "claim_id": "claim-4a130cbb2fbe2b48",
+      "kind": "relation",
+      "normalized_statement": "BackupPolicy defines Protection",
+      "object": "Protection",
+      "paragraph_id": "p024",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-73460460a34eaa66",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "BackupPolicy defines Protection",
+      "subject": "BackupPolicy"
+    },
+    {
+      "claim_id": "claim-8d1ce3b91258a29e",
+      "kind": "relation",
+      "normalized_statement": "BackupPolicy defines RestorationRequirement",
+      "object": "RestorationRequirement",
+      "paragraph_id": "p024",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-73460460a34eaa66",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "BackupPolicy defines RestorationRequirement",
+      "subject": "BackupPolicy"
+    },
+    {
+      "claim_id": "claim-f0c2880899194bac",
+      "kind": "relation",
+      "normalized_statement": "DisasterRecoveryTest verifies WhetherRecoveryProcedureWorkAsExpected",
+      "object": "WhetherRecoveryProcedureWorkAsExpected",
+      "paragraph_id": "p024",
+      "predicate": "verifies",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A disaster recovery test verifies whether recovery procedures work as expected.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-17c09d079bce0c16",
+        "source_text_id": "99286b05f965e54730d5150a8e8e7356d5f603631e35c642ed7cafc8603bd115"
+      },
+      "statement": "DisasterRecoveryTest verifies WhetherRecoveryProcedureWorkAsExpected",
+      "subject": "DisasterRecoveryTest"
+    }
+  ],
+  "contract_required_stage": "semantic_claims",
+  "observed_stage": "semantic_claims",
+  "paragraph_asset_ids": [
+    "p023",
+    "p024"
+  ],
+  "stage": "semantic_claims"
+}

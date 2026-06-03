@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
@@ -14,117 +15,101 @@ _NS = {
 
 _RDF_ATTR = {
     "about": f'{{{_NS["rdf"]}}}about',
+    "ID": f'{{{_NS["rdf"]}}}ID',
     "resource": f'{{{_NS["rdf"]}}}resource',
 }
 
 _LIBRARY_RDF_OUTPUT_ARTIFACT = Path(__file__).parent / "artifacts" / "library_generic_output.rdf"
+_LIBRARY_JSON_ARTIFACT = Path(__file__).parent / "artifacts" / "library_generic_output.json"
 _INFOSEC_RDF_OUTPUT_ARTIFACT = Path(__file__).parent / "artifacts" / "infosec_3k_output.rdf"
+_INFOSEC_JSON_ARTIFACT = Path(__file__).parent / "artifacts" / "infosec_3k_rdf_output.json"
 
 
-def _local_name(iri: str) -> str:
-    token = (iri or "").strip()
+def _normalize_label(value: str) -> str:
+    token = (value or "").strip()
     if not token:
         return ""
-    token = token.rsplit("#", 1)[-1]
     token = token.rsplit("/", 1)[-1]
+    token = token.rsplit("#", 1)[-1]
+    if token.startswith("orion:"):
+        token = token.split(":", 1)[1]
     return token
 
 
-def _domain_nodes(root: ET.Element) -> set[str]:
-    nodes: set[str] = set()
-    for xpath in (".//owl:Class", ".//owl:ObjectProperty"):
-        for node in root.findall(xpath, _NS):
-            iri = node.attrib.get(_RDF_ATTR["about"], "").strip()
-            if iri.startswith("https://orion.local/resource/"):
-                nodes.add(iri)
-    return nodes
+def _schema_classes(output_payload: dict) -> dict[str, str]:
+    graph = output_payload.get("graph", {}) if isinstance(output_payload, dict) else {}
+    schema = graph.get("schema", {}) if isinstance(graph, dict) else {}
+    raw_classes = schema.get("classes", []) if isinstance(schema, dict) else []
+
+    classes: dict[str, str] = {}
+    if isinstance(raw_classes, list):
+        for cls in raw_classes:
+            if not isinstance(cls, dict):
+                continue
+            iri = str(cls.get("iri", "")).strip()
+            label = str(cls.get("label", "")).strip()
+            if iri:
+                classes[iri] = label
+    return classes
 
 
-def _add_edge(edges: dict[str, set[str]], left: str, right: str) -> None:
-    if left in edges and right in edges and left != right:
-        edges[left].add(right)
-        edges[right].add(left)
+def _rdf_classes(root: ET.Element) -> tuple[dict[str, list[str]], list[str], list[str]]:
+    rdf_classes: dict[str, list[str]] = {}
+    anonymous: list[str] = []
+    mute: list[str] = []
 
-
-def _isolated_visible_nodes(root: ET.Element) -> tuple[int, list[str]]:
-    visible_nodes = _domain_nodes(root)
-    edges: dict[str, set[str]] = {iri: set() for iri in visible_nodes}
-
-    # taxonomía
-    for cls in root.findall('.//owl:Class', _NS):
-        c = cls.attrib.get(_RDF_ATTR["about"], "").strip()
-        if c not in visible_nodes:
+    for node in root.findall('.//owl:Class', _NS):
+        iri = node.attrib.get(_RDF_ATTR['about'], '').strip() or node.attrib.get(_RDF_ATTR['ID'], '').strip()
+        labels = [
+            (label.text or '').strip()
+            for label in node.findall('rdfs:label', _NS)
+            if (label.text or '').strip()
+        ]
+        if not iri:
+            anonymous.append(labels[0] if labels else 'anonymous')
             continue
-        for sub in cls.findall('rdfs:subClassOf', _NS):
-            parent = sub.attrib.get(_RDF_ATTR["resource"], "").strip()
-            if parent:
-                _add_edge(edges, c, parent)
+        if not labels:
+            mute.append(iri)
+        rdf_classes[iri] = labels
 
-        for restriction in cls.findall('rdfs:subClassOf/owl:Restriction', _NS):
-            on_property = restriction.find('owl:onProperty', _NS)
-            on_iri = on_property.attrib.get(_RDF_ATTR["resource"], "").strip() if on_property is not None else ""
-            if on_iri:
-                _add_edge(edges, c, on_iri)
-
-            for child in ('owl:someValuesFrom', 'owl:allValuesFrom'):
-                obj_node = restriction.find(child, _NS)
-                obj_iri = obj_node.attrib.get(_RDF_ATTR["resource"], "").strip() if obj_node is not None else ""
-                if obj_iri:
-                    _add_edge(edges, c, obj_iri)
-
-    # propiedades semánticas
-    for prop in root.findall('.//owl:ObjectProperty', _NS):
-        p = prop.attrib.get(_RDF_ATTR["about"], "").strip()
-        if p not in visible_nodes:
-            continue
-        for domain in prop.findall('rdfs:domain', _NS):
-            _add_edge(edges, p, domain.attrib.get(_RDF_ATTR["resource"], "").strip())
-        for rng in prop.findall('rdfs:range', _NS):
-            _add_edge(edges, p, rng.attrib.get(_RDF_ATTR["resource"], "").strip())
-
-    # conexiones explícitas por statements reificados
-    for stmt in root.findall('.//rdf:Statement', _NS):
-        subject_node = stmt.find('rdf:subject', _NS)
-        predicate_node = stmt.find('rdf:predicate', _NS)
-        object_node = stmt.find('rdf:object', _NS)
-
-        subject = subject_node.attrib.get(_RDF_ATTR["resource"], "").strip() if subject_node is not None else ""
-        predicate = predicate_node.attrib.get(_RDF_ATTR["resource"], "").strip() if predicate_node is not None else ""
-        object_ = object_node.attrib.get(_RDF_ATTR["resource"], "").strip() if object_node is not None else ""
-
-        if subject in edges and predicate in edges:
-            _add_edge(edges, subject, predicate)
-        if predicate in edges and object_ in edges:
-            _add_edge(edges, predicate, object_)
-        if subject in edges and object_ in edges:
-            _add_edge(edges, subject, object_)
-
-    isolated = sorted(
-        iri
-        for iri, neighbors in edges.items()
-        if not neighbors
-    )
-
-    return len(visible_nodes), isolated
+    return rdf_classes, anonymous, mute
 
 
 @pytest.mark.parametrize(
-    "artifact_path,contract_scope",
+    'artifact_path,json_path,contract_scope',
     [
-        (_LIBRARY_RDF_OUTPUT_ARTIFACT, "library"),
-        (_INFOSEC_RDF_OUTPUT_ARTIFACT, "infosec_3k"),
+        (_LIBRARY_RDF_OUTPUT_ARTIFACT, _LIBRARY_JSON_ARTIFACT, 'library'),
+        (_INFOSEC_RDF_OUTPUT_ARTIFACT, _INFOSEC_JSON_ARTIFACT, 'infosec_3k'),
     ],
 )
-def test_rdf_output_contract_no_visible_isolated_nodes_red(artifact_path: Path, contract_scope: str):
+def test_rdf_output_contract_schema_classes_are_visible_red(artifact_path: Path, json_path: Path, contract_scope: str):
     assert artifact_path.exists(), f"artifact RDF ausente para {contract_scope}: {artifact_path}"
+    assert json_path.exists(), f"artifact JSON ausente para {contract_scope}: {json_path}"
 
-    rdf_xml = artifact_path.read_text(encoding="utf-8")
+    output_payload = json.loads(json_path.read_text(encoding='utf-8'))
+    expected_classes = _schema_classes(output_payload)
+    assert expected_classes, f"{contract_scope}: schema.classes vacio en JSON"
+
+    rdf_xml = artifact_path.read_text(encoding='utf-8')
     root = ET.fromstring(rdf_xml)
+    rdf_classes, anonymous_classes, mute_classes = _rdf_classes(root)
 
-    visible_total, isolated_nodes = _isolated_visible_nodes(root)
-    local_examples = [_local_name(iri) for iri in isolated_nodes[:12]]
+    missing_classes = sorted(iri for iri in expected_classes if iri not in rdf_classes)
+    assert not missing_classes, (
+        f"{contract_scope}: faltan owl:Class para schema.classes en RDF; sample={missing_classes[:8]}"
+    )
 
-    assert not isolated_nodes, (
-        f"{contract_scope}: publicó {len(isolated_nodes)} nodos visibles aislados en RDF (total visibles={visible_total}); "
-        f"ejemplos_locales={local_examples}"
+    label_mismatches = sorted(
+        iri for iri, expected_label in expected_classes.items()
+        if expected_label and _normalize_label(expected_label) not in {_normalize_label(label) for label in rdf_classes.get(iri, [])}
+    )
+    assert not label_mismatches, (
+        f"{contract_scope}: labels de owl:Class no calzan con schema.classes; sample={label_mismatches[:8]}"
+    )
+
+    assert not anonymous_classes, (
+        f"{contract_scope}: owl:Class anonimos detectados; sample={anonymous_classes[:8]}"
+    )
+    assert not mute_classes, (
+        f"{contract_scope}: owl:Class mudos detectados; sample={mute_classes[:8]}"
     )

@@ -11,6 +11,7 @@ from pipeline.step_006_entity_extraction import extract_entities_from_doc
 from pipeline.step_001_input_intake import OrionError, process_input_intake
 from pipeline.step_008_coreference_resolution import resolve_coreferences_from_payload
 from pipeline.step_008_relation_extraction import extract_relations_from_payload
+from pipeline.step_009_canonical_claims import extract_canonical_claims_from_payload
 from pipeline.step_009_triple_extraction import extract_triples_from_payload
 from pipeline.step_010_taxonomy_induction import extract_taxonomy_relations_from_payload
 from pipeline.step_011_type_assertion import extract_type_assertions_from_payload
@@ -31,6 +32,8 @@ class ORIONConfig:
     output_strategy: str = 'rdf'
     base_iri: str = _BR_DEFAULT_BASE_IRI
     prefixes: dict[str, str] | None = None
+    canonical_claims: dict[str, Any] | None = None
+    semantic_claims: dict[str, Any] | None = None
 
     def __init__(
         self,
@@ -38,6 +41,8 @@ class ORIONConfig:
         output_strategy: str | None = None,
         base_iri: str | None = None,
         prefixes: dict[str, str] | None = None,
+        canonical_claims: dict[str, Any] | None = None,
+        semantic_claims: dict[str, Any] | None = None,
     ) -> None:
         resolved_model = _BR_DEFAULT_SPACY_MODEL if spacy_model is None else spacy_model
         if not isinstance(resolved_model, str) or resolved_model.strip() == "":
@@ -57,6 +62,8 @@ class ORIONConfig:
         object.__setattr__(self, 'output_strategy', resolved_output_strategy)
         object.__setattr__(self, 'base_iri', resolved_base_iri)
         object.__setattr__(self, 'prefixes', resolved_prefixes)
+        object.__setattr__(self, 'canonical_claims', canonical_claims if isinstance(canonical_claims, dict) else {})
+        object.__setattr__(self, 'semantic_claims', semantic_claims if isinstance(semantic_claims, dict) else {})
 
     @classmethod
     def from_mapping(cls, config: dict[str, Any]) -> "ORIONConfig":
@@ -67,6 +74,8 @@ class ORIONConfig:
             output_strategy=config.get("output_strategy"),
             base_iri=config.get('base_iri'),
             prefixes=config.get('prefixes'),
+            canonical_claims=config.get('canonical_claims'),
+            semantic_claims=config.get('semantic_claims'),
         )
 
 
@@ -74,7 +83,14 @@ class ORION:
     def __init__(self, config: dict[str, Any] | None = None, log_sink: LogSink | None = None) -> None:
         active_sink = self._resolve_sink(config=config if isinstance(config, dict) else None, log_sink=log_sink)
         if not isinstance(active_sink, JsonlFileLogSink):
-            active_sink.emit(LogEvent(phase="orion_initialization", event_type="started", status="started", metadata={"safe": True}))
+            active_sink.emit(
+                LogEvent(
+                    phase="orion_initialization",
+                    event_type="started",
+                    status="started",
+                    metadata={"safe": True},
+                )
+            )
         try:
             if config is None or not isinstance(config, dict):
                 raise ValueError("config must be a dict")
@@ -83,7 +99,14 @@ class ORION:
             self._log_sink = active_sink
             self._nlp_model: Any | None = None
             if not isinstance(active_sink, JsonlFileLogSink):
-                active_sink.emit(LogEvent(phase="orion_initialization", event_type="completed", status="completed", metadata={"safe": True}))
+                active_sink.emit(
+                    LogEvent(
+                        phase="orion_initialization",
+                        event_type="completed",
+                        status="completed",
+                        metadata={"safe": True},
+                    )
+                )
         except Exception as exc:
             if not isinstance(active_sink, JsonlFileLogSink):
                 active_sink.emit(
@@ -146,6 +169,13 @@ class ORION:
     def _run_relation_extraction(self, payload: dict[str, Any]) -> dict[str, Any]:
         return extract_relations_from_payload(payload)
 
+    def _run_canonical_claims(self, payload: dict[str, Any]) -> dict[str, Any]:
+        if self._orion_config.semantic_claims:
+            stage_config = {**self._orion_config.semantic_claims, 'emit_semantic_claims': True}
+        else:
+            stage_config = self._orion_config.canonical_claims
+        return extract_canonical_claims_from_payload(payload, config=stage_config)
+
     def _run_triple_extraction(self, payload: dict[str, Any]) -> dict[str, Any]:
         return extract_triples_from_payload(payload)
 
@@ -167,7 +197,14 @@ class ORION:
         )
 
     def process(self, input_data: Any) -> dict[str, Any]:
-        self._log_sink.emit(LogEvent(phase="input_intake", event_type="started", status="started", metadata={"safe": True}))
+        self._log_sink.emit(
+            LogEvent(
+                phase="input_intake",
+                event_type="started",
+                status="started",
+                metadata={"safe": True},
+            )
+        )
 
         try:
             intake_result = process_input_intake(input_data=input_data, config=self.config)
@@ -482,7 +519,7 @@ class ORION:
 
         self._log_sink.emit(
             LogEvent(
-                phase="triple_extraction",
+                phase="canonical_claims",
                 event_type="started",
                 status="started",
                 source_context_id=relation_result.get("source_text_id"),
@@ -491,14 +528,50 @@ class ORION:
         )
 
         try:
-            triple_result = self._run_triple_extraction(relation_result)
+            canonical_claims_result = self._run_canonical_claims(relation_result)
+        except Exception as exc:
+            self._log_sink.emit(
+                LogEvent(
+                    phase="canonical_claims",
+                    event_type="failed",
+                    status="failed",
+                    source_context_id=relation_result.get("source_text_id"),
+                    exception_category=exc.__class__.__name__,
+                    metadata={"safe": False},
+                )
+            )
+            self._active_doc = None
+            raise
+
+        self._log_sink.emit(
+            LogEvent(
+                phase="canonical_claims",
+                event_type="completed",
+                status="completed",
+                source_context_id=canonical_claims_result.get("source_text_id"),
+                metadata={"safe": True},
+            )
+        )
+
+        self._log_sink.emit(
+            LogEvent(
+                phase="triple_extraction",
+                event_type="started",
+                status="started",
+                source_context_id=canonical_claims_result.get("source_text_id"),
+                metadata={"safe": True},
+            )
+        )
+
+        try:
+            triple_result = self._run_triple_extraction(canonical_claims_result)
         except Exception as exc:
             self._log_sink.emit(
                 LogEvent(
                     phase="triple_extraction",
                     event_type="failed",
                     status="failed",
-                    source_context_id=relation_result.get("source_text_id"),
+                    source_context_id=canonical_claims_result.get("source_text_id"),
                     exception_category=exc.__class__.__name__,
                     metadata={"safe": False},
                 )

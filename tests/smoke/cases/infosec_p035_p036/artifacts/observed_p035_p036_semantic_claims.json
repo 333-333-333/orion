@@ -1,0 +1,267 @@
+{
+  "claim_count": 15,
+  "claims": [
+    {
+      "claim_id": "claim-6d9a226d61e3ad46",
+      "kind": "relation",
+      "normalized_statement": "SecureArchitecture integrates SecurityIntoTheDesignOfSystems",
+      "object": "SecurityIntoTheDesignOfSystems",
+      "paragraph_id": "p035",
+      "predicate": "integrates",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Secure architecture integrates security into the design of systems and environments.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-d07af5c455ea34bd",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "SecureArchitecture integrates SecurityIntoTheDesignOfSystems",
+      "subject": "SecureArchitecture"
+    },
+    {
+      "claim_id": "claim-2d10bc7ae1ca808a",
+      "kind": "relation",
+      "normalized_statement": "SecureArchitecture integrates Environment",
+      "object": "Environment",
+      "paragraph_id": "p035",
+      "predicate": "integrates",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Secure architecture integrates security into the design of systems and environments.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-d07af5c455ea34bd",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "SecureArchitecture integrates Environment",
+      "subject": "SecureArchitecture"
+    },
+    {
+      "claim_id": "claim-536075d82f76526b",
+      "kind": "relation",
+      "normalized_statement": "DefenseInDepth applies MultipleLayerOfSecurityControl",
+      "object": "MultipleLayerOfSecurityControl",
+      "paragraph_id": "p035",
+      "predicate": "applies",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Defense in depth applies multiple layers of security controls.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-8b950c0926d45f36",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "DefenseInDepth applies MultipleLayerOfSecurityControl",
+      "subject": "DefenseInDepth"
+    },
+    {
+      "claim_id": "claim-72e83013dd228c3d",
+      "kind": "definition",
+      "normalized_statement": "ZeroTrust is a SecurityModel",
+      "object": "SecurityModel",
+      "paragraph_id": "p035",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Zero trust is a security model that assumes no implicit trust based on network location.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-20e88317c86adb2e",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "ZeroTrust is a SecurityModel",
+      "subject": "ZeroTrust"
+    },
+    {
+      "claim_id": "claim-641c2b7c8611e1a8",
+      "kind": "relation",
+      "normalized_statement": "ZeroTrust assumes NoImplicitTrustBasedOnNetworkLocation",
+      "object": "NoImplicitTrustBasedOnNetworkLocation",
+      "paragraph_id": "p035",
+      "predicate": "assumes",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Zero trust is a security model that assumes no implicit trust based on network location.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-20e88317c86adb2e",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "ZeroTrust assumes NoImplicitTrustBasedOnNetworkLocation",
+      "subject": "ZeroTrust"
+    },
+    {
+      "claim_id": "claim-d5fdef63adabaaa7",
+      "kind": "relation",
+      "normalized_statement": "NetworkSegmentation limits LateralMovement",
+      "object": "LateralMovement",
+      "paragraph_id": "p035",
+      "predicate": "limits",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Network segmentation limits lateral movement.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-577088cb1002746b",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "NetworkSegmentation limits LateralMovement",
+      "subject": "NetworkSegmentation"
+    },
+    {
+      "claim_id": "claim-81edb68a6dccf9bd",
+      "kind": "relation",
+      "normalized_statement": "StrongAuthentication protects AccessPoint",
+      "object": "AccessPoint",
+      "paragraph_id": "p035",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Strong authentication protects access points.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-8b223b2adfe280c3",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "StrongAuthentication protects AccessPoint",
+      "subject": "StrongAuthentication"
+    },
+    {
+      "claim_id": "claim-a778132f4863ec6a",
+      "kind": "relation",
+      "normalized_statement": "Encryption protects DataAtRest",
+      "object": "DataAtRest",
+      "paragraph_id": "p035",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Encryption protects data at rest and in transit.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-ebaf44abeddb43d8",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "Encryption protects DataAtRest",
+      "subject": "Encryption"
+    },
+    {
+      "claim_id": "claim-4f5029b99d574271",
+      "kind": "relation",
+      "normalized_statement": "Encryption protects InTransit",
+      "object": "InTransit",
+      "paragraph_id": "p035",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Encryption protects data at rest and in transit.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-ebaf44abeddb43d8",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "Encryption protects InTransit",
+      "subject": "Encryption"
+    },
+    {
+      "claim_id": "claim-6fd1f87b36173959",
+      "kind": "relation",
+      "normalized_statement": "Monitoring detects SuspiciousActivity",
+      "object": "SuspiciousActivity",
+      "paragraph_id": "p035",
+      "predicate": "detects",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Monitoring detects suspicious activity.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-09e61fe51a16c7b4",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "Monitoring detects SuspiciousActivity",
+      "subject": "Monitoring"
+    },
+    {
+      "claim_id": "claim-2429eaa207305f5a",
+      "kind": "relation",
+      "normalized_statement": "SecureArchitectureMustAlignWith business Requirement",
+      "object": "Requirement",
+      "paragraph_id": "p035",
+      "predicate": "business",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Secure architecture must align with business requirements, risk appetite, and regulatory obligations.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-0fac9fb41c9d09ab",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "SecureArchitectureMustAlignWith business Requirement",
+      "subject": "SecureArchitectureMustAlignWith"
+    },
+    {
+      "claim_id": "claim-72459d1eb506772d",
+      "kind": "relation",
+      "normalized_statement": "SecureArchitectureMustAlignWith business RiskAppetite",
+      "object": "RiskAppetite",
+      "paragraph_id": "p035",
+      "predicate": "business",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Secure architecture must align with business requirements, risk appetite, and regulatory obligations.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-0fac9fb41c9d09ab",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "SecureArchitectureMustAlignWith business RiskAppetite",
+      "subject": "SecureArchitectureMustAlignWith"
+    },
+    {
+      "claim_id": "claim-42c57f1f9d67052b",
+      "kind": "relation",
+      "normalized_statement": "SecureArchitectureMustAlignWith business RegulatoryObligation",
+      "object": "RegulatoryObligation",
+      "paragraph_id": "p035",
+      "predicate": "business",
+      "source": {
+        "asset_id": "p035",
+        "evidence": "Secure architecture must align with business requirements, risk appetite, and regulatory obligations.",
+        "paragraph_id": "p035",
+        "sentence_id": "sent-0fac9fb41c9d09ab",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "SecureArchitectureMustAlignWith business RegulatoryObligation",
+      "subject": "SecureArchitectureMustAlignWith"
+    },
+    {
+      "claim_id": "claim-dd9dd10fbaa014d6",
+      "kind": "relation",
+      "normalized_statement": "SystemCan process InformationAsset",
+      "object": "InformationAsset",
+      "paragraph_id": "p036",
+      "predicate": "process",
+      "source": {
+        "asset_id": "p036",
+        "evidence": "A system can process one or more information assets.",
+        "paragraph_id": "p036",
+        "sentence_id": "sent-f0a880bd520b7fcc",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "SystemCan process InformationAsset",
+      "subject": "SystemCan"
+    },
+    {
+      "claim_id": "claim-e4f7a4676a018f77",
+      "kind": "relation",
+      "normalized_statement": "UserCan access System",
+      "object": "System",
+      "paragraph_id": "p036",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p036",
+        "evidence": "A user can access one or more systems.",
+        "paragraph_id": "p036",
+        "sentence_id": "sent-bf57c398aeab3b6c",
+        "source_text_id": "ab734eac28f1b6d21379572d36afecd2b1f60b537faf5cd80dddcf22f66d3150"
+      },
+      "statement": "UserCan access System",
+      "subject": "UserCan"
+    }
+  ],
+  "contract_required_stage": "semantic_claims",
+  "observed_stage": "semantic_claims",
+  "paragraph_asset_ids": [
+    "p035",
+    "p036"
+  ],
+  "stage": "semantic_claims"
+}

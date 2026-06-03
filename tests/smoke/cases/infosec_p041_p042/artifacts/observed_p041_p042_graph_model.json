@@ -1,0 +1,739 @@
+{
+  "classes": [
+    {
+      "iri": "orion:Alert",
+      "label": "Alert"
+    },
+    {
+      "iri": "orion:ApiKey",
+      "label": "ApiKey"
+    },
+    {
+      "comments": [
+        "Audit logs record the access event."
+      ],
+      "iri": "orion:Audit",
+      "label": "Audit"
+    },
+    {
+      "comments": [
+        "Confidential document, corporate database, customer record, and source code repository are subclasses of information asset."
+      ],
+      "iri": "orion:ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre",
+      "label": "ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre"
+    },
+    {
+      "iri": "orion:ConfidentialInformation",
+      "label": "ConfidentialInformation"
+    },
+    {
+      "iri": "orion:CorrectiveActionToPreventRecurrence",
+      "label": "CorrectiveActionToPreventRecurrence"
+    },
+    {
+      "iri": "orion:DataBreach",
+      "label": "DataBreach"
+    },
+    {
+      "comments": [
+        "A data breach scenario illustrates the importance of access control and data protection."
+      ],
+      "iri": "orion:DataBreachScenario",
+      "label": "DataBreachScenario"
+    },
+    {
+      "iri": "orion:DataProtection",
+      "label": "DataProtection"
+    },
+    {
+      "comments": [
+        "A detection rule generates a security alert."
+      ],
+      "iri": "orion:DetectionRule",
+      "label": "DetectionRule"
+    },
+    {
+      "iri": "orion:FromThisText",
+      "label": "FromThisText"
+    },
+    {
+      "iri": "orion:ImportanceOfAccessControl",
+      "label": "ImportanceOfAccessControl"
+    },
+    {
+      "comments": [
+        "The incident response team confirms a data breach."
+      ],
+      "iri": "orion:IncidentResponseTeam",
+      "label": "IncidentResponseTeam"
+    },
+    {
+      "comments": [
+        "The legal team evaluates regulatory obligations."
+      ],
+      "iri": "orion:LegalTeam",
+      "label": "LegalTeam"
+    },
+    {
+      "comments": [
+        "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident."
+      ],
+      "iri": "orion:MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre",
+      "label": "MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre"
+    },
+    {
+      "iri": "orion:OfInformationAsset",
+      "label": "OfInformationAsset"
+    },
+    {
+      "iri": "orion:OfSecurityControl",
+      "label": "OfSecurityControl"
+    },
+    {
+      "iri": "orion:OfSecurityIncident",
+      "label": "OfSecurityIncident"
+    },
+    {
+      "comments": [
+        "The organization implements corrective actions to prevent recurrence."
+      ],
+      "iri": "orion:Organization",
+      "label": "Organization"
+    },
+    {
+      "comments": [
+        "ORION should be able to identify security concepts, classify hierarchical relationships, and extract meaningful relationships from this text."
+      ],
+      "iri": "orion:OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful",
+      "label": "OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful"
+    },
+    {
+      "comments": [
+        "Password, certificate, access token, API key, and private key are subclasses of credential."
+      ],
+      "iri": "orion:PasswordCertificate",
+      "label": "PasswordCertificate"
+    },
+    {
+      "iri": "orion:PersonalData",
+      "label": "PersonalData"
+    },
+    {
+      "comments": [
+        "Preventive control, detective control, corrective control, and compensating control are subclasses of security control."
+      ],
+      "iri": "orion:PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre",
+      "label": "PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre"
+    },
+    {
+      "comments": [
+        "The privacy officer assesses whether data subjects must be notified."
+      ],
+      "iri": "orion:PrivacyOfficer",
+      "label": "PrivacyOfficer"
+    },
+    {
+      "iri": "orion:PrivateKeyAreSubclassOfCredential",
+      "label": "PrivateKeyAreSubclassOfCredential"
+    },
+    {
+      "iri": "orion:RecordTheAccessEvent",
+      "label": "RecordTheAccessEvent"
+    },
+    {
+      "iri": "orion:RegulatoryObligation",
+      "label": "RegulatoryObligation"
+    },
+    {
+      "comments": [
+        "The restricted document repository stores confidential information and personal data."
+      ],
+      "iri": "orion:RestrictedDocumentRepository",
+      "label": "RestrictedDocumentRepository"
+    },
+    {
+      "iri": "orion:SecurityAlert",
+      "label": "SecurityAlert"
+    },
+    {
+      "comments": [
+        "The security analyst investigates the alert."
+      ],
+      "iri": "orion:SecurityAnalyst",
+      "label": "SecurityAnalyst"
+    },
+    {
+      "iri": "orion:Token",
+      "label": "Token"
+    },
+    {
+      "comments": [
+        "The unauthorized access violates the access control policy."
+      ],
+      "iri": "orion:Unauthorized",
+      "label": "Unauthorized"
+    },
+    {
+      "comments": [
+        "An unauthorized user accesses a restricted document repository."
+      ],
+      "iri": "orion:UnauthorizedUser",
+      "label": "UnauthorizedUser"
+    },
+    {
+      "iri": "orion:ViolateTheAccessControlPolicy",
+      "label": "ViolateTheAccessControlPolicy"
+    },
+    {
+      "iri": "orion:WhetherDataSubjectMustBeNotified",
+      "label": "WhetherDataSubjectMustBeNotified"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:PasswordCertificate",
+      "predicate": "orion:access",
+      "range": "orion:ApiKey"
+    },
+    {
+      "domain": "orion:PasswordCertificate",
+      "predicate": "orion:access",
+      "range": "orion:PrivateKeyAreSubclassOfCredential"
+    },
+    {
+      "domain": "orion:PasswordCertificate",
+      "predicate": "orion:access",
+      "range": "orion:Token"
+    },
+    {
+      "domain": "orion:Unauthorized",
+      "predicate": "orion:access",
+      "range": "orion:ViolateTheAccessControlPolicy"
+    },
+    {
+      "domain": "orion:UnauthorizedUser",
+      "predicate": "orion:accesses",
+      "range": "orion:RestrictedDocumentRepository"
+    },
+    {
+      "domain": "orion:PrivacyOfficer",
+      "predicate": "orion:assesses",
+      "range": "orion:WhetherDataSubjectMustBeNotified"
+    },
+    {
+      "domain": "orion:IncidentResponseTeam",
+      "predicate": "orion:confirms",
+      "range": "orion:DataBreach"
+    },
+    {
+      "domain": "orion:LegalTeam",
+      "predicate": "orion:evaluates",
+      "range": "orion:RegulatoryObligation"
+    },
+    {
+      "domain": "orion:DetectionRule",
+      "predicate": "orion:generates",
+      "range": "orion:SecurityAlert"
+    },
+    {
+      "domain": "orion:DataBreachScenario",
+      "predicate": "orion:illustrates",
+      "range": "orion:DataProtection"
+    },
+    {
+      "domain": "orion:DataBreachScenario",
+      "predicate": "orion:illustrates",
+      "range": "orion:ImportanceOfAccessControl"
+    },
+    {
+      "domain": "orion:Organization",
+      "predicate": "orion:implements",
+      "range": "orion:CorrectiveActionToPreventRecurrence"
+    },
+    {
+      "domain": "orion:SecurityAnalyst",
+      "predicate": "orion:investigates",
+      "range": "orion:Alert"
+    },
+    {
+      "domain": "orion:Audit",
+      "predicate": "orion:logs",
+      "range": "orion:RecordTheAccessEvent"
+    },
+    {
+      "domain": "orion:OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful",
+      "predicate": "orion:relationships",
+      "range": "orion:FromThisText"
+    },
+    {
+      "domain": "orion:RestrictedDocumentRepository",
+      "predicate": "orion:stores",
+      "range": "orion:ConfidentialInformation"
+    },
+    {
+      "domain": "orion:RestrictedDocumentRepository",
+      "predicate": "orion:stores",
+      "range": "orion:PersonalData"
+    },
+    {
+      "domain": "orion:ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre",
+      "predicate": "orion:subclasses",
+      "range": "orion:OfInformationAsset"
+    },
+    {
+      "domain": "orion:MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre",
+      "predicate": "orion:subclasses",
+      "range": "orion:OfSecurityIncident"
+    },
+    {
+      "domain": "orion:PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre",
+      "predicate": "orion:subclasses",
+      "range": "orion:OfSecurityControl"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-848bfe8ca9ab2b86",
+      "claim-5ccb0e616dff674d",
+      "claim-fa13e29d358aa278",
+      "claim-67dab306b0b92d07",
+      "claim-b8f32489a34afc6b",
+      "claim-1de15e9cc66d290d",
+      "claim-59d222b8ab72b307",
+      "claim-7ec754f6e0629edb",
+      "claim-437b69cbccdddc83",
+      "claim-c43ff711b9cba6ec",
+      "claim-e20fe0183a0b648d",
+      "claim-1e71427d2525d3ab",
+      "claim-4a8de6ab09b31cac",
+      "claim-01b811402c3e7278",
+      "claim-f99f96a9a2eba803",
+      "claim-128a60ec66f30f80",
+      "claim-290341a33e981bc2",
+      "claim-34fa2a962cb05396",
+      "claim-4f23a023640dbd4a",
+      "claim-17bad1ab896d6a6f"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:PasswordCertificate",
+      "property": "orion:access",
+      "range": "orion:ApiKey"
+    },
+    {
+      "domain": "orion:PasswordCertificate",
+      "property": "orion:access",
+      "range": "orion:PrivateKeyAreSubclassOfCredential"
+    },
+    {
+      "domain": "orion:PasswordCertificate",
+      "property": "orion:access",
+      "range": "orion:Token"
+    },
+    {
+      "domain": "orion:Unauthorized",
+      "property": "orion:access",
+      "range": "orion:ViolateTheAccessControlPolicy"
+    },
+    {
+      "domain": "orion:UnauthorizedUser",
+      "property": "orion:accesses",
+      "range": "orion:RestrictedDocumentRepository"
+    },
+    {
+      "domain": "orion:PrivacyOfficer",
+      "property": "orion:assesses",
+      "range": "orion:WhetherDataSubjectMustBeNotified"
+    },
+    {
+      "domain": "orion:IncidentResponseTeam",
+      "property": "orion:confirms",
+      "range": "orion:DataBreach"
+    },
+    {
+      "domain": "orion:LegalTeam",
+      "property": "orion:evaluates",
+      "range": "orion:RegulatoryObligation"
+    },
+    {
+      "domain": "orion:DetectionRule",
+      "property": "orion:generates",
+      "range": "orion:SecurityAlert"
+    },
+    {
+      "domain": "orion:DataBreachScenario",
+      "property": "orion:illustrates",
+      "range": "orion:DataProtection"
+    },
+    {
+      "domain": "orion:DataBreachScenario",
+      "property": "orion:illustrates",
+      "range": "orion:ImportanceOfAccessControl"
+    },
+    {
+      "domain": "orion:Organization",
+      "property": "orion:implements",
+      "range": "orion:CorrectiveActionToPreventRecurrence"
+    },
+    {
+      "domain": "orion:SecurityAnalyst",
+      "property": "orion:investigates",
+      "range": "orion:Alert"
+    },
+    {
+      "domain": "orion:Audit",
+      "property": "orion:logs",
+      "range": "orion:RecordTheAccessEvent"
+    },
+    {
+      "domain": "orion:OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful",
+      "property": "orion:relationships",
+      "range": "orion:FromThisText"
+    },
+    {
+      "domain": "orion:RestrictedDocumentRepository",
+      "property": "orion:stores",
+      "range": "orion:ConfidentialInformation"
+    },
+    {
+      "domain": "orion:RestrictedDocumentRepository",
+      "property": "orion:stores",
+      "range": "orion:PersonalData"
+    },
+    {
+      "domain": "orion:ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre",
+      "property": "orion:subclasses",
+      "range": "orion:OfInformationAsset"
+    },
+    {
+      "domain": "orion:MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre",
+      "property": "orion:subclasses",
+      "range": "orion:OfSecurityIncident"
+    },
+    {
+      "domain": "orion:PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre",
+      "property": "orion:subclasses",
+      "range": "orion:OfSecurityControl"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:Alert",
+        "label": "Alert"
+      },
+      {
+        "iri": "orion:ApiKey",
+        "label": "ApiKey"
+      },
+      {
+        "comments": [
+          "Audit logs record the access event."
+        ],
+        "iri": "orion:Audit",
+        "label": "Audit"
+      },
+      {
+        "comments": [
+          "Confidential document, corporate database, customer record, and source code repository are subclasses of information asset."
+        ],
+        "iri": "orion:ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre",
+        "label": "ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre"
+      },
+      {
+        "iri": "orion:ConfidentialInformation",
+        "label": "ConfidentialInformation"
+      },
+      {
+        "iri": "orion:CorrectiveActionToPreventRecurrence",
+        "label": "CorrectiveActionToPreventRecurrence"
+      },
+      {
+        "iri": "orion:DataBreach",
+        "label": "DataBreach"
+      },
+      {
+        "comments": [
+          "A data breach scenario illustrates the importance of access control and data protection."
+        ],
+        "iri": "orion:DataBreachScenario",
+        "label": "DataBreachScenario"
+      },
+      {
+        "iri": "orion:DataProtection",
+        "label": "DataProtection"
+      },
+      {
+        "comments": [
+          "A detection rule generates a security alert."
+        ],
+        "iri": "orion:DetectionRule",
+        "label": "DetectionRule"
+      },
+      {
+        "iri": "orion:FromThisText",
+        "label": "FromThisText"
+      },
+      {
+        "iri": "orion:ImportanceOfAccessControl",
+        "label": "ImportanceOfAccessControl"
+      },
+      {
+        "comments": [
+          "The incident response team confirms a data breach."
+        ],
+        "iri": "orion:IncidentResponseTeam",
+        "label": "IncidentResponseTeam"
+      },
+      {
+        "comments": [
+          "The legal team evaluates regulatory obligations."
+        ],
+        "iri": "orion:LegalTeam",
+        "label": "LegalTeam"
+      },
+      {
+        "comments": [
+          "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident."
+        ],
+        "iri": "orion:MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre",
+        "label": "MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre"
+      },
+      {
+        "iri": "orion:OfInformationAsset",
+        "label": "OfInformationAsset"
+      },
+      {
+        "iri": "orion:OfSecurityControl",
+        "label": "OfSecurityControl"
+      },
+      {
+        "iri": "orion:OfSecurityIncident",
+        "label": "OfSecurityIncident"
+      },
+      {
+        "comments": [
+          "The organization implements corrective actions to prevent recurrence."
+        ],
+        "iri": "orion:Organization",
+        "label": "Organization"
+      },
+      {
+        "comments": [
+          "ORION should be able to identify security concepts, classify hierarchical relationships, and extract meaningful relationships from this text."
+        ],
+        "iri": "orion:OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful",
+        "label": "OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful"
+      },
+      {
+        "comments": [
+          "Password, certificate, access token, API key, and private key are subclasses of credential."
+        ],
+        "iri": "orion:PasswordCertificate",
+        "label": "PasswordCertificate"
+      },
+      {
+        "iri": "orion:PersonalData",
+        "label": "PersonalData"
+      },
+      {
+        "comments": [
+          "Preventive control, detective control, corrective control, and compensating control are subclasses of security control."
+        ],
+        "iri": "orion:PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre",
+        "label": "PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre"
+      },
+      {
+        "comments": [
+          "The privacy officer assesses whether data subjects must be notified."
+        ],
+        "iri": "orion:PrivacyOfficer",
+        "label": "PrivacyOfficer"
+      },
+      {
+        "iri": "orion:PrivateKeyAreSubclassOfCredential",
+        "label": "PrivateKeyAreSubclassOfCredential"
+      },
+      {
+        "iri": "orion:RecordTheAccessEvent",
+        "label": "RecordTheAccessEvent"
+      },
+      {
+        "iri": "orion:RegulatoryObligation",
+        "label": "RegulatoryObligation"
+      },
+      {
+        "comments": [
+          "The restricted document repository stores confidential information and personal data."
+        ],
+        "iri": "orion:RestrictedDocumentRepository",
+        "label": "RestrictedDocumentRepository"
+      },
+      {
+        "iri": "orion:SecurityAlert",
+        "label": "SecurityAlert"
+      },
+      {
+        "comments": [
+          "The security analyst investigates the alert."
+        ],
+        "iri": "orion:SecurityAnalyst",
+        "label": "SecurityAnalyst"
+      },
+      {
+        "iri": "orion:Token",
+        "label": "Token"
+      },
+      {
+        "comments": [
+          "The unauthorized access violates the access control policy."
+        ],
+        "iri": "orion:Unauthorized",
+        "label": "Unauthorized"
+      },
+      {
+        "comments": [
+          "An unauthorized user accesses a restricted document repository."
+        ],
+        "iri": "orion:UnauthorizedUser",
+        "label": "UnauthorizedUser"
+      },
+      {
+        "iri": "orion:ViolateTheAccessControlPolicy",
+        "label": "ViolateTheAccessControlPolicy"
+      },
+      {
+        "iri": "orion:WhetherDataSubjectMustBeNotified",
+        "label": "WhetherDataSubjectMustBeNotified"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:PasswordCertificate",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:ApiKey"
+      },
+      {
+        "domain": "orion:PasswordCertificate",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:PrivateKeyAreSubclassOfCredential"
+      },
+      {
+        "domain": "orion:PasswordCertificate",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:Token"
+      },
+      {
+        "domain": "orion:Unauthorized",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:ViolateTheAccessControlPolicy"
+      },
+      {
+        "domain": "orion:UnauthorizedUser",
+        "iri": "orion:accesses",
+        "label": "Accesses",
+        "range": "orion:RestrictedDocumentRepository"
+      },
+      {
+        "domain": "orion:PrivacyOfficer",
+        "iri": "orion:assesses",
+        "label": "Assesses",
+        "range": "orion:WhetherDataSubjectMustBeNotified"
+      },
+      {
+        "domain": "orion:IncidentResponseTeam",
+        "iri": "orion:confirms",
+        "label": "Confirms",
+        "range": "orion:DataBreach"
+      },
+      {
+        "domain": "orion:LegalTeam",
+        "iri": "orion:evaluates",
+        "label": "Evaluates",
+        "range": "orion:RegulatoryObligation"
+      },
+      {
+        "domain": "orion:DetectionRule",
+        "iri": "orion:generates",
+        "label": "Generates",
+        "range": "orion:SecurityAlert"
+      },
+      {
+        "domain": "orion:DataBreachScenario",
+        "iri": "orion:illustrates",
+        "label": "Illustrates",
+        "range": "orion:DataProtection"
+      },
+      {
+        "domain": "orion:DataBreachScenario",
+        "iri": "orion:illustrates",
+        "label": "Illustrates",
+        "range": "orion:ImportanceOfAccessControl"
+      },
+      {
+        "domain": "orion:Organization",
+        "iri": "orion:implements",
+        "label": "Implements",
+        "range": "orion:CorrectiveActionToPreventRecurrence"
+      },
+      {
+        "domain": "orion:SecurityAnalyst",
+        "iri": "orion:investigates",
+        "label": "Investigates",
+        "range": "orion:Alert"
+      },
+      {
+        "domain": "orion:Audit",
+        "iri": "orion:logs",
+        "label": "Logs",
+        "range": "orion:RecordTheAccessEvent"
+      },
+      {
+        "domain": "orion:OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful",
+        "iri": "orion:relationships",
+        "label": "Relationships",
+        "range": "orion:FromThisText"
+      },
+      {
+        "domain": "orion:RestrictedDocumentRepository",
+        "iri": "orion:stores",
+        "label": "Stores",
+        "range": "orion:ConfidentialInformation"
+      },
+      {
+        "domain": "orion:RestrictedDocumentRepository",
+        "iri": "orion:stores",
+        "label": "Stores",
+        "range": "orion:PersonalData"
+      },
+      {
+        "domain": "orion:ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre",
+        "iri": "orion:subclasses",
+        "label": "Subclasses",
+        "range": "orion:OfInformationAsset"
+      },
+      {
+        "domain": "orion:MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre",
+        "iri": "orion:subclasses",
+        "label": "Subclasses",
+        "range": "orion:OfSecurityIncident"
+      },
+      {
+        "domain": "orion:PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre",
+        "iri": "orion:subclasses",
+        "label": "Subclasses",
+        "range": "orion:OfSecurityControl"
+      }
+    ]
+  },
+  "subclass_facts": [],
+  "type_assertions": []
+}

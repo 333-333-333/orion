@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <owl:Class rdf:about="https://orion.local/resource/accesscontrol">
+    <rdfs:label>AccessControl</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/preventivecontrol"/>
+    <rdfs:comment>Access control is a preventive control.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/affectanasset">
+    <rdfs:label>AffectAnAsset</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/alternativeprotectionmechanismwhenaprimarycontrolcannotbeimplemented">
+    <rdfs:label>AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/backuprestoration">
+    <rdfs:label>BackupRestoration</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/correctivecontrol"/>
+    <rdfs:comment>Backup restoration is a corrective control.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/beexploitedbyathreat">
+    <rdfs:label>BeExploitedByAThreat</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/causharmtoanasset">
+    <rdfs:label>CausHarmToAnAsset</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/compensatingcontrol">
+    <rdfs:label>CompensatingControl</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securitycontrol"/>
+    <rdfs:comment>A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/compensatingcontrolwhenautomatedenforcementisnotavailable">
+    <rdfs:label>CompensatingControlWhenAutomatedEnforcementIsNotAvailable</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/compensatingforsecurityweakness">
+    <rdfs:label>CompensatingForSecurityWeakness</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/consequenceproducedbyasecurityeventorincident">
+    <rdfs:label>ConsequenceProducedByASecurityEventOrIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/control">
+    <rdfs:label>Control</rdfs:label>
+    <rdfs:comment>A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/coreprocessininformationsecurity">
+    <rdfs:label>CoreProcessInInformationSecurity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/correcting">
+    <rdfs:label>Correcting</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/correctivecontrol">
+    <rdfs:label>CorrectiveControl</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securitycontrol"/>
+    <rdfs:comment>A corrective control is a type of security control that restores normal operations after an incident.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/detecting">
+    <rdfs:label>Detecting</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/detectivecontrol">
+    <rdfs:label>DetectiveControl</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securitycontrol"/>
+    <rdfs:comment>A detective control is a type of security control that identifies suspicious activity or policy violations.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/howathreatmayexploitavulnerability">
+    <rdfs:label>HowAThreatMayExploitAVulnerability</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/impact">
+    <rdfs:label>Impact</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/consequenceproducedbyasecurityeventorincident"/>
+    <rdfs:comment>An impact is the consequence produced by a security event or incident.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/likelihood">
+    <rdfs:label>Likelihood</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/probability"/>
+    <rdfs:comment>A likelihood is the probability that a risk scenario occurs.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/logging">
+    <rdfs:label>Logging</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/detectivecontrol"/>
+    <rdfs:comment>Logging is a detective control.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/manualapproval">
+    <rdfs:label>ManualApproval</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/compensatingcontrolwhenautomatedenforcementisnotavailable"/>
+    <rdfs:comment>Manual approval is a compensating control when automated enforcement is not available.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/normaloperationafteranincident">
+    <rdfs:label>NormalOperationAfterAnIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/policyviolation">
+    <rdfs:label>PolicyViolation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/possibility">
+    <rdfs:label>Possibility</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/potentialcauseofanunwantedincident">
+    <rdfs:label>PotentialCauseOfAnUnwantedIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/preventivecontrol">
+    <rdfs:label>PreventiveControl</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securitycontrol"/>
+    <rdfs:comment>A preventive control is a type of security control that reduces the probability of an incident.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/probability">
+    <rdfs:label>Probability</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/probabilityofanincident">
+    <rdfs:label>ProbabilityOfAnIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/risk">
+    <rdfs:label>Risk</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/possibility"/>
+    <rdfs:comment>A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/riskbypreventing">
+    <rdfs:label>RiskByPreventing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/riskmanagement">
+    <rdfs:label>RiskManagement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/coreprocessininformationsecurity"/>
+    <rdfs:comment>Risk management is a core process in information security.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/riskscenario">
+    <rdfs:label>RiskScenario</rdfs:label>
+    <rdfs:comment>A risk scenario describes how a threat may exploit a vulnerability and affect an asset.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/riskscenariooccur">
+    <rdfs:label>RiskScenarioOccur</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securitycontrol">
+    <rdfs:label>SecurityControl</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/suspiciousactivity">
+    <rdfs:label>SuspiciousActivity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/threat">
+    <rdfs:label>Threat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/potentialcauseofanunwantedincident"/>
+    <rdfs:comment>A threat is a potential cause of an unwanted incident.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/threatexploitavulnerability">
+    <rdfs:label>ThreatExploitAVulnerability</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/vulnerability">
+    <rdfs:label>Vulnerability</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/weakness"/>
+    <rdfs:comment>A vulnerability is a weakness that can be exploited by a threat.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/weakness">
+    <rdfs:label>Weakness</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/as">
+    <rdfs:label>As</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/likelihood"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/riskscenariooccur"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/as">
+    <rdfs:label>As</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/risk"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/causharmtoanasset"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/as">
+    <rdfs:label>As</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/risk"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/threatexploitavulnerability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/cans">
+    <rdfs:label>Cans</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/vulnerability"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/beexploitedbyathreat"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/describes">
+    <rdfs:label>Describes</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/riskscenario"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/affectanasset"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/describes">
+    <rdfs:label>Describes</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/riskscenario"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/howathreatmayexploitavulnerability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/identifies">
+    <rdfs:label>Identifies</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/detectivecontrol"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/policyviolation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/identifies">
+    <rdfs:label>Identifies</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/detectivecontrol"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/suspiciousactivity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/provides">
+    <rdfs:label>Provides</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/compensatingcontrol"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/alternativeprotectionmechanismwhenaprimarycontrolcannotbeimplemented"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/reduces">
+    <rdfs:label>Reduces</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/control"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/compensatingforsecurityweakness"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/reduces">
+    <rdfs:label>Reduces</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/control"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/correcting"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/reduces">
+    <rdfs:label>Reduces</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/control"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/detecting"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/reduces">
+    <rdfs:label>Reduces</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/control"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/riskbypreventing"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/reduces">
+    <rdfs:label>Reduces</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/preventivecontrol"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/probabilityofanincident"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/restores">
+    <rdfs:label>Restores</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/correctivecontrol"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/normaloperationafteranincident"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="https://orion.local/resource/accesscontrol">
+    <rdfs:label>AccessControl</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/affectanasset">
+    <rdfs:label>AffectAnAsset</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/alternativeprotectionmechanismwhenaprimarycontrolcannotbeimplemented">
+    <rdfs:label>AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/backuprestoration">
+    <rdfs:label>BackupRestoration</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/beexploitedbyathreat">
+    <rdfs:label>BeExploitedByAThreat</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/causharmtoanasset">
+    <rdfs:label>CausHarmToAnAsset</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/compensatingcontrol">
+    <rdfs:label>CompensatingControl</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/compensatingcontrolwhenautomatedenforcementisnotavailable">
+    <rdfs:label>CompensatingControlWhenAutomatedEnforcementIsNotAvailable</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/compensatingforsecurityweakness">
+    <rdfs:label>CompensatingForSecurityWeakness</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/consequenceproducedbyasecurityeventorincident">
+    <rdfs:label>ConsequenceProducedByASecurityEventOrIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/control">
+    <rdfs:label>Control</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/coreprocessininformationsecurity">
+    <rdfs:label>CoreProcessInInformationSecurity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/correcting">
+    <rdfs:label>Correcting</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/correctivecontrol">
+    <rdfs:label>CorrectiveControl</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/detecting">
+    <rdfs:label>Detecting</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/detectivecontrol">
+    <rdfs:label>DetectiveControl</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/howathreatmayexploitavulnerability">
+    <rdfs:label>HowAThreatMayExploitAVulnerability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/impact">
+    <rdfs:label>Impact</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/likelihood">
+    <rdfs:label>Likelihood</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/logging">
+    <rdfs:label>Logging</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/manualapproval">
+    <rdfs:label>ManualApproval</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/normaloperationafteranincident">
+    <rdfs:label>NormalOperationAfterAnIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/policyviolation">
+    <rdfs:label>PolicyViolation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/possibility">
+    <rdfs:label>Possibility</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/potentialcauseofanunwantedincident">
+    <rdfs:label>PotentialCauseOfAnUnwantedIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/preventivecontrol">
+    <rdfs:label>PreventiveControl</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/probability">
+    <rdfs:label>Probability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/probabilityofanincident">
+    <rdfs:label>ProbabilityOfAnIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/risk">
+    <rdfs:label>Risk</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/riskbypreventing">
+    <rdfs:label>RiskByPreventing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/riskmanagement">
+    <rdfs:label>RiskManagement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/riskscenario">
+    <rdfs:label>RiskScenario</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/riskscenariooccur">
+    <rdfs:label>RiskScenarioOccur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securitycontrol">
+    <rdfs:label>SecurityControl</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/suspiciousactivity">
+    <rdfs:label>SuspiciousActivity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/threat">
+    <rdfs:label>Threat</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/threatexploitavulnerability">
+    <rdfs:label>ThreatExploitAVulnerability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerability">
+    <rdfs:label>Vulnerability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/weakness">
+    <rdfs:label>Weakness</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

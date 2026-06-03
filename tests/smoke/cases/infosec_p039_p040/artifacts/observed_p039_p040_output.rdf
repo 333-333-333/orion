@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <owl:Class rdf:about="https://orion.local/resource/attacker">
+    <rdfs:label>Attacker</rdfs:label>
+    <rdfs:comment>The attacker uses the compromised credential to access a cloud account.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/availability">
+    <rdfs:label>Availability</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/compromisedcredential">
+    <rdfs:label>CompromisedCredential</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/compromisedcredentialtoaccessacloudaccount">
+    <rdfs:label>CompromisedCredentialToAccessACloudAccount</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/control">
+    <rdfs:label>Control</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/corrective">
+    <rdfs:label>Corrective</rdfs:label>
+    <rdfs:comment>Corrective actions may include patch deployment, privilege reduction, and improved detection rules.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/employee">
+    <rdfs:label>Employee</rdfs:label>
+    <rdfs:comment>The employee clicks the malicious link and submits a password.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/event">
+    <rdfs:label>Event</rdfs:label>
+    <rdfs:comment>The event affects availability and may affect integrity.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/fileonafileserver">
+    <rdfs:label>FileOnAFileServer</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/fileserver">
+    <rdfs:label>FileServer</rdfs:label>
+    <rdfs:comment>The file server becomes unavailable to business users.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/howthreat">
+    <rdfs:label>HowThreat</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/importanceofbackups">
+    <rdfs:label>ImportanceOfBackups</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/improveddetectionrule">
+    <rdfs:label>ImprovedDetectionRule</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/insufficientmonitoring">
+    <rdfs:label>InsufficientMonitoring</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/loginactivity">
+    <rdfs:label>LoginActivity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/logmonitoringmayidentify">
+    <rdfs:label>LogMonitoringMayIdentify</rdfs:label>
+    <rdfs:comment>Log monitoring may identify suspicious login activity.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/maliciouslink">
+    <rdfs:label>MaliciousLink</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/malware">
+    <rdfs:label>Malware</rdfs:label>
+    <rdfs:comment>Malware encrypts files on a file server.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/mayaffectintegrity">
+    <rdfs:label>MayAffectIntegrity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/mayincludepatchdeployment">
+    <rdfs:label>MayIncludePatchDeployment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/monitoring">
+    <rdfs:label>Monitoring</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/phishingemail">
+    <rdfs:label>PhishingEmail</rdfs:label>
+    <rdfs:comment>The phishing email contains a malicious link.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/phishingemailtoanemployee">
+    <rdfs:label>PhishingEmailToAnEmployee</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/phishingscenario">
+    <rdfs:label>PhishingScenario</rdfs:label>
+    <rdfs:comment>A phishing scenario illustrates how threats, vulnerabilities, controls, and incidents relate to each other.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/postincidentreviewmayidentifymissingpatchweak">
+    <rdfs:label>PostIncidentReviewMayIdentifyMissingPatchWeak</rdfs:label>
+    <rdfs:comment>The post-incident review may identify missing patches, weak access controls, or insufficient monitoring.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/privilegereduction">
+    <rdfs:label>PrivilegeReduction</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/ransomwarescenario">
+    <rdfs:label>RansomwareScenario</rdfs:label>
+    <rdfs:comment>A ransomware scenario illustrates the importance of backups, monitoring, and response.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/relatetoeachother">
+    <rdfs:label>RelateToEachOther</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/response">
+    <rdfs:label>Response</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/security">
+    <rdfs:label>Security</rdfs:label>
+    <rdfs:comment>Security awareness training may reduce the likelihood of clicking the malicious link.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/submittedpassword">
+    <rdfs:label>SubmittedPassword</rdfs:label>
+    <rdfs:comment>The submitted password becomes a compromised credential.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/threatactor">
+    <rdfs:label>ThreatActor</rdfs:label>
+    <rdfs:comment>A threat actor sends a phishing email to an employee.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/trainingmayreducethelikelihoodofclickingthemaliciouslink">
+    <rdfs:label>TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/unavailabletobusinessuser">
+    <rdfs:label>UnavailableToBusinessUser</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/vulnerability">
+    <rdfs:label>Vulnerability</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/access">
+    <rdfs:label>Access</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/postincidentreviewmayidentifymissingpatchweak"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/control"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/access">
+    <rdfs:label>Access</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/postincidentreviewmayidentifymissingpatchweak"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/insufficientmonitoring"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/actions">
+    <rdfs:label>Actions</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/corrective"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/improveddetectionrule"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/actions">
+    <rdfs:label>Actions</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/corrective"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/mayincludepatchdeployment"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/actions">
+    <rdfs:label>Actions</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/corrective"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/privilegereduction"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/affects">
+    <rdfs:label>Affects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/event"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/availability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/affects">
+    <rdfs:label>Affects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/event"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/mayaffectintegrity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/awareness">
+    <rdfs:label>Awareness</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/security"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/trainingmayreducethelikelihoodofclickingthemaliciouslink"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/becomes">
+    <rdfs:label>Becomes</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/fileserver"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/unavailabletobusinessuser"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/becomes">
+    <rdfs:label>Becomes</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/submittedpassword"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/compromisedcredential"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/clicks">
+    <rdfs:label>Clicks</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/employee"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/maliciouslink"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/contains">
+    <rdfs:label>Contains</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/phishingemail"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/maliciouslink"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/encrypts">
+    <rdfs:label>Encrypts</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/malware"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/fileonafileserver"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/illustrates">
+    <rdfs:label>Illustrates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/phishingscenario"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/control"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/illustrates">
+    <rdfs:label>Illustrates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/phishingscenario"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/howthreat"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/illustrates">
+    <rdfs:label>Illustrates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/phishingscenario"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/vulnerability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/illustrates">
+    <rdfs:label>Illustrates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/ransomwarescenario"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/importanceofbackups"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/illustrates">
+    <rdfs:label>Illustrates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/ransomwarescenario"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/monitoring"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/illustrates">
+    <rdfs:label>Illustrates</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/ransomwarescenario"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/response"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/incidents">
+    <rdfs:label>Incidents</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/phishingscenario"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/relatetoeachother"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/sends">
+    <rdfs:label>Sends</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/threatactor"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/phishingemailtoanemployee"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/submits">
+    <rdfs:label>Submits</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/employee"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/submittedpassword"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/suspicious">
+    <rdfs:label>Suspicious</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/logmonitoringmayidentify"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/loginactivity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/uses">
+    <rdfs:label>Uses</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/attacker"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/compromisedcredentialtoaccessacloudaccount"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="https://orion.local/resource/attacker">
+    <rdfs:label>Attacker</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/availability">
+    <rdfs:label>Availability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/compromisedcredential">
+    <rdfs:label>CompromisedCredential</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/compromisedcredentialtoaccessacloudaccount">
+    <rdfs:label>CompromisedCredentialToAccessACloudAccount</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/control">
+    <rdfs:label>Control</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/corrective">
+    <rdfs:label>Corrective</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/employee">
+    <rdfs:label>Employee</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/event">
+    <rdfs:label>Event</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/fileonafileserver">
+    <rdfs:label>FileOnAFileServer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/fileserver">
+    <rdfs:label>FileServer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/howthreat">
+    <rdfs:label>HowThreat</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/importanceofbackups">
+    <rdfs:label>ImportanceOfBackups</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/improveddetectionrule">
+    <rdfs:label>ImprovedDetectionRule</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/insufficientmonitoring">
+    <rdfs:label>InsufficientMonitoring</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/loginactivity">
+    <rdfs:label>LoginActivity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/logmonitoringmayidentify">
+    <rdfs:label>LogMonitoringMayIdentify</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/maliciouslink">
+    <rdfs:label>MaliciousLink</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/malware">
+    <rdfs:label>Malware</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/mayaffectintegrity">
+    <rdfs:label>MayAffectIntegrity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/mayincludepatchdeployment">
+    <rdfs:label>MayIncludePatchDeployment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/monitoring">
+    <rdfs:label>Monitoring</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/phishingemail">
+    <rdfs:label>PhishingEmail</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/phishingemailtoanemployee">
+    <rdfs:label>PhishingEmailToAnEmployee</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/phishingscenario">
+    <rdfs:label>PhishingScenario</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/postincidentreviewmayidentifymissingpatchweak">
+    <rdfs:label>PostIncidentReviewMayIdentifyMissingPatchWeak</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/privilegereduction">
+    <rdfs:label>PrivilegeReduction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/ransomwarescenario">
+    <rdfs:label>RansomwareScenario</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/relatetoeachother">
+    <rdfs:label>RelateToEachOther</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/response">
+    <rdfs:label>Response</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/security">
+    <rdfs:label>Security</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/submittedpassword">
+    <rdfs:label>SubmittedPassword</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/threatactor">
+    <rdfs:label>ThreatActor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/trainingmayreducethelikelihoodofclickingthemaliciouslink">
+    <rdfs:label>TrainingMayReduceTheLikelihoodOfClickingTheMaliciousLink</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/unavailabletobusinessuser">
+    <rdfs:label>UnavailableToBusinessUser</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerability">
+    <rdfs:label>Vulnerability</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

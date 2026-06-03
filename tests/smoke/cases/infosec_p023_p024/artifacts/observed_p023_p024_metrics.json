@@ -1,0 +1,22 @@
+{
+  "case_id": "p023_p024",
+  "claim_count": 23,
+  "class_count": 34,
+  "evidence_precision_proxy": 1.0,
+  "evidence_supported_claim_count": 23,
+  "evidence_unsupported_claim_ids": [],
+  "graph_generated": true,
+  "object_property_count": 9,
+  "observed_stage": "semantic_claims",
+  "paragraph_claim_distribution": {
+    "p023": 10,
+    "p024": 13
+  },
+  "paragraph_ids": [
+    "p023",
+    "p024"
+  ],
+  "rdf_bytes": 16246,
+  "rdf_generated": true,
+  "subclass_fact_count": 11
+}

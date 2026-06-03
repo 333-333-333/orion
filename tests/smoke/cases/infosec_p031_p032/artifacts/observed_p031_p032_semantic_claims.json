@@ -1,0 +1,437 @@
+{
+  "claim_count": 25,
+  "claims": [
+    {
+      "claim_id": "claim-5f0a964cf302050a",
+      "kind": "relation",
+      "normalized_statement": "DataLifecycleManagement protects InformationFromCreationToDisposal",
+      "object": "InformationFromCreationToDisposal",
+      "paragraph_id": "p031",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data lifecycle management protects information from creation to disposal.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-50bb2e214dd6579a",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataLifecycleManagement protects InformationFromCreationToDisposal",
+      "subject": "DataLifecycleManagement"
+    },
+    {
+      "claim_id": "claim-c4715767751c7832",
+      "kind": "relation",
+      "normalized_statement": "DataCreation produces NewInformation",
+      "object": "NewInformation",
+      "paragraph_id": "p031",
+      "predicate": "produces",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data creation produces new information.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-4e640f45b32eff5c",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataCreation produces NewInformation",
+      "subject": "DataCreation"
+    },
+    {
+      "claim_id": "claim-f82f7f9c92667ca9",
+      "kind": "relation",
+      "normalized_statement": "DataStorage keeps InformationInARepository",
+      "object": "InformationInARepository",
+      "paragraph_id": "p031",
+      "predicate": "keeps",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data storage keeps information in a repository.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-1a6145f2e72b2e8e",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataStorage keeps InformationInARepository",
+      "subject": "DataStorage"
+    },
+    {
+      "claim_id": "claim-25f2f9e4b9131fcb",
+      "kind": "relation",
+      "normalized_statement": "DataProcessing transforms UseInformation",
+      "object": "UseInformation",
+      "paragraph_id": "p031",
+      "predicate": "transforms",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data processing transforms or uses information.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-d796e5a38057356d",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataProcessing transforms UseInformation",
+      "subject": "DataProcessing"
+    },
+    {
+      "claim_id": "claim-e6720a71372f964a",
+      "kind": "relation",
+      "normalized_statement": "DataTransmission moves InformationBetweenSystem",
+      "object": "InformationBetweenSystem",
+      "paragraph_id": "p031",
+      "predicate": "moves",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data transmission moves information between systems or people.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-9432c13ffee5ddb8",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataTransmission moves InformationBetweenSystem",
+      "subject": "DataTransmission"
+    },
+    {
+      "claim_id": "claim-f1764c8a9cd82c71",
+      "kind": "relation",
+      "normalized_statement": "DataTransmission moves People",
+      "object": "People",
+      "paragraph_id": "p031",
+      "predicate": "moves",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data transmission moves information between systems or people.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-9432c13ffee5ddb8",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataTransmission moves People",
+      "subject": "DataTransmission"
+    },
+    {
+      "claim_id": "claim-bde03c0b3102ad08",
+      "kind": "relation",
+      "normalized_statement": "DataSharing provides InformationToAnotherParty",
+      "object": "InformationToAnotherParty",
+      "paragraph_id": "p031",
+      "predicate": "provides",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data sharing provides information to another party.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-e796d888fb156c1b",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataSharing provides InformationToAnotherParty",
+      "subject": "DataSharing"
+    },
+    {
+      "claim_id": "claim-45eb913e67abcb82",
+      "kind": "relation",
+      "normalized_statement": "DataArchival stores InformationForLongTermRetention",
+      "object": "InformationForLongTermRetention",
+      "paragraph_id": "p031",
+      "predicate": "stores",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data archival stores information for long-term retention.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-b107312a52774197",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataArchival stores InformationForLongTermRetention",
+      "subject": "DataArchival"
+    },
+    {
+      "claim_id": "claim-dabad81bcdf04c87",
+      "kind": "relation",
+      "normalized_statement": "DataDisposal removes InformationWhenRetentionExpire",
+      "object": "InformationWhenRetentionExpire",
+      "paragraph_id": "p031",
+      "predicate": "removes",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data disposal removes information when retention expires.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-0bc63f5021db5c9d",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataDisposal removes InformationWhenRetentionExpire",
+      "subject": "DataDisposal"
+    },
+    {
+      "claim_id": "claim-ab41bba3c8ec18c4",
+      "kind": "relation",
+      "normalized_statement": "SecureDeletion prevents RecoveryOfDisposedData",
+      "object": "RecoveryOfDisposedData",
+      "paragraph_id": "p031",
+      "predicate": "prevents",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Secure deletion prevents recovery of disposed data.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-b63f3a4964e23791",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "SecureDeletion prevents RecoveryOfDisposedData",
+      "subject": "SecureDeletion"
+    },
+    {
+      "claim_id": "claim-ea8df6c103416bef",
+      "kind": "relation",
+      "normalized_statement": "DataClassification applies LabelToInformation",
+      "object": "LabelToInformation",
+      "paragraph_id": "p031",
+      "predicate": "applies",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data classification applies labels to information.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-b6f56a0741770c01",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataClassification applies LabelToInformation",
+      "subject": "DataClassification"
+    },
+    {
+      "claim_id": "claim-8c1d732bceb66fc8",
+      "kind": "relation",
+      "normalized_statement": "DataHandling rules DefineHowEachClassificationLevelMustBeProtected",
+      "object": "DefineHowEachClassificationLevelMustBeProtected",
+      "paragraph_id": "p031",
+      "predicate": "rules",
+      "source": {
+        "asset_id": "p031",
+        "evidence": "Data handling rules define how each classification level must be protected.",
+        "paragraph_id": "p031",
+        "sentence_id": "sent-dfe6d5fc5a0552b2",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "DataHandling rules DefineHowEachClassificationLevelMustBeProtected",
+      "subject": "DataHandling"
+    },
+    {
+      "claim_id": "claim-7fc726e7e08f4af1",
+      "kind": "relation",
+      "normalized_statement": "ChangeManagement controls ModificationToSystem",
+      "object": "ModificationToSystem",
+      "paragraph_id": "p032",
+      "predicate": "controls",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "Change management controls modifications to systems, applications, infrastructure, and configurations.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-cbe0e4d8a8c2c546",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "ChangeManagement controls ModificationToSystem",
+      "subject": "ChangeManagement"
+    },
+    {
+      "claim_id": "claim-9cf0bce1e236aef6",
+      "kind": "relation",
+      "normalized_statement": "ChangeManagement controls Application",
+      "object": "Application",
+      "paragraph_id": "p032",
+      "predicate": "controls",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "Change management controls modifications to systems, applications, infrastructure, and configurations.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-cbe0e4d8a8c2c546",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "ChangeManagement controls Application",
+      "subject": "ChangeManagement"
+    },
+    {
+      "claim_id": "claim-b76ed9355839c571",
+      "kind": "relation",
+      "normalized_statement": "ChangeManagement controls Infrastructure",
+      "object": "Infrastructure",
+      "paragraph_id": "p032",
+      "predicate": "controls",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "Change management controls modifications to systems, applications, infrastructure, and configurations.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-cbe0e4d8a8c2c546",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "ChangeManagement controls Infrastructure",
+      "subject": "ChangeManagement"
+    },
+    {
+      "claim_id": "claim-bba8d7daccd0784b",
+      "kind": "relation",
+      "normalized_statement": "ChangeManagement controls Configuration",
+      "object": "Configuration",
+      "paragraph_id": "p032",
+      "predicate": "controls",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "Change management controls modifications to systems, applications, infrastructure, and configurations.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-cbe0e4d8a8c2c546",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "ChangeManagement controls Configuration",
+      "subject": "ChangeManagement"
+    },
+    {
+      "claim_id": "claim-5e055787e0bb2003",
+      "kind": "relation",
+      "normalized_statement": "ChangeRequest proposes Modification",
+      "object": "Modification",
+      "paragraph_id": "p032",
+      "predicate": "proposes",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "A change request proposes a modification.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-2a08a289671cd7bd",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "ChangeRequest proposes Modification",
+      "subject": "ChangeRequest"
+    },
+    {
+      "claim_id": "claim-1e1b7b380d84dabb",
+      "kind": "definition",
+      "normalized_statement": "StandardChange is a PreApprovedLowRiskChange",
+      "object": "PreApprovedLowRiskChange",
+      "paragraph_id": "p032",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "A standard change is a type of pre-approved low-risk change.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-5966e20af0eea1ab",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "StandardChange is a PreApprovedLowRiskChange",
+      "subject": "StandardChange"
+    },
+    {
+      "claim_id": "claim-50d1aad27a70e53b",
+      "kind": "definition",
+      "normalized_statement": "NormalChange is_a StandardChange",
+      "object": "StandardChange",
+      "paragraph_id": "p032",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "A normal change is a type of change that requires assessment and approval.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-27b89e28acdb14e2",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "NormalChange is_a StandardChange",
+      "subject": "NormalChange"
+    },
+    {
+      "claim_id": "claim-7abac88fea95d5d9",
+      "kind": "relation",
+      "normalized_statement": "NormalChange requires Assessment",
+      "object": "Assessment",
+      "paragraph_id": "p032",
+      "predicate": "requires",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "A normal change is a type of change that requires assessment and approval.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-27b89e28acdb14e2",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "NormalChange requires Assessment",
+      "subject": "NormalChange"
+    },
+    {
+      "claim_id": "claim-e7b056c683f3de52",
+      "kind": "relation",
+      "normalized_statement": "NormalChange requires Approval",
+      "object": "Approval",
+      "paragraph_id": "p032",
+      "predicate": "requires",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "A normal change is a type of change that requires assessment and approval.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-27b89e28acdb14e2",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "NormalChange requires Approval",
+      "subject": "NormalChange"
+    },
+    {
+      "claim_id": "claim-9ff9d759929889ca",
+      "kind": "definition",
+      "normalized_statement": "EmergencyChange is a ChangeImplementedRapidlyToResolveUrgentIssue",
+      "object": "ChangeImplementedRapidlyToResolveUrgentIssue",
+      "paragraph_id": "p032",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "An emergency change is a type of change implemented rapidly to resolve urgent issues.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-ef2dabd197bd92b3",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "EmergencyChange is a ChangeImplementedRapidlyToResolveUrgentIssue",
+      "subject": "EmergencyChange"
+    },
+    {
+      "claim_id": "claim-9be45faa48f0e4db",
+      "kind": "definition",
+      "normalized_statement": "ChangeApprovalVerify is a Acceptable",
+      "object": "Acceptable",
+      "paragraph_id": "p032",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "Change approval verifies that a change is acceptable.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-2635ab8db9300429",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "ChangeApprovalVerify is a Acceptable",
+      "subject": "ChangeApprovalVerify"
+    },
+    {
+      "claim_id": "claim-d04626db603eb0cf",
+      "kind": "relation",
+      "normalized_statement": "ChangeRollback restores PreviousStateIfAChangeFail",
+      "object": "PreviousStateIfAChangeFail",
+      "paragraph_id": "p032",
+      "predicate": "restores",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "Change rollback restores a previous state if a change fails.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-0ec5d32b7f0c4daa",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "ChangeRollback restores PreviousStateIfAChangeFail",
+      "subject": "ChangeRollback"
+    },
+    {
+      "claim_id": "claim-92b0901e746a1bd1",
+      "kind": "definition",
+      "normalized_statement": "UnauthorizedChange is a ControlViolation",
+      "object": "ControlViolation",
+      "paragraph_id": "p032",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p032",
+        "evidence": "Unauthorized change is a type of control violation.",
+        "paragraph_id": "p032",
+        "sentence_id": "sent-c83b59573306eaf3",
+        "source_text_id": "aa221fbef51142d8b9e3cc519a2098e6ee08d98512afc2569a9b61a4ee5784dc"
+      },
+      "statement": "UnauthorizedChange is a ControlViolation",
+      "subject": "UnauthorizedChange"
+    }
+  ],
+  "contract_required_stage": "semantic_claims",
+  "observed_stage": "semantic_claims",
+  "paragraph_asset_ids": [
+    "p031",
+    "p032"
+  ],
+  "stage": "semantic_claims"
+}

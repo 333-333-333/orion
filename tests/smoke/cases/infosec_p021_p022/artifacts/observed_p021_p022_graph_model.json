@@ -1,0 +1,1058 @@
+{
+  "classes": [
+    {
+      "iri": "orion:Alert",
+      "label": "Alert"
+    },
+    {
+      "iri": "orion:AlertProducedByTheMonitoringSystem",
+      "label": "AlertProducedByTheMonitoringSystem"
+    },
+    {
+      "comments": [
+        "Analysis determines the scope, cause, and impact of an incident."
+      ],
+      "iri": "orion:Analysis",
+      "label": "Analysis"
+    },
+    {
+      "iri": "orion:Application",
+      "label": "Application"
+    },
+    {
+      "iri": "orion:Cause",
+      "label": "Cause"
+    },
+    {
+      "iri": "orion:CommunicationChannel",
+      "label": "CommunicationChannel"
+    },
+    {
+      "comments": [
+        "A detection rule defines conditions that generate an alert."
+      ],
+      "iri": "orion:Condition",
+      "label": "Condition"
+    },
+    {
+      "comments": [
+        "Containment limits the spread or damage of an incident."
+      ],
+      "iri": "orion:Containment",
+      "label": "Containment"
+    },
+    {
+      "iri": "orion:DamageOfAnIncident",
+      "label": "DamageOfAnIncident"
+    },
+    {
+      "comments": [
+        "A dashboard presents security metrics and operational status."
+      ],
+      "iri": "orion:Dashboard",
+      "label": "Dashboard"
+    },
+    {
+      "comments": [
+        "Detection identifies potential incidents."
+      ],
+      "iri": "orion:Detection",
+      "label": "Detection"
+    },
+    {
+      "comments": [
+        "A detection rule defines conditions that generate an alert."
+      ],
+      "iri": "orion:DetectionRule",
+      "label": "DetectionRule"
+    },
+    {
+      "iri": "orion:DifferentLogFormatIntoACommonStructure",
+      "label": "DifferentLogFormatIntoACommonStructure"
+    },
+    {
+      "iri": "orion:Document",
+      "label": "Document"
+    },
+    {
+      "comments": [
+        "Eradication removes the root cause of an incident."
+      ],
+      "iri": "orion:Eradication",
+      "label": "Eradication"
+    },
+    {
+      "iri": "orion:HowLongLogMustBeStored",
+      "label": "HowLongLogMustBeStored"
+    },
+    {
+      "iri": "orion:ImpactOfAnIncident",
+      "label": "ImpactOfAnIncident"
+    },
+    {
+      "iri": "orion:ImprovementAction",
+      "label": "ImprovementAction"
+    },
+    {
+      "iri": "orion:Incident",
+      "label": "Incident"
+    },
+    {
+      "comments": [
+        "Incident response is the process of preparing for, detecting, analyzing, containing, eradicating, and recovering from security incidents."
+      ],
+      "iri": "orion:IncidentResponse",
+      "label": "IncidentResponse"
+    },
+    {
+      "comments": [
+        "An incident response plan is a document that defines the process for handling incidents."
+      ],
+      "iri": "orion:IncidentResponsePlan",
+      "label": "IncidentResponsePlan"
+    },
+    {
+      "iri": "orion:LessonLearned",
+      "label": "LessonLearned"
+    },
+    {
+      "comments": [
+        "Log collection gathers records from systems and applications."
+      ],
+      "iri": "orion:LogCollection",
+      "label": "LogCollection"
+    },
+    {
+      "comments": [
+        "Log correlation identifies relationships between events."
+      ],
+      "iri": "orion:LogCorrelation",
+      "label": "LogCorrelation"
+    },
+    {
+      "comments": [
+        "Log normalization converts different log formats into a common structure."
+      ],
+      "iri": "orion:LogNormalization",
+      "label": "LogNormalization"
+    },
+    {
+      "comments": [
+        "A log retention policy defines how long logs must be stored."
+      ],
+      "iri": "orion:LogRetentionPolicy",
+      "label": "LogRetentionPolicy"
+    },
+    {
+      "iri": "orion:OperationalStatus",
+      "label": "OperationalStatus"
+    },
+    {
+      "comments": [
+        "Post-incident review identifies lessons learned and improvement actions."
+      ],
+      "iri": "orion:PostIncidentReview",
+      "label": "PostIncidentReview"
+    },
+    {
+      "iri": "orion:PotentialIncident",
+      "label": "PotentialIncident"
+    },
+    {
+      "comments": [
+        "Preparation establishes plans, tools, roles, and communication channels."
+      ],
+      "iri": "orion:Preparation",
+      "label": "Preparation"
+    },
+    {
+      "iri": "orion:Process",
+      "label": "Process"
+    },
+    {
+      "iri": "orion:ProcessOfPreparingForDetectingAnalyzingContainingEradicatingAndRecoveringFromSecurityIncident",
+      "label": "ProcessOfPreparingForDetectingAnalyzingContainingEradicatingAndRecoveringFromSecurityIncident"
+    },
+    {
+      "iri": "orion:RecordFromSystem",
+      "label": "RecordFromSystem"
+    },
+    {
+      "comments": [
+        "Recovery restores systems and services to normal operation."
+      ],
+      "iri": "orion:Recovery",
+      "label": "Recovery"
+    },
+    {
+      "iri": "orion:RelationshipBetweenEvent",
+      "label": "RelationshipBetweenEvent"
+    },
+    {
+      "iri": "orion:Role",
+      "label": "Role"
+    },
+    {
+      "iri": "orion:RootCauseOfAnIncident",
+      "label": "RootCauseOfAnIncident"
+    },
+    {
+      "comments": [
+        "A use case describes a scenario that monitoring should detect."
+      ],
+      "iri": "orion:Scenario",
+      "label": "Scenario"
+    },
+    {
+      "iri": "orion:Scope",
+      "label": "Scope"
+    },
+    {
+      "comments": [
+        "A security analyst investigates alerts produced by the monitoring system."
+      ],
+      "iri": "orion:SecurityAnalyst",
+      "label": "SecurityAnalyst"
+    },
+    {
+      "comments": [
+        "A security information and event management system collects, normalizes, correlates, and analyzes security logs."
+      ],
+      "iri": "orion:SecurityInformationAndEventManagementSystemCollectNormalizCorrelateAnd",
+      "label": "SecurityInformationAndEventManagementSystemCollectNormalizCorrelateAnd"
+    },
+    {
+      "iri": "orion:SecurityLog",
+      "label": "SecurityLog"
+    },
+    {
+      "iri": "orion:SecurityMetric",
+      "label": "SecurityMetric"
+    },
+    {
+      "iri": "orion:ShouldDetect",
+      "label": "ShouldDetect"
+    },
+    {
+      "iri": "orion:Spread",
+      "label": "Spread"
+    },
+    {
+      "iri": "orion:System",
+      "label": "System"
+    },
+    {
+      "iri": "orion:ToNormalOperation",
+      "label": "ToNormalOperation"
+    },
+    {
+      "iri": "orion:Tool",
+      "label": "Tool"
+    },
+    {
+      "comments": [
+        "A use case describes a scenario that monitoring should detect."
+      ],
+      "iri": "orion:UseCase",
+      "label": "UseCase"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:SecurityInformationAndEventManagementSystemCollectNormalizCorrelateAnd",
+      "predicate": "orion:analyzes",
+      "range": "orion:SecurityLog"
+    },
+    {
+      "domain": "orion:LogNormalization",
+      "predicate": "orion:converts",
+      "range": "orion:DifferentLogFormatIntoACommonStructure"
+    },
+    {
+      "domain": "orion:DetectionRule",
+      "predicate": "orion:defines",
+      "range": "orion:Condition"
+    },
+    {
+      "domain": "orion:IncidentResponsePlan",
+      "predicate": "orion:defines",
+      "range": "orion:Process"
+    },
+    {
+      "domain": "orion:LogRetentionPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:HowLongLogMustBeStored"
+    },
+    {
+      "domain": "orion:UseCase",
+      "predicate": "orion:describes",
+      "range": "orion:Scenario"
+    },
+    {
+      "domain": "orion:Analysis",
+      "predicate": "orion:determines",
+      "range": "orion:Cause"
+    },
+    {
+      "domain": "orion:Analysis",
+      "predicate": "orion:determines",
+      "range": "orion:ImpactOfAnIncident"
+    },
+    {
+      "domain": "orion:Analysis",
+      "predicate": "orion:determines",
+      "range": "orion:Scope"
+    },
+    {
+      "domain": "orion:Preparation",
+      "predicate": "orion:establishes",
+      "range": "orion:CommunicationChannel"
+    },
+    {
+      "domain": "orion:Preparation",
+      "predicate": "orion:establishes",
+      "range": "orion:IncidentResponsePlan"
+    },
+    {
+      "domain": "orion:Preparation",
+      "predicate": "orion:establishes",
+      "range": "orion:Role"
+    },
+    {
+      "domain": "orion:Preparation",
+      "predicate": "orion:establishes",
+      "range": "orion:Tool"
+    },
+    {
+      "domain": "orion:LogCollection",
+      "predicate": "orion:gathers",
+      "range": "orion:Application"
+    },
+    {
+      "domain": "orion:LogCollection",
+      "predicate": "orion:gathers",
+      "range": "orion:RecordFromSystem"
+    },
+    {
+      "domain": "orion:Condition",
+      "predicate": "orion:generates",
+      "range": "orion:Alert"
+    },
+    {
+      "domain": "orion:IncidentResponsePlan",
+      "predicate": "orion:handls",
+      "range": "orion:Incident"
+    },
+    {
+      "domain": "orion:Detection",
+      "predicate": "orion:identifies",
+      "range": "orion:PotentialIncident"
+    },
+    {
+      "domain": "orion:LogCorrelation",
+      "predicate": "orion:identifies",
+      "range": "orion:RelationshipBetweenEvent"
+    },
+    {
+      "domain": "orion:PostIncidentReview",
+      "predicate": "orion:identifies",
+      "range": "orion:ImprovementAction"
+    },
+    {
+      "domain": "orion:PostIncidentReview",
+      "predicate": "orion:identifies",
+      "range": "orion:LessonLearned"
+    },
+    {
+      "domain": "orion:SecurityAnalyst",
+      "predicate": "orion:investigates",
+      "range": "orion:AlertProducedByTheMonitoringSystem"
+    },
+    {
+      "domain": "orion:Containment",
+      "predicate": "orion:limits",
+      "range": "orion:DamageOfAnIncident"
+    },
+    {
+      "domain": "orion:Containment",
+      "predicate": "orion:limits",
+      "range": "orion:Spread"
+    },
+    {
+      "domain": "orion:Scenario",
+      "predicate": "orion:monitors",
+      "range": "orion:ShouldDetect"
+    },
+    {
+      "domain": "orion:Dashboard",
+      "predicate": "orion:presents",
+      "range": "orion:OperationalStatus"
+    },
+    {
+      "domain": "orion:Dashboard",
+      "predicate": "orion:presents",
+      "range": "orion:SecurityMetric"
+    },
+    {
+      "domain": "orion:Eradication",
+      "predicate": "orion:removes",
+      "range": "orion:RootCauseOfAnIncident"
+    },
+    {
+      "domain": "orion:Recovery",
+      "predicate": "orion:restores",
+      "range": "orion:System"
+    },
+    {
+      "domain": "orion:Recovery",
+      "predicate": "orion:services",
+      "range": "orion:ToNormalOperation"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-2141566fb0718493",
+      "claim-cb9630503e789ae9",
+      "claim-b05e0d33cde33c9e",
+      "claim-216725f85d03452e",
+      "claim-eb65b0d7cbb948d7",
+      "claim-1e4958d198473fcf",
+      "claim-21c7bcd27aa62e78",
+      "claim-57cc909b24fccd71",
+      "claim-c1219ce81fa53a97",
+      "claim-be8c4a39cb1cff3d",
+      "claim-af218b868c16f606",
+      "claim-cfd85dde9a618620",
+      "claim-b1a6fd62265cfd37",
+      "claim-41f520a0b75d4f66",
+      "claim-3fac79054862d008",
+      "claim-00cf6195fbc80497",
+      "claim-e43f0050a2464e74",
+      "claim-569eaa6ec87dade0",
+      "claim-d2fb13333455235c",
+      "claim-6cd194f52854f708",
+      "claim-47b8fd87d8756b36",
+      "claim-c8e1fd0f4b853486",
+      "claim-06a4dacc2531f2c2",
+      "claim-5d5b5cb5fb94c111",
+      "claim-bd4fdc22f2414ebf",
+      "claim-e3d10f2c8e020860",
+      "claim-d3c4b64a4bf8faf2",
+      "claim-be0a5c0a4faa6a02",
+      "claim-d0e38d24ffd7dd17",
+      "claim-8f3ec3acdbbfc5f2",
+      "claim-6d6a24ecbc0bef60",
+      "claim-1bd20cc0064a9b2e"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:SecurityInformationAndEventManagementSystemCollectNormalizCorrelateAnd",
+      "property": "orion:analyzes",
+      "range": "orion:SecurityLog"
+    },
+    {
+      "domain": "orion:LogNormalization",
+      "property": "orion:converts",
+      "range": "orion:DifferentLogFormatIntoACommonStructure"
+    },
+    {
+      "domain": "orion:DetectionRule",
+      "property": "orion:defines",
+      "range": "orion:Condition"
+    },
+    {
+      "domain": "orion:IncidentResponsePlan",
+      "property": "orion:defines",
+      "range": "orion:Process"
+    },
+    {
+      "domain": "orion:LogRetentionPolicy",
+      "property": "orion:defines",
+      "range": "orion:HowLongLogMustBeStored"
+    },
+    {
+      "domain": "orion:UseCase",
+      "property": "orion:describes",
+      "range": "orion:Scenario"
+    },
+    {
+      "domain": "orion:Analysis",
+      "property": "orion:determines",
+      "range": "orion:Cause"
+    },
+    {
+      "domain": "orion:Analysis",
+      "property": "orion:determines",
+      "range": "orion:ImpactOfAnIncident"
+    },
+    {
+      "domain": "orion:Analysis",
+      "property": "orion:determines",
+      "range": "orion:Scope"
+    },
+    {
+      "domain": "orion:Preparation",
+      "property": "orion:establishes",
+      "range": "orion:CommunicationChannel"
+    },
+    {
+      "domain": "orion:Preparation",
+      "property": "orion:establishes",
+      "range": "orion:IncidentResponsePlan"
+    },
+    {
+      "domain": "orion:Preparation",
+      "property": "orion:establishes",
+      "range": "orion:Role"
+    },
+    {
+      "domain": "orion:Preparation",
+      "property": "orion:establishes",
+      "range": "orion:Tool"
+    },
+    {
+      "domain": "orion:LogCollection",
+      "property": "orion:gathers",
+      "range": "orion:Application"
+    },
+    {
+      "domain": "orion:LogCollection",
+      "property": "orion:gathers",
+      "range": "orion:RecordFromSystem"
+    },
+    {
+      "domain": "orion:Condition",
+      "property": "orion:generates",
+      "range": "orion:Alert"
+    },
+    {
+      "domain": "orion:IncidentResponsePlan",
+      "property": "orion:handls",
+      "range": "orion:Incident"
+    },
+    {
+      "domain": "orion:Detection",
+      "property": "orion:identifies",
+      "range": "orion:PotentialIncident"
+    },
+    {
+      "domain": "orion:LogCorrelation",
+      "property": "orion:identifies",
+      "range": "orion:RelationshipBetweenEvent"
+    },
+    {
+      "domain": "orion:PostIncidentReview",
+      "property": "orion:identifies",
+      "range": "orion:ImprovementAction"
+    },
+    {
+      "domain": "orion:PostIncidentReview",
+      "property": "orion:identifies",
+      "range": "orion:LessonLearned"
+    },
+    {
+      "domain": "orion:SecurityAnalyst",
+      "property": "orion:investigates",
+      "range": "orion:AlertProducedByTheMonitoringSystem"
+    },
+    {
+      "domain": "orion:Containment",
+      "property": "orion:limits",
+      "range": "orion:DamageOfAnIncident"
+    },
+    {
+      "domain": "orion:Containment",
+      "property": "orion:limits",
+      "range": "orion:Spread"
+    },
+    {
+      "domain": "orion:Scenario",
+      "property": "orion:monitors",
+      "range": "orion:ShouldDetect"
+    },
+    {
+      "domain": "orion:Dashboard",
+      "property": "orion:presents",
+      "range": "orion:OperationalStatus"
+    },
+    {
+      "domain": "orion:Dashboard",
+      "property": "orion:presents",
+      "range": "orion:SecurityMetric"
+    },
+    {
+      "domain": "orion:Eradication",
+      "property": "orion:removes",
+      "range": "orion:RootCauseOfAnIncident"
+    },
+    {
+      "domain": "orion:Recovery",
+      "property": "orion:restores",
+      "range": "orion:System"
+    },
+    {
+      "domain": "orion:Recovery",
+      "property": "orion:services",
+      "range": "orion:ToNormalOperation"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:Alert",
+        "label": "Alert"
+      },
+      {
+        "iri": "orion:AlertProducedByTheMonitoringSystem",
+        "label": "AlertProducedByTheMonitoringSystem"
+      },
+      {
+        "comments": [
+          "Analysis determines the scope, cause, and impact of an incident."
+        ],
+        "iri": "orion:Analysis",
+        "label": "Analysis"
+      },
+      {
+        "iri": "orion:Application",
+        "label": "Application"
+      },
+      {
+        "iri": "orion:Cause",
+        "label": "Cause"
+      },
+      {
+        "iri": "orion:CommunicationChannel",
+        "label": "CommunicationChannel"
+      },
+      {
+        "comments": [
+          "A detection rule defines conditions that generate an alert."
+        ],
+        "iri": "orion:Condition",
+        "label": "Condition"
+      },
+      {
+        "comments": [
+          "Containment limits the spread or damage of an incident."
+        ],
+        "iri": "orion:Containment",
+        "label": "Containment"
+      },
+      {
+        "iri": "orion:DamageOfAnIncident",
+        "label": "DamageOfAnIncident"
+      },
+      {
+        "comments": [
+          "A dashboard presents security metrics and operational status."
+        ],
+        "iri": "orion:Dashboard",
+        "label": "Dashboard"
+      },
+      {
+        "comments": [
+          "Detection identifies potential incidents."
+        ],
+        "iri": "orion:Detection",
+        "label": "Detection"
+      },
+      {
+        "comments": [
+          "A detection rule defines conditions that generate an alert."
+        ],
+        "iri": "orion:DetectionRule",
+        "label": "DetectionRule"
+      },
+      {
+        "iri": "orion:DifferentLogFormatIntoACommonStructure",
+        "label": "DifferentLogFormatIntoACommonStructure"
+      },
+      {
+        "iri": "orion:Document",
+        "label": "Document"
+      },
+      {
+        "comments": [
+          "Eradication removes the root cause of an incident."
+        ],
+        "iri": "orion:Eradication",
+        "label": "Eradication"
+      },
+      {
+        "iri": "orion:HowLongLogMustBeStored",
+        "label": "HowLongLogMustBeStored"
+      },
+      {
+        "iri": "orion:ImpactOfAnIncident",
+        "label": "ImpactOfAnIncident"
+      },
+      {
+        "iri": "orion:ImprovementAction",
+        "label": "ImprovementAction"
+      },
+      {
+        "iri": "orion:Incident",
+        "label": "Incident"
+      },
+      {
+        "comments": [
+          "Incident response is the process of preparing for, detecting, analyzing, containing, eradicating, and recovering from security incidents."
+        ],
+        "iri": "orion:IncidentResponse",
+        "label": "IncidentResponse"
+      },
+      {
+        "comments": [
+          "An incident response plan is a document that defines the process for handling incidents."
+        ],
+        "iri": "orion:IncidentResponsePlan",
+        "label": "IncidentResponsePlan"
+      },
+      {
+        "iri": "orion:LessonLearned",
+        "label": "LessonLearned"
+      },
+      {
+        "comments": [
+          "Log collection gathers records from systems and applications."
+        ],
+        "iri": "orion:LogCollection",
+        "label": "LogCollection"
+      },
+      {
+        "comments": [
+          "Log correlation identifies relationships between events."
+        ],
+        "iri": "orion:LogCorrelation",
+        "label": "LogCorrelation"
+      },
+      {
+        "comments": [
+          "Log normalization converts different log formats into a common structure."
+        ],
+        "iri": "orion:LogNormalization",
+        "label": "LogNormalization"
+      },
+      {
+        "comments": [
+          "A log retention policy defines how long logs must be stored."
+        ],
+        "iri": "orion:LogRetentionPolicy",
+        "label": "LogRetentionPolicy"
+      },
+      {
+        "iri": "orion:OperationalStatus",
+        "label": "OperationalStatus"
+      },
+      {
+        "comments": [
+          "Post-incident review identifies lessons learned and improvement actions."
+        ],
+        "iri": "orion:PostIncidentReview",
+        "label": "PostIncidentReview"
+      },
+      {
+        "iri": "orion:PotentialIncident",
+        "label": "PotentialIncident"
+      },
+      {
+        "comments": [
+          "Preparation establishes plans, tools, roles, and communication channels."
+        ],
+        "iri": "orion:Preparation",
+        "label": "Preparation"
+      },
+      {
+        "iri": "orion:Process",
+        "label": "Process"
+      },
+      {
+        "iri": "orion:ProcessOfPreparingForDetectingAnalyzingContainingEradicatingAndRecoveringFromSecurityIncident",
+        "label": "ProcessOfPreparingForDetectingAnalyzingContainingEradicatingAndRecoveringFromSecurityIncident"
+      },
+      {
+        "iri": "orion:RecordFromSystem",
+        "label": "RecordFromSystem"
+      },
+      {
+        "comments": [
+          "Recovery restores systems and services to normal operation."
+        ],
+        "iri": "orion:Recovery",
+        "label": "Recovery"
+      },
+      {
+        "iri": "orion:RelationshipBetweenEvent",
+        "label": "RelationshipBetweenEvent"
+      },
+      {
+        "iri": "orion:Role",
+        "label": "Role"
+      },
+      {
+        "iri": "orion:RootCauseOfAnIncident",
+        "label": "RootCauseOfAnIncident"
+      },
+      {
+        "comments": [
+          "A use case describes a scenario that monitoring should detect."
+        ],
+        "iri": "orion:Scenario",
+        "label": "Scenario"
+      },
+      {
+        "iri": "orion:Scope",
+        "label": "Scope"
+      },
+      {
+        "comments": [
+          "A security analyst investigates alerts produced by the monitoring system."
+        ],
+        "iri": "orion:SecurityAnalyst",
+        "label": "SecurityAnalyst"
+      },
+      {
+        "comments": [
+          "A security information and event management system collects, normalizes, correlates, and analyzes security logs."
+        ],
+        "iri": "orion:SecurityInformationAndEventManagementSystemCollectNormalizCorrelateAnd",
+        "label": "SecurityInformationAndEventManagementSystemCollectNormalizCorrelateAnd"
+      },
+      {
+        "iri": "orion:SecurityLog",
+        "label": "SecurityLog"
+      },
+      {
+        "iri": "orion:SecurityMetric",
+        "label": "SecurityMetric"
+      },
+      {
+        "iri": "orion:ShouldDetect",
+        "label": "ShouldDetect"
+      },
+      {
+        "iri": "orion:Spread",
+        "label": "Spread"
+      },
+      {
+        "iri": "orion:System",
+        "label": "System"
+      },
+      {
+        "iri": "orion:ToNormalOperation",
+        "label": "ToNormalOperation"
+      },
+      {
+        "iri": "orion:Tool",
+        "label": "Tool"
+      },
+      {
+        "comments": [
+          "A use case describes a scenario that monitoring should detect."
+        ],
+        "iri": "orion:UseCase",
+        "label": "UseCase"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:SecurityInformationAndEventManagementSystemCollectNormalizCorrelateAnd",
+        "iri": "orion:analyzes",
+        "label": "Analyzes",
+        "range": "orion:SecurityLog"
+      },
+      {
+        "domain": "orion:LogNormalization",
+        "iri": "orion:converts",
+        "label": "Converts",
+        "range": "orion:DifferentLogFormatIntoACommonStructure"
+      },
+      {
+        "domain": "orion:DetectionRule",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:Condition"
+      },
+      {
+        "domain": "orion:IncidentResponsePlan",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:Process"
+      },
+      {
+        "domain": "orion:LogRetentionPolicy",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:HowLongLogMustBeStored"
+      },
+      {
+        "domain": "orion:UseCase",
+        "iri": "orion:describes",
+        "label": "Describes",
+        "range": "orion:Scenario"
+      },
+      {
+        "domain": "orion:Analysis",
+        "iri": "orion:determines",
+        "label": "Determines",
+        "range": "orion:Cause"
+      },
+      {
+        "domain": "orion:Analysis",
+        "iri": "orion:determines",
+        "label": "Determines",
+        "range": "orion:ImpactOfAnIncident"
+      },
+      {
+        "domain": "orion:Analysis",
+        "iri": "orion:determines",
+        "label": "Determines",
+        "range": "orion:Scope"
+      },
+      {
+        "domain": "orion:Preparation",
+        "iri": "orion:establishes",
+        "label": "Establishes",
+        "range": "orion:CommunicationChannel"
+      },
+      {
+        "domain": "orion:Preparation",
+        "iri": "orion:establishes",
+        "label": "Establishes",
+        "range": "orion:IncidentResponsePlan"
+      },
+      {
+        "domain": "orion:Preparation",
+        "iri": "orion:establishes",
+        "label": "Establishes",
+        "range": "orion:Role"
+      },
+      {
+        "domain": "orion:Preparation",
+        "iri": "orion:establishes",
+        "label": "Establishes",
+        "range": "orion:Tool"
+      },
+      {
+        "domain": "orion:LogCollection",
+        "iri": "orion:gathers",
+        "label": "Gathers",
+        "range": "orion:Application"
+      },
+      {
+        "domain": "orion:LogCollection",
+        "iri": "orion:gathers",
+        "label": "Gathers",
+        "range": "orion:RecordFromSystem"
+      },
+      {
+        "domain": "orion:Condition",
+        "iri": "orion:generates",
+        "label": "Generates",
+        "range": "orion:Alert"
+      },
+      {
+        "domain": "orion:IncidentResponsePlan",
+        "iri": "orion:handls",
+        "label": "Handls",
+        "range": "orion:Incident"
+      },
+      {
+        "domain": "orion:Detection",
+        "iri": "orion:identifies",
+        "label": "Identifies",
+        "range": "orion:PotentialIncident"
+      },
+      {
+        "domain": "orion:LogCorrelation",
+        "iri": "orion:identifies",
+        "label": "Identifies",
+        "range": "orion:RelationshipBetweenEvent"
+      },
+      {
+        "domain": "orion:PostIncidentReview",
+        "iri": "orion:identifies",
+        "label": "Identifies",
+        "range": "orion:ImprovementAction"
+      },
+      {
+        "domain": "orion:PostIncidentReview",
+        "iri": "orion:identifies",
+        "label": "Identifies",
+        "range": "orion:LessonLearned"
+      },
+      {
+        "domain": "orion:SecurityAnalyst",
+        "iri": "orion:investigates",
+        "label": "Investigates",
+        "range": "orion:AlertProducedByTheMonitoringSystem"
+      },
+      {
+        "domain": "orion:Containment",
+        "iri": "orion:limits",
+        "label": "Limits",
+        "range": "orion:DamageOfAnIncident"
+      },
+      {
+        "domain": "orion:Containment",
+        "iri": "orion:limits",
+        "label": "Limits",
+        "range": "orion:Spread"
+      },
+      {
+        "domain": "orion:Scenario",
+        "iri": "orion:monitors",
+        "label": "Monitors",
+        "range": "orion:ShouldDetect"
+      },
+      {
+        "domain": "orion:Dashboard",
+        "iri": "orion:presents",
+        "label": "Presents",
+        "range": "orion:OperationalStatus"
+      },
+      {
+        "domain": "orion:Dashboard",
+        "iri": "orion:presents",
+        "label": "Presents",
+        "range": "orion:SecurityMetric"
+      },
+      {
+        "domain": "orion:Eradication",
+        "iri": "orion:removes",
+        "label": "Removes",
+        "range": "orion:RootCauseOfAnIncident"
+      },
+      {
+        "domain": "orion:Recovery",
+        "iri": "orion:restores",
+        "label": "Restores",
+        "range": "orion:System"
+      },
+      {
+        "domain": "orion:Recovery",
+        "iri": "orion:services",
+        "label": "Services",
+        "range": "orion:ToNormalOperation"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:ProcessOfPreparingForDetectingAnalyzingContainingEradicatingAndRecoveringFromSecurityIncident",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:IncidentResponse"
+    },
+    {
+      "object": "orion:Document",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:IncidentResponsePlan"
+    }
+  ],
+  "type_assertions": []
+}

@@ -10,6 +10,7 @@ _RESERVED_PREFIXES = {
 }
 _DEFAULT_BASE_IRI = 'https://orion.local/resource/'
 _DEFAULT_PREFIX = 'orion'
+_PHRASE_ARTICLES = {'a', 'an', 'the', 'any', 'each', 'one', 'more'}
 
 
 def _is_absolute_http_iri(value: str) -> bool:
@@ -62,6 +63,11 @@ def slugify_iri_part(text: str, style: str) -> str:
         return ''
 
     if style == 'class':
+        while parts and parts[0] in _PHRASE_ARTICLES:
+            if len(parts) >= 3 and parts[0] == 'one' and parts[1] == 'or' and parts[2] == 'more':
+                parts = parts[3:]
+                continue
+            parts.pop(0)
         return ''.join(part.capitalize() for part in parts)
     if style == 'predicate':
         head, *tail = parts

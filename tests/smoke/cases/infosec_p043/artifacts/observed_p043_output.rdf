@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <owl:Class rdf:about="https://orion.local/resource/accesssystem">
+    <rdfs:label>AccessSystem</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/backupsupportavailability">
+    <rdfs:label>BackupSupportAvailability</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/confidentiality">
+    <rdfs:label>Confidentiality</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/controlreducerisk">
+    <rdfs:label>ControlReduceRisk</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/evaluatecompliance">
+    <rdfs:label>EvaluateCompliance</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/incidentaffectasset">
+    <rdfs:label>IncidentAffectAsset</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/loggingsupportaccountability">
+    <rdfs:label>LoggingSupportAccountability</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/makethegeneratedrdf">
+    <rdfs:label>MakeTheGeneratedRdf</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/mining">
+    <rdfs:label>Mining</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/monitoringdetectsuspiciousactivity">
+    <rdfs:label>MonitoringDetectSuspiciousActivity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/ontologyshouldalsorepresent">
+    <rdfs:label>OntologyShouldAlsoRepresent</rdfs:label>
+    <rdfs:comment>The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/owlgraphsuitableforquerying">
+    <rdfs:label>OwlGraphSuitableForQuerying</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/policydefinerequirement">
+    <rdfs:label>PolicyDefineRequirement</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/reasoning">
+    <rdfs:label>Reasoning</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/requirementaresatisfiedbycontrol">
+    <rdfs:label>RequirementAreSatisfiedByControl</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/resultingontologyshouldrepresent">
+    <rdfs:label>ResultingOntologyShouldRepresent</rdfs:label>
+    <rdfs:comment>The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/roleincludepermission">
+    <rdfs:label>RoleIncludePermission</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/supplierprovideservice">
+    <rdfs:label>SupplierProvideService</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/systemprocessinformationasset">
+    <rdfs:label>SystemProcessInformationAsset</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/these">
+    <rdfs:label>These</rdfs:label>
+    <rdfs:comment>These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/threatexploitvulnerability">
+    <rdfs:label>ThreatExploitVulnerability</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/validation">
+    <rdfs:label>Validation</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/auditors">
+    <rdfs:label>Auditors</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resultingontologyshouldrepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/evaluatecompliance"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/protects">
+    <rdfs:label>Protects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/ontologyshouldalsorepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/backupsupportavailability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/protects">
+    <rdfs:label>Protects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/ontologyshouldalsorepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/confidentiality"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/protects">
+    <rdfs:label>Protects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/ontologyshouldalsorepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/loggingsupportaccountability"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/protects">
+    <rdfs:label>Protects</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/ontologyshouldalsorepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/monitoringdetectsuspiciousactivity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/relationships">
+    <rdfs:label>Relationships</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/these"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/makethegeneratedrdf"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/relationships">
+    <rdfs:label>Relationships</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/these"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/mining"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/relationships">
+    <rdfs:label>Relationships</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/these"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/owlgraphsuitableforquerying"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/relationships">
+    <rdfs:label>Relationships</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/these"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/reasoning"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/relationships">
+    <rdfs:label>Relationships</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/these"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/validation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/users">
+    <rdfs:label>Users</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resultingontologyshouldrepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/accesssystem"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/users">
+    <rdfs:label>Users</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resultingontologyshouldrepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/controlreducerisk"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/users">
+    <rdfs:label>Users</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resultingontologyshouldrepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/incidentaffectasset"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/users">
+    <rdfs:label>Users</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resultingontologyshouldrepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/policydefinerequirement"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/users">
+    <rdfs:label>Users</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resultingontologyshouldrepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/requirementaresatisfiedbycontrol"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/users">
+    <rdfs:label>Users</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resultingontologyshouldrepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/roleincludepermission"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/users">
+    <rdfs:label>Users</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resultingontologyshouldrepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/supplierprovideservice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/users">
+    <rdfs:label>Users</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resultingontologyshouldrepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/systemprocessinformationasset"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/users">
+    <rdfs:label>Users</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/resultingontologyshouldrepresent"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/threatexploitvulnerability"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="https://orion.local/resource/accesssystem">
+    <rdfs:label>AccessSystem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/backupsupportavailability">
+    <rdfs:label>BackupSupportAvailability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/confidentiality">
+    <rdfs:label>Confidentiality</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/controlreducerisk">
+    <rdfs:label>ControlReduceRisk</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/evaluatecompliance">
+    <rdfs:label>EvaluateCompliance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/incidentaffectasset">
+    <rdfs:label>IncidentAffectAsset</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/loggingsupportaccountability">
+    <rdfs:label>LoggingSupportAccountability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/makethegeneratedrdf">
+    <rdfs:label>MakeTheGeneratedRdf</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/mining">
+    <rdfs:label>Mining</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/monitoringdetectsuspiciousactivity">
+    <rdfs:label>MonitoringDetectSuspiciousActivity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/ontologyshouldalsorepresent">
+    <rdfs:label>OntologyShouldAlsoRepresent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/owlgraphsuitableforquerying">
+    <rdfs:label>OwlGraphSuitableForQuerying</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/policydefinerequirement">
+    <rdfs:label>PolicyDefineRequirement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/reasoning">
+    <rdfs:label>Reasoning</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/requirementaresatisfiedbycontrol">
+    <rdfs:label>RequirementAreSatisfiedByControl</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/resultingontologyshouldrepresent">
+    <rdfs:label>ResultingOntologyShouldRepresent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/roleincludepermission">
+    <rdfs:label>RoleIncludePermission</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/supplierprovideservice">
+    <rdfs:label>SupplierProvideService</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/systemprocessinformationasset">
+    <rdfs:label>SystemProcessInformationAsset</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/these">
+    <rdfs:label>These</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/threatexploitvulnerability">
+    <rdfs:label>ThreatExploitVulnerability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/validation">
+    <rdfs:label>Validation</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

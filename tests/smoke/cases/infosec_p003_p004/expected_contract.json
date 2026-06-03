@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "spec_refs": {
+    "task": "TASK-CANONICAL-RDF-P003-P004",
+    "fun": "FUN-CANONICAL-RDF-P003-P004",
+    "con": "CON-CANONICAL-RDF-P003-P004",
+    "br": [
+      "BR-CANONICAL-RDF-P003-P004-001",
+      "BR-CANONICAL-RDF-P003-P004-002",
+      "BR-CANONICAL-RDF-P003-P004-003",
+      "BR-CANONICAL-RDF-P003-P004-004",
+      "BR-CANONICAL-RDF-P003-P004-005",
+      "BR-CANONICAL-RDF-P003-P004-006"
+    ]
+  },
+  "paragraphs": [
+    "p003",
+    "p004"
+  ],
+  "expected_statements_by_paragraph": {
+    "p003": [
+      "Organization implements Control",
+      "Organization implements Governance",
+      "Organization implements IncidentResponseProcess",
+      "Organization implements MonitoringMechanism",
+      "Organization implements SecurityPolicy",
+      "Organization implements SecurityProcedure",
+      "Organization protects Information",
+      "SecurityBaseline is a MinimumSetOfControls",
+      "SecurityBaseline required_for Application",
+      "SecurityBaseline required_for InfrastructureComponent",
+      "SecurityBaseline required_for System",
+      "SecurityGuideline is a AdvisoryDocument",
+      "SecurityGuideline recommends GoodPractice",
+      "SecurityPolicy defines Expectation",
+      "SecurityPolicy defines Rule",
+      "SecurityPolicy is a FormalDocument",
+      "SecurityPolicy protects Information",
+      "SecurityProcedure defines StepByStepActivity",
+      "SecurityProcedure is a OperationalDocument",
+      "SecurityStandard defines MandatoryRequirement",
+      "SecurityStandard is a ControlDocument"
+    ],
+    "p004": [
+      "AssetCustodian maintains TechnicalEnvironment",
+      "AssetCustodian operates TechnicalEnvironment",
+      "AssetOwner classifies InformationAsset",
+      "AssetOwner defines ProtectionRequirement",
+      "Auditor evaluates Compliance",
+      "BoardOfDirectors provides oversight for InformationSecurity",
+      "Compliance checked_against SecurityRequirement",
+      "EndUser accesses System",
+      "EndUser follows SecurityPolicy",
+      "InformationSecurityManager coordinates InformationSecurityProgram",
+      "Resource supports SecurityInitiative",
+      "SecurityAnalyst investigates SuspiciousActivity",
+      "SecurityAnalyst monitors SecurityEvent",
+      "SeniorManagement allocates Resource",
+      "SeniorManagement approves SecurityPolicy",
+      "SystemAdministrator manages Network",
+      "SystemAdministrator manages OperatingSystem",
+      "SystemAdministrator manages Server",
+      "SystemAdministrator manages TechnicalService",
+      "TechnicalEnvironment processes Information",
+      "TechnicalEnvironment stores Information"
+    ]
+  },
+  "rdf": {
+    "classes": [
+      "advisory-document",
+      "application",
+      "asset-custodian",
+      "asset-owner",
+      "auditor",
+      "board-of-directors",
+      "compliance",
+      "control",
+      "control-document",
+      "end-user",
+      "expectation",
+      "formal-document",
+      "good-practice",
+      "governance",
+      "incident-response-process",
+      "information",
+      "information-asset",
+      "information-security",
+      "information-security-manager",
+      "information-security-program",
+      "infrastructure-component",
+      "mandatory-requirement",
+      "minimum-set-of-controls",
+      "monitoring-mechanism",
+      "network",
+      "operating-system",
+      "operational-document",
+      "organization",
+      "protection-requirement",
+      "resource",
+      "rule",
+      "security-analyst",
+      "security-baseline",
+      "security-event",
+      "security-guideline",
+      "security-initiative",
+      "security-policy",
+      "security-procedure",
+      "security-requirement",
+      "security-standard",
+      "senior-management",
+      "server",
+      "step-by-step-activity",
+      "suspicious-activity",
+      "system",
+      "system-administrator",
+      "technical-environment",
+      "technical-service"
+    ],
+    "direct_subclasses": [
+      [
+        "security-policy",
+        "formal-document"
+      ],
+      [
+        "security-standard",
+        "control-document"
+      ],
+      [
+        "security-procedure",
+        "operational-document"
+      ],
+      [
+        "security-guideline",
+        "advisory-document"
+      ],
+      [
+        "security-baseline",
+        "minimum-set-of-controls"
+      ]
+    ],
+    "object_properties": [
+      [
+        "protects",
+        "organization",
+        "information"
+      ],
+      [
+        "implements",
+        "organization",
+        "governance"
+      ],
+      [
+        "implements",
+        "organization",
+        "security-policy"
+      ],
+      [
+        "implements",
+        "organization",
+        "security-procedure"
+      ],
+      [
+        "implements",
+        "organization",
+        "control"
+      ],
+      [
+        "implements",
+        "organization",
+        "monitoring-mechanism"
+      ],
+      [
+        "implements",
+        "organization",
+        "incident-response-process"
+      ],
+      [
+        "defines",
+        "security-policy",
+        "rule"
+      ],
+      [
+        "defines",
+        "security-policy",
+        "expectation"
+      ],
+      [
+        "protects",
+        "security-policy",
+        "information"
+      ],
+      [
+        "defines",
+        "security-standard",
+        "mandatory-requirement"
+      ],
+      [
+        "defines",
+        "security-procedure",
+        "step-by-step-activity"
+      ],
+      [
+        "recommends",
+        "security-guideline",
+        "good-practice"
+      ],
+      [
+        "required-for",
+        "security-baseline",
+        "system"
+      ],
+      [
+        "required-for",
+        "security-baseline",
+        "application"
+      ],
+      [
+        "required-for",
+        "security-baseline",
+        "infrastructure-component"
+      ],
+      [
+        "provides-oversight-for",
+        "board-of-directors",
+        "information-security"
+      ],
+      [
+        "approves",
+        "senior-management",
+        "security-policy"
+      ],
+      [
+        "allocates",
+        "senior-management",
+        "resource"
+      ],
+      [
+        "supports",
+        "resource",
+        "security-initiative"
+      ],
+      [
+        "coordinates",
+        "information-security-manager",
+        "information-security-program"
+      ],
+      [
+        "classifies",
+        "asset-owner",
+        "information-asset"
+      ],
+      [
+        "defines",
+        "asset-owner",
+        "protection-requirement"
+      ],
+      [
+        "operates",
+        "asset-custodian",
+        "technical-environment"
+      ],
+      [
+        "maintains",
+        "asset-custodian",
+        "technical-environment"
+      ],
+      [
+        "stores",
+        "technical-environment",
+        "information"
+      ],
+      [
+        "processes",
+        "technical-environment",
+        "information"
+      ],
+      [
+        "manages",
+        "system-administrator",
+        "server"
+      ],
+      [
+        "manages",
+        "system-administrator",
+        "network"
+      ],
+      [
+        "manages",
+        "system-administrator",
+        "operating-system"
+      ],
+      [
+        "manages",
+        "system-administrator",
+        "technical-service"
+      ],
+      [
+        "monitors",
+        "security-analyst",
+        "security-event"
+      ],
+      [
+        "investigates",
+        "security-analyst",
+        "suspicious-activity"
+      ],
+      [
+        "evaluates",
+        "auditor",
+        "compliance"
+      ],
+      [
+        "checked-against",
+        "compliance",
+        "security-requirement"
+      ],
+      [
+        "accesses",
+        "end-user",
+        "system"
+      ],
+      [
+        "follows",
+        "end-user",
+        "security-policy"
+      ]
+    ],
+    "comments": {
+      "security-policy": "A security policy is a formal document that defines rules and expectations for protecting information.",
+      "security-standard": "A security standard is a type of control document that defines mandatory requirements.",
+      "security-procedure": "A security procedure is a type of operational document that defines step-by-step activities.",
+      "security-guideline": "A security guideline is a type of advisory document that recommends good practices.",
+      "security-baseline": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
+      "board-of-directors": "The board of directors provides strategic oversight for information security.",
+      "senior-management": "Senior management approves security policies and allocates resources for security initiatives.",
+      "information-security-manager": "The information security manager coordinates the information security program.",
+      "asset-owner": "The asset owner classifies information assets and defines protection requirements.",
+      "asset-custodian": "The asset custodian operates and maintains the technical environment that stores or processes information.",
+      "system-administrator": "The system administrator manages servers, networks, operating systems, and technical services.",
+      "security-analyst": "The security analyst monitors security events and investigates suspicious activity.",
+      "auditor": "The auditor evaluates compliance with security requirements.",
+      "end-user": "The end user accesses systems and must follow security policies."
+    }
+  },
+  "banned_tokens": [
+    "resource-for-security-initiative",
+    "rules-and-expectations",
+    "type-of-",
+    "type-of-control-document",
+    "typeofformaldocument",
+    "minimum-set-of-controls-required",
+    "technical-environment-that-stores"
+  ],
+  "rdf_quality": {
+    "max_class_count": 48,
+    "min_subclass_count": 5,
+    "min_subclass_density": 0.1,
+    "prohibited_classes": [],
+    "justified_orphan_classes": [
+      "advisory-document",
+      "control-document",
+      "formal-document",
+      "minimum-set-of-controls",
+      "operational-document",
+      "step-by-step-activity"
+    ],
+    "noun_chunk_residue_tokens": [
+      "type-of-",
+      "typeofformaldocument",
+      "type-of-control-document",
+      "resource-for-security-initiative",
+      "rules-and-expectations",
+      "minimum-set-of-controls-required",
+      "technical-environment-that-stores"
+    ],
+    "max_unjustified_connectivity_orphans": 0,
+    "central_connected_classes": [
+      "organization",
+      "information",
+      "governance",
+      "security-policy",
+      "security-procedure",
+      "control",
+      "monitoring-mechanism",
+      "incident-response-process",
+      "rule",
+      "expectation",
+      "security-standard",
+      "mandatory-requirement",
+      "security-guideline",
+      "good-practice",
+      "security-baseline",
+      "system",
+      "application",
+      "infrastructure-component",
+      "board-of-directors",
+      "information-security",
+      "senior-management",
+      "resource",
+      "security-initiative",
+      "information-security-manager",
+      "information-security-program",
+      "asset-owner",
+      "information-asset",
+      "protection-requirement",
+      "asset-custodian",
+      "technical-environment",
+      "system-administrator",
+      "server",
+      "network",
+      "operating-system",
+      "technical-service",
+      "security-analyst",
+      "security-event",
+      "suspicious-activity",
+      "auditor",
+      "compliance",
+      "security-requirement",
+      "end-user"
+    ]
+  }
+}

@@ -1,0 +1,892 @@
+{
+  "classes": [
+    {
+      "comments": [
+        "Antivirus software is a type of endpoint protection control."
+      ],
+      "iri": "orion:AntivirusSoftware",
+      "label": "AntivirusSoftware"
+    },
+    {
+      "iri": "orion:ApplyingSecureSetting",
+      "label": "ApplyingSecureSetting"
+    },
+    {
+      "iri": "orion:AttackSurface",
+      "label": "AttackSurface"
+    },
+    {
+      "iri": "orion:BusinessSystem",
+      "label": "BusinessSystem"
+    },
+    {
+      "iri": "orion:CommunicationChannel",
+      "label": "CommunicationChannel"
+    },
+    {
+      "comments": [
+        "Configuration hardening reduces attack surface by disabling unnecessary services and applying secure settings."
+      ],
+      "iri": "orion:ConfigurationHardening",
+      "label": "ConfigurationHardening"
+    },
+    {
+      "iri": "orion:ControlledServiceToExternalNetwork",
+      "label": "ControlledServiceToExternalNetwork"
+    },
+    {
+      "iri": "orion:DataStoredOnAnEndpoint",
+      "label": "DataStoredOnAnEndpoint"
+    },
+    {
+      "comments": [
+        "A demilitarized zone is a type of network segment that exposes controlled services to external networks."
+      ],
+      "iri": "orion:DemilitarizedZone",
+      "label": "DemilitarizedZone"
+    },
+    {
+      "iri": "orion:Desktop",
+      "label": "Desktop"
+    },
+    {
+      "iri": "orion:DetectiveNetworkControl",
+      "label": "DetectiveNetworkControl"
+    },
+    {
+      "iri": "orion:DeviceConnectedToTheOrganizationalNetwork",
+      "label": "DeviceConnectedToTheOrganizationalNetwork"
+    },
+    {
+      "comments": [
+        "Device encryption protects data stored on an endpoint."
+      ],
+      "iri": "orion:DeviceEncryption",
+      "label": "DeviceEncryption"
+    },
+    {
+      "iri": "orion:EncryptedCommunicationTunnel",
+      "label": "EncryptedCommunicationTunnel"
+    },
+    {
+      "comments": [
+        "An endpoint is a device connected to the organizational network."
+      ],
+      "iri": "orion:Endpoint",
+      "label": "Endpoint"
+    },
+    {
+      "comments": [
+        "Endpoint detection and response is a type of endpoint security technology."
+      ],
+      "iri": "orion:EndpointDetectionAndResponse",
+      "label": "EndpointDetectionAndResponse"
+    },
+    {
+      "iri": "orion:EndpointProtectionControl",
+      "label": "EndpointProtectionControl"
+    },
+    {
+      "comments": [
+        "Endpoint security protects laptops, desktops, mobile devices, and servers."
+      ],
+      "iri": "orion:EndpointSecurity",
+      "label": "EndpointSecurity"
+    },
+    {
+      "iri": "orion:EndpointSecurityTechnology",
+      "label": "EndpointSecurityTechnology"
+    },
+    {
+      "comments": [
+        "A firewall is a type of network security control."
+      ],
+      "iri": "orion:Firewall",
+      "label": "Firewall"
+    },
+    {
+      "comments": [
+        "An intrusion detection system is a type of detective network control."
+      ],
+      "iri": "orion:IntrusionDetectionSystem",
+      "label": "IntrusionDetectionSystem"
+    },
+    {
+      "comments": [
+        "An intrusion prevention system is a type of preventive network control."
+      ],
+      "iri": "orion:IntrusionPreventionSystem",
+      "label": "IntrusionPreventionSystem"
+    },
+    {
+      "comments": [
+        "A laptop is a type of endpoint."
+      ],
+      "iri": "orion:Laptop",
+      "label": "Laptop"
+    },
+    {
+      "comments": [
+        "A management network is a type of network segment used for administrative access."
+      ],
+      "iri": "orion:ManagementNetwork",
+      "label": "ManagementNetwork"
+    },
+    {
+      "iri": "orion:MobileDevice",
+      "label": "MobileDevice"
+    },
+    {
+      "comments": [
+        "A mobile phone is a type of endpoint."
+      ],
+      "iri": "orion:MobilePhone",
+      "label": "MobilePhone"
+    },
+    {
+      "comments": [
+        "A network access control system is a type of network security control."
+      ],
+      "iri": "orion:NetworkAccessControlSystem",
+      "label": "NetworkAccessControlSystem"
+    },
+    {
+      "iri": "orion:NetworkDevice",
+      "label": "NetworkDevice"
+    },
+    {
+      "comments": [
+        "Network security protects communication channels, network devices, and network services."
+      ],
+      "iri": "orion:NetworkSecurity",
+      "label": "NetworkSecurity"
+    },
+    {
+      "iri": "orion:NetworkSecurityControl",
+      "label": "NetworkSecurityControl"
+    },
+    {
+      "iri": "orion:NetworkSegment",
+      "label": "NetworkSegment"
+    },
+    {
+      "comments": [
+        "Network segmentation separates systems into different zones."
+      ],
+      "iri": "orion:NetworkSegmentation",
+      "label": "NetworkSegmentation"
+    },
+    {
+      "iri": "orion:NetworkService",
+      "label": "NetworkService"
+    },
+    {
+      "comments": [
+        "Patch management reduces vulnerabilities by applying software updates."
+      ],
+      "iri": "orion:PatchManagement",
+      "label": "PatchManagement"
+    },
+    {
+      "iri": "orion:PreventiveNetworkControl",
+      "label": "PreventiveNetworkControl"
+    },
+    {
+      "comments": [
+        "A production network is a type of network segment that hosts business systems."
+      ],
+      "iri": "orion:ProductionNetwork",
+      "label": "ProductionNetwork"
+    },
+    {
+      "iri": "orion:RemoteAccess",
+      "label": "RemoteAccess"
+    },
+    {
+      "comments": [
+        "A server is a type of endpoint."
+      ],
+      "iri": "orion:Server",
+      "label": "Server"
+    },
+    {
+      "iri": "orion:SoftwareUpdate",
+      "label": "SoftwareUpdate"
+    },
+    {
+      "iri": "orion:SystemIntoDifferentZone",
+      "label": "SystemIntoDifferentZone"
+    },
+    {
+      "iri": "orion:UnnecessaryService",
+      "label": "UnnecessaryService"
+    },
+    {
+      "comments": [
+        "A virtual private network protects remote access by creating an encrypted communication tunnel."
+      ],
+      "iri": "orion:VirtualPrivateNetwork",
+      "label": "VirtualPrivateNetwork"
+    },
+    {
+      "iri": "orion:Vulnerability",
+      "label": "Vulnerability"
+    },
+    {
+      "comments": [
+        "A workstation is a type of endpoint."
+      ],
+      "iri": "orion:Workstation",
+      "label": "Workstation"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:PatchManagement",
+      "predicate": "orion:applies",
+      "range": "orion:SoftwareUpdate"
+    },
+    {
+      "domain": "orion:VirtualPrivateNetwork",
+      "predicate": "orion:creats",
+      "range": "orion:EncryptedCommunicationTunnel"
+    },
+    {
+      "domain": "orion:ConfigurationHardening",
+      "predicate": "orion:disabls",
+      "range": "orion:ApplyingSecureSetting"
+    },
+    {
+      "domain": "orion:ConfigurationHardening",
+      "predicate": "orion:disabls",
+      "range": "orion:UnnecessaryService"
+    },
+    {
+      "domain": "orion:DemilitarizedZone",
+      "predicate": "orion:exposes",
+      "range": "orion:ControlledServiceToExternalNetwork"
+    },
+    {
+      "domain": "orion:ProductionNetwork",
+      "predicate": "orion:hosts",
+      "range": "orion:BusinessSystem"
+    },
+    {
+      "domain": "orion:DeviceEncryption",
+      "predicate": "orion:protects",
+      "range": "orion:DataStoredOnAnEndpoint"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:Desktop"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:Laptop"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:MobileDevice"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:Server"
+    },
+    {
+      "domain": "orion:NetworkSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:CommunicationChannel"
+    },
+    {
+      "domain": "orion:NetworkSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:NetworkDevice"
+    },
+    {
+      "domain": "orion:NetworkSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:NetworkService"
+    },
+    {
+      "domain": "orion:VirtualPrivateNetwork",
+      "predicate": "orion:protects",
+      "range": "orion:RemoteAccess"
+    },
+    {
+      "domain": "orion:ConfigurationHardening",
+      "predicate": "orion:reduces",
+      "range": "orion:AttackSurface"
+    },
+    {
+      "domain": "orion:PatchManagement",
+      "predicate": "orion:reduces",
+      "range": "orion:Vulnerability"
+    },
+    {
+      "domain": "orion:NetworkSegmentation",
+      "predicate": "orion:separates",
+      "range": "orion:SystemIntoDifferentZone"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-e8fb4a8a8bf6e723",
+      "claim-79a4e8fd0a051551",
+      "claim-6d42b2f48e1e27f2",
+      "claim-b4a9223d3cb930f2",
+      "claim-f414bf1864489abc",
+      "claim-52dd93b752de8203",
+      "claim-ee7a4d776195a990",
+      "claim-12b5d2937d5ba162",
+      "claim-2cdfdb63ba92c67e",
+      "claim-21a3932d0a590fc3",
+      "claim-2c8bdb7a24a3d039",
+      "claim-cb615cde01274a1c",
+      "claim-ffd7fc0c3a8cb3ed",
+      "claim-2d821f115e936373",
+      "claim-b78af31ae040aaec",
+      "claim-e36ffb944cb74f71",
+      "claim-2bad069fac579796",
+      "claim-287b838655c31b3d",
+      "claim-57bc4196bc9fcc7f",
+      "claim-c77cd28eabb9cc62",
+      "claim-492092eeae7bda60",
+      "claim-6db1af3ed09ddec2",
+      "claim-a9a5adffe26b34cb",
+      "claim-f31319ceedb75f93",
+      "claim-7f7e6329c8589de4",
+      "claim-e3f9b80456372291",
+      "claim-88a089bec7d44b0b",
+      "claim-003853fa683041ea",
+      "claim-09be4519530aa2b8",
+      "claim-0e49748a1ccc4bb6",
+      "claim-0a9ed507cb09b9e2",
+      "claim-2ac4ec2ffe43f7c9"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:PatchManagement",
+      "property": "orion:applies",
+      "range": "orion:SoftwareUpdate"
+    },
+    {
+      "domain": "orion:VirtualPrivateNetwork",
+      "property": "orion:creats",
+      "range": "orion:EncryptedCommunicationTunnel"
+    },
+    {
+      "domain": "orion:ConfigurationHardening",
+      "property": "orion:disabls",
+      "range": "orion:ApplyingSecureSetting"
+    },
+    {
+      "domain": "orion:ConfigurationHardening",
+      "property": "orion:disabls",
+      "range": "orion:UnnecessaryService"
+    },
+    {
+      "domain": "orion:DemilitarizedZone",
+      "property": "orion:exposes",
+      "range": "orion:ControlledServiceToExternalNetwork"
+    },
+    {
+      "domain": "orion:ProductionNetwork",
+      "property": "orion:hosts",
+      "range": "orion:BusinessSystem"
+    },
+    {
+      "domain": "orion:DeviceEncryption",
+      "property": "orion:protects",
+      "range": "orion:DataStoredOnAnEndpoint"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "property": "orion:protects",
+      "range": "orion:Desktop"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "property": "orion:protects",
+      "range": "orion:Laptop"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "property": "orion:protects",
+      "range": "orion:MobileDevice"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "property": "orion:protects",
+      "range": "orion:Server"
+    },
+    {
+      "domain": "orion:NetworkSecurity",
+      "property": "orion:protects",
+      "range": "orion:CommunicationChannel"
+    },
+    {
+      "domain": "orion:NetworkSecurity",
+      "property": "orion:protects",
+      "range": "orion:NetworkDevice"
+    },
+    {
+      "domain": "orion:NetworkSecurity",
+      "property": "orion:protects",
+      "range": "orion:NetworkService"
+    },
+    {
+      "domain": "orion:VirtualPrivateNetwork",
+      "property": "orion:protects",
+      "range": "orion:RemoteAccess"
+    },
+    {
+      "domain": "orion:ConfigurationHardening",
+      "property": "orion:reduces",
+      "range": "orion:AttackSurface"
+    },
+    {
+      "domain": "orion:PatchManagement",
+      "property": "orion:reduces",
+      "range": "orion:Vulnerability"
+    },
+    {
+      "domain": "orion:NetworkSegmentation",
+      "property": "orion:separates",
+      "range": "orion:SystemIntoDifferentZone"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "comments": [
+          "Antivirus software is a type of endpoint protection control."
+        ],
+        "iri": "orion:AntivirusSoftware",
+        "label": "AntivirusSoftware"
+      },
+      {
+        "iri": "orion:ApplyingSecureSetting",
+        "label": "ApplyingSecureSetting"
+      },
+      {
+        "iri": "orion:AttackSurface",
+        "label": "AttackSurface"
+      },
+      {
+        "iri": "orion:BusinessSystem",
+        "label": "BusinessSystem"
+      },
+      {
+        "iri": "orion:CommunicationChannel",
+        "label": "CommunicationChannel"
+      },
+      {
+        "comments": [
+          "Configuration hardening reduces attack surface by disabling unnecessary services and applying secure settings."
+        ],
+        "iri": "orion:ConfigurationHardening",
+        "label": "ConfigurationHardening"
+      },
+      {
+        "iri": "orion:ControlledServiceToExternalNetwork",
+        "label": "ControlledServiceToExternalNetwork"
+      },
+      {
+        "iri": "orion:DataStoredOnAnEndpoint",
+        "label": "DataStoredOnAnEndpoint"
+      },
+      {
+        "comments": [
+          "A demilitarized zone is a type of network segment that exposes controlled services to external networks."
+        ],
+        "iri": "orion:DemilitarizedZone",
+        "label": "DemilitarizedZone"
+      },
+      {
+        "iri": "orion:Desktop",
+        "label": "Desktop"
+      },
+      {
+        "iri": "orion:DetectiveNetworkControl",
+        "label": "DetectiveNetworkControl"
+      },
+      {
+        "iri": "orion:DeviceConnectedToTheOrganizationalNetwork",
+        "label": "DeviceConnectedToTheOrganizationalNetwork"
+      },
+      {
+        "comments": [
+          "Device encryption protects data stored on an endpoint."
+        ],
+        "iri": "orion:DeviceEncryption",
+        "label": "DeviceEncryption"
+      },
+      {
+        "iri": "orion:EncryptedCommunicationTunnel",
+        "label": "EncryptedCommunicationTunnel"
+      },
+      {
+        "comments": [
+          "An endpoint is a device connected to the organizational network."
+        ],
+        "iri": "orion:Endpoint",
+        "label": "Endpoint"
+      },
+      {
+        "comments": [
+          "Endpoint detection and response is a type of endpoint security technology."
+        ],
+        "iri": "orion:EndpointDetectionAndResponse",
+        "label": "EndpointDetectionAndResponse"
+      },
+      {
+        "iri": "orion:EndpointProtectionControl",
+        "label": "EndpointProtectionControl"
+      },
+      {
+        "comments": [
+          "Endpoint security protects laptops, desktops, mobile devices, and servers."
+        ],
+        "iri": "orion:EndpointSecurity",
+        "label": "EndpointSecurity"
+      },
+      {
+        "iri": "orion:EndpointSecurityTechnology",
+        "label": "EndpointSecurityTechnology"
+      },
+      {
+        "comments": [
+          "A firewall is a type of network security control."
+        ],
+        "iri": "orion:Firewall",
+        "label": "Firewall"
+      },
+      {
+        "comments": [
+          "An intrusion detection system is a type of detective network control."
+        ],
+        "iri": "orion:IntrusionDetectionSystem",
+        "label": "IntrusionDetectionSystem"
+      },
+      {
+        "comments": [
+          "An intrusion prevention system is a type of preventive network control."
+        ],
+        "iri": "orion:IntrusionPreventionSystem",
+        "label": "IntrusionPreventionSystem"
+      },
+      {
+        "comments": [
+          "A laptop is a type of endpoint."
+        ],
+        "iri": "orion:Laptop",
+        "label": "Laptop"
+      },
+      {
+        "comments": [
+          "A management network is a type of network segment used for administrative access."
+        ],
+        "iri": "orion:ManagementNetwork",
+        "label": "ManagementNetwork"
+      },
+      {
+        "iri": "orion:MobileDevice",
+        "label": "MobileDevice"
+      },
+      {
+        "comments": [
+          "A mobile phone is a type of endpoint."
+        ],
+        "iri": "orion:MobilePhone",
+        "label": "MobilePhone"
+      },
+      {
+        "comments": [
+          "A network access control system is a type of network security control."
+        ],
+        "iri": "orion:NetworkAccessControlSystem",
+        "label": "NetworkAccessControlSystem"
+      },
+      {
+        "iri": "orion:NetworkDevice",
+        "label": "NetworkDevice"
+      },
+      {
+        "comments": [
+          "Network security protects communication channels, network devices, and network services."
+        ],
+        "iri": "orion:NetworkSecurity",
+        "label": "NetworkSecurity"
+      },
+      {
+        "iri": "orion:NetworkSecurityControl",
+        "label": "NetworkSecurityControl"
+      },
+      {
+        "iri": "orion:NetworkSegment",
+        "label": "NetworkSegment"
+      },
+      {
+        "comments": [
+          "Network segmentation separates systems into different zones."
+        ],
+        "iri": "orion:NetworkSegmentation",
+        "label": "NetworkSegmentation"
+      },
+      {
+        "iri": "orion:NetworkService",
+        "label": "NetworkService"
+      },
+      {
+        "comments": [
+          "Patch management reduces vulnerabilities by applying software updates."
+        ],
+        "iri": "orion:PatchManagement",
+        "label": "PatchManagement"
+      },
+      {
+        "iri": "orion:PreventiveNetworkControl",
+        "label": "PreventiveNetworkControl"
+      },
+      {
+        "comments": [
+          "A production network is a type of network segment that hosts business systems."
+        ],
+        "iri": "orion:ProductionNetwork",
+        "label": "ProductionNetwork"
+      },
+      {
+        "iri": "orion:RemoteAccess",
+        "label": "RemoteAccess"
+      },
+      {
+        "comments": [
+          "A server is a type of endpoint."
+        ],
+        "iri": "orion:Server",
+        "label": "Server"
+      },
+      {
+        "iri": "orion:SoftwareUpdate",
+        "label": "SoftwareUpdate"
+      },
+      {
+        "iri": "orion:SystemIntoDifferentZone",
+        "label": "SystemIntoDifferentZone"
+      },
+      {
+        "iri": "orion:UnnecessaryService",
+        "label": "UnnecessaryService"
+      },
+      {
+        "comments": [
+          "A virtual private network protects remote access by creating an encrypted communication tunnel."
+        ],
+        "iri": "orion:VirtualPrivateNetwork",
+        "label": "VirtualPrivateNetwork"
+      },
+      {
+        "iri": "orion:Vulnerability",
+        "label": "Vulnerability"
+      },
+      {
+        "comments": [
+          "A workstation is a type of endpoint."
+        ],
+        "iri": "orion:Workstation",
+        "label": "Workstation"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:PatchManagement",
+        "iri": "orion:applies",
+        "label": "Applies",
+        "range": "orion:SoftwareUpdate"
+      },
+      {
+        "domain": "orion:VirtualPrivateNetwork",
+        "iri": "orion:creats",
+        "label": "Creats",
+        "range": "orion:EncryptedCommunicationTunnel"
+      },
+      {
+        "domain": "orion:ConfigurationHardening",
+        "iri": "orion:disabls",
+        "label": "Disabls",
+        "range": "orion:ApplyingSecureSetting"
+      },
+      {
+        "domain": "orion:ConfigurationHardening",
+        "iri": "orion:disabls",
+        "label": "Disabls",
+        "range": "orion:UnnecessaryService"
+      },
+      {
+        "domain": "orion:DemilitarizedZone",
+        "iri": "orion:exposes",
+        "label": "Exposes",
+        "range": "orion:ControlledServiceToExternalNetwork"
+      },
+      {
+        "domain": "orion:ProductionNetwork",
+        "iri": "orion:hosts",
+        "label": "Hosts",
+        "range": "orion:BusinessSystem"
+      },
+      {
+        "domain": "orion:DeviceEncryption",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:DataStoredOnAnEndpoint"
+      },
+      {
+        "domain": "orion:EndpointSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:Desktop"
+      },
+      {
+        "domain": "orion:EndpointSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:Laptop"
+      },
+      {
+        "domain": "orion:EndpointSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:MobileDevice"
+      },
+      {
+        "domain": "orion:EndpointSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:Server"
+      },
+      {
+        "domain": "orion:NetworkSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:CommunicationChannel"
+      },
+      {
+        "domain": "orion:NetworkSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:NetworkDevice"
+      },
+      {
+        "domain": "orion:NetworkSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:NetworkService"
+      },
+      {
+        "domain": "orion:VirtualPrivateNetwork",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:RemoteAccess"
+      },
+      {
+        "domain": "orion:ConfigurationHardening",
+        "iri": "orion:reduces",
+        "label": "Reduces",
+        "range": "orion:AttackSurface"
+      },
+      {
+        "domain": "orion:PatchManagement",
+        "iri": "orion:reduces",
+        "label": "Reduces",
+        "range": "orion:Vulnerability"
+      },
+      {
+        "domain": "orion:NetworkSegmentation",
+        "iri": "orion:separates",
+        "label": "Separates",
+        "range": "orion:SystemIntoDifferentZone"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:EndpointProtectionControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:AntivirusSoftware"
+    },
+    {
+      "object": "orion:NetworkSegment",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DemilitarizedZone"
+    },
+    {
+      "object": "orion:DeviceConnectedToTheOrganizationalNetwork",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Endpoint"
+    },
+    {
+      "object": "orion:EndpointSecurityTechnology",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:EndpointDetectionAndResponse"
+    },
+    {
+      "object": "orion:NetworkSecurityControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Firewall"
+    },
+    {
+      "object": "orion:DetectiveNetworkControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:IntrusionDetectionSystem"
+    },
+    {
+      "object": "orion:PreventiveNetworkControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:IntrusionPreventionSystem"
+    },
+    {
+      "object": "orion:Endpoint",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Laptop"
+    },
+    {
+      "object": "orion:NetworkSegment",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ManagementNetwork"
+    },
+    {
+      "object": "orion:Endpoint",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:MobilePhone"
+    },
+    {
+      "object": "orion:NetworkSecurityControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:NetworkAccessControlSystem"
+    },
+    {
+      "object": "orion:NetworkSegment",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ProductionNetwork"
+    },
+    {
+      "object": "orion:Endpoint",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Server"
+    },
+    {
+      "object": "orion:Endpoint",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Workstation"
+    }
+  ],
+  "type_assertions": []
+}

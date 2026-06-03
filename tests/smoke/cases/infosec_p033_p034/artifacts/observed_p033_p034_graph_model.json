@@ -1,0 +1,971 @@
+{
+  "classes": [
+    {
+      "iri": "orion:Application",
+      "label": "Application"
+    },
+    {
+      "iri": "orion:Approved",
+      "label": "Approved"
+    },
+    {
+      "comments": [
+        "Configuration change is a type of remediation."
+      ],
+      "iri": "orion:ConfigurationChange",
+      "label": "ConfigurationChange"
+    },
+    {
+      "comments": [
+        "A cybercriminal group is a type of threat actor."
+      ],
+      "iri": "orion:CybercriminalGroup",
+      "label": "CybercriminalGroup"
+    },
+    {
+      "iri": "orion:DetectedWeakness",
+      "label": "DetectedWeakness"
+    },
+    {
+      "iri": "orion:Detection",
+      "label": "Detection"
+    },
+    {
+      "iri": "orion:Entity",
+      "label": "Entity"
+    },
+    {
+      "iri": "orion:Evidence",
+      "label": "Evidence"
+    },
+    {
+      "iri": "orion:Exposure",
+      "label": "Exposure"
+    },
+    {
+      "iri": "orion:FixAVulnerability",
+      "label": "FixAVulnerability"
+    },
+    {
+      "comments": [
+        "A hacktivist is a type of threat actor."
+      ],
+      "iri": "orion:Hacktivist",
+      "label": "Hacktivist"
+    },
+    {
+      "iri": "orion:HowAThreatActorAchieveAnObjective",
+      "label": "HowAThreatActorAchieveAnObjective"
+    },
+    {
+      "iri": "orion:Impact",
+      "label": "Impact"
+    },
+    {
+      "iri": "orion:Indicator",
+      "label": "Indicator"
+    },
+    {
+      "comments": [
+        "An indicator of compromise is evidence that a system may be compromised."
+      ],
+      "iri": "orion:IndicatorOfCompromise",
+      "label": "IndicatorOfCompromise"
+    },
+    {
+      "iri": "orion:InformationAboutThreat",
+      "label": "InformationAboutThreat"
+    },
+    {
+      "comments": [
+        "An insider is a type of threat actor."
+      ],
+      "iri": "orion:Insider",
+      "label": "Insider"
+    },
+    {
+      "iri": "orion:IntentionallyCauseHarm",
+      "label": "IntentionallyCauseHarm"
+    },
+    {
+      "iri": "orion:KnownVulnerabilityInSystem",
+      "label": "KnownVulnerabilityInSystem"
+    },
+    {
+      "iri": "orion:Likelihood",
+      "label": "Likelihood"
+    },
+    {
+      "comments": [
+        "Mitigation reduces the risk when remediation is not immediately possible."
+      ],
+      "iri": "orion:MitigationReduceTheRiskWhenRemediation",
+      "label": "MitigationReduceTheRiskWhenRemediation"
+    },
+    {
+      "iri": "orion:MustBeDocumented",
+      "label": "MustBeDocumented"
+    },
+    {
+      "comments": [
+        "A nation-state actor is a type of threat actor."
+      ],
+      "iri": "orion:NationStateActor",
+      "label": "NationStateActor"
+    },
+    {
+      "iri": "orion:NotImmediatelyPossible",
+      "label": "NotImmediatelyPossible"
+    },
+    {
+      "comments": [
+        "Patch deployment is a type of remediation."
+      ],
+      "iri": "orion:PatchDeployment",
+      "label": "PatchDeployment"
+    },
+    {
+      "iri": "orion:Prevention",
+      "label": "Prevention"
+    },
+    {
+      "comments": [
+        "Remediation removes or fixes a vulnerability."
+      ],
+      "iri": "orion:Remediation",
+      "label": "Remediation"
+    },
+    {
+      "iri": "orion:ResponseActivity",
+      "label": "ResponseActivity"
+    },
+    {
+      "iri": "orion:Reviewed",
+      "label": "Reviewed"
+    },
+    {
+      "comments": [
+        "A risk rating combines severity, exposure, likelihood, and business impact."
+      ],
+      "iri": "orion:RiskRating",
+      "label": "RiskRating"
+    },
+    {
+      "iri": "orion:Severity",
+      "label": "Severity"
+    },
+    {
+      "comments": [
+        "A severity rating estimates the technical seriousness of a vulnerability."
+      ],
+      "iri": "orion:SeverityRating",
+      "label": "SeverityRating"
+    },
+    {
+      "iri": "orion:SystemMayBeCompromised",
+      "label": "SystemMayBeCompromised"
+    },
+    {
+      "comments": [
+        "A tactic describes a threat actor objective."
+      ],
+      "iri": "orion:Tactic",
+      "label": "Tactic"
+    },
+    {
+      "iri": "orion:TechnicalSeriousnessOfAVulnerability",
+      "label": "TechnicalSeriousnessOfAVulnerability"
+    },
+    {
+      "comments": [
+        "A technique describes how a threat actor achieves an objective."
+      ],
+      "iri": "orion:Technique",
+      "label": "Technique"
+    },
+    {
+      "comments": [
+        "A threat actor is an entity that can intentionally cause harm."
+      ],
+      "iri": "orion:ThreatActor",
+      "label": "ThreatActor"
+    },
+    {
+      "iri": "orion:ThreatActorObjective",
+      "label": "ThreatActorObjective"
+    },
+    {
+      "comments": [
+        "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+        "Threat intelligence supports detection, prevention, and response activities."
+      ],
+      "iri": "orion:ThreatIntelligence",
+      "label": "ThreatIntelligence"
+    },
+    {
+      "comments": [
+        "Vulnerability exceptions must be documented, approved, and reviewed."
+      ],
+      "iri": "orion:Vulnerability",
+      "label": "Vulnerability"
+    },
+    {
+      "comments": [
+        "A vulnerability finding describes a detected weakness."
+      ],
+      "iri": "orion:VulnerabilityFinding",
+      "label": "VulnerabilityFinding"
+    },
+    {
+      "comments": [
+        "Vulnerability management identifies, evaluates, prioritizes, and remediates weaknesses."
+      ],
+      "iri": "orion:VulnerabilityManagementIdentifyEvaluatePrioritizAnd",
+      "label": "VulnerabilityManagementIdentifyEvaluatePrioritizAnd"
+    },
+    {
+      "comments": [
+        "A vulnerability scan detects known vulnerabilities in systems and applications."
+      ],
+      "iri": "orion:VulnerabilityScan",
+      "label": "VulnerabilityScan"
+    },
+    {
+      "iri": "orion:Weakness",
+      "label": "Weakness"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:IndicatorOfCompromise",
+      "predicate": "orion:as",
+      "range": "orion:SystemMayBeCompromised"
+    },
+    {
+      "domain": "orion:RiskRating",
+      "predicate": "orion:business",
+      "range": "orion:Impact"
+    },
+    {
+      "domain": "orion:ThreatActor",
+      "predicate": "orion:cans",
+      "range": "orion:IntentionallyCauseHarm"
+    },
+    {
+      "domain": "orion:RiskRating",
+      "predicate": "orion:combines",
+      "range": "orion:Exposure"
+    },
+    {
+      "domain": "orion:RiskRating",
+      "predicate": "orion:combines",
+      "range": "orion:Likelihood"
+    },
+    {
+      "domain": "orion:RiskRating",
+      "predicate": "orion:combines",
+      "range": "orion:Severity"
+    },
+    {
+      "domain": "orion:Tactic",
+      "predicate": "orion:describes",
+      "range": "orion:ThreatActorObjective"
+    },
+    {
+      "domain": "orion:Technique",
+      "predicate": "orion:describes",
+      "range": "orion:HowAThreatActorAchieveAnObjective"
+    },
+    {
+      "domain": "orion:VulnerabilityFinding",
+      "predicate": "orion:describes",
+      "range": "orion:DetectedWeakness"
+    },
+    {
+      "domain": "orion:VulnerabilityScan",
+      "predicate": "orion:detects",
+      "range": "orion:Application"
+    },
+    {
+      "domain": "orion:VulnerabilityScan",
+      "predicate": "orion:detects",
+      "range": "orion:KnownVulnerabilityInSystem"
+    },
+    {
+      "domain": "orion:SeverityRating",
+      "predicate": "orion:estimates",
+      "range": "orion:TechnicalSeriousnessOfAVulnerability"
+    },
+    {
+      "domain": "orion:Vulnerability",
+      "predicate": "orion:exceptions",
+      "range": "orion:Approved"
+    },
+    {
+      "domain": "orion:Vulnerability",
+      "predicate": "orion:exceptions",
+      "range": "orion:MustBeDocumented"
+    },
+    {
+      "domain": "orion:Vulnerability",
+      "predicate": "orion:exceptions",
+      "range": "orion:Reviewed"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "predicate": "orion:provides",
+      "range": "orion:Indicator"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "predicate": "orion:provides",
+      "range": "orion:InformationAboutThreat"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "predicate": "orion:provides",
+      "range": "orion:Tactic"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "predicate": "orion:provides",
+      "range": "orion:Technique"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "predicate": "orion:provides",
+      "range": "orion:ThreatActor"
+    },
+    {
+      "domain": "orion:VulnerabilityManagementIdentifyEvaluatePrioritizAnd",
+      "predicate": "orion:remediates",
+      "range": "orion:Weakness"
+    },
+    {
+      "domain": "orion:Remediation",
+      "predicate": "orion:removes",
+      "range": "orion:FixAVulnerability"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "predicate": "orion:supports",
+      "range": "orion:Detection"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "predicate": "orion:supports",
+      "range": "orion:Prevention"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "predicate": "orion:supports",
+      "range": "orion:ResponseActivity"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-0caa17f3624d3459",
+      "claim-d2e1ad6c932265bc",
+      "claim-d4782c2de2c47f6a",
+      "claim-154635eeb4ad8be1",
+      "claim-14ae3cdc489b74f0",
+      "claim-cfdfc156e2fcdcac",
+      "claim-545e923d6df5520c",
+      "claim-6f98424fa74de382",
+      "claim-11ef13269f314d3e",
+      "claim-07d203ebee01acfa",
+      "claim-e3d89c8716a91163",
+      "claim-94ed4051a9e1c3d2",
+      "claim-e2e93d8d46470c98",
+      "claim-282581dbf5d5ea8b",
+      "claim-cac57fbb0f243fb2",
+      "claim-e48d942b11a43b03",
+      "claim-c2089faaab5e03f2",
+      "claim-e7aa9fb5fb471a31",
+      "claim-607073c029aa300c",
+      "claim-13a4ec2101527fa7",
+      "claim-99c120f73d0b750c",
+      "claim-42adbb1f62991f5e",
+      "claim-b19b4c5cf3df5473",
+      "claim-2b6e52a7eddce6aa",
+      "claim-172b56dc5e585e88",
+      "claim-115fba8b91dc504b",
+      "claim-1eb8d4ae678a64a8",
+      "claim-1d59ebb89bbe226e",
+      "claim-60bcc89679c77772",
+      "claim-4b622f8a52b9c694",
+      "claim-1ac0ae37f130f2dd",
+      "claim-de31cdddb39bef9f",
+      "claim-fa6424fe8bb58cce",
+      "claim-9053460e54735011"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:IndicatorOfCompromise",
+      "property": "orion:as",
+      "range": "orion:SystemMayBeCompromised"
+    },
+    {
+      "domain": "orion:RiskRating",
+      "property": "orion:business",
+      "range": "orion:Impact"
+    },
+    {
+      "domain": "orion:ThreatActor",
+      "property": "orion:cans",
+      "range": "orion:IntentionallyCauseHarm"
+    },
+    {
+      "domain": "orion:RiskRating",
+      "property": "orion:combines",
+      "range": "orion:Exposure"
+    },
+    {
+      "domain": "orion:RiskRating",
+      "property": "orion:combines",
+      "range": "orion:Likelihood"
+    },
+    {
+      "domain": "orion:RiskRating",
+      "property": "orion:combines",
+      "range": "orion:Severity"
+    },
+    {
+      "domain": "orion:Tactic",
+      "property": "orion:describes",
+      "range": "orion:ThreatActorObjective"
+    },
+    {
+      "domain": "orion:Technique",
+      "property": "orion:describes",
+      "range": "orion:HowAThreatActorAchieveAnObjective"
+    },
+    {
+      "domain": "orion:VulnerabilityFinding",
+      "property": "orion:describes",
+      "range": "orion:DetectedWeakness"
+    },
+    {
+      "domain": "orion:VulnerabilityScan",
+      "property": "orion:detects",
+      "range": "orion:Application"
+    },
+    {
+      "domain": "orion:VulnerabilityScan",
+      "property": "orion:detects",
+      "range": "orion:KnownVulnerabilityInSystem"
+    },
+    {
+      "domain": "orion:SeverityRating",
+      "property": "orion:estimates",
+      "range": "orion:TechnicalSeriousnessOfAVulnerability"
+    },
+    {
+      "domain": "orion:Vulnerability",
+      "property": "orion:exceptions",
+      "range": "orion:Approved"
+    },
+    {
+      "domain": "orion:Vulnerability",
+      "property": "orion:exceptions",
+      "range": "orion:MustBeDocumented"
+    },
+    {
+      "domain": "orion:Vulnerability",
+      "property": "orion:exceptions",
+      "range": "orion:Reviewed"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "property": "orion:provides",
+      "range": "orion:Indicator"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "property": "orion:provides",
+      "range": "orion:InformationAboutThreat"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "property": "orion:provides",
+      "range": "orion:Tactic"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "property": "orion:provides",
+      "range": "orion:Technique"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "property": "orion:provides",
+      "range": "orion:ThreatActor"
+    },
+    {
+      "domain": "orion:VulnerabilityManagementIdentifyEvaluatePrioritizAnd",
+      "property": "orion:remediates",
+      "range": "orion:Weakness"
+    },
+    {
+      "domain": "orion:Remediation",
+      "property": "orion:removes",
+      "range": "orion:FixAVulnerability"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "property": "orion:supports",
+      "range": "orion:Detection"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "property": "orion:supports",
+      "range": "orion:Prevention"
+    },
+    {
+      "domain": "orion:ThreatIntelligence",
+      "property": "orion:supports",
+      "range": "orion:ResponseActivity"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:Application",
+        "label": "Application"
+      },
+      {
+        "iri": "orion:Approved",
+        "label": "Approved"
+      },
+      {
+        "comments": [
+          "Configuration change is a type of remediation."
+        ],
+        "iri": "orion:ConfigurationChange",
+        "label": "ConfigurationChange"
+      },
+      {
+        "comments": [
+          "A cybercriminal group is a type of threat actor."
+        ],
+        "iri": "orion:CybercriminalGroup",
+        "label": "CybercriminalGroup"
+      },
+      {
+        "iri": "orion:DetectedWeakness",
+        "label": "DetectedWeakness"
+      },
+      {
+        "iri": "orion:Detection",
+        "label": "Detection"
+      },
+      {
+        "iri": "orion:Entity",
+        "label": "Entity"
+      },
+      {
+        "iri": "orion:Evidence",
+        "label": "Evidence"
+      },
+      {
+        "iri": "orion:Exposure",
+        "label": "Exposure"
+      },
+      {
+        "iri": "orion:FixAVulnerability",
+        "label": "FixAVulnerability"
+      },
+      {
+        "comments": [
+          "A hacktivist is a type of threat actor."
+        ],
+        "iri": "orion:Hacktivist",
+        "label": "Hacktivist"
+      },
+      {
+        "iri": "orion:HowAThreatActorAchieveAnObjective",
+        "label": "HowAThreatActorAchieveAnObjective"
+      },
+      {
+        "iri": "orion:Impact",
+        "label": "Impact"
+      },
+      {
+        "iri": "orion:Indicator",
+        "label": "Indicator"
+      },
+      {
+        "comments": [
+          "An indicator of compromise is evidence that a system may be compromised."
+        ],
+        "iri": "orion:IndicatorOfCompromise",
+        "label": "IndicatorOfCompromise"
+      },
+      {
+        "iri": "orion:InformationAboutThreat",
+        "label": "InformationAboutThreat"
+      },
+      {
+        "comments": [
+          "An insider is a type of threat actor."
+        ],
+        "iri": "orion:Insider",
+        "label": "Insider"
+      },
+      {
+        "iri": "orion:IntentionallyCauseHarm",
+        "label": "IntentionallyCauseHarm"
+      },
+      {
+        "iri": "orion:KnownVulnerabilityInSystem",
+        "label": "KnownVulnerabilityInSystem"
+      },
+      {
+        "iri": "orion:Likelihood",
+        "label": "Likelihood"
+      },
+      {
+        "comments": [
+          "Mitigation reduces the risk when remediation is not immediately possible."
+        ],
+        "iri": "orion:MitigationReduceTheRiskWhenRemediation",
+        "label": "MitigationReduceTheRiskWhenRemediation"
+      },
+      {
+        "iri": "orion:MustBeDocumented",
+        "label": "MustBeDocumented"
+      },
+      {
+        "comments": [
+          "A nation-state actor is a type of threat actor."
+        ],
+        "iri": "orion:NationStateActor",
+        "label": "NationStateActor"
+      },
+      {
+        "iri": "orion:NotImmediatelyPossible",
+        "label": "NotImmediatelyPossible"
+      },
+      {
+        "comments": [
+          "Patch deployment is a type of remediation."
+        ],
+        "iri": "orion:PatchDeployment",
+        "label": "PatchDeployment"
+      },
+      {
+        "iri": "orion:Prevention",
+        "label": "Prevention"
+      },
+      {
+        "comments": [
+          "Remediation removes or fixes a vulnerability."
+        ],
+        "iri": "orion:Remediation",
+        "label": "Remediation"
+      },
+      {
+        "iri": "orion:ResponseActivity",
+        "label": "ResponseActivity"
+      },
+      {
+        "iri": "orion:Reviewed",
+        "label": "Reviewed"
+      },
+      {
+        "comments": [
+          "A risk rating combines severity, exposure, likelihood, and business impact."
+        ],
+        "iri": "orion:RiskRating",
+        "label": "RiskRating"
+      },
+      {
+        "iri": "orion:Severity",
+        "label": "Severity"
+      },
+      {
+        "comments": [
+          "A severity rating estimates the technical seriousness of a vulnerability."
+        ],
+        "iri": "orion:SeverityRating",
+        "label": "SeverityRating"
+      },
+      {
+        "iri": "orion:SystemMayBeCompromised",
+        "label": "SystemMayBeCompromised"
+      },
+      {
+        "comments": [
+          "A tactic describes a threat actor objective."
+        ],
+        "iri": "orion:Tactic",
+        "label": "Tactic"
+      },
+      {
+        "iri": "orion:TechnicalSeriousnessOfAVulnerability",
+        "label": "TechnicalSeriousnessOfAVulnerability"
+      },
+      {
+        "comments": [
+          "A technique describes how a threat actor achieves an objective."
+        ],
+        "iri": "orion:Technique",
+        "label": "Technique"
+      },
+      {
+        "comments": [
+          "A threat actor is an entity that can intentionally cause harm."
+        ],
+        "iri": "orion:ThreatActor",
+        "label": "ThreatActor"
+      },
+      {
+        "iri": "orion:ThreatActorObjective",
+        "label": "ThreatActorObjective"
+      },
+      {
+        "comments": [
+          "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+          "Threat intelligence supports detection, prevention, and response activities."
+        ],
+        "iri": "orion:ThreatIntelligence",
+        "label": "ThreatIntelligence"
+      },
+      {
+        "comments": [
+          "Vulnerability exceptions must be documented, approved, and reviewed."
+        ],
+        "iri": "orion:Vulnerability",
+        "label": "Vulnerability"
+      },
+      {
+        "comments": [
+          "A vulnerability finding describes a detected weakness."
+        ],
+        "iri": "orion:VulnerabilityFinding",
+        "label": "VulnerabilityFinding"
+      },
+      {
+        "comments": [
+          "Vulnerability management identifies, evaluates, prioritizes, and remediates weaknesses."
+        ],
+        "iri": "orion:VulnerabilityManagementIdentifyEvaluatePrioritizAnd",
+        "label": "VulnerabilityManagementIdentifyEvaluatePrioritizAnd"
+      },
+      {
+        "comments": [
+          "A vulnerability scan detects known vulnerabilities in systems and applications."
+        ],
+        "iri": "orion:VulnerabilityScan",
+        "label": "VulnerabilityScan"
+      },
+      {
+        "iri": "orion:Weakness",
+        "label": "Weakness"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:IndicatorOfCompromise",
+        "iri": "orion:as",
+        "label": "As",
+        "range": "orion:SystemMayBeCompromised"
+      },
+      {
+        "domain": "orion:RiskRating",
+        "iri": "orion:business",
+        "label": "Business",
+        "range": "orion:Impact"
+      },
+      {
+        "domain": "orion:ThreatActor",
+        "iri": "orion:cans",
+        "label": "Cans",
+        "range": "orion:IntentionallyCauseHarm"
+      },
+      {
+        "domain": "orion:RiskRating",
+        "iri": "orion:combines",
+        "label": "Combines",
+        "range": "orion:Exposure"
+      },
+      {
+        "domain": "orion:RiskRating",
+        "iri": "orion:combines",
+        "label": "Combines",
+        "range": "orion:Likelihood"
+      },
+      {
+        "domain": "orion:RiskRating",
+        "iri": "orion:combines",
+        "label": "Combines",
+        "range": "orion:Severity"
+      },
+      {
+        "domain": "orion:Tactic",
+        "iri": "orion:describes",
+        "label": "Describes",
+        "range": "orion:ThreatActorObjective"
+      },
+      {
+        "domain": "orion:Technique",
+        "iri": "orion:describes",
+        "label": "Describes",
+        "range": "orion:HowAThreatActorAchieveAnObjective"
+      },
+      {
+        "domain": "orion:VulnerabilityFinding",
+        "iri": "orion:describes",
+        "label": "Describes",
+        "range": "orion:DetectedWeakness"
+      },
+      {
+        "domain": "orion:VulnerabilityScan",
+        "iri": "orion:detects",
+        "label": "Detects",
+        "range": "orion:Application"
+      },
+      {
+        "domain": "orion:VulnerabilityScan",
+        "iri": "orion:detects",
+        "label": "Detects",
+        "range": "orion:KnownVulnerabilityInSystem"
+      },
+      {
+        "domain": "orion:SeverityRating",
+        "iri": "orion:estimates",
+        "label": "Estimates",
+        "range": "orion:TechnicalSeriousnessOfAVulnerability"
+      },
+      {
+        "domain": "orion:Vulnerability",
+        "iri": "orion:exceptions",
+        "label": "Exceptions",
+        "range": "orion:Approved"
+      },
+      {
+        "domain": "orion:Vulnerability",
+        "iri": "orion:exceptions",
+        "label": "Exceptions",
+        "range": "orion:MustBeDocumented"
+      },
+      {
+        "domain": "orion:Vulnerability",
+        "iri": "orion:exceptions",
+        "label": "Exceptions",
+        "range": "orion:Reviewed"
+      },
+      {
+        "domain": "orion:ThreatIntelligence",
+        "iri": "orion:provides",
+        "label": "Provides",
+        "range": "orion:Indicator"
+      },
+      {
+        "domain": "orion:ThreatIntelligence",
+        "iri": "orion:provides",
+        "label": "Provides",
+        "range": "orion:InformationAboutThreat"
+      },
+      {
+        "domain": "orion:ThreatIntelligence",
+        "iri": "orion:provides",
+        "label": "Provides",
+        "range": "orion:Tactic"
+      },
+      {
+        "domain": "orion:ThreatIntelligence",
+        "iri": "orion:provides",
+        "label": "Provides",
+        "range": "orion:Technique"
+      },
+      {
+        "domain": "orion:ThreatIntelligence",
+        "iri": "orion:provides",
+        "label": "Provides",
+        "range": "orion:ThreatActor"
+      },
+      {
+        "domain": "orion:VulnerabilityManagementIdentifyEvaluatePrioritizAnd",
+        "iri": "orion:remediates",
+        "label": "Remediates",
+        "range": "orion:Weakness"
+      },
+      {
+        "domain": "orion:Remediation",
+        "iri": "orion:removes",
+        "label": "Removes",
+        "range": "orion:FixAVulnerability"
+      },
+      {
+        "domain": "orion:ThreatIntelligence",
+        "iri": "orion:supports",
+        "label": "Supports",
+        "range": "orion:Detection"
+      },
+      {
+        "domain": "orion:ThreatIntelligence",
+        "iri": "orion:supports",
+        "label": "Supports",
+        "range": "orion:Prevention"
+      },
+      {
+        "domain": "orion:ThreatIntelligence",
+        "iri": "orion:supports",
+        "label": "Supports",
+        "range": "orion:ResponseActivity"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:Remediation",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ConfigurationChange"
+    },
+    {
+      "object": "orion:ThreatActor",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CybercriminalGroup"
+    },
+    {
+      "object": "orion:ThreatActor",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Hacktivist"
+    },
+    {
+      "object": "orion:Evidence",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:IndicatorOfCompromise"
+    },
+    {
+      "object": "orion:ThreatActor",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Insider"
+    },
+    {
+      "object": "orion:NotImmediatelyPossible",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:MitigationReduceTheRiskWhenRemediation"
+    },
+    {
+      "object": "orion:ThreatActor",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:NationStateActor"
+    },
+    {
+      "object": "orion:Remediation",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:PatchDeployment"
+    },
+    {
+      "object": "orion:Entity",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ThreatActor"
+    }
+  ],
+  "type_assertions": []
+}

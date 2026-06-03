@@ -1,0 +1,1035 @@
+{
+  "classes": [
+    {
+      "iri": "orion:Availability",
+      "label": "Availability"
+    },
+    {
+      "comments": [
+        "A badge reader is a type of physical access control."
+      ],
+      "iri": "orion:BadgeReader",
+      "label": "BadgeReader"
+    },
+    {
+      "comments": [
+        "A cloud provider is a type of supplier."
+      ],
+      "iri": "orion:CloudProvider",
+      "label": "CloudProvider"
+    },
+    {
+      "iri": "orion:ComputingInfrastructure",
+      "label": "ComputingInfrastructure"
+    },
+    {
+      "comments": [
+        "A contract defines obligations between the organization and the supplier."
+      ],
+      "iri": "orion:Contract",
+      "label": "Contract"
+    },
+    {
+      "comments": [
+        "A data center is a type of facility that hosts computing infrastructure."
+      ],
+      "iri": "orion:DataCenter",
+      "label": "DataCenter"
+    },
+    {
+      "comments": [
+        "A data processing agreement defines responsibilities related to personal data."
+      ],
+      "iri": "orion:DataProcessingAgreement",
+      "label": "DataProcessingAgreement"
+    },
+    {
+      "comments": [
+        "Environmental controls protect equipment from fire, humidity, temperature, and power failures."
+      ],
+      "iri": "orion:Environmental",
+      "label": "Environmental"
+    },
+    {
+      "iri": "orion:Equipment",
+      "label": "Equipment"
+    },
+    {
+      "iri": "orion:ExpectedServicePerformance",
+      "label": "ExpectedServicePerformance"
+    },
+    {
+      "iri": "orion:ExternalEntity",
+      "label": "ExternalEntity"
+    },
+    {
+      "iri": "orion:ExternalParty",
+      "label": "ExternalParty"
+    },
+    {
+      "iri": "orion:ExternalPersonEnteringAFacility",
+      "label": "ExternalPersonEnteringAFacility"
+    },
+    {
+      "iri": "orion:Facility",
+      "label": "Facility"
+    },
+    {
+      "iri": "orion:FacilityWhereEmployeePerformBusinessActivity",
+      "label": "FacilityWhereEmployeePerformBusinessActivity"
+    },
+    {
+      "iri": "orion:Good",
+      "label": "Good"
+    },
+    {
+      "iri": "orion:Humidity",
+      "label": "Humidity"
+    },
+    {
+      "comments": [
+        "A locked cabinet protects physical documents and removable media."
+      ],
+      "iri": "orion:LockedCabinet",
+      "label": "LockedCabinet"
+    },
+    {
+      "comments": [
+        "A managed service provider is a type of supplier."
+      ],
+      "iri": "orion:ManagedServiceProvider",
+      "label": "ManagedServiceProvider"
+    },
+    {
+      "iri": "orion:Monitored",
+      "label": "Monitored"
+    },
+    {
+      "iri": "orion:MonitoringControl",
+      "label": "MonitoringControl"
+    },
+    {
+      "iri": "orion:MustBeApproved",
+      "label": "MustBeApproved"
+    },
+    {
+      "iri": "orion:ObligationBetweenTheOrganization",
+      "label": "ObligationBetweenTheOrganization"
+    },
+    {
+      "comments": [
+        "An office is a type of facility where employees perform business activities."
+      ],
+      "iri": "orion:Office",
+      "label": "Office"
+    },
+    {
+      "iri": "orion:People",
+      "label": "People"
+    },
+    {
+      "comments": [
+        "Physical access to restricted areas must be authorized and monitored."
+      ],
+      "iri": "orion:Physical",
+      "label": "Physical"
+    },
+    {
+      "iri": "orion:PhysicalAccessControl",
+      "label": "PhysicalAccessControl"
+    },
+    {
+      "iri": "orion:PhysicalAsset",
+      "label": "PhysicalAsset"
+    },
+    {
+      "iri": "orion:PhysicalDocument",
+      "label": "PhysicalDocument"
+    },
+    {
+      "comments": [
+        "Physical security protects facilities, equipment, people, and physical assets."
+      ],
+      "iri": "orion:PhysicalSecurity",
+      "label": "PhysicalSecurity"
+    },
+    {
+      "iri": "orion:PowerFailure",
+      "label": "PowerFailure"
+    },
+    {
+      "iri": "orion:ProtectEquipmentFromFire",
+      "label": "ProtectEquipmentFromFire"
+    },
+    {
+      "iri": "orion:RemovableMedia",
+      "label": "RemovableMedia"
+    },
+    {
+      "iri": "orion:ResponsibilityRelatedToPersonalData",
+      "label": "ResponsibilityRelatedToPersonalData"
+    },
+    {
+      "iri": "orion:RevokedWhenNoLonger",
+      "label": "RevokedWhenNoLonger"
+    },
+    {
+      "comments": [
+        "Supplier security manages risks associated with external parties."
+      ],
+      "iri": "orion:RiskAssociated",
+      "label": "RiskAssociated"
+    },
+    {
+      "comments": [
+        "A security camera is a type of monitoring control."
+      ],
+      "iri": "orion:SecurityCamera",
+      "label": "SecurityCamera"
+    },
+    {
+      "iri": "orion:SecurityPostureOfASupplier",
+      "label": "SecurityPostureOfASupplier"
+    },
+    {
+      "iri": "orion:Service",
+      "label": "Service"
+    },
+    {
+      "comments": [
+        "A service-level agreement defines expected service performance and availability."
+      ],
+      "iri": "orion:ServiceLevelAgreement",
+      "label": "ServiceLevelAgreement"
+    },
+    {
+      "comments": [
+        "A software vendor is a type of supplier."
+      ],
+      "iri": "orion:SoftwareVendor",
+      "label": "SoftwareVendor"
+    },
+    {
+      "comments": [
+        "A supplier is an external entity that provides goods or services."
+      ],
+      "iri": "orion:Supplier",
+      "label": "Supplier"
+    },
+    {
+      "comments": [
+        "A supplier assessment evaluates the security posture of a supplier."
+      ],
+      "iri": "orion:SupplierAssessment",
+      "label": "SupplierAssessment"
+    },
+    {
+      "comments": [
+        "Supplier security manages risks associated with external parties."
+      ],
+      "iri": "orion:SupplierSecurity",
+      "label": "SupplierSecurity"
+    },
+    {
+      "iri": "orion:Temperature",
+      "label": "Temperature"
+    },
+    {
+      "comments": [
+        "Third-party access must be approved, monitored, and revoked when no longer required."
+      ],
+      "iri": "orion:ThirdParty",
+      "label": "ThirdParty"
+    },
+    {
+      "iri": "orion:ToRestrictedAreaMustBeAuthorized",
+      "label": "ToRestrictedAreaMustBeAuthorized"
+    },
+    {
+      "comments": [
+        "A visitor log records external persons entering a facility."
+      ],
+      "iri": "orion:VisitorLog",
+      "label": "VisitorLog"
+    }
+  ],
+  "facts": [],
+  "instance_facts": [],
+  "object_property_schema": [
+    {
+      "domain": "orion:Physical",
+      "predicate": "orion:access",
+      "range": "orion:Monitored"
+    },
+    {
+      "domain": "orion:Physical",
+      "predicate": "orion:access",
+      "range": "orion:ToRestrictedAreaMustBeAuthorized"
+    },
+    {
+      "domain": "orion:ThirdParty",
+      "predicate": "orion:access",
+      "range": "orion:Monitored"
+    },
+    {
+      "domain": "orion:ThirdParty",
+      "predicate": "orion:access",
+      "range": "orion:MustBeApproved"
+    },
+    {
+      "domain": "orion:ThirdParty",
+      "predicate": "orion:access",
+      "range": "orion:RevokedWhenNoLonger"
+    },
+    {
+      "domain": "orion:RiskAssociated",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:ExternalParty"
+    },
+    {
+      "domain": "orion:Environmental",
+      "predicate": "orion:controls",
+      "range": "orion:Humidity"
+    },
+    {
+      "domain": "orion:Environmental",
+      "predicate": "orion:controls",
+      "range": "orion:PowerFailure"
+    },
+    {
+      "domain": "orion:Environmental",
+      "predicate": "orion:controls",
+      "range": "orion:ProtectEquipmentFromFire"
+    },
+    {
+      "domain": "orion:Environmental",
+      "predicate": "orion:controls",
+      "range": "orion:Temperature"
+    },
+    {
+      "domain": "orion:Contract",
+      "predicate": "orion:defines",
+      "range": "orion:ObligationBetweenTheOrganization"
+    },
+    {
+      "domain": "orion:Contract",
+      "predicate": "orion:defines",
+      "range": "orion:Supplier"
+    },
+    {
+      "domain": "orion:DataProcessingAgreement",
+      "predicate": "orion:defines",
+      "range": "orion:ResponsibilityRelatedToPersonalData"
+    },
+    {
+      "domain": "orion:ServiceLevelAgreement",
+      "predicate": "orion:defines",
+      "range": "orion:Availability"
+    },
+    {
+      "domain": "orion:ServiceLevelAgreement",
+      "predicate": "orion:defines",
+      "range": "orion:ExpectedServicePerformance"
+    },
+    {
+      "domain": "orion:SupplierAssessment",
+      "predicate": "orion:evaluates",
+      "range": "orion:SecurityPostureOfASupplier"
+    },
+    {
+      "domain": "orion:DataCenter",
+      "predicate": "orion:hosts",
+      "range": "orion:ComputingInfrastructure"
+    },
+    {
+      "domain": "orion:SupplierSecurity",
+      "predicate": "orion:manages",
+      "range": "orion:RiskAssociated"
+    },
+    {
+      "domain": "orion:LockedCabinet",
+      "predicate": "orion:protects",
+      "range": "orion:PhysicalDocument"
+    },
+    {
+      "domain": "orion:LockedCabinet",
+      "predicate": "orion:protects",
+      "range": "orion:RemovableMedia"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:Equipment"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:Facility"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:People"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:PhysicalAsset"
+    },
+    {
+      "domain": "orion:Supplier",
+      "predicate": "orion:provides",
+      "range": "orion:Good"
+    },
+    {
+      "domain": "orion:Supplier",
+      "predicate": "orion:provides",
+      "range": "orion:Service"
+    },
+    {
+      "domain": "orion:VisitorLog",
+      "predicate": "orion:records",
+      "range": "orion:ExternalPersonEnteringAFacility"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-a5bdee5080064fb6",
+      "claim-53da481190d60b26",
+      "claim-ef6bcae94d5a2d7c",
+      "claim-53036ae6d4beaf3c",
+      "claim-3bdaf281d08238a2",
+      "claim-cb694607edd3da09",
+      "claim-8913f39c8b58c475",
+      "claim-354552755ae24917",
+      "claim-0344c0c2723d530e",
+      "claim-c640b802dda35397",
+      "claim-7dd51d01b3f9551f",
+      "claim-69b56fdbe04405ee",
+      "claim-3c7c4fb77a9d3f94",
+      "claim-76b7b822b6d42b99",
+      "claim-6951c7bbce82eae4",
+      "claim-285e523a2fb89589",
+      "claim-45e69ddbb80e43d6",
+      "claim-fc2aa2639afebcc1",
+      "claim-1ec604ca7ccc7dcc",
+      "claim-4dd44d8f2625f940",
+      "claim-f31e42dd42cc2f2e",
+      "claim-2b3efc89bdd72f5e",
+      "claim-33f989bacabed40d",
+      "claim-a8c6d9394b1c7823",
+      "claim-c4eb648bf8cfb26a",
+      "claim-17447ff68bfff6e4",
+      "claim-4dc4cbbe847515cc",
+      "claim-7a7f450ee2a62c09",
+      "claim-63f71f4b8a5bf579",
+      "claim-5d96a03e91f80779",
+      "claim-e8ea34482a977d95",
+      "claim-6fd32677066072f0",
+      "claim-a1b55eb694c28b14",
+      "claim-256bbb219e1aae3e",
+      "claim-65fa5dcac4801b15"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:Physical",
+      "property": "orion:access",
+      "range": "orion:Monitored"
+    },
+    {
+      "domain": "orion:Physical",
+      "property": "orion:access",
+      "range": "orion:ToRestrictedAreaMustBeAuthorized"
+    },
+    {
+      "domain": "orion:ThirdParty",
+      "property": "orion:access",
+      "range": "orion:Monitored"
+    },
+    {
+      "domain": "orion:ThirdParty",
+      "property": "orion:access",
+      "range": "orion:MustBeApproved"
+    },
+    {
+      "domain": "orion:ThirdParty",
+      "property": "orion:access",
+      "range": "orion:RevokedWhenNoLonger"
+    },
+    {
+      "domain": "orion:RiskAssociated",
+      "property": "orion:checkedAgainst",
+      "range": "orion:ExternalParty"
+    },
+    {
+      "domain": "orion:Environmental",
+      "property": "orion:controls",
+      "range": "orion:Humidity"
+    },
+    {
+      "domain": "orion:Environmental",
+      "property": "orion:controls",
+      "range": "orion:PowerFailure"
+    },
+    {
+      "domain": "orion:Environmental",
+      "property": "orion:controls",
+      "range": "orion:ProtectEquipmentFromFire"
+    },
+    {
+      "domain": "orion:Environmental",
+      "property": "orion:controls",
+      "range": "orion:Temperature"
+    },
+    {
+      "domain": "orion:Contract",
+      "property": "orion:defines",
+      "range": "orion:ObligationBetweenTheOrganization"
+    },
+    {
+      "domain": "orion:Contract",
+      "property": "orion:defines",
+      "range": "orion:Supplier"
+    },
+    {
+      "domain": "orion:DataProcessingAgreement",
+      "property": "orion:defines",
+      "range": "orion:ResponsibilityRelatedToPersonalData"
+    },
+    {
+      "domain": "orion:ServiceLevelAgreement",
+      "property": "orion:defines",
+      "range": "orion:Availability"
+    },
+    {
+      "domain": "orion:ServiceLevelAgreement",
+      "property": "orion:defines",
+      "range": "orion:ExpectedServicePerformance"
+    },
+    {
+      "domain": "orion:SupplierAssessment",
+      "property": "orion:evaluates",
+      "range": "orion:SecurityPostureOfASupplier"
+    },
+    {
+      "domain": "orion:DataCenter",
+      "property": "orion:hosts",
+      "range": "orion:ComputingInfrastructure"
+    },
+    {
+      "domain": "orion:SupplierSecurity",
+      "property": "orion:manages",
+      "range": "orion:RiskAssociated"
+    },
+    {
+      "domain": "orion:LockedCabinet",
+      "property": "orion:protects",
+      "range": "orion:PhysicalDocument"
+    },
+    {
+      "domain": "orion:LockedCabinet",
+      "property": "orion:protects",
+      "range": "orion:RemovableMedia"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "property": "orion:protects",
+      "range": "orion:Equipment"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "property": "orion:protects",
+      "range": "orion:Facility"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "property": "orion:protects",
+      "range": "orion:People"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "property": "orion:protects",
+      "range": "orion:PhysicalAsset"
+    },
+    {
+      "domain": "orion:Supplier",
+      "property": "orion:provides",
+      "range": "orion:Good"
+    },
+    {
+      "domain": "orion:Supplier",
+      "property": "orion:provides",
+      "range": "orion:Service"
+    },
+    {
+      "domain": "orion:VisitorLog",
+      "property": "orion:records",
+      "range": "orion:ExternalPersonEnteringAFacility"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:Availability",
+        "label": "Availability"
+      },
+      {
+        "comments": [
+          "A badge reader is a type of physical access control."
+        ],
+        "iri": "orion:BadgeReader",
+        "label": "BadgeReader"
+      },
+      {
+        "comments": [
+          "A cloud provider is a type of supplier."
+        ],
+        "iri": "orion:CloudProvider",
+        "label": "CloudProvider"
+      },
+      {
+        "iri": "orion:ComputingInfrastructure",
+        "label": "ComputingInfrastructure"
+      },
+      {
+        "comments": [
+          "A contract defines obligations between the organization and the supplier."
+        ],
+        "iri": "orion:Contract",
+        "label": "Contract"
+      },
+      {
+        "comments": [
+          "A data center is a type of facility that hosts computing infrastructure."
+        ],
+        "iri": "orion:DataCenter",
+        "label": "DataCenter"
+      },
+      {
+        "comments": [
+          "A data processing agreement defines responsibilities related to personal data."
+        ],
+        "iri": "orion:DataProcessingAgreement",
+        "label": "DataProcessingAgreement"
+      },
+      {
+        "comments": [
+          "Environmental controls protect equipment from fire, humidity, temperature, and power failures."
+        ],
+        "iri": "orion:Environmental",
+        "label": "Environmental"
+      },
+      {
+        "iri": "orion:Equipment",
+        "label": "Equipment"
+      },
+      {
+        "iri": "orion:ExpectedServicePerformance",
+        "label": "ExpectedServicePerformance"
+      },
+      {
+        "iri": "orion:ExternalEntity",
+        "label": "ExternalEntity"
+      },
+      {
+        "iri": "orion:ExternalParty",
+        "label": "ExternalParty"
+      },
+      {
+        "iri": "orion:ExternalPersonEnteringAFacility",
+        "label": "ExternalPersonEnteringAFacility"
+      },
+      {
+        "iri": "orion:Facility",
+        "label": "Facility"
+      },
+      {
+        "iri": "orion:FacilityWhereEmployeePerformBusinessActivity",
+        "label": "FacilityWhereEmployeePerformBusinessActivity"
+      },
+      {
+        "iri": "orion:Good",
+        "label": "Good"
+      },
+      {
+        "iri": "orion:Humidity",
+        "label": "Humidity"
+      },
+      {
+        "comments": [
+          "A locked cabinet protects physical documents and removable media."
+        ],
+        "iri": "orion:LockedCabinet",
+        "label": "LockedCabinet"
+      },
+      {
+        "comments": [
+          "A managed service provider is a type of supplier."
+        ],
+        "iri": "orion:ManagedServiceProvider",
+        "label": "ManagedServiceProvider"
+      },
+      {
+        "iri": "orion:Monitored",
+        "label": "Monitored"
+      },
+      {
+        "iri": "orion:MonitoringControl",
+        "label": "MonitoringControl"
+      },
+      {
+        "iri": "orion:MustBeApproved",
+        "label": "MustBeApproved"
+      },
+      {
+        "iri": "orion:ObligationBetweenTheOrganization",
+        "label": "ObligationBetweenTheOrganization"
+      },
+      {
+        "comments": [
+          "An office is a type of facility where employees perform business activities."
+        ],
+        "iri": "orion:Office",
+        "label": "Office"
+      },
+      {
+        "iri": "orion:People",
+        "label": "People"
+      },
+      {
+        "comments": [
+          "Physical access to restricted areas must be authorized and monitored."
+        ],
+        "iri": "orion:Physical",
+        "label": "Physical"
+      },
+      {
+        "iri": "orion:PhysicalAccessControl",
+        "label": "PhysicalAccessControl"
+      },
+      {
+        "iri": "orion:PhysicalAsset",
+        "label": "PhysicalAsset"
+      },
+      {
+        "iri": "orion:PhysicalDocument",
+        "label": "PhysicalDocument"
+      },
+      {
+        "comments": [
+          "Physical security protects facilities, equipment, people, and physical assets."
+        ],
+        "iri": "orion:PhysicalSecurity",
+        "label": "PhysicalSecurity"
+      },
+      {
+        "iri": "orion:PowerFailure",
+        "label": "PowerFailure"
+      },
+      {
+        "iri": "orion:ProtectEquipmentFromFire",
+        "label": "ProtectEquipmentFromFire"
+      },
+      {
+        "iri": "orion:RemovableMedia",
+        "label": "RemovableMedia"
+      },
+      {
+        "iri": "orion:ResponsibilityRelatedToPersonalData",
+        "label": "ResponsibilityRelatedToPersonalData"
+      },
+      {
+        "iri": "orion:RevokedWhenNoLonger",
+        "label": "RevokedWhenNoLonger"
+      },
+      {
+        "comments": [
+          "Supplier security manages risks associated with external parties."
+        ],
+        "iri": "orion:RiskAssociated",
+        "label": "RiskAssociated"
+      },
+      {
+        "comments": [
+          "A security camera is a type of monitoring control."
+        ],
+        "iri": "orion:SecurityCamera",
+        "label": "SecurityCamera"
+      },
+      {
+        "iri": "orion:SecurityPostureOfASupplier",
+        "label": "SecurityPostureOfASupplier"
+      },
+      {
+        "iri": "orion:Service",
+        "label": "Service"
+      },
+      {
+        "comments": [
+          "A service-level agreement defines expected service performance and availability."
+        ],
+        "iri": "orion:ServiceLevelAgreement",
+        "label": "ServiceLevelAgreement"
+      },
+      {
+        "comments": [
+          "A software vendor is a type of supplier."
+        ],
+        "iri": "orion:SoftwareVendor",
+        "label": "SoftwareVendor"
+      },
+      {
+        "comments": [
+          "A supplier is an external entity that provides goods or services."
+        ],
+        "iri": "orion:Supplier",
+        "label": "Supplier"
+      },
+      {
+        "comments": [
+          "A supplier assessment evaluates the security posture of a supplier."
+        ],
+        "iri": "orion:SupplierAssessment",
+        "label": "SupplierAssessment"
+      },
+      {
+        "comments": [
+          "Supplier security manages risks associated with external parties."
+        ],
+        "iri": "orion:SupplierSecurity",
+        "label": "SupplierSecurity"
+      },
+      {
+        "iri": "orion:Temperature",
+        "label": "Temperature"
+      },
+      {
+        "comments": [
+          "Third-party access must be approved, monitored, and revoked when no longer required."
+        ],
+        "iri": "orion:ThirdParty",
+        "label": "ThirdParty"
+      },
+      {
+        "iri": "orion:ToRestrictedAreaMustBeAuthorized",
+        "label": "ToRestrictedAreaMustBeAuthorized"
+      },
+      {
+        "comments": [
+          "A visitor log records external persons entering a facility."
+        ],
+        "iri": "orion:VisitorLog",
+        "label": "VisitorLog"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:Physical",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:Monitored"
+      },
+      {
+        "domain": "orion:Physical",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:ToRestrictedAreaMustBeAuthorized"
+      },
+      {
+        "domain": "orion:ThirdParty",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:Monitored"
+      },
+      {
+        "domain": "orion:ThirdParty",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:MustBeApproved"
+      },
+      {
+        "domain": "orion:ThirdParty",
+        "iri": "orion:access",
+        "label": "Access",
+        "range": "orion:RevokedWhenNoLonger"
+      },
+      {
+        "domain": "orion:RiskAssociated",
+        "iri": "orion:checkedAgainst",
+        "label": "checkedAgainst",
+        "range": "orion:ExternalParty"
+      },
+      {
+        "domain": "orion:Environmental",
+        "iri": "orion:controls",
+        "label": "Controls",
+        "range": "orion:Humidity"
+      },
+      {
+        "domain": "orion:Environmental",
+        "iri": "orion:controls",
+        "label": "Controls",
+        "range": "orion:PowerFailure"
+      },
+      {
+        "domain": "orion:Environmental",
+        "iri": "orion:controls",
+        "label": "Controls",
+        "range": "orion:ProtectEquipmentFromFire"
+      },
+      {
+        "domain": "orion:Environmental",
+        "iri": "orion:controls",
+        "label": "Controls",
+        "range": "orion:Temperature"
+      },
+      {
+        "domain": "orion:Contract",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:ObligationBetweenTheOrganization"
+      },
+      {
+        "domain": "orion:Contract",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:Supplier"
+      },
+      {
+        "domain": "orion:DataProcessingAgreement",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:ResponsibilityRelatedToPersonalData"
+      },
+      {
+        "domain": "orion:ServiceLevelAgreement",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:Availability"
+      },
+      {
+        "domain": "orion:ServiceLevelAgreement",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:ExpectedServicePerformance"
+      },
+      {
+        "domain": "orion:SupplierAssessment",
+        "iri": "orion:evaluates",
+        "label": "Evaluates",
+        "range": "orion:SecurityPostureOfASupplier"
+      },
+      {
+        "domain": "orion:DataCenter",
+        "iri": "orion:hosts",
+        "label": "Hosts",
+        "range": "orion:ComputingInfrastructure"
+      },
+      {
+        "domain": "orion:SupplierSecurity",
+        "iri": "orion:manages",
+        "label": "Manages",
+        "range": "orion:RiskAssociated"
+      },
+      {
+        "domain": "orion:LockedCabinet",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:PhysicalDocument"
+      },
+      {
+        "domain": "orion:LockedCabinet",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:RemovableMedia"
+      },
+      {
+        "domain": "orion:PhysicalSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:Equipment"
+      },
+      {
+        "domain": "orion:PhysicalSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:Facility"
+      },
+      {
+        "domain": "orion:PhysicalSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:People"
+      },
+      {
+        "domain": "orion:PhysicalSecurity",
+        "iri": "orion:protects",
+        "label": "Protects",
+        "range": "orion:PhysicalAsset"
+      },
+      {
+        "domain": "orion:Supplier",
+        "iri": "orion:provides",
+        "label": "Provides",
+        "range": "orion:Good"
+      },
+      {
+        "domain": "orion:Supplier",
+        "iri": "orion:provides",
+        "label": "Provides",
+        "range": "orion:Service"
+      },
+      {
+        "domain": "orion:VisitorLog",
+        "iri": "orion:records",
+        "label": "Records",
+        "range": "orion:ExternalPersonEnteringAFacility"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:PhysicalAccessControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:BadgeReader"
+    },
+    {
+      "object": "orion:Supplier",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CloudProvider"
+    },
+    {
+      "object": "orion:Facility",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:DataCenter"
+    },
+    {
+      "object": "orion:Supplier",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:ManagedServiceProvider"
+    },
+    {
+      "object": "orion:FacilityWhereEmployeePerformBusinessActivity",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Office"
+    },
+    {
+      "object": "orion:MonitoringControl",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:SecurityCamera"
+    },
+    {
+      "object": "orion:Supplier",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:SoftwareVendor"
+    },
+    {
+      "object": "orion:ExternalEntity",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Supplier"
+    }
+  ],
+  "type_assertions": []
+}

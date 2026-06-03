@@ -13,13 +13,14 @@ def test_valid_relation_maps_to_triple_with_required_fields_and_refs_fallback():
         "relations": [
             {"relation_id": "rel-0001", "subject_text": "Alice", "subject_ref": "ent-0001", "predicate": "builds", "object_text": "robots", "object_ref": "con-0001", "sentence_id": "sent-0001", "source_text_id": "src-tri-001", "confidence": 0.92, "evidence_span": {"start_offset": 0, "end_offset": 19}},
             {"relation_id": "rel-0002", "subject_text": "Bob", "subject_ref": None, "predicate": "MENTORED", "object_text": "Charlie", "object_ref": None, "sentence_id": "sent-0001", "source_text_id": "src-tri-001", "confidence": 0.73, "evidence_span": {"start_offset": 0, "end_offset": 19}},
+            {"relation_id": "rel-0003", "subject_text": "endpoint", "subject_ref": None, "predicate": "is", "object_text": "A type of information asset", "object_ref": None, "sentence_id": "sent-0001", "source_text_id": "src-tri-001", "confidence": 0.8, "evidence_span": {"start_offset": 0, "end_offset": 19}},
         ],
     }
 
     result = extract_triples_from_payload(payload)
 
     assert "triples" in result
-    assert len(result["triples"]) == 2
+    assert len(result["triples"]) == 3
 
     required = {"triple_id", "subject", "predicate", "object", "subject_ref", "predicate_ref", "object_ref", "relation_id", "sentence_id", "source_text_id", "confidence", "evidence_span"}
     for triple in result["triples"]:
@@ -41,3 +42,9 @@ def test_valid_relation_maps_to_triple_with_required_fields_and_refs_fallback():
     assert second["subject_ref"] is None
     assert second["object_ref"] is None
     assert second["predicate_ref"] == "rel-0002"
+
+    third = result["triples"][2]
+    assert third["subject"] == "endpoint"
+    assert third["object"] == "information asset"
+    assert third["predicate"] == "is"
+    assert third["object_ref"] is None

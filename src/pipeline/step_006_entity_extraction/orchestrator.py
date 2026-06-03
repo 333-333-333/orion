@@ -38,7 +38,7 @@ def extract_entities_from_doc(input_payload: dict[str, Any], doc: Any) -> dict[s
 
     entities: list[dict[str, Any]] = []
 
-    for entity in getattr(doc, "ents", []):
+    for entity in []:  # TASK-002: generic NER disabled; ontology stages use linguistic evidence.
         text = getattr(entity, "text", "")
         label = getattr(entity, "label_", "")
         start_offset = getattr(entity, "start_char", 0)

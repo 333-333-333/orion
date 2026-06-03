@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <owl:Class rdf:about="https://orion.local/resource/availabilityincident">
+    <rdfs:label>AvailabilityIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/backup">
+    <rdfs:label>Backup</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/copyofdata"/>
+    <rdfs:comment>A backup is a copy of data used for recovery.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/backupfrequency">
+    <rdfs:label>BackupFrequency</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/backuppolicy">
+    <rdfs:label>BackupPolicy</rdfs:label>
+    <rdfs:comment>A backup policy defines backup frequency, retention, protection, and restoration requirements.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/businesscontinuity">
+    <rdfs:label>BusinessContinuity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/capabilitytocontinuecriticaloperationduringdisruption"/>
+    <rdfs:comment>Business continuity is the capability to continue critical operations during disruption.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/capabilitytocontinuecriticaloperationduringdisruption">
+    <rdfs:label>CapabilityToContinueCriticalOperationDuringDisruption</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/copyofdata">
+    <rdfs:label>CopyOfData</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/databreach">
+    <rdfs:label>DataBreach</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securityincident"/>
+    <rdfs:comment>A data breach is a type of security incident that involves unauthorized access to or disclosure of data.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/denialofserviceattack">
+    <rdfs:label>DenialOfServiceAttack</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/availabilityincident"/>
+    <rdfs:comment>A denial-of-service attack is a type of availability incident.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/disasterrecovery">
+    <rdfs:label>DisasterRecovery</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/processofrestoringtechnologyserviceafteradisruptiveevent"/>
+    <rdfs:comment>Disaster recovery is the process of restoring technology services after a disruptive event.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/disasterrecoverytest">
+    <rdfs:label>DisasterRecoveryTest</rdfs:label>
+    <rdfs:comment>A disaster recovery test verifies whether recovery procedures work as expected.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/disclosureofdata">
+    <rdfs:label>DisclosureOfData</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/insidermisuse">
+    <rdfs:label>InsiderMisuse</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securityincidentcausedbyaninternalactor"/>
+    <rdfs:comment>Insider misuse is a type of security incident caused by an internal actor.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/lostdeviceincident">
+    <rdfs:label>LostDeviceIncident</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/physicalandinformationsecurityincident"/>
+    <rdfs:comment>A lost device incident is a type of physical and information security incident.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/malwareincident">
+    <rdfs:label>MalwareIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/malwareinfection">
+    <rdfs:label>MalwareInfection</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securityincident"/>
+    <rdfs:comment>A malware infection is a type of security incident.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/maximumacceptableamountofdatalossmeasuredintime">
+    <rdfs:label>MaximumAcceptableAmountOfDataLossMeasuredInTime</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/maximumacceptabletimetorestoreaservice">
+    <rdfs:label>MaximumAcceptableTimeToRestoreAService</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/phishingattack">
+    <rdfs:label>PhishingAttack</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/socialengineeringincident"/>
+    <rdfs:comment>A phishing attack is a type of social engineering incident.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/physicalandinformationsecurityincident">
+    <rdfs:label>PhysicalAndInformationSecurityIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/processofrestoringtechnologyserviceafteradisruptiveevent">
+    <rdfs:label>ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/protection">
+    <rdfs:label>Protection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/ransomwareattack">
+    <rdfs:label>RansomwareAttack</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/malwareincident"/>
+    <rdfs:comment>A ransomware attack is a type of malware incident.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/recoverypointobjective">
+    <rdfs:label>RecoveryPointObjective</rdfs:label>
+    <rdfs:comment>A recovery point objective defines the maximum acceptable amount of data loss measured in time.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/recoverytimeobjective">
+    <rdfs:label>RecoveryTimeObjective</rdfs:label>
+    <rdfs:comment>A recovery time objective defines the maximum acceptable time to restore a service.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/restorationrequirement">
+    <rdfs:label>RestorationRequirement</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/retention">
+    <rdfs:label>Retention</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securityincident">
+    <rdfs:label>SecurityIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securityincidentcausedbyaninternalactor">
+    <rdfs:label>SecurityIncidentCausedByAnInternalActor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securityincidentinvolvingaccessbyanunapprovedidentity">
+    <rdfs:label>SecurityIncidentInvolvingAccessByAnUnapprovedIdentity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/socialengineeringincident">
+    <rdfs:label>SocialEngineeringIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/unauthorizedaccess">
+    <rdfs:label>UnauthorizedAccess</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securityincidentinvolvingaccessbyanunapprovedidentity"/>
+    <rdfs:comment>Unauthorized access is a type of security incident involving access by an unapproved identity.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/unauthorizedaccessto">
+    <rdfs:label>UnauthorizedAccessTo</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/whetherrecoveryprocedureworkasexpected">
+    <rdfs:label>WhetherRecoveryProcedureWorkAsExpected</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/defines">
+    <rdfs:label>Defines</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/backuppolicy"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/backupfrequency"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/defines">
+    <rdfs:label>Defines</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/backuppolicy"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/protection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/defines">
+    <rdfs:label>Defines</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/backuppolicy"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/restorationrequirement"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/defines">
+    <rdfs:label>Defines</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/backuppolicy"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/retention"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/defines">
+    <rdfs:label>Defines</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/recoverypointobjective"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/maximumacceptableamountofdatalossmeasuredintime"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/defines">
+    <rdfs:label>Defines</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/recoverytimeobjective"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/maximumacceptabletimetorestoreaservice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/involves">
+    <rdfs:label>Involves</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/databreach"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/disclosureofdata"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/involves">
+    <rdfs:label>Involves</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/databreach"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/unauthorizedaccessto"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/verifies">
+    <rdfs:label>Verifies</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/disasterrecoverytest"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/whetherrecoveryprocedureworkasexpected"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="https://orion.local/resource/availabilityincident">
+    <rdfs:label>AvailabilityIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/backup">
+    <rdfs:label>Backup</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/backupfrequency">
+    <rdfs:label>BackupFrequency</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/backuppolicy">
+    <rdfs:label>BackupPolicy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/businesscontinuity">
+    <rdfs:label>BusinessContinuity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/capabilitytocontinuecriticaloperationduringdisruption">
+    <rdfs:label>CapabilityToContinueCriticalOperationDuringDisruption</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/copyofdata">
+    <rdfs:label>CopyOfData</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/databreach">
+    <rdfs:label>DataBreach</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/denialofserviceattack">
+    <rdfs:label>DenialOfServiceAttack</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/disasterrecovery">
+    <rdfs:label>DisasterRecovery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/disasterrecoverytest">
+    <rdfs:label>DisasterRecoveryTest</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/disclosureofdata">
+    <rdfs:label>DisclosureOfData</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/insidermisuse">
+    <rdfs:label>InsiderMisuse</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/lostdeviceincident">
+    <rdfs:label>LostDeviceIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/malwareincident">
+    <rdfs:label>MalwareIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/malwareinfection">
+    <rdfs:label>MalwareInfection</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/maximumacceptableamountofdatalossmeasuredintime">
+    <rdfs:label>MaximumAcceptableAmountOfDataLossMeasuredInTime</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/maximumacceptabletimetorestoreaservice">
+    <rdfs:label>MaximumAcceptableTimeToRestoreAService</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/phishingattack">
+    <rdfs:label>PhishingAttack</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/physicalandinformationsecurityincident">
+    <rdfs:label>PhysicalAndInformationSecurityIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/processofrestoringtechnologyserviceafteradisruptiveevent">
+    <rdfs:label>ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/protection">
+    <rdfs:label>Protection</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/ransomwareattack">
+    <rdfs:label>RansomwareAttack</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/recoverypointobjective">
+    <rdfs:label>RecoveryPointObjective</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/recoverytimeobjective">
+    <rdfs:label>RecoveryTimeObjective</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/restorationrequirement">
+    <rdfs:label>RestorationRequirement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/retention">
+    <rdfs:label>Retention</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityincident">
+    <rdfs:label>SecurityIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityincidentcausedbyaninternalactor">
+    <rdfs:label>SecurityIncidentCausedByAnInternalActor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityincidentinvolvingaccessbyanunapprovedidentity">
+    <rdfs:label>SecurityIncidentInvolvingAccessByAnUnapprovedIdentity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/socialengineeringincident">
+    <rdfs:label>SocialEngineeringIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/unauthorizedaccess">
+    <rdfs:label>UnauthorizedAccess</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/unauthorizedaccessto">
+    <rdfs:label>UnauthorizedAccessTo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/whetherrecoveryprocedureworkasexpected">
+    <rdfs:label>WhetherRecoveryProcedureWorkAsExpected</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

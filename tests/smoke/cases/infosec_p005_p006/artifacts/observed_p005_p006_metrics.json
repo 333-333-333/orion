@@ -1,0 +1,22 @@
+{
+  "case_id": "p005_p006",
+  "claim_count": 29,
+  "class_count": 39,
+  "evidence_precision_proxy": 1.0,
+  "evidence_supported_claim_count": 29,
+  "evidence_unsupported_claim_ids": [],
+  "graph_generated": true,
+  "object_property_count": 15,
+  "observed_stage": "semantic_claims",
+  "paragraph_claim_distribution": {
+    "p005": 16,
+    "p006": 13
+  },
+  "paragraph_ids": [
+    "p005",
+    "p006"
+  ],
+  "rdf_bytes": 19210,
+  "rdf_generated": true,
+  "subclass_fact_count": 14
+}
