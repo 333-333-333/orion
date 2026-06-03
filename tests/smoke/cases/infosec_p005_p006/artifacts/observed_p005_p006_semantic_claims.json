@@ -2,7 +2,7 @@
   "claim_count": 29,
   "claims": [
     {
-      "claim_id": "claim-487593029810df2f",
+      "claim_id": "claim-850298a0c2803a89",
       "kind": "definition",
       "normalized_statement": "RiskManagement is a CoreProcessInInformationSecurity",
       "object": "CoreProcessInInformationSecurity",
@@ -12,14 +12,14 @@
         "asset_id": "p005",
         "evidence": "Risk management is a core process in information security.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-9871c1509d924dee",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-9d4c0b664750f310",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "RiskManagement is a CoreProcessInInformationSecurity",
       "subject": "RiskManagement"
     },
     {
-      "claim_id": "claim-06d4b07379c11644",
+      "claim_id": "claim-b8e8b7dd59bcee97",
       "kind": "definition",
       "normalized_statement": "Risk is a Possibility",
       "object": "Possibility",
@@ -29,14 +29,14 @@
         "asset_id": "p005",
         "evidence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-20edfbf077ddef01",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-27d9d87e9c256445",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Risk is a Possibility",
       "subject": "Risk"
     },
     {
-      "claim_id": "claim-a9235b3b235757a1",
+      "claim_id": "claim-5f3f6b7b23dd19e1",
       "kind": "relation",
       "normalized_statement": "Risk as ThreatExploitAVulnerability",
       "object": "ThreatExploitAVulnerability",
@@ -46,14 +46,14 @@
         "asset_id": "p005",
         "evidence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-20edfbf077ddef01",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-27d9d87e9c256445",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Risk as ThreatExploitAVulnerability",
       "subject": "Risk"
     },
     {
-      "claim_id": "claim-9e5a9adca8c7bacd",
+      "claim_id": "claim-bdbe056e2b09ebba",
       "kind": "relation",
       "normalized_statement": "Risk as CausHarmToAnAsset",
       "object": "CausHarmToAnAsset",
@@ -63,14 +63,14 @@
         "asset_id": "p005",
         "evidence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-20edfbf077ddef01",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-27d9d87e9c256445",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Risk as CausHarmToAnAsset",
       "subject": "Risk"
     },
     {
-      "claim_id": "claim-692d702ae9792f9b",
+      "claim_id": "claim-56da0086f7d64739",
       "kind": "definition",
       "normalized_statement": "Threat is a PotentialCauseOfAnUnwantedIncident",
       "object": "PotentialCauseOfAnUnwantedIncident",
@@ -80,14 +80,14 @@
         "asset_id": "p005",
         "evidence": "A threat is a potential cause of an unwanted incident.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-fa36937b68df1dfb",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-ae44124202fefff3",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Threat is a PotentialCauseOfAnUnwantedIncident",
       "subject": "Threat"
     },
     {
-      "claim_id": "claim-c48128dfbca15a45",
+      "claim_id": "claim-7d7db9243aaeb3fd",
       "kind": "definition",
       "normalized_statement": "Vulnerability is a Weakness",
       "object": "Weakness",
@@ -97,14 +97,14 @@
         "asset_id": "p005",
         "evidence": "A vulnerability is a weakness that can be exploited by a threat.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-6f021b9caf6540f1",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-ded2da88fbe8972d",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Vulnerability is a Weakness",
       "subject": "Vulnerability"
     },
     {
-      "claim_id": "claim-6535ec7613bf8d95",
+      "claim_id": "claim-ccccf9bbcc5751b9",
       "kind": "relation",
       "normalized_statement": "Vulnerability cans BeExploitedByAThreat",
       "object": "BeExploitedByAThreat",
@@ -114,14 +114,14 @@
         "asset_id": "p005",
         "evidence": "A vulnerability is a weakness that can be exploited by a threat.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-6f021b9caf6540f1",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-ded2da88fbe8972d",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Vulnerability cans BeExploitedByAThreat",
       "subject": "Vulnerability"
     },
     {
-      "claim_id": "claim-9829705889709feb",
+      "claim_id": "claim-9edaba4f5a3e41f0",
       "kind": "definition",
       "normalized_statement": "Impact is a ConsequenceProducedByASecurityEventOrIncident",
       "object": "ConsequenceProducedByASecurityEventOrIncident",
@@ -131,14 +131,14 @@
         "asset_id": "p005",
         "evidence": "An impact is the consequence produced by a security event or incident.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-816b32b031cc769f",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-83920c0ed6029ff9",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Impact is a ConsequenceProducedByASecurityEventOrIncident",
       "subject": "Impact"
     },
     {
-      "claim_id": "claim-a6cefc29dbe9302e",
+      "claim_id": "claim-07e18b34ccfe5fd5",
       "kind": "definition",
       "normalized_statement": "Likelihood is a Probability",
       "object": "Probability",
@@ -148,14 +148,14 @@
         "asset_id": "p005",
         "evidence": "A likelihood is the probability that a risk scenario occurs.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-cc4b249099b5f13e",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-d3163927414c2c44",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Likelihood is a Probability",
       "subject": "Likelihood"
     },
     {
-      "claim_id": "claim-ea1f5c87bcd51088",
+      "claim_id": "claim-91b5d2062d2ee708",
       "kind": "relation",
       "normalized_statement": "Likelihood as RiskScenarioOccur",
       "object": "RiskScenarioOccur",
@@ -165,14 +165,14 @@
         "asset_id": "p005",
         "evidence": "A likelihood is the probability that a risk scenario occurs.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-cc4b249099b5f13e",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-d3163927414c2c44",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Likelihood as RiskScenarioOccur",
       "subject": "Likelihood"
     },
     {
-      "claim_id": "claim-3a92d71a09c0c6f4",
+      "claim_id": "claim-71520af5a8551d24",
       "kind": "relation",
       "normalized_statement": "RiskScenario describes HowAThreatMayExploitAVulnerability",
       "object": "HowAThreatMayExploitAVulnerability",
@@ -182,14 +182,14 @@
         "asset_id": "p005",
         "evidence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-dd1e644b6e2b762e",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-c5cc8e2b8a83ef90",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "RiskScenario describes HowAThreatMayExploitAVulnerability",
       "subject": "RiskScenario"
     },
     {
-      "claim_id": "claim-4f603c85879d0d4f",
+      "claim_id": "claim-f31c0b8bc7d00644",
       "kind": "relation",
       "normalized_statement": "RiskScenario describes AffectAnAsset",
       "object": "AffectAnAsset",
@@ -199,14 +199,14 @@
         "asset_id": "p005",
         "evidence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-dd1e644b6e2b762e",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-c5cc8e2b8a83ef90",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "RiskScenario describes AffectAnAsset",
       "subject": "RiskScenario"
     },
     {
-      "claim_id": "claim-357d4335d8aa5bc5",
+      "claim_id": "claim-0dfc614ad3567f40",
       "kind": "relation",
       "normalized_statement": "Control reduces RiskByPreventing",
       "object": "RiskByPreventing",
@@ -216,14 +216,14 @@
         "asset_id": "p005",
         "evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-a03cd85e55964a36",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-8cb967f675043b01",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Control reduces RiskByPreventing",
       "subject": "Control"
     },
     {
-      "claim_id": "claim-c6c9def3e524f212",
+      "claim_id": "claim-159e51209c2c12c6",
       "kind": "relation",
       "normalized_statement": "Control reduces Detecting",
       "object": "Detecting",
@@ -233,14 +233,14 @@
         "asset_id": "p005",
         "evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-a03cd85e55964a36",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-8cb967f675043b01",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Control reduces Detecting",
       "subject": "Control"
     },
     {
-      "claim_id": "claim-c6871c75cddc54c3",
+      "claim_id": "claim-603cb76b75012472",
       "kind": "relation",
       "normalized_statement": "Control reduces Correcting",
       "object": "Correcting",
@@ -250,14 +250,14 @@
         "asset_id": "p005",
         "evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-a03cd85e55964a36",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-8cb967f675043b01",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Control reduces Correcting",
       "subject": "Control"
     },
     {
-      "claim_id": "claim-e38ad29c2683f08c",
+      "claim_id": "claim-e860cd0793f0046f",
       "kind": "relation",
       "normalized_statement": "Control reduces CompensatingForSecurityWeakness",
       "object": "CompensatingForSecurityWeakness",
@@ -267,14 +267,14 @@
         "asset_id": "p005",
         "evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
         "paragraph_id": "p005",
-        "sentence_id": "sent-a03cd85e55964a36",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-8cb967f675043b01",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Control reduces CompensatingForSecurityWeakness",
       "subject": "Control"
     },
     {
-      "claim_id": "claim-3fa98ee2c2dc802f",
+      "claim_id": "claim-e01092c3401fd09d",
       "kind": "definition",
       "normalized_statement": "PreventiveControl is a SecurityControl",
       "object": "SecurityControl",
@@ -284,14 +284,14 @@
         "asset_id": "p006",
         "evidence": "A preventive control is a type of security control that reduces the probability of an incident.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-adc3a7fe7fcb74b1",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-0d8fbc80b63e2872",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "PreventiveControl is a SecurityControl",
       "subject": "PreventiveControl"
     },
     {
-      "claim_id": "claim-01b615a0cec123da",
+      "claim_id": "claim-310cf68794440098",
       "kind": "relation",
       "normalized_statement": "PreventiveControl reduces ProbabilityOfAnIncident",
       "object": "ProbabilityOfAnIncident",
@@ -301,14 +301,14 @@
         "asset_id": "p006",
         "evidence": "A preventive control is a type of security control that reduces the probability of an incident.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-adc3a7fe7fcb74b1",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-0d8fbc80b63e2872",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "PreventiveControl reduces ProbabilityOfAnIncident",
       "subject": "PreventiveControl"
     },
     {
-      "claim_id": "claim-a3458602d7e6b59c",
+      "claim_id": "claim-2e3cd1a773f84cb2",
       "kind": "definition",
       "normalized_statement": "DetectiveControl is a SecurityControl",
       "object": "SecurityControl",
@@ -318,14 +318,14 @@
         "asset_id": "p006",
         "evidence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-e5c9d80a63be480b",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-2aaaea271cdd85ea",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "DetectiveControl is a SecurityControl",
       "subject": "DetectiveControl"
     },
     {
-      "claim_id": "claim-60815382c3223a77",
+      "claim_id": "claim-ec0f32dbf98d4557",
       "kind": "relation",
       "normalized_statement": "DetectiveControl identifies SuspiciousActivity",
       "object": "SuspiciousActivity",
@@ -335,14 +335,14 @@
         "asset_id": "p006",
         "evidence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-e5c9d80a63be480b",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-2aaaea271cdd85ea",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "DetectiveControl identifies SuspiciousActivity",
       "subject": "DetectiveControl"
     },
     {
-      "claim_id": "claim-341a27875444db30",
+      "claim_id": "claim-37f8855310c4b941",
       "kind": "relation",
       "normalized_statement": "DetectiveControl identifies PolicyViolation",
       "object": "PolicyViolation",
@@ -352,14 +352,14 @@
         "asset_id": "p006",
         "evidence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-e5c9d80a63be480b",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-2aaaea271cdd85ea",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "DetectiveControl identifies PolicyViolation",
       "subject": "DetectiveControl"
     },
     {
-      "claim_id": "claim-b9a9f0ddfe347171",
+      "claim_id": "claim-7c53b60af96421e3",
       "kind": "definition",
       "normalized_statement": "CorrectiveControl is a SecurityControl",
       "object": "SecurityControl",
@@ -369,14 +369,14 @@
         "asset_id": "p006",
         "evidence": "A corrective control is a type of security control that restores normal operations after an incident.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-0a6329b94f41cb77",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-ec287669a141a037",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "CorrectiveControl is a SecurityControl",
       "subject": "CorrectiveControl"
     },
     {
-      "claim_id": "claim-94b1bc038dfcc1d8",
+      "claim_id": "claim-7e0d5dd89396ec0b",
       "kind": "relation",
       "normalized_statement": "CorrectiveControl restores NormalOperationAfterAnIncident",
       "object": "NormalOperationAfterAnIncident",
@@ -386,14 +386,14 @@
         "asset_id": "p006",
         "evidence": "A corrective control is a type of security control that restores normal operations after an incident.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-0a6329b94f41cb77",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-ec287669a141a037",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "CorrectiveControl restores NormalOperationAfterAnIncident",
       "subject": "CorrectiveControl"
     },
     {
-      "claim_id": "claim-14c84c12d21d85c0",
+      "claim_id": "claim-8d4f101c3f5dcacf",
       "kind": "definition",
       "normalized_statement": "CompensatingControl is a SecurityControl",
       "object": "SecurityControl",
@@ -403,14 +403,14 @@
         "asset_id": "p006",
         "evidence": "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-957c35f7ec591e95",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-398991a3e61af26c",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "CompensatingControl is a SecurityControl",
       "subject": "CompensatingControl"
     },
     {
-      "claim_id": "claim-b7cb5e0181b35692",
+      "claim_id": "claim-b273a03246bc929f",
       "kind": "relation",
       "normalized_statement": "CompensatingControl provides AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented",
       "object": "AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented",
@@ -420,14 +420,14 @@
         "asset_id": "p006",
         "evidence": "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-957c35f7ec591e95",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-398991a3e61af26c",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "CompensatingControl provides AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented",
       "subject": "CompensatingControl"
     },
     {
-      "claim_id": "claim-1dc869d9f8faa4f1",
+      "claim_id": "claim-1c3e9ed7348befd3",
       "kind": "definition",
       "normalized_statement": "AccessControl is a PreventiveControl",
       "object": "PreventiveControl",
@@ -437,14 +437,14 @@
         "asset_id": "p006",
         "evidence": "Access control is a preventive control.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-6445f2d2f5374748",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-a1e94df9fce4adb9",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "AccessControl is a PreventiveControl",
       "subject": "AccessControl"
     },
     {
-      "claim_id": "claim-992d5a749a008f93",
+      "claim_id": "claim-2af527aed853737d",
       "kind": "definition",
       "normalized_statement": "Logging is a DetectiveControl",
       "object": "DetectiveControl",
@@ -454,14 +454,14 @@
         "asset_id": "p006",
         "evidence": "Logging is a detective control.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-ed9aa6fd579278a0",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-4338287646ab70fe",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "Logging is a DetectiveControl",
       "subject": "Logging"
     },
     {
-      "claim_id": "claim-339709132c3cecbb",
+      "claim_id": "claim-c23b210bc8dbde17",
       "kind": "definition",
       "normalized_statement": "BackupRestoration is a CorrectiveControl",
       "object": "CorrectiveControl",
@@ -471,14 +471,14 @@
         "asset_id": "p006",
         "evidence": "Backup restoration is a corrective control.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-77342d6542dff7cc",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-1a9791afe37a0f3d",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "BackupRestoration is a CorrectiveControl",
       "subject": "BackupRestoration"
     },
     {
-      "claim_id": "claim-2f9ae24c283e9fb9",
+      "claim_id": "claim-5471c296982db0b0",
       "kind": "definition",
       "normalized_statement": "ManualApproval is a CompensatingControlWhenAutomatedEnforcementIsNotAvailable",
       "object": "CompensatingControlWhenAutomatedEnforcementIsNotAvailable",
@@ -488,8 +488,8 @@
         "asset_id": "p006",
         "evidence": "Manual approval is a compensating control when automated enforcement is not available.",
         "paragraph_id": "p006",
-        "sentence_id": "sent-b5b8d5a3c2f76a5b",
-        "source_text_id": "3a27f6e465805746661e76d5199c6f39a3790fe1ccdd15b9c111d35da29a0b3c"
+        "sentence_id": "sent-25dbf6b2dc868175",
+        "source_text_id": "f1457bc45a20b6bac1e5631d6455fe155c9b0af9fd14c35f95ed86f42a61d7d3"
       },
       "statement": "ManualApproval is a CompensatingControlWhenAutomatedEnforcementIsNotAvailable",
       "subject": "ManualApproval"

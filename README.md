@@ -10,10 +10,27 @@ It is designed to be imported and used by a host application. For example, a tra
 
 - Accepts input as a Python string or a path to a `.txt` file.
 - Processes text through a deterministic NLP pipeline.
-- Extracts ontology candidates, relations, and triples.
+- Extracts ontology candidates, relations, semantic claims, and triples.
 - Keeps deterministic triples separate from inferred triples.
 - Exposes Python objects and serializable outputs.
 - Preserves traceability per entity, property, and triple.
+
+## Current quality / smoke status
+
+- Pipeline order now is `semantic_claims` first, then triple extraction, then RDF.
+- Smoke is modular by case directory under `tests/smoke/cases/...`.
+- One runner: `python3 tests/smoke/run_infosec_smoke_suite.py`.
+- Artifacts tracked: `semantic_claims`, `graph_model`, RDF, and metrics.
+- Legacy `infosec_3k` smoke stays disabled.
+- Full-text modular smoke is observational/proxy.
+- Strict contracts stay on `p001-p002` and `p003-p004`.
+- Latest validation: `87 passed`.
+- No hardcode in `src`; contract and smoke truth live in docs and tests.
+
+## Quality entrypoints
+
+- `docs/core/quality/TR-ORION-INFOSEC-FULL-TEXT-SMOKE.md`
+- `docs/core/quality/TR-ORION-INFOSEC-PAIR-SMOKE-REMAINING.md`
 
 ## Supported languages
 
@@ -112,7 +129,6 @@ The same input, same config, and same pinned dependencies must produce the same 
 - YAML is not the main configuration format.
 - CLI usage is not part of the contract.
 - ORION is meant to be embedded in other Python systems.
-
 
 ## Developer static linter
 

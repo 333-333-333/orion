@@ -2,7 +2,7 @@
   "claim_count": 34,
   "claims": [
     {
-      "claim_id": "claim-0caa17f3624d3459",
+      "claim_id": "claim-d7fce9e8fb8be540",
       "kind": "relation",
       "normalized_statement": "VulnerabilityManagementIdentifyEvaluatePrioritizAnd remediates Weakness",
       "object": "Weakness",
@@ -12,14 +12,14 @@
         "asset_id": "p033",
         "evidence": "Vulnerability management identifies, evaluates, prioritizes, and remediates weaknesses.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-718e112ea5a79ea3",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-bbb20b2697b0d5a0",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "VulnerabilityManagementIdentifyEvaluatePrioritizAnd remediates Weakness",
       "subject": "VulnerabilityManagementIdentifyEvaluatePrioritizAnd"
     },
     {
-      "claim_id": "claim-d2e1ad6c932265bc",
+      "claim_id": "claim-7438b09a2df6d2a2",
       "kind": "relation",
       "normalized_statement": "VulnerabilityScan detects KnownVulnerabilityInSystem",
       "object": "KnownVulnerabilityInSystem",
@@ -29,14 +29,14 @@
         "asset_id": "p033",
         "evidence": "A vulnerability scan detects known vulnerabilities in systems and applications.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-4e91e3cfe3727278",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-07c6b48ec366d87c",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "VulnerabilityScan detects KnownVulnerabilityInSystem",
       "subject": "VulnerabilityScan"
     },
     {
-      "claim_id": "claim-d4782c2de2c47f6a",
+      "claim_id": "claim-4a230229cc3e1587",
       "kind": "relation",
       "normalized_statement": "VulnerabilityScan detects Application",
       "object": "Application",
@@ -46,14 +46,14 @@
         "asset_id": "p033",
         "evidence": "A vulnerability scan detects known vulnerabilities in systems and applications.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-4e91e3cfe3727278",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-07c6b48ec366d87c",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "VulnerabilityScan detects Application",
       "subject": "VulnerabilityScan"
     },
     {
-      "claim_id": "claim-154635eeb4ad8be1",
+      "claim_id": "claim-b83ad6b0284125db",
       "kind": "relation",
       "normalized_statement": "VulnerabilityFinding describes DetectedWeakness",
       "object": "DetectedWeakness",
@@ -63,14 +63,14 @@
         "asset_id": "p033",
         "evidence": "A vulnerability finding describes a detected weakness.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-9e6c5427f287de0d",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-1d1499b7e38a1c3a",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "VulnerabilityFinding describes DetectedWeakness",
       "subject": "VulnerabilityFinding"
     },
     {
-      "claim_id": "claim-14ae3cdc489b74f0",
+      "claim_id": "claim-b38e1e2043742daa",
       "kind": "relation",
       "normalized_statement": "SeverityRating estimates TechnicalSeriousnessOfAVulnerability",
       "object": "TechnicalSeriousnessOfAVulnerability",
@@ -80,14 +80,14 @@
         "asset_id": "p033",
         "evidence": "A severity rating estimates the technical seriousness of a vulnerability.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-8c4f6786db81f462",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-5906771b35213d7e",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "SeverityRating estimates TechnicalSeriousnessOfAVulnerability",
       "subject": "SeverityRating"
     },
     {
-      "claim_id": "claim-cfdfc156e2fcdcac",
+      "claim_id": "claim-e8ef2fb38ea10ac7",
       "kind": "relation",
       "normalized_statement": "RiskRating combines Severity",
       "object": "Severity",
@@ -97,14 +97,14 @@
         "asset_id": "p033",
         "evidence": "A risk rating combines severity, exposure, likelihood, and business impact.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-8039a6afb8623023",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-661721b5993c5727",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "RiskRating combines Severity",
       "subject": "RiskRating"
     },
     {
-      "claim_id": "claim-545e923d6df5520c",
+      "claim_id": "claim-7e6793d3e7ed4751",
       "kind": "relation",
       "normalized_statement": "RiskRating combines Exposure",
       "object": "Exposure",
@@ -114,14 +114,14 @@
         "asset_id": "p033",
         "evidence": "A risk rating combines severity, exposure, likelihood, and business impact.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-8039a6afb8623023",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-661721b5993c5727",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "RiskRating combines Exposure",
       "subject": "RiskRating"
     },
     {
-      "claim_id": "claim-6f98424fa74de382",
+      "claim_id": "claim-a719329daa3d7359",
       "kind": "relation",
       "normalized_statement": "RiskRating combines Likelihood",
       "object": "Likelihood",
@@ -131,14 +131,14 @@
         "asset_id": "p033",
         "evidence": "A risk rating combines severity, exposure, likelihood, and business impact.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-8039a6afb8623023",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-661721b5993c5727",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "RiskRating combines Likelihood",
       "subject": "RiskRating"
     },
     {
-      "claim_id": "claim-11ef13269f314d3e",
+      "claim_id": "claim-bf8f28d3edbc5804",
       "kind": "relation",
       "normalized_statement": "RiskRating business Impact",
       "object": "Impact",
@@ -148,14 +148,14 @@
         "asset_id": "p033",
         "evidence": "A risk rating combines severity, exposure, likelihood, and business impact.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-8039a6afb8623023",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-661721b5993c5727",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "RiskRating business Impact",
       "subject": "RiskRating"
     },
     {
-      "claim_id": "claim-07d203ebee01acfa",
+      "claim_id": "claim-bea460dadfd0971f",
       "kind": "relation",
       "normalized_statement": "Remediation removes FixAVulnerability",
       "object": "FixAVulnerability",
@@ -165,14 +165,14 @@
         "asset_id": "p033",
         "evidence": "Remediation removes or fixes a vulnerability.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-59d4c5143ad446f9",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-71b27ed7abb8f96c",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "Remediation removes FixAVulnerability",
       "subject": "Remediation"
     },
     {
-      "claim_id": "claim-e3d89c8716a91163",
+      "claim_id": "claim-1b1e8fce848e5735",
       "kind": "definition",
       "normalized_statement": "MitigationReduceTheRiskWhenRemediation is a NotImmediatelyPossible",
       "object": "NotImmediatelyPossible",
@@ -182,14 +182,14 @@
         "asset_id": "p033",
         "evidence": "Mitigation reduces the risk when remediation is not immediately possible.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-a9228752e38d59bd",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-e4133d9374f76a12",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "MitigationReduceTheRiskWhenRemediation is a NotImmediatelyPossible",
       "subject": "MitigationReduceTheRiskWhenRemediation"
     },
     {
-      "claim_id": "claim-94ed4051a9e1c3d2",
+      "claim_id": "claim-4c2ca0b468d668bf",
       "kind": "definition",
       "normalized_statement": "PatchDeployment is a Remediation",
       "object": "Remediation",
@@ -199,14 +199,14 @@
         "asset_id": "p033",
         "evidence": "Patch deployment is a type of remediation.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-de8056476d235353",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-6d50d8b4b4ef61c3",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "PatchDeployment is a Remediation",
       "subject": "PatchDeployment"
     },
     {
-      "claim_id": "claim-e2e93d8d46470c98",
+      "claim_id": "claim-438cc3a19d9d2b55",
       "kind": "definition",
       "normalized_statement": "ConfigurationChange is a Remediation",
       "object": "Remediation",
@@ -216,14 +216,14 @@
         "asset_id": "p033",
         "evidence": "Configuration change is a type of remediation.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-db0d3e02b97ebf5f",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-8193f6868349f25e",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ConfigurationChange is a Remediation",
       "subject": "ConfigurationChange"
     },
     {
-      "claim_id": "claim-282581dbf5d5ea8b",
+      "claim_id": "claim-32ebebcde482c884",
       "kind": "relation",
       "normalized_statement": "Vulnerability exceptions MustBeDocumented",
       "object": "MustBeDocumented",
@@ -233,14 +233,14 @@
         "asset_id": "p033",
         "evidence": "Vulnerability exceptions must be documented, approved, and reviewed.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-6bce5b35406cc3a5",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-b720759738e330cf",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "Vulnerability exceptions MustBeDocumented",
       "subject": "Vulnerability"
     },
     {
-      "claim_id": "claim-cac57fbb0f243fb2",
+      "claim_id": "claim-d90117eac630da0e",
       "kind": "relation",
       "normalized_statement": "Vulnerability exceptions Approved",
       "object": "Approved",
@@ -250,14 +250,14 @@
         "asset_id": "p033",
         "evidence": "Vulnerability exceptions must be documented, approved, and reviewed.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-6bce5b35406cc3a5",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-b720759738e330cf",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "Vulnerability exceptions Approved",
       "subject": "Vulnerability"
     },
     {
-      "claim_id": "claim-e48d942b11a43b03",
+      "claim_id": "claim-6602f4051bd606aa",
       "kind": "relation",
       "normalized_statement": "Vulnerability exceptions Reviewed",
       "object": "Reviewed",
@@ -267,14 +267,14 @@
         "asset_id": "p033",
         "evidence": "Vulnerability exceptions must be documented, approved, and reviewed.",
         "paragraph_id": "p033",
-        "sentence_id": "sent-6bce5b35406cc3a5",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-b720759738e330cf",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "Vulnerability exceptions Reviewed",
       "subject": "Vulnerability"
     },
     {
-      "claim_id": "claim-c2089faaab5e03f2",
+      "claim_id": "claim-1d3aa9ce7925a38d",
       "kind": "relation",
       "normalized_statement": "ThreatIntelligence provides InformationAboutThreat",
       "object": "InformationAboutThreat",
@@ -284,14 +284,14 @@
         "asset_id": "p034",
         "evidence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-4a9350b7a0543b02",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-6d682aacf4c80223",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ThreatIntelligence provides InformationAboutThreat",
       "subject": "ThreatIntelligence"
     },
     {
-      "claim_id": "claim-e7aa9fb5fb471a31",
+      "claim_id": "claim-5d3889651c7b9a3d",
       "kind": "relation",
       "normalized_statement": "ThreatIntelligence provides ThreatActor",
       "object": "ThreatActor",
@@ -301,14 +301,14 @@
         "asset_id": "p034",
         "evidence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-4a9350b7a0543b02",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-6d682aacf4c80223",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ThreatIntelligence provides ThreatActor",
       "subject": "ThreatIntelligence"
     },
     {
-      "claim_id": "claim-607073c029aa300c",
+      "claim_id": "claim-652dd47e551b1799",
       "kind": "relation",
       "normalized_statement": "ThreatIntelligence provides Tactic",
       "object": "Tactic",
@@ -318,14 +318,14 @@
         "asset_id": "p034",
         "evidence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-4a9350b7a0543b02",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-6d682aacf4c80223",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ThreatIntelligence provides Tactic",
       "subject": "ThreatIntelligence"
     },
     {
-      "claim_id": "claim-13a4ec2101527fa7",
+      "claim_id": "claim-91ea56d471637dba",
       "kind": "relation",
       "normalized_statement": "ThreatIntelligence provides Technique",
       "object": "Technique",
@@ -335,14 +335,14 @@
         "asset_id": "p034",
         "evidence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-4a9350b7a0543b02",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-6d682aacf4c80223",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ThreatIntelligence provides Technique",
       "subject": "ThreatIntelligence"
     },
     {
-      "claim_id": "claim-99c120f73d0b750c",
+      "claim_id": "claim-1dc4c09dfd5e49c0",
       "kind": "relation",
       "normalized_statement": "ThreatIntelligence provides Indicator",
       "object": "Indicator",
@@ -352,14 +352,14 @@
         "asset_id": "p034",
         "evidence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-4a9350b7a0543b02",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-6d682aacf4c80223",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ThreatIntelligence provides Indicator",
       "subject": "ThreatIntelligence"
     },
     {
-      "claim_id": "claim-42adbb1f62991f5e",
+      "claim_id": "claim-2bb128b2a9e101c6",
       "kind": "definition",
       "normalized_statement": "ThreatActor is a Entity",
       "object": "Entity",
@@ -369,14 +369,14 @@
         "asset_id": "p034",
         "evidence": "A threat actor is an entity that can intentionally cause harm.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-3c798b9602ca9d90",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-572dfdc6f374a541",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ThreatActor is a Entity",
       "subject": "ThreatActor"
     },
     {
-      "claim_id": "claim-b19b4c5cf3df5473",
+      "claim_id": "claim-caafee41cc980088",
       "kind": "relation",
       "normalized_statement": "ThreatActor cans IntentionallyCauseHarm",
       "object": "IntentionallyCauseHarm",
@@ -386,14 +386,14 @@
         "asset_id": "p034",
         "evidence": "A threat actor is an entity that can intentionally cause harm.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-3c798b9602ca9d90",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-572dfdc6f374a541",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ThreatActor cans IntentionallyCauseHarm",
       "subject": "ThreatActor"
     },
     {
-      "claim_id": "claim-2b6e52a7eddce6aa",
+      "claim_id": "claim-d3dd62b5d41f588b",
       "kind": "definition",
       "normalized_statement": "CybercriminalGroup is a ThreatActor",
       "object": "ThreatActor",
@@ -403,14 +403,14 @@
         "asset_id": "p034",
         "evidence": "A cybercriminal group is a type of threat actor.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-73621056201b6def",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-6a6fc5ac7d20fbe9",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "CybercriminalGroup is a ThreatActor",
       "subject": "CybercriminalGroup"
     },
     {
-      "claim_id": "claim-172b56dc5e585e88",
+      "claim_id": "claim-b0d7e7e116a8094a",
       "kind": "definition",
       "normalized_statement": "Insider is a ThreatActor",
       "object": "ThreatActor",
@@ -420,14 +420,14 @@
         "asset_id": "p034",
         "evidence": "An insider is a type of threat actor.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-08a8d8b905b36b4e",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-26765ef6414f15a1",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "Insider is a ThreatActor",
       "subject": "Insider"
     },
     {
-      "claim_id": "claim-115fba8b91dc504b",
+      "claim_id": "claim-99c32c81ebbad6bc",
       "kind": "definition",
       "normalized_statement": "NationStateActor is a ThreatActor",
       "object": "ThreatActor",
@@ -437,14 +437,14 @@
         "asset_id": "p034",
         "evidence": "A nation-state actor is a type of threat actor.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-8846d1bcce270b2e",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-b04ecc2801ebcd6c",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "NationStateActor is a ThreatActor",
       "subject": "NationStateActor"
     },
     {
-      "claim_id": "claim-1eb8d4ae678a64a8",
+      "claim_id": "claim-8750cf6fa55247a5",
       "kind": "definition",
       "normalized_statement": "Hacktivist is a ThreatActor",
       "object": "ThreatActor",
@@ -454,14 +454,14 @@
         "asset_id": "p034",
         "evidence": "A hacktivist is a type of threat actor.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-7a0004b1652dddae",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-980901e99fd0b135",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "Hacktivist is a ThreatActor",
       "subject": "Hacktivist"
     },
     {
-      "claim_id": "claim-1d59ebb89bbe226e",
+      "claim_id": "claim-bf208b69d47fb1d2",
       "kind": "definition",
       "normalized_statement": "IndicatorOfCompromise is a Evidence",
       "object": "Evidence",
@@ -471,14 +471,14 @@
         "asset_id": "p034",
         "evidence": "An indicator of compromise is evidence that a system may be compromised.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-06e111f7e4cef228",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-4a591e44dd171132",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "IndicatorOfCompromise is a Evidence",
       "subject": "IndicatorOfCompromise"
     },
     {
-      "claim_id": "claim-60bcc89679c77772",
+      "claim_id": "claim-b0715f8df1eb0590",
       "kind": "relation",
       "normalized_statement": "IndicatorOfCompromise as SystemMayBeCompromised",
       "object": "SystemMayBeCompromised",
@@ -488,14 +488,14 @@
         "asset_id": "p034",
         "evidence": "An indicator of compromise is evidence that a system may be compromised.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-06e111f7e4cef228",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-4a591e44dd171132",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "IndicatorOfCompromise as SystemMayBeCompromised",
       "subject": "IndicatorOfCompromise"
     },
     {
-      "claim_id": "claim-4b622f8a52b9c694",
+      "claim_id": "claim-0ea9327f301882d6",
       "kind": "relation",
       "normalized_statement": "Tactic describes ThreatActorObjective",
       "object": "ThreatActorObjective",
@@ -505,14 +505,14 @@
         "asset_id": "p034",
         "evidence": "A tactic describes a threat actor objective.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-f80a97cf001940ab",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-7b9d8d44cadea957",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "Tactic describes ThreatActorObjective",
       "subject": "Tactic"
     },
     {
-      "claim_id": "claim-1ac0ae37f130f2dd",
+      "claim_id": "claim-52f87ff5220491d0",
       "kind": "relation",
       "normalized_statement": "Technique describes HowAThreatActorAchieveAnObjective",
       "object": "HowAThreatActorAchieveAnObjective",
@@ -522,14 +522,14 @@
         "asset_id": "p034",
         "evidence": "A technique describes how a threat actor achieves an objective.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-3dd89eca5a90c2c3",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-0e956f95fee293a9",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "Technique describes HowAThreatActorAchieveAnObjective",
       "subject": "Technique"
     },
     {
-      "claim_id": "claim-de31cdddb39bef9f",
+      "claim_id": "claim-2dacf96f14b733cd",
       "kind": "relation",
       "normalized_statement": "ThreatIntelligence supports Detection",
       "object": "Detection",
@@ -539,14 +539,14 @@
         "asset_id": "p034",
         "evidence": "Threat intelligence supports detection, prevention, and response activities.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-816af696e03f0494",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-01ac37c709bb1dea",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ThreatIntelligence supports Detection",
       "subject": "ThreatIntelligence"
     },
     {
-      "claim_id": "claim-fa6424fe8bb58cce",
+      "claim_id": "claim-e57b012ea1984cd3",
       "kind": "relation",
       "normalized_statement": "ThreatIntelligence supports Prevention",
       "object": "Prevention",
@@ -556,14 +556,14 @@
         "asset_id": "p034",
         "evidence": "Threat intelligence supports detection, prevention, and response activities.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-816af696e03f0494",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-01ac37c709bb1dea",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ThreatIntelligence supports Prevention",
       "subject": "ThreatIntelligence"
     },
     {
-      "claim_id": "claim-9053460e54735011",
+      "claim_id": "claim-306252fffbfcc82c",
       "kind": "relation",
       "normalized_statement": "ThreatIntelligence supports ResponseActivity",
       "object": "ResponseActivity",
@@ -573,8 +573,8 @@
         "asset_id": "p034",
         "evidence": "Threat intelligence supports detection, prevention, and response activities.",
         "paragraph_id": "p034",
-        "sentence_id": "sent-816af696e03f0494",
-        "source_text_id": "e8c2576770918fa5538ad320c4f5d982a2a3108a0930f779bcc391402397dc0d"
+        "sentence_id": "sent-01ac37c709bb1dea",
+        "source_text_id": "1a2b6144169de982b1ecade3aced82876d25d0da1cb322a5ad2af45b03bf3586"
       },
       "statement": "ThreatIntelligence supports ResponseActivity",
       "subject": "ThreatIntelligence"

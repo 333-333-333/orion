@@ -42,11 +42,6 @@ _SMOKE_TESTS = (
     "tests/smoke/cases/infosec_p043/test_infosec_p043_observational_smoke.py",
     "tests/smoke/cases/infosec_full_text/test_infosec_full_text_observational_smoke.py",
 )
-_DISABLED_INFOSEC_3K_SMOKE_TESTS = (
-    "tests/smoke/test_infosec_3k_pipeline_smoke.py",
-    "tests/smoke/test_infosec_3k_paragraphs_smoke.py",
-    "tests/smoke/test_infosec_paragraph_semantics_smoke.py",
-)
 _INFOSEC_3K_DENYLIST = ("infosec_3k", "3k_pipeline", "3k_paragraphs")
 
 
@@ -184,7 +179,6 @@ def main() -> int:
             "command": cmd,
             "timeout_seconds": timeout_seconds,
             "selected_tests": selected_tests,
-            "disabled_infosec_3k_tests": list(_DISABLED_INFOSEC_3K_SMOKE_TESTS),
         },
     ))
 

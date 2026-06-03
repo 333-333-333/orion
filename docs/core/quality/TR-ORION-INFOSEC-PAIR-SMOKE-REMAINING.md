@@ -1,10 +1,12 @@
 # TR-ORION-INFOSEC-PAIR-SMOKE-REMAINING
 ## Metadata
 - ID: TR-ORION-INFOSEC-PAIR-SMOKE-REMAINING
-- Scope: fixtures p005..p043 en pares modulares
+- Scope: fixtures p005..p043 en pares modulares por directorio de caso
 - Tester: sisyphus-tester
 - Runner: python3 tests/smoke/run_infosec_smoke_suite.py
 - Result: GREEN, 82 passed in 10.65s
+- Note: semantic_claims va antes de triple extraction/RDF en el flujo observado.
+
 ## Coverage Matrix
 
 | Spec | Cases | Tests | Status |
@@ -16,6 +18,7 @@
 | BR-INFOSEC-PAIR-SMOKE-001 | p005..p043 | artifact generation | GREEN |
 | BR-INFOSEC-PAIR-SMOKE-002 | p005..p043 | source evidence support proxy | GREEN |
 | BR-INFOSEC-PAIR-SMOKE-003 | p005..p043 | RDF visible structure | GREEN |
+
 ## Observed Metrics
 
 | Pair | Claims | Evidence proxy | Classes | Object properties | RDF |
@@ -42,7 +45,7 @@
 | p043 | 19 | 1.0 | 22 | 19 | True |
 
 ## Notes
-No se inventan expected domain claims. Cada case tiene expected_semantic_contract.json con shape/artifacts/fixture hashes derivados del texto leído. Precisión domain se mide como proxy: claims con evidence presente en fixture / claims totales.
+No se inventan expected domain claims. Cada case tiene expected_semantic_contract.json con shape/artifacts/fixture hashes derivados del texto leído. Precisión domain se mide como proxy: claims con evidence presente en fixture / claims totales. Este smoke es observacional/proxy; contratos estrictos quedan en p001-p002 y p003-p004.
 
 ## Untestable / límites
-Precisión semántica completa requiere gold expected por párrafo leído y curado; no se generó para 39 párrafos por riesgo de baja calidad manual. P043 quedó single por impar final y se documenta como decisión.
+Precisión semántica completa requiere gold expected por párrafo leído y curado; no se generó para 39 párrafos por riesgo de baja calidad manual. P043 quedó single por impar final y se documenta como decisión. Legacy infosec_3k sigue disabled en el runner.

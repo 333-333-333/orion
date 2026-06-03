@@ -2,7 +2,7 @@
   "claim_count": 19,
   "claims": [
     {
-      "claim_id": "claim-fbb82bd5e177933b",
+      "claim_id": "claim-29e62cf457df70d0",
       "kind": "relation",
       "normalized_statement": "ResultingOntologyShouldRepresent users AccessSystem",
       "object": "AccessSystem",
@@ -12,14 +12,14 @@
         "asset_id": "p043",
         "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-8252c58593957aae",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-9aaa2f8d13cd08f0",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "ResultingOntologyShouldRepresent users AccessSystem",
       "subject": "ResultingOntologyShouldRepresent"
     },
     {
-      "claim_id": "claim-9376b41a4b34862d",
+      "claim_id": "claim-700e8e2454445ca5",
       "kind": "relation",
       "normalized_statement": "ResultingOntologyShouldRepresent users RoleIncludePermission",
       "object": "RoleIncludePermission",
@@ -29,14 +29,14 @@
         "asset_id": "p043",
         "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-8252c58593957aae",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-9aaa2f8d13cd08f0",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "ResultingOntologyShouldRepresent users RoleIncludePermission",
       "subject": "ResultingOntologyShouldRepresent"
     },
     {
-      "claim_id": "claim-3f36746d40862a2d",
+      "claim_id": "claim-d313dcfc2efc7b55",
       "kind": "relation",
       "normalized_statement": "ResultingOntologyShouldRepresent users ControlReduceRisk",
       "object": "ControlReduceRisk",
@@ -46,14 +46,14 @@
         "asset_id": "p043",
         "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-8252c58593957aae",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-9aaa2f8d13cd08f0",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "ResultingOntologyShouldRepresent users ControlReduceRisk",
       "subject": "ResultingOntologyShouldRepresent"
     },
     {
-      "claim_id": "claim-6c78ab4306c4ae26",
+      "claim_id": "claim-6ab0c51bcde035c5",
       "kind": "relation",
       "normalized_statement": "ResultingOntologyShouldRepresent users ThreatExploitVulnerability",
       "object": "ThreatExploitVulnerability",
@@ -63,14 +63,14 @@
         "asset_id": "p043",
         "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-8252c58593957aae",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-9aaa2f8d13cd08f0",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "ResultingOntologyShouldRepresent users ThreatExploitVulnerability",
       "subject": "ResultingOntologyShouldRepresent"
     },
     {
-      "claim_id": "claim-169155c91415357a",
+      "claim_id": "claim-623d0121545c01a7",
       "kind": "relation",
       "normalized_statement": "ResultingOntologyShouldRepresent users IncidentAffectAsset",
       "object": "IncidentAffectAsset",
@@ -80,14 +80,14 @@
         "asset_id": "p043",
         "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-8252c58593957aae",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-9aaa2f8d13cd08f0",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "ResultingOntologyShouldRepresent users IncidentAffectAsset",
       "subject": "ResultingOntologyShouldRepresent"
     },
     {
-      "claim_id": "claim-0b10639e5c152c20",
+      "claim_id": "claim-96b2fffb38014dd5",
       "kind": "relation",
       "normalized_statement": "ResultingOntologyShouldRepresent users SystemProcessInformationAsset",
       "object": "SystemProcessInformationAsset",
@@ -97,14 +97,14 @@
         "asset_id": "p043",
         "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-8252c58593957aae",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-9aaa2f8d13cd08f0",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "ResultingOntologyShouldRepresent users SystemProcessInformationAsset",
       "subject": "ResultingOntologyShouldRepresent"
     },
     {
-      "claim_id": "claim-258be67d7d1b3cf2",
+      "claim_id": "claim-f19d625eeca75a58",
       "kind": "relation",
       "normalized_statement": "ResultingOntologyShouldRepresent users PolicyDefineRequirement",
       "object": "PolicyDefineRequirement",
@@ -114,14 +114,14 @@
         "asset_id": "p043",
         "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-8252c58593957aae",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-9aaa2f8d13cd08f0",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "ResultingOntologyShouldRepresent users PolicyDefineRequirement",
       "subject": "ResultingOntologyShouldRepresent"
     },
     {
-      "claim_id": "claim-a648e63795c93c45",
+      "claim_id": "claim-2bf3b626d6201f92",
       "kind": "relation",
       "normalized_statement": "ResultingOntologyShouldRepresent users RequirementAreSatisfiedByControl",
       "object": "RequirementAreSatisfiedByControl",
@@ -131,14 +131,14 @@
         "asset_id": "p043",
         "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-8252c58593957aae",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-9aaa2f8d13cd08f0",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "ResultingOntologyShouldRepresent users RequirementAreSatisfiedByControl",
       "subject": "ResultingOntologyShouldRepresent"
     },
     {
-      "claim_id": "claim-727398c59872a17f",
+      "claim_id": "claim-8901f03a4aaa3ca8",
       "kind": "relation",
       "normalized_statement": "ResultingOntologyShouldRepresent users SupplierProvideService",
       "object": "SupplierProvideService",
@@ -148,14 +148,14 @@
         "asset_id": "p043",
         "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-8252c58593957aae",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-9aaa2f8d13cd08f0",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "ResultingOntologyShouldRepresent users SupplierProvideService",
       "subject": "ResultingOntologyShouldRepresent"
     },
     {
-      "claim_id": "claim-a216610119104b77",
+      "claim_id": "claim-c2f57a4b90eb7b4f",
       "kind": "relation",
       "normalized_statement": "ResultingOntologyShouldRepresent auditors EvaluateCompliance",
       "object": "EvaluateCompliance",
@@ -165,14 +165,14 @@
         "asset_id": "p043",
         "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-8252c58593957aae",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-9aaa2f8d13cd08f0",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "ResultingOntologyShouldRepresent auditors EvaluateCompliance",
       "subject": "ResultingOntologyShouldRepresent"
     },
     {
-      "claim_id": "claim-e9e5d40b2e2a9e6e",
+      "claim_id": "claim-f6f24ddd73e5dd27",
       "kind": "relation",
       "normalized_statement": "OntologyShouldAlsoRepresent protects Confidentiality",
       "object": "Confidentiality",
@@ -182,14 +182,14 @@
         "asset_id": "p043",
         "evidence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-1989ee1842f8bf13",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-2f943555c88b2575",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "OntologyShouldAlsoRepresent protects Confidentiality",
       "subject": "OntologyShouldAlsoRepresent"
     },
     {
-      "claim_id": "claim-f7e9018d287f0cb4",
+      "claim_id": "claim-4b13c528424e89f3",
       "kind": "relation",
       "normalized_statement": "OntologyShouldAlsoRepresent protects BackupSupportAvailability",
       "object": "BackupSupportAvailability",
@@ -199,14 +199,14 @@
         "asset_id": "p043",
         "evidence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-1989ee1842f8bf13",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-2f943555c88b2575",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "OntologyShouldAlsoRepresent protects BackupSupportAvailability",
       "subject": "OntologyShouldAlsoRepresent"
     },
     {
-      "claim_id": "claim-40b97ddd51da0e47",
+      "claim_id": "claim-54f38a46e9b76017",
       "kind": "relation",
       "normalized_statement": "OntologyShouldAlsoRepresent protects LoggingSupportAccountability",
       "object": "LoggingSupportAccountability",
@@ -216,14 +216,14 @@
         "asset_id": "p043",
         "evidence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-1989ee1842f8bf13",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-2f943555c88b2575",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "OntologyShouldAlsoRepresent protects LoggingSupportAccountability",
       "subject": "OntologyShouldAlsoRepresent"
     },
     {
-      "claim_id": "claim-0bc965c18e85a84d",
+      "claim_id": "claim-27aee27c92f7cfb4",
       "kind": "relation",
       "normalized_statement": "OntologyShouldAlsoRepresent protects MonitoringDetectSuspiciousActivity",
       "object": "MonitoringDetectSuspiciousActivity",
@@ -233,14 +233,14 @@
         "asset_id": "p043",
         "evidence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-1989ee1842f8bf13",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-2f943555c88b2575",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "OntologyShouldAlsoRepresent protects MonitoringDetectSuspiciousActivity",
       "subject": "OntologyShouldAlsoRepresent"
     },
     {
-      "claim_id": "claim-95e21e1afb45a2b9",
+      "claim_id": "claim-5b6329e33eb70585",
       "kind": "relation",
       "normalized_statement": "These relationships MakeTheGeneratedRDF",
       "object": "MakeTheGeneratedRDF",
@@ -250,14 +250,14 @@
         "asset_id": "p043",
         "evidence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-10b9043df84aec02",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-4dfe8ff982f87d5c",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "These relationships MakeTheGeneratedRDF",
       "subject": "These"
     },
     {
-      "claim_id": "claim-69d9633f84d4ac30",
+      "claim_id": "claim-853e19fc7fcfbfbc",
       "kind": "relation",
       "normalized_statement": "These relationships OWLGraphSuitableForQuerying",
       "object": "OWLGraphSuitableForQuerying",
@@ -267,14 +267,14 @@
         "asset_id": "p043",
         "evidence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-10b9043df84aec02",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-4dfe8ff982f87d5c",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "These relationships OWLGraphSuitableForQuerying",
       "subject": "These"
     },
     {
-      "claim_id": "claim-7bc7f1275f04cc32",
+      "claim_id": "claim-50f9b32a3ab8fba2",
       "kind": "relation",
       "normalized_statement": "These relationships Validation",
       "object": "Validation",
@@ -284,14 +284,14 @@
         "asset_id": "p043",
         "evidence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-10b9043df84aec02",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-4dfe8ff982f87d5c",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "These relationships Validation",
       "subject": "These"
     },
     {
-      "claim_id": "claim-b3663dc04fbfb1ea",
+      "claim_id": "claim-63a2b80e8dac3596",
       "kind": "relation",
       "normalized_statement": "These relationships Reasoning",
       "object": "Reasoning",
@@ -301,14 +301,14 @@
         "asset_id": "p043",
         "evidence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-10b9043df84aec02",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-4dfe8ff982f87d5c",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "These relationships Reasoning",
       "subject": "These"
     },
     {
-      "claim_id": "claim-48714fafffaa4e83",
+      "claim_id": "claim-af5ccfb86c2745fa",
       "kind": "relation",
       "normalized_statement": "These relationships Mining",
       "object": "Mining",
@@ -318,8 +318,8 @@
         "asset_id": "p043",
         "evidence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
         "paragraph_id": "p043",
-        "sentence_id": "sent-10b9043df84aec02",
-        "source_text_id": "b77af0a8e86fdd3c23360920e862633bd26ee44c5a4ab5d2e222df89911443c0"
+        "sentence_id": "sent-4dfe8ff982f87d5c",
+        "source_text_id": "298cd98b19f657aca7f41a56e9ad62b36897d222438a2df4e983ca0b3a37a780"
       },
       "statement": "These relationships Mining",
       "subject": "These"

@@ -2,7 +2,7 @@
   "claim_count": 20,
   "claims": [
     {
-      "claim_id": "claim-848bfe8ca9ab2b86",
+      "claim_id": "claim-998c7e0f7edf352f",
       "kind": "relation",
       "normalized_statement": "DataBreachScenario illustrates ImportanceOfAccessControl",
       "object": "ImportanceOfAccessControl",
@@ -12,14 +12,14 @@
         "asset_id": "p041",
         "evidence": "A data breach scenario illustrates the importance of access control and data protection.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-ea3cded7e0260928",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-454b101dcb36c4af",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "DataBreachScenario illustrates ImportanceOfAccessControl",
       "subject": "DataBreachScenario"
     },
     {
-      "claim_id": "claim-5ccb0e616dff674d",
+      "claim_id": "claim-215bd5de42b78621",
       "kind": "relation",
       "normalized_statement": "DataBreachScenario illustrates DataProtection",
       "object": "DataProtection",
@@ -29,14 +29,14 @@
         "asset_id": "p041",
         "evidence": "A data breach scenario illustrates the importance of access control and data protection.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-ea3cded7e0260928",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-454b101dcb36c4af",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "DataBreachScenario illustrates DataProtection",
       "subject": "DataBreachScenario"
     },
     {
-      "claim_id": "claim-fa13e29d358aa278",
+      "claim_id": "claim-13c46329945c3336",
       "kind": "relation",
       "normalized_statement": "UnauthorizedUser accesses RestrictedDocumentRepository",
       "object": "RestrictedDocumentRepository",
@@ -46,14 +46,14 @@
         "asset_id": "p041",
         "evidence": "An unauthorized user accesses a restricted document repository.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-be06f0a75cef4b91",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-8b1a05e0a5e4ab5e",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "UnauthorizedUser accesses RestrictedDocumentRepository",
       "subject": "UnauthorizedUser"
     },
     {
-      "claim_id": "claim-67dab306b0b92d07",
+      "claim_id": "claim-38f6b4e7b67aecf6",
       "kind": "relation",
       "normalized_statement": "RestrictedDocumentRepository stores ConfidentialInformation",
       "object": "ConfidentialInformation",
@@ -63,14 +63,14 @@
         "asset_id": "p041",
         "evidence": "The restricted document repository stores confidential information and personal data.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-baa596b4b968ae9b",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-6544a4035688a7fe",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "RestrictedDocumentRepository stores ConfidentialInformation",
       "subject": "RestrictedDocumentRepository"
     },
     {
-      "claim_id": "claim-b8f32489a34afc6b",
+      "claim_id": "claim-59751bff5ad417d5",
       "kind": "relation",
       "normalized_statement": "RestrictedDocumentRepository stores PersonalData",
       "object": "PersonalData",
@@ -80,14 +80,14 @@
         "asset_id": "p041",
         "evidence": "The restricted document repository stores confidential information and personal data.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-baa596b4b968ae9b",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-6544a4035688a7fe",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "RestrictedDocumentRepository stores PersonalData",
       "subject": "RestrictedDocumentRepository"
     },
     {
-      "claim_id": "claim-1de15e9cc66d290d",
+      "claim_id": "claim-8c90c8f22c7d7d7e",
       "kind": "relation",
       "normalized_statement": "Unauthorized access ViolateTheAccessControlPolicy",
       "object": "ViolateTheAccessControlPolicy",
@@ -97,14 +97,14 @@
         "asset_id": "p041",
         "evidence": "The unauthorized access violates the access control policy.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-1010ff2aeb9e99f3",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-187c7f81f94beaec",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "Unauthorized access ViolateTheAccessControlPolicy",
       "subject": "Unauthorized"
     },
     {
-      "claim_id": "claim-59d222b8ab72b307",
+      "claim_id": "claim-08dc0fd48e23f996",
       "kind": "relation",
       "normalized_statement": "Audit logs RecordTheAccessEvent",
       "object": "RecordTheAccessEvent",
@@ -114,14 +114,14 @@
         "asset_id": "p041",
         "evidence": "Audit logs record the access event.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-32ea816eb967bcca",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-91aea8b9d8cfd62e",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "Audit logs RecordTheAccessEvent",
       "subject": "Audit"
     },
     {
-      "claim_id": "claim-7ec754f6e0629edb",
+      "claim_id": "claim-494de605923c2559",
       "kind": "relation",
       "normalized_statement": "DetectionRule generates SecurityAlert",
       "object": "SecurityAlert",
@@ -131,14 +131,14 @@
         "asset_id": "p041",
         "evidence": "A detection rule generates a security alert.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-5210e7da1975f21d",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-64f1caffcd348aaa",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "DetectionRule generates SecurityAlert",
       "subject": "DetectionRule"
     },
     {
-      "claim_id": "claim-437b69cbccdddc83",
+      "claim_id": "claim-d6d283973be53171",
       "kind": "relation",
       "normalized_statement": "SecurityAnalyst investigates Alert",
       "object": "Alert",
@@ -148,14 +148,14 @@
         "asset_id": "p041",
         "evidence": "The security analyst investigates the alert.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-cd9c8358465598b9",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-e254695a6ce25fca",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "SecurityAnalyst investigates Alert",
       "subject": "SecurityAnalyst"
     },
     {
-      "claim_id": "claim-c43ff711b9cba6ec",
+      "claim_id": "claim-8ff859d14ce7f3ab",
       "kind": "relation",
       "normalized_statement": "IncidentResponseTeam confirms DataBreach",
       "object": "DataBreach",
@@ -165,14 +165,14 @@
         "asset_id": "p041",
         "evidence": "The incident response team confirms a data breach.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-3c2cb4c67c4196be",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-882b7ad9482cd2ea",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "IncidentResponseTeam confirms DataBreach",
       "subject": "IncidentResponseTeam"
     },
     {
-      "claim_id": "claim-e20fe0183a0b648d",
+      "claim_id": "claim-b72d555a9c6cb0ee",
       "kind": "relation",
       "normalized_statement": "PrivacyOfficer assesses WhetherDataSubjectMustBeNotified",
       "object": "WhetherDataSubjectMustBeNotified",
@@ -182,14 +182,14 @@
         "asset_id": "p041",
         "evidence": "The privacy officer assesses whether data subjects must be notified.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-d2127fe6a8002aa6",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-5a1394ba09391d4d",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "PrivacyOfficer assesses WhetherDataSubjectMustBeNotified",
       "subject": "PrivacyOfficer"
     },
     {
-      "claim_id": "claim-1e71427d2525d3ab",
+      "claim_id": "claim-dfb2dd2c2c55f36e",
       "kind": "relation",
       "normalized_statement": "LegalTeam evaluates RegulatoryObligation",
       "object": "RegulatoryObligation",
@@ -199,14 +199,14 @@
         "asset_id": "p041",
         "evidence": "The legal team evaluates regulatory obligations.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-b6f03cba4d2e0366",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-d5cfb2045185a563",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "LegalTeam evaluates RegulatoryObligation",
       "subject": "LegalTeam"
     },
     {
-      "claim_id": "claim-4a8de6ab09b31cac",
+      "claim_id": "claim-41dac62e21b471a7",
       "kind": "relation",
       "normalized_statement": "Organization implements CorrectiveActionToPreventRecurrence",
       "object": "CorrectiveActionToPreventRecurrence",
@@ -216,14 +216,14 @@
         "asset_id": "p041",
         "evidence": "The organization implements corrective actions to prevent recurrence.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-02ffb0d5bbad7665",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-432bfc728347ec44",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "Organization implements CorrectiveActionToPreventRecurrence",
       "subject": "Organization"
     },
     {
-      "claim_id": "claim-01b811402c3e7278",
+      "claim_id": "claim-a17efc92cc418ca5",
       "kind": "relation",
       "normalized_statement": "OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful relationships FromThisText",
       "object": "FromThisText",
@@ -233,14 +233,14 @@
         "asset_id": "p042",
         "evidence": "ORION should be able to identify security concepts, classify hierarchical relationships, and extract meaningful relationships from this text.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-a939cf7920710755",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-a1d2b82c91c0d83d",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful relationships FromThisText",
       "subject": "OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful"
     },
     {
-      "claim_id": "claim-f99f96a9a2eba803",
+      "claim_id": "claim-f297af736439e438",
       "kind": "relation",
       "normalized_statement": "ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre subclasses OfInformationAsset",
       "object": "OfInformationAsset",
@@ -250,14 +250,14 @@
         "asset_id": "p042",
         "evidence": "Confidential document, corporate database, customer record, and source code repository are subclasses of information asset.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-cd0afc5bda0a8c02",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-f40309603f5b3318",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre subclasses OfInformationAsset",
       "subject": "ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre"
     },
     {
-      "claim_id": "claim-128a60ec66f30f80",
+      "claim_id": "claim-b02c80bd96e757af",
       "kind": "relation",
       "normalized_statement": "PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre subclasses OfSecurityControl",
       "object": "OfSecurityControl",
@@ -267,14 +267,14 @@
         "asset_id": "p042",
         "evidence": "Preventive control, detective control, corrective control, and compensating control are subclasses of security control.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-745e8e5a5344fa30",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-0bbaef181546d412",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre subclasses OfSecurityControl",
       "subject": "PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre"
     },
     {
-      "claim_id": "claim-290341a33e981bc2",
+      "claim_id": "claim-1b13494dac43a65b",
       "kind": "relation",
       "normalized_statement": "PasswordCertificate access Token",
       "object": "Token",
@@ -284,14 +284,14 @@
         "asset_id": "p042",
         "evidence": "Password, certificate, access token, API key, and private key are subclasses of credential.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-12f75bc894b809e9",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-f1e87dd4ccc24b28",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "PasswordCertificate access Token",
       "subject": "PasswordCertificate"
     },
     {
-      "claim_id": "claim-34fa2a962cb05396",
+      "claim_id": "claim-69b28e2efdea538c",
       "kind": "relation",
       "normalized_statement": "PasswordCertificate access APIKey",
       "object": "APIKey",
@@ -301,14 +301,14 @@
         "asset_id": "p042",
         "evidence": "Password, certificate, access token, API key, and private key are subclasses of credential.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-12f75bc894b809e9",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-f1e87dd4ccc24b28",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "PasswordCertificate access APIKey",
       "subject": "PasswordCertificate"
     },
     {
-      "claim_id": "claim-4f23a023640dbd4a",
+      "claim_id": "claim-3fb1427cbbeb0890",
       "kind": "relation",
       "normalized_statement": "PasswordCertificate access PrivateKeyAreSubclassOfCredential",
       "object": "PrivateKeyAreSubclassOfCredential",
@@ -318,14 +318,14 @@
         "asset_id": "p042",
         "evidence": "Password, certificate, access token, API key, and private key are subclasses of credential.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-12f75bc894b809e9",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-f1e87dd4ccc24b28",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "PasswordCertificate access PrivateKeyAreSubclassOfCredential",
       "subject": "PasswordCertificate"
     },
     {
-      "claim_id": "claim-17bad1ab896d6a6f",
+      "claim_id": "claim-ce2becd23a48eb49",
       "kind": "relation",
       "normalized_statement": "MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre subclasses OfSecurityIncident",
       "object": "OfSecurityIncident",
@@ -335,8 +335,8 @@
         "asset_id": "p042",
         "evidence": "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-1c0890621400f88f",
-        "source_text_id": "60b9dcb74fbdbf7ae139ce4048512a351403cc6d3e8fff08c28575ce61a10107"
+        "sentence_id": "sent-3bc463eede8cf4e1",
+        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
       },
       "statement": "MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre subclasses OfSecurityIncident",
       "subject": "MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre"

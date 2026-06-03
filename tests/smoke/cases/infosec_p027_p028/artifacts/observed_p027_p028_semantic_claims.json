@@ -2,7 +2,7 @@
   "claim_count": 25,
   "claims": [
     {
-      "claim_id": "claim-77715ff0d261491a",
+      "claim_id": "claim-483627771e2c92a5",
       "kind": "relation",
       "normalized_statement": "HumanResourceSecurity addresses SecurityResponsibilityBefore",
       "object": "SecurityResponsibilityBefore",
@@ -12,14 +12,14 @@
         "asset_id": "p027",
         "evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-c80e2181a661ad9e",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-e9e9df73d1885a7d",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "HumanResourceSecurity addresses SecurityResponsibilityBefore",
       "subject": "HumanResourceSecurity"
     },
     {
-      "claim_id": "claim-0488197e63903f20",
+      "claim_id": "claim-a155ac5c976282cd",
       "kind": "relation",
       "normalized_statement": "HumanResourceSecurity addresses During",
       "object": "During",
@@ -29,14 +29,14 @@
         "asset_id": "p027",
         "evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-c80e2181a661ad9e",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-e9e9df73d1885a7d",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "HumanResourceSecurity addresses During",
       "subject": "HumanResourceSecurity"
     },
     {
-      "claim_id": "claim-25c2d06a54c23e80",
+      "claim_id": "claim-47bea9f1103562db",
       "kind": "relation",
       "normalized_statement": "HumanResourceSecurity addresses AfterEmployment",
       "object": "AfterEmployment",
@@ -46,14 +46,14 @@
         "asset_id": "p027",
         "evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-c80e2181a661ad9e",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-e9e9df73d1885a7d",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "HumanResourceSecurity addresses AfterEmployment",
       "subject": "HumanResourceSecurity"
     },
     {
-      "claim_id": "claim-80c86de929ddc577",
+      "claim_id": "claim-5e279d620990dff6",
       "kind": "relation",
       "normalized_statement": "BackgroundCheck evaluates CandidateBeforeEmployment",
       "object": "CandidateBeforeEmployment",
@@ -63,14 +63,14 @@
         "asset_id": "p027",
         "evidence": "A background check evaluates a candidate before employment.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-803346aac20e28b3",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-9fce0a193de15254",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "BackgroundCheck evaluates CandidateBeforeEmployment",
       "subject": "BackgroundCheck"
     },
     {
-      "claim_id": "claim-87c3eccabae289a9",
+      "claim_id": "claim-d27a44ab14e6c9b4",
       "kind": "relation",
       "normalized_statement": "ConfidentialityAgreement defines ObligationRelatedToSensitiveInformation",
       "object": "ObligationRelatedToSensitiveInformation",
@@ -80,14 +80,14 @@
         "asset_id": "p027",
         "evidence": "A confidentiality agreement defines obligations related to sensitive information.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-d8b8de36b689d486",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-d37b8c30dc973fb0",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "ConfidentialityAgreement defines ObligationRelatedToSensitiveInformation",
       "subject": "ConfidentialityAgreement"
     },
     {
-      "claim_id": "claim-985ff1a10e97e840",
+      "claim_id": "claim-3fc30fa8d5063813",
       "kind": "relation",
       "normalized_statement": "Security awareness TrainingEducateUserAboutPolicy",
       "object": "TrainingEducateUserAboutPolicy",
@@ -97,14 +97,14 @@
         "asset_id": "p027",
         "evidence": "Security awareness training educates users about policies, threats, and expected behavior.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-9eb70cd664d95a47",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-d4bd2f635b9464af",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "Security awareness TrainingEducateUserAboutPolicy",
       "subject": "Security"
     },
     {
-      "claim_id": "claim-8ae134e24e632377",
+      "claim_id": "claim-b3e21d53c1396717",
       "kind": "relation",
       "normalized_statement": "Security awareness Threat",
       "object": "Threat",
@@ -114,14 +114,14 @@
         "asset_id": "p027",
         "evidence": "Security awareness training educates users about policies, threats, and expected behavior.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-9eb70cd664d95a47",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-d4bd2f635b9464af",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "Security awareness Threat",
       "subject": "Security"
     },
     {
-      "claim_id": "claim-b771318a6c911469",
+      "claim_id": "claim-ea907214247d3353",
       "kind": "relation",
       "normalized_statement": "Security awareness ExpectedBehavior",
       "object": "ExpectedBehavior",
@@ -131,14 +131,14 @@
         "asset_id": "p027",
         "evidence": "Security awareness training educates users about policies, threats, and expected behavior.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-9eb70cd664d95a47",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-d4bd2f635b9464af",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "Security awareness ExpectedBehavior",
       "subject": "Security"
     },
     {
-      "claim_id": "claim-677962b3f2475b75",
+      "claim_id": "claim-ca4701d2290e5554",
       "kind": "relation",
       "normalized_statement": "RoleBasedTraining provides SpecializedSecurityKnowledgeForSpecificResponsibility",
       "object": "SpecializedSecurityKnowledgeForSpecificResponsibility",
@@ -148,14 +148,14 @@
         "asset_id": "p027",
         "evidence": "Role-based training provides specialized security knowledge for specific responsibilities.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-f25608272f5f200b",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-beae130f7e24b383",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "RoleBasedTraining provides SpecializedSecurityKnowledgeForSpecificResponsibility",
       "subject": "RoleBasedTraining"
     },
     {
-      "claim_id": "claim-04b572cd457b466a",
+      "claim_id": "claim-d03d9b1d3a5090a9",
       "kind": "relation",
       "normalized_statement": "Disciplinary process DefineConsequenceForPolicyViolation",
       "object": "DefineConsequenceForPolicyViolation",
@@ -165,14 +165,14 @@
         "asset_id": "p027",
         "evidence": "Disciplinary process defines consequences for policy violations.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-11efe36f9e75b7e3",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-aaa799024e649db5",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "Disciplinary process DefineConsequenceForPolicyViolation",
       "subject": "Disciplinary"
     },
     {
-      "claim_id": "claim-87701fdd56ffb477",
+      "claim_id": "claim-a3709bf3182afb8e",
       "kind": "relation",
       "normalized_statement": "TerminationProcedure removes AccessWhenEmploymentEnd",
       "object": "AccessWhenEmploymentEnd",
@@ -182,14 +182,14 @@
         "asset_id": "p027",
         "evidence": "Termination procedure removes access when employment ends.",
         "paragraph_id": "p027",
-        "sentence_id": "sent-99c63e99546f8749",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-3586a0d591408e14",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "TerminationProcedure removes AccessWhenEmploymentEnd",
       "subject": "TerminationProcedure"
     },
     {
-      "claim_id": "claim-23cd024518f57c5f",
+      "claim_id": "claim-e53ae98242cd92e6",
       "kind": "relation",
       "normalized_statement": "Security awareness ReduceHumanRelatedSecurityRisk",
       "object": "ReduceHumanRelatedSecurityRisk",
@@ -199,14 +199,14 @@
         "asset_id": "p028",
         "evidence": "Security awareness reduces human-related security risks.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-c285420869f2b960",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-fae68e4a2abc1f49",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "Security awareness ReduceHumanRelatedSecurityRisk",
       "subject": "Security"
     },
     {
-      "claim_id": "claim-c1640be6a0e7c7c8",
+      "claim_id": "claim-22e72a0e3b7e59c7",
       "kind": "relation",
       "normalized_statement": "Phishing awareness TeachUserToIdentifySuspiciousMessage",
       "object": "TeachUserToIdentifySuspiciousMessage",
@@ -216,14 +216,14 @@
         "asset_id": "p028",
         "evidence": "Phishing awareness teaches users to identify suspicious messages.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-208c60ea5f82590a",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-b3f3c9417594361b",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "Phishing awareness TeachUserToIdentifySuspiciousMessage",
       "subject": "Phishing"
     },
     {
-      "claim_id": "claim-49d7e9b77831194e",
+      "claim_id": "claim-b3219bd2941adfad",
       "kind": "relation",
       "normalized_statement": "Password awareness TeachUserToCreate",
       "object": "TeachUserToCreate",
@@ -233,14 +233,14 @@
         "asset_id": "p028",
         "evidence": "Password awareness teaches users to create and protect strong passwords.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-4ae83e9b74a7cdad",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-4ce970a2328c4e18",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "Password awareness TeachUserToCreate",
       "subject": "Password"
     },
     {
-      "claim_id": "claim-1f111c84f720a7fd",
+      "claim_id": "claim-c903b0cddd88d1f3",
       "kind": "relation",
       "normalized_statement": "Password awareness ProtectStrongPassword",
       "object": "ProtectStrongPassword",
@@ -250,14 +250,14 @@
         "asset_id": "p028",
         "evidence": "Password awareness teaches users to create and protect strong passwords.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-4ae83e9b74a7cdad",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-4ce970a2328c4e18",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "Password awareness ProtectStrongPassword",
       "subject": "Password"
     },
     {
-      "claim_id": "claim-cf3ef8b46bf7e101",
+      "claim_id": "claim-2881699fba0e16d2",
       "kind": "relation",
       "normalized_statement": "DataHandling awareness TeachUserToClassify",
       "object": "TeachUserToClassify",
@@ -267,14 +267,14 @@
         "asset_id": "p028",
         "evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-15e9f599060762a6",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-0bd6ed632c091a5b",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "DataHandling awareness TeachUserToClassify",
       "subject": "DataHandling"
     },
     {
-      "claim_id": "claim-510a7104bccaf44d",
+      "claim_id": "claim-1b476c6a668d1dc3",
       "kind": "relation",
       "normalized_statement": "DataHandling awareness Store",
       "object": "Store",
@@ -284,14 +284,14 @@
         "asset_id": "p028",
         "evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-15e9f599060762a6",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-0bd6ed632c091a5b",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "DataHandling awareness Store",
       "subject": "DataHandling"
     },
     {
-      "claim_id": "claim-ea0ecc6ea55e4766",
+      "claim_id": "claim-22682e4bbb979382",
       "kind": "relation",
       "normalized_statement": "DataHandling awareness Transmit",
       "object": "Transmit",
@@ -301,14 +301,14 @@
         "asset_id": "p028",
         "evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-15e9f599060762a6",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-0bd6ed632c091a5b",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "DataHandling awareness Transmit",
       "subject": "DataHandling"
     },
     {
-      "claim_id": "claim-30b8e16b8f3cd5b9",
+      "claim_id": "claim-acfe89f99835ba15",
       "kind": "relation",
       "normalized_statement": "DataHandling awareness DisposeOfInformationSafely",
       "object": "DisposeOfInformationSafely",
@@ -318,14 +318,14 @@
         "asset_id": "p028",
         "evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-15e9f599060762a6",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-0bd6ed632c091a5b",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "DataHandling awareness DisposeOfInformationSafely",
       "subject": "DataHandling"
     },
     {
-      "claim_id": "claim-31920950816ddde1",
+      "claim_id": "claim-bead3b9a3c7d0d84",
       "kind": "relation",
       "normalized_statement": "RemoteWork awareness TeachUserToProtectDevice",
       "object": "TeachUserToProtectDevice",
@@ -335,14 +335,14 @@
         "asset_id": "p028",
         "evidence": "Remote work awareness teaches users to protect devices and networks outside the office.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-f6debcd1e5687009",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-d955f90408576026",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "RemoteWork awareness TeachUserToProtectDevice",
       "subject": "RemoteWork"
     },
     {
-      "claim_id": "claim-c6c07bb7d054e77b",
+      "claim_id": "claim-eb4132d2b82bf40c",
       "kind": "relation",
       "normalized_statement": "RemoteWork networks OutsideTheOffice",
       "object": "OutsideTheOffice",
@@ -352,14 +352,14 @@
         "asset_id": "p028",
         "evidence": "Remote work awareness teaches users to protect devices and networks outside the office.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-f6debcd1e5687009",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-d955f90408576026",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "RemoteWork networks OutsideTheOffice",
       "subject": "RemoteWork"
     },
     {
-      "claim_id": "claim-5079fd27efc43925",
+      "claim_id": "claim-02dc643285392c04",
       "kind": "relation",
       "normalized_statement": "SocialEngineering awareness TeachUserToRecognizeManipulationAttempt",
       "object": "TeachUserToRecognizeManipulationAttempt",
@@ -369,14 +369,14 @@
         "asset_id": "p028",
         "evidence": "Social engineering awareness teaches users to recognize manipulation attempts.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-8668b375056df2e5",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-e87834d5bfbf11fd",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "SocialEngineering awareness TeachUserToRecognizeManipulationAttempt",
       "subject": "SocialEngineering"
     },
     {
-      "claim_id": "claim-fe04abb3eaf2262b",
+      "claim_id": "claim-7d952a98d15780f2",
       "kind": "relation",
       "normalized_statement": "Awareness campaigns ReinforceSecureBehavior",
       "object": "ReinforceSecureBehavior",
@@ -386,14 +386,14 @@
         "asset_id": "p028",
         "evidence": "Awareness campaigns reinforce secure behavior.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-cbecb7b5e13713be",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-ef611977cf247336",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "Awareness campaigns ReinforceSecureBehavior",
       "subject": "Awareness"
     },
     {
-      "claim_id": "claim-6a321e8a957ea160",
+      "claim_id": "claim-eec21aa84a5b90d9",
       "kind": "relation",
       "normalized_statement": "TrainingCompletion metrics MeasureUserParticipation",
       "object": "MeasureUserParticipation",
@@ -403,14 +403,14 @@
         "asset_id": "p028",
         "evidence": "Training completion metrics measure user participation.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-dce80fbea567ca86",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-899497416a8988da",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "TrainingCompletion metrics MeasureUserParticipation",
       "subject": "TrainingCompletion"
     },
     {
-      "claim_id": "claim-9cfcf936c1026b61",
+      "claim_id": "claim-df8221fdf5861567",
       "kind": "relation",
       "normalized_statement": "SimulatedPhishing exercises MeasureUserResponseToPhishingScenario",
       "object": "MeasureUserResponseToPhishingScenario",
@@ -420,8 +420,8 @@
         "asset_id": "p028",
         "evidence": "Simulated phishing exercises measure user response to phishing scenarios.",
         "paragraph_id": "p028",
-        "sentence_id": "sent-2ecb8e660faaa4af",
-        "source_text_id": "41476997b5fe2e032d734c383415ba853301cd800e9a881119200d8429101be1"
+        "sentence_id": "sent-91091752da87233e",
+        "source_text_id": "8241e1716fd1bc9897a9458366de8564aae7ee8c5d481e393eff5426d9e7dd1f"
       },
       "statement": "SimulatedPhishing exercises MeasureUserResponseToPhishingScenario",
       "subject": "SimulatedPhishing"

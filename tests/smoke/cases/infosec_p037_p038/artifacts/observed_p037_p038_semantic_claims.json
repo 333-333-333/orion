@@ -2,7 +2,7 @@
   "claim_count": 21,
   "claims": [
     {
-      "claim_id": "claim-2d2c39efd2f42c18",
+      "claim_id": "claim-ebec56394ef20169",
       "kind": "relation",
       "normalized_statement": "ForExampleACustomerDatabase stores PersonalData",
       "object": "PersonalData",
@@ -12,14 +12,14 @@
         "asset_id": "p037",
         "evidence": "For example, a customer database stores personal data and financial data.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-a4929a2ff871dfa8",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-1f6d81ee7a8fb782",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "ForExampleACustomerDatabase stores PersonalData",
       "subject": "ForExampleACustomerDatabase"
     },
     {
-      "claim_id": "claim-792dbd37f895e238",
+      "claim_id": "claim-3d9547cf641ed88e",
       "kind": "relation",
       "normalized_statement": "ForExampleACustomerDatabase stores FinancialData",
       "object": "FinancialData",
@@ -29,14 +29,14 @@
         "asset_id": "p037",
         "evidence": "For example, a customer database stores personal data and financial data.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-a4929a2ff871dfa8",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-1f6d81ee7a8fb782",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "ForExampleACustomerDatabase stores FinancialData",
       "subject": "ForExampleACustomerDatabase"
     },
     {
-      "claim_id": "claim-098164afd0a123f3",
+      "claim_id": "claim-f2fc2db1b709d3a4",
       "kind": "definition",
       "normalized_statement": "CustomerDatabase is a HostedOnADatabaseServer",
       "object": "HostedOnADatabaseServer",
@@ -46,14 +46,14 @@
         "asset_id": "p037",
         "evidence": "The customer database is hosted on a database server.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-21c4db80717754b8",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-3e08efe4e40d122f",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "CustomerDatabase is a HostedOnADatabaseServer",
       "subject": "CustomerDatabase"
     },
     {
-      "claim_id": "claim-d0dae7046d5dd13f",
+      "claim_id": "claim-36ed1990747d31bf",
       "kind": "relation",
       "normalized_statement": "DatabaseServer runs InsideAProductionNetwork",
       "object": "InsideAProductionNetwork",
@@ -63,14 +63,14 @@
         "asset_id": "p037",
         "evidence": "The database server runs inside a production network.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-ecc492e800266a95",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-8ce3e7fa6a6a9072",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "DatabaseServer runs InsideAProductionNetwork",
       "subject": "DatabaseServer"
     },
     {
-      "claim_id": "claim-4df18a443850a75e",
+      "claim_id": "claim-0e389602f206f335",
       "kind": "definition",
       "normalized_statement": "ProductionNetwork is a ProtectedByAFirewall",
       "object": "ProtectedByAFirewall",
@@ -80,14 +80,14 @@
         "asset_id": "p037",
         "evidence": "The production network is protected by a firewall.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-197238fa71e1ab54",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-09ae27c2650b47e2",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "ProductionNetwork is a ProtectedByAFirewall",
       "subject": "ProductionNetwork"
     },
     {
-      "claim_id": "claim-88a46c1aee613fd7",
+      "claim_id": "claim-721a14a2549dfedf",
       "kind": "relation",
       "normalized_statement": "Firewall enforces NetworkAccessRule",
       "object": "NetworkAccessRule",
@@ -97,14 +97,14 @@
         "asset_id": "p037",
         "evidence": "The firewall enforces network access rules.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-8f6dec2dfd4f3dd4",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-1b193d9fb9c29f72",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "Firewall enforces NetworkAccessRule",
       "subject": "Firewall"
     },
     {
-      "claim_id": "claim-85b8180c6908dcc7",
+      "claim_id": "claim-74c0897110cfdda8",
       "kind": "definition",
       "normalized_statement": "CustomerDatabase is a EncryptedUsingACryptographicKey",
       "object": "EncryptedUsingACryptographicKey",
@@ -114,14 +114,14 @@
         "asset_id": "p037",
         "evidence": "The customer database is encrypted using a cryptographic key.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-41ed7e1cbfad4df3",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-6529864dcb4ae97b",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "CustomerDatabase is a EncryptedUsingACryptographicKey",
       "subject": "CustomerDatabase"
     },
     {
-      "claim_id": "claim-7aac63c82e512772",
+      "claim_id": "claim-24517711c8c20449",
       "kind": "definition",
       "normalized_statement": "CryptographicKey is a StoredInAKeyManagementService",
       "object": "StoredInAKeyManagementService",
@@ -131,14 +131,14 @@
         "asset_id": "p037",
         "evidence": "The cryptographic key is stored in a key management service.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-a6399015133bb7b9",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-e20fbb691a15eade",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "CryptographicKey is a StoredInAKeyManagementService",
       "subject": "CryptographicKey"
     },
     {
-      "claim_id": "claim-a67529637be94573",
+      "claim_id": "claim-91cecf2e1285766b",
       "kind": "relation",
       "normalized_statement": "SecurityInformationAndEventManagementSystem collects AuditLogFromTheDatabaseServer",
       "object": "AuditLogFromTheDatabaseServer",
@@ -148,14 +148,14 @@
         "asset_id": "p037",
         "evidence": "The security information and event management system collects audit logs from the database server.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-062bd1be69724af4",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-847107f364e829fc",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "SecurityInformationAndEventManagementSystem collects AuditLogFromTheDatabaseServer",
       "subject": "SecurityInformationAndEventManagementSystem"
     },
     {
-      "claim_id": "claim-797d023df93a7355",
+      "claim_id": "claim-80af3132b2965210",
       "kind": "relation",
       "normalized_statement": "SecurityAnalyst reviews AlertRelatedToTheCustomerDatabase",
       "object": "AlertRelatedToTheCustomerDatabase",
@@ -165,14 +165,14 @@
         "asset_id": "p037",
         "evidence": "A security analyst reviews alerts related to the customer database.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-624c4e21a09b6853",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-6a09ecb1c74f5c14",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "SecurityAnalyst reviews AlertRelatedToTheCustomerDatabase",
       "subject": "SecurityAnalyst"
     },
     {
-      "claim_id": "claim-041e67b0a3b29419",
+      "claim_id": "claim-34c546f00bc0198d",
       "kind": "relation",
       "normalized_statement": "AssetOwner classifies CustomerDatabaseAsRestrictedInformation",
       "object": "CustomerDatabaseAsRestrictedInformation",
@@ -182,14 +182,14 @@
         "asset_id": "p037",
         "evidence": "The asset owner classifies the customer database as restricted information.",
         "paragraph_id": "p037",
-        "sentence_id": "sent-cd2c1065039e0bba",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-10bc45594cf43acd",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "AssetOwner classifies CustomerDatabaseAsRestrictedInformation",
       "subject": "AssetOwner"
     },
     {
-      "claim_id": "claim-9b8964f44a45d0e7",
+      "claim_id": "claim-1cc2ae0e9a67f8ec",
       "kind": "relation",
       "normalized_statement": "AnotherExample involves RemoteAccess",
       "object": "RemoteAccess",
@@ -199,14 +199,14 @@
         "asset_id": "p038",
         "evidence": "Another example involves remote access.",
         "paragraph_id": "p038",
-        "sentence_id": "sent-14d13a99f68149b6",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-fbf1f66076d97322",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "AnotherExample involves RemoteAccess",
       "subject": "AnotherExample"
     },
     {
-      "claim_id": "claim-61dc0f3a332eb765",
+      "claim_id": "claim-b61f1e7e92b5ef38",
       "kind": "relation",
       "normalized_statement": "RemoteEmployee uses LaptopToAccessACorporateApplication",
       "object": "LaptopToAccessACorporateApplication",
@@ -216,14 +216,14 @@
         "asset_id": "p038",
         "evidence": "A remote employee uses a laptop to access a corporate application.",
         "paragraph_id": "p038",
-        "sentence_id": "sent-ae207e9eb1882db1",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-20e9d3b19f3e022a",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "RemoteEmployee uses LaptopToAccessACorporateApplication",
       "subject": "RemoteEmployee"
     },
     {
-      "claim_id": "claim-2644fe30ba30d931",
+      "claim_id": "claim-ec9d8426fda259c9",
       "kind": "definition",
       "normalized_statement": "Laptop is a Endpoint",
       "object": "Endpoint",
@@ -233,14 +233,14 @@
         "asset_id": "p038",
         "evidence": "The laptop is an endpoint.",
         "paragraph_id": "p038",
-        "sentence_id": "sent-ca1905b67e98180d",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-049263ff50c9452f",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "Laptop is a Endpoint",
       "subject": "Laptop"
     },
     {
-      "claim_id": "claim-62c0b58f449b034b",
+      "claim_id": "claim-1e82a43514eb6a21",
       "kind": "definition",
       "normalized_statement": "CorporateApplication is a WebApplication",
       "object": "WebApplication",
@@ -250,14 +250,14 @@
         "asset_id": "p038",
         "evidence": "The corporate application is a web application.",
         "paragraph_id": "p038",
-        "sentence_id": "sent-57e9b27f2d768b1e",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-8665e04cfddadebf",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "CorporateApplication is a WebApplication",
       "subject": "CorporateApplication"
     },
     {
-      "claim_id": "claim-97026dcf89e84c27",
+      "claim_id": "claim-ec209f31b5838541",
       "kind": "relation",
       "normalized_statement": "RemoteEmployee authenticates ThroughMultiFactorAuthentication",
       "object": "ThroughMultiFactorAuthentication",
@@ -267,14 +267,14 @@
         "asset_id": "p038",
         "evidence": "The remote employee authenticates through multi-factor authentication.",
         "paragraph_id": "p038",
-        "sentence_id": "sent-d79821d3d778e3a0",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-e7d9a3ea3ca229c7",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "RemoteEmployee authenticates ThroughMultiFactorAuthentication",
       "subject": "RemoteEmployee"
     },
     {
-      "claim_id": "claim-fe5b7b1c9165133a",
+      "claim_id": "claim-823b52c17989fb94",
       "kind": "relation",
       "normalized_statement": "IdentityProvider verifies EmployeeIdentity",
       "object": "EmployeeIdentity",
@@ -284,14 +284,14 @@
         "asset_id": "p038",
         "evidence": "The identity provider verifies the employee identity.",
         "paragraph_id": "p038",
-        "sentence_id": "sent-a80130e716dc41d2",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-efb35ed01dffba84",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "IdentityProvider verifies EmployeeIdentity",
       "subject": "IdentityProvider"
     },
     {
-      "claim_id": "claim-5410626aed9dc3f7",
+      "claim_id": "claim-4b9b62bc83e90fde",
       "kind": "relation",
       "normalized_statement": "AuthorizationService grants AccessBasedOnRoleAssignment",
       "object": "AccessBasedOnRoleAssignment",
@@ -301,14 +301,14 @@
         "asset_id": "p038",
         "evidence": "The authorization service grants access based on role assignments.",
         "paragraph_id": "p038",
-        "sentence_id": "sent-4c5eed220281d045",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-f0cc000ae54904a8",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "AuthorizationService grants AccessBasedOnRoleAssignment",
       "subject": "AuthorizationService"
     },
     {
-      "claim_id": "claim-3a7b9e321d7096f0",
+      "claim_id": "claim-09fa4323401786c0",
       "kind": "relation",
       "normalized_statement": "VirtualPrivateNetwork encrypts CommunicationChannel",
       "object": "CommunicationChannel",
@@ -318,14 +318,14 @@
         "asset_id": "p038",
         "evidence": "The virtual private network encrypts the communication channel.",
         "paragraph_id": "p038",
-        "sentence_id": "sent-40b878293b9458d0",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-9fa6ee63768ded73",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "VirtualPrivateNetwork encrypts CommunicationChannel",
       "subject": "VirtualPrivateNetwork"
     },
     {
-      "claim_id": "claim-a47fa7d6640672be",
+      "claim_id": "claim-213ae2684ad20f81",
       "kind": "relation",
       "normalized_statement": "EndpointDetectionAndResponseTool monitors Laptop",
       "object": "Laptop",
@@ -335,14 +335,14 @@
         "asset_id": "p038",
         "evidence": "The endpoint detection and response tool monitors the laptop.",
         "paragraph_id": "p038",
-        "sentence_id": "sent-d8410e77a60d11ce",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-ff2c9d12c9e2e8a2",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "EndpointDetectionAndResponseTool monitors Laptop",
       "subject": "EndpointDetectionAndResponseTool"
     },
     {
-      "claim_id": "claim-160cade351e47224",
+      "claim_id": "claim-e95fe141ef0c9445",
       "kind": "relation",
       "normalized_statement": "SecurityPolicy requires RemoteEmployeeToReportLostDeviceImmediately",
       "object": "RemoteEmployeeToReportLostDeviceImmediately",
@@ -352,8 +352,8 @@
         "asset_id": "p038",
         "evidence": "The security policy requires remote employees to report lost devices immediately.",
         "paragraph_id": "p038",
-        "sentence_id": "sent-08d3875e4a6b192d",
-        "source_text_id": "9ed14e894620d7062ec88e00606659d94e300d365fe999c5e1f0a1351041a844"
+        "sentence_id": "sent-dba505d63191a56f",
+        "source_text_id": "31fb094cbcc98c31af12bfdebb406509d4f9ed32794b7f92e0d8da74f2f9f142"
       },
       "statement": "SecurityPolicy requires RemoteEmployeeToReportLostDeviceImmediately",
       "subject": "SecurityPolicy"

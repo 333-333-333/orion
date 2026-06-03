@@ -2,7 +2,7 @@
   "claim_count": 22,
   "claims": [
     {
-      "claim_id": "claim-8ad3c5cd2aa6f8c9",
+      "claim_id": "claim-fa04e2384168ce03",
       "kind": "relation",
       "normalized_statement": "InformationClassification helps OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation",
       "object": "OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation",
@@ -12,14 +12,14 @@
         "asset_id": "p007",
         "evidence": "Information classification helps organizations apply appropriate protection levels to different kinds of information.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-6071daf658392c2f",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-6f1948387e790d02",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "InformationClassification helps OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation",
       "subject": "InformationClassification"
     },
     {
-      "claim_id": "claim-e6b462d8aea691d5",
+      "claim_id": "claim-9c3a2951065c926e",
       "kind": "definition",
       "normalized_statement": "PublicInformation is_a PublicInformation",
       "object": "PublicInformation",
@@ -29,14 +29,14 @@
         "asset_id": "p007",
         "evidence": "Public information is a type of information that can be disclosed without causing harm.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-4db8a0781faef284",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-ab257a16cbe4e223",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "PublicInformation is_a PublicInformation",
       "subject": "PublicInformation"
     },
     {
-      "claim_id": "claim-faeb04806cfcde4b",
+      "claim_id": "claim-d2e9773d14d0ea7f",
       "kind": "relation",
       "normalized_statement": "PublicInformation cans BeDisclosedWithoutCausingHarm",
       "object": "BeDisclosedWithoutCausingHarm",
@@ -46,14 +46,14 @@
         "asset_id": "p007",
         "evidence": "Public information is a type of information that can be disclosed without causing harm.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-4db8a0781faef284",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-ab257a16cbe4e223",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "PublicInformation cans BeDisclosedWithoutCausingHarm",
       "subject": "PublicInformation"
     },
     {
-      "claim_id": "claim-292e4f64b30c6f4f",
+      "claim_id": "claim-7cd49bbbe731cfa6",
       "kind": "definition",
       "normalized_statement": "InternalInformation is_a PublicInformation",
       "object": "PublicInformation",
@@ -63,14 +63,14 @@
         "asset_id": "p007",
         "evidence": "Internal information is a type of information intended for use inside the organization.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-ba046d96ce368e13",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-0be7fda68d92a059",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "InternalInformation is_a PublicInformation",
       "subject": "InternalInformation"
     },
     {
-      "claim_id": "claim-5431b1ff1feafa4b",
+      "claim_id": "claim-909d1dfa3dfc11df",
       "kind": "definition",
       "normalized_statement": "ConfidentialInformation is a InformationWhoseUnauthorizedDisclosureMayHarmTheOrganizationCustomerEmployeeOrPartner",
       "object": "InformationWhoseUnauthorizedDisclosureMayHarmTheOrganizationCustomerEmployeeOrPartner",
@@ -80,14 +80,14 @@
         "asset_id": "p007",
         "evidence": "Confidential information is a type of information whose unauthorized disclosure may harm the organization, customers, employees, or partners.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-87dd0bd838998a5c",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-7893ff79dc45b0a8",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "ConfidentialInformation is a InformationWhoseUnauthorizedDisclosureMayHarmTheOrganizationCustomerEmployeeOrPartner",
       "subject": "ConfidentialInformation"
     },
     {
-      "claim_id": "claim-2e4763336d7f13c0",
+      "claim_id": "claim-4487145b4e1dc156",
       "kind": "definition",
       "normalized_statement": "RestrictedInformation is a HighlySensitiveInformation",
       "object": "HighlySensitiveInformation",
@@ -97,14 +97,14 @@
         "asset_id": "p007",
         "evidence": "Restricted information is a type of highly sensitive information that requires strict access, storage, and transmission controls.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-db22338a7606c9fa",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-04eb134dbe6bef6b",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "RestrictedInformation is a HighlySensitiveInformation",
       "subject": "RestrictedInformation"
     },
     {
-      "claim_id": "claim-f07d1e5c7d18d1ee",
+      "claim_id": "claim-a2ad3fabfa31fbf6",
       "kind": "relation",
       "normalized_statement": "RestrictedInformation requires StrictAccess",
       "object": "StrictAccess",
@@ -114,14 +114,14 @@
         "asset_id": "p007",
         "evidence": "Restricted information is a type of highly sensitive information that requires strict access, storage, and transmission controls.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-db22338a7606c9fa",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-04eb134dbe6bef6b",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "RestrictedInformation requires StrictAccess",
       "subject": "RestrictedInformation"
     },
     {
-      "claim_id": "claim-ab458aabde6f1e9d",
+      "claim_id": "claim-bef5cb9c666de08e",
       "kind": "relation",
       "normalized_statement": "RestrictedInformation requires Storage",
       "object": "Storage",
@@ -131,14 +131,14 @@
         "asset_id": "p007",
         "evidence": "Restricted information is a type of highly sensitive information that requires strict access, storage, and transmission controls.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-db22338a7606c9fa",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-04eb134dbe6bef6b",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "RestrictedInformation requires Storage",
       "subject": "RestrictedInformation"
     },
     {
-      "claim_id": "claim-685f4715eeeedc55",
+      "claim_id": "claim-4e6ab13c4daf6750",
       "kind": "relation",
       "normalized_statement": "RestrictedInformation requires TransmissionControl",
       "object": "TransmissionControl",
@@ -148,14 +148,14 @@
         "asset_id": "p007",
         "evidence": "Restricted information is a type of highly sensitive information that requires strict access, storage, and transmission controls.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-db22338a7606c9fa",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-04eb134dbe6bef6b",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "RestrictedInformation requires TransmissionControl",
       "subject": "RestrictedInformation"
     },
     {
-      "claim_id": "claim-e42337af2d9ea4d8",
+      "claim_id": "claim-38b0cb28e1441f27",
       "kind": "definition",
       "normalized_statement": "PersonalData is a SensitiveInformation",
       "object": "SensitiveInformation",
@@ -165,14 +165,14 @@
         "asset_id": "p007",
         "evidence": "Personal data is a type of sensitive information that identifies or can identify a natural person.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-7af0d7299318cf14",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-a7efbe6fd1c0a245",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "PersonalData is a SensitiveInformation",
       "subject": "PersonalData"
     },
     {
-      "claim_id": "claim-798d555004958282",
+      "claim_id": "claim-f4ce08d18a466856",
       "kind": "relation",
       "normalized_statement": "PersonalData identifies CanIdentifyANaturalPerson",
       "object": "CanIdentifyANaturalPerson",
@@ -182,14 +182,14 @@
         "asset_id": "p007",
         "evidence": "Personal data is a type of sensitive information that identifies or can identify a natural person.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-7af0d7299318cf14",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-a7efbe6fd1c0a245",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "PersonalData identifies CanIdentifyANaturalPerson",
       "subject": "PersonalData"
     },
     {
-      "claim_id": "claim-b420d2c9e3837435",
+      "claim_id": "claim-38c82c87a88fd2ce",
       "kind": "definition",
       "normalized_statement": "FinancialData is a SensitiveInformationRelatedToPaymentAccountBudgetOrFinancialTransaction",
       "object": "SensitiveInformationRelatedToPaymentAccountBudgetOrFinancialTransaction",
@@ -199,14 +199,14 @@
         "asset_id": "p007",
         "evidence": "Financial data is a type of sensitive information related to payments, accounts, budgets, or financial transactions.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-29a659df868cc386",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-734b6436e6209012",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "FinancialData is a SensitiveInformationRelatedToPaymentAccountBudgetOrFinancialTransaction",
       "subject": "FinancialData"
     },
     {
-      "claim_id": "claim-25d2b1ef1debe8f6",
+      "claim_id": "claim-38bd4b54f527095a",
       "kind": "definition",
       "normalized_statement": "AuthenticationData is a RestrictedInformationBecauseItCanGrantAccessToSystem",
       "object": "RestrictedInformationBecauseItCanGrantAccessToSystem",
@@ -216,14 +216,14 @@
         "asset_id": "p007",
         "evidence": "Authentication data is a type of restricted information because it can grant access to systems.",
         "paragraph_id": "p007",
-        "sentence_id": "sent-ee471283b7439b8b",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-9e23d09135de7c25",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "AuthenticationData is a RestrictedInformationBecauseItCanGrantAccessToSystem",
       "subject": "AuthenticationData"
     },
     {
-      "claim_id": "claim-ac08c5cdbfa33b66",
+      "claim_id": "claim-72c226839eca9f6a",
       "kind": "relation",
       "normalized_statement": "AccessControl regulates Under",
       "object": "Under",
@@ -233,14 +233,14 @@
         "asset_id": "p008",
         "evidence": "Access control regulates who can access which resource and under which conditions.",
         "paragraph_id": "p008",
-        "sentence_id": "sent-317aeb1ec4a9db7e",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-02283e908e8dc435",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "AccessControl regulates Under",
       "subject": "AccessControl"
     },
     {
-      "claim_id": "claim-054891ed2029b888",
+      "claim_id": "claim-473f61d9043c1bbe",
       "kind": "definition",
       "normalized_statement": "Identification is a ProcessOfClaimingAnIdentity",
       "object": "ProcessOfClaimingAnIdentity",
@@ -250,14 +250,14 @@
         "asset_id": "p008",
         "evidence": "Identification is the process of claiming an identity.",
         "paragraph_id": "p008",
-        "sentence_id": "sent-48042c96060ba9f5",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-daf42e52266d88ce",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "Identification is a ProcessOfClaimingAnIdentity",
       "subject": "Identification"
     },
     {
-      "claim_id": "claim-c8aa5311b186cbd3",
+      "claim_id": "claim-7cbd25f1fefb3d4c",
       "kind": "definition",
       "normalized_statement": "Authentication is a ProcessOfVerifyingAnIdentity",
       "object": "ProcessOfVerifyingAnIdentity",
@@ -267,14 +267,14 @@
         "asset_id": "p008",
         "evidence": "Authentication is the process of verifying an identity.",
         "paragraph_id": "p008",
-        "sentence_id": "sent-c9c5c7130282ec70",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-04efb9d5d0813e36",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "Authentication is a ProcessOfVerifyingAnIdentity",
       "subject": "Authentication"
     },
     {
-      "claim_id": "claim-c392f65acabc2ad4",
+      "claim_id": "claim-011803f7c61b2b51",
       "kind": "definition",
       "normalized_statement": "Authorization is a ProcessOfDeterminingWhatActionAnAuthenticatedIdentityMayPerform",
       "object": "ProcessOfDeterminingWhatActionAnAuthenticatedIdentityMayPerform",
@@ -284,14 +284,14 @@
         "asset_id": "p008",
         "evidence": "Authorization is the process of determining what actions an authenticated identity may perform.",
         "paragraph_id": "p008",
-        "sentence_id": "sent-633bdff0b55cf516",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-78e38554a49c75cb",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "Authorization is a ProcessOfDeterminingWhatActionAnAuthenticatedIdentityMayPerform",
       "subject": "Authorization"
     },
     {
-      "claim_id": "claim-ee2158bc4cb54631",
+      "claim_id": "claim-743cdb38fa7ab16d",
       "kind": "definition",
       "normalized_statement": "Accountability is a AbilityToTraceActionToASpecificIdentity",
       "object": "AbilityToTraceActionToASpecificIdentity",
@@ -301,14 +301,14 @@
         "asset_id": "p008",
         "evidence": "Accountability is the ability to trace actions to a specific identity.",
         "paragraph_id": "p008",
-        "sentence_id": "sent-8c34ebffd44e1682",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-8dc1bc13f7415d1c",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "Accountability is a AbilityToTraceActionToASpecificIdentity",
       "subject": "Accountability"
     },
     {
-      "claim_id": "claim-c3d8327db0adfb68",
+      "claim_id": "claim-3b6b13c582fd4740",
       "kind": "relation",
       "normalized_statement": "UserAccount represents DigitalIdentity",
       "object": "DigitalIdentity",
@@ -318,14 +318,14 @@
         "asset_id": "p008",
         "evidence": "A user account represents a digital identity.",
         "paragraph_id": "p008",
-        "sentence_id": "sent-c027974217adde57",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-961f0891d9316cb4",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "UserAccount represents DigitalIdentity",
       "subject": "UserAccount"
     },
     {
-      "claim_id": "claim-dba0157c1a2f218a",
+      "claim_id": "claim-6cf6baa6d08eb0c2",
       "kind": "definition",
       "normalized_statement": "ServiceAccount is a NonHumanAccount",
       "object": "NonHumanAccount",
@@ -335,14 +335,14 @@
         "asset_id": "p008",
         "evidence": "A service account is a type of non-human account used by applications, scripts, integrations, or automated processes.",
         "paragraph_id": "p008",
-        "sentence_id": "sent-af1fa0b4167b6d3e",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-3de1f57308dcf61a",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "ServiceAccount is a NonHumanAccount",
       "subject": "ServiceAccount"
     },
     {
-      "claim_id": "claim-bd5cf2d718609a07",
+      "claim_id": "claim-64d1993b58aa614b",
       "kind": "definition",
       "normalized_statement": "PrivilegedAccount is a AccountWithElevatedPermission",
       "object": "AccountWithElevatedPermission",
@@ -352,14 +352,14 @@
         "asset_id": "p008",
         "evidence": "A privileged account is a type of account with elevated permissions.",
         "paragraph_id": "p008",
-        "sentence_id": "sent-1e69bbd0677f4995",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-9f827f92251967da",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "PrivilegedAccount is a AccountWithElevatedPermission",
       "subject": "PrivilegedAccount"
     },
     {
-      "claim_id": "claim-75faf59b0ddd2f24",
+      "claim_id": "claim-69a2b75cb0be5fcc",
       "kind": "definition",
       "normalized_statement": "SharedAccount is_a UserAccount",
       "object": "UserAccount",
@@ -369,8 +369,8 @@
         "asset_id": "p008",
         "evidence": "A shared account is a type of account used by multiple individuals and creates accountability risk.",
         "paragraph_id": "p008",
-        "sentence_id": "sent-9e90147fbb868699",
-        "source_text_id": "e9fd5fb86d1e962c9c7dfe9adda13f2bf757403791db32cad037b6d12c79a52f"
+        "sentence_id": "sent-18e97a3d6be7df5d",
+        "source_text_id": "48d11a2fad7318bf1f2830ca9b8d3f24ad30f1b8ac9a4b4e07d6a3c9110a2fa3"
       },
       "statement": "SharedAccount is_a UserAccount",
       "subject": "SharedAccount"

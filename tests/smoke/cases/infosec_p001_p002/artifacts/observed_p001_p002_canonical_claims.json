@@ -2,7 +2,7 @@
   "claim_count": 32,
   "claims": [
     {
-      "claim_id": "claim-8f4f6c66873729c5",
+      "claim_id": "claim-717ba591d2ba8c3a",
       "kind": "definition",
       "normalized_statement": "InformationSecurity is a Discipline",
       "object": "Discipline",
@@ -12,14 +12,14 @@
         "asset_id": "p001",
         "evidence": "Information security is a discipline focused on protecting information assets against internal and external threats.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-2c439bdac4100388",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-d562aaca8d71192b",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationSecurity is a Discipline",
       "subject": "InformationSecurity"
     },
     {
-      "claim_id": "claim-97f64252b4b72ad9",
+      "claim_id": "claim-2a32f7d4000ae343",
       "kind": "relation",
       "normalized_statement": "InformationSecurity is focused on protecting InformationAsset",
       "object": "InformationAsset",
@@ -29,14 +29,14 @@
         "asset_id": "p001",
         "evidence": "Information security is a discipline focused on protecting information assets against internal and external threats.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-2c439bdac4100388",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-d562aaca8d71192b",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationSecurity is focused on protecting InformationAsset",
       "subject": "InformationSecurity"
     },
     {
-      "claim_id": "claim-51e846be09c469d0",
+      "claim_id": "claim-db31757c4bee78ac",
       "kind": "relation",
       "normalized_statement": "InformationSecurity protects against InternalThreat",
       "object": "InternalThreat",
@@ -46,14 +46,14 @@
         "asset_id": "p001",
         "evidence": "Information security is a discipline focused on protecting information assets against internal and external threats.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-2c439bdac4100388",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-d562aaca8d71192b",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationSecurity protects against InternalThreat",
       "subject": "InformationSecurity"
     },
     {
-      "claim_id": "claim-1c41208abc51e20e",
+      "claim_id": "claim-8434a5e8e66da695",
       "kind": "relation",
       "normalized_statement": "InformationSecurity protects against ExternalThreat",
       "object": "ExternalThreat",
@@ -63,14 +63,14 @@
         "asset_id": "p001",
         "evidence": "Information security is a discipline focused on protecting information assets against internal and external threats.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-2c439bdac4100388",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-d562aaca8d71192b",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationSecurity protects against ExternalThreat",
       "subject": "InformationSecurity"
     },
     {
-      "claim_id": "claim-a5c157e7b185b341",
+      "claim_id": "claim-c0e0aad223590f14",
       "kind": "definition",
       "normalized_statement": "InformationAsset is a Resource",
       "object": "Resource",
@@ -80,14 +80,14 @@
         "asset_id": "p001",
         "evidence": "An information asset is any resource that has value for an organization and that stores, processes, transmits, or represents information.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-fb8f6b42d58ba0f5",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-e7d5eb5689225b20",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationAsset is a Resource",
       "subject": "InformationAsset"
     },
     {
-      "claim_id": "claim-95e81c39d16cc97f",
+      "claim_id": "claim-fbe098745c00f10b",
       "kind": "relation",
       "normalized_statement": "InformationAsset has value for Organization",
       "object": "Organization",
@@ -97,14 +97,14 @@
         "asset_id": "p001",
         "evidence": "An information asset is any resource that has value for an organization and that stores, processes, transmits, or represents information.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-fb8f6b42d58ba0f5",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-e7d5eb5689225b20",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationAsset has value for Organization",
       "subject": "InformationAsset"
     },
     {
-      "claim_id": "claim-f103e5221ae2d8e9",
+      "claim_id": "claim-4323f69b3a1ec759",
       "kind": "relation",
       "normalized_statement": "InformationAsset stores Information",
       "object": "Information",
@@ -114,14 +114,14 @@
         "asset_id": "p001",
         "evidence": "An information asset is any resource that has value for an organization and that stores, processes, transmits, or represents information.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-fb8f6b42d58ba0f5",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-e7d5eb5689225b20",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationAsset stores Information",
       "subject": "InformationAsset"
     },
     {
-      "claim_id": "claim-43b8de37295652c4",
+      "claim_id": "claim-b1a74b0e17ba5814",
       "kind": "relation",
       "normalized_statement": "InformationAsset processes Information",
       "object": "Information",
@@ -131,14 +131,14 @@
         "asset_id": "p001",
         "evidence": "An information asset is any resource that has value for an organization and that stores, processes, transmits, or represents information.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-fb8f6b42d58ba0f5",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-e7d5eb5689225b20",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationAsset processes Information",
       "subject": "InformationAsset"
     },
     {
-      "claim_id": "claim-252cebf627ee1587",
+      "claim_id": "claim-71e7b9d8dcb833f0",
       "kind": "relation",
       "normalized_statement": "InformationAsset transmits Information",
       "object": "Information",
@@ -148,14 +148,14 @@
         "asset_id": "p001",
         "evidence": "An information asset is any resource that has value for an organization and that stores, processes, transmits, or represents information.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-fb8f6b42d58ba0f5",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-e7d5eb5689225b20",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationAsset transmits Information",
       "subject": "InformationAsset"
     },
     {
-      "claim_id": "claim-cb048293c59446c8",
+      "claim_id": "claim-170303940bc96ec4",
       "kind": "relation",
       "normalized_statement": "InformationAsset represents Information",
       "object": "Information",
@@ -165,14 +165,14 @@
         "asset_id": "p001",
         "evidence": "An information asset is any resource that has value for an organization and that stores, processes, transmits, or represents information.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-fb8f6b42d58ba0f5",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-e7d5eb5689225b20",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationAsset represents Information",
       "subject": "InformationAsset"
     },
     {
-      "claim_id": "claim-b93547cabf6d1ee2",
+      "claim_id": "claim-ecb3cdeac389ec6f",
       "kind": "type_of",
       "normalized_statement": "ConfidentialDocument is a type of InformationAsset",
       "object": "InformationAsset",
@@ -182,14 +182,14 @@
         "asset_id": "p001",
         "evidence": "A confidential document is a type of information asset.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-cf5c2d8a297cd19e",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-9fab75f8d81bbc27",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "ConfidentialDocument is a type of InformationAsset",
       "subject": "ConfidentialDocument"
     },
     {
-      "claim_id": "claim-4d82cb785e1ed981",
+      "claim_id": "claim-38d9d9cfad30e1e2",
       "kind": "type_of",
       "normalized_statement": "CorporateDatabase is a type of InformationAsset",
       "object": "InformationAsset",
@@ -199,14 +199,14 @@
         "asset_id": "p001",
         "evidence": "A corporate database is a type of information asset.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-98a38622d8d7bce9",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-b35f4bff83ff06eb",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "CorporateDatabase is a type of InformationAsset",
       "subject": "CorporateDatabase"
     },
     {
-      "claim_id": "claim-518e1152083ad46f",
+      "claim_id": "claim-16af5127cd5c1624",
       "kind": "type_of",
       "normalized_statement": "CustomerRecord is a type of InformationAsset",
       "object": "InformationAsset",
@@ -216,14 +216,14 @@
         "asset_id": "p001",
         "evidence": "A customer record is a type of information asset.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-af5f7413bc092281",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-cad35d779719ebf0",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "CustomerRecord is a type of InformationAsset",
       "subject": "CustomerRecord"
     },
     {
-      "claim_id": "claim-2e24fd30f4d113cc",
+      "claim_id": "claim-8b384691c59f40fe",
       "kind": "type_of",
       "normalized_statement": "SourceCodeRepository is a type of InformationAsset",
       "object": "InformationAsset",
@@ -233,14 +233,14 @@
         "asset_id": "p001",
         "evidence": "A source code repository is a type of information asset.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-a9ff97687f5cc12c",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-b60ccb6be400063d",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "SourceCodeRepository is a type of InformationAsset",
       "subject": "SourceCodeRepository"
     },
     {
-      "claim_id": "claim-74b2d09a5a0d7b32",
+      "claim_id": "claim-e87ede3df60e9d17",
       "kind": "type_of",
       "normalized_statement": "SystemConfigurationFile is a type of InformationAsset",
       "object": "InformationAsset",
@@ -250,14 +250,14 @@
         "asset_id": "p001",
         "evidence": "A system configuration file is a type of information asset.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-57b29c9bb2e8f873",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-b80ef9123dd56b81",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "SystemConfigurationFile is a type of InformationAsset",
       "subject": "SystemConfigurationFile"
     },
     {
-      "claim_id": "claim-99ea2933e0398728",
+      "claim_id": "claim-0ee817ff71271d2f",
       "kind": "type_of",
       "normalized_statement": "BackupArchive is a type of InformationAsset",
       "object": "InformationAsset",
@@ -267,14 +267,14 @@
         "asset_id": "p001",
         "evidence": "A backup archive is a type of information asset.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-6f476b50b762bd7d",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-4b8d0eb5b76472d0",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "BackupArchive is a type of InformationAsset",
       "subject": "BackupArchive"
     },
     {
-      "claim_id": "claim-c190550ac8c21ce3",
+      "claim_id": "claim-163ed4ab4b501b94",
       "kind": "type_of",
       "normalized_statement": "BusinessReport is a type of InformationAsset",
       "object": "InformationAsset",
@@ -284,14 +284,14 @@
         "asset_id": "p001",
         "evidence": "A business report is a type of information asset.",
         "paragraph_id": "p001",
-        "sentence_id": "sent-346d3266538ae324",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-30f11b2e3d9f7b5b",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "BusinessReport is a type of InformationAsset",
       "subject": "BusinessReport"
     },
     {
-      "claim_id": "claim-b9dce9f4f35ac7d0",
+      "claim_id": "claim-c97d76d80498601e",
       "kind": "relation",
       "normalized_statement": "InformationSecurity preserves Confidentiality",
       "object": "Confidentiality",
@@ -301,14 +301,14 @@
         "asset_id": "p002",
         "evidence": "The purpose of information security is to preserve confidentiality, integrity, and availability.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-18aee298c79a3286",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-0da487bba254d615",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationSecurity preserves Confidentiality",
       "subject": "InformationSecurity"
     },
     {
-      "claim_id": "claim-5d014f94a780b327",
+      "claim_id": "claim-60edeb3d10ae83bd",
       "kind": "relation",
       "normalized_statement": "InformationSecurity preserves Integrity",
       "object": "Integrity",
@@ -318,14 +318,14 @@
         "asset_id": "p002",
         "evidence": "The purpose of information security is to preserve confidentiality, integrity, and availability.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-18aee298c79a3286",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-0da487bba254d615",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationSecurity preserves Integrity",
       "subject": "InformationSecurity"
     },
     {
-      "claim_id": "claim-8b5b38deafd66fa1",
+      "claim_id": "claim-1de5dfdc8392003e",
       "kind": "relation",
       "normalized_statement": "InformationSecurity preserves Availability",
       "object": "Availability",
@@ -335,14 +335,14 @@
         "asset_id": "p002",
         "evidence": "The purpose of information security is to preserve confidentiality, integrity, and availability.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-18aee298c79a3286",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-0da487bba254d615",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "InformationSecurity preserves Availability",
       "subject": "InformationSecurity"
     },
     {
-      "claim_id": "claim-633f2acc317ba786",
+      "claim_id": "claim-5bf4fe5d0d9fea3e",
       "kind": "definition",
       "normalized_statement": "Confidentiality is a SecurityProperty",
       "object": "SecurityProperty",
@@ -352,14 +352,14 @@
         "asset_id": "p002",
         "evidence": "Confidentiality is a security property that ensures information is accessible only to authorized entities.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-0602ea0bd72d9afa",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-34487e39926eeccf",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "Confidentiality is a SecurityProperty",
       "subject": "Confidentiality"
     },
     {
-      "claim_id": "claim-c1c5ea6879f5a61d",
+      "claim_id": "claim-8272a143f7674449",
       "kind": "relation",
       "normalized_statement": "Confidentiality ensures Information is accessible only to AuthorizedEntity",
       "object": "AuthorizedEntity",
@@ -370,14 +370,14 @@
         "asset_id": "p002",
         "evidence": "Confidentiality is a security property that ensures information is accessible only to authorized entities.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-0602ea0bd72d9afa",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-34487e39926eeccf",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "Confidentiality ensures Information is accessible only to AuthorizedEntity",
       "subject": "Confidentiality"
     },
     {
-      "claim_id": "claim-1a7aded17042d81f",
+      "claim_id": "claim-50dda59686ea1e80",
       "kind": "definition",
       "normalized_statement": "Integrity is a SecurityProperty",
       "object": "SecurityProperty",
@@ -387,14 +387,14 @@
         "asset_id": "p002",
         "evidence": "Integrity is a security property that ensures information is accurate, complete, and protected against unauthorized modification.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-36d6d0c77882bd19",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-c2fb48f00eb18a6e",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "Integrity is a SecurityProperty",
       "subject": "Integrity"
     },
     {
-      "claim_id": "claim-ebbd51acabc98425",
+      "claim_id": "claim-7c303c13c66646fd",
       "kind": "relation",
       "normalized_statement": "Integrity ensures Information is accurate",
       "object": "Information",
@@ -404,14 +404,14 @@
         "asset_id": "p002",
         "evidence": "Integrity is a security property that ensures information is accurate, complete, and protected against unauthorized modification.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-36d6d0c77882bd19",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-c2fb48f00eb18a6e",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "Integrity ensures Information is accurate",
       "subject": "Integrity"
     },
     {
-      "claim_id": "claim-9dbbd21c37caa995",
+      "claim_id": "claim-72cf7351bd4a125a",
       "kind": "relation",
       "normalized_statement": "Integrity ensures Information is complete",
       "object": "Information",
@@ -421,14 +421,14 @@
         "asset_id": "p002",
         "evidence": "Integrity is a security property that ensures information is accurate, complete, and protected against unauthorized modification.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-36d6d0c77882bd19",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-c2fb48f00eb18a6e",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "Integrity ensures Information is complete",
       "subject": "Integrity"
     },
     {
-      "claim_id": "claim-4061d654c47ad18a",
+      "claim_id": "claim-b8c288c8ef8b5e96",
       "kind": "relation",
       "normalized_statement": "Integrity protects Information against UnauthorizedModification",
       "object": "UnauthorizedModification",
@@ -439,14 +439,14 @@
         "asset_id": "p002",
         "evidence": "Integrity is a security property that ensures information is accurate, complete, and protected against unauthorized modification.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-36d6d0c77882bd19",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-c2fb48f00eb18a6e",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "Integrity protects Information against UnauthorizedModification",
       "subject": "Integrity"
     },
     {
-      "claim_id": "claim-df9d3707a2061471",
+      "claim_id": "claim-fef1a950046a83f9",
       "kind": "definition",
       "normalized_statement": "Availability is a SecurityProperty",
       "object": "SecurityProperty",
@@ -456,14 +456,14 @@
         "asset_id": "p002",
         "evidence": "Availability is a security property that ensures information and systems are accessible when needed.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-d80e6605ac59a4e9",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-9b3b87a7780ae8fc",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "Availability is a SecurityProperty",
       "subject": "Availability"
     },
     {
-      "claim_id": "claim-0120d3fc391d01cd",
+      "claim_id": "claim-96e026a87023cbfd",
       "kind": "relation",
       "normalized_statement": "Availability ensures Information is accessible when needed",
       "object": "Information",
@@ -473,14 +473,14 @@
         "asset_id": "p002",
         "evidence": "Availability is a security property that ensures information and systems are accessible when needed.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-d80e6605ac59a4e9",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-9b3b87a7780ae8fc",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "Availability ensures Information is accessible when needed",
       "subject": "Availability"
     },
     {
-      "claim_id": "claim-8b1b7a4fc6ae4439",
+      "claim_id": "claim-83ff0669c2c83e69",
       "kind": "relation",
       "normalized_statement": "Availability ensures System is accessible when needed",
       "object": "System",
@@ -490,14 +490,14 @@
         "asset_id": "p002",
         "evidence": "Availability is a security property that ensures information and systems are accessible when needed.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-d80e6605ac59a4e9",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-9b3b87a7780ae8fc",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "Availability ensures System is accessible when needed",
       "subject": "Availability"
     },
     {
-      "claim_id": "claim-996ea1f1d80e43f4",
+      "claim_id": "claim-8c32c58b8a20a46a",
       "kind": "relation",
       "members": "Confidentiality,Integrity,Availability",
       "normalized_statement": "SecurityProperty forms CIATriad",
@@ -508,14 +508,14 @@
         "asset_id": "p002",
         "evidence": "Confidentiality, integrity, and availability form the CIA triad.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-674bbe1afda9c302",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-3ca285e348ae709c",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "SecurityProperty forms CIATriad",
       "subject": "SecurityProperty"
     },
     {
-      "claim_id": "claim-c5bd4cdf364fc027",
+      "claim_id": "claim-0af43b84c47a28b9",
       "kind": "definition",
       "normalized_statement": "CIATriad is a FoundationalModel",
       "object": "FoundationalModel",
@@ -525,14 +525,14 @@
         "asset_id": "p002",
         "evidence": "The CIA triad is a foundational model for information security.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-f3ef1453a6708e05",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-de8aa545a96ab5b1",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "CIATriad is a FoundationalModel",
       "subject": "CIATriad"
     },
     {
-      "claim_id": "claim-68545d34fb79826e",
+      "claim_id": "claim-f4c098a7d7cd413e",
       "kind": "relation",
       "normalized_statement": "CIATriad is a model for InformationSecurity",
       "object": "InformationSecurity",
@@ -542,8 +542,8 @@
         "asset_id": "p002",
         "evidence": "The CIA triad is a foundational model for information security.",
         "paragraph_id": "p002",
-        "sentence_id": "sent-f3ef1453a6708e05",
-        "source_text_id": "0e3ddc14eb6538b3fe4b9abd11e0f28b0d9579e9ec5a53f547d6de1b5f716613"
+        "sentence_id": "sent-de8aa545a96ab5b1",
+        "source_text_id": "f5347fb9b5b7bb1270d05b1c9d2f0c71112dea05c32cc39f64c7b7fb1cab460f"
       },
       "statement": "CIATriad is a model for InformationSecurity",
       "subject": "CIATriad"

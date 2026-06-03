@@ -1,11 +1,11 @@
 # TR-ORION-INFOSEC-FULL-TEXT-SMOKE
 ## Metadata
 - ID: TR-ORION-INFOSEC-FULL-TEXT-SMOKE
-- Scope: fixtures p001..p043 como texto completo modular
+- Scope: fixtures p001..p043 como texto completo modular por directorio de caso
 - Tester: sisyphus-tester
 - Runner: python3 tests/smoke/run_infosec_smoke_suite.py
 - Result: GREEN, 87 passed in 61.96s
-- Note: smoke/proxy; no gold semántico completo manual.
+- Note: semantic_claims va antes de triple extraction/RDF. smoke/proxy; no gold semántico completo manual.
 
 ## Coverage Matrix
 | Spec | Case | Tests | Status |
@@ -36,4 +36,4 @@
 - tests/smoke/cases/infosec_full_text/artifacts/observed_infosec_full_text_metrics.json
 
 ## Limits
-Smoke/proxy only. No se creó gold semántico completo manual porque 43 párrafos requieren curación humana para precisión semántica real. Validación mide shape, consistencia, cobertura por párrafo, evidencia textual, RDF visible, projection.source_stage semantic_claims, domain/range y residuos conocidos.
+Smoke/proxy only. No se creó gold semántico completo manual porque 43 párrafos requieren curación humana para precisión semántica real. Validación mide shape, consistencia, cobertura por párrafo, evidencia textual, RDF visible, projection.source_stage semantic_claims, domain/range y residuos conocidos. Contratos estrictos quedan en p001-p002 y p003-p004; el resto se trata como observacional/proxy.
