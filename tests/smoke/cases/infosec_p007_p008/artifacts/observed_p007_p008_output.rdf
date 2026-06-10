@@ -1,20 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
-  <owl:Class rdf:about="https://orion.local/resource/abilitytotraceactiontoaspecificidentity">
-    <rdfs:label>AbilityToTraceActionToASpecificIdentity</rdfs:label>
+  <rdf:Description rdf:about="https://orion.local/resource/ability">
+    <orion:traces rdf:resource="https://orion.local/resource/action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/accesscontrol">
+    <orion:regulates rdf:resource="https://orion.local/resource/under"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/action">
+    <orion:tracesto rdf:resource="https://orion.local/resource/identity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/informationclassification">
+    <orion:helps rdf:resource="https://orion.local/resource/organizationapplyappropriateprotectionleveltodifferentkindofinformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/personaldata">
+    <orion:identifies rdf:resource="https://orion.local/resource/canidentifyanaturalperson"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/publicinformation">
+    <orion:cans rdf:resource="https://orion.local/resource/bedisclosedwithoutcausingharm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/restrictedinformation">
+    <orion:requires rdf:resource="https://orion.local/resource/strictaccess"/>
+    <orion:requires rdf:resource="https://orion.local/resource/storage"/>
+    <orion:requires rdf:resource="https://orion.local/resource/transmissioncontrol"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/useraccount">
+    <orion:represents rdf:resource="https://orion.local/resource/digitalidentity"/>
+  </rdf:Description>
+  <owl:Class rdf:about="https://orion.local/resource/ability">
+    <rdfs:label>Ability</rdfs:label>
+    <rdfs:comment>Accountability is the ability to trace actions to a specific identity.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/accesscontrol">
     <rdfs:label>AccessControl</rdfs:label>
     <rdfs:comment>Access control regulates who can access which resource and under which conditions.</rdfs:comment>
   </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/account">
+    <rdfs:label>Account</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/accountability">
     <rdfs:label>Accountability</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/abilitytotraceactiontoaspecificidentity"/>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/ability"/>
     <rdfs:comment>Accountability is the ability to trace actions to a specific identity.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/accountwithelevatedpermission">
     <rdfs:label>AccountWithElevatedPermission</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/action">
+    <rdfs:label>Action</rdfs:label>
+    <rdfs:label>Action roles subject object</rdfs:label>
+    <rdfs:comment>Accountability is the ability to trace actions to a specific identity.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/authentication">
     <rdfs:label>Authentication</rdfs:label>
@@ -58,6 +93,12 @@
     <rdfs:subClassOf rdf:resource="https://orion.local/resource/processofclaiminganidentity"/>
     <rdfs:comment>Identification is the process of claiming an identity.</rdfs:comment>
   </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/identity">
+    <rdfs:label>Identity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/information">
+    <rdfs:label>Information</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/informationclassification">
     <rdfs:label>InformationClassification</rdfs:label>
     <rdfs:comment>Information classification helps organizations apply appropriate protection levels to different kinds of information.</rdfs:comment>
@@ -67,7 +108,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/internalinformation">
     <rdfs:label>InternalInformation</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/publicinformation"/>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/information"/>
     <rdfs:comment>Internal information is a type of information intended for use inside the organization.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/nonhumanaccount">
@@ -97,6 +138,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/publicinformation">
     <rdfs:label>PublicInformation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/information"/>
     <rdfs:comment>Public information is a type of information that can be disclosed without causing harm.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/restrictedinformation">
@@ -120,7 +162,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/sharedaccount">
     <rdfs:label>SharedAccount</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/useraccount"/>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/account"/>
     <rdfs:comment>A shared account is a type of account used by multiple individuals and creates accountability risk.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/storage">
@@ -179,17 +221,34 @@
     <rdfs:domain rdf:resource="https://orion.local/resource/restrictedinformation"/>
     <rdfs:range rdf:resource="https://orion.local/resource/transmissioncontrol"/>
   </owl:ObjectProperty>
-  <rdf:Description rdf:about="https://orion.local/resource/abilitytotraceactiontoaspecificidentity">
-    <rdfs:label>AbilityToTraceActionToASpecificIdentity</rdfs:label>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/traces">
+    <rdfs:label>Traces</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/ability"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/action"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/tracesTo">
+    <rdfs:label>tracesTo</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/action"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/identity"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="https://orion.local/resource/ability">
+    <rdfs:label>Ability</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/accesscontrol">
     <rdfs:label>AccessControl</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/account">
+    <rdfs:label>Account</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/accountability">
     <rdfs:label>Accountability</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/accountwithelevatedpermission">
     <rdfs:label>AccountWithElevatedPermission</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/action">
+    <rdfs:label>Action</rdfs:label>
+    <rdfs:label>Action roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/authentication">
     <rdfs:label>Authentication</rdfs:label>
@@ -220,6 +279,12 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/identification">
     <rdfs:label>Identification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/identity">
+    <rdfs:label>Identity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/information">
+    <rdfs:label>Information</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/informationclassification">
     <rdfs:label>InformationClassification</rdfs:label>

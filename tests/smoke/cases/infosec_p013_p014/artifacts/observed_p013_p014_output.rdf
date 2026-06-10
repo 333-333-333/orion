@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/configurationhardening">
+    <orion:reduces rdf:resource="https://orion.local/resource/attacksurface"/>
+    <orion:disabls rdf:resource="https://orion.local/resource/unnecessaryservice"/>
+    <orion:disabls rdf:resource="https://orion.local/resource/applyingsecuresetting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/demilitarizedzone">
+    <orion:exposes rdf:resource="https://orion.local/resource/controlledservicetoexternalnetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/deviceencryption">
+    <orion:protects rdf:resource="https://orion.local/resource/datastoredonanendpoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/endpointsecurity">
+    <orion:protects rdf:resource="https://orion.local/resource/laptop"/>
+    <orion:protects rdf:resource="https://orion.local/resource/desktop"/>
+    <orion:protects rdf:resource="https://orion.local/resource/mobiledevice"/>
+    <orion:protects rdf:resource="https://orion.local/resource/server"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/networksecurity">
+    <orion:protects rdf:resource="https://orion.local/resource/communicationchannel"/>
+    <orion:protects rdf:resource="https://orion.local/resource/networkdevice"/>
+    <orion:protects rdf:resource="https://orion.local/resource/networkservice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/networksegmentation">
+    <orion:separates rdf:resource="https://orion.local/resource/systemintodifferentzone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/patchmanagement">
+    <orion:reduces rdf:resource="https://orion.local/resource/vulnerability"/>
+    <orion:applies rdf:resource="https://orion.local/resource/softwareupdate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/productionnetwork">
+    <orion:hosts rdf:resource="https://orion.local/resource/businesssystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/virtualprivatenetwork">
+    <orion:protects rdf:resource="https://orion.local/resource/remoteaccess"/>
+    <orion:creats rdf:resource="https://orion.local/resource/encryptedcommunicationtunnel"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/antivirussoftware">
     <rdfs:label>AntivirusSoftware</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/endpointprotectioncontrol"/>
     <rdfs:comment>Antivirus software is a type of endpoint protection control.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/applyingsecuresetting">
@@ -36,9 +71,6 @@
   <owl:Class rdf:about="https://orion.local/resource/desktop">
     <rdfs:label>Desktop</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/detectivenetworkcontrol">
-    <rdfs:label>DetectiveNetworkControl</rdfs:label>
-  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/deviceconnectedtotheorganizationalnetwork">
     <rdfs:label>DeviceConnectedToTheOrganizationalNetwork</rdfs:label>
   </owl:Class>
@@ -59,9 +91,6 @@
     <rdfs:subClassOf rdf:resource="https://orion.local/resource/endpointsecuritytechnology"/>
     <rdfs:comment>Endpoint detection and response is a type of endpoint security technology.</rdfs:comment>
   </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/endpointprotectioncontrol">
-    <rdfs:label>EndpointProtectionControl</rdfs:label>
-  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/endpointsecurity">
     <rdfs:label>EndpointSecurity</rdfs:label>
     <rdfs:comment>Endpoint security protects laptops, desktops, mobile devices, and servers.</rdfs:comment>
@@ -76,12 +105,10 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/intrusiondetectionsystem">
     <rdfs:label>IntrusionDetectionSystem</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/detectivenetworkcontrol"/>
     <rdfs:comment>An intrusion detection system is a type of detective network control.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/intrusionpreventionsystem">
     <rdfs:label>IntrusionPreventionSystem</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/preventivenetworkcontrol"/>
     <rdfs:comment>An intrusion prevention system is a type of preventive network control.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/laptop">
@@ -130,9 +157,6 @@
   <owl:Class rdf:about="https://orion.local/resource/patchmanagement">
     <rdfs:label>PatchManagement</rdfs:label>
     <rdfs:comment>Patch management reduces vulnerabilities by applying software updates.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/preventivenetworkcontrol">
-    <rdfs:label>PreventiveNetworkControl</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/productionnetwork">
     <rdfs:label>ProductionNetwork</rdfs:label>
@@ -288,9 +312,6 @@
   <rdf:Description rdf:about="https://orion.local/resource/desktop">
     <rdfs:label>Desktop</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/detectivenetworkcontrol">
-    <rdfs:label>DetectiveNetworkControl</rdfs:label>
-  </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/deviceconnectedtotheorganizationalnetwork">
     <rdfs:label>DeviceConnectedToTheOrganizationalNetwork</rdfs:label>
   </rdf:Description>
@@ -305,9 +326,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/endpointdetectionandresponse">
     <rdfs:label>EndpointDetectionAndResponse</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/endpointprotectioncontrol">
-    <rdfs:label>EndpointProtectionControl</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/endpointsecurity">
     <rdfs:label>EndpointSecurity</rdfs:label>
@@ -359,9 +377,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/patchmanagement">
     <rdfs:label>PatchManagement</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/preventivenetworkcontrol">
-    <rdfs:label>PreventiveNetworkControl</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/productionnetwork">
     <rdfs:label>ProductionNetwork</rdfs:label>

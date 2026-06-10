@@ -1,7 +1,7 @@
 {
   "case_id": "p035_p036",
   "claim_count": 15,
-  "class_count": 25,
+  "class_count": 24,
   "evidence_precision_proxy": 1.0,
   "evidence_supported_claim_count": 15,
   "evidence_unsupported_claim_ids": [],
@@ -16,7 +16,11 @@
     "p035",
     "p036"
   ],
-  "rdf_bytes": 12619,
+  "rdf_bytes": 14329,
   "rdf_generated": true,
-  "subclass_fact_count": 1
+  "semantic_debug_ir_generated": true,
+  "semantic_debug_ir_path": "artifacts/observed_p035_p036_semantic_debug_ir.json",
+  "subclass_fact_count": 0,
+  "ttl_bytes": 1007,
+  "ttl_generated": true
 }

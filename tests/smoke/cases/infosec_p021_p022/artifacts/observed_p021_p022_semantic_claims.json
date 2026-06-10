@@ -2,7 +2,7 @@
   "claim_count": 32,
   "claims": [
     {
-      "claim_id": "claim-4de5114e33502d8e",
+      "claim_id": "claim-833299d98f2ba01f",
       "kind": "relation",
       "normalized_statement": "SecurityInformationAndEventManagementSystemCollectNormalizCorrelateAnd analyzes SecurityLog",
       "object": "SecurityLog",
@@ -12,14 +12,14 @@
         "asset_id": "p021",
         "evidence": "A security information and event management system collects, normalizes, correlates, and analyzes security logs.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-1ca660060577d93b",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-5c4a7cdd3164d5e7",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "SecurityInformationAndEventManagementSystemCollectNormalizCorrelateAnd analyzes SecurityLog",
       "subject": "SecurityInformationAndEventManagementSystemCollectNormalizCorrelateAnd"
     },
     {
-      "claim_id": "claim-d7caec46fe4aabdb",
+      "claim_id": "claim-6d019127cfcae230",
       "kind": "relation",
       "normalized_statement": "LogCollection gathers RecordFromSystem",
       "object": "RecordFromSystem",
@@ -29,14 +29,14 @@
         "asset_id": "p021",
         "evidence": "Log collection gathers records from systems and applications.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-f3d8de7c706d3e9c",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-2beb99479dccc71c",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "LogCollection gathers RecordFromSystem",
       "subject": "LogCollection"
     },
     {
-      "claim_id": "claim-5d6b0a0d311778bd",
+      "claim_id": "claim-ea43a0c3350b019c",
       "kind": "relation",
       "normalized_statement": "LogCollection gathers Application",
       "object": "Application",
@@ -46,14 +46,14 @@
         "asset_id": "p021",
         "evidence": "Log collection gathers records from systems and applications.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-f3d8de7c706d3e9c",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-2beb99479dccc71c",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "LogCollection gathers Application",
       "subject": "LogCollection"
     },
     {
-      "claim_id": "claim-848f51a215f02812",
+      "claim_id": "claim-9fb62bd7a94cb609",
       "kind": "relation",
       "normalized_statement": "LogNormalization converts DifferentLogFormatIntoACommonStructure",
       "object": "DifferentLogFormatIntoACommonStructure",
@@ -63,14 +63,14 @@
         "asset_id": "p021",
         "evidence": "Log normalization converts different log formats into a common structure.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-7f07ee3969f76ef9",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-c858af319b7db862",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "LogNormalization converts DifferentLogFormatIntoACommonStructure",
       "subject": "LogNormalization"
     },
     {
-      "claim_id": "claim-80e97415280a7fb1",
+      "claim_id": "claim-12d70c51e0fb03f1",
       "kind": "relation",
       "normalized_statement": "LogCorrelation identifies RelationshipBetweenEvent",
       "object": "RelationshipBetweenEvent",
@@ -80,14 +80,14 @@
         "asset_id": "p021",
         "evidence": "Log correlation identifies relationships between events.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-9fa3fe539426bed0",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-fb3133f90c005ad3",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "LogCorrelation identifies RelationshipBetweenEvent",
       "subject": "LogCorrelation"
     },
     {
-      "claim_id": "claim-a7521e52b6b1977d",
+      "claim_id": "claim-4a99f6b27699cfcb",
       "kind": "relation",
       "normalized_statement": "DetectionRule defines Condition",
       "object": "Condition",
@@ -97,14 +97,14 @@
         "asset_id": "p021",
         "evidence": "A detection rule defines conditions that generate an alert.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-4367fd15fbb5421e",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-666fb16ddd8651a4",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "DetectionRule defines Condition",
       "subject": "DetectionRule"
     },
     {
-      "claim_id": "claim-e0f6b4910fe88e7c",
+      "claim_id": "claim-56de38c05b066587",
       "kind": "relation",
       "normalized_statement": "Condition generates Alert",
       "object": "Alert",
@@ -114,14 +114,14 @@
         "asset_id": "p021",
         "evidence": "A detection rule defines conditions that generate an alert.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-4367fd15fbb5421e",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-666fb16ddd8651a4",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Condition generates Alert",
       "subject": "Condition"
     },
     {
-      "claim_id": "claim-6026c3cab821f5e9",
+      "claim_id": "claim-282ccf0ec4b02ffa",
       "kind": "relation",
       "normalized_statement": "UseCase describes Scenario",
       "object": "Scenario",
@@ -131,14 +131,14 @@
         "asset_id": "p021",
         "evidence": "A use case describes a scenario that monitoring should detect.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-62bfa5d89281bc3c",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-1135d215521ed5e8",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "UseCase describes Scenario",
       "subject": "UseCase"
     },
     {
-      "claim_id": "claim-81075523a4812756",
+      "claim_id": "claim-f71aa9bfd6df5d9c",
       "kind": "relation",
       "normalized_statement": "Scenario monitors ShouldDetect",
       "object": "ShouldDetect",
@@ -148,14 +148,14 @@
         "asset_id": "p021",
         "evidence": "A use case describes a scenario that monitoring should detect.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-62bfa5d89281bc3c",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-1135d215521ed5e8",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Scenario monitors ShouldDetect",
       "subject": "Scenario"
     },
     {
-      "claim_id": "claim-e71b98b908fbf2a6",
+      "claim_id": "claim-2991265e86458ce2",
       "kind": "relation",
       "normalized_statement": "Dashboard presents SecurityMetric",
       "object": "SecurityMetric",
@@ -165,14 +165,14 @@
         "asset_id": "p021",
         "evidence": "A dashboard presents security metrics and operational status.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-a0871c0b7a01a161",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-6d03caaff6795b14",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Dashboard presents SecurityMetric",
       "subject": "Dashboard"
     },
     {
-      "claim_id": "claim-028addd8c706c429",
+      "claim_id": "claim-bd5aa05780c83251",
       "kind": "relation",
       "normalized_statement": "Dashboard presents OperationalStatus",
       "object": "OperationalStatus",
@@ -182,14 +182,14 @@
         "asset_id": "p021",
         "evidence": "A dashboard presents security metrics and operational status.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-a0871c0b7a01a161",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-6d03caaff6795b14",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Dashboard presents OperationalStatus",
       "subject": "Dashboard"
     },
     {
-      "claim_id": "claim-b11f0d97758331bb",
+      "claim_id": "claim-61e09aa13f8ed369",
       "kind": "relation",
       "normalized_statement": "SecurityAnalyst investigates AlertProducedByTheMonitoringSystem",
       "object": "AlertProducedByTheMonitoringSystem",
@@ -199,14 +199,14 @@
         "asset_id": "p021",
         "evidence": "A security analyst investigates alerts produced by the monitoring system.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-d6d89a94b4fd01ea",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-5620f42bfb6487ba",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "SecurityAnalyst investigates AlertProducedByTheMonitoringSystem",
       "subject": "SecurityAnalyst"
     },
     {
-      "claim_id": "claim-f5a7b43a38521a0a",
+      "claim_id": "claim-def156e57f94aaf4",
       "kind": "relation",
       "normalized_statement": "LogRetentionPolicy defines HowLongLogMustBeStored",
       "object": "HowLongLogMustBeStored",
@@ -216,14 +216,14 @@
         "asset_id": "p021",
         "evidence": "A log retention policy defines how long logs must be stored.",
         "paragraph_id": "p021",
-        "sentence_id": "sent-1f457c8545641c5f",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-4fdf32660be0983e",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "LogRetentionPolicy defines HowLongLogMustBeStored",
       "subject": "LogRetentionPolicy"
     },
     {
-      "claim_id": "claim-3ed05e3e3b904350",
+      "claim_id": "claim-38feea868ac2de05",
       "kind": "definition",
       "normalized_statement": "IncidentResponse is a ProcessOfPreparingForDetectingAnalyzingContainingEradicatingAndRecoveringFromSecurityIncident",
       "object": "ProcessOfPreparingForDetectingAnalyzingContainingEradicatingAndRecoveringFromSecurityIncident",
@@ -233,14 +233,14 @@
         "asset_id": "p022",
         "evidence": "Incident response is the process of preparing for, detecting, analyzing, containing, eradicating, and recovering from security incidents.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-252b9271d7baaaee",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-50e4254d461de3ab",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "IncidentResponse is a ProcessOfPreparingForDetectingAnalyzingContainingEradicatingAndRecoveringFromSecurityIncident",
       "subject": "IncidentResponse"
     },
     {
-      "claim_id": "claim-edf2ea8eb43516af",
+      "claim_id": "claim-bb7b13bd6dcdbefc",
       "kind": "relation",
       "normalized_statement": "Preparation establishes IncidentResponsePlan",
       "object": "IncidentResponsePlan",
@@ -250,14 +250,14 @@
         "asset_id": "p022",
         "evidence": "Preparation establishes plans, tools, roles, and communication channels.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-90e6c69577d8ce86",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-daed3f77ecfd096e",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Preparation establishes IncidentResponsePlan",
       "subject": "Preparation"
     },
     {
-      "claim_id": "claim-e7a665df3677d7cc",
+      "claim_id": "claim-06dcd1b4198648ce",
       "kind": "relation",
       "normalized_statement": "Preparation establishes Tool",
       "object": "Tool",
@@ -267,14 +267,14 @@
         "asset_id": "p022",
         "evidence": "Preparation establishes plans, tools, roles, and communication channels.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-90e6c69577d8ce86",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-daed3f77ecfd096e",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Preparation establishes Tool",
       "subject": "Preparation"
     },
     {
-      "claim_id": "claim-e4ec470c3ca1ae7f",
+      "claim_id": "claim-0527594ce194cf86",
       "kind": "relation",
       "normalized_statement": "Preparation establishes Role",
       "object": "Role",
@@ -284,14 +284,14 @@
         "asset_id": "p022",
         "evidence": "Preparation establishes plans, tools, roles, and communication channels.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-90e6c69577d8ce86",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-daed3f77ecfd096e",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Preparation establishes Role",
       "subject": "Preparation"
     },
     {
-      "claim_id": "claim-43421b01598c46a8",
+      "claim_id": "claim-30515f6ddf0eeb9d",
       "kind": "relation",
       "normalized_statement": "Preparation establishes CommunicationChannel",
       "object": "CommunicationChannel",
@@ -301,14 +301,14 @@
         "asset_id": "p022",
         "evidence": "Preparation establishes plans, tools, roles, and communication channels.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-90e6c69577d8ce86",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-daed3f77ecfd096e",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Preparation establishes CommunicationChannel",
       "subject": "Preparation"
     },
     {
-      "claim_id": "claim-d0c8aa32a585c9af",
+      "claim_id": "claim-85ebfb1eaebbbcc7",
       "kind": "relation",
       "normalized_statement": "Detection identifies PotentialIncident",
       "object": "PotentialIncident",
@@ -318,14 +318,14 @@
         "asset_id": "p022",
         "evidence": "Detection identifies potential incidents.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-31cafa6cdac5571b",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-996d7156611727bd",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Detection identifies PotentialIncident",
       "subject": "Detection"
     },
     {
-      "claim_id": "claim-31e810088457b53d",
+      "claim_id": "claim-5c16532d7827011a",
       "kind": "relation",
       "normalized_statement": "Analysis determines Scope",
       "object": "Scope",
@@ -335,14 +335,14 @@
         "asset_id": "p022",
         "evidence": "Analysis determines the scope, cause, and impact of an incident.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-8f84933599daebb0",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-f4c852bdd642b73c",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Analysis determines Scope",
       "subject": "Analysis"
     },
     {
-      "claim_id": "claim-e1a5c30714db24fb",
+      "claim_id": "claim-d421a8a539bf916b",
       "kind": "relation",
       "normalized_statement": "Analysis determines Cause",
       "object": "Cause",
@@ -352,14 +352,14 @@
         "asset_id": "p022",
         "evidence": "Analysis determines the scope, cause, and impact of an incident.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-8f84933599daebb0",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-f4c852bdd642b73c",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Analysis determines Cause",
       "subject": "Analysis"
     },
     {
-      "claim_id": "claim-1ab8e04a9be20fe7",
+      "claim_id": "claim-4c1ea1a40f922dd4",
       "kind": "relation",
       "normalized_statement": "Analysis determines ImpactOfAnIncident",
       "object": "ImpactOfAnIncident",
@@ -369,14 +369,14 @@
         "asset_id": "p022",
         "evidence": "Analysis determines the scope, cause, and impact of an incident.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-8f84933599daebb0",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-f4c852bdd642b73c",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Analysis determines ImpactOfAnIncident",
       "subject": "Analysis"
     },
     {
-      "claim_id": "claim-45588c39e4c41a95",
+      "claim_id": "claim-f6a9bc4934695b00",
       "kind": "relation",
       "normalized_statement": "Containment limits Spread",
       "object": "Spread",
@@ -386,14 +386,14 @@
         "asset_id": "p022",
         "evidence": "Containment limits the spread or damage of an incident.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-14f124a40e20b3b4",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-78be882804906800",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Containment limits Spread",
       "subject": "Containment"
     },
     {
-      "claim_id": "claim-41649fc316d05c61",
+      "claim_id": "claim-14133af7fb9a35f2",
       "kind": "relation",
       "normalized_statement": "Containment limits DamageOfAnIncident",
       "object": "DamageOfAnIncident",
@@ -403,14 +403,14 @@
         "asset_id": "p022",
         "evidence": "Containment limits the spread or damage of an incident.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-14f124a40e20b3b4",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-78be882804906800",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Containment limits DamageOfAnIncident",
       "subject": "Containment"
     },
     {
-      "claim_id": "claim-9e2e5525e4eb5a25",
+      "claim_id": "claim-ad560e02bc997fb6",
       "kind": "relation",
       "normalized_statement": "Eradication removes RootCauseOfAnIncident",
       "object": "RootCauseOfAnIncident",
@@ -420,14 +420,14 @@
         "asset_id": "p022",
         "evidence": "Eradication removes the root cause of an incident.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-066f3f74c505a58e",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-7b24dcc9b8077e6a",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Eradication removes RootCauseOfAnIncident",
       "subject": "Eradication"
     },
     {
-      "claim_id": "claim-c72aefad917e9497",
+      "claim_id": "claim-75b1d9e0157606cc",
       "kind": "relation",
       "normalized_statement": "Recovery restores System",
       "object": "System",
@@ -437,31 +437,31 @@
         "asset_id": "p022",
         "evidence": "Recovery restores systems and services to normal operation.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-5158cb0b5775ee81",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-d4c0da2e0fcb1fb6",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "Recovery restores System",
       "subject": "Recovery"
     },
     {
-      "claim_id": "claim-6902f269e630881f",
+      "claim_id": "claim-c19d7e44dfba5b79",
       "kind": "relation",
-      "normalized_statement": "Recovery services ToNormalOperation",
-      "object": "ToNormalOperation",
+      "normalized_statement": "Recovery services NormalOperation",
+      "object": "NormalOperation",
       "paragraph_id": "p022",
       "predicate": "services",
       "source": {
         "asset_id": "p022",
         "evidence": "Recovery restores systems and services to normal operation.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-5158cb0b5775ee81",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-d4c0da2e0fcb1fb6",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
-      "statement": "Recovery services ToNormalOperation",
+      "statement": "Recovery services NormalOperation",
       "subject": "Recovery"
     },
     {
-      "claim_id": "claim-9d4f14c84aa7f0c9",
+      "claim_id": "claim-b691e81d49cde949",
       "kind": "relation",
       "normalized_statement": "PostIncidentReview identifies LessonLearned",
       "object": "LessonLearned",
@@ -471,14 +471,14 @@
         "asset_id": "p022",
         "evidence": "Post-incident review identifies lessons learned and improvement actions.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-a4d5ca35be0bd8f2",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-50e55fe406f73c73",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "PostIncidentReview identifies LessonLearned",
       "subject": "PostIncidentReview"
     },
     {
-      "claim_id": "claim-78674ddad00ec225",
+      "claim_id": "claim-762f36a1e88ad138",
       "kind": "relation",
       "normalized_statement": "PostIncidentReview identifies ImprovementAction",
       "object": "ImprovementAction",
@@ -488,14 +488,14 @@
         "asset_id": "p022",
         "evidence": "Post-incident review identifies lessons learned and improvement actions.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-a4d5ca35be0bd8f2",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-50e55fe406f73c73",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "PostIncidentReview identifies ImprovementAction",
       "subject": "PostIncidentReview"
     },
     {
-      "claim_id": "claim-41bc87ff043ce2bf",
+      "claim_id": "claim-b2d114794325d1c9",
       "kind": "definition",
       "normalized_statement": "IncidentResponsePlan is a Document",
       "object": "Document",
@@ -505,14 +505,14 @@
         "asset_id": "p022",
         "evidence": "An incident response plan is a document that defines the process for handling incidents.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-5f74d04f60730871",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-5fe565d1803cf01a",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "IncidentResponsePlan is a Document",
       "subject": "IncidentResponsePlan"
     },
     {
-      "claim_id": "claim-d81a2c6ae9f00fa5",
+      "claim_id": "claim-95b97c430c31522a",
       "kind": "relation",
       "normalized_statement": "IncidentResponsePlan defines Process",
       "object": "Process",
@@ -522,14 +522,14 @@
         "asset_id": "p022",
         "evidence": "An incident response plan is a document that defines the process for handling incidents.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-5f74d04f60730871",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-5fe565d1803cf01a",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "IncidentResponsePlan defines Process",
       "subject": "IncidentResponsePlan"
     },
     {
-      "claim_id": "claim-e2876431e21ccc70",
+      "claim_id": "claim-312532dec4194a10",
       "kind": "relation",
       "normalized_statement": "IncidentResponsePlan handls Incident",
       "object": "Incident",
@@ -539,8 +539,8 @@
         "asset_id": "p022",
         "evidence": "An incident response plan is a document that defines the process for handling incidents.",
         "paragraph_id": "p022",
-        "sentence_id": "sent-5f74d04f60730871",
-        "source_text_id": "6fb627cdb5f38e7ab9c35775e5fa0fb01b7d323c0836109529ee265ac72f3cfd"
+        "sentence_id": "sent-5fe565d1803cf01a",
+        "source_text_id": "6364f46c25c0e1e6ae8f114f4c738872225764aba1e557a2f042836886475a00"
       },
       "statement": "IncidentResponsePlan handls Incident",
       "subject": "IncidentResponsePlan"

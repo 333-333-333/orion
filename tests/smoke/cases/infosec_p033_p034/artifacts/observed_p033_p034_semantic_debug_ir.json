@@ -1,0 +1,702 @@
+{
+  "entities": [
+    {
+      "id": "VulnerabilityManagementIdentifyEvaluatePrioritizAnd",
+      "label": "VulnerabilityManagementIdentifyEvaluatePrioritizAnd",
+      "source_sentence": "Vulnerability management identifies, evaluates, prioritizes, and remediates weaknesses."
+    },
+    {
+      "id": "Weakness",
+      "label": "Weakness",
+      "source_sentence": "Vulnerability management identifies, evaluates, prioritizes, and remediates weaknesses."
+    },
+    {
+      "id": "VulnerabilityScan",
+      "label": "VulnerabilityScan",
+      "source_sentence": "A vulnerability scan detects known vulnerabilities in systems and applications."
+    },
+    {
+      "id": "KnownVulnerabilityInSystem",
+      "label": "KnownVulnerabilityInSystem",
+      "source_sentence": "A vulnerability scan detects known vulnerabilities in systems and applications."
+    },
+    {
+      "id": "Application",
+      "label": "Application",
+      "source_sentence": "A vulnerability scan detects known vulnerabilities in systems and applications."
+    },
+    {
+      "id": "VulnerabilityFinding",
+      "label": "VulnerabilityFinding",
+      "source_sentence": "A vulnerability finding describes a detected weakness."
+    },
+    {
+      "id": "DetectedWeakness",
+      "label": "DetectedWeakness",
+      "source_sentence": "A vulnerability finding describes a detected weakness."
+    },
+    {
+      "id": "SeverityRating",
+      "label": "SeverityRating",
+      "source_sentence": "A severity rating estimates the technical seriousness of a vulnerability."
+    },
+    {
+      "id": "TechnicalSeriousnessOfAVulnerability",
+      "label": "TechnicalSeriousnessOfAVulnerability",
+      "source_sentence": "A severity rating estimates the technical seriousness of a vulnerability."
+    },
+    {
+      "id": "RiskRating",
+      "label": "RiskRating",
+      "source_sentence": "A risk rating combines severity, exposure, likelihood, and business impact."
+    },
+    {
+      "id": "Severity",
+      "label": "Severity",
+      "source_sentence": "A risk rating combines severity, exposure, likelihood, and business impact."
+    },
+    {
+      "id": "Exposure",
+      "label": "Exposure",
+      "source_sentence": "A risk rating combines severity, exposure, likelihood, and business impact."
+    },
+    {
+      "id": "Likelihood",
+      "label": "Likelihood",
+      "source_sentence": "A risk rating combines severity, exposure, likelihood, and business impact."
+    },
+    {
+      "id": "Impact",
+      "label": "Impact",
+      "source_sentence": "A risk rating combines severity, exposure, likelihood, and business impact."
+    },
+    {
+      "id": "Remediation",
+      "label": "Remediation",
+      "source_sentence": "Remediation removes or fixes a vulnerability."
+    },
+    {
+      "id": "FixAVulnerability",
+      "label": "FixAVulnerability",
+      "source_sentence": "Remediation removes or fixes a vulnerability."
+    },
+    {
+      "id": "MitigationReduceTheRiskWhenRemediation",
+      "label": "MitigationReduceTheRiskWhenRemediation",
+      "source_sentence": "Mitigation reduces the risk when remediation is not immediately possible."
+    },
+    {
+      "id": "NotImmediatelyPossible",
+      "label": "NotImmediatelyPossible",
+      "source_sentence": "Mitigation reduces the risk when remediation is not immediately possible."
+    },
+    {
+      "id": "PatchDeployment",
+      "label": "PatchDeployment",
+      "source_sentence": "Patch deployment is a type of remediation."
+    },
+    {
+      "id": "ConfigurationChange",
+      "label": "ConfigurationChange",
+      "source_sentence": "Configuration change is a type of remediation."
+    },
+    {
+      "id": "Vulnerability",
+      "label": "Vulnerability",
+      "source_sentence": "Vulnerability exceptions must be documented, approved, and reviewed."
+    },
+    {
+      "id": "MustBeDocumented",
+      "label": "MustBeDocumented",
+      "source_sentence": "Vulnerability exceptions must be documented, approved, and reviewed."
+    },
+    {
+      "id": "Approved",
+      "label": "Approved",
+      "source_sentence": "Vulnerability exceptions must be documented, approved, and reviewed."
+    },
+    {
+      "id": "Reviewed",
+      "label": "Reviewed",
+      "source_sentence": "Vulnerability exceptions must be documented, approved, and reviewed."
+    },
+    {
+      "id": "ThreatIntelligence",
+      "label": "ThreatIntelligence",
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators."
+    },
+    {
+      "id": "InformationAboutThreat",
+      "label": "InformationAboutThreat",
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators."
+    },
+    {
+      "id": "ThreatActor",
+      "label": "ThreatActor",
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators."
+    },
+    {
+      "id": "Tactic",
+      "label": "Tactic",
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators."
+    },
+    {
+      "id": "Technique",
+      "label": "Technique",
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators."
+    },
+    {
+      "id": "Indicator",
+      "label": "Indicator",
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators."
+    },
+    {
+      "id": "Entity",
+      "label": "Entity",
+      "source_sentence": "A threat actor is an entity that can intentionally cause harm."
+    },
+    {
+      "id": "IntentionallyCauseHarm",
+      "label": "IntentionallyCauseHarm",
+      "source_sentence": "A threat actor is an entity that can intentionally cause harm."
+    },
+    {
+      "id": "CybercriminalGroup",
+      "label": "CybercriminalGroup",
+      "source_sentence": "A cybercriminal group is a type of threat actor."
+    },
+    {
+      "id": "Insider",
+      "label": "Insider",
+      "source_sentence": "An insider is a type of threat actor."
+    },
+    {
+      "id": "NationStateActor",
+      "label": "NationStateActor",
+      "source_sentence": "A nation-state actor is a type of threat actor."
+    },
+    {
+      "id": "Hacktivist",
+      "label": "Hacktivist",
+      "source_sentence": "A hacktivist is a type of threat actor."
+    },
+    {
+      "id": "IndicatorOfCompromise",
+      "label": "IndicatorOfCompromise",
+      "source_sentence": "An indicator of compromise is evidence that a system may be compromised."
+    },
+    {
+      "id": "Evidence",
+      "label": "Evidence",
+      "source_sentence": "An indicator of compromise is evidence that a system may be compromised."
+    },
+    {
+      "id": "SystemMayBeCompromised",
+      "label": "SystemMayBeCompromised",
+      "source_sentence": "An indicator of compromise is evidence that a system may be compromised."
+    },
+    {
+      "id": "ThreatActorObjective",
+      "label": "ThreatActorObjective",
+      "source_sentence": "A tactic describes a threat actor objective."
+    },
+    {
+      "id": "HowAThreatActorAchieveAnObjective",
+      "label": "HowAThreatActorAchieveAnObjective",
+      "source_sentence": "A technique describes how a threat actor achieves an objective."
+    },
+    {
+      "id": "Detection",
+      "label": "Detection",
+      "source_sentence": "Threat intelligence supports detection, prevention, and response activities."
+    },
+    {
+      "id": "Prevention",
+      "label": "Prevention",
+      "source_sentence": "Threat intelligence supports detection, prevention, and response activities."
+    },
+    {
+      "id": "ResponseActivity",
+      "label": "ResponseActivity",
+      "source_sentence": "Threat intelligence supports detection, prevention, and response activities."
+    }
+  ],
+  "relations": [
+    {
+      "id": "claim-77be560a4a747373",
+      "object": "Weakness",
+      "predicate": "remediates",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "Vulnerability management identifies, evaluates, prioritizes, and remediates weaknesses.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-3a6751ea2aea4428",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Vulnerability management identifies, evaluates, prioritizes, and remediates weaknesses.",
+      "subject": "VulnerabilityManagementIdentifyEvaluatePrioritizAnd"
+    },
+    {
+      "id": "claim-102541e7c2461b3f",
+      "object": "KnownVulnerabilityInSystem",
+      "predicate": "detects",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "A vulnerability scan detects known vulnerabilities in systems and applications.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-aef5772d2f5beb93",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A vulnerability scan detects known vulnerabilities in systems and applications.",
+      "subject": "VulnerabilityScan"
+    },
+    {
+      "id": "claim-c3745a641eded557",
+      "object": "Application",
+      "predicate": "detects",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "A vulnerability scan detects known vulnerabilities in systems and applications.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-aef5772d2f5beb93",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A vulnerability scan detects known vulnerabilities in systems and applications.",
+      "subject": "VulnerabilityScan"
+    },
+    {
+      "id": "claim-ac4d31bb0a5b566b",
+      "object": "DetectedWeakness",
+      "predicate": "describes",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "A vulnerability finding describes a detected weakness.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-996281af780b87cd",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A vulnerability finding describes a detected weakness.",
+      "subject": "VulnerabilityFinding"
+    },
+    {
+      "id": "claim-f6554914f11e5771",
+      "object": "TechnicalSeriousnessOfAVulnerability",
+      "predicate": "estimates",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "A severity rating estimates the technical seriousness of a vulnerability.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-48173bcbcb6b660e",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A severity rating estimates the technical seriousness of a vulnerability.",
+      "subject": "SeverityRating"
+    },
+    {
+      "id": "claim-921d57c8078f902b",
+      "object": "Severity",
+      "predicate": "combines",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "A risk rating combines severity, exposure, likelihood, and business impact.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-fc71c16b96e545c4",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A risk rating combines severity, exposure, likelihood, and business impact.",
+      "subject": "RiskRating"
+    },
+    {
+      "id": "claim-be018bdd9315e360",
+      "object": "Exposure",
+      "predicate": "combines",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "A risk rating combines severity, exposure, likelihood, and business impact.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-fc71c16b96e545c4",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A risk rating combines severity, exposure, likelihood, and business impact.",
+      "subject": "RiskRating"
+    },
+    {
+      "id": "claim-8f561f11a1e1c84f",
+      "object": "Likelihood",
+      "predicate": "combines",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "A risk rating combines severity, exposure, likelihood, and business impact.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-fc71c16b96e545c4",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A risk rating combines severity, exposure, likelihood, and business impact.",
+      "subject": "RiskRating"
+    },
+    {
+      "id": "claim-335617c5a376b420",
+      "object": "Impact",
+      "predicate": "business",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "A risk rating combines severity, exposure, likelihood, and business impact.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-fc71c16b96e545c4",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A risk rating combines severity, exposure, likelihood, and business impact.",
+      "subject": "RiskRating"
+    },
+    {
+      "id": "claim-a71df184289b6c19",
+      "object": "FixAVulnerability",
+      "predicate": "removes",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "Remediation removes or fixes a vulnerability.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-827cf76874f9eb49",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Remediation removes or fixes a vulnerability.",
+      "subject": "Remediation"
+    },
+    {
+      "id": "claim-4a60fbf1f8392248",
+      "object": "NotImmediatelyPossible",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "Mitigation reduces the risk when remediation is not immediately possible.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-ced454b6891efe92",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Mitigation reduces the risk when remediation is not immediately possible.",
+      "subject": "MitigationReduceTheRiskWhenRemediation"
+    },
+    {
+      "id": "claim-651d4d3fc08b095a",
+      "object": "Remediation",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "Patch deployment is a type of remediation.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-4479cce813a9db07",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Patch deployment is a type of remediation.",
+      "subject": "PatchDeployment"
+    },
+    {
+      "id": "claim-8e97d06e1366ceaa",
+      "object": "Remediation",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "Configuration change is a type of remediation.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-60939fdb279cf202",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Configuration change is a type of remediation.",
+      "subject": "ConfigurationChange"
+    },
+    {
+      "id": "claim-f9cc1c24eb72f5d5",
+      "object": "MustBeDocumented",
+      "predicate": "exceptions",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "Vulnerability exceptions must be documented, approved, and reviewed.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-d2e27a5ba795e111",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Vulnerability exceptions must be documented, approved, and reviewed.",
+      "subject": "Vulnerability"
+    },
+    {
+      "id": "claim-a648c12ebcded9fd",
+      "object": "Approved",
+      "predicate": "exceptions",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "Vulnerability exceptions must be documented, approved, and reviewed.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-d2e27a5ba795e111",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Vulnerability exceptions must be documented, approved, and reviewed.",
+      "subject": "Vulnerability"
+    },
+    {
+      "id": "claim-ab58b2afea5cbfe2",
+      "object": "Reviewed",
+      "predicate": "exceptions",
+      "source": {
+        "asset_id": "p033",
+        "evidence": "Vulnerability exceptions must be documented, approved, and reviewed.",
+        "paragraph_id": "p033",
+        "sentence_id": "sent-d2e27a5ba795e111",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Vulnerability exceptions must be documented, approved, and reviewed.",
+      "subject": "Vulnerability"
+    },
+    {
+      "id": "claim-b7204d32f3e10ab2",
+      "object": "InformationAboutThreat",
+      "predicate": "provides",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-6516231533f3da19",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+      "subject": "ThreatIntelligence"
+    },
+    {
+      "id": "claim-cf4a0118fc9bba4c",
+      "object": "ThreatActor",
+      "predicate": "provides",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-6516231533f3da19",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+      "subject": "ThreatIntelligence"
+    },
+    {
+      "id": "claim-903d18eb0eb0c84f",
+      "object": "Tactic",
+      "predicate": "provides",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-6516231533f3da19",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+      "subject": "ThreatIntelligence"
+    },
+    {
+      "id": "claim-0e04742fcb8cc012",
+      "object": "Technique",
+      "predicate": "provides",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-6516231533f3da19",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+      "subject": "ThreatIntelligence"
+    },
+    {
+      "id": "claim-037f8d363b98ca85",
+      "object": "Indicator",
+      "predicate": "provides",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-6516231533f3da19",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Threat intelligence provides information about threats, threat actors, tactics, techniques, and indicators.",
+      "subject": "ThreatIntelligence"
+    },
+    {
+      "id": "claim-c02bbc84caf17c29",
+      "object": "Entity",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "A threat actor is an entity that can intentionally cause harm.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-4fc0b0141d2d00ea",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A threat actor is an entity that can intentionally cause harm.",
+      "subject": "ThreatActor"
+    },
+    {
+      "id": "claim-1a052e80ba522678",
+      "object": "IntentionallyCauseHarm",
+      "predicate": "cans",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "A threat actor is an entity that can intentionally cause harm.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-4fc0b0141d2d00ea",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A threat actor is an entity that can intentionally cause harm.",
+      "subject": "ThreatActor"
+    },
+    {
+      "id": "claim-c0367a7523b694ac",
+      "object": "ThreatActor",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "A cybercriminal group is a type of threat actor.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-59892a5dba90f585",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A cybercriminal group is a type of threat actor.",
+      "subject": "CybercriminalGroup"
+    },
+    {
+      "id": "claim-f921c7560fd1b5ee",
+      "object": "ThreatActor",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "An insider is a type of threat actor.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-9b375ae391ebe164",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "An insider is a type of threat actor.",
+      "subject": "Insider"
+    },
+    {
+      "id": "claim-0269a42b1888b1a5",
+      "object": "ThreatActor",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "A nation-state actor is a type of threat actor.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-4d2e0c9e4dc6ace2",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A nation-state actor is a type of threat actor.",
+      "subject": "NationStateActor"
+    },
+    {
+      "id": "claim-a7a94cd4f2ca6a80",
+      "object": "ThreatActor",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "A hacktivist is a type of threat actor.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-a1f96e080da0079f",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A hacktivist is a type of threat actor.",
+      "subject": "Hacktivist"
+    },
+    {
+      "id": "claim-423b2eb896b0dbd2",
+      "object": "Evidence",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "An indicator of compromise is evidence that a system may be compromised.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-d034d58f5719a92a",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "An indicator of compromise is evidence that a system may be compromised.",
+      "subject": "IndicatorOfCompromise"
+    },
+    {
+      "id": "claim-e8d3ef9e836d87d9",
+      "object": "SystemMayBeCompromised",
+      "predicate": "as",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "An indicator of compromise is evidence that a system may be compromised.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-d034d58f5719a92a",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "An indicator of compromise is evidence that a system may be compromised.",
+      "subject": "IndicatorOfCompromise"
+    },
+    {
+      "id": "claim-2fff3a394ef40450",
+      "object": "ThreatActorObjective",
+      "predicate": "describes",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "A tactic describes a threat actor objective.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-5cd94e35126e651c",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A tactic describes a threat actor objective.",
+      "subject": "Tactic"
+    },
+    {
+      "id": "claim-2960ea66f9f259bb",
+      "object": "HowAThreatActorAchieveAnObjective",
+      "predicate": "describes",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "A technique describes how a threat actor achieves an objective.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-43deca162f8230c9",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "A technique describes how a threat actor achieves an objective.",
+      "subject": "Technique"
+    },
+    {
+      "id": "claim-5f0ec6ef2276161f",
+      "object": "Detection",
+      "predicate": "supports",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "Threat intelligence supports detection, prevention, and response activities.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-a7182a9351e7b38a",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Threat intelligence supports detection, prevention, and response activities.",
+      "subject": "ThreatIntelligence"
+    },
+    {
+      "id": "claim-68bfe4a75a67d4d8",
+      "object": "Prevention",
+      "predicate": "supports",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "Threat intelligence supports detection, prevention, and response activities.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-a7182a9351e7b38a",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Threat intelligence supports detection, prevention, and response activities.",
+      "subject": "ThreatIntelligence"
+    },
+    {
+      "id": "claim-96ef65e6c27f0c66",
+      "object": "ResponseActivity",
+      "predicate": "supports",
+      "source": {
+        "asset_id": "p034",
+        "evidence": "Threat intelligence supports detection, prevention, and response activities.",
+        "paragraph_id": "p034",
+        "sentence_id": "sent-a7182a9351e7b38a",
+        "source_text_id": "55461e46c701b186ed4792b8c34ee084ed0ac1f7df69e572a998f2e8957cc3a8"
+      },
+      "source_sentence": "Threat intelligence supports detection, prevention, and response activities.",
+      "subject": "ThreatIntelligence"
+    }
+  ]
+}

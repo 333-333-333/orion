@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/compensatingcontrol">
+    <orion:provides rdf:resource="https://orion.local/resource/alternativeprotectionmechanismwhenaprimarycontrolcannotbeimplemented"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/control">
+    <orion:reduces rdf:resource="https://orion.local/resource/riskbypreventing"/>
+    <orion:reduces rdf:resource="https://orion.local/resource/detecting"/>
+    <orion:reduces rdf:resource="https://orion.local/resource/correcting"/>
+    <orion:reduces rdf:resource="https://orion.local/resource/compensatingforsecurityweakness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/correctivecontrol">
+    <orion:restores rdf:resource="https://orion.local/resource/normaloperationafteranincident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/detectivecontrol">
+    <orion:identifies rdf:resource="https://orion.local/resource/suspiciousactivity"/>
+    <orion:identifies rdf:resource="https://orion.local/resource/policyviolation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/likelihood">
+    <orion:as rdf:resource="https://orion.local/resource/riskscenariooccur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/preventivecontrol">
+    <orion:reduces rdf:resource="https://orion.local/resource/probabilityofanincident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/risk">
+    <orion:as rdf:resource="https://orion.local/resource/threatexploitavulnerability"/>
+    <orion:as rdf:resource="https://orion.local/resource/causharmtoanasset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/riskscenario">
+    <orion:describes rdf:resource="https://orion.local/resource/howathreatmayexploitavulnerability"/>
+    <orion:describes rdf:resource="https://orion.local/resource/affectanasset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerability">
+    <orion:cans rdf:resource="https://orion.local/resource/beexploitedbyathreat"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/accesscontrol">
     <rdfs:label>AccessControl</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://orion.local/resource/preventivecontrol"/>
@@ -67,6 +100,9 @@
     <rdfs:label>Impact</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://orion.local/resource/consequenceproducedbyasecurityeventorincident"/>
     <rdfs:comment>An impact is the consequence produced by a security event or incident.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/incident">
+    <rdfs:label>Incident</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/likelihood">
     <rdfs:label>Likelihood</rdfs:label>
@@ -276,6 +312,9 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/impact">
     <rdfs:label>Impact</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/incident">
+    <rdfs:label>Incident</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/likelihood">
     <rdfs:label>Likelihood</rdfs:label>

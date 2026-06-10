@@ -1,8 +1,8 @@
 {
-  "claim_count": 20,
+  "claim_count": 34,
   "claims": [
     {
-      "claim_id": "claim-998c7e0f7edf352f",
+      "claim_id": "claim-2ed5d729f9709559",
       "kind": "relation",
       "normalized_statement": "DataBreachScenario illustrates ImportanceOfAccessControl",
       "object": "ImportanceOfAccessControl",
@@ -12,14 +12,14 @@
         "asset_id": "p041",
         "evidence": "A data breach scenario illustrates the importance of access control and data protection.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-454b101dcb36c4af",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-c35d24162898cb28",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "DataBreachScenario illustrates ImportanceOfAccessControl",
       "subject": "DataBreachScenario"
     },
     {
-      "claim_id": "claim-215bd5de42b78621",
+      "claim_id": "claim-ce4b522f974bb94a",
       "kind": "relation",
       "normalized_statement": "DataBreachScenario illustrates DataProtection",
       "object": "DataProtection",
@@ -29,14 +29,14 @@
         "asset_id": "p041",
         "evidence": "A data breach scenario illustrates the importance of access control and data protection.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-454b101dcb36c4af",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-c35d24162898cb28",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "DataBreachScenario illustrates DataProtection",
       "subject": "DataBreachScenario"
     },
     {
-      "claim_id": "claim-13c46329945c3336",
+      "claim_id": "claim-f6140f7160f460ef",
       "kind": "relation",
       "normalized_statement": "UnauthorizedUser accesses RestrictedDocumentRepository",
       "object": "RestrictedDocumentRepository",
@@ -46,14 +46,14 @@
         "asset_id": "p041",
         "evidence": "An unauthorized user accesses a restricted document repository.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-8b1a05e0a5e4ab5e",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-4ee6778a5078e06a",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "UnauthorizedUser accesses RestrictedDocumentRepository",
       "subject": "UnauthorizedUser"
     },
     {
-      "claim_id": "claim-38f6b4e7b67aecf6",
+      "claim_id": "claim-b87c8bb202952aee",
       "kind": "relation",
       "normalized_statement": "RestrictedDocumentRepository stores ConfidentialInformation",
       "object": "ConfidentialInformation",
@@ -63,14 +63,14 @@
         "asset_id": "p041",
         "evidence": "The restricted document repository stores confidential information and personal data.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-6544a4035688a7fe",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-c809d382a7619533",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "RestrictedDocumentRepository stores ConfidentialInformation",
       "subject": "RestrictedDocumentRepository"
     },
     {
-      "claim_id": "claim-59751bff5ad417d5",
+      "claim_id": "claim-aaa5882cc294e67c",
       "kind": "relation",
       "normalized_statement": "RestrictedDocumentRepository stores PersonalData",
       "object": "PersonalData",
@@ -80,14 +80,14 @@
         "asset_id": "p041",
         "evidence": "The restricted document repository stores confidential information and personal data.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-6544a4035688a7fe",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-c809d382a7619533",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "RestrictedDocumentRepository stores PersonalData",
       "subject": "RestrictedDocumentRepository"
     },
     {
-      "claim_id": "claim-8c90c8f22c7d7d7e",
+      "claim_id": "claim-b727d678e012a1f1",
       "kind": "relation",
       "normalized_statement": "Unauthorized access ViolateTheAccessControlPolicy",
       "object": "ViolateTheAccessControlPolicy",
@@ -97,14 +97,14 @@
         "asset_id": "p041",
         "evidence": "The unauthorized access violates the access control policy.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-187c7f81f94beaec",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-b84c33a06ac92907",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "Unauthorized access ViolateTheAccessControlPolicy",
       "subject": "Unauthorized"
     },
     {
-      "claim_id": "claim-08dc0fd48e23f996",
+      "claim_id": "claim-7989feef11ce2101",
       "kind": "relation",
       "normalized_statement": "Audit logs RecordTheAccessEvent",
       "object": "RecordTheAccessEvent",
@@ -114,14 +114,14 @@
         "asset_id": "p041",
         "evidence": "Audit logs record the access event.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-91aea8b9d8cfd62e",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-bbc38deb2cff903d",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "Audit logs RecordTheAccessEvent",
       "subject": "Audit"
     },
     {
-      "claim_id": "claim-494de605923c2559",
+      "claim_id": "claim-1e3fc1cacfaa5692",
       "kind": "relation",
       "normalized_statement": "DetectionRule generates SecurityAlert",
       "object": "SecurityAlert",
@@ -131,14 +131,14 @@
         "asset_id": "p041",
         "evidence": "A detection rule generates a security alert.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-64f1caffcd348aaa",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-0fb09bb8d3a880b9",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "DetectionRule generates SecurityAlert",
       "subject": "DetectionRule"
     },
     {
-      "claim_id": "claim-d6d283973be53171",
+      "claim_id": "claim-62b2eaba3c9732ab",
       "kind": "relation",
       "normalized_statement": "SecurityAnalyst investigates Alert",
       "object": "Alert",
@@ -148,14 +148,14 @@
         "asset_id": "p041",
         "evidence": "The security analyst investigates the alert.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-e254695a6ce25fca",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-083c92ae1fcf5a06",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "SecurityAnalyst investigates Alert",
       "subject": "SecurityAnalyst"
     },
     {
-      "claim_id": "claim-8ff859d14ce7f3ab",
+      "claim_id": "claim-5880799ba00a04f7",
       "kind": "relation",
       "normalized_statement": "IncidentResponseTeam confirms DataBreach",
       "object": "DataBreach",
@@ -165,14 +165,14 @@
         "asset_id": "p041",
         "evidence": "The incident response team confirms a data breach.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-882b7ad9482cd2ea",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-00da4b9d5367d8af",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "IncidentResponseTeam confirms DataBreach",
       "subject": "IncidentResponseTeam"
     },
     {
-      "claim_id": "claim-b72d555a9c6cb0ee",
+      "claim_id": "claim-a3a4e56b1b4086f2",
       "kind": "relation",
       "normalized_statement": "PrivacyOfficer assesses WhetherDataSubjectMustBeNotified",
       "object": "WhetherDataSubjectMustBeNotified",
@@ -182,14 +182,14 @@
         "asset_id": "p041",
         "evidence": "The privacy officer assesses whether data subjects must be notified.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-5a1394ba09391d4d",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-24a692975dd8ee24",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "PrivacyOfficer assesses WhetherDataSubjectMustBeNotified",
       "subject": "PrivacyOfficer"
     },
     {
-      "claim_id": "claim-dfb2dd2c2c55f36e",
+      "claim_id": "claim-0c06e4bbfa4f50e7",
       "kind": "relation",
       "normalized_statement": "LegalTeam evaluates RegulatoryObligation",
       "object": "RegulatoryObligation",
@@ -199,14 +199,14 @@
         "asset_id": "p041",
         "evidence": "The legal team evaluates regulatory obligations.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-d5cfb2045185a563",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-182e4a38d8c3edf1",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "LegalTeam evaluates RegulatoryObligation",
       "subject": "LegalTeam"
     },
     {
-      "claim_id": "claim-41dac62e21b471a7",
+      "claim_id": "claim-3c5bfb2303aefd8c",
       "kind": "relation",
       "normalized_statement": "Organization implements CorrectiveActionToPreventRecurrence",
       "object": "CorrectiveActionToPreventRecurrence",
@@ -216,130 +216,368 @@
         "asset_id": "p041",
         "evidence": "The organization implements corrective actions to prevent recurrence.",
         "paragraph_id": "p041",
-        "sentence_id": "sent-432bfc728347ec44",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-d382f900074a8cd0",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
       "statement": "Organization implements CorrectiveActionToPreventRecurrence",
       "subject": "Organization"
     },
     {
-      "claim_id": "claim-a17efc92cc418ca5",
-      "kind": "relation",
-      "normalized_statement": "OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful relationships FromThisText",
-      "object": "FromThisText",
+      "claim_id": "claim-7aaa7074f6f9b73f",
+      "kind": "type_of",
+      "normalized_statement": "ConfidentialDocument is a type of InformationAsset",
+      "object": "InformationAsset",
       "paragraph_id": "p042",
-      "predicate": "relationships",
-      "source": {
-        "asset_id": "p042",
-        "evidence": "ORION should be able to identify security concepts, classify hierarchical relationships, and extract meaningful relationships from this text.",
-        "paragraph_id": "p042",
-        "sentence_id": "sent-a1d2b82c91c0d83d",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
-      },
-      "statement": "OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful relationships FromThisText",
-      "subject": "OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful"
-    },
-    {
-      "claim_id": "claim-f297af736439e438",
-      "kind": "relation",
-      "normalized_statement": "ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre subclasses OfInformationAsset",
-      "object": "OfInformationAsset",
-      "paragraph_id": "p042",
-      "predicate": "subclasses",
+      "predicate": "type_of",
       "source": {
         "asset_id": "p042",
         "evidence": "Confidential document, corporate database, customer record, and source code repository are subclasses of information asset.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-f40309603f5b3318",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-1636248e302e831f",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
-      "statement": "ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre subclasses OfInformationAsset",
-      "subject": "ConfidentialDocumentCorporateDatabaseCustomerRecordAndSourceCodeRepositoryAre"
+      "statement": "ConfidentialDocument is a type of InformationAsset",
+      "subject": "ConfidentialDocument"
     },
     {
-      "claim_id": "claim-b02c80bd96e757af",
-      "kind": "relation",
-      "normalized_statement": "PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre subclasses OfSecurityControl",
-      "object": "OfSecurityControl",
+      "claim_id": "claim-46d14550df1d95cb",
+      "kind": "type_of",
+      "normalized_statement": "CorporateDatabase is a type of InformationAsset",
+      "object": "InformationAsset",
       "paragraph_id": "p042",
-      "predicate": "subclasses",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Confidential document, corporate database, customer record, and source code repository are subclasses of information asset.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-1636248e302e831f",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "CorporateDatabase is a type of InformationAsset",
+      "subject": "CorporateDatabase"
+    },
+    {
+      "claim_id": "claim-e6e635dfd468aa63",
+      "kind": "type_of",
+      "normalized_statement": "CustomerRecord is a type of InformationAsset",
+      "object": "InformationAsset",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Confidential document, corporate database, customer record, and source code repository are subclasses of information asset.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-1636248e302e831f",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "CustomerRecord is a type of InformationAsset",
+      "subject": "CustomerRecord"
+    },
+    {
+      "claim_id": "claim-fe19bc3ae9bb36a2",
+      "kind": "type_of",
+      "normalized_statement": "SourceCodeRepository is a type of InformationAsset",
+      "object": "InformationAsset",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Confidential document, corporate database, customer record, and source code repository are subclasses of information asset.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-1636248e302e831f",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "SourceCodeRepository is a type of InformationAsset",
+      "subject": "SourceCodeRepository"
+    },
+    {
+      "claim_id": "claim-1753067cf5a078ea",
+      "kind": "type_of",
+      "normalized_statement": "PreventiveControl is a type of SecurityControl",
+      "object": "SecurityControl",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
       "source": {
         "asset_id": "p042",
         "evidence": "Preventive control, detective control, corrective control, and compensating control are subclasses of security control.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-0bbaef181546d412",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-947ce94fd8ad11fb",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
-      "statement": "PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre subclasses OfSecurityControl",
-      "subject": "PreventiveControlDetectiveControlCorrectiveControlAndCompensatingControlAre"
+      "statement": "PreventiveControl is a type of SecurityControl",
+      "subject": "PreventiveControl"
     },
     {
-      "claim_id": "claim-1b13494dac43a65b",
-      "kind": "relation",
-      "normalized_statement": "PasswordCertificate access Token",
-      "object": "Token",
+      "claim_id": "claim-6d8a64112381bc09",
+      "kind": "type_of",
+      "normalized_statement": "DetectiveControl is a type of SecurityControl",
+      "object": "SecurityControl",
       "paragraph_id": "p042",
-      "predicate": "access",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Preventive control, detective control, corrective control, and compensating control are subclasses of security control.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-947ce94fd8ad11fb",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "DetectiveControl is a type of SecurityControl",
+      "subject": "DetectiveControl"
+    },
+    {
+      "claim_id": "claim-9ba95a96d215e263",
+      "kind": "type_of",
+      "normalized_statement": "CorrectiveControl is a type of SecurityControl",
+      "object": "SecurityControl",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Preventive control, detective control, corrective control, and compensating control are subclasses of security control.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-947ce94fd8ad11fb",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "CorrectiveControl is a type of SecurityControl",
+      "subject": "CorrectiveControl"
+    },
+    {
+      "claim_id": "claim-b758962928cabb81",
+      "kind": "type_of",
+      "normalized_statement": "CompensatingControl is a type of SecurityControl",
+      "object": "SecurityControl",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Preventive control, detective control, corrective control, and compensating control are subclasses of security control.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-947ce94fd8ad11fb",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "CompensatingControl is a type of SecurityControl",
+      "subject": "CompensatingControl"
+    },
+    {
+      "claim_id": "claim-e96e048bb235ceb5",
+      "kind": "type_of",
+      "normalized_statement": "Password is a type of Credential",
+      "object": "Credential",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
       "source": {
         "asset_id": "p042",
         "evidence": "Password, certificate, access token, API key, and private key are subclasses of credential.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-f1e87dd4ccc24b28",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-c07e0f40a999df23",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
-      "statement": "PasswordCertificate access Token",
-      "subject": "PasswordCertificate"
+      "statement": "Password is a type of Credential",
+      "subject": "Password"
     },
     {
-      "claim_id": "claim-69b28e2efdea538c",
-      "kind": "relation",
-      "normalized_statement": "PasswordCertificate access APIKey",
-      "object": "APIKey",
+      "claim_id": "claim-728ba44b77f48b52",
+      "kind": "type_of",
+      "normalized_statement": "Certificate is a type of Credential",
+      "object": "Credential",
       "paragraph_id": "p042",
-      "predicate": "access",
+      "predicate": "type_of",
       "source": {
         "asset_id": "p042",
         "evidence": "Password, certificate, access token, API key, and private key are subclasses of credential.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-f1e87dd4ccc24b28",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-c07e0f40a999df23",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
-      "statement": "PasswordCertificate access APIKey",
-      "subject": "PasswordCertificate"
+      "statement": "Certificate is a type of Credential",
+      "subject": "Certificate"
     },
     {
-      "claim_id": "claim-3fb1427cbbeb0890",
-      "kind": "relation",
-      "normalized_statement": "PasswordCertificate access PrivateKeyAreSubclassOfCredential",
-      "object": "PrivateKeyAreSubclassOfCredential",
+      "claim_id": "claim-7c1aab1842fce45e",
+      "kind": "type_of",
+      "normalized_statement": "AccessToken is a type of Credential",
+      "object": "Credential",
       "paragraph_id": "p042",
-      "predicate": "access",
+      "predicate": "type_of",
       "source": {
         "asset_id": "p042",
         "evidence": "Password, certificate, access token, API key, and private key are subclasses of credential.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-f1e87dd4ccc24b28",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-c07e0f40a999df23",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
-      "statement": "PasswordCertificate access PrivateKeyAreSubclassOfCredential",
-      "subject": "PasswordCertificate"
+      "statement": "AccessToken is a type of Credential",
+      "subject": "AccessToken"
     },
     {
-      "claim_id": "claim-ce2becd23a48eb49",
-      "kind": "relation",
-      "normalized_statement": "MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre subclasses OfSecurityIncident",
-      "object": "OfSecurityIncident",
+      "claim_id": "claim-a5c23b5749062afe",
+      "kind": "type_of",
+      "normalized_statement": "APIKey is a type of Credential",
+      "object": "Credential",
       "paragraph_id": "p042",
-      "predicate": "subclasses",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Password, certificate, access token, API key, and private key are subclasses of credential.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-c07e0f40a999df23",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "APIKey is a type of Credential",
+      "subject": "APIKey"
+    },
+    {
+      "claim_id": "claim-d10668de28fc1b24",
+      "kind": "type_of",
+      "normalized_statement": "PrivateKey is a type of Credential",
+      "object": "Credential",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Password, certificate, access token, API key, and private key are subclasses of credential.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-c07e0f40a999df23",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "PrivateKey is a type of Credential",
+      "subject": "PrivateKey"
+    },
+    {
+      "claim_id": "claim-43ed263d3e7e4b73",
+      "kind": "type_of",
+      "normalized_statement": "MalwareInfection is a type of SecurityIncident",
+      "object": "SecurityIncident",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
       "source": {
         "asset_id": "p042",
         "evidence": "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident.",
         "paragraph_id": "p042",
-        "sentence_id": "sent-3bc463eede8cf4e1",
-        "source_text_id": "80a7a8c81929e76443070eb62d88f1bb0f6a81eba6a07359b456bacad4a6b4bc"
+        "sentence_id": "sent-b1dc7381e3d28f28",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
       },
-      "statement": "MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre subclasses OfSecurityIncident",
-      "subject": "MalwareInfectionPhishingAttackRansomwareAttackDataBreachDenialOfServiceAttackUnauthorizedAccessInsiderMisuseAndLostDeviceIncidentAre"
+      "statement": "MalwareInfection is a type of SecurityIncident",
+      "subject": "MalwareInfection"
+    },
+    {
+      "claim_id": "claim-36445752b2251357",
+      "kind": "type_of",
+      "normalized_statement": "PhishingAttack is a type of SecurityIncident",
+      "object": "SecurityIncident",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-b1dc7381e3d28f28",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "PhishingAttack is a type of SecurityIncident",
+      "subject": "PhishingAttack"
+    },
+    {
+      "claim_id": "claim-3b997eb5dba36b65",
+      "kind": "type_of",
+      "normalized_statement": "RansomwareAttack is a type of SecurityIncident",
+      "object": "SecurityIncident",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-b1dc7381e3d28f28",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "RansomwareAttack is a type of SecurityIncident",
+      "subject": "RansomwareAttack"
+    },
+    {
+      "claim_id": "claim-4328e8df3e38daeb",
+      "kind": "type_of",
+      "normalized_statement": "DataBreach is a type of SecurityIncident",
+      "object": "SecurityIncident",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-b1dc7381e3d28f28",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "DataBreach is a type of SecurityIncident",
+      "subject": "DataBreach"
+    },
+    {
+      "claim_id": "claim-0da3926031f96abb",
+      "kind": "type_of",
+      "normalized_statement": "DenialOfServiceAttack is a type of SecurityIncident",
+      "object": "SecurityIncident",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-b1dc7381e3d28f28",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "DenialOfServiceAttack is a type of SecurityIncident",
+      "subject": "DenialOfServiceAttack"
+    },
+    {
+      "claim_id": "claim-e1077d726520a57b",
+      "kind": "type_of",
+      "normalized_statement": "UnauthorizedAccess is a type of SecurityIncident",
+      "object": "SecurityIncident",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-b1dc7381e3d28f28",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "UnauthorizedAccess is a type of SecurityIncident",
+      "subject": "UnauthorizedAccess"
+    },
+    {
+      "claim_id": "claim-7177d69014e3372e",
+      "kind": "type_of",
+      "normalized_statement": "InsiderMisuse is a type of SecurityIncident",
+      "object": "SecurityIncident",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-b1dc7381e3d28f28",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "InsiderMisuse is a type of SecurityIncident",
+      "subject": "InsiderMisuse"
+    },
+    {
+      "claim_id": "claim-5682b845fde59bb6",
+      "kind": "type_of",
+      "normalized_statement": "LostDeviceIncident is a type of SecurityIncident",
+      "object": "SecurityIncident",
+      "paragraph_id": "p042",
+      "predicate": "type_of",
+      "source": {
+        "asset_id": "p042",
+        "evidence": "Malware infection, phishing attack, ransomware attack, data breach, denial-of-service attack, unauthorized access, insider misuse, and lost device incident are subclasses of security incident.",
+        "paragraph_id": "p042",
+        "sentence_id": "sent-b1dc7381e3d28f28",
+        "source_text_id": "037aa45745d436b0ef85f7fe1ea9951bb091f60f6b732ec1b3df5208496f438f"
+      },
+      "statement": "LostDeviceIncident is a type of SecurityIncident",
+      "subject": "LostDeviceIncident"
     }
   ],
   "contract_required_stage": "semantic_claims",

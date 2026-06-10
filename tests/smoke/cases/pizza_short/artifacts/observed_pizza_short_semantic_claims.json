@@ -1,0 +1,1179 @@
+{
+  "claim_count": 68,
+  "claims": [
+    {
+      "claim_id": "claim-c3d64253322aa51e",
+      "kind": "relation",
+      "normalized_statement": "ChefSofiaRossi prepares SaturdayLunchServiceForThreeNeighborhoodTable",
+      "object": "SaturdayLunchServiceForThreeNeighborhoodTable",
+      "paragraph_id": "pizza_001",
+      "predicate": "prepares",
+      "source": {
+        "asset_id": "pizza_001",
+        "evidence": "At Mario's Pizzeria in Harbor Market, chef Sofia Rossi prepares the Saturday lunch service for three neighborhood tables.",
+        "paragraph_id": "pizza_001",
+        "sentence_id": "sent-c73625ce7f149cd8",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "ChefSofiaRossi prepares SaturdayLunchServiceForThreeNeighborhoodTable",
+      "subject": "ChefSofiaRossi"
+    },
+    {
+      "claim_id": "claim-19ff7dcdf9874f0d",
+      "kind": "definition",
+      "normalized_statement": "Centerpiece is a MargheritaPizzaCalledTheVesuvioPie",
+      "object": "MargheritaPizzaCalledTheVesuvioPie",
+      "paragraph_id": "pizza_001",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "pizza_001",
+        "evidence": "The centerpiece is a Margherita pizza called the Vesuvio pie.",
+        "paragraph_id": "pizza_001",
+        "sentence_id": "sent-388774ea63f571d6",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Centerpiece is a MargheritaPizzaCalledTheVesuvioPie",
+      "subject": "Centerpiece"
+    },
+    {
+      "claim_id": "claim-e84476a752a313d2",
+      "kind": "relation",
+      "normalized_statement": "Sofia stretches DoughMadeFromCaputoFlour",
+      "object": "DoughMadeFromCaputoFlour",
+      "paragraph_id": "pizza_001",
+      "predicate": "stretches",
+      "source": {
+        "asset_id": "pizza_001",
+        "evidence": "Sofia stretches dough made from Caputo flour, warm water, sea salt, and a slow sourdough starter.",
+        "paragraph_id": "pizza_001",
+        "sentence_id": "sent-f3eae7a9cee60579",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Sofia stretches DoughMadeFromCaputoFlour",
+      "subject": "Sofia"
+    },
+    {
+      "claim_id": "claim-32d310ad8aea2599",
+      "kind": "relation",
+      "normalized_statement": "Sofia stretches WarmWater",
+      "object": "WarmWater",
+      "paragraph_id": "pizza_001",
+      "predicate": "stretches",
+      "source": {
+        "asset_id": "pizza_001",
+        "evidence": "Sofia stretches dough made from Caputo flour, warm water, sea salt, and a slow sourdough starter.",
+        "paragraph_id": "pizza_001",
+        "sentence_id": "sent-f3eae7a9cee60579",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Sofia stretches WarmWater",
+      "subject": "Sofia"
+    },
+    {
+      "claim_id": "claim-07b634ef5bcbccf8",
+      "kind": "relation",
+      "normalized_statement": "Sofia stretches SeaSalt",
+      "object": "SeaSalt",
+      "paragraph_id": "pizza_001",
+      "predicate": "stretches",
+      "source": {
+        "asset_id": "pizza_001",
+        "evidence": "Sofia stretches dough made from Caputo flour, warm water, sea salt, and a slow sourdough starter.",
+        "paragraph_id": "pizza_001",
+        "sentence_id": "sent-f3eae7a9cee60579",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Sofia stretches SeaSalt",
+      "subject": "Sofia"
+    },
+    {
+      "claim_id": "claim-f8557de714c9d913",
+      "kind": "relation",
+      "normalized_statement": "Sofia stretches SlowSourdoughStarter",
+      "object": "SlowSourdoughStarter",
+      "paragraph_id": "pizza_001",
+      "predicate": "stretches",
+      "source": {
+        "asset_id": "pizza_001",
+        "evidence": "Sofia stretches dough made from Caputo flour, warm water, sea salt, and a slow sourdough starter.",
+        "paragraph_id": "pizza_001",
+        "sentence_id": "sent-f3eae7a9cee60579",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Sofia stretches SlowSourdoughStarter",
+      "subject": "Sofia"
+    },
+    {
+      "claim_id": "claim-40b45247f4cb272f",
+      "kind": "relation",
+      "normalized_statement": "AssistantLucaFerretti checks RestedInTheBlueProofingBox",
+      "object": "RestedInTheBlueProofingBox",
+      "paragraph_id": "pizza_001",
+      "predicate": "checks",
+      "source": {
+        "asset_id": "pizza_001",
+        "evidence": "Her assistant Luca Ferretti checks that the dough was mixed on Friday morning, rested in the blue proofing box, and divided into four round balls before service.",
+        "paragraph_id": "pizza_001",
+        "sentence_id": "sent-c3c9b682493b9b9f",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "AssistantLucaFerretti checks RestedInTheBlueProofingBox",
+      "subject": "AssistantLucaFerretti"
+    },
+    {
+      "claim_id": "claim-961920be4a1bec4b",
+      "kind": "relation",
+      "normalized_statement": "AssistantLucaFerretti checks DividedIntoFourRoundBallBeforeService",
+      "object": "DividedIntoFourRoundBallBeforeService",
+      "paragraph_id": "pizza_001",
+      "predicate": "checks",
+      "source": {
+        "asset_id": "pizza_001",
+        "evidence": "Her assistant Luca Ferretti checks that the dough was mixed on Friday morning, rested in the blue proofing box, and divided into four round balls before service.",
+        "paragraph_id": "pizza_001",
+        "sentence_id": "sent-c3c9b682493b9b9f",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "AssistantLucaFerretti checks DividedIntoFourRoundBallBeforeService",
+      "subject": "AssistantLucaFerretti"
+    },
+    {
+      "claim_id": "claim-972a0815dde052aa",
+      "kind": "relation",
+      "normalized_statement": "SauceForTheVesuvioPie comes SanMarzanoTomatoeDeliveredByGreenValleyFarm",
+      "object": "SanMarzanoTomatoeDeliveredByGreenValleyFarm",
+      "paragraph_id": "paragraph-002",
+      "predicate": "comes",
+      "source": {
+        "asset_id": "paragraph-002",
+        "evidence": "The sauce for the Vesuvio pie comes from San Marzano tomatoes delivered by Green Valley Farm.",
+        "paragraph_id": "paragraph-002",
+        "sentence_id": "sent-59667cb7d59e2cb4",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "SauceForTheVesuvioPie comes SanMarzanoTomatoeDeliveredByGreenValleyFarm",
+      "subject": "SauceForTheVesuvioPie"
+    },
+    {
+      "claim_id": "claim-929cdda1c3efc857",
+      "kind": "relation",
+      "normalized_statement": "Sofia crushes Tomatoe",
+      "object": "Tomatoe",
+      "paragraph_id": "paragraph-002",
+      "predicate": "crushes",
+      "source": {
+        "asset_id": "paragraph-002",
+        "evidence": "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano.",
+        "paragraph_id": "paragraph-002",
+        "sentence_id": "sent-287959cf0603a736",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Sofia crushes Tomatoe",
+      "subject": "Sofia"
+    },
+    {
+      "claim_id": "claim-977b25bc4458a8a5",
+      "kind": "relation",
+      "normalized_statement": "Tomatoe checked_against Basil",
+      "object": "Basil",
+      "paragraph_id": "paragraph-002",
+      "predicate": "checked_against",
+      "source": {
+        "asset_id": "paragraph-002",
+        "evidence": "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano.",
+        "paragraph_id": "paragraph-002",
+        "sentence_id": "sent-287959cf0603a736",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Tomatoe checked_against Basil",
+      "subject": "Tomatoe"
+    },
+    {
+      "claim_id": "claim-cb20cb6cd8d4cb0b",
+      "kind": "relation",
+      "normalized_statement": "Tomatoe checked_against OliveOil",
+      "object": "OliveOil",
+      "paragraph_id": "paragraph-002",
+      "predicate": "checked_against",
+      "source": {
+        "asset_id": "paragraph-002",
+        "evidence": "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano.",
+        "paragraph_id": "paragraph-002",
+        "sentence_id": "sent-287959cf0603a736",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Tomatoe checked_against OliveOil",
+      "subject": "Tomatoe"
+    },
+    {
+      "claim_id": "claim-9845de3161fc897f",
+      "kind": "relation",
+      "normalized_statement": "Tomatoe checked_against PinchOfOregano",
+      "object": "PinchOfOregano",
+      "paragraph_id": "paragraph-002",
+      "predicate": "checked_against",
+      "source": {
+        "asset_id": "paragraph-002",
+        "evidence": "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano.",
+        "paragraph_id": "paragraph-002",
+        "sentence_id": "sent-287959cf0603a736",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Tomatoe checked_against PinchOfOregano",
+      "subject": "Tomatoe"
+    },
+    {
+      "claim_id": "claim-de1f4344228b35ad",
+      "kind": "definition",
+      "normalized_statement": "Mozzarella is a SuppliedByRiverDairyAndEachSliceIsMarkedOnThePrepBoardAsFreshFiorDiLatte",
+      "object": "SuppliedByRiverDairyAndEachSliceIsMarkedOnThePrepBoardAsFreshFiorDiLatte",
+      "paragraph_id": "paragraph-002",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "paragraph-002",
+        "evidence": "The mozzarella is supplied by River Dairy, and each slice is marked on the prep board as fresh fior di latte.",
+        "paragraph_id": "paragraph-002",
+        "sentence_id": "sent-25aee67d490a57a9",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Mozzarella is a SuppliedByRiverDairyAndEachSliceIsMarkedOnThePrepBoardAsFreshFiorDiLatte",
+      "subject": "Mozzarella"
+    },
+    {
+      "claim_id": "claim-56d7ebfc7ba5a945",
+      "kind": "relation",
+      "normalized_statement": "Luca grates AgedParmesanOverTheEdge",
+      "object": "AgedParmesanOverTheEdge",
+      "paragraph_id": "paragraph-002",
+      "predicate": "grates",
+      "source": {
+        "asset_id": "paragraph-002",
+        "evidence": "Luca grates aged parmesan over the edge, while Sofia places basil leaves in a triangle so guests can see the recipe pattern clearly.",
+        "paragraph_id": "paragraph-002",
+        "sentence_id": "sent-b26b7fea2f34ddaf",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luca grates AgedParmesanOverTheEdge",
+      "subject": "Luca"
+    },
+    {
+      "claim_id": "claim-e120dcc9068cbb67",
+      "kind": "relation",
+      "normalized_statement": "Luca grates WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly",
+      "object": "WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly",
+      "paragraph_id": "paragraph-002",
+      "predicate": "grates",
+      "source": {
+        "asset_id": "paragraph-002",
+        "evidence": "Luca grates aged parmesan over the edge, while Sofia places basil leaves in a triangle so guests can see the recipe pattern clearly.",
+        "paragraph_id": "paragraph-002",
+        "sentence_id": "sent-b26b7fea2f34ddaf",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luca grates WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly",
+      "subject": "Luca"
+    },
+    {
+      "claim_id": "claim-a2a5e80434714289",
+      "kind": "relation",
+      "normalized_statement": "LuigiBianchi manages DeliveryOrderForMarioSPizzeria",
+      "object": "DeliveryOrderForMarioSPizzeria",
+      "paragraph_id": "paragraph-003",
+      "predicate": "manages",
+      "source": {
+        "asset_id": "paragraph-003",
+        "evidence": "Luigi Bianchi manages delivery orders for Mario's Pizzeria.",
+        "paragraph_id": "paragraph-003",
+        "sentence_id": "sent-ae1315d7c822dccb",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "LuigiBianchi manages DeliveryOrderForMarioSPizzeria",
+      "subject": "LuigiBianchi"
+    },
+    {
+      "claim_id": "claim-9615fd54fe4ef133",
+      "kind": "relation",
+      "normalized_statement": "LuigiBianchi receives OrderFromCentralCafeForOneVesuvioPie",
+      "object": "OrderFromCentralCafeForOneVesuvioPie",
+      "paragraph_id": "paragraph-003",
+      "predicate": "receives",
+      "source": {
+        "asset_id": "paragraph-003",
+        "evidence": "At noon he receives an order from Central Cafe for one Vesuvio pie, one Marinara pizza, and a small arugula salad.",
+        "paragraph_id": "paragraph-003",
+        "sentence_id": "sent-038d82a39fc38445",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "LuigiBianchi receives OrderFromCentralCafeForOneVesuvioPie",
+      "subject": "LuigiBianchi"
+    },
+    {
+      "claim_id": "claim-c78ad09df843dff7",
+      "kind": "relation",
+      "normalized_statement": "LuigiBianchi receives MarinaraPizza",
+      "object": "MarinaraPizza",
+      "paragraph_id": "paragraph-003",
+      "predicate": "receives",
+      "source": {
+        "asset_id": "paragraph-003",
+        "evidence": "At noon he receives an order from Central Cafe for one Vesuvio pie, one Marinara pizza, and a small arugula salad.",
+        "paragraph_id": "paragraph-003",
+        "sentence_id": "sent-038d82a39fc38445",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "LuigiBianchi receives MarinaraPizza",
+      "subject": "LuigiBianchi"
+    },
+    {
+      "claim_id": "claim-eb12be30340d9c94",
+      "kind": "relation",
+      "normalized_statement": "LuigiBianchi receives SmallArugulaSalad",
+      "object": "SmallArugulaSalad",
+      "paragraph_id": "paragraph-003",
+      "predicate": "receives",
+      "source": {
+        "asset_id": "paragraph-003",
+        "evidence": "At noon he receives an order from Central Cafe for one Vesuvio pie, one Marinara pizza, and a small arugula salad.",
+        "paragraph_id": "paragraph-003",
+        "sentence_id": "sent-038d82a39fc38445",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "LuigiBianchi receives SmallArugulaSalad",
+      "subject": "LuigiBianchi"
+    },
+    {
+      "claim_id": "claim-86e0a1364a03abb4",
+      "kind": "relation",
+      "normalized_statement": "OrderTicket connects CentralCafeToTableHostNinaPatel",
+      "object": "CentralCafeToTableHostNinaPatel",
+      "paragraph_id": "paragraph-003",
+      "predicate": "connects",
+      "source": {
+        "asset_id": "paragraph-003",
+        "evidence": "The order ticket connects Central Cafe to table host Nina Patel, who requested extra basil and no chili flakes.",
+        "paragraph_id": "paragraph-003",
+        "sentence_id": "sent-1fc17f07c45b2651",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "OrderTicket connects CentralCafeToTableHostNinaPatel",
+      "subject": "OrderTicket"
+    },
+    {
+      "claim_id": "claim-9c8d207132a71a04",
+      "kind": "relation",
+      "normalized_statement": "OrderTicket connects NoChiliFlake",
+      "object": "NoChiliFlake",
+      "paragraph_id": "paragraph-003",
+      "predicate": "connects",
+      "source": {
+        "asset_id": "paragraph-003",
+        "evidence": "The order ticket connects Central Cafe to table host Nina Patel, who requested extra basil and no chili flakes.",
+        "paragraph_id": "paragraph-003",
+        "sentence_id": "sent-1fc17f07c45b2651",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "OrderTicket connects NoChiliFlake",
+      "subject": "OrderTicket"
+    },
+    {
+      "claim_id": "claim-64d43dde8f7192d3",
+      "kind": "relation",
+      "normalized_statement": "Luigi confirms OrderWithNinaByPhone",
+      "object": "OrderWithNinaByPhone",
+      "paragraph_id": "paragraph-003",
+      "predicate": "confirms",
+      "source": {
+        "asset_id": "paragraph-003",
+        "evidence": "Luigi confirms the order with Nina by phone, writes the destination as Central Cafe on Pine Street, and attaches the ticket to a red thermal bag.",
+        "paragraph_id": "paragraph-003",
+        "sentence_id": "sent-684dd8c82322edc1",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi confirms OrderWithNinaByPhone",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-ec539238528478f7",
+      "kind": "relation",
+      "normalized_statement": "Luigi confirms WriteTheDestinationAsCentralCafeOnPineStreet",
+      "object": "WriteTheDestinationAsCentralCafeOnPineStreet",
+      "paragraph_id": "paragraph-003",
+      "predicate": "confirms",
+      "source": {
+        "asset_id": "paragraph-003",
+        "evidence": "Luigi confirms the order with Nina by phone, writes the destination as Central Cafe on Pine Street, and attaches the ticket to a red thermal bag.",
+        "paragraph_id": "paragraph-003",
+        "sentence_id": "sent-684dd8c82322edc1",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi confirms WriteTheDestinationAsCentralCafeOnPineStreet",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-9f832fae38a08ec9",
+      "kind": "relation",
+      "normalized_statement": "Luigi attaches TicketToARedThermalBag",
+      "object": "TicketToARedThermalBag",
+      "paragraph_id": "paragraph-003",
+      "predicate": "attaches",
+      "source": {
+        "asset_id": "paragraph-003",
+        "evidence": "Luigi confirms the order with Nina by phone, writes the destination as Central Cafe on Pine Street, and attaches the ticket to a red thermal bag.",
+        "paragraph_id": "paragraph-003",
+        "sentence_id": "sent-684dd8c82322edc1",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi attaches TicketToARedThermalBag",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-3b558ca34676c302",
+      "kind": "relation",
+      "normalized_statement": "InsideTheKitchenTheWoodOvenNamedDante burns OakLog",
+      "object": "OakLog",
+      "paragraph_id": "paragraph-004",
+      "predicate": "burns",
+      "source": {
+        "asset_id": "paragraph-004",
+        "evidence": "Inside the kitchen, the wood oven named Dante burns oak logs and holds a temperature near 430 degrees Celsius.",
+        "paragraph_id": "paragraph-004",
+        "sentence_id": "sent-7450c71f65ebf6c5",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "InsideTheKitchenTheWoodOvenNamedDante burns OakLog",
+      "subject": "InsideTheKitchenTheWoodOvenNamedDante"
+    },
+    {
+      "claim_id": "claim-54c6d1aecc6af035",
+      "kind": "relation",
+      "normalized_statement": "InsideTheKitchenTheWoodOvenNamedDante holds TemperatureNear430DegreeCelsius",
+      "object": "TemperatureNear430DegreeCelsius",
+      "paragraph_id": "paragraph-004",
+      "predicate": "holds",
+      "source": {
+        "asset_id": "paragraph-004",
+        "evidence": "Inside the kitchen, the wood oven named Dante burns oak logs and holds a temperature near 430 degrees Celsius.",
+        "paragraph_id": "paragraph-004",
+        "sentence_id": "sent-7450c71f65ebf6c5",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "InsideTheKitchenTheWoodOvenNamedDante holds TemperatureNear430DegreeCelsius",
+      "subject": "InsideTheKitchenTheWoodOvenNamedDante"
+    },
+    {
+      "claim_id": "claim-889251cd49d6c1e7",
+      "kind": "relation",
+      "normalized_statement": "Sofia slides VesuvioPieOntoTheOvenFloor",
+      "object": "VesuvioPieOntoTheOvenFloor",
+      "paragraph_id": "paragraph-004",
+      "predicate": "slides",
+      "source": {
+        "asset_id": "paragraph-004",
+        "evidence": "Sofia slides the Vesuvio pie onto the oven floor with a long metal peel.",
+        "paragraph_id": "paragraph-004",
+        "sentence_id": "sent-f271bcebe60f3017",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Sofia slides VesuvioPieOntoTheOvenFloor",
+      "subject": "Sofia"
+    },
+    {
+      "claim_id": "claim-ed687707389b8519",
+      "kind": "relation",
+      "normalized_statement": "VesuvioPieOntoTheOvenFloor checked_against LongMetalPeel",
+      "object": "LongMetalPeel",
+      "paragraph_id": "paragraph-004",
+      "predicate": "checked_against",
+      "source": {
+        "asset_id": "paragraph-004",
+        "evidence": "Sofia slides the Vesuvio pie onto the oven floor with a long metal peel.",
+        "paragraph_id": "paragraph-004",
+        "sentence_id": "sent-f271bcebe60f3017",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "VesuvioPieOntoTheOvenFloor checked_against LongMetalPeel",
+      "subject": "VesuvioPieOntoTheOvenFloor"
+    },
+    {
+      "claim_id": "claim-caa58ab8daec2d9d",
+      "kind": "relation",
+      "normalized_statement": "Crust blisters First",
+      "object": "First",
+      "paragraph_id": "paragraph-004",
+      "predicate": "blisters",
+      "source": {
+        "asset_id": "paragraph-004",
+        "evidence": "The crust blisters first, the tomato sauce darkens near the rim, and the mozzarella melts into white pools.",
+        "paragraph_id": "paragraph-004",
+        "sentence_id": "sent-d153df7072b70e9b",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Crust blisters First",
+      "subject": "Crust"
+    },
+    {
+      "claim_id": "claim-2c928459bb047fbf",
+      "kind": "relation",
+      "normalized_statement": "Crust blisters TomatoSauceDarkenNearTheRim",
+      "object": "TomatoSauceDarkenNearTheRim",
+      "paragraph_id": "paragraph-004",
+      "predicate": "blisters",
+      "source": {
+        "asset_id": "paragraph-004",
+        "evidence": "The crust blisters first, the tomato sauce darkens near the rim, and the mozzarella melts into white pools.",
+        "paragraph_id": "paragraph-004",
+        "sentence_id": "sent-d153df7072b70e9b",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Crust blisters TomatoSauceDarkenNearTheRim",
+      "subject": "Crust"
+    },
+    {
+      "claim_id": "claim-25a9270fefa03cf4",
+      "kind": "relation",
+      "normalized_statement": "Crust blisters MozzarellaMeltIntoWhitePool",
+      "object": "MozzarellaMeltIntoWhitePool",
+      "paragraph_id": "paragraph-004",
+      "predicate": "blisters",
+      "source": {
+        "asset_id": "paragraph-004",
+        "evidence": "The crust blisters first, the tomato sauce darkens near the rim, and the mozzarella melts into white pools.",
+        "paragraph_id": "paragraph-004",
+        "sentence_id": "sent-d153df7072b70e9b",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Crust blisters MozzarellaMeltIntoWhitePool",
+      "subject": "Crust"
+    },
+    {
+      "claim_id": "claim-c3042237a212a229",
+      "kind": "relation",
+      "normalized_statement": "Luca turns PizzaTwice",
+      "object": "PizzaTwice",
+      "paragraph_id": "paragraph-004",
+      "predicate": "turns",
+      "source": {
+        "asset_id": "paragraph-004",
+        "evidence": "Luca turns the pizza twice and records the bake time as ninety seconds in the service notebook.",
+        "paragraph_id": "paragraph-004",
+        "sentence_id": "sent-4f46aabbabffed8f",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luca turns PizzaTwice",
+      "subject": "Luca"
+    },
+    {
+      "claim_id": "claim-6b474a688de85370",
+      "kind": "relation",
+      "normalized_statement": "Luca records BakeTimeAsNinetySecondInTheServiceNotebook",
+      "object": "BakeTimeAsNinetySecondInTheServiceNotebook",
+      "paragraph_id": "paragraph-004",
+      "predicate": "records",
+      "source": {
+        "asset_id": "paragraph-004",
+        "evidence": "Luca turns the pizza twice and records the bake time as ninety seconds in the service notebook.",
+        "paragraph_id": "paragraph-004",
+        "sentence_id": "sent-4f46aabbabffed8f",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luca records BakeTimeAsNinetySecondInTheServiceNotebook",
+      "subject": "Luca"
+    },
+    {
+      "claim_id": "claim-16f96c24cdb42c11",
+      "kind": "relation",
+      "normalized_statement": "WhenThePizza leaves Oven",
+      "object": "Oven",
+      "paragraph_id": "paragraph-005",
+      "predicate": "leaves",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "When the pizza leaves the oven, Sofia adds more basil and one spoon of olive oil from Olive Grove Cooperative.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-77e4ab83993039e0",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "WhenThePizza leaves Oven",
+      "subject": "WhenThePizza"
+    },
+    {
+      "claim_id": "claim-fe0f9d7f2a1bf961",
+      "kind": "relation",
+      "normalized_statement": "WhenThePizza leaves SofiaAddMoreBasil",
+      "object": "SofiaAddMoreBasil",
+      "paragraph_id": "paragraph-005",
+      "predicate": "leaves",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "When the pizza leaves the oven, Sofia adds more basil and one spoon of olive oil from Olive Grove Cooperative.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-77e4ab83993039e0",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "WhenThePizza leaves SofiaAddMoreBasil",
+      "subject": "WhenThePizza"
+    },
+    {
+      "claim_id": "claim-8e0d943545de4c07",
+      "kind": "relation",
+      "normalized_statement": "WhenThePizza leaves SpoonOfOliveOilFromOliveGroveCooperative",
+      "object": "SpoonOfOliveOilFromOliveGroveCooperative",
+      "paragraph_id": "paragraph-005",
+      "predicate": "leaves",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "When the pizza leaves the oven, Sofia adds more basil and one spoon of olive oil from Olive Grove Cooperative.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-77e4ab83993039e0",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "WhenThePizza leaves SpoonOfOliveOilFromOliveGroveCooperative",
+      "subject": "WhenThePizza"
+    },
+    {
+      "claim_id": "claim-76f1a042b626f758",
+      "kind": "relation",
+      "normalized_statement": "WhenThePizza cuts PieIntoSixSlice",
+      "object": "PieIntoSixSlice",
+      "paragraph_id": "paragraph-005",
+      "predicate": "cuts",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "She cuts the pie into six slices and places it in a box labeled order CAFE-17.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-020a029846e7bf21",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "WhenThePizza cuts PieIntoSixSlice",
+      "subject": "WhenThePizza"
+    },
+    {
+      "claim_id": "claim-8fa06c7b7c11ffd6",
+      "internal": true,
+      "kind": "relation",
+      "normalized_statement": "WhenThePizza places ItInABoxLabeledOrderCAFE17",
+      "object": "ItInABoxLabeledOrderCAFE17",
+      "paragraph_id": "paragraph-005",
+      "predicate": "places",
+      "resolution_status": "unresolved",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "She cuts the pie into six slices and places it in a box labeled order CAFE-17.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-020a029846e7bf21",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "WhenThePizza places ItInABoxLabeledOrderCAFE17",
+      "subject": "WhenThePizza",
+      "visibility": "internal"
+    },
+    {
+      "claim_id": "claim-f1d7e8524eb1a55c",
+      "kind": "relation",
+      "normalized_statement": "Luigi scans Label",
+      "object": "Label",
+      "paragraph_id": "paragraph-005",
+      "predicate": "scans",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "Luigi scans the label, places the box beside the salad, and leaves Mario's Pizzeria on a blue bicycle.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-f8ee21bebcd7b1ce",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi scans Label",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-8a7b20443f18a30d",
+      "kind": "relation",
+      "normalized_statement": "Luigi scans PlaceTheBoxBesideTheSalad",
+      "object": "PlaceTheBoxBesideTheSalad",
+      "paragraph_id": "paragraph-005",
+      "predicate": "scans",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "Luigi scans the label, places the box beside the salad, and leaves Mario's Pizzeria on a blue bicycle.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-f8ee21bebcd7b1ce",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi scans PlaceTheBoxBesideTheSalad",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-63c04cb4a30cda41",
+      "kind": "relation",
+      "normalized_statement": "Luigi leaves MarioSPizzeriaOnABlueBicycle",
+      "object": "MarioSPizzeriaOnABlueBicycle",
+      "paragraph_id": "paragraph-005",
+      "predicate": "leaves",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "Luigi scans the label, places the box beside the salad, and leaves Mario's Pizzeria on a blue bicycle.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-f8ee21bebcd7b1ce",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi leaves MarioSPizzeriaOnABlueBicycle",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-4be94b95ac729095",
+      "kind": "relation",
+      "normalized_statement": "Luigi rides HarborMarketToPineStreet",
+      "object": "HarborMarketToPineStreet",
+      "paragraph_id": "paragraph-005",
+      "predicate": "rides",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "He rides from Harbor Market to Pine Street, passes the public library, and reaches Central Cafe at 12:18 p.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-b786f190493d09b5",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi rides HarborMarketToPineStreet",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-7acb1a622d9ac143",
+      "kind": "relation",
+      "normalized_statement": "Luigi rides PassThePublicLibrary",
+      "object": "PassThePublicLibrary",
+      "paragraph_id": "paragraph-005",
+      "predicate": "rides",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "He rides from Harbor Market to Pine Street, passes the public library, and reaches Central Cafe at 12:18 p.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-b786f190493d09b5",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi rides PassThePublicLibrary",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-008df97c86608b39",
+      "kind": "relation",
+      "normalized_statement": "Luigi reaches CentralCafeAt1218P",
+      "object": "CentralCafeAt1218P",
+      "paragraph_id": "paragraph-005",
+      "predicate": "reaches",
+      "source": {
+        "asset_id": "paragraph-005",
+        "evidence": "He rides from Harbor Market to Pine Street, passes the public library, and reaches Central Cafe at 12:18 p.",
+        "paragraph_id": "paragraph-005",
+        "sentence_id": "sent-b786f190493d09b5",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi reaches CentralCafeAt1218P",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-8865e667c8b8f1f1",
+      "kind": "relation",
+      "normalized_statement": "NinaPatel receives VesuvioPie",
+      "object": "VesuvioPie",
+      "paragraph_id": "paragraph-006",
+      "predicate": "receives",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "At Central Cafe, Nina Patel receives the Vesuvio pie and signs the delivery tablet.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-9b51e31aad89f47f",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "NinaPatel receives VesuvioPie",
+      "subject": "NinaPatel"
+    },
+    {
+      "claim_id": "claim-2ff446ac7b813493",
+      "kind": "relation",
+      "normalized_statement": "NinaPatel signs DeliveryTablet",
+      "object": "DeliveryTablet",
+      "paragraph_id": "paragraph-006",
+      "predicate": "signs",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "At Central Cafe, Nina Patel receives the Vesuvio pie and signs the delivery tablet.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-9b51e31aad89f47f",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "NinaPatel signs DeliveryTablet",
+      "subject": "NinaPatel"
+    },
+    {
+      "claim_id": "claim-f8f5589b8c5e7b99",
+      "kind": "relation",
+      "normalized_statement": "NinaPatel serves TwoSliceToBaristaOmarChen",
+      "object": "TwoSliceToBaristaOmarChen",
+      "paragraph_id": "paragraph-006",
+      "predicate": "serves",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-d84be9952a753ab3",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "NinaPatel serves TwoSliceToBaristaOmarChen",
+      "subject": "NinaPatel"
+    },
+    {
+      "claim_id": "claim-a74a7ad4857b0f8b",
+      "kind": "relation",
+      "normalized_statement": "NinaPatel serves SliceToManagerElenaRuiz",
+      "object": "SliceToManagerElenaRuiz",
+      "paragraph_id": "paragraph-006",
+      "predicate": "serves",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-d84be9952a753ab3",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "NinaPatel serves SliceToManagerElenaRuiz",
+      "subject": "NinaPatel"
+    },
+    {
+      "claim_id": "claim-70f95b6f856a0a71",
+      "kind": "relation",
+      "normalized_statement": "NinaPatel keeps ThreeSlice",
+      "object": "ThreeSlice",
+      "paragraph_id": "paragraph-006",
+      "predicate": "keeps",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-d84be9952a753ab3",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "NinaPatel keeps ThreeSlice",
+      "subject": "NinaPatel"
+    },
+    {
+      "claim_id": "claim-cc30a1aae0626a6c",
+      "kind": "relation",
+      "normalized_statement": "ThreeSlice supports FrontCounterStaff",
+      "object": "FrontCounterStaff",
+      "paragraph_id": "paragraph-006",
+      "predicate": "supports",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-d84be9952a753ab3",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "ThreeSlice supports FrontCounterStaff",
+      "subject": "ThreeSlice"
+    },
+    {
+      "claim_id": "claim-2ba70f3a38f8768c",
+      "kind": "relation",
+      "normalized_statement": "Nina tells Luigi",
+      "object": "Luigi",
+      "paragraph_id": "paragraph-006",
+      "predicate": "tells",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-5007c103936b9f77",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Nina tells Luigi",
+      "subject": "Nina"
+    },
+    {
+      "claim_id": "claim-e733de8c02284933",
+      "kind": "relation",
+      "normalized_statement": "Luigi thes BasilAromaMatchTheRequest",
+      "object": "BasilAromaMatchTheRequest",
+      "paragraph_id": "paragraph-006",
+      "predicate": "thes",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-5007c103936b9f77",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi thes BasilAromaMatchTheRequest",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-80e46271f7906d49",
+      "kind": "relation",
+      "normalized_statement": "Luigi thes LuigiRecordTheDeliveryAsCompleted",
+      "object": "LuigiRecordTheDeliveryAsCompleted",
+      "paragraph_id": "paragraph-006",
+      "predicate": "thes",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-5007c103936b9f77",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Luigi thes LuigiRecordTheDeliveryAsCompleted",
+      "subject": "Luigi"
+    },
+    {
+      "claim_id": "claim-920a8824ed586f66",
+      "kind": "relation",
+      "normalized_statement": "Tablet links MarioSPizzeria",
+      "object": "MarioSPizzeria",
+      "paragraph_id": "paragraph-006",
+      "predicate": "links",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-9e578c7d991c9474",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Tablet links MarioSPizzeria",
+      "subject": "Tablet"
+    },
+    {
+      "claim_id": "claim-ad0d8edf14482f84",
+      "kind": "relation",
+      "normalized_statement": "Tablet links LuigiBianchi",
+      "object": "LuigiBianchi",
+      "paragraph_id": "paragraph-006",
+      "predicate": "links",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-9e578c7d991c9474",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Tablet links LuigiBianchi",
+      "subject": "Tablet"
+    },
+    {
+      "claim_id": "claim-13dabad6711513ae",
+      "kind": "relation",
+      "normalized_statement": "Tablet links CentralCafe",
+      "object": "CentralCafe",
+      "paragraph_id": "paragraph-006",
+      "predicate": "links",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-9e578c7d991c9474",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Tablet links CentralCafe",
+      "subject": "Tablet"
+    },
+    {
+      "claim_id": "claim-592e2456aea2b04e",
+      "kind": "relation",
+      "normalized_statement": "Tablet links NinaPatel",
+      "object": "NinaPatel",
+      "paragraph_id": "paragraph-006",
+      "predicate": "links",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-9e578c7d991c9474",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Tablet links NinaPatel",
+      "subject": "Tablet"
+    },
+    {
+      "claim_id": "claim-66a39421a29bb389",
+      "kind": "relation",
+      "normalized_statement": "Tablet links OrderCAFE17",
+      "object": "OrderCAFE17",
+      "paragraph_id": "paragraph-006",
+      "predicate": "links",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-9e578c7d991c9474",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Tablet links OrderCAFE17",
+      "subject": "Tablet"
+    },
+    {
+      "claim_id": "claim-0431bdb8725e1398",
+      "kind": "relation",
+      "normalized_statement": "Tablet links VesuvioPieInTheSameDeliveryRecord",
+      "object": "VesuvioPieInTheSameDeliveryRecord",
+      "paragraph_id": "paragraph-006",
+      "predicate": "links",
+      "source": {
+        "asset_id": "paragraph-006",
+        "evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+        "paragraph_id": "paragraph-006",
+        "sentence_id": "sent-9e578c7d991c9474",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Tablet links VesuvioPieInTheSameDeliveryRecord",
+      "subject": "Tablet"
+    },
+    {
+      "claim_id": "claim-a6bc64b8a7ab76ff",
+      "kind": "relation",
+      "normalized_statement": "Sofia reviews Notebook",
+      "object": "Notebook",
+      "paragraph_id": "paragraph-007",
+      "predicate": "reviews",
+      "source": {
+        "asset_id": "paragraph-007",
+        "evidence": "After lunch, Sofia reviews the notebook.",
+        "paragraph_id": "paragraph-007",
+        "sentence_id": "sent-4c8ff411b51c118d",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Sofia reviews Notebook",
+      "subject": "Sofia"
+    },
+    {
+      "claim_id": "claim-ae2a391dbd447c9c",
+      "internal": true,
+      "kind": "relation",
+      "normalized_statement": "It states RiverDairySuppliedMozzarella",
+      "object": "RiverDairySuppliedMozzarella",
+      "paragraph_id": "paragraph-007",
+      "predicate": "states",
+      "resolution_status": "unresolved",
+      "source": {
+        "asset_id": "paragraph-007",
+        "evidence": "It states that Green Valley Farm supplied tomatoes, River Dairy supplied mozzarella, Olive Grove Cooperative supplied olive oil, and Dante baked the Vesuvio pie.",
+        "paragraph_id": "paragraph-007",
+        "sentence_id": "sent-2c94493560040b3e",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "It states RiverDairySuppliedMozzarella",
+      "subject": "It",
+      "visibility": "internal"
+    },
+    {
+      "claim_id": "claim-c5f94bf7004c8ee8",
+      "internal": true,
+      "kind": "relation",
+      "normalized_statement": "It states OliveGroveCooperativeSuppliedOliveOil",
+      "object": "OliveGroveCooperativeSuppliedOliveOil",
+      "paragraph_id": "paragraph-007",
+      "predicate": "states",
+      "resolution_status": "unresolved",
+      "source": {
+        "asset_id": "paragraph-007",
+        "evidence": "It states that Green Valley Farm supplied tomatoes, River Dairy supplied mozzarella, Olive Grove Cooperative supplied olive oil, and Dante baked the Vesuvio pie.",
+        "paragraph_id": "paragraph-007",
+        "sentence_id": "sent-2c94493560040b3e",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "It states OliveGroveCooperativeSuppliedOliveOil",
+      "subject": "It",
+      "visibility": "internal"
+    },
+    {
+      "claim_id": "claim-09f31f8574672920",
+      "internal": true,
+      "kind": "relation",
+      "normalized_statement": "It states DanteBakedTheVesuvioPie",
+      "object": "DanteBakedTheVesuvioPie",
+      "paragraph_id": "paragraph-007",
+      "predicate": "states",
+      "resolution_status": "unresolved",
+      "source": {
+        "asset_id": "paragraph-007",
+        "evidence": "It states that Green Valley Farm supplied tomatoes, River Dairy supplied mozzarella, Olive Grove Cooperative supplied olive oil, and Dante baked the Vesuvio pie.",
+        "paragraph_id": "paragraph-007",
+        "sentence_id": "sent-2c94493560040b3e",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "It states DanteBakedTheVesuvioPie",
+      "subject": "It",
+      "visibility": "internal"
+    },
+    {
+      "claim_id": "claim-72b4a79561074207",
+      "kind": "relation",
+      "normalized_statement": "Sofia stores ProofingBox",
+      "object": "ProofingBox",
+      "paragraph_id": "paragraph-007",
+      "predicate": "stores",
+      "source": {
+        "asset_id": "paragraph-007",
+        "evidence": "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service.",
+        "paragraph_id": "paragraph-007",
+        "sentence_id": "sent-6b24f9aa2c2fe723",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Sofia stores ProofingBox",
+      "subject": "Sofia"
+    },
+    {
+      "claim_id": "claim-348ad9cb3c324a3f",
+      "kind": "relation",
+      "normalized_statement": "Sofia stores CleanTheMetalPeel",
+      "object": "CleanTheMetalPeel",
+      "paragraph_id": "paragraph-007",
+      "predicate": "stores",
+      "source": {
+        "asset_id": "paragraph-007",
+        "evidence": "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service.",
+        "paragraph_id": "paragraph-007",
+        "sentence_id": "sent-6b24f9aa2c2fe723",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Sofia stores CleanTheMetalPeel",
+      "subject": "Sofia"
+    },
+    {
+      "claim_id": "claim-a974d0ca135609f9",
+      "kind": "relation",
+      "normalized_statement": "Sofia updates RecipeCard",
+      "object": "RecipeCard",
+      "paragraph_id": "paragraph-007",
+      "predicate": "updates",
+      "source": {
+        "asset_id": "paragraph-007",
+        "evidence": "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service.",
+        "paragraph_id": "paragraph-007",
+        "sentence_id": "sent-6b24f9aa2c2fe723",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "Sofia updates RecipeCard",
+      "subject": "Sofia"
+    },
+    {
+      "claim_id": "claim-08df5f8444674d87",
+      "kind": "relation",
+      "normalized_statement": "RecipeCard supports NextSaturdayService",
+      "object": "NextSaturdayService",
+      "paragraph_id": "paragraph-007",
+      "predicate": "supports",
+      "source": {
+        "asset_id": "paragraph-007",
+        "evidence": "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service.",
+        "paragraph_id": "paragraph-007",
+        "sentence_id": "sent-6b24f9aa2c2fe723",
+        "source_text_id": "bdf1306777f0d260b4aa8a783e33ec9526d26944ce083ee59cb24951c151e7e5"
+      },
+      "statement": "RecipeCard supports NextSaturdayService",
+      "subject": "RecipeCard"
+    }
+  ],
+  "contract_required_stage": "semantic_claims",
+  "observed_stage": "semantic_claims",
+  "paragraph_asset_ids": [
+    "pizza_001"
+  ],
+  "stage": "semantic_claims"
+}

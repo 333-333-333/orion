@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/apigateway">
+    <orion:controls rdf:resource="https://orion.local/resource/accesstobackendservice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/applicationsecurity">
+    <orion:protects rdf:resource="https://orion.local/resource/softwaresystemthroughouttheirlifecycle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/applicationserver">
+    <orion:executes rdf:resource="https://orion.local/resource/businesslogic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/codereview">
+    <orion:examines rdf:resource="https://orion.local/resource/sourcecodetodetectdefect"/>
+    <orion:examines rdf:resource="https://orion.local/resource/weakness"/>
+    <orion:examines rdf:resource="https://orion.local/resource/policyviolation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/contentdeliverynetwork">
+    <orion:improves rdf:resource="https://orion.local/resource/availability"/>
+    <orion:improves rdf:resource="https://orion.local/resource/performancefordistributeduser"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/databaseserver">
+    <orion:stores rdf:resource="https://orion.local/resource/structureddata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/inputvalidation">
+    <orion:prevents rdf:resource="https://orion.local/resource/malicious"/>
+    <orion:prevents rdf:resource="https://orion.local/resource/malformeddatafromenteringanapplication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/loadbalancer">
+    <orion:distributes rdf:resource="https://orion.local/resource/trafficacrossmultipleserver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/outputencoding">
+    <orion:reduces rdf:resource="https://orion.local/resource/riskofinjection"/>
+    <orion:reduces rdf:resource="https://orion.local/resource/crosssitescripting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/secureauthentication">
+    <orion:protects rdf:resource="https://orion.local/resource/userloginprocess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/secureerrorhandling">
+    <orion:prevents rdf:resource="https://orion.local/resource/sensitiveinformationfrombeingexposedthrougherrormessage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securesessionmanagement">
+    <orion:protects rdf:resource="https://orion.local/resource/sessiontoken"/>
+    <orion:protects rdf:resource="https://orion.local/resource/userstate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityrequirement">
+    <orion:defines rdf:resource="https://orion.local/resource/protectionneedforanapplication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/webserver">
+    <orion:hosts rdf:resource="https://orion.local/resource/webapplication"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/accesstobackendservice">
     <rdfs:label>AccessToBackendService</rdfs:label>
   </owl:Class>
@@ -12,6 +60,9 @@
   <owl:Class rdf:about="https://orion.local/resource/apigateway">
     <rdfs:label>ApiGateway</rdfs:label>
     <rdfs:comment>An API gateway controls access to backend services.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/application">
+    <rdfs:label>Application</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/applicationinterface">
     <rdfs:label>ApplicationInterface</rdfs:label>
@@ -72,7 +123,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/mobileapplication">
     <rdfs:label>MobileApplication</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/webapplication"/>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/application"/>
     <rdfs:comment>A mobile application is a type of application.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/outputencoding">
@@ -149,6 +200,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/webapplication">
     <rdfs:label>WebApplication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/application"/>
     <rdfs:comment>A web application is a type of application.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/webserver">
@@ -263,6 +315,9 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/apigateway">
     <rdfs:label>ApiGateway</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/application">
+    <rdfs:label>Application</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/applicationinterface">
     <rdfs:label>ApplicationInterface</rdfs:label>

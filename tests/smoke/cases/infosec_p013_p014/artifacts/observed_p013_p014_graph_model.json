@@ -50,10 +50,6 @@
       "label": "Desktop"
     },
     {
-      "iri": "orion:DetectiveNetworkControl",
-      "label": "DetectiveNetworkControl"
-    },
-    {
       "iri": "orion:DeviceConnectedToTheOrganizationalNetwork",
       "label": "DeviceConnectedToTheOrganizationalNetwork"
     },
@@ -81,10 +77,6 @@
       ],
       "iri": "orion:EndpointDetectionAndResponse",
       "label": "EndpointDetectionAndResponse"
-    },
-    {
-      "iri": "orion:EndpointProtectionControl",
-      "label": "EndpointProtectionControl"
     },
     {
       "comments": [
@@ -188,10 +180,6 @@
       "label": "PatchManagement"
     },
     {
-      "iri": "orion:PreventiveNetworkControl",
-      "label": "PreventiveNetworkControl"
-    },
-    {
       "comments": [
         "A production network is a type of network segment that hosts business systems."
       ],
@@ -240,8 +228,209 @@
       "label": "Workstation"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:CommunicationChannel",
+      "predicate": "orion:protects",
+      "source_evidence": "Network security protects communication channels, network devices, and network services.",
+      "subject": "orion:NetworkSecurity"
+    },
+    {
+      "object": "orion:NetworkDevice",
+      "predicate": "orion:protects",
+      "source_evidence": "Network security protects communication channels, network devices, and network services.",
+      "subject": "orion:NetworkSecurity"
+    },
+    {
+      "object": "orion:NetworkService",
+      "predicate": "orion:protects",
+      "source_evidence": "Network security protects communication channels, network devices, and network services.",
+      "subject": "orion:NetworkSecurity"
+    },
+    {
+      "object": "orion:RemoteAccess",
+      "predicate": "orion:protects",
+      "source_evidence": "A virtual private network protects remote access by creating an encrypted communication tunnel.",
+      "subject": "orion:VirtualPrivateNetwork"
+    },
+    {
+      "object": "orion:EncryptedCommunicationTunnel",
+      "predicate": "orion:creats",
+      "source_evidence": "A virtual private network protects remote access by creating an encrypted communication tunnel.",
+      "subject": "orion:VirtualPrivateNetwork"
+    },
+    {
+      "object": "orion:SystemIntoDifferentZone",
+      "predicate": "orion:separates",
+      "source_evidence": "Network segmentation separates systems into different zones.",
+      "subject": "orion:NetworkSegmentation"
+    },
+    {
+      "object": "orion:ControlledServiceToExternalNetwork",
+      "predicate": "orion:exposes",
+      "source_evidence": "A demilitarized zone is a type of network segment that exposes controlled services to external networks.",
+      "subject": "orion:DemilitarizedZone"
+    },
+    {
+      "object": "orion:BusinessSystem",
+      "predicate": "orion:hosts",
+      "source_evidence": "A production network is a type of network segment that hosts business systems.",
+      "subject": "orion:ProductionNetwork"
+    },
+    {
+      "object": "orion:Laptop",
+      "predicate": "orion:protects",
+      "source_evidence": "Endpoint security protects laptops, desktops, mobile devices, and servers.",
+      "subject": "orion:EndpointSecurity"
+    },
+    {
+      "object": "orion:Desktop",
+      "predicate": "orion:protects",
+      "source_evidence": "Endpoint security protects laptops, desktops, mobile devices, and servers.",
+      "subject": "orion:EndpointSecurity"
+    },
+    {
+      "object": "orion:MobileDevice",
+      "predicate": "orion:protects",
+      "source_evidence": "Endpoint security protects laptops, desktops, mobile devices, and servers.",
+      "subject": "orion:EndpointSecurity"
+    },
+    {
+      "object": "orion:Server",
+      "predicate": "orion:protects",
+      "source_evidence": "Endpoint security protects laptops, desktops, mobile devices, and servers.",
+      "subject": "orion:EndpointSecurity"
+    },
+    {
+      "object": "orion:DataStoredOnAnEndpoint",
+      "predicate": "orion:protects",
+      "source_evidence": "Device encryption protects data stored on an endpoint.",
+      "subject": "orion:DeviceEncryption"
+    },
+    {
+      "object": "orion:Vulnerability",
+      "predicate": "orion:reduces",
+      "source_evidence": "Patch management reduces vulnerabilities by applying software updates.",
+      "subject": "orion:PatchManagement"
+    },
+    {
+      "object": "orion:SoftwareUpdate",
+      "predicate": "orion:applies",
+      "source_evidence": "Patch management reduces vulnerabilities by applying software updates.",
+      "subject": "orion:PatchManagement"
+    },
+    {
+      "object": "orion:AttackSurface",
+      "predicate": "orion:reduces",
+      "source_evidence": "Configuration hardening reduces attack surface by disabling unnecessary services and applying secure settings.",
+      "subject": "orion:ConfigurationHardening"
+    },
+    {
+      "object": "orion:UnnecessaryService",
+      "predicate": "orion:disabls",
+      "source_evidence": "Configuration hardening reduces attack surface by disabling unnecessary services and applying secure settings.",
+      "subject": "orion:ConfigurationHardening"
+    },
+    {
+      "object": "orion:ApplyingSecureSetting",
+      "predicate": "orion:disabls",
+      "source_evidence": "Configuration hardening reduces attack surface by disabling unnecessary services and applying secure settings.",
+      "subject": "orion:ConfigurationHardening"
+    }
+  ],
   "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:PatchManagement",
+      "predicate": "orion:applies",
+      "range": "orion:SoftwareUpdate"
+    },
+    {
+      "domain": "orion:VirtualPrivateNetwork",
+      "predicate": "orion:creats",
+      "range": "orion:EncryptedCommunicationTunnel"
+    },
+    {
+      "domain": "orion:ConfigurationHardening",
+      "predicate": "orion:disabls",
+      "range": "orion:ApplyingSecureSetting"
+    },
+    {
+      "domain": "orion:ConfigurationHardening",
+      "predicate": "orion:disabls",
+      "range": "orion:UnnecessaryService"
+    },
+    {
+      "domain": "orion:DemilitarizedZone",
+      "predicate": "orion:exposes",
+      "range": "orion:ControlledServiceToExternalNetwork"
+    },
+    {
+      "domain": "orion:ProductionNetwork",
+      "predicate": "orion:hosts",
+      "range": "orion:BusinessSystem"
+    },
+    {
+      "domain": "orion:DeviceEncryption",
+      "predicate": "orion:protects",
+      "range": "orion:DataStoredOnAnEndpoint"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:Desktop"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:Laptop"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:MobileDevice"
+    },
+    {
+      "domain": "orion:EndpointSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:Server"
+    },
+    {
+      "domain": "orion:NetworkSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:CommunicationChannel"
+    },
+    {
+      "domain": "orion:NetworkSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:NetworkDevice"
+    },
+    {
+      "domain": "orion:NetworkSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:NetworkService"
+    },
+    {
+      "domain": "orion:VirtualPrivateNetwork",
+      "predicate": "orion:protects",
+      "range": "orion:RemoteAccess"
+    },
+    {
+      "domain": "orion:ConfigurationHardening",
+      "predicate": "orion:reduces",
+      "range": "orion:AttackSurface"
+    },
+    {
+      "domain": "orion:PatchManagement",
+      "predicate": "orion:reduces",
+      "range": "orion:Vulnerability"
+    },
+    {
+      "domain": "orion:NetworkSegmentation",
+      "predicate": "orion:separates",
+      "range": "orion:SystemIntoDifferentZone"
+    }
+  ],
   "object_property_schema": [
     {
       "domain": "orion:PatchManagement",
@@ -336,38 +525,38 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-89bddf1f1fbb8a64",
-      "claim-979bd7f43eb3e753",
-      "claim-6be47fe1b75314a9",
-      "claim-7784628da5255496",
-      "claim-b74080d1aa86293d",
-      "claim-24717bf0bb204166",
-      "claim-d6e28c29fc0b06fa",
-      "claim-d8a885a89d1beb72",
-      "claim-7093275ae0c85953",
-      "claim-91ccc076a2131dd3",
-      "claim-f014581d4772a533",
-      "claim-7316d6e7e144c890",
-      "claim-4c92e414aaec33ba",
-      "claim-23854376efcf929a",
-      "claim-a3f42678a908d078",
-      "claim-97b8828749e4b526",
-      "claim-4ad1c1bda10fc444",
-      "claim-2b48552770e431c5",
-      "claim-ce68641bd8df2066",
-      "claim-26e2789421afaeb0",
-      "claim-41a6dcbd2d6c018d",
-      "claim-3d408bf1201880c5",
-      "claim-5b59cbd05d424cfc",
-      "claim-bd3b74b0488e744e",
-      "claim-c3e88526c03b6abf",
-      "claim-23428807922a8d18",
-      "claim-2a31ea4ad62db7cf",
-      "claim-cf5bf60ddfdaa56a",
-      "claim-799ac5b26e43e794",
-      "claim-d5e126b046ff54d9",
-      "claim-3875758a3f4cd7e3",
-      "claim-7a8a74b88f7f797e"
+      "claim-c323e9a9c0ed091f",
+      "claim-012c54e4696d3233",
+      "claim-7bc2b6c9276c3552",
+      "claim-0ce21d57a139d063",
+      "claim-7e947baf3942fc2b",
+      "claim-059fbca6808f890b",
+      "claim-4a915e99ccdc3d92",
+      "claim-5b8311576ba2727e",
+      "claim-e3cd586bca1cf9ee",
+      "claim-cc7a90059d50a378",
+      "claim-89b76f941deb8fc8",
+      "claim-362597f578c96ce6",
+      "claim-25e2a2db4649c44a",
+      "claim-d4ef3442b16e999b",
+      "claim-0117d5de8f3eba54",
+      "claim-f539374085b411c9",
+      "claim-dccb02755a0e188d",
+      "claim-d3ecc3e1e32c0fd2",
+      "claim-c6c6909eafc2ae8b",
+      "claim-7b344c994829d09e",
+      "claim-c0679cfd42e86efc",
+      "claim-85f88918cf870fd5",
+      "claim-84de5e1569536627",
+      "claim-202e6355cb64b49a",
+      "claim-9db1e14d5ee49bbc",
+      "claim-fe26d6738b564a09",
+      "claim-e6d380f9f22bbdcc",
+      "claim-c2fd1312d9026a4b",
+      "claim-efee9793609c24af",
+      "claim-67d5b058f1426f08",
+      "claim-e809517cc2e5f19e",
+      "claim-d560d859032d675a"
     ],
     "source_stage": "semantic_claims"
   },
@@ -515,10 +704,6 @@
         "label": "Desktop"
       },
       {
-        "iri": "orion:DetectiveNetworkControl",
-        "label": "DetectiveNetworkControl"
-      },
-      {
         "iri": "orion:DeviceConnectedToTheOrganizationalNetwork",
         "label": "DeviceConnectedToTheOrganizationalNetwork"
       },
@@ -546,10 +731,6 @@
         ],
         "iri": "orion:EndpointDetectionAndResponse",
         "label": "EndpointDetectionAndResponse"
-      },
-      {
-        "iri": "orion:EndpointProtectionControl",
-        "label": "EndpointProtectionControl"
       },
       {
         "comments": [
@@ -651,10 +832,6 @@
         ],
         "iri": "orion:PatchManagement",
         "label": "PatchManagement"
-      },
-      {
-        "iri": "orion:PreventiveNetworkControl",
-        "label": "PreventiveNetworkControl"
       },
       {
         "comments": [
@@ -818,11 +995,6 @@
   },
   "subclass_facts": [
     {
-      "object": "orion:EndpointProtectionControl",
-      "predicate": "rdfs:subClassOf",
-      "subject": "orion:AntivirusSoftware"
-    },
-    {
       "object": "orion:NetworkSegment",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:DemilitarizedZone"
@@ -841,16 +1013,6 @@
       "object": "orion:NetworkSecurityControl",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:Firewall"
-    },
-    {
-      "object": "orion:DetectiveNetworkControl",
-      "predicate": "rdfs:subClassOf",
-      "subject": "orion:IntrusionDetectionSystem"
-    },
-    {
-      "object": "orion:PreventiveNetworkControl",
-      "predicate": "rdfs:subClassOf",
-      "subject": "orion:IntrusionPreventionSystem"
     },
     {
       "object": "orion:Endpoint",

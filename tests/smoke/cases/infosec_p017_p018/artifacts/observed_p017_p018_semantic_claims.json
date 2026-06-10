@@ -2,7 +2,7 @@
   "claim_count": 32,
   "claims": [
     {
-      "claim_id": "claim-c31b40dddbc667be",
+      "claim_id": "claim-3f1a2e7ba9f6ee50",
       "kind": "relation",
       "normalized_statement": "CloudSecurity protects CloudService",
       "object": "CloudService",
@@ -12,14 +12,14 @@
         "asset_id": "p017",
         "evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-7737b6cca242dbdd",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-21fda25aa7aec8ea",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "CloudSecurity protects CloudService",
       "subject": "CloudSecurity"
     },
     {
-      "claim_id": "claim-d2fc70961298b26a",
+      "claim_id": "claim-4f5a55b6adc17d10",
       "kind": "relation",
       "normalized_statement": "CloudSecurity protects CloudInfrastructure",
       "object": "CloudInfrastructure",
@@ -29,14 +29,14 @@
         "asset_id": "p017",
         "evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-7737b6cca242dbdd",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-21fda25aa7aec8ea",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "CloudSecurity protects CloudInfrastructure",
       "subject": "CloudSecurity"
     },
     {
-      "claim_id": "claim-7faede951e674fff",
+      "claim_id": "claim-acf8f14db5c75e28",
       "kind": "relation",
       "normalized_statement": "CloudSecurity protects CloudWorkload",
       "object": "CloudWorkload",
@@ -46,14 +46,14 @@
         "asset_id": "p017",
         "evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-7737b6cca242dbdd",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-21fda25aa7aec8ea",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "CloudSecurity protects CloudWorkload",
       "subject": "CloudSecurity"
     },
     {
-      "claim_id": "claim-ef7ce44336b938ec",
+      "claim_id": "claim-c003bd7b9bd3c76c",
       "kind": "relation",
       "normalized_statement": "CloudSecurity protects CloudData",
       "object": "CloudData",
@@ -63,14 +63,14 @@
         "asset_id": "p017",
         "evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-7737b6cca242dbdd",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-21fda25aa7aec8ea",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "CloudSecurity protects CloudData",
       "subject": "CloudSecurity"
     },
     {
-      "claim_id": "claim-2b28df5a9e425bf8",
+      "claim_id": "claim-7265cedb931dc907",
       "kind": "definition",
       "normalized_statement": "CloudAccount is a AdministrativeBoundaryForCloudResource",
       "object": "AdministrativeBoundaryForCloudResource",
@@ -80,14 +80,14 @@
         "asset_id": "p017",
         "evidence": "A cloud account is an administrative boundary for cloud resources.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-f9aa4f87635f5953",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-288192b50659ceb9",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "CloudAccount is a AdministrativeBoundaryForCloudResource",
       "subject": "CloudAccount"
     },
     {
-      "claim_id": "claim-a0068a5f5ed56131",
+      "claim_id": "claim-ecbfe723fcd138ea",
       "kind": "definition",
       "normalized_statement": "CloudWorkload is a ComputingResourceHostedInACloudEnvironment",
       "object": "ComputingResourceHostedInACloudEnvironment",
@@ -97,14 +97,14 @@
         "asset_id": "p017",
         "evidence": "A cloud workload is a type of computing resource hosted in a cloud environment.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-aa63105a1d5c94df",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-68af0921dec99cb6",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "CloudWorkload is a ComputingResourceHostedInACloudEnvironment",
       "subject": "CloudWorkload"
     },
     {
-      "claim_id": "claim-385e3dcc6abefda8",
+      "claim_id": "claim-6e4dc322e7181b58",
       "kind": "definition",
       "normalized_statement": "VirtualMachine is a CloudWorkload",
       "object": "CloudWorkload",
@@ -114,14 +114,14 @@
         "asset_id": "p017",
         "evidence": "A virtual machine is a type of cloud workload.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-69a0572efd7c813d",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-22213abcfdbc4c5c",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "VirtualMachine is a CloudWorkload",
       "subject": "VirtualMachine"
     },
     {
-      "claim_id": "claim-da42bc0d134859aa",
+      "claim_id": "claim-b70b63020fabf606",
       "kind": "definition",
       "normalized_statement": "Container is a CloudWorkload",
       "object": "CloudWorkload",
@@ -131,14 +131,14 @@
         "asset_id": "p017",
         "evidence": "A container is a type of cloud workload.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-dc820e9746937a65",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-39fc7b74590f6416",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "Container is a CloudWorkload",
       "subject": "Container"
     },
     {
-      "claim_id": "claim-e3e98ead8f730049",
+      "claim_id": "claim-f560aaae4c8d5c93",
       "kind": "definition",
       "normalized_statement": "ServerlessFunction is a CloudWorkload",
       "object": "CloudWorkload",
@@ -148,14 +148,14 @@
         "asset_id": "p017",
         "evidence": "A serverless function is a type of cloud workload.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-27c9800f783fe17a",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-e5bad21e9ed86d35",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "ServerlessFunction is a CloudWorkload",
       "subject": "ServerlessFunction"
     },
     {
-      "claim_id": "claim-6ba2c5708b2c2c13",
+      "claim_id": "claim-61c11be5336e97f2",
       "kind": "definition",
       "normalized_statement": "ObjectStorageBucket is a CloudStorageResource",
       "object": "CloudStorageResource",
@@ -165,31 +165,31 @@
         "asset_id": "p017",
         "evidence": "An object storage bucket is a type of cloud storage resource.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-7f928ce717487382",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-f1219eecc8dfeb72",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "ObjectStorageBucket is a CloudStorageResource",
       "subject": "ObjectStorageBucket"
     },
     {
-      "claim_id": "claim-fce4e6c4efbab35b",
+      "claim_id": "claim-893308a71354f25c",
       "kind": "definition",
-      "normalized_statement": "CloudIdentity is_a CloudIdentity",
-      "object": "CloudIdentity",
+      "normalized_statement": "CloudIdentity is a Identity",
+      "object": "Identity",
       "paragraph_id": "p017",
       "predicate": "is_a",
       "source": {
         "asset_id": "p017",
         "evidence": "A cloud identity is an identity used to access cloud services.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-4e6b417df2c25c59",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-d13d652bc77f4b57",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
-      "statement": "CloudIdentity is_a CloudIdentity",
+      "statement": "CloudIdentity is a Identity",
       "subject": "CloudIdentity"
     },
     {
-      "claim_id": "claim-6532bad308bf42ec",
+      "claim_id": "claim-ac56ce0fd39638d8",
       "kind": "relation",
       "normalized_statement": "CloudSecurityPostureManagementTool detects MisconfigurationInCloudEnvironment",
       "object": "MisconfigurationInCloudEnvironment",
@@ -199,14 +199,14 @@
         "asset_id": "p017",
         "evidence": "A cloud security posture management tool detects misconfigurations in cloud environments.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-d4c0de6a43514ea5",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-c2c06ba34ebd0593",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "CloudSecurityPostureManagementTool detects MisconfigurationInCloudEnvironment",
       "subject": "CloudSecurityPostureManagementTool"
     },
     {
-      "claim_id": "claim-f122521d21add244",
+      "claim_id": "claim-72f98fdffbab8c1d",
       "kind": "relation",
       "normalized_statement": "Cloud access SecurityBrokerMonitor",
       "object": "SecurityBrokerMonitor",
@@ -216,14 +216,14 @@
         "asset_id": "p017",
         "evidence": "A cloud access security broker monitors and controls cloud service usage.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-e8c6f1e30be49270",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-fdab32f26bfe34bc",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "Cloud access SecurityBrokerMonitor",
       "subject": "Cloud"
     },
     {
-      "claim_id": "claim-503dbb4aa1b70b32",
+      "claim_id": "claim-6fdc14e43b48dc4f",
       "kind": "relation",
       "normalized_statement": "Cloud controls CloudServiceUsage",
       "object": "CloudServiceUsage",
@@ -233,14 +233,14 @@
         "asset_id": "p017",
         "evidence": "A cloud access security broker monitors and controls cloud service usage.",
         "paragraph_id": "p017",
-        "sentence_id": "sent-e8c6f1e30be49270",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-fdab32f26bfe34bc",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "Cloud controls CloudServiceUsage",
       "subject": "Cloud"
     },
     {
-      "claim_id": "claim-a0b6d3c238ea1034",
+      "claim_id": "claim-3724177ca3eac30a",
       "kind": "relation",
       "normalized_statement": "Cryptography protects InformationThroughMathematicalTechnique",
       "object": "InformationThroughMathematicalTechnique",
@@ -250,14 +250,14 @@
         "asset_id": "p018",
         "evidence": "Cryptography protects information through mathematical techniques.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-65ab233a2546e24d",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-d513f220ea19a419",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "Cryptography protects InformationThroughMathematicalTechnique",
       "subject": "Cryptography"
     },
     {
-      "claim_id": "claim-5f18b14b654b4a4b",
+      "claim_id": "claim-ab171b1c9d116c32",
       "kind": "definition",
       "normalized_statement": "Encryption is a CryptographicMechanism",
       "object": "CryptographicMechanism",
@@ -267,14 +267,14 @@
         "asset_id": "p018",
         "evidence": "Encryption is a cryptographic mechanism that protects confidentiality.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-1ed99c5197e8181a",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-a69928d22f19780f",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "Encryption is a CryptographicMechanism",
       "subject": "Encryption"
     },
     {
-      "claim_id": "claim-4017ea82a72a1456",
+      "claim_id": "claim-2e17c987404fa6de",
       "kind": "relation",
       "normalized_statement": "Encryption protects Confidentiality",
       "object": "Confidentiality",
@@ -284,14 +284,14 @@
         "asset_id": "p018",
         "evidence": "Encryption is a cryptographic mechanism that protects confidentiality.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-1ed99c5197e8181a",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-a69928d22f19780f",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "Encryption protects Confidentiality",
       "subject": "Encryption"
     },
     {
-      "claim_id": "claim-13b94e0ed041768f",
+      "claim_id": "claim-2c7e4d35be91e8e3",
       "kind": "definition",
       "normalized_statement": "Decryption is a Process",
       "object": "Process",
@@ -301,14 +301,14 @@
         "asset_id": "p018",
         "evidence": "Decryption is the process that converts encrypted data back into readable data.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-23cf582c7565fcb4",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-2209e59dc33ee808",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "Decryption is a Process",
       "subject": "Decryption"
     },
     {
-      "claim_id": "claim-e55f406fd894511b",
+      "claim_id": "claim-bed9153c2df88b44",
       "kind": "relation",
       "normalized_statement": "Decryption converts EncryptedDataBackIntoReadableData",
       "object": "EncryptedDataBackIntoReadableData",
@@ -318,14 +318,14 @@
         "asset_id": "p018",
         "evidence": "Decryption is the process that converts encrypted data back into readable data.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-23cf582c7565fcb4",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-2209e59dc33ee808",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "Decryption converts EncryptedDataBackIntoReadableData",
       "subject": "Decryption"
     },
     {
-      "claim_id": "claim-20939a75600dc52c",
+      "claim_id": "claim-164ef68558b7a450",
       "kind": "definition",
       "normalized_statement": "CryptographicKey is a Value",
       "object": "Value",
@@ -335,14 +335,14 @@
         "asset_id": "p018",
         "evidence": "A cryptographic key is a value used by a cryptographic algorithm.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-2b6213c295f9feb0",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-b83a2bdf35a17b91",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "CryptographicKey is a Value",
       "subject": "CryptographicKey"
     },
     {
-      "claim_id": "claim-a1e59b08efb80ac1",
+      "claim_id": "claim-104d5d67007e96d7",
       "kind": "definition",
       "normalized_statement": "SymmetricEncryption is a Encryption",
       "object": "Encryption",
@@ -352,14 +352,14 @@
         "asset_id": "p018",
         "evidence": "Symmetric encryption is a type of encryption that uses the same key for encryption and decryption.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-15481ca4a5fb1223",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-b9c09a3e796046af",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "SymmetricEncryption is a Encryption",
       "subject": "SymmetricEncryption"
     },
     {
-      "claim_id": "claim-e2bc922e80e68152",
+      "claim_id": "claim-205f4cdf6e219b0d",
       "kind": "relation",
       "normalized_statement": "SymmetricEncryption uses SameKeyForEncryption",
       "object": "SameKeyForEncryption",
@@ -369,14 +369,14 @@
         "asset_id": "p018",
         "evidence": "Symmetric encryption is a type of encryption that uses the same key for encryption and decryption.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-15481ca4a5fb1223",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-b9c09a3e796046af",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "SymmetricEncryption uses SameKeyForEncryption",
       "subject": "SymmetricEncryption"
     },
     {
-      "claim_id": "claim-b248cc8b310a8dd5",
+      "claim_id": "claim-af94e64d6b27a0db",
       "kind": "relation",
       "normalized_statement": "SymmetricEncryption uses Decryption",
       "object": "Decryption",
@@ -386,14 +386,14 @@
         "asset_id": "p018",
         "evidence": "Symmetric encryption is a type of encryption that uses the same key for encryption and decryption.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-15481ca4a5fb1223",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-b9c09a3e796046af",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "SymmetricEncryption uses Decryption",
       "subject": "SymmetricEncryption"
     },
     {
-      "claim_id": "claim-150e6fe27d6848bc",
+      "claim_id": "claim-8977a9c6c1a22452",
       "kind": "definition",
       "normalized_statement": "AsymmetricEncryption is a Encryption",
       "object": "Encryption",
@@ -403,14 +403,14 @@
         "asset_id": "p018",
         "evidence": "Asymmetric encryption is a type of encryption that uses a public key and a private key.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-75c588f5f5d56003",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-e5aa27ff240c787b",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "AsymmetricEncryption is a Encryption",
       "subject": "AsymmetricEncryption"
     },
     {
-      "claim_id": "claim-c6b3a0c3398dba70",
+      "claim_id": "claim-be62ab78ec1ccbda",
       "kind": "relation",
       "normalized_statement": "AsymmetricEncryption uses PublicKey",
       "object": "PublicKey",
@@ -420,14 +420,14 @@
         "asset_id": "p018",
         "evidence": "Asymmetric encryption is a type of encryption that uses a public key and a private key.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-75c588f5f5d56003",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-e5aa27ff240c787b",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "AsymmetricEncryption uses PublicKey",
       "subject": "AsymmetricEncryption"
     },
     {
-      "claim_id": "claim-7ea78f5aeb431a2e",
+      "claim_id": "claim-b58da826fa29ac49",
       "kind": "relation",
       "normalized_statement": "AsymmetricEncryption uses PrivateKey",
       "object": "PrivateKey",
@@ -437,14 +437,14 @@
         "asset_id": "p018",
         "evidence": "Asymmetric encryption is a type of encryption that uses a public key and a private key.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-75c588f5f5d56003",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-e5aa27ff240c787b",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "AsymmetricEncryption uses PrivateKey",
       "subject": "AsymmetricEncryption"
     },
     {
-      "claim_id": "claim-c6fc3c82d6fe764e",
+      "claim_id": "claim-c058bd4671c6702f",
       "kind": "definition",
       "normalized_statement": "DigitalSignature is a CryptographicMechanism",
       "object": "CryptographicMechanism",
@@ -454,14 +454,14 @@
         "asset_id": "p018",
         "evidence": "A digital signature is a cryptographic mechanism that verifies authenticity and integrity.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-33d3f84056e2733a",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-865a466754540610",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "DigitalSignature is a CryptographicMechanism",
       "subject": "DigitalSignature"
     },
     {
-      "claim_id": "claim-43bc36fc41f1c2f6",
+      "claim_id": "claim-c26155f32e66b431",
       "kind": "relation",
       "normalized_statement": "DigitalSignature verifies Authenticity",
       "object": "Authenticity",
@@ -471,14 +471,14 @@
         "asset_id": "p018",
         "evidence": "A digital signature is a cryptographic mechanism that verifies authenticity and integrity.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-33d3f84056e2733a",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-865a466754540610",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "DigitalSignature verifies Authenticity",
       "subject": "DigitalSignature"
     },
     {
-      "claim_id": "claim-5fe4e87ab5420f5b",
+      "claim_id": "claim-ad6fe763f4391b01",
       "kind": "relation",
       "normalized_statement": "DigitalSignature verifies Integrity",
       "object": "Integrity",
@@ -488,14 +488,14 @@
         "asset_id": "p018",
         "evidence": "A digital signature is a cryptographic mechanism that verifies authenticity and integrity.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-33d3f84056e2733a",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-865a466754540610",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "DigitalSignature verifies Integrity",
       "subject": "DigitalSignature"
     },
     {
-      "claim_id": "claim-58cd96b0bacb0aac",
+      "claim_id": "claim-9a4198a7f2f0fe79",
       "kind": "relation",
       "normalized_statement": "HashFunction generates FixedLengthDigestFromInputData",
       "object": "FixedLengthDigestFromInputData",
@@ -505,14 +505,14 @@
         "asset_id": "p018",
         "evidence": "A hash function generates a fixed-length digest from input data.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-e887b87159690b09",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-11e96f01f758dd97",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "HashFunction generates FixedLengthDigestFromInputData",
       "subject": "HashFunction"
     },
     {
-      "claim_id": "claim-40d091bab8974700",
+      "claim_id": "claim-2b97781a3367ed6c",
       "kind": "relation",
       "normalized_statement": "MessageAuthenticationCode verifies MessageIntegrity",
       "object": "MessageIntegrity",
@@ -522,14 +522,14 @@
         "asset_id": "p018",
         "evidence": "A message authentication code verifies message integrity and authenticity.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-5510b93563a7de1e",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-dd8bce3cf25b50dd",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "MessageAuthenticationCode verifies MessageIntegrity",
       "subject": "MessageAuthenticationCode"
     },
     {
-      "claim_id": "claim-16b527bc129cbe31",
+      "claim_id": "claim-b8e35ab9801502c0",
       "kind": "relation",
       "normalized_statement": "MessageAuthenticationCode verifies Authenticity",
       "object": "Authenticity",
@@ -539,8 +539,8 @@
         "asset_id": "p018",
         "evidence": "A message authentication code verifies message integrity and authenticity.",
         "paragraph_id": "p018",
-        "sentence_id": "sent-5510b93563a7de1e",
-        "source_text_id": "eacc42701ebac3567ce77665a7cd45ceb3f88ae056ad4ae5df05b2cd7ae21d00"
+        "sentence_id": "sent-dd8bce3cf25b50dd",
+        "source_text_id": "f1fbbfacfa820e16bd54b7d519dad51fe3f454b380a4a3d1ad8c9070b0a88510"
       },
       "statement": "MessageAuthenticationCode verifies Authenticity",
       "subject": "MessageAuthenticationCode"

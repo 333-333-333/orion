@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/asymmetricencryption">
+    <orion:uses rdf:resource="https://orion.local/resource/publickey"/>
+    <orion:uses rdf:resource="https://orion.local/resource/privatekey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/cloud">
+    <orion:access rdf:resource="https://orion.local/resource/securitybrokermonitor"/>
+    <orion:controls rdf:resource="https://orion.local/resource/cloudserviceusage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/cloudsecurity">
+    <orion:protects rdf:resource="https://orion.local/resource/cloudservice"/>
+    <orion:protects rdf:resource="https://orion.local/resource/cloudinfrastructure"/>
+    <orion:protects rdf:resource="https://orion.local/resource/cloudworkload"/>
+    <orion:protects rdf:resource="https://orion.local/resource/clouddata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/cloudsecurityposturemanagementtool">
+    <orion:detects rdf:resource="https://orion.local/resource/misconfigurationincloudenvironment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/cryptography">
+    <orion:protects rdf:resource="https://orion.local/resource/informationthroughmathematicaltechnique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/decryption">
+    <orion:converts rdf:resource="https://orion.local/resource/encrypteddatabackintoreadabledata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/digitalsignature">
+    <orion:verifies rdf:resource="https://orion.local/resource/authenticity"/>
+    <orion:verifies rdf:resource="https://orion.local/resource/integrity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/encryption">
+    <orion:protects rdf:resource="https://orion.local/resource/confidentiality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/hashfunction">
+    <orion:generates rdf:resource="https://orion.local/resource/fixedlengthdigestfrominputdata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/messageauthenticationcode">
+    <orion:verifies rdf:resource="https://orion.local/resource/messageintegrity"/>
+    <orion:verifies rdf:resource="https://orion.local/resource/authenticity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/symmetricencryption">
+    <orion:uses rdf:resource="https://orion.local/resource/samekeyforencryption"/>
+    <orion:uses rdf:resource="https://orion.local/resource/decryption"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/administrativeboundaryforcloudresource">
     <rdfs:label>AdministrativeBoundaryForCloudResource</rdfs:label>
   </owl:Class>
@@ -26,6 +67,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/cloudidentity">
     <rdfs:label>CloudIdentity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/identity"/>
     <rdfs:comment>A cloud identity is an identity used to access cloud services.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/cloudinfrastructure">
@@ -78,6 +120,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/decryption">
     <rdfs:label>Decryption</rdfs:label>
+    <rdfs:label>Decryption roles subject object</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://orion.local/resource/process"/>
     <rdfs:comment>Decryption is the process that converts encrypted data back into readable data.</rdfs:comment>
   </owl:Class>
@@ -100,6 +143,9 @@
   <owl:Class rdf:about="https://orion.local/resource/hashfunction">
     <rdfs:label>HashFunction</rdfs:label>
     <rdfs:comment>A hash function generates a fixed-length digest from input data.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/identity">
+    <rdfs:label>Identity</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/informationthroughmathematicaltechnique">
     <rdfs:label>InformationThroughMathematicalTechnique</rdfs:label>
@@ -312,6 +358,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/decryption">
     <rdfs:label>Decryption</rdfs:label>
+    <rdfs:label>Decryption roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/digitalsignature">
     <rdfs:label>DigitalSignature</rdfs:label>
@@ -327,6 +374,9 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/hashfunction">
     <rdfs:label>HashFunction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/identity">
+    <rdfs:label>Identity</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/informationthroughmathematicaltechnique">
     <rdfs:label>InformationThroughMathematicalTechnique</rdfs:label>

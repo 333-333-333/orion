@@ -1,0 +1,571 @@
+{
+  "entities": [
+    {
+      "id": "Compliance",
+      "label": "Compliance",
+      "source_sentence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements."
+    },
+    {
+      "id": "Regulatory",
+      "label": "Regulatory",
+      "source_sentence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements."
+    },
+    {
+      "id": "Contractual",
+      "label": "Contractual",
+      "source_sentence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements."
+    },
+    {
+      "id": "InternalRequirement",
+      "label": "InternalRequirement",
+      "source_sentence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements."
+    },
+    {
+      "id": "ComplianceRequirement",
+      "label": "ComplianceRequirement",
+      "source_sentence": "A compliance requirement is an obligation that must be satisfied."
+    },
+    {
+      "id": "Obligation",
+      "label": "Obligation",
+      "source_sentence": "A compliance requirement is an obligation that must be satisfied."
+    },
+    {
+      "id": "BeSatisfied",
+      "label": "BeSatisfied",
+      "source_sentence": "A compliance requirement is an obligation that must be satisfied."
+    },
+    {
+      "id": "LegalRequirement",
+      "label": "LegalRequirement",
+      "source_sentence": "A legal requirement is a type of compliance requirement derived from law."
+    },
+    {
+      "id": "ComplianceRequirementDerivedFromLaw",
+      "label": "ComplianceRequirementDerivedFromLaw",
+      "source_sentence": "A legal requirement is a type of compliance requirement derived from law."
+    },
+    {
+      "id": "RegulatoryRequirement",
+      "label": "RegulatoryRequirement",
+      "source_sentence": "A regulatory requirement is a type of compliance requirement imposed by a regulator."
+    },
+    {
+      "id": "ComplianceRequirementImposedByARegulator",
+      "label": "ComplianceRequirementImposedByARegulator",
+      "source_sentence": "A regulatory requirement is a type of compliance requirement imposed by a regulator."
+    },
+    {
+      "id": "ContractualRequirement",
+      "label": "ContractualRequirement",
+      "source_sentence": "A contractual requirement is a type of compliance requirement defined in an agreement."
+    },
+    {
+      "id": "ComplianceRequirementDefinedInAnAgreement",
+      "label": "ComplianceRequirementDefinedInAnAgreement",
+      "source_sentence": "A contractual requirement is a type of compliance requirement defined in an agreement."
+    },
+    {
+      "id": "ComplianceRequirementDefinedByTheOrganization",
+      "label": "ComplianceRequirementDefinedByTheOrganization",
+      "source_sentence": "An internal requirement is a type of compliance requirement defined by the organization."
+    },
+    {
+      "id": "Evidence",
+      "label": "Evidence",
+      "source_sentence": "Evidence supports the demonstration of compliance."
+    },
+    {
+      "id": "DemonstrationOfCompliance",
+      "label": "DemonstrationOfCompliance",
+      "source_sentence": "Evidence supports the demonstration of compliance."
+    },
+    {
+      "id": "Audit",
+      "label": "Audit",
+      "source_sentence": "An audit evaluates whether controls satisfy requirements."
+    },
+    {
+      "id": "WhetherControlSatisfyRequirement",
+      "label": "WhetherControlSatisfyRequirement",
+      "source_sentence": "An audit evaluates whether controls satisfy requirements."
+    },
+    {
+      "id": "Nonconformity",
+      "label": "Nonconformity",
+      "source_sentence": "A nonconformity is a failure to meet a requirement."
+    },
+    {
+      "id": "FailureToMeetARequirement",
+      "label": "FailureToMeetARequirement",
+      "source_sentence": "A nonconformity is a failure to meet a requirement."
+    },
+    {
+      "id": "CorrectiveAction",
+      "label": "CorrectiveAction",
+      "source_sentence": "A corrective action addresses a nonconformity."
+    },
+    {
+      "id": "Privacy",
+      "label": "Privacy",
+      "source_sentence": "Privacy protects personal data and the rights of individuals."
+    },
+    {
+      "id": "PersonalData",
+      "label": "PersonalData",
+      "source_sentence": "Privacy protects personal data and the rights of individuals."
+    },
+    {
+      "id": "RightOfIndividuals",
+      "label": "RightOfIndividuals",
+      "source_sentence": "Privacy protects personal data and the rights of individuals."
+    },
+    {
+      "id": "DataSubject",
+      "label": "DataSubject",
+      "source_sentence": "A data subject is a person whose personal data is processed."
+    },
+    {
+      "id": "PersonWhosePersonalDataIsProcessed",
+      "label": "PersonWhosePersonalDataIsProcessed",
+      "source_sentence": "A data subject is a person whose personal data is processed."
+    },
+    {
+      "id": "DataController",
+      "label": "DataController",
+      "source_sentence": "A data controller determines the purposes and means of processing personal data."
+    },
+    {
+      "id": "Purpos",
+      "label": "Purpos",
+      "source_sentence": "A data controller determines the purposes and means of processing personal data."
+    },
+    {
+      "id": "OfProcessingPersonalData",
+      "label": "OfProcessingPersonalData",
+      "source_sentence": "A data controller determines the purposes and means of processing personal data."
+    },
+    {
+      "id": "DataProcessor",
+      "label": "DataProcessor",
+      "source_sentence": "A data processor processes personal data on behalf of a controller."
+    },
+    {
+      "id": "PersonalDataOnBehalfOfAController",
+      "label": "PersonalDataOnBehalfOfAController",
+      "source_sentence": "A data processor processes personal data on behalf of a controller."
+    },
+    {
+      "id": "PrivacyNotice",
+      "label": "PrivacyNotice",
+      "source_sentence": "A privacy notice informs data subjects about processing activities."
+    },
+    {
+      "id": "DataSubjectAboutProcessingActivity",
+      "label": "DataSubjectAboutProcessingActivity",
+      "source_sentence": "A privacy notice informs data subjects about processing activities."
+    },
+    {
+      "id": "Consent",
+      "label": "Consent",
+      "source_sentence": "Consent is a lawful basis for processing in some contexts."
+    },
+    {
+      "id": "LawfulBasisForProcessingInSomeContext",
+      "label": "LawfulBasisForProcessingInSomeContext",
+      "source_sentence": "Consent is a lawful basis for processing in some contexts."
+    },
+    {
+      "id": "DataMinimizationLimitPersonalDataToWhat",
+      "label": "DataMinimizationLimitPersonalDataToWhat",
+      "source_sentence": "Data minimization limits personal data to what is necessary."
+    },
+    {
+      "id": "Necessary",
+      "label": "Necessary",
+      "source_sentence": "Data minimization limits personal data to what is necessary."
+    },
+    {
+      "id": "PurposeLimitation",
+      "label": "PurposeLimitation",
+      "source_sentence": "Purpose limitation restricts processing to defined purposes."
+    },
+    {
+      "id": "ProcessingToDefinedPurpos",
+      "label": "ProcessingToDefinedPurpos",
+      "source_sentence": "Purpose limitation restricts processing to defined purposes."
+    },
+    {
+      "id": "RetentionLimitationRestrictHowLongPersonalData",
+      "label": "RetentionLimitationRestrictHowLongPersonalData",
+      "source_sentence": "Retention limitation restricts how long personal data is stored."
+    },
+    {
+      "id": "Stored",
+      "label": "Stored",
+      "source_sentence": "Retention limitation restricts how long personal data is stored."
+    },
+    {
+      "id": "DataDeletionRemovePersonalDataWhenIt",
+      "label": "DataDeletionRemovePersonalDataWhenIt",
+      "source_sentence": "Data deletion removes personal data when it is no longer needed."
+    },
+    {
+      "id": "NoLongerNeeded",
+      "label": "NoLongerNeeded",
+      "source_sentence": "Data deletion removes personal data when it is no longer needed."
+    }
+  ],
+  "relations": [
+    {
+      "id": "claim-d643dfea39c88222",
+      "object": "Regulatory",
+      "predicate": "ensures",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-276fdcd4d4f73501",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
+      "subject": "Compliance"
+    },
+    {
+      "id": "claim-e22e36a602ac2220",
+      "object": "Contractual",
+      "predicate": "ensures",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-276fdcd4d4f73501",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
+      "subject": "Compliance"
+    },
+    {
+      "id": "claim-ae2dcd1001f759c3",
+      "object": "InternalRequirement",
+      "predicate": "ensures",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-276fdcd4d4f73501",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
+      "subject": "Compliance"
+    },
+    {
+      "id": "claim-2679aa1dc3a01027",
+      "object": "Obligation",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "A compliance requirement is an obligation that must be satisfied.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-f935e54abe9640a4",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A compliance requirement is an obligation that must be satisfied.",
+      "subject": "ComplianceRequirement"
+    },
+    {
+      "id": "claim-78a631e1ab2c234a",
+      "object": "BeSatisfied",
+      "predicate": "musts",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "A compliance requirement is an obligation that must be satisfied.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-f935e54abe9640a4",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A compliance requirement is an obligation that must be satisfied.",
+      "subject": "ComplianceRequirement"
+    },
+    {
+      "id": "claim-0bc0493f007d15ba",
+      "object": "ComplianceRequirementDerivedFromLaw",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "A legal requirement is a type of compliance requirement derived from law.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-9bb1b548d7fc8350",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A legal requirement is a type of compliance requirement derived from law.",
+      "subject": "LegalRequirement"
+    },
+    {
+      "id": "claim-e5a664697f1d559b",
+      "object": "ComplianceRequirementImposedByARegulator",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "A regulatory requirement is a type of compliance requirement imposed by a regulator.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-a01116f209a55f8b",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A regulatory requirement is a type of compliance requirement imposed by a regulator.",
+      "subject": "RegulatoryRequirement"
+    },
+    {
+      "id": "claim-97f4dfcae0640911",
+      "object": "ComplianceRequirementDefinedInAnAgreement",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "A contractual requirement is a type of compliance requirement defined in an agreement.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-8c5569b84e184447",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A contractual requirement is a type of compliance requirement defined in an agreement.",
+      "subject": "ContractualRequirement"
+    },
+    {
+      "id": "claim-97d8b25b630438d2",
+      "object": "ComplianceRequirementDefinedByTheOrganization",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "An internal requirement is a type of compliance requirement defined by the organization.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-b51169afff85e711",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "An internal requirement is a type of compliance requirement defined by the organization.",
+      "subject": "InternalRequirement"
+    },
+    {
+      "id": "claim-b4b79e00b0890a9e",
+      "object": "DemonstrationOfCompliance",
+      "predicate": "supports",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "Evidence supports the demonstration of compliance.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-97c1910fa6caced6",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Evidence supports the demonstration of compliance.",
+      "subject": "Evidence"
+    },
+    {
+      "id": "claim-112560db480c3516",
+      "object": "WhetherControlSatisfyRequirement",
+      "predicate": "evaluates",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "An audit evaluates whether controls satisfy requirements.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-73b7565da0163a18",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "An audit evaluates whether controls satisfy requirements.",
+      "subject": "Audit"
+    },
+    {
+      "id": "claim-223da57d9f1aba30",
+      "object": "FailureToMeetARequirement",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "A nonconformity is a failure to meet a requirement.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-bba2431eca948040",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A nonconformity is a failure to meet a requirement.",
+      "subject": "Nonconformity"
+    },
+    {
+      "id": "claim-c44cfa170bc1d0ad",
+      "object": "Nonconformity",
+      "predicate": "addresses",
+      "source": {
+        "asset_id": "p029",
+        "evidence": "A corrective action addresses a nonconformity.",
+        "paragraph_id": "p029",
+        "sentence_id": "sent-a1a3279fe505ca96",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A corrective action addresses a nonconformity.",
+      "subject": "CorrectiveAction"
+    },
+    {
+      "id": "claim-7d288ac020ab391b",
+      "object": "PersonalData",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "Privacy protects personal data and the rights of individuals.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-16def589a11f957a",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Privacy protects personal data and the rights of individuals.",
+      "subject": "Privacy"
+    },
+    {
+      "id": "claim-348feb50046e5477",
+      "object": "RightOfIndividuals",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "Privacy protects personal data and the rights of individuals.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-16def589a11f957a",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Privacy protects personal data and the rights of individuals.",
+      "subject": "Privacy"
+    },
+    {
+      "id": "claim-86bbbf0949505888",
+      "object": "PersonWhosePersonalDataIsProcessed",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "A data subject is a person whose personal data is processed.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-a5eb84bbf31c5650",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A data subject is a person whose personal data is processed.",
+      "subject": "DataSubject"
+    },
+    {
+      "id": "claim-84911f0c94641056",
+      "object": "Purpos",
+      "predicate": "determines",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "A data controller determines the purposes and means of processing personal data.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-2f9e0c4e21eecd9c",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A data controller determines the purposes and means of processing personal data.",
+      "subject": "DataController"
+    },
+    {
+      "id": "claim-ec8d338991f9d619",
+      "object": "OfProcessingPersonalData",
+      "predicate": "means",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "A data controller determines the purposes and means of processing personal data.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-2f9e0c4e21eecd9c",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A data controller determines the purposes and means of processing personal data.",
+      "subject": "DataController"
+    },
+    {
+      "id": "claim-0b5393a8e33b5632",
+      "object": "PersonalDataOnBehalfOfAController",
+      "predicate": "processes",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "A data processor processes personal data on behalf of a controller.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-95d552fb014e60a5",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A data processor processes personal data on behalf of a controller.",
+      "subject": "DataProcessor"
+    },
+    {
+      "id": "claim-5239b509cc62dac8",
+      "object": "DataSubjectAboutProcessingActivity",
+      "predicate": "informs",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "A privacy notice informs data subjects about processing activities.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-9eaf355149ea3893",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "A privacy notice informs data subjects about processing activities.",
+      "subject": "PrivacyNotice"
+    },
+    {
+      "id": "claim-04c10477cc644a30",
+      "object": "LawfulBasisForProcessingInSomeContext",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "Consent is a lawful basis for processing in some contexts.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-f091be1a9346e6af",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Consent is a lawful basis for processing in some contexts.",
+      "subject": "Consent"
+    },
+    {
+      "id": "claim-c630e9cd4f63722b",
+      "object": "Necessary",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "Data minimization limits personal data to what is necessary.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-7fc34eef85b19014",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Data minimization limits personal data to what is necessary.",
+      "subject": "DataMinimizationLimitPersonalDataToWhat"
+    },
+    {
+      "id": "claim-8bcea36e708d9744",
+      "object": "ProcessingToDefinedPurpos",
+      "predicate": "restricts",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "Purpose limitation restricts processing to defined purposes.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-574e7dec76587dee",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Purpose limitation restricts processing to defined purposes.",
+      "subject": "PurposeLimitation"
+    },
+    {
+      "id": "claim-74b4c0e19df5ef2d",
+      "object": "Stored",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "Retention limitation restricts how long personal data is stored.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-abed6bcf829c3932",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Retention limitation restricts how long personal data is stored.",
+      "subject": "RetentionLimitationRestrictHowLongPersonalData"
+    },
+    {
+      "id": "claim-53a3157b9d9ab35d",
+      "object": "NoLongerNeeded",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p030",
+        "evidence": "Data deletion removes personal data when it is no longer needed.",
+        "paragraph_id": "p030",
+        "sentence_id": "sent-533c3f30a1e40343",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
+      },
+      "source_sentence": "Data deletion removes personal data when it is no longer needed.",
+      "subject": "DataDeletionRemovePersonalDataWhenIt"
+    }
+  ]
+}

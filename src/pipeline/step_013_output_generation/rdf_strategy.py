@@ -1,19 +1,23 @@
 from __future__ import annotations
 
+import hashlib
 import re
 from html import escape as _xml_escape
 from typing import Any
 
 from .namespace import compact_iri, make_iri, validate_and_resolve_prefixes, validate_base_iri
+from .rules.explicit_svo_projection import explicit_svo_entity_labels_from_evidence
 
 
 _ORION_NS = 'https://orion.local/resource/'
 _RDF_TYPE = 'rdf' + ':type'
 _RDFS_SUBCLASS = 'rdfs' + ':subClassOf'
-_RDF_XML_TYPE_TAG = 'rdf' + ':type'
 _BR_RELATIVE_PRONOUNS = {'that', 'which', 'who'}
+_BR_PERSONAL_PRONOUNS = {'he', 'she', 'they', 'it', 'we', 'his', 'her', 'their', 'its', 'them'}
+_BR_LEADING_CONTEXT_CONNECTORS = ('From', 'To', 'At', 'In', 'On', 'During', 'After', 'Before')
 _TAXONOMY_SCAFFOLD_HEADS = {'type', 'kind', 'category', 'form'}
 _PHRASE_ARTICLES = {'a', 'an', 'the', 'any', 'each', 'one', 'more'}
+_BR_DEFINITION_ONLY_PARENT_HEADS = {'document', 'model', 'set', 'control', 'controls'}
 
 
 def _normalize_text(value: str | None) -> str:
@@ -35,6 +39,18 @@ def _normalize_fact_phrase(value: str | None) -> str:
     if not normalized:
         return ''
     return ' '.join(_singularize_token(token) for token in normalized.split(' ') if token)
+
+
+def _definition_only_parent_tokens(value: str | None) -> list[str]:
+    local = _local_name(_expand_curie_to_iri(str(value or ''))).strip()
+    spaced = re.sub(r'([a-z0-9])([A-Z])', r'\1 \2', local)
+    spaced = re.sub(r'([A-Z]+)([A-Z][a-z])', r'\1 \2', spaced)
+    return [token for token in re.sub(r'[^a-z0-9]+', ' ', spaced.casefold()).split(' ') if token]
+
+
+def _is_definition_only_parent_candidate(value: str | None) -> bool:
+    tokens = _definition_only_parent_tokens(value)
+    return len(tokens) >= 2 and tokens[-1] in _BR_DEFINITION_ONLY_PARENT_HEADS
 
 
 def _normalize_predicate(value: str | None) -> str:
@@ -254,6 +270,8 @@ def _predicate_local_name(value: str) -> str:
     return head + ''.join(part.capitalize() for part in tail)
 
 
+
+
 def _claim_predicate_iri(value: str, base_iri: str, namespace_mode: bool) -> str:
     aliases = {'focused_on_protecting': 'protects'}
     local = _predicate_local_name(aliases.get(str(value or '').strip(), str(value or '').strip()))
@@ -272,8 +290,9 @@ def _build_canonical_claims_graph(payload: dict[str, Any], base_iri: str, namesp
     classes: dict[str, dict[str, Any]] = {}
     subclass_relations: set[tuple[str, str]] = set()
     properties: set[tuple[str, str, str]] = set()
+    facts: list[dict[str, str]] = []
     parent_by_child: dict[str, str] = {}
-    pending_properties: list[tuple[str, str, str]] = []
+    pending_properties: list[tuple[str, str, str, str]] = []
 
     def add_class(label: str, comment: str | None = None) -> str:
         iri = _claim_resource_iri(label, base_iri, namespace_mode)
@@ -296,6 +315,8 @@ def _build_canonical_claims_graph(payload: dict[str, Any], base_iri: str, namesp
     for claim in claims:
         if not isinstance(claim, dict):
             continue
+        if _is_internal_unresolved_claim(claim):
+            continue
         subject = str(claim.get('subject', '')).strip()
         obj = str(claim.get('object', '')).strip()
         predicate = str(claim.get('predicate', '')).strip()
@@ -303,6 +324,9 @@ def _build_canonical_claims_graph(payload: dict[str, Any], base_iri: str, namesp
         source = claim.get('source') if isinstance(claim.get('source'), dict) else {}
         if isinstance(source, dict):
             evidence = str(source.get('evidence', '')).strip()
+        # BR-P043-SVO-001: explicit SVO list evidence must project each entity as its own class.
+        for label in explicit_svo_entity_labels_from_evidence(evidence, _generic_class_phrase, _dedupe_string_values):
+            add_class(label, evidence)
         if predicate in {'is_a', 'type_of'} and subject and obj:
             add_subclass(subject, obj, evidence)
         elif predicate == 'forms' and subject and obj:
@@ -312,14 +336,14 @@ def _build_canonical_claims_graph(payload: dict[str, Any], base_iri: str, namesp
             if len(member_parents) == 1 and next(iter(member_parents)):
                 domain = next(iter(member_parents))
             add_class(obj, evidence)
-            pending_properties.append(('forms', domain, obj))
+            pending_properties.append(('forms', domain, obj, evidence))
         elif predicate and subject and obj:
             kind = str(claim.get('kind', '')).strip()
             if predicate == 'models' or kind == 'relation':
                 add_class(subject, evidence)
-            pending_properties.append((predicate, subject, obj))
+            pending_properties.append((predicate, subject, obj, evidence))
 
-    for predicate, subject, obj in pending_properties:
+    for predicate, subject, obj, evidence in pending_properties:
         domain = parent_by_child.get(subject, subject) if predicate in {'has_value_for'} else subject
         range_label = obj
         if predicate in {'preserves'}:
@@ -339,6 +363,30 @@ def _build_canonical_claims_graph(payload: dict[str, Any], base_iri: str, namesp
         range_iri = add_class(range_label)
         if prop_iri and domain_iri and range_iri:
             properties.add((prop_iri, domain_iri, range_iri))
+            fact = {'subject': domain_iri, 'predicate': prop_iri, 'object': range_iri}
+            if evidence:
+                fact['source_evidence'] = evidence
+            facts.append(fact)
+
+    linked_class_iris = {iri for _, domain, range_ in properties for iri in (domain, range_)}
+    children_by_parent: dict[str, set[str]] = {}
+    for child_iri, parent_iri in subclass_relations:
+        children_by_parent.setdefault(parent_iri, set()).add(child_iri)
+    definition_only_parents = {
+        parent_iri
+        for parent_iri, children in children_by_parent.items()
+        if len(children) == 1
+        and parent_iri not in linked_class_iris
+        and _is_definition_only_parent_candidate(parent_iri)
+    }
+    if definition_only_parents:
+        subclass_relations = {
+            (child_iri, parent_iri)
+            for child_iri, parent_iri in subclass_relations
+            if parent_iri not in definition_only_parents
+        }
+        for parent_iri in definition_only_parents:
+            classes.pop(parent_iri, None)
 
     if not classes:
         return None
@@ -359,12 +407,13 @@ def _build_canonical_claims_graph(payload: dict[str, Any], base_iri: str, namesp
         ],
     }
     return {
-        'facts': [],
+        'facts': _dedupe_stable(facts, ('subject', 'predicate', 'object', 'source_evidence')),
         'instance_facts': [],
         'type_assertions': [],
         'subclass_facts': subclass_facts,
         'classes': class_rows,
         'object_property_schema': object_property_schema,
+        'object_property_facts': object_property_schema,
         'restrictions': [{'domain': item['domain'], 'property': item['predicate'], 'range': item['range']} for item in object_property_schema],
         'schema': schema,
         'projection': {
@@ -517,11 +566,36 @@ def _local_key(value: str) -> str:
     return re.sub(r'[^a-z0-9]+', '-', _local_name(expanded).casefold()).strip('-')
 
 
+def _has_leading_context_connector(value: str | None) -> bool:
+    local = _local_name(_expand_curie_to_iri(str(value or '').strip()))
+    return any(local.startswith(prefix) and len(local) > len(prefix) and local[len(prefix)].isupper() for prefix in _BR_LEADING_CONTEXT_CONNECTORS)
+
+
+def _resource_words(value: str | None) -> list[str]:
+    local = _local_name(_expand_curie_to_iri(str(value or '').strip()))
+    spaced = re.sub(r'([a-z0-9])([A-Z])', r'\1 \2', local)
+    spaced = re.sub(r'([A-Z]+)([A-Z][a-z])', r'\1 \2', spaced)
+    return [token for token in re.sub(r'[^A-Za-z0-9]+', ' ', spaced).split() if token]
+
+
+def _has_personal_pronoun_head(value: str | None) -> bool:
+    words = _resource_words(value)
+    return bool(words and words[0].casefold() in _BR_PERSONAL_PRONOUNS)
+
+
+def _is_internal_unresolved_claim(claim: dict[str, Any]) -> bool:
+    resolution = str(claim.get('resolution_status') or claim.get('status') or '').casefold()
+    visibility = str(claim.get('visibility') or claim.get('projection') or '').casefold()
+    return resolution in {'unresolved', 'internal_unresolved'} or visibility in {'internal', 'hidden', 'not_visible'} or bool(claim.get('internal')) or bool(claim.get('unresolved'))
+
+
 def _is_noisy_resource(value: str | None, *, allow_predicate: bool = False) -> bool:
     local = _local_key(str(value or ''))
     if not local:
         return True
     if local in _FORBIDDEN_LOCAL_VALUES:
+        return True
+    if not allow_predicate and (_has_personal_pronoun_head(value) or _has_leading_context_connector(value)):
         return True
     if local.startswith('resource-that') or local.startswith(('type-of-', 'kind-of-', 'category-of-', 'form-of-')):
         return True
@@ -712,7 +786,7 @@ def _build_explicit_owl_schema(
     return classes, type_assertions, object_property_schema, restrictions, schema
 
 
-def _statement_identity(subject_iri: str, predicate_iri: str, object_iri: str) -> str:
+def _statement_identity(subject_iri: str, predicate_iri: str, object_iri: str, source_key: str = '') -> str:
     def _slug(value: str, fallback: str) -> str:
         token = re.sub(r'[^a-z0-9]+', '-', _local_name(value).casefold()).strip('-')
         return token or fallback
@@ -721,13 +795,16 @@ def _statement_identity(subject_iri: str, predicate_iri: str, object_iri: str) -
     pred = _slug(predicate_iri, 'predicate')
     obj = _slug(object_iri, 'object')
 
-    base = f"{subj}-{pred}-{obj}"
-    if len(base) <= 48:
+    source = re.sub(r'[^a-z0-9]+', '-', hashlib.sha1(source_key.encode('utf-8')).hexdigest()[:10]).strip('-') if source_key else ''
+    base = f"{subj}-{pred}-{obj}" + (f"-{source}" if source else '')
+    if len(base) <= 64:
         return f"{_ORION_NS}statement/{base}"
 
     compact = f"{subj[:14]}-{pred[:14]}-{obj[:14]}".strip('-')
-    if len(compact) > 48:
-        compact = compact[:48].rstrip('-')
+    if source:
+        compact = f"{compact}-{source}"
+    if len(compact) > 64:
+        compact = compact[:64].rstrip('-')
     return f"{_ORION_NS}statement/{compact or 'statement'}"
 
 
@@ -998,12 +1075,16 @@ def serialize_graph_to_rdf_xml(graph: dict[str, Any]) -> str:
                 continue
 
             statement = {
-                'id': _statement_identity(subject_iri, predicate_iri, object_iri),
+                'id': _statement_identity(subject_iri, predicate_iri, object_iri, str(item.get('source_evidence') or item.get('evidence') or '')),
                 'subject': subject_iri,
                 'predicate': predicate_iri,
                 'object': object_iri,
                 'label': _statement_label(subject_iri, predicate_iri, object_iri),
             }
+
+            source_evidence = str(item.get('source_evidence') or item.get('evidence') or '').strip()
+            if source_evidence:
+                statement['evidence'] = source_evidence
 
             if isinstance(item.get('evidence_span'), dict):
                 start = item['evidence_span'].get('start_offset')
@@ -1049,6 +1130,7 @@ def serialize_graph_to_rdf_xml(graph: dict[str, Any]) -> str:
         '<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" '
         'xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" '
         'xmlns:owl="http://www.w3.org/2002/07/owl#" '
+        'xmlns:orion="https://orion.local/resource/" '
         'xmlns:meta="https://orion.local/meta/" '
         'xmlns:skos="http://www.w3.org/2004/02/skos/core#" '
         'xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">',
@@ -1110,7 +1192,15 @@ def serialize_graph_to_rdf_xml(graph: dict[str, Any]) -> str:
         rec['domains'].add(domain)
         rec['ranges'].add(range_iri)
 
-    for rec in by_property.values():
+    predicate_bridge_property_iris = {
+        iri
+        for iri, rec in by_property.items()
+        if _local_name(iri).casefold() == 'becomes' and (len(rec['domains']) > 1 or len(rec['ranges']) > 1)
+    }
+
+    for iri, rec in by_property.items():
+        if iri in predicate_bridge_property_iris:
+            continue
         publishable_object_properties.extend(rec['rows'])
 
     explicit_object_properties = publishable_object_properties
@@ -1209,6 +1299,35 @@ def serialize_graph_to_rdf_xml(graph: dict[str, Any]) -> str:
 
     class_iris = set(visible_class_rows)
 
+    def _orion_predicate_xml_tag(predicate_iri: str) -> str:
+        if not predicate_iri.startswith(_ORION_NS):
+            return ''
+        local = _local_name(predicate_iri)
+        if not re.match(r'^[A-Za-z_][A-Za-z0-9_.-]*$', local):
+            return ''
+        return f'orion:{local}'
+
+    direct_fact_descriptions: dict[str, list[tuple[str, str]]] = {}
+    for subject, pairs in grouped.items():
+        subject_iri = _canonical_orion_iri_for_output(subject, use_schema_case_map=True)
+        if not subject_iri:
+            continue
+        for predicate, obj in pairs:
+            predicate_iri = _canonical_orion_iri_for_output(predicate)
+            object_iri = _canonical_orion_iri_for_output(obj, use_schema_case_map=True)
+            tag = _orion_predicate_xml_tag(predicate_iri)
+            if tag and object_iri:
+                direct_fact_descriptions.setdefault(subject_iri, []).append((tag, object_iri))
+
+    for subject_iri in sorted(direct_fact_descriptions):
+        lines.append(f'  <rdf:Description rdf:about="{subject_iri}">')
+        for row in _dedupe_stable(
+            [{'predicate': predicate, 'object': object_iri} for predicate, object_iri in direct_fact_descriptions[subject_iri]],
+            ('predicate', 'object'),
+        ):
+            lines.append(f'    <{row["predicate"]} rdf:resource="{row["object"]}"/>')
+        lines.append('  </rdf:Description>')
+
     for iri in sorted(visible_class_rows):
         base_label = class_rows[iri]
         label = _format_role_label(base_label, resource_roles.get(iri, set()))
@@ -1264,7 +1383,11 @@ def serialize_graph_to_rdf_xml(graph: dict[str, Any]) -> str:
             continue
         resource_roles.setdefault(iri, set()).add('class')
 
-    description_nodes = set(resource_roles) | set(class_rows) | set(subclass_relations)
+    description_nodes = {
+        iri
+        for iri in set(resource_roles) | set(class_rows) | set(subclass_relations)
+        if resource_roles.get(iri, set()) != {'predicate'}
+    }
 
     for iri in sorted(description_nodes):
         roles = resource_roles.get(iri, set())
@@ -1281,22 +1404,6 @@ def serialize_graph_to_rdf_xml(graph: dict[str, Any]) -> str:
         if contextual_label and contextual_label != base_label:
             lines.append(f'    <rdfs:label>{contextual_label}</rdfs:label>')
         lines.append('  </rdf:Description>')
-
-    visual_relation_type_iri = f"{_ORION_NS}ReifiedRelation"
-    for statement in _dedupe_stable(reified_statements, ('id', 'subject', 'predicate', 'object', 'label', 'span', 'confidence')):
-        lines.append(f'  <rdf:Statement rdf:about="{statement["id"]}">')
-        lines.append(f'    <{_RDF_XML_TYPE_TAG} rdf:resource="{visual_relation_type_iri}"/>')
-        lines.append(f'    <rdfs:label>{statement["label"]}</rdfs:label>')
-        lines.append(f'    <skos:prefLabel>{statement["label"]}</skos:prefLabel>')
-        lines.append(f'    <rdfs:comment>{statement["label"]}</rdfs:comment>')
-        lines.append(f'    <rdf:subject rdf:resource="{statement["subject"]}"/>')
-        lines.append(f'    <rdf:predicate rdf:resource="{statement["predicate"]}"/>')
-        lines.append(f'    <rdf:object rdf:resource="{statement["object"]}"/>')
-        if statement.get('span'):
-            lines.append(f'    <meta:span>{statement["span"]}</meta:span>')
-        if statement.get('confidence'):
-            lines.append(f'    <meta:confidence>{statement["confidence"]}</meta:confidence>')
-        lines.append('  </rdf:Statement>')
 
     lines.append('</rdf:RDF>')
     return '\n'.join(lines) + '\n'

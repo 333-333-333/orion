@@ -2,7 +2,7 @@
   "claim_count": 15,
   "claims": [
     {
-      "claim_id": "claim-944fc058a56ce654",
+      "claim_id": "claim-c57044270674bd95",
       "kind": "relation",
       "normalized_statement": "SecureArchitecture integrates SecurityIntoTheDesignOfSystems",
       "object": "SecurityIntoTheDesignOfSystems",
@@ -12,14 +12,14 @@
         "asset_id": "p035",
         "evidence": "Secure architecture integrates security into the design of systems and environments.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-b5ba7e7f74a08670",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-df8f037707f1350f",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "SecureArchitecture integrates SecurityIntoTheDesignOfSystems",
       "subject": "SecureArchitecture"
     },
     {
-      "claim_id": "claim-ef360a8dead1118a",
+      "claim_id": "claim-469a15084655464a",
       "kind": "relation",
       "normalized_statement": "SecureArchitecture integrates Environment",
       "object": "Environment",
@@ -29,14 +29,14 @@
         "asset_id": "p035",
         "evidence": "Secure architecture integrates security into the design of systems and environments.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-b5ba7e7f74a08670",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-df8f037707f1350f",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "SecureArchitecture integrates Environment",
       "subject": "SecureArchitecture"
     },
     {
-      "claim_id": "claim-3713caa37cc35a8e",
+      "claim_id": "claim-ff01262ed50845bc",
       "kind": "relation",
       "normalized_statement": "DefenseInDepth applies MultipleLayerOfSecurityControl",
       "object": "MultipleLayerOfSecurityControl",
@@ -46,14 +46,14 @@
         "asset_id": "p035",
         "evidence": "Defense in depth applies multiple layers of security controls.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-b3d9e7a21ed01600",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-4ada6526197daf76",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "DefenseInDepth applies MultipleLayerOfSecurityControl",
       "subject": "DefenseInDepth"
     },
     {
-      "claim_id": "claim-a7f8a569cbf506e0",
+      "claim_id": "claim-54c2d8e0661bac29",
       "kind": "definition",
       "normalized_statement": "ZeroTrust is a SecurityModel",
       "object": "SecurityModel",
@@ -63,14 +63,14 @@
         "asset_id": "p035",
         "evidence": "Zero trust is a security model that assumes no implicit trust based on network location.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-06d31f0b8836ea8a",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-153644ede387787f",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "ZeroTrust is a SecurityModel",
       "subject": "ZeroTrust"
     },
     {
-      "claim_id": "claim-faadee12fff18da6",
+      "claim_id": "claim-ce93507cf491a42e",
       "kind": "relation",
       "normalized_statement": "ZeroTrust assumes NoImplicitTrustBasedOnNetworkLocation",
       "object": "NoImplicitTrustBasedOnNetworkLocation",
@@ -80,14 +80,14 @@
         "asset_id": "p035",
         "evidence": "Zero trust is a security model that assumes no implicit trust based on network location.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-06d31f0b8836ea8a",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-153644ede387787f",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "ZeroTrust assumes NoImplicitTrustBasedOnNetworkLocation",
       "subject": "ZeroTrust"
     },
     {
-      "claim_id": "claim-2ad487f126ca9868",
+      "claim_id": "claim-a11c11bf74eb0ee2",
       "kind": "relation",
       "normalized_statement": "NetworkSegmentation limits LateralMovement",
       "object": "LateralMovement",
@@ -97,14 +97,14 @@
         "asset_id": "p035",
         "evidence": "Network segmentation limits lateral movement.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-b0dade49aeda3cf8",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-8bb2a16d0eb505d5",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "NetworkSegmentation limits LateralMovement",
       "subject": "NetworkSegmentation"
     },
     {
-      "claim_id": "claim-eeefa013c980470c",
+      "claim_id": "claim-3629ea4b644dec60",
       "kind": "relation",
       "normalized_statement": "StrongAuthentication protects AccessPoint",
       "object": "AccessPoint",
@@ -114,14 +114,14 @@
         "asset_id": "p035",
         "evidence": "Strong authentication protects access points.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-62361ee9e50c9fec",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-7f8e49a72ed922c7",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "StrongAuthentication protects AccessPoint",
       "subject": "StrongAuthentication"
     },
     {
-      "claim_id": "claim-bf3b5328be98a520",
+      "claim_id": "claim-e3f1fa73d20004bb",
       "kind": "relation",
       "normalized_statement": "Encryption protects DataAtRest",
       "object": "DataAtRest",
@@ -131,31 +131,31 @@
         "asset_id": "p035",
         "evidence": "Encryption protects data at rest and in transit.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-cbd6588f0434aa17",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-acd028aca2e8cd38",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "Encryption protects DataAtRest",
       "subject": "Encryption"
     },
     {
-      "claim_id": "claim-029d4398feaae7f9",
+      "claim_id": "claim-5f6eca32dbcd65d4",
       "kind": "relation",
-      "normalized_statement": "Encryption protects InTransit",
-      "object": "InTransit",
+      "normalized_statement": "Encryption protects Transit",
+      "object": "Transit",
       "paragraph_id": "p035",
       "predicate": "protects",
       "source": {
         "asset_id": "p035",
         "evidence": "Encryption protects data at rest and in transit.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-cbd6588f0434aa17",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-acd028aca2e8cd38",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
-      "statement": "Encryption protects InTransit",
+      "statement": "Encryption protects Transit",
       "subject": "Encryption"
     },
     {
-      "claim_id": "claim-de5a5aa3e47f4168",
+      "claim_id": "claim-ee433497c7b0a90f",
       "kind": "relation",
       "normalized_statement": "Monitoring detects SuspiciousActivity",
       "object": "SuspiciousActivity",
@@ -165,14 +165,14 @@
         "asset_id": "p035",
         "evidence": "Monitoring detects suspicious activity.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-d698c11966cf67c8",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-1544838f5266cf21",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "Monitoring detects SuspiciousActivity",
       "subject": "Monitoring"
     },
     {
-      "claim_id": "claim-d32633c64e72d4a8",
+      "claim_id": "claim-b0a62484fb87cbbf",
       "kind": "relation",
       "normalized_statement": "SecureArchitectureMustAlignWith business Requirement",
       "object": "Requirement",
@@ -182,14 +182,14 @@
         "asset_id": "p035",
         "evidence": "Secure architecture must align with business requirements, risk appetite, and regulatory obligations.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-6410e6dcbf2402a7",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-0a5ae63f5c9bcbc1",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "SecureArchitectureMustAlignWith business Requirement",
       "subject": "SecureArchitectureMustAlignWith"
     },
     {
-      "claim_id": "claim-ba5a4fe1e4539d58",
+      "claim_id": "claim-a54f56def18e63f8",
       "kind": "relation",
       "normalized_statement": "SecureArchitectureMustAlignWith business RiskAppetite",
       "object": "RiskAppetite",
@@ -199,14 +199,14 @@
         "asset_id": "p035",
         "evidence": "Secure architecture must align with business requirements, risk appetite, and regulatory obligations.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-6410e6dcbf2402a7",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-0a5ae63f5c9bcbc1",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "SecureArchitectureMustAlignWith business RiskAppetite",
       "subject": "SecureArchitectureMustAlignWith"
     },
     {
-      "claim_id": "claim-14af2da927c436af",
+      "claim_id": "claim-e3d584cc2aad3057",
       "kind": "relation",
       "normalized_statement": "SecureArchitectureMustAlignWith business RegulatoryObligation",
       "object": "RegulatoryObligation",
@@ -216,14 +216,14 @@
         "asset_id": "p035",
         "evidence": "Secure architecture must align with business requirements, risk appetite, and regulatory obligations.",
         "paragraph_id": "p035",
-        "sentence_id": "sent-6410e6dcbf2402a7",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-0a5ae63f5c9bcbc1",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "SecureArchitectureMustAlignWith business RegulatoryObligation",
       "subject": "SecureArchitectureMustAlignWith"
     },
     {
-      "claim_id": "claim-8cebd9f1f891b423",
+      "claim_id": "claim-a9f5e82013019405",
       "kind": "relation",
       "normalized_statement": "SystemCan process InformationAsset",
       "object": "InformationAsset",
@@ -233,14 +233,14 @@
         "asset_id": "p036",
         "evidence": "A system can process one or more information assets.",
         "paragraph_id": "p036",
-        "sentence_id": "sent-540439a272c3443a",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-0153d34734010fab",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "SystemCan process InformationAsset",
       "subject": "SystemCan"
     },
     {
-      "claim_id": "claim-46f3793fa4999799",
+      "claim_id": "claim-ca7c1a33ae7eb383",
       "kind": "relation",
       "normalized_statement": "UserCan access System",
       "object": "System",
@@ -250,8 +250,8 @@
         "asset_id": "p036",
         "evidence": "A user can access one or more systems.",
         "paragraph_id": "p036",
-        "sentence_id": "sent-e93ec755a8e673c3",
-        "source_text_id": "db75c7564c26187c3c937b45c95c85e400a4848681587c7842cbcf64ec1849da"
+        "sentence_id": "sent-f116a49e48faf44d",
+        "source_text_id": "53b9143a4a54dfa19a58fe14cc8258d77e9bdccf725c166c8171637f9ce6fbca"
       },
       "statement": "UserCan access System",
       "subject": "UserCan"

@@ -1,0 +1,245 @@
+{
+  "entities": [
+    {
+      "id": "User",
+      "label": "User",
+      "source_sentence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance."
+    },
+    {
+      "id": "System",
+      "label": "System",
+      "source_sentence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance."
+    },
+    {
+      "id": "InformationAsset",
+      "label": "InformationAsset",
+      "source_sentence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance."
+    },
+    {
+      "id": "Requirement",
+      "label": "Requirement",
+      "source_sentence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance."
+    },
+    {
+      "id": "Control",
+      "label": "Control",
+      "source_sentence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance."
+    },
+    {
+      "id": "Encryption",
+      "label": "Encryption",
+      "source_sentence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity."
+    },
+    {
+      "id": "Confidentiality",
+      "label": "Confidentiality",
+      "source_sentence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity."
+    },
+    {
+      "id": "Logging",
+      "label": "Logging",
+      "source_sentence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity."
+    },
+    {
+      "id": "Accountability",
+      "label": "Accountability",
+      "source_sentence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity."
+    },
+    {
+      "id": "Monitoring",
+      "label": "Monitoring",
+      "source_sentence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity."
+    },
+    {
+      "id": "SuspiciousActivity",
+      "label": "SuspiciousActivity",
+      "source_sentence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity."
+    },
+    {
+      "id": "These",
+      "label": "These",
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining."
+    },
+    {
+      "id": "MakeTheGeneratedRDF",
+      "label": "MakeTheGeneratedRDF",
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining."
+    },
+    {
+      "id": "OWLGraphSuitableForQuerying",
+      "label": "OWLGraphSuitableForQuerying",
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining."
+    },
+    {
+      "id": "Validation",
+      "label": "Validation",
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining."
+    },
+    {
+      "id": "Reasoning",
+      "label": "Reasoning",
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining."
+    },
+    {
+      "id": "Mining",
+      "label": "Mining",
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining."
+    }
+  ],
+  "relations": [
+    {
+      "id": "claim-a253dc7797241158",
+      "object": "System",
+      "predicate": "access",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-3ccc18bed0514007",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
+      "subject": "User"
+    },
+    {
+      "id": "claim-932be70fdf982108",
+      "object": "InformationAsset",
+      "predicate": "process",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-3ccc18bed0514007",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
+      "subject": "System"
+    },
+    {
+      "id": "claim-da965c5053afdce7",
+      "object": "Control",
+      "predicate": "satisfieds",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-3ccc18bed0514007",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "The resulting ontology should represent that users access systems, roles include permissions, controls reduce risks, threats exploit vulnerabilities, incidents affect assets, systems process information assets, policies define requirements, requirements are satisfied by controls, suppliers provide services, and auditors evaluate compliance.",
+      "subject": "Requirement"
+    },
+    {
+      "id": "claim-bfe844e62d61ddf3",
+      "object": "Confidentiality",
+      "predicate": "protects",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-59977fdfe076cce5",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.",
+      "subject": "Encryption"
+    },
+    {
+      "id": "claim-1dbb5d672fa17d78",
+      "object": "Accountability",
+      "predicate": "supports",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-59977fdfe076cce5",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.",
+      "subject": "Logging"
+    },
+    {
+      "id": "claim-3a70a74a9c39c7bf",
+      "object": "SuspiciousActivity",
+      "predicate": "detects",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-59977fdfe076cce5",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "The ontology should also represent that encryption protects confidentiality, backups support availability, logging supports accountability, and monitoring detects suspicious activity.",
+      "subject": "Monitoring"
+    },
+    {
+      "id": "claim-1fdff821e6733afc",
+      "object": "MakeTheGeneratedRDF",
+      "predicate": "relationships",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-69be24df020596da",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
+      "subject": "These"
+    },
+    {
+      "id": "claim-b225d9a076455161",
+      "object": "OWLGraphSuitableForQuerying",
+      "predicate": "relationships",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-69be24df020596da",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
+      "subject": "These"
+    },
+    {
+      "id": "claim-5473296b3c3b6c2d",
+      "object": "Validation",
+      "predicate": "relationships",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-69be24df020596da",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
+      "subject": "These"
+    },
+    {
+      "id": "claim-7ab9ffbd6ea17d7b",
+      "object": "Reasoning",
+      "predicate": "relationships",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-69be24df020596da",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
+      "subject": "These"
+    },
+    {
+      "id": "claim-d9ebf170f794d427",
+      "object": "Mining",
+      "predicate": "relationships",
+      "source": {
+        "asset_id": "p043",
+        "evidence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
+        "paragraph_id": "p043",
+        "sentence_id": "sent-69be24df020596da",
+        "source_text_id": "b3cd7119f59d2300e3fb91f8a66dc77188ff519c443c38a8affec03a9f6c2d64"
+      },
+      "source_sentence": "These relationships make the generated RDF or OWL graph suitable for querying, validation, reasoning, and mining.",
+      "subject": "These"
+    }
+  ]
+}

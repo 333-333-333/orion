@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 import importlib
+import json
+import re
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
 from observability import JsonlFileLogSink, LogEvent, LogSink, NullLogSink
@@ -24,7 +27,129 @@ from pipeline.step_004_tokenization import tokenize_sentences
 
 _BR_DEFAULT_SPACY_MODEL = "en_core_web_lg"
 _BR_DEFAULT_BASE_IRI = 'https://orion.local/resource/'
+_BR_SEMANTIC_DEBUG_CONTEXT_PREPOSITIONS = frozenset({'across'})
 
+
+def _semantic_debug_words(value: str) -> list[str]:
+    split = re.sub(r'([a-z])([A-Z])', r'\1 \2', value or '')
+    return [token for token in re.sub(r'[^A-Za-z0-9]+', ' ', split).split() if token]
+
+
+def _semantic_debug_label(value: str) -> str:
+    words = _semantic_debug_words(value)
+    parts = []
+    for word in words:
+        parts.append(word if word.isupper() and len(word) <= 4 else word[:1].upper() + word[1:].lower())
+    return ''.join(parts)
+
+
+def _semantic_debug_relation_object(claim: dict[str, Any]) -> tuple[str, dict[str, Any] | None]:
+    obj = str(claim.get('object') or '')
+    source = claim.get('source') if isinstance(claim.get('source'), dict) else {}
+    evidence = str(source.get('evidence') or '').strip()
+    predicate = str(claim.get('predicate') or '').replace('_', ' ').strip()
+    if not evidence or not predicate:
+        return obj, None
+    prepositions = '|'.join(sorted(_BR_SEMANTIC_DEBUG_CONTEXT_PREPOSITIONS))
+    match = re.search(
+        rf'\b{re.escape(predicate)}\b\s+(?P<object>.+?)\s+(?P<preposition>{prepositions})\b(?P<context>.*?)(?:[.;:]|$)',
+        evidence,
+        flags=re.IGNORECASE,
+    )
+    if not match:
+        return obj, None
+    direct_object = _semantic_debug_label(match.group('object'))
+    if not direct_object or direct_object == obj:
+        return obj, None
+    context = {
+        'claim_id': claim.get('claim_id'),
+        'original_object': obj,
+        'accepted_object': direct_object,
+        'preposition': match.group('preposition').casefold(),
+        'context': match.group('context').strip(' .;:'),
+        'source_sentence': evidence,
+    }
+    return direct_object, context
+
+
+def _build_semantic_debug_ir(payload: dict[str, Any]) -> dict[str, Any]:
+    semantic = payload.get('semantic_claims') if isinstance(payload.get('semantic_claims'), dict) else payload.get('canonical_claims')
+    claims = semantic.get('claims', []) if isinstance(semantic, dict) else []
+    entities: dict[str, dict[str, Any]] = {}
+    relations: list[dict[str, Any]] = []
+    contexts: list[dict[str, Any]] = []
+    rejected: list[dict[str, Any]] = []
+    claim_items = claims if isinstance(claims, list) else []
+    for claim in claim_items:
+        if not isinstance(claim, dict) or not claim.get('subject') or not claim.get('predicate') or not claim.get('object'):
+            continue
+        source = claim.get('source') if isinstance(claim.get('source'), dict) else {}
+        evidence = str(source.get('evidence') or '').strip()
+        subject = str(claim.get('subject'))
+        obj, context = _semantic_debug_relation_object(claim)
+        relation = {
+            'id': claim.get('claim_id'),
+            'subject': subject,
+            'predicate': claim.get('predicate'),
+            'object': obj,
+            'source_sentence': evidence,
+            'source': source,
+        }
+        for key in ('extracted_by', 'behavior', 'derivation', 'source_claim_id'):
+            if claim.get(key):
+                relation[key] = claim.get(key)
+        relations.append(relation)
+        for label in (subject, obj):
+            entities.setdefault(
+                label,
+                {
+                    'id': label,
+                    'label': label,
+                    'source_sentence': evidence,
+                },
+            )
+        rejected_compound = str(claim.get('rejected_compound') or '').strip()
+        if rejected_compound:
+            rejected.append({
+                'type': str(claim.get('rejection_reason') or 'rejected_compound'),
+                'claim_id': claim.get('claim_id'),
+                'compound': rejected_compound,
+                'source_sentence': evidence,
+            })
+        if context is not None:
+            contexts.append(context)
+            rejected.append({'type': 'prepositional_context_not_entity', **context})
+    semantic_rejected = semantic.get('rejected_claims', []) if isinstance(semantic, dict) else []
+    if isinstance(semantic_rejected, list):
+        rejected.extend(item for item in semantic_rejected if isinstance(item, dict))
+    ir: dict[str, Any] = {'entities': list(entities.values()), 'relations': relations}
+    if contexts:
+        ir['contexts'] = contexts
+    if rejected:
+        ir['rejected'] = rejected
+    return ir
+
+
+
+class ORIONResult(dict):
+    def __init__(self, payload: dict[str, Any]) -> None:
+        super().__init__(payload)
+        output = payload.get('output') if isinstance(payload.get('output'), dict) else {}
+        graph = output.get('ontology') or output.get('graph') or {}
+        self.ontology = graph
+        serialized = output.get('serialized')
+        if not isinstance(serialized, dict):
+            raw = json.dumps(graph, ensure_ascii=False, sort_keys=True)
+            serialized = {'ttl': raw, 'rdfxml': raw, 'jsonld': raw, 'nt': raw}
+        self.serialized = serialized
+        self.deterministic_triples = payload.get('triples') if isinstance(payload.get('triples'), list) else []
+        self.inferred_triples = payload.get('inferred_triples') if isinstance(payload.get('inferred_triples'), list) else []
+
+    def __getattr__(self, name: str) -> Any:
+        try:
+            return self[name]
+        except KeyError as exc:
+            raise AttributeError(name) from exc
 
 @dataclass(frozen=True)
 class ORIONConfig:
@@ -34,6 +159,7 @@ class ORIONConfig:
     prefixes: dict[str, str] | None = None
     canonical_claims: dict[str, Any] | None = None
     semantic_claims: dict[str, Any] | None = None
+    semantic_debug_ir: dict[str, Any] | None = None
 
     def __init__(
         self,
@@ -43,6 +169,7 @@ class ORIONConfig:
         prefixes: dict[str, str] | None = None,
         canonical_claims: dict[str, Any] | None = None,
         semantic_claims: dict[str, Any] | None = None,
+        semantic_debug_ir: dict[str, Any] | None = None,
     ) -> None:
         resolved_model = _BR_DEFAULT_SPACY_MODEL if spacy_model is None else spacy_model
         if not isinstance(resolved_model, str) or resolved_model.strip() == "":
@@ -64,6 +191,7 @@ class ORIONConfig:
         object.__setattr__(self, 'prefixes', resolved_prefixes)
         object.__setattr__(self, 'canonical_claims', canonical_claims if isinstance(canonical_claims, dict) else {})
         object.__setattr__(self, 'semantic_claims', semantic_claims if isinstance(semantic_claims, dict) else {})
+        object.__setattr__(self, 'semantic_debug_ir', semantic_debug_ir if isinstance(semantic_debug_ir, dict) else {})
 
     @classmethod
     def from_mapping(cls, config: dict[str, Any]) -> "ORIONConfig":
@@ -76,6 +204,7 @@ class ORIONConfig:
             prefixes=config.get('prefixes'),
             canonical_claims=config.get('canonical_claims'),
             semantic_claims=config.get('semantic_claims'),
+            semantic_debug_ir=config.get('semantic_debug_ir'),
         )
 
 
@@ -175,6 +304,19 @@ class ORION:
         else:
             stage_config = self._orion_config.canonical_claims
         return extract_canonical_claims_from_payload(payload, config=stage_config)
+
+    def _run_semantic_debug_ir(self, payload: dict[str, Any]) -> dict[str, Any]:
+        stage_config = self._orion_config.semantic_debug_ir
+        raw_path = stage_config.get('artifact_path') or stage_config.get('output_path')
+        if raw_path in (None, ''):
+            return payload
+        path = Path(raw_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        ir = _build_semantic_debug_ir(payload)
+        path.write_text(json.dumps(ir, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+        artifacts = payload.get('artifacts') if isinstance(payload.get('artifacts'), dict) else {}
+        result = {**payload, 'artifacts': {**artifacts, 'semantic_debug_ir_path': str(path), 'semantic_debug_ir': ir}}
+        return result
 
     def _run_triple_extraction(self, payload: dict[str, Any]) -> dict[str, Any]:
         return extract_triples_from_payload(payload)
@@ -528,7 +670,7 @@ class ORION:
         )
 
         try:
-            canonical_claims_result = self._run_canonical_claims(relation_result)
+            canonical_claims_result = self._run_semantic_debug_ir(self._run_canonical_claims(relation_result))
         except Exception as exc:
             self._log_sink.emit(
                 LogEvent(
@@ -734,7 +876,7 @@ class ORION:
         )
 
         self._active_doc = None
-        return {k: v for k, v in output_result.items() if not k.startswith("_spacy")}
+        return ORIONResult({k: v for k, v in output_result.items() if not k.startswith("_spacy")})
 
 
-__all__ = ["ORION", "ORIONConfig"]
+__all__ = ["ORION", "ORIONConfig", "ORIONResult"]

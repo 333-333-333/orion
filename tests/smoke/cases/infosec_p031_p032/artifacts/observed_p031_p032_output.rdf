@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/changemanagement">
+    <orion:controls rdf:resource="https://orion.local/resource/modificationtosystem"/>
+    <orion:controls rdf:resource="https://orion.local/resource/application"/>
+    <orion:controls rdf:resource="https://orion.local/resource/infrastructure"/>
+    <orion:controls rdf:resource="https://orion.local/resource/configuration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/changerequest">
+    <orion:proposes rdf:resource="https://orion.local/resource/modification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/changerollback">
+    <orion:restores rdf:resource="https://orion.local/resource/previousstateifachangefail"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/dataarchival">
+    <orion:stores rdf:resource="https://orion.local/resource/informationforlongtermretention"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/dataclassification">
+    <orion:applies rdf:resource="https://orion.local/resource/labeltoinformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/datacreation">
+    <orion:produces rdf:resource="https://orion.local/resource/newinformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/datadisposal">
+    <orion:removes rdf:resource="https://orion.local/resource/informationwhenretentionexpire"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/datahandling">
+    <orion:rules rdf:resource="https://orion.local/resource/definehoweachclassificationlevelmustbeprotected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/datalifecyclemanagement">
+    <orion:protects rdf:resource="https://orion.local/resource/informationfromcreationtodisposal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/dataprocessing">
+    <orion:transforms rdf:resource="https://orion.local/resource/useinformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/datasharing">
+    <orion:provides rdf:resource="https://orion.local/resource/informationtoanotherparty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/datastorage">
+    <orion:keeps rdf:resource="https://orion.local/resource/informationinarepository"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/datatransmission">
+    <orion:moves rdf:resource="https://orion.local/resource/informationbetweensystem"/>
+    <orion:moves rdf:resource="https://orion.local/resource/people"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/normalchange">
+    <orion:requires rdf:resource="https://orion.local/resource/assessment"/>
+    <orion:requires rdf:resource="https://orion.local/resource/approval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securedeletion">
+    <orion:prevents rdf:resource="https://orion.local/resource/recoveryofdisposeddata"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/acceptable">
     <rdfs:label>Acceptable</rdfs:label>
   </owl:Class>
@@ -12,6 +62,9 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/assessment">
     <rdfs:label>Assessment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/change">
+    <rdfs:label>Change</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/changeapprovalverify">
     <rdfs:label>ChangeApprovalVerify</rdfs:label>
@@ -122,7 +175,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/normalchange">
     <rdfs:label>NormalChange</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/standardchange"/>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/change"/>
     <rdfs:comment>A normal change is a type of change that requires assessment and approval.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/people">
@@ -265,6 +318,9 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/assessment">
     <rdfs:label>Assessment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/change">
+    <rdfs:label>Change</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/changeapprovalverify">
     <rdfs:label>ChangeApprovalVerify</rdfs:label>

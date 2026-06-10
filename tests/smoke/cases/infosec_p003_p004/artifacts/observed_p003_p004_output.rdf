@@ -1,9 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
-  <owl:Class rdf:about="https://orion.local/resource/advisorydocument">
-    <rdfs:label>AdvisoryDocument</rdfs:label>
-  </owl:Class>
+  <rdf:Description rdf:about="https://orion.local/resource/assetcustodian">
+    <orion:operates rdf:resource="https://orion.local/resource/technicalenvironment"/>
+    <orion:maintains rdf:resource="https://orion.local/resource/technicalenvironment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/assetowner">
+    <orion:classifies rdf:resource="https://orion.local/resource/informationasset"/>
+    <orion:defines rdf:resource="https://orion.local/resource/protectionrequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/auditor">
+    <orion:evaluates rdf:resource="https://orion.local/resource/compliance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/boardofdirectors">
+    <orion:providesoversightfor rdf:resource="https://orion.local/resource/informationsecurity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/compliance">
+    <orion:checkedagainst rdf:resource="https://orion.local/resource/securityrequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/enduser">
+    <orion:accesses rdf:resource="https://orion.local/resource/system"/>
+    <orion:follows rdf:resource="https://orion.local/resource/securitypolicy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/informationsecuritymanager">
+    <orion:coordinates rdf:resource="https://orion.local/resource/informationsecurityprogram"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/organization">
+    <orion:protects rdf:resource="https://orion.local/resource/information"/>
+    <orion:implements rdf:resource="https://orion.local/resource/governance"/>
+    <orion:implements rdf:resource="https://orion.local/resource/securitypolicy"/>
+    <orion:implements rdf:resource="https://orion.local/resource/securityprocedure"/>
+    <orion:implements rdf:resource="https://orion.local/resource/control"/>
+    <orion:implements rdf:resource="https://orion.local/resource/monitoringmechanism"/>
+    <orion:implements rdf:resource="https://orion.local/resource/incidentresponseprocess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/resource">
+    <orion:supports rdf:resource="https://orion.local/resource/securityinitiative"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityanalyst">
+    <orion:monitors rdf:resource="https://orion.local/resource/securityevent"/>
+    <orion:investigates rdf:resource="https://orion.local/resource/suspiciousactivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securitybaseline">
+    <orion:requiredfor rdf:resource="https://orion.local/resource/system"/>
+    <orion:requiredfor rdf:resource="https://orion.local/resource/application"/>
+    <orion:requiredfor rdf:resource="https://orion.local/resource/infrastructurecomponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityguideline">
+    <orion:recommends rdf:resource="https://orion.local/resource/goodpractice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securitypolicy">
+    <orion:defines rdf:resource="https://orion.local/resource/rule"/>
+    <orion:defines rdf:resource="https://orion.local/resource/expectation"/>
+    <orion:protects rdf:resource="https://orion.local/resource/information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityprocedure">
+    <orion:defines rdf:resource="https://orion.local/resource/stepbystepactivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securitystandard">
+    <orion:defines rdf:resource="https://orion.local/resource/mandatoryrequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/seniormanagement">
+    <orion:approves rdf:resource="https://orion.local/resource/securitypolicy"/>
+    <orion:allocates rdf:resource="https://orion.local/resource/resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/systemadministrator">
+    <orion:manages rdf:resource="https://orion.local/resource/server"/>
+    <orion:manages rdf:resource="https://orion.local/resource/network"/>
+    <orion:manages rdf:resource="https://orion.local/resource/operatingsystem"/>
+    <orion:manages rdf:resource="https://orion.local/resource/technicalservice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/technicalenvironment">
+    <orion:stores rdf:resource="https://orion.local/resource/information"/>
+    <orion:processes rdf:resource="https://orion.local/resource/information"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/application">
     <rdfs:label>Application</rdfs:label>
   </owl:Class>
@@ -25,13 +95,11 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/compliance">
     <rdfs:label>Compliance</rdfs:label>
+    <rdfs:label>Compliance roles subject object</rdfs:label>
     <rdfs:comment>The auditor evaluates compliance with security requirements.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/control">
     <rdfs:label>Control</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/controldocument">
-    <rdfs:label>ControlDocument</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/enduser">
     <rdfs:label>EndUser</rdfs:label>
@@ -39,9 +107,6 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/expectation">
     <rdfs:label>Expectation</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/formaldocument">
-    <rdfs:label>FormalDocument</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/goodpractice">
     <rdfs:label>GoodPractice</rdfs:label>
@@ -74,9 +139,6 @@
   <owl:Class rdf:about="https://orion.local/resource/mandatoryrequirement">
     <rdfs:label>MandatoryRequirement</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/minimumsetofcontrols">
-    <rdfs:label>MinimumSetOfControls</rdfs:label>
-  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/monitoringmechanism">
     <rdfs:label>MonitoringMechanism</rdfs:label>
   </owl:Class>
@@ -85,9 +147,6 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/operatingsystem">
     <rdfs:label>OperatingSystem</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/operationaldocument">
-    <rdfs:label>OperationalDocument</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/organization">
     <rdfs:label>Organization</rdfs:label>
@@ -98,6 +157,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/resource">
     <rdfs:label>Resource</rdfs:label>
+    <rdfs:label>Resource roles subject object</rdfs:label>
     <rdfs:comment>Senior management approves security policies and allocates resources for security initiatives.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/rule">
@@ -109,7 +169,6 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securitybaseline">
     <rdfs:label>SecurityBaseline</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/minimumsetofcontrols"/>
     <rdfs:comment>A security baseline is a minimum set of controls required for a system, application, or infrastructure component.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securityevent">
@@ -117,7 +176,6 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securityguideline">
     <rdfs:label>SecurityGuideline</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/advisorydocument"/>
     <rdfs:comment>A security guideline is a type of advisory document that recommends good practices.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securityinitiative">
@@ -125,12 +183,12 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securitypolicy">
     <rdfs:label>SecurityPolicy</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/formaldocument"/>
+    <rdfs:label>SecurityPolicy roles subject object</rdfs:label>
     <rdfs:comment>A security policy is a formal document that defines rules and expectations for protecting information.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securityprocedure">
     <rdfs:label>SecurityProcedure</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/operationaldocument"/>
+    <rdfs:label>SecurityProcedure roles subject object</rdfs:label>
     <rdfs:comment>A security procedure is a type of operational document that defines step-by-step activities.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securityrequirement">
@@ -138,7 +196,6 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securitystandard">
     <rdfs:label>SecurityStandard</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/controldocument"/>
     <rdfs:comment>A security standard is a type of control document that defines mandatory requirements.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/seniormanagement">
@@ -163,6 +220,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/technicalenvironment">
     <rdfs:label>TechnicalEnvironment</rdfs:label>
+    <rdfs:label>TechnicalEnvironment roles subject object</rdfs:label>
     <rdfs:comment>The asset custodian operates and maintains the technical environment that stores or processes information.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/technicalservice">
@@ -353,9 +411,6 @@
     <rdfs:domain rdf:resource="https://orion.local/resource/resource"/>
     <rdfs:range rdf:resource="https://orion.local/resource/securityinitiative"/>
   </owl:ObjectProperty>
-  <rdf:Description rdf:about="https://orion.local/resource/advisorydocument">
-    <rdfs:label>AdvisoryDocument</rdfs:label>
-  </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/application">
     <rdfs:label>Application</rdfs:label>
   </rdf:Description>
@@ -373,21 +428,16 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/compliance">
     <rdfs:label>Compliance</rdfs:label>
+    <rdfs:label>Compliance roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/control">
     <rdfs:label>Control</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/controldocument">
-    <rdfs:label>ControlDocument</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/enduser">
     <rdfs:label>EndUser</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/expectation">
     <rdfs:label>Expectation</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/formaldocument">
-    <rdfs:label>FormalDocument</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/goodpractice">
     <rdfs:label>GoodPractice</rdfs:label>
@@ -419,9 +469,6 @@
   <rdf:Description rdf:about="https://orion.local/resource/mandatoryrequirement">
     <rdfs:label>MandatoryRequirement</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/minimumsetofcontrols">
-    <rdfs:label>MinimumSetOfControls</rdfs:label>
-  </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/monitoringmechanism">
     <rdfs:label>MonitoringMechanism</rdfs:label>
   </rdf:Description>
@@ -431,9 +478,6 @@
   <rdf:Description rdf:about="https://orion.local/resource/operatingsystem">
     <rdfs:label>OperatingSystem</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/operationaldocument">
-    <rdfs:label>OperationalDocument</rdfs:label>
-  </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/organization">
     <rdfs:label>Organization</rdfs:label>
   </rdf:Description>
@@ -442,6 +486,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/resource">
     <rdfs:label>Resource</rdfs:label>
+    <rdfs:label>Resource roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/rule">
     <rdfs:label>Rule</rdfs:label>
@@ -463,9 +508,11 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/securitypolicy">
     <rdfs:label>SecurityPolicy</rdfs:label>
+    <rdfs:label>SecurityPolicy roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/securityprocedure">
     <rdfs:label>SecurityProcedure</rdfs:label>
+    <rdfs:label>SecurityProcedure roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/securityrequirement">
     <rdfs:label>SecurityRequirement</rdfs:label>
@@ -493,6 +540,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/technicalenvironment">
     <rdfs:label>TechnicalEnvironment</rdfs:label>
+    <rdfs:label>TechnicalEnvironment roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/technicalservice">
     <rdfs:label>TechnicalService</rdfs:label>

@@ -1,0 +1,571 @@
+{
+  "entities": [
+    {
+      "id": "MalwareInfection",
+      "label": "MalwareInfection",
+      "source_sentence": "A malware infection is a type of security incident."
+    },
+    {
+      "id": "SecurityIncident",
+      "label": "SecurityIncident",
+      "source_sentence": "A malware infection is a type of security incident."
+    },
+    {
+      "id": "PhishingAttack",
+      "label": "PhishingAttack",
+      "source_sentence": "A phishing attack is a type of social engineering incident."
+    },
+    {
+      "id": "SocialEngineeringIncident",
+      "label": "SocialEngineeringIncident",
+      "source_sentence": "A phishing attack is a type of social engineering incident."
+    },
+    {
+      "id": "RansomwareAttack",
+      "label": "RansomwareAttack",
+      "source_sentence": "A ransomware attack is a type of malware incident."
+    },
+    {
+      "id": "MalwareIncident",
+      "label": "MalwareIncident",
+      "source_sentence": "A ransomware attack is a type of malware incident."
+    },
+    {
+      "id": "DataBreach",
+      "label": "DataBreach",
+      "source_sentence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data."
+    },
+    {
+      "id": "UnauthorizedAccessTo",
+      "label": "UnauthorizedAccessTo",
+      "source_sentence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data."
+    },
+    {
+      "id": "DisclosureOfData",
+      "label": "DisclosureOfData",
+      "source_sentence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data."
+    },
+    {
+      "id": "DenialOfServiceAttack",
+      "label": "DenialOfServiceAttack",
+      "source_sentence": "A denial-of-service attack is a type of availability incident."
+    },
+    {
+      "id": "AvailabilityIncident",
+      "label": "AvailabilityIncident",
+      "source_sentence": "A denial-of-service attack is a type of availability incident."
+    },
+    {
+      "id": "UnauthorizedAccess",
+      "label": "UnauthorizedAccess",
+      "source_sentence": "Unauthorized access is a type of security incident involving access by an unapproved identity."
+    },
+    {
+      "id": "SecurityIncidentInvolvingAccessByAnUnapprovedIdentity",
+      "label": "SecurityIncidentInvolvingAccessByAnUnapprovedIdentity",
+      "source_sentence": "Unauthorized access is a type of security incident involving access by an unapproved identity."
+    },
+    {
+      "id": "InsiderMisuse",
+      "label": "InsiderMisuse",
+      "source_sentence": "Insider misuse is a type of security incident caused by an internal actor."
+    },
+    {
+      "id": "SecurityIncidentCausedByAnInternalActor",
+      "label": "SecurityIncidentCausedByAnInternalActor",
+      "source_sentence": "Insider misuse is a type of security incident caused by an internal actor."
+    },
+    {
+      "id": "LostDeviceIncident",
+      "label": "LostDeviceIncident",
+      "source_sentence": "A lost device incident is a type of physical and information security incident."
+    },
+    {
+      "id": "PhysicalAndInformationSecurityIncident",
+      "label": "PhysicalAndInformationSecurityIncident",
+      "source_sentence": "A lost device incident is a type of physical and information security incident."
+    },
+    {
+      "id": "BusinessContinuity",
+      "label": "BusinessContinuity",
+      "source_sentence": "Business continuity is the capability to continue critical operations during disruption."
+    },
+    {
+      "id": "Capability",
+      "label": "Capability",
+      "source_sentence": "Business continuity is the capability to continue critical operations during disruption."
+    },
+    {
+      "id": "CriticalOperationDuringDisruption",
+      "label": "CriticalOperationDuringDisruption",
+      "source_sentence": "Business continuity is the capability to continue critical operations during disruption."
+    },
+    {
+      "id": "DisasterRecovery",
+      "label": "DisasterRecovery",
+      "source_sentence": "Disaster recovery is the process of restoring technology services after a disruptive event."
+    },
+    {
+      "id": "ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
+      "label": "ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
+      "source_sentence": "Disaster recovery is the process of restoring technology services after a disruptive event."
+    },
+    {
+      "id": "RecoveryTimeObjective",
+      "label": "RecoveryTimeObjective",
+      "source_sentence": "A recovery time objective defines the maximum acceptable time to restore a service."
+    },
+    {
+      "id": "MaximumAcceptableTimeToRestoreAService",
+      "label": "MaximumAcceptableTimeToRestoreAService",
+      "source_sentence": "A recovery time objective defines the maximum acceptable time to restore a service."
+    },
+    {
+      "id": "RecoveryPointObjective",
+      "label": "RecoveryPointObjective",
+      "source_sentence": "A recovery point objective defines the maximum acceptable amount of data loss measured in time."
+    },
+    {
+      "id": "MaximumAcceptableAmountOfDataLossMeasuredInTime",
+      "label": "MaximumAcceptableAmountOfDataLossMeasuredInTime",
+      "source_sentence": "A recovery point objective defines the maximum acceptable amount of data loss measured in time."
+    },
+    {
+      "id": "Backup",
+      "label": "Backup",
+      "source_sentence": "A backup is a copy of data used for recovery."
+    },
+    {
+      "id": "CopyOfData",
+      "label": "CopyOfData",
+      "source_sentence": "A backup is a copy of data used for recovery."
+    },
+    {
+      "id": "BackupPolicy",
+      "label": "BackupPolicy",
+      "source_sentence": "A backup policy defines backup frequency, retention, protection, and restoration requirements."
+    },
+    {
+      "id": "BackupFrequency",
+      "label": "BackupFrequency",
+      "source_sentence": "A backup policy defines backup frequency, retention, protection, and restoration requirements."
+    },
+    {
+      "id": "Retention",
+      "label": "Retention",
+      "source_sentence": "A backup policy defines backup frequency, retention, protection, and restoration requirements."
+    },
+    {
+      "id": "Protection",
+      "label": "Protection",
+      "source_sentence": "A backup policy defines backup frequency, retention, protection, and restoration requirements."
+    },
+    {
+      "id": "RestorationRequirement",
+      "label": "RestorationRequirement",
+      "source_sentence": "A backup policy defines backup frequency, retention, protection, and restoration requirements."
+    },
+    {
+      "id": "DisasterRecoveryTest",
+      "label": "DisasterRecoveryTest",
+      "source_sentence": "A disaster recovery test verifies whether recovery procedures work as expected."
+    },
+    {
+      "id": "WhetherRecoveryProcedureWorkAsExpected",
+      "label": "WhetherRecoveryProcedureWorkAsExpected",
+      "source_sentence": "A disaster recovery test verifies whether recovery procedures work as expected."
+    },
+    {
+      "id": "CapabilityToContinueCriticalOperation",
+      "label": "CapabilityToContinueCriticalOperation",
+      "source_sentence": "Business continuity is the capability to continue critical operations during disruption."
+    },
+    {
+      "id": "Disruption",
+      "label": "Disruption",
+      "source_sentence": "Business continuity is the capability to continue critical operations during disruption."
+    },
+    {
+      "id": "ProcessOfRestoringTechnologyService",
+      "label": "ProcessOfRestoringTechnologyService",
+      "source_sentence": "Disaster recovery is the process of restoring technology services after a disruptive event."
+    },
+    {
+      "id": "DisruptiveEvent",
+      "label": "DisruptiveEvent",
+      "source_sentence": "Disaster recovery is the process of restoring technology services after a disruptive event."
+    }
+  ],
+  "rejected": [
+    {
+      "claim_id": "claim-d3df29881966b142",
+      "compound": "CapabilityToContinueCriticalOperationDuringDisruption",
+      "source_sentence": "Business continuity is the capability to continue critical operations during disruption.",
+      "type": "nominalized_action_phrase_not_visible_class"
+    }
+  ],
+  "relations": [
+    {
+      "id": "claim-77c546f85c9ca837",
+      "object": "SecurityIncident",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A malware infection is a type of security incident.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-d4ccba5ff2e9bb1e",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A malware infection is a type of security incident.",
+      "subject": "MalwareInfection"
+    },
+    {
+      "id": "claim-a87c2aac2a3208da",
+      "object": "SocialEngineeringIncident",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A phishing attack is a type of social engineering incident.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-db4f6f4557a30527",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A phishing attack is a type of social engineering incident.",
+      "subject": "PhishingAttack"
+    },
+    {
+      "id": "claim-953b39773e4b621b",
+      "object": "MalwareIncident",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A ransomware attack is a type of malware incident.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-7a0fc7ddc1cd1e96",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A ransomware attack is a type of malware incident.",
+      "subject": "RansomwareAttack"
+    },
+    {
+      "id": "claim-25137467a9b1f58b",
+      "object": "SecurityIncident",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-d935fc4fb6f0c8ac",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+      "subject": "DataBreach"
+    },
+    {
+      "id": "claim-926729c7975082bb",
+      "object": "UnauthorizedAccessTo",
+      "predicate": "involves",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-d935fc4fb6f0c8ac",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+      "subject": "DataBreach"
+    },
+    {
+      "id": "claim-64c7f09dc6365557",
+      "object": "DisclosureOfData",
+      "predicate": "involves",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-d935fc4fb6f0c8ac",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+      "subject": "DataBreach"
+    },
+    {
+      "id": "claim-55f11859b42d84e8",
+      "object": "AvailabilityIncident",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A denial-of-service attack is a type of availability incident.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-70b07359498ee8d2",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A denial-of-service attack is a type of availability incident.",
+      "subject": "DenialOfServiceAttack"
+    },
+    {
+      "id": "claim-3a355c35596aaab2",
+      "object": "SecurityIncidentInvolvingAccessByAnUnapprovedIdentity",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "Unauthorized access is a type of security incident involving access by an unapproved identity.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-d8e0e38185bea3b1",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "Unauthorized access is a type of security incident involving access by an unapproved identity.",
+      "subject": "UnauthorizedAccess"
+    },
+    {
+      "id": "claim-cabee5b68ef0e8b7",
+      "object": "SecurityIncidentCausedByAnInternalActor",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "Insider misuse is a type of security incident caused by an internal actor.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-8c985eb1db5eed03",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "Insider misuse is a type of security incident caused by an internal actor.",
+      "subject": "InsiderMisuse"
+    },
+    {
+      "id": "claim-d10673f3e57a1dce",
+      "object": "PhysicalAndInformationSecurityIncident",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p023",
+        "evidence": "A lost device incident is a type of physical and information security incident.",
+        "paragraph_id": "p023",
+        "sentence_id": "sent-2420ccf024ca0c80",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A lost device incident is a type of physical and information security incident.",
+      "subject": "LostDeviceIncident"
+    },
+    {
+      "id": "claim-d3df29881966b142",
+      "object": "Capability",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "Business continuity is the capability to continue critical operations during disruption.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-4a54777ab3cc244f",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "Business continuity is the capability to continue critical operations during disruption.",
+      "subject": "BusinessContinuity"
+    },
+    {
+      "id": "claim-ac2c0ec6357af13f",
+      "object": "CriticalOperationDuringDisruption",
+      "predicate": "continues",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "Business continuity is the capability to continue critical operations during disruption.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-4a54777ab3cc244f",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "Business continuity is the capability to continue critical operations during disruption.",
+      "subject": "Capability"
+    },
+    {
+      "id": "claim-a916a45d2d831d27",
+      "object": "ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "Disaster recovery is the process of restoring technology services after a disruptive event.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-680394cdb9dbee70",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "Disaster recovery is the process of restoring technology services after a disruptive event.",
+      "subject": "DisasterRecovery"
+    },
+    {
+      "id": "claim-3370f19170b1288d",
+      "object": "MaximumAcceptableTimeToRestoreAService",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A recovery time objective defines the maximum acceptable time to restore a service.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-70658e5d2cdf5981",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A recovery time objective defines the maximum acceptable time to restore a service.",
+      "subject": "RecoveryTimeObjective"
+    },
+    {
+      "id": "claim-edfc6b174e0405aa",
+      "object": "MaximumAcceptableAmountOfDataLossMeasuredInTime",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A recovery point objective defines the maximum acceptable amount of data loss measured in time.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-647df47551a78f12",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A recovery point objective defines the maximum acceptable amount of data loss measured in time.",
+      "subject": "RecoveryPointObjective"
+    },
+    {
+      "id": "claim-9154209c9272241b",
+      "object": "CopyOfData",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A backup is a copy of data used for recovery.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-44d20a74fca48b05",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A backup is a copy of data used for recovery.",
+      "subject": "Backup"
+    },
+    {
+      "id": "claim-017ed9cea8eab167",
+      "object": "BackupFrequency",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-64651f94e576912c",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+      "subject": "BackupPolicy"
+    },
+    {
+      "id": "claim-fd86ba282e585845",
+      "object": "Retention",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-64651f94e576912c",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+      "subject": "BackupPolicy"
+    },
+    {
+      "id": "claim-45b7b9bc4c5a50b6",
+      "object": "Protection",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-64651f94e576912c",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+      "subject": "BackupPolicy"
+    },
+    {
+      "id": "claim-003ca7446531f147",
+      "object": "RestorationRequirement",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-64651f94e576912c",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+      "subject": "BackupPolicy"
+    },
+    {
+      "id": "claim-567681bcb5877172",
+      "object": "WhetherRecoveryProcedureWorkAsExpected",
+      "predicate": "verifies",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "A disaster recovery test verifies whether recovery procedures work as expected.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-2150f1325206c9cd",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "A disaster recovery test verifies whether recovery procedures work as expected.",
+      "subject": "DisasterRecoveryTest"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-0f5c518eef9cd7e5",
+      "object": "CapabilityToContinueCriticalOperation",
+      "predicate": "is",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "Business continuity is the capability to continue critical operations during disruption.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-4a54777ab3cc244f",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "Business continuity is the capability to continue critical operations during disruption.",
+      "subject": "BusinessContinuity"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "derivation": "temporal_scope:during",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-ad575a21e3c10640",
+      "object": "Disruption",
+      "predicate": "applies_during",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "Business continuity is the capability to continue critical operations during disruption.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-4a54777ab3cc244f",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_claim_id": "claim-0f5c518eef9cd7e5",
+      "source_sentence": "Business continuity is the capability to continue critical operations during disruption.",
+      "subject": "CapabilityToContinueCriticalOperation"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-4218887c1d0824b2",
+      "object": "ProcessOfRestoringTechnologyService",
+      "predicate": "is",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "Disaster recovery is the process of restoring technology services after a disruptive event.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-680394cdb9dbee70",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_sentence": "Disaster recovery is the process of restoring technology services after a disruptive event.",
+      "subject": "DisasterRecovery"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "derivation": "temporal_scope:after",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-701b021e5eee1730",
+      "object": "DisruptiveEvent",
+      "predicate": "applies_after",
+      "source": {
+        "asset_id": "p024",
+        "evidence": "Disaster recovery is the process of restoring technology services after a disruptive event.",
+        "paragraph_id": "p024",
+        "sentence_id": "sent-680394cdb9dbee70",
+        "source_text_id": "7e1840f4bd9a56e891cf5e39de72ba05b2a807c7a59264c2dbc75faf6c271897"
+      },
+      "source_claim_id": "claim-4218887c1d0824b2",
+      "source_sentence": "Disaster recovery is the process of restoring technology services after a disruptive event.",
+      "subject": "ProcessOfRestoringTechnologyService"
+    }
+  ]
+}

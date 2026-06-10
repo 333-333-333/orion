@@ -1,0 +1,2537 @@
+{
+  "classes": [
+    {
+      "iri": "orion:AgedParmesanOverTheEdge",
+      "label": "AgedParmesanOverTheEdge"
+    },
+    {
+      "comments": [
+        "Her assistant Luca Ferretti checks that the dough was mixed on Friday morning, rested in the blue proofing box, and divided into four round balls before service."
+      ],
+      "iri": "orion:AssistantLucaFerretti",
+      "label": "AssistantLucaFerretti"
+    },
+    {
+      "iri": "orion:BakeTimeAsNinetySecondInTheServiceNotebook",
+      "label": "BakeTimeAsNinetySecondInTheServiceNotebook"
+    },
+    {
+      "iri": "orion:Basil",
+      "label": "Basil"
+    },
+    {
+      "iri": "orion:BasilAromaMatchTheRequest",
+      "label": "BasilAromaMatchTheRequest"
+    },
+    {
+      "comments": [
+        "The centerpiece is a Margherita pizza called the Vesuvio pie."
+      ],
+      "iri": "orion:Centerpiece",
+      "label": "Centerpiece"
+    },
+    {
+      "iri": "orion:CentralCafe",
+      "label": "CentralCafe"
+    },
+    {
+      "iri": "orion:CentralCafeAt1218P",
+      "label": "CentralCafeAt1218P"
+    },
+    {
+      "iri": "orion:CentralCafeToTableHostNinaPatel",
+      "label": "CentralCafeToTableHostNinaPatel"
+    },
+    {
+      "comments": [
+        "At Mario's Pizzeria in Harbor Market, chef Sofia Rossi prepares the Saturday lunch service for three neighborhood tables."
+      ],
+      "iri": "orion:ChefSofiaRossi",
+      "label": "ChefSofiaRossi"
+    },
+    {
+      "iri": "orion:CleanTheMetalPeel",
+      "label": "CleanTheMetalPeel"
+    },
+    {
+      "comments": [
+        "The crust blisters first, the tomato sauce darkens near the rim, and the mozzarella melts into white pools."
+      ],
+      "iri": "orion:Crust",
+      "label": "Crust"
+    },
+    {
+      "iri": "orion:DeliveryOrderForMarioSPizzeria",
+      "label": "DeliveryOrderForMarioSPizzeria"
+    },
+    {
+      "iri": "orion:DeliveryTablet",
+      "label": "DeliveryTablet"
+    },
+    {
+      "iri": "orion:DividedIntoFourRoundBallBeforeService",
+      "label": "DividedIntoFourRoundBallBeforeService"
+    },
+    {
+      "iri": "orion:DoughMadeFromCaputoFlour",
+      "label": "DoughMadeFromCaputoFlour"
+    },
+    {
+      "iri": "orion:First",
+      "label": "First"
+    },
+    {
+      "iri": "orion:FrontCounterStaff",
+      "label": "FrontCounterStaff"
+    },
+    {
+      "iri": "orion:HarborMarketToPineStreet",
+      "label": "HarborMarketToPineStreet"
+    },
+    {
+      "comments": [
+        "Inside the kitchen, the wood oven named Dante burns oak logs and holds a temperature near 430 degrees Celsius."
+      ],
+      "iri": "orion:InsideTheKitchenTheWoodOvenNamedDante",
+      "label": "InsideTheKitchenTheWoodOvenNamedDante"
+    },
+    {
+      "iri": "orion:Label",
+      "label": "Label"
+    },
+    {
+      "iri": "orion:LongMetalPeel",
+      "label": "LongMetalPeel"
+    },
+    {
+      "comments": [
+        "Luca grates aged parmesan over the edge, while Sofia places basil leaves in a triangle so guests can see the recipe pattern clearly.",
+        "Luca turns the pizza twice and records the bake time as ninety seconds in the service notebook."
+      ],
+      "iri": "orion:Luca",
+      "label": "Luca"
+    },
+    {
+      "comments": [
+        "Luigi confirms the order with Nina by phone, writes the destination as Central Cafe on Pine Street, and attaches the ticket to a red thermal bag.",
+        "Luigi scans the label, places the box beside the salad, and leaves Mario's Pizzeria on a blue bicycle.",
+        "He rides from Harbor Market to Pine Street, passes the public library, and reaches Central Cafe at 12:18 p.",
+        "Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed."
+      ],
+      "iri": "orion:Luigi",
+      "label": "Luigi"
+    },
+    {
+      "comments": [
+        "Luigi Bianchi manages delivery orders for Mario's Pizzeria.",
+        "At noon he receives an order from Central Cafe for one Vesuvio pie, one Marinara pizza, and a small arugula salad."
+      ],
+      "iri": "orion:LuigiBianchi",
+      "label": "LuigiBianchi"
+    },
+    {
+      "iri": "orion:LuigiRecordTheDeliveryAsCompleted",
+      "label": "LuigiRecordTheDeliveryAsCompleted"
+    },
+    {
+      "iri": "orion:MargheritaPizzaCalledTheVesuvioPie",
+      "label": "MargheritaPizzaCalledTheVesuvioPie"
+    },
+    {
+      "iri": "orion:MarinaraPizza",
+      "label": "MarinaraPizza"
+    },
+    {
+      "iri": "orion:MarioSPizzeria",
+      "label": "MarioSPizzeria"
+    },
+    {
+      "iri": "orion:MarioSPizzeriaOnABlueBicycle",
+      "label": "MarioSPizzeriaOnABlueBicycle"
+    },
+    {
+      "comments": [
+        "The mozzarella is supplied by River Dairy, and each slice is marked on the prep board as fresh fior di latte."
+      ],
+      "iri": "orion:Mozzarella",
+      "label": "Mozzarella"
+    },
+    {
+      "iri": "orion:MozzarellaMeltIntoWhitePool",
+      "label": "MozzarellaMeltIntoWhitePool"
+    },
+    {
+      "iri": "orion:NextSaturdayService",
+      "label": "NextSaturdayService"
+    },
+    {
+      "comments": [
+        "Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed."
+      ],
+      "iri": "orion:Nina",
+      "label": "Nina"
+    },
+    {
+      "comments": [
+        "At Central Cafe, Nina Patel receives the Vesuvio pie and signs the delivery tablet.",
+        "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff."
+      ],
+      "iri": "orion:NinaPatel",
+      "label": "NinaPatel"
+    },
+    {
+      "iri": "orion:NoChiliFlake",
+      "label": "NoChiliFlake"
+    },
+    {
+      "iri": "orion:Notebook",
+      "label": "Notebook"
+    },
+    {
+      "iri": "orion:OakLog",
+      "label": "OakLog"
+    },
+    {
+      "iri": "orion:OliveOil",
+      "label": "OliveOil"
+    },
+    {
+      "iri": "orion:OrderCafe17",
+      "label": "OrderCafe17"
+    },
+    {
+      "iri": "orion:OrderFromCentralCafeForOneVesuvioPie",
+      "label": "OrderFromCentralCafeForOneVesuvioPie"
+    },
+    {
+      "comments": [
+        "The order ticket connects Central Cafe to table host Nina Patel, who requested extra basil and no chili flakes."
+      ],
+      "iri": "orion:OrderTicket",
+      "label": "OrderTicket"
+    },
+    {
+      "iri": "orion:OrderWithNinaByPhone",
+      "label": "OrderWithNinaByPhone"
+    },
+    {
+      "iri": "orion:Oven",
+      "label": "Oven"
+    },
+    {
+      "iri": "orion:PassThePublicLibrary",
+      "label": "PassThePublicLibrary"
+    },
+    {
+      "iri": "orion:PieIntoSixSlice",
+      "label": "PieIntoSixSlice"
+    },
+    {
+      "iri": "orion:PinchOfOregano",
+      "label": "PinchOfOregano"
+    },
+    {
+      "iri": "orion:PizzaTwice",
+      "label": "PizzaTwice"
+    },
+    {
+      "iri": "orion:PlaceTheBoxBesideTheSalad",
+      "label": "PlaceTheBoxBesideTheSalad"
+    },
+    {
+      "iri": "orion:ProofingBox",
+      "label": "ProofingBox"
+    },
+    {
+      "comments": [
+        "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service."
+      ],
+      "iri": "orion:RecipeCard",
+      "label": "RecipeCard"
+    },
+    {
+      "iri": "orion:RestedInTheBlueProofingBox",
+      "label": "RestedInTheBlueProofingBox"
+    },
+    {
+      "iri": "orion:SanMarzanoTomatoeDeliveredByGreenValleyFarm",
+      "label": "SanMarzanoTomatoeDeliveredByGreenValleyFarm"
+    },
+    {
+      "iri": "orion:SaturdayLunchServiceForThreeNeighborhoodTable",
+      "label": "SaturdayLunchServiceForThreeNeighborhoodTable"
+    },
+    {
+      "comments": [
+        "The sauce for the Vesuvio pie comes from San Marzano tomatoes delivered by Green Valley Farm."
+      ],
+      "iri": "orion:SauceForTheVesuvioPie",
+      "label": "SauceForTheVesuvioPie"
+    },
+    {
+      "iri": "orion:SeaSalt",
+      "label": "SeaSalt"
+    },
+    {
+      "iri": "orion:SliceToManagerElenaRuiz",
+      "label": "SliceToManagerElenaRuiz"
+    },
+    {
+      "iri": "orion:SlowSourdoughStarter",
+      "label": "SlowSourdoughStarter"
+    },
+    {
+      "iri": "orion:SmallArugulaSalad",
+      "label": "SmallArugulaSalad"
+    },
+    {
+      "comments": [
+        "Sofia stretches dough made from Caputo flour, warm water, sea salt, and a slow sourdough starter.",
+        "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano.",
+        "Sofia slides the Vesuvio pie onto the oven floor with a long metal peel.",
+        "After lunch, Sofia reviews the notebook.",
+        "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service."
+      ],
+      "iri": "orion:Sofia",
+      "label": "Sofia"
+    },
+    {
+      "iri": "orion:SofiaAddMoreBasil",
+      "label": "SofiaAddMoreBasil"
+    },
+    {
+      "iri": "orion:SpoonOfOliveOilFromOliveGroveCooperative",
+      "label": "SpoonOfOliveOilFromOliveGroveCooperative"
+    },
+    {
+      "iri": "orion:SuppliedByRiverDairyAndEachSliceIsMarkedOnThePrepBoardAsFreshFiorDiLatte",
+      "label": "SuppliedByRiverDairyAndEachSliceIsMarkedOnThePrepBoardAsFreshFiorDiLatte"
+    },
+    {
+      "comments": [
+        "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record."
+      ],
+      "iri": "orion:Tablet",
+      "label": "Tablet"
+    },
+    {
+      "iri": "orion:TemperatureNear430DegreeCelsius",
+      "label": "TemperatureNear430DegreeCelsius"
+    },
+    {
+      "comments": [
+        "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff."
+      ],
+      "iri": "orion:ThreeSlice",
+      "label": "ThreeSlice"
+    },
+    {
+      "iri": "orion:TicketToARedThermalBag",
+      "label": "TicketToARedThermalBag"
+    },
+    {
+      "iri": "orion:TomatoSauceDarkenNearTheRim",
+      "label": "TomatoSauceDarkenNearTheRim"
+    },
+    {
+      "comments": [
+        "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano."
+      ],
+      "iri": "orion:Tomatoe",
+      "label": "Tomatoe"
+    },
+    {
+      "iri": "orion:TwoSliceToBaristaOmarChen",
+      "label": "TwoSliceToBaristaOmarChen"
+    },
+    {
+      "iri": "orion:VesuvioPie",
+      "label": "VesuvioPie"
+    },
+    {
+      "iri": "orion:VesuvioPieInTheSameDeliveryRecord",
+      "label": "VesuvioPieInTheSameDeliveryRecord"
+    },
+    {
+      "comments": [
+        "Sofia slides the Vesuvio pie onto the oven floor with a long metal peel."
+      ],
+      "iri": "orion:VesuvioPieOntoTheOvenFloor",
+      "label": "VesuvioPieOntoTheOvenFloor"
+    },
+    {
+      "iri": "orion:WarmWater",
+      "label": "WarmWater"
+    },
+    {
+      "comments": [
+        "When the pizza leaves the oven, Sofia adds more basil and one spoon of olive oil from Olive Grove Cooperative.",
+        "She cuts the pie into six slices and places it in a box labeled order CAFE-17."
+      ],
+      "iri": "orion:WhenThePizza",
+      "label": "WhenThePizza"
+    },
+    {
+      "iri": "orion:WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly",
+      "label": "WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly"
+    },
+    {
+      "iri": "orion:WriteTheDestinationAsCentralCafeOnPineStreet",
+      "label": "WriteTheDestinationAsCentralCafeOnPineStreet"
+    }
+  ],
+  "facts": [
+    {
+      "object": "orion:SaturdayLunchServiceForThreeNeighborhoodTable",
+      "predicate": "orion:prepares",
+      "source_evidence": "At Mario's Pizzeria in Harbor Market, chef Sofia Rossi prepares the Saturday lunch service for three neighborhood tables.",
+      "subject": "orion:ChefSofiaRossi"
+    },
+    {
+      "object": "orion:DoughMadeFromCaputoFlour",
+      "predicate": "orion:stretches",
+      "source_evidence": "Sofia stretches dough made from Caputo flour, warm water, sea salt, and a slow sourdough starter.",
+      "subject": "orion:Sofia"
+    },
+    {
+      "object": "orion:WarmWater",
+      "predicate": "orion:stretches",
+      "source_evidence": "Sofia stretches dough made from Caputo flour, warm water, sea salt, and a slow sourdough starter.",
+      "subject": "orion:Sofia"
+    },
+    {
+      "object": "orion:SeaSalt",
+      "predicate": "orion:stretches",
+      "source_evidence": "Sofia stretches dough made from Caputo flour, warm water, sea salt, and a slow sourdough starter.",
+      "subject": "orion:Sofia"
+    },
+    {
+      "object": "orion:SlowSourdoughStarter",
+      "predicate": "orion:stretches",
+      "source_evidence": "Sofia stretches dough made from Caputo flour, warm water, sea salt, and a slow sourdough starter.",
+      "subject": "orion:Sofia"
+    },
+    {
+      "object": "orion:RestedInTheBlueProofingBox",
+      "predicate": "orion:checks",
+      "source_evidence": "Her assistant Luca Ferretti checks that the dough was mixed on Friday morning, rested in the blue proofing box, and divided into four round balls before service.",
+      "subject": "orion:AssistantLucaFerretti"
+    },
+    {
+      "object": "orion:DividedIntoFourRoundBallBeforeService",
+      "predicate": "orion:checks",
+      "source_evidence": "Her assistant Luca Ferretti checks that the dough was mixed on Friday morning, rested in the blue proofing box, and divided into four round balls before service.",
+      "subject": "orion:AssistantLucaFerretti"
+    },
+    {
+      "object": "orion:SanMarzanoTomatoeDeliveredByGreenValleyFarm",
+      "predicate": "orion:comes",
+      "source_evidence": "The sauce for the Vesuvio pie comes from San Marzano tomatoes delivered by Green Valley Farm.",
+      "subject": "orion:SauceForTheVesuvioPie"
+    },
+    {
+      "object": "orion:Tomatoe",
+      "predicate": "orion:crushes",
+      "source_evidence": "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano.",
+      "subject": "orion:Sofia"
+    },
+    {
+      "object": "orion:Basil",
+      "predicate": "orion:checkedAgainst",
+      "source_evidence": "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano.",
+      "subject": "orion:Tomatoe"
+    },
+    {
+      "object": "orion:OliveOil",
+      "predicate": "orion:checkedAgainst",
+      "source_evidence": "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano.",
+      "subject": "orion:Tomatoe"
+    },
+    {
+      "object": "orion:PinchOfOregano",
+      "predicate": "orion:checkedAgainst",
+      "source_evidence": "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano.",
+      "subject": "orion:Tomatoe"
+    },
+    {
+      "object": "orion:AgedParmesanOverTheEdge",
+      "predicate": "orion:grates",
+      "source_evidence": "Luca grates aged parmesan over the edge, while Sofia places basil leaves in a triangle so guests can see the recipe pattern clearly.",
+      "subject": "orion:Luca"
+    },
+    {
+      "object": "orion:WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly",
+      "predicate": "orion:grates",
+      "source_evidence": "Luca grates aged parmesan over the edge, while Sofia places basil leaves in a triangle so guests can see the recipe pattern clearly.",
+      "subject": "orion:Luca"
+    },
+    {
+      "object": "orion:DeliveryOrderForMarioSPizzeria",
+      "predicate": "orion:manages",
+      "source_evidence": "Luigi Bianchi manages delivery orders for Mario's Pizzeria.",
+      "subject": "orion:LuigiBianchi"
+    },
+    {
+      "object": "orion:OrderFromCentralCafeForOneVesuvioPie",
+      "predicate": "orion:receives",
+      "source_evidence": "At noon he receives an order from Central Cafe for one Vesuvio pie, one Marinara pizza, and a small arugula salad.",
+      "subject": "orion:LuigiBianchi"
+    },
+    {
+      "object": "orion:MarinaraPizza",
+      "predicate": "orion:receives",
+      "source_evidence": "At noon he receives an order from Central Cafe for one Vesuvio pie, one Marinara pizza, and a small arugula salad.",
+      "subject": "orion:LuigiBianchi"
+    },
+    {
+      "object": "orion:SmallArugulaSalad",
+      "predicate": "orion:receives",
+      "source_evidence": "At noon he receives an order from Central Cafe for one Vesuvio pie, one Marinara pizza, and a small arugula salad.",
+      "subject": "orion:LuigiBianchi"
+    },
+    {
+      "object": "orion:CentralCafeToTableHostNinaPatel",
+      "predicate": "orion:connects",
+      "source_evidence": "The order ticket connects Central Cafe to table host Nina Patel, who requested extra basil and no chili flakes.",
+      "subject": "orion:OrderTicket"
+    },
+    {
+      "object": "orion:NoChiliFlake",
+      "predicate": "orion:connects",
+      "source_evidence": "The order ticket connects Central Cafe to table host Nina Patel, who requested extra basil and no chili flakes.",
+      "subject": "orion:OrderTicket"
+    },
+    {
+      "object": "orion:OrderWithNinaByPhone",
+      "predicate": "orion:confirms",
+      "source_evidence": "Luigi confirms the order with Nina by phone, writes the destination as Central Cafe on Pine Street, and attaches the ticket to a red thermal bag.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:WriteTheDestinationAsCentralCafeOnPineStreet",
+      "predicate": "orion:confirms",
+      "source_evidence": "Luigi confirms the order with Nina by phone, writes the destination as Central Cafe on Pine Street, and attaches the ticket to a red thermal bag.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:TicketToARedThermalBag",
+      "predicate": "orion:attaches",
+      "source_evidence": "Luigi confirms the order with Nina by phone, writes the destination as Central Cafe on Pine Street, and attaches the ticket to a red thermal bag.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:OakLog",
+      "predicate": "orion:burns",
+      "source_evidence": "Inside the kitchen, the wood oven named Dante burns oak logs and holds a temperature near 430 degrees Celsius.",
+      "subject": "orion:InsideTheKitchenTheWoodOvenNamedDante"
+    },
+    {
+      "object": "orion:TemperatureNear430DegreeCelsius",
+      "predicate": "orion:holds",
+      "source_evidence": "Inside the kitchen, the wood oven named Dante burns oak logs and holds a temperature near 430 degrees Celsius.",
+      "subject": "orion:InsideTheKitchenTheWoodOvenNamedDante"
+    },
+    {
+      "object": "orion:VesuvioPieOntoTheOvenFloor",
+      "predicate": "orion:slides",
+      "source_evidence": "Sofia slides the Vesuvio pie onto the oven floor with a long metal peel.",
+      "subject": "orion:Sofia"
+    },
+    {
+      "object": "orion:LongMetalPeel",
+      "predicate": "orion:checkedAgainst",
+      "source_evidence": "Sofia slides the Vesuvio pie onto the oven floor with a long metal peel.",
+      "subject": "orion:VesuvioPieOntoTheOvenFloor"
+    },
+    {
+      "object": "orion:First",
+      "predicate": "orion:blisters",
+      "source_evidence": "The crust blisters first, the tomato sauce darkens near the rim, and the mozzarella melts into white pools.",
+      "subject": "orion:Crust"
+    },
+    {
+      "object": "orion:TomatoSauceDarkenNearTheRim",
+      "predicate": "orion:blisters",
+      "source_evidence": "The crust blisters first, the tomato sauce darkens near the rim, and the mozzarella melts into white pools.",
+      "subject": "orion:Crust"
+    },
+    {
+      "object": "orion:MozzarellaMeltIntoWhitePool",
+      "predicate": "orion:blisters",
+      "source_evidence": "The crust blisters first, the tomato sauce darkens near the rim, and the mozzarella melts into white pools.",
+      "subject": "orion:Crust"
+    },
+    {
+      "object": "orion:PizzaTwice",
+      "predicate": "orion:turns",
+      "source_evidence": "Luca turns the pizza twice and records the bake time as ninety seconds in the service notebook.",
+      "subject": "orion:Luca"
+    },
+    {
+      "object": "orion:BakeTimeAsNinetySecondInTheServiceNotebook",
+      "predicate": "orion:records",
+      "source_evidence": "Luca turns the pizza twice and records the bake time as ninety seconds in the service notebook.",
+      "subject": "orion:Luca"
+    },
+    {
+      "object": "orion:Oven",
+      "predicate": "orion:leaves",
+      "source_evidence": "When the pizza leaves the oven, Sofia adds more basil and one spoon of olive oil from Olive Grove Cooperative.",
+      "subject": "orion:WhenThePizza"
+    },
+    {
+      "object": "orion:SofiaAddMoreBasil",
+      "predicate": "orion:leaves",
+      "source_evidence": "When the pizza leaves the oven, Sofia adds more basil and one spoon of olive oil from Olive Grove Cooperative.",
+      "subject": "orion:WhenThePizza"
+    },
+    {
+      "object": "orion:SpoonOfOliveOilFromOliveGroveCooperative",
+      "predicate": "orion:leaves",
+      "source_evidence": "When the pizza leaves the oven, Sofia adds more basil and one spoon of olive oil from Olive Grove Cooperative.",
+      "subject": "orion:WhenThePizza"
+    },
+    {
+      "object": "orion:PieIntoSixSlice",
+      "predicate": "orion:cuts",
+      "source_evidence": "She cuts the pie into six slices and places it in a box labeled order CAFE-17.",
+      "subject": "orion:WhenThePizza"
+    },
+    {
+      "object": "orion:Label",
+      "predicate": "orion:scans",
+      "source_evidence": "Luigi scans the label, places the box beside the salad, and leaves Mario's Pizzeria on a blue bicycle.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:PlaceTheBoxBesideTheSalad",
+      "predicate": "orion:scans",
+      "source_evidence": "Luigi scans the label, places the box beside the salad, and leaves Mario's Pizzeria on a blue bicycle.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:MarioSPizzeriaOnABlueBicycle",
+      "predicate": "orion:leaves",
+      "source_evidence": "Luigi scans the label, places the box beside the salad, and leaves Mario's Pizzeria on a blue bicycle.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:HarborMarketToPineStreet",
+      "predicate": "orion:rides",
+      "source_evidence": "He rides from Harbor Market to Pine Street, passes the public library, and reaches Central Cafe at 12:18 p.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:PassThePublicLibrary",
+      "predicate": "orion:rides",
+      "source_evidence": "He rides from Harbor Market to Pine Street, passes the public library, and reaches Central Cafe at 12:18 p.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:CentralCafeAt1218P",
+      "predicate": "orion:reaches",
+      "source_evidence": "He rides from Harbor Market to Pine Street, passes the public library, and reaches Central Cafe at 12:18 p.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:VesuvioPie",
+      "predicate": "orion:receives",
+      "source_evidence": "At Central Cafe, Nina Patel receives the Vesuvio pie and signs the delivery tablet.",
+      "subject": "orion:NinaPatel"
+    },
+    {
+      "object": "orion:DeliveryTablet",
+      "predicate": "orion:signs",
+      "source_evidence": "At Central Cafe, Nina Patel receives the Vesuvio pie and signs the delivery tablet.",
+      "subject": "orion:NinaPatel"
+    },
+    {
+      "object": "orion:TwoSliceToBaristaOmarChen",
+      "predicate": "orion:serves",
+      "source_evidence": "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff.",
+      "subject": "orion:NinaPatel"
+    },
+    {
+      "object": "orion:SliceToManagerElenaRuiz",
+      "predicate": "orion:serves",
+      "source_evidence": "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff.",
+      "subject": "orion:NinaPatel"
+    },
+    {
+      "object": "orion:ThreeSlice",
+      "predicate": "orion:keeps",
+      "source_evidence": "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff.",
+      "subject": "orion:NinaPatel"
+    },
+    {
+      "object": "orion:FrontCounterStaff",
+      "predicate": "orion:supports",
+      "source_evidence": "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff.",
+      "subject": "orion:ThreeSlice"
+    },
+    {
+      "object": "orion:Luigi",
+      "predicate": "orion:tells",
+      "source_evidence": "Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed.",
+      "subject": "orion:Nina"
+    },
+    {
+      "object": "orion:BasilAromaMatchTheRequest",
+      "predicate": "orion:thes",
+      "source_evidence": "Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:LuigiRecordTheDeliveryAsCompleted",
+      "predicate": "orion:thes",
+      "source_evidence": "Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed.",
+      "subject": "orion:Luigi"
+    },
+    {
+      "object": "orion:MarioSPizzeria",
+      "predicate": "orion:links",
+      "source_evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+      "subject": "orion:Tablet"
+    },
+    {
+      "object": "orion:LuigiBianchi",
+      "predicate": "orion:links",
+      "source_evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+      "subject": "orion:Tablet"
+    },
+    {
+      "object": "orion:CentralCafe",
+      "predicate": "orion:links",
+      "source_evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+      "subject": "orion:Tablet"
+    },
+    {
+      "object": "orion:NinaPatel",
+      "predicate": "orion:links",
+      "source_evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+      "subject": "orion:Tablet"
+    },
+    {
+      "object": "orion:OrderCafe17",
+      "predicate": "orion:links",
+      "source_evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+      "subject": "orion:Tablet"
+    },
+    {
+      "object": "orion:VesuvioPieInTheSameDeliveryRecord",
+      "predicate": "orion:links",
+      "source_evidence": "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.",
+      "subject": "orion:Tablet"
+    },
+    {
+      "object": "orion:Notebook",
+      "predicate": "orion:reviews",
+      "source_evidence": "After lunch, Sofia reviews the notebook.",
+      "subject": "orion:Sofia"
+    },
+    {
+      "object": "orion:ProofingBox",
+      "predicate": "orion:stores",
+      "source_evidence": "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service.",
+      "subject": "orion:Sofia"
+    },
+    {
+      "object": "orion:CleanTheMetalPeel",
+      "predicate": "orion:stores",
+      "source_evidence": "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service.",
+      "subject": "orion:Sofia"
+    },
+    {
+      "object": "orion:RecipeCard",
+      "predicate": "orion:updates",
+      "source_evidence": "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service.",
+      "subject": "orion:Sofia"
+    },
+    {
+      "object": "orion:NextSaturdayService",
+      "predicate": "orion:supports",
+      "source_evidence": "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service.",
+      "subject": "orion:RecipeCard"
+    }
+  ],
+  "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:attaches",
+      "range": "orion:TicketToARedThermalBag"
+    },
+    {
+      "domain": "orion:Crust",
+      "predicate": "orion:blisters",
+      "range": "orion:First"
+    },
+    {
+      "domain": "orion:Crust",
+      "predicate": "orion:blisters",
+      "range": "orion:MozzarellaMeltIntoWhitePool"
+    },
+    {
+      "domain": "orion:Crust",
+      "predicate": "orion:blisters",
+      "range": "orion:TomatoSauceDarkenNearTheRim"
+    },
+    {
+      "domain": "orion:InsideTheKitchenTheWoodOvenNamedDante",
+      "predicate": "orion:burns",
+      "range": "orion:OakLog"
+    },
+    {
+      "domain": "orion:Tomatoe",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:Basil"
+    },
+    {
+      "domain": "orion:Tomatoe",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:OliveOil"
+    },
+    {
+      "domain": "orion:Tomatoe",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:PinchOfOregano"
+    },
+    {
+      "domain": "orion:VesuvioPieOntoTheOvenFloor",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:LongMetalPeel"
+    },
+    {
+      "domain": "orion:AssistantLucaFerretti",
+      "predicate": "orion:checks",
+      "range": "orion:DividedIntoFourRoundBallBeforeService"
+    },
+    {
+      "domain": "orion:AssistantLucaFerretti",
+      "predicate": "orion:checks",
+      "range": "orion:RestedInTheBlueProofingBox"
+    },
+    {
+      "domain": "orion:SauceForTheVesuvioPie",
+      "predicate": "orion:comes",
+      "range": "orion:SanMarzanoTomatoeDeliveredByGreenValleyFarm"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:confirms",
+      "range": "orion:OrderWithNinaByPhone"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:confirms",
+      "range": "orion:WriteTheDestinationAsCentralCafeOnPineStreet"
+    },
+    {
+      "domain": "orion:OrderTicket",
+      "predicate": "orion:connects",
+      "range": "orion:CentralCafeToTableHostNinaPatel"
+    },
+    {
+      "domain": "orion:OrderTicket",
+      "predicate": "orion:connects",
+      "range": "orion:NoChiliFlake"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:crushes",
+      "range": "orion:Tomatoe"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "predicate": "orion:cuts",
+      "range": "orion:PieIntoSixSlice"
+    },
+    {
+      "domain": "orion:Luca",
+      "predicate": "orion:grates",
+      "range": "orion:AgedParmesanOverTheEdge"
+    },
+    {
+      "domain": "orion:Luca",
+      "predicate": "orion:grates",
+      "range": "orion:WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly"
+    },
+    {
+      "domain": "orion:InsideTheKitchenTheWoodOvenNamedDante",
+      "predicate": "orion:holds",
+      "range": "orion:TemperatureNear430DegreeCelsius"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "predicate": "orion:keeps",
+      "range": "orion:ThreeSlice"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:leaves",
+      "range": "orion:MarioSPizzeriaOnABlueBicycle"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "predicate": "orion:leaves",
+      "range": "orion:Oven"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "predicate": "orion:leaves",
+      "range": "orion:SofiaAddMoreBasil"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "predicate": "orion:leaves",
+      "range": "orion:SpoonOfOliveOilFromOliveGroveCooperative"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:CentralCafe"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:LuigiBianchi"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:MarioSPizzeria"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:NinaPatel"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:OrderCafe17"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:VesuvioPieInTheSameDeliveryRecord"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "predicate": "orion:manages",
+      "range": "orion:DeliveryOrderForMarioSPizzeria"
+    },
+    {
+      "domain": "orion:ChefSofiaRossi",
+      "predicate": "orion:prepares",
+      "range": "orion:SaturdayLunchServiceForThreeNeighborhoodTable"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:reaches",
+      "range": "orion:CentralCafeAt1218P"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "predicate": "orion:receives",
+      "range": "orion:MarinaraPizza"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "predicate": "orion:receives",
+      "range": "orion:OrderFromCentralCafeForOneVesuvioPie"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "predicate": "orion:receives",
+      "range": "orion:SmallArugulaSalad"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "predicate": "orion:receives",
+      "range": "orion:VesuvioPie"
+    },
+    {
+      "domain": "orion:Luca",
+      "predicate": "orion:records",
+      "range": "orion:BakeTimeAsNinetySecondInTheServiceNotebook"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:reviews",
+      "range": "orion:Notebook"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:rides",
+      "range": "orion:HarborMarketToPineStreet"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:rides",
+      "range": "orion:PassThePublicLibrary"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:scans",
+      "range": "orion:Label"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:scans",
+      "range": "orion:PlaceTheBoxBesideTheSalad"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "predicate": "orion:serves",
+      "range": "orion:SliceToManagerElenaRuiz"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "predicate": "orion:serves",
+      "range": "orion:TwoSliceToBaristaOmarChen"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "predicate": "orion:signs",
+      "range": "orion:DeliveryTablet"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:slides",
+      "range": "orion:VesuvioPieOntoTheOvenFloor"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stores",
+      "range": "orion:CleanTheMetalPeel"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stores",
+      "range": "orion:ProofingBox"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stretches",
+      "range": "orion:DoughMadeFromCaputoFlour"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stretches",
+      "range": "orion:SeaSalt"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stretches",
+      "range": "orion:SlowSourdoughStarter"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stretches",
+      "range": "orion:WarmWater"
+    },
+    {
+      "domain": "orion:RecipeCard",
+      "predicate": "orion:supports",
+      "range": "orion:NextSaturdayService"
+    },
+    {
+      "domain": "orion:ThreeSlice",
+      "predicate": "orion:supports",
+      "range": "orion:FrontCounterStaff"
+    },
+    {
+      "domain": "orion:Nina",
+      "predicate": "orion:tells",
+      "range": "orion:Luigi"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:thes",
+      "range": "orion:BasilAromaMatchTheRequest"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:thes",
+      "range": "orion:LuigiRecordTheDeliveryAsCompleted"
+    },
+    {
+      "domain": "orion:Luca",
+      "predicate": "orion:turns",
+      "range": "orion:PizzaTwice"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:updates",
+      "range": "orion:RecipeCard"
+    }
+  ],
+  "object_property_schema": [
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:attaches",
+      "range": "orion:TicketToARedThermalBag"
+    },
+    {
+      "domain": "orion:Crust",
+      "predicate": "orion:blisters",
+      "range": "orion:First"
+    },
+    {
+      "domain": "orion:Crust",
+      "predicate": "orion:blisters",
+      "range": "orion:MozzarellaMeltIntoWhitePool"
+    },
+    {
+      "domain": "orion:Crust",
+      "predicate": "orion:blisters",
+      "range": "orion:TomatoSauceDarkenNearTheRim"
+    },
+    {
+      "domain": "orion:InsideTheKitchenTheWoodOvenNamedDante",
+      "predicate": "orion:burns",
+      "range": "orion:OakLog"
+    },
+    {
+      "domain": "orion:Tomatoe",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:Basil"
+    },
+    {
+      "domain": "orion:Tomatoe",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:OliveOil"
+    },
+    {
+      "domain": "orion:Tomatoe",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:PinchOfOregano"
+    },
+    {
+      "domain": "orion:VesuvioPieOntoTheOvenFloor",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:LongMetalPeel"
+    },
+    {
+      "domain": "orion:AssistantLucaFerretti",
+      "predicate": "orion:checks",
+      "range": "orion:DividedIntoFourRoundBallBeforeService"
+    },
+    {
+      "domain": "orion:AssistantLucaFerretti",
+      "predicate": "orion:checks",
+      "range": "orion:RestedInTheBlueProofingBox"
+    },
+    {
+      "domain": "orion:SauceForTheVesuvioPie",
+      "predicate": "orion:comes",
+      "range": "orion:SanMarzanoTomatoeDeliveredByGreenValleyFarm"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:confirms",
+      "range": "orion:OrderWithNinaByPhone"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:confirms",
+      "range": "orion:WriteTheDestinationAsCentralCafeOnPineStreet"
+    },
+    {
+      "domain": "orion:OrderTicket",
+      "predicate": "orion:connects",
+      "range": "orion:CentralCafeToTableHostNinaPatel"
+    },
+    {
+      "domain": "orion:OrderTicket",
+      "predicate": "orion:connects",
+      "range": "orion:NoChiliFlake"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:crushes",
+      "range": "orion:Tomatoe"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "predicate": "orion:cuts",
+      "range": "orion:PieIntoSixSlice"
+    },
+    {
+      "domain": "orion:Luca",
+      "predicate": "orion:grates",
+      "range": "orion:AgedParmesanOverTheEdge"
+    },
+    {
+      "domain": "orion:Luca",
+      "predicate": "orion:grates",
+      "range": "orion:WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly"
+    },
+    {
+      "domain": "orion:InsideTheKitchenTheWoodOvenNamedDante",
+      "predicate": "orion:holds",
+      "range": "orion:TemperatureNear430DegreeCelsius"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "predicate": "orion:keeps",
+      "range": "orion:ThreeSlice"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:leaves",
+      "range": "orion:MarioSPizzeriaOnABlueBicycle"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "predicate": "orion:leaves",
+      "range": "orion:Oven"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "predicate": "orion:leaves",
+      "range": "orion:SofiaAddMoreBasil"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "predicate": "orion:leaves",
+      "range": "orion:SpoonOfOliveOilFromOliveGroveCooperative"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:CentralCafe"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:LuigiBianchi"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:MarioSPizzeria"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:NinaPatel"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:OrderCafe17"
+    },
+    {
+      "domain": "orion:Tablet",
+      "predicate": "orion:links",
+      "range": "orion:VesuvioPieInTheSameDeliveryRecord"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "predicate": "orion:manages",
+      "range": "orion:DeliveryOrderForMarioSPizzeria"
+    },
+    {
+      "domain": "orion:ChefSofiaRossi",
+      "predicate": "orion:prepares",
+      "range": "orion:SaturdayLunchServiceForThreeNeighborhoodTable"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:reaches",
+      "range": "orion:CentralCafeAt1218P"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "predicate": "orion:receives",
+      "range": "orion:MarinaraPizza"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "predicate": "orion:receives",
+      "range": "orion:OrderFromCentralCafeForOneVesuvioPie"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "predicate": "orion:receives",
+      "range": "orion:SmallArugulaSalad"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "predicate": "orion:receives",
+      "range": "orion:VesuvioPie"
+    },
+    {
+      "domain": "orion:Luca",
+      "predicate": "orion:records",
+      "range": "orion:BakeTimeAsNinetySecondInTheServiceNotebook"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:reviews",
+      "range": "orion:Notebook"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:rides",
+      "range": "orion:HarborMarketToPineStreet"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:rides",
+      "range": "orion:PassThePublicLibrary"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:scans",
+      "range": "orion:Label"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:scans",
+      "range": "orion:PlaceTheBoxBesideTheSalad"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "predicate": "orion:serves",
+      "range": "orion:SliceToManagerElenaRuiz"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "predicate": "orion:serves",
+      "range": "orion:TwoSliceToBaristaOmarChen"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "predicate": "orion:signs",
+      "range": "orion:DeliveryTablet"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:slides",
+      "range": "orion:VesuvioPieOntoTheOvenFloor"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stores",
+      "range": "orion:CleanTheMetalPeel"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stores",
+      "range": "orion:ProofingBox"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stretches",
+      "range": "orion:DoughMadeFromCaputoFlour"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stretches",
+      "range": "orion:SeaSalt"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stretches",
+      "range": "orion:SlowSourdoughStarter"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:stretches",
+      "range": "orion:WarmWater"
+    },
+    {
+      "domain": "orion:RecipeCard",
+      "predicate": "orion:supports",
+      "range": "orion:NextSaturdayService"
+    },
+    {
+      "domain": "orion:ThreeSlice",
+      "predicate": "orion:supports",
+      "range": "orion:FrontCounterStaff"
+    },
+    {
+      "domain": "orion:Nina",
+      "predicate": "orion:tells",
+      "range": "orion:Luigi"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:thes",
+      "range": "orion:BasilAromaMatchTheRequest"
+    },
+    {
+      "domain": "orion:Luigi",
+      "predicate": "orion:thes",
+      "range": "orion:LuigiRecordTheDeliveryAsCompleted"
+    },
+    {
+      "domain": "orion:Luca",
+      "predicate": "orion:turns",
+      "range": "orion:PizzaTwice"
+    },
+    {
+      "domain": "orion:Sofia",
+      "predicate": "orion:updates",
+      "range": "orion:RecipeCard"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-c3d64253322aa51e",
+      "claim-19ff7dcdf9874f0d",
+      "claim-e84476a752a313d2",
+      "claim-32d310ad8aea2599",
+      "claim-07b634ef5bcbccf8",
+      "claim-f8557de714c9d913",
+      "claim-40b45247f4cb272f",
+      "claim-961920be4a1bec4b",
+      "claim-972a0815dde052aa",
+      "claim-929cdda1c3efc857",
+      "claim-977b25bc4458a8a5",
+      "claim-cb20cb6cd8d4cb0b",
+      "claim-9845de3161fc897f",
+      "claim-de1f4344228b35ad",
+      "claim-56d7ebfc7ba5a945",
+      "claim-e120dcc9068cbb67",
+      "claim-a2a5e80434714289",
+      "claim-9615fd54fe4ef133",
+      "claim-c78ad09df843dff7",
+      "claim-eb12be30340d9c94",
+      "claim-86e0a1364a03abb4",
+      "claim-9c8d207132a71a04",
+      "claim-64d43dde8f7192d3",
+      "claim-ec539238528478f7",
+      "claim-9f832fae38a08ec9",
+      "claim-3b558ca34676c302",
+      "claim-54c6d1aecc6af035",
+      "claim-889251cd49d6c1e7",
+      "claim-ed687707389b8519",
+      "claim-caa58ab8daec2d9d",
+      "claim-2c928459bb047fbf",
+      "claim-25a9270fefa03cf4",
+      "claim-c3042237a212a229",
+      "claim-6b474a688de85370",
+      "claim-16f96c24cdb42c11",
+      "claim-fe0f9d7f2a1bf961",
+      "claim-8e0d943545de4c07",
+      "claim-76f1a042b626f758",
+      "claim-8fa06c7b7c11ffd6",
+      "claim-f1d7e8524eb1a55c",
+      "claim-8a7b20443f18a30d",
+      "claim-63c04cb4a30cda41",
+      "claim-4be94b95ac729095",
+      "claim-7acb1a622d9ac143",
+      "claim-008df97c86608b39",
+      "claim-8865e667c8b8f1f1",
+      "claim-2ff446ac7b813493",
+      "claim-f8f5589b8c5e7b99",
+      "claim-a74a7ad4857b0f8b",
+      "claim-70f95b6f856a0a71",
+      "claim-cc30a1aae0626a6c",
+      "claim-2ba70f3a38f8768c",
+      "claim-e733de8c02284933",
+      "claim-80e46271f7906d49",
+      "claim-920a8824ed586f66",
+      "claim-ad0d8edf14482f84",
+      "claim-13dabad6711513ae",
+      "claim-592e2456aea2b04e",
+      "claim-66a39421a29bb389",
+      "claim-0431bdb8725e1398",
+      "claim-a6bc64b8a7ab76ff",
+      "claim-ae2a391dbd447c9c",
+      "claim-c5f94bf7004c8ee8",
+      "claim-09f31f8574672920",
+      "claim-72b4a79561074207",
+      "claim-348ad9cb3c324a3f",
+      "claim-a974d0ca135609f9",
+      "claim-08df5f8444674d87"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:attaches",
+      "range": "orion:TicketToARedThermalBag"
+    },
+    {
+      "domain": "orion:Crust",
+      "property": "orion:blisters",
+      "range": "orion:First"
+    },
+    {
+      "domain": "orion:Crust",
+      "property": "orion:blisters",
+      "range": "orion:MozzarellaMeltIntoWhitePool"
+    },
+    {
+      "domain": "orion:Crust",
+      "property": "orion:blisters",
+      "range": "orion:TomatoSauceDarkenNearTheRim"
+    },
+    {
+      "domain": "orion:InsideTheKitchenTheWoodOvenNamedDante",
+      "property": "orion:burns",
+      "range": "orion:OakLog"
+    },
+    {
+      "domain": "orion:Tomatoe",
+      "property": "orion:checkedAgainst",
+      "range": "orion:Basil"
+    },
+    {
+      "domain": "orion:Tomatoe",
+      "property": "orion:checkedAgainst",
+      "range": "orion:OliveOil"
+    },
+    {
+      "domain": "orion:Tomatoe",
+      "property": "orion:checkedAgainst",
+      "range": "orion:PinchOfOregano"
+    },
+    {
+      "domain": "orion:VesuvioPieOntoTheOvenFloor",
+      "property": "orion:checkedAgainst",
+      "range": "orion:LongMetalPeel"
+    },
+    {
+      "domain": "orion:AssistantLucaFerretti",
+      "property": "orion:checks",
+      "range": "orion:DividedIntoFourRoundBallBeforeService"
+    },
+    {
+      "domain": "orion:AssistantLucaFerretti",
+      "property": "orion:checks",
+      "range": "orion:RestedInTheBlueProofingBox"
+    },
+    {
+      "domain": "orion:SauceForTheVesuvioPie",
+      "property": "orion:comes",
+      "range": "orion:SanMarzanoTomatoeDeliveredByGreenValleyFarm"
+    },
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:confirms",
+      "range": "orion:OrderWithNinaByPhone"
+    },
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:confirms",
+      "range": "orion:WriteTheDestinationAsCentralCafeOnPineStreet"
+    },
+    {
+      "domain": "orion:OrderTicket",
+      "property": "orion:connects",
+      "range": "orion:CentralCafeToTableHostNinaPatel"
+    },
+    {
+      "domain": "orion:OrderTicket",
+      "property": "orion:connects",
+      "range": "orion:NoChiliFlake"
+    },
+    {
+      "domain": "orion:Sofia",
+      "property": "orion:crushes",
+      "range": "orion:Tomatoe"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "property": "orion:cuts",
+      "range": "orion:PieIntoSixSlice"
+    },
+    {
+      "domain": "orion:Luca",
+      "property": "orion:grates",
+      "range": "orion:AgedParmesanOverTheEdge"
+    },
+    {
+      "domain": "orion:Luca",
+      "property": "orion:grates",
+      "range": "orion:WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly"
+    },
+    {
+      "domain": "orion:InsideTheKitchenTheWoodOvenNamedDante",
+      "property": "orion:holds",
+      "range": "orion:TemperatureNear430DegreeCelsius"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "property": "orion:keeps",
+      "range": "orion:ThreeSlice"
+    },
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:leaves",
+      "range": "orion:MarioSPizzeriaOnABlueBicycle"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "property": "orion:leaves",
+      "range": "orion:Oven"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "property": "orion:leaves",
+      "range": "orion:SofiaAddMoreBasil"
+    },
+    {
+      "domain": "orion:WhenThePizza",
+      "property": "orion:leaves",
+      "range": "orion:SpoonOfOliveOilFromOliveGroveCooperative"
+    },
+    {
+      "domain": "orion:Tablet",
+      "property": "orion:links",
+      "range": "orion:CentralCafe"
+    },
+    {
+      "domain": "orion:Tablet",
+      "property": "orion:links",
+      "range": "orion:LuigiBianchi"
+    },
+    {
+      "domain": "orion:Tablet",
+      "property": "orion:links",
+      "range": "orion:MarioSPizzeria"
+    },
+    {
+      "domain": "orion:Tablet",
+      "property": "orion:links",
+      "range": "orion:NinaPatel"
+    },
+    {
+      "domain": "orion:Tablet",
+      "property": "orion:links",
+      "range": "orion:OrderCafe17"
+    },
+    {
+      "domain": "orion:Tablet",
+      "property": "orion:links",
+      "range": "orion:VesuvioPieInTheSameDeliveryRecord"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "property": "orion:manages",
+      "range": "orion:DeliveryOrderForMarioSPizzeria"
+    },
+    {
+      "domain": "orion:ChefSofiaRossi",
+      "property": "orion:prepares",
+      "range": "orion:SaturdayLunchServiceForThreeNeighborhoodTable"
+    },
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:reaches",
+      "range": "orion:CentralCafeAt1218P"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "property": "orion:receives",
+      "range": "orion:MarinaraPizza"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "property": "orion:receives",
+      "range": "orion:OrderFromCentralCafeForOneVesuvioPie"
+    },
+    {
+      "domain": "orion:LuigiBianchi",
+      "property": "orion:receives",
+      "range": "orion:SmallArugulaSalad"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "property": "orion:receives",
+      "range": "orion:VesuvioPie"
+    },
+    {
+      "domain": "orion:Luca",
+      "property": "orion:records",
+      "range": "orion:BakeTimeAsNinetySecondInTheServiceNotebook"
+    },
+    {
+      "domain": "orion:Sofia",
+      "property": "orion:reviews",
+      "range": "orion:Notebook"
+    },
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:rides",
+      "range": "orion:HarborMarketToPineStreet"
+    },
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:rides",
+      "range": "orion:PassThePublicLibrary"
+    },
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:scans",
+      "range": "orion:Label"
+    },
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:scans",
+      "range": "orion:PlaceTheBoxBesideTheSalad"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "property": "orion:serves",
+      "range": "orion:SliceToManagerElenaRuiz"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "property": "orion:serves",
+      "range": "orion:TwoSliceToBaristaOmarChen"
+    },
+    {
+      "domain": "orion:NinaPatel",
+      "property": "orion:signs",
+      "range": "orion:DeliveryTablet"
+    },
+    {
+      "domain": "orion:Sofia",
+      "property": "orion:slides",
+      "range": "orion:VesuvioPieOntoTheOvenFloor"
+    },
+    {
+      "domain": "orion:Sofia",
+      "property": "orion:stores",
+      "range": "orion:CleanTheMetalPeel"
+    },
+    {
+      "domain": "orion:Sofia",
+      "property": "orion:stores",
+      "range": "orion:ProofingBox"
+    },
+    {
+      "domain": "orion:Sofia",
+      "property": "orion:stretches",
+      "range": "orion:DoughMadeFromCaputoFlour"
+    },
+    {
+      "domain": "orion:Sofia",
+      "property": "orion:stretches",
+      "range": "orion:SeaSalt"
+    },
+    {
+      "domain": "orion:Sofia",
+      "property": "orion:stretches",
+      "range": "orion:SlowSourdoughStarter"
+    },
+    {
+      "domain": "orion:Sofia",
+      "property": "orion:stretches",
+      "range": "orion:WarmWater"
+    },
+    {
+      "domain": "orion:RecipeCard",
+      "property": "orion:supports",
+      "range": "orion:NextSaturdayService"
+    },
+    {
+      "domain": "orion:ThreeSlice",
+      "property": "orion:supports",
+      "range": "orion:FrontCounterStaff"
+    },
+    {
+      "domain": "orion:Nina",
+      "property": "orion:tells",
+      "range": "orion:Luigi"
+    },
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:thes",
+      "range": "orion:BasilAromaMatchTheRequest"
+    },
+    {
+      "domain": "orion:Luigi",
+      "property": "orion:thes",
+      "range": "orion:LuigiRecordTheDeliveryAsCompleted"
+    },
+    {
+      "domain": "orion:Luca",
+      "property": "orion:turns",
+      "range": "orion:PizzaTwice"
+    },
+    {
+      "domain": "orion:Sofia",
+      "property": "orion:updates",
+      "range": "orion:RecipeCard"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:AgedParmesanOverTheEdge",
+        "label": "AgedParmesanOverTheEdge"
+      },
+      {
+        "comments": [
+          "Her assistant Luca Ferretti checks that the dough was mixed on Friday morning, rested in the blue proofing box, and divided into four round balls before service."
+        ],
+        "iri": "orion:AssistantLucaFerretti",
+        "label": "AssistantLucaFerretti"
+      },
+      {
+        "iri": "orion:BakeTimeAsNinetySecondInTheServiceNotebook",
+        "label": "BakeTimeAsNinetySecondInTheServiceNotebook"
+      },
+      {
+        "iri": "orion:Basil",
+        "label": "Basil"
+      },
+      {
+        "iri": "orion:BasilAromaMatchTheRequest",
+        "label": "BasilAromaMatchTheRequest"
+      },
+      {
+        "comments": [
+          "The centerpiece is a Margherita pizza called the Vesuvio pie."
+        ],
+        "iri": "orion:Centerpiece",
+        "label": "Centerpiece"
+      },
+      {
+        "iri": "orion:CentralCafe",
+        "label": "CentralCafe"
+      },
+      {
+        "iri": "orion:CentralCafeAt1218P",
+        "label": "CentralCafeAt1218P"
+      },
+      {
+        "iri": "orion:CentralCafeToTableHostNinaPatel",
+        "label": "CentralCafeToTableHostNinaPatel"
+      },
+      {
+        "comments": [
+          "At Mario's Pizzeria in Harbor Market, chef Sofia Rossi prepares the Saturday lunch service for three neighborhood tables."
+        ],
+        "iri": "orion:ChefSofiaRossi",
+        "label": "ChefSofiaRossi"
+      },
+      {
+        "iri": "orion:CleanTheMetalPeel",
+        "label": "CleanTheMetalPeel"
+      },
+      {
+        "comments": [
+          "The crust blisters first, the tomato sauce darkens near the rim, and the mozzarella melts into white pools."
+        ],
+        "iri": "orion:Crust",
+        "label": "Crust"
+      },
+      {
+        "iri": "orion:DeliveryOrderForMarioSPizzeria",
+        "label": "DeliveryOrderForMarioSPizzeria"
+      },
+      {
+        "iri": "orion:DeliveryTablet",
+        "label": "DeliveryTablet"
+      },
+      {
+        "iri": "orion:DividedIntoFourRoundBallBeforeService",
+        "label": "DividedIntoFourRoundBallBeforeService"
+      },
+      {
+        "iri": "orion:DoughMadeFromCaputoFlour",
+        "label": "DoughMadeFromCaputoFlour"
+      },
+      {
+        "iri": "orion:First",
+        "label": "First"
+      },
+      {
+        "iri": "orion:FrontCounterStaff",
+        "label": "FrontCounterStaff"
+      },
+      {
+        "iri": "orion:HarborMarketToPineStreet",
+        "label": "HarborMarketToPineStreet"
+      },
+      {
+        "comments": [
+          "Inside the kitchen, the wood oven named Dante burns oak logs and holds a temperature near 430 degrees Celsius."
+        ],
+        "iri": "orion:InsideTheKitchenTheWoodOvenNamedDante",
+        "label": "InsideTheKitchenTheWoodOvenNamedDante"
+      },
+      {
+        "iri": "orion:Label",
+        "label": "Label"
+      },
+      {
+        "iri": "orion:LongMetalPeel",
+        "label": "LongMetalPeel"
+      },
+      {
+        "comments": [
+          "Luca grates aged parmesan over the edge, while Sofia places basil leaves in a triangle so guests can see the recipe pattern clearly.",
+          "Luca turns the pizza twice and records the bake time as ninety seconds in the service notebook."
+        ],
+        "iri": "orion:Luca",
+        "label": "Luca"
+      },
+      {
+        "comments": [
+          "Luigi confirms the order with Nina by phone, writes the destination as Central Cafe on Pine Street, and attaches the ticket to a red thermal bag.",
+          "Luigi scans the label, places the box beside the salad, and leaves Mario's Pizzeria on a blue bicycle.",
+          "He rides from Harbor Market to Pine Street, passes the public library, and reaches Central Cafe at 12:18 p.",
+          "Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed."
+        ],
+        "iri": "orion:Luigi",
+        "label": "Luigi"
+      },
+      {
+        "comments": [
+          "Luigi Bianchi manages delivery orders for Mario's Pizzeria.",
+          "At noon he receives an order from Central Cafe for one Vesuvio pie, one Marinara pizza, and a small arugula salad."
+        ],
+        "iri": "orion:LuigiBianchi",
+        "label": "LuigiBianchi"
+      },
+      {
+        "iri": "orion:LuigiRecordTheDeliveryAsCompleted",
+        "label": "LuigiRecordTheDeliveryAsCompleted"
+      },
+      {
+        "iri": "orion:MargheritaPizzaCalledTheVesuvioPie",
+        "label": "MargheritaPizzaCalledTheVesuvioPie"
+      },
+      {
+        "iri": "orion:MarinaraPizza",
+        "label": "MarinaraPizza"
+      },
+      {
+        "iri": "orion:MarioSPizzeria",
+        "label": "MarioSPizzeria"
+      },
+      {
+        "iri": "orion:MarioSPizzeriaOnABlueBicycle",
+        "label": "MarioSPizzeriaOnABlueBicycle"
+      },
+      {
+        "comments": [
+          "The mozzarella is supplied by River Dairy, and each slice is marked on the prep board as fresh fior di latte."
+        ],
+        "iri": "orion:Mozzarella",
+        "label": "Mozzarella"
+      },
+      {
+        "iri": "orion:MozzarellaMeltIntoWhitePool",
+        "label": "MozzarellaMeltIntoWhitePool"
+      },
+      {
+        "iri": "orion:NextSaturdayService",
+        "label": "NextSaturdayService"
+      },
+      {
+        "comments": [
+          "Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed."
+        ],
+        "iri": "orion:Nina",
+        "label": "Nina"
+      },
+      {
+        "comments": [
+          "At Central Cafe, Nina Patel receives the Vesuvio pie and signs the delivery tablet.",
+          "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff."
+        ],
+        "iri": "orion:NinaPatel",
+        "label": "NinaPatel"
+      },
+      {
+        "iri": "orion:NoChiliFlake",
+        "label": "NoChiliFlake"
+      },
+      {
+        "iri": "orion:Notebook",
+        "label": "Notebook"
+      },
+      {
+        "iri": "orion:OakLog",
+        "label": "OakLog"
+      },
+      {
+        "iri": "orion:OliveOil",
+        "label": "OliveOil"
+      },
+      {
+        "iri": "orion:OrderCafe17",
+        "label": "OrderCafe17"
+      },
+      {
+        "iri": "orion:OrderFromCentralCafeForOneVesuvioPie",
+        "label": "OrderFromCentralCafeForOneVesuvioPie"
+      },
+      {
+        "comments": [
+          "The order ticket connects Central Cafe to table host Nina Patel, who requested extra basil and no chili flakes."
+        ],
+        "iri": "orion:OrderTicket",
+        "label": "OrderTicket"
+      },
+      {
+        "iri": "orion:OrderWithNinaByPhone",
+        "label": "OrderWithNinaByPhone"
+      },
+      {
+        "iri": "orion:Oven",
+        "label": "Oven"
+      },
+      {
+        "iri": "orion:PassThePublicLibrary",
+        "label": "PassThePublicLibrary"
+      },
+      {
+        "iri": "orion:PieIntoSixSlice",
+        "label": "PieIntoSixSlice"
+      },
+      {
+        "iri": "orion:PinchOfOregano",
+        "label": "PinchOfOregano"
+      },
+      {
+        "iri": "orion:PizzaTwice",
+        "label": "PizzaTwice"
+      },
+      {
+        "iri": "orion:PlaceTheBoxBesideTheSalad",
+        "label": "PlaceTheBoxBesideTheSalad"
+      },
+      {
+        "iri": "orion:ProofingBox",
+        "label": "ProofingBox"
+      },
+      {
+        "comments": [
+          "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service."
+        ],
+        "iri": "orion:RecipeCard",
+        "label": "RecipeCard"
+      },
+      {
+        "iri": "orion:RestedInTheBlueProofingBox",
+        "label": "RestedInTheBlueProofingBox"
+      },
+      {
+        "iri": "orion:SanMarzanoTomatoeDeliveredByGreenValleyFarm",
+        "label": "SanMarzanoTomatoeDeliveredByGreenValleyFarm"
+      },
+      {
+        "iri": "orion:SaturdayLunchServiceForThreeNeighborhoodTable",
+        "label": "SaturdayLunchServiceForThreeNeighborhoodTable"
+      },
+      {
+        "comments": [
+          "The sauce for the Vesuvio pie comes from San Marzano tomatoes delivered by Green Valley Farm."
+        ],
+        "iri": "orion:SauceForTheVesuvioPie",
+        "label": "SauceForTheVesuvioPie"
+      },
+      {
+        "iri": "orion:SeaSalt",
+        "label": "SeaSalt"
+      },
+      {
+        "iri": "orion:SliceToManagerElenaRuiz",
+        "label": "SliceToManagerElenaRuiz"
+      },
+      {
+        "iri": "orion:SlowSourdoughStarter",
+        "label": "SlowSourdoughStarter"
+      },
+      {
+        "iri": "orion:SmallArugulaSalad",
+        "label": "SmallArugulaSalad"
+      },
+      {
+        "comments": [
+          "Sofia stretches dough made from Caputo flour, warm water, sea salt, and a slow sourdough starter.",
+          "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano.",
+          "Sofia slides the Vesuvio pie onto the oven floor with a long metal peel.",
+          "After lunch, Sofia reviews the notebook.",
+          "Sofia stores the proofing box, cleans the metal peel, and updates the recipe card for the next Saturday service."
+        ],
+        "iri": "orion:Sofia",
+        "label": "Sofia"
+      },
+      {
+        "iri": "orion:SofiaAddMoreBasil",
+        "label": "SofiaAddMoreBasil"
+      },
+      {
+        "iri": "orion:SpoonOfOliveOilFromOliveGroveCooperative",
+        "label": "SpoonOfOliveOilFromOliveGroveCooperative"
+      },
+      {
+        "iri": "orion:SuppliedByRiverDairyAndEachSliceIsMarkedOnThePrepBoardAsFreshFiorDiLatte",
+        "label": "SuppliedByRiverDairyAndEachSliceIsMarkedOnThePrepBoardAsFreshFiorDiLatte"
+      },
+      {
+        "comments": [
+          "The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record."
+        ],
+        "iri": "orion:Tablet",
+        "label": "Tablet"
+      },
+      {
+        "iri": "orion:TemperatureNear430DegreeCelsius",
+        "label": "TemperatureNear430DegreeCelsius"
+      },
+      {
+        "comments": [
+          "She serves two slices to barista Omar Chen, one slice to manager Elena Ruiz, and keeps three slices for the front counter staff."
+        ],
+        "iri": "orion:ThreeSlice",
+        "label": "ThreeSlice"
+      },
+      {
+        "iri": "orion:TicketToARedThermalBag",
+        "label": "TicketToARedThermalBag"
+      },
+      {
+        "iri": "orion:TomatoSauceDarkenNearTheRim",
+        "label": "TomatoSauceDarkenNearTheRim"
+      },
+      {
+        "comments": [
+          "Sofia crushes the tomatoes with basil, olive oil, and a pinch of oregano."
+        ],
+        "iri": "orion:Tomatoe",
+        "label": "Tomatoe"
+      },
+      {
+        "iri": "orion:TwoSliceToBaristaOmarChen",
+        "label": "TwoSliceToBaristaOmarChen"
+      },
+      {
+        "iri": "orion:VesuvioPie",
+        "label": "VesuvioPie"
+      },
+      {
+        "iri": "orion:VesuvioPieInTheSameDeliveryRecord",
+        "label": "VesuvioPieInTheSameDeliveryRecord"
+      },
+      {
+        "comments": [
+          "Sofia slides the Vesuvio pie onto the oven floor with a long metal peel."
+        ],
+        "iri": "orion:VesuvioPieOntoTheOvenFloor",
+        "label": "VesuvioPieOntoTheOvenFloor"
+      },
+      {
+        "iri": "orion:WarmWater",
+        "label": "WarmWater"
+      },
+      {
+        "comments": [
+          "When the pizza leaves the oven, Sofia adds more basil and one spoon of olive oil from Olive Grove Cooperative.",
+          "She cuts the pie into six slices and places it in a box labeled order CAFE-17."
+        ],
+        "iri": "orion:WhenThePizza",
+        "label": "WhenThePizza"
+      },
+      {
+        "iri": "orion:WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly",
+        "label": "WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly"
+      },
+      {
+        "iri": "orion:WriteTheDestinationAsCentralCafeOnPineStreet",
+        "label": "WriteTheDestinationAsCentralCafeOnPineStreet"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:attaches",
+        "label": "Attaches",
+        "range": "orion:TicketToARedThermalBag"
+      },
+      {
+        "domain": "orion:Crust",
+        "iri": "orion:blisters",
+        "label": "Blisters",
+        "range": "orion:First"
+      },
+      {
+        "domain": "orion:Crust",
+        "iri": "orion:blisters",
+        "label": "Blisters",
+        "range": "orion:MozzarellaMeltIntoWhitePool"
+      },
+      {
+        "domain": "orion:Crust",
+        "iri": "orion:blisters",
+        "label": "Blisters",
+        "range": "orion:TomatoSauceDarkenNearTheRim"
+      },
+      {
+        "domain": "orion:InsideTheKitchenTheWoodOvenNamedDante",
+        "iri": "orion:burns",
+        "label": "Burns",
+        "range": "orion:OakLog"
+      },
+      {
+        "domain": "orion:Tomatoe",
+        "iri": "orion:checkedAgainst",
+        "label": "checkedAgainst",
+        "range": "orion:Basil"
+      },
+      {
+        "domain": "orion:Tomatoe",
+        "iri": "orion:checkedAgainst",
+        "label": "checkedAgainst",
+        "range": "orion:OliveOil"
+      },
+      {
+        "domain": "orion:Tomatoe",
+        "iri": "orion:checkedAgainst",
+        "label": "checkedAgainst",
+        "range": "orion:PinchOfOregano"
+      },
+      {
+        "domain": "orion:VesuvioPieOntoTheOvenFloor",
+        "iri": "orion:checkedAgainst",
+        "label": "checkedAgainst",
+        "range": "orion:LongMetalPeel"
+      },
+      {
+        "domain": "orion:AssistantLucaFerretti",
+        "iri": "orion:checks",
+        "label": "Checks",
+        "range": "orion:DividedIntoFourRoundBallBeforeService"
+      },
+      {
+        "domain": "orion:AssistantLucaFerretti",
+        "iri": "orion:checks",
+        "label": "Checks",
+        "range": "orion:RestedInTheBlueProofingBox"
+      },
+      {
+        "domain": "orion:SauceForTheVesuvioPie",
+        "iri": "orion:comes",
+        "label": "Comes",
+        "range": "orion:SanMarzanoTomatoeDeliveredByGreenValleyFarm"
+      },
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:confirms",
+        "label": "Confirms",
+        "range": "orion:OrderWithNinaByPhone"
+      },
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:confirms",
+        "label": "Confirms",
+        "range": "orion:WriteTheDestinationAsCentralCafeOnPineStreet"
+      },
+      {
+        "domain": "orion:OrderTicket",
+        "iri": "orion:connects",
+        "label": "Connects",
+        "range": "orion:CentralCafeToTableHostNinaPatel"
+      },
+      {
+        "domain": "orion:OrderTicket",
+        "iri": "orion:connects",
+        "label": "Connects",
+        "range": "orion:NoChiliFlake"
+      },
+      {
+        "domain": "orion:Sofia",
+        "iri": "orion:crushes",
+        "label": "Crushes",
+        "range": "orion:Tomatoe"
+      },
+      {
+        "domain": "orion:WhenThePizza",
+        "iri": "orion:cuts",
+        "label": "Cuts",
+        "range": "orion:PieIntoSixSlice"
+      },
+      {
+        "domain": "orion:Luca",
+        "iri": "orion:grates",
+        "label": "Grates",
+        "range": "orion:AgedParmesanOverTheEdge"
+      },
+      {
+        "domain": "orion:Luca",
+        "iri": "orion:grates",
+        "label": "Grates",
+        "range": "orion:WhileSofiaPlaceBasilLeaveInATriangleSoGuestCanSeeTheRecipePatternClearly"
+      },
+      {
+        "domain": "orion:InsideTheKitchenTheWoodOvenNamedDante",
+        "iri": "orion:holds",
+        "label": "Holds",
+        "range": "orion:TemperatureNear430DegreeCelsius"
+      },
+      {
+        "domain": "orion:NinaPatel",
+        "iri": "orion:keeps",
+        "label": "Keeps",
+        "range": "orion:ThreeSlice"
+      },
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:leaves",
+        "label": "Leaves",
+        "range": "orion:MarioSPizzeriaOnABlueBicycle"
+      },
+      {
+        "domain": "orion:WhenThePizza",
+        "iri": "orion:leaves",
+        "label": "Leaves",
+        "range": "orion:Oven"
+      },
+      {
+        "domain": "orion:WhenThePizza",
+        "iri": "orion:leaves",
+        "label": "Leaves",
+        "range": "orion:SofiaAddMoreBasil"
+      },
+      {
+        "domain": "orion:WhenThePizza",
+        "iri": "orion:leaves",
+        "label": "Leaves",
+        "range": "orion:SpoonOfOliveOilFromOliveGroveCooperative"
+      },
+      {
+        "domain": "orion:Tablet",
+        "iri": "orion:links",
+        "label": "Links",
+        "range": "orion:CentralCafe"
+      },
+      {
+        "domain": "orion:Tablet",
+        "iri": "orion:links",
+        "label": "Links",
+        "range": "orion:LuigiBianchi"
+      },
+      {
+        "domain": "orion:Tablet",
+        "iri": "orion:links",
+        "label": "Links",
+        "range": "orion:MarioSPizzeria"
+      },
+      {
+        "domain": "orion:Tablet",
+        "iri": "orion:links",
+        "label": "Links",
+        "range": "orion:NinaPatel"
+      },
+      {
+        "domain": "orion:Tablet",
+        "iri": "orion:links",
+        "label": "Links",
+        "range": "orion:OrderCafe17"
+      },
+      {
+        "domain": "orion:Tablet",
+        "iri": "orion:links",
+        "label": "Links",
+        "range": "orion:VesuvioPieInTheSameDeliveryRecord"
+      },
+      {
+        "domain": "orion:LuigiBianchi",
+        "iri": "orion:manages",
+        "label": "Manages",
+        "range": "orion:DeliveryOrderForMarioSPizzeria"
+      },
+      {
+        "domain": "orion:ChefSofiaRossi",
+        "iri": "orion:prepares",
+        "label": "Prepares",
+        "range": "orion:SaturdayLunchServiceForThreeNeighborhoodTable"
+      },
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:reaches",
+        "label": "Reaches",
+        "range": "orion:CentralCafeAt1218P"
+      },
+      {
+        "domain": "orion:LuigiBianchi",
+        "iri": "orion:receives",
+        "label": "Receives",
+        "range": "orion:MarinaraPizza"
+      },
+      {
+        "domain": "orion:LuigiBianchi",
+        "iri": "orion:receives",
+        "label": "Receives",
+        "range": "orion:OrderFromCentralCafeForOneVesuvioPie"
+      },
+      {
+        "domain": "orion:LuigiBianchi",
+        "iri": "orion:receives",
+        "label": "Receives",
+        "range": "orion:SmallArugulaSalad"
+      },
+      {
+        "domain": "orion:NinaPatel",
+        "iri": "orion:receives",
+        "label": "Receives",
+        "range": "orion:VesuvioPie"
+      },
+      {
+        "domain": "orion:Luca",
+        "iri": "orion:records",
+        "label": "Records",
+        "range": "orion:BakeTimeAsNinetySecondInTheServiceNotebook"
+      },
+      {
+        "domain": "orion:Sofia",
+        "iri": "orion:reviews",
+        "label": "Reviews",
+        "range": "orion:Notebook"
+      },
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:rides",
+        "label": "Rides",
+        "range": "orion:HarborMarketToPineStreet"
+      },
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:rides",
+        "label": "Rides",
+        "range": "orion:PassThePublicLibrary"
+      },
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:scans",
+        "label": "Scans",
+        "range": "orion:Label"
+      },
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:scans",
+        "label": "Scans",
+        "range": "orion:PlaceTheBoxBesideTheSalad"
+      },
+      {
+        "domain": "orion:NinaPatel",
+        "iri": "orion:serves",
+        "label": "Serves",
+        "range": "orion:SliceToManagerElenaRuiz"
+      },
+      {
+        "domain": "orion:NinaPatel",
+        "iri": "orion:serves",
+        "label": "Serves",
+        "range": "orion:TwoSliceToBaristaOmarChen"
+      },
+      {
+        "domain": "orion:NinaPatel",
+        "iri": "orion:signs",
+        "label": "Signs",
+        "range": "orion:DeliveryTablet"
+      },
+      {
+        "domain": "orion:Sofia",
+        "iri": "orion:slides",
+        "label": "Slides",
+        "range": "orion:VesuvioPieOntoTheOvenFloor"
+      },
+      {
+        "domain": "orion:Sofia",
+        "iri": "orion:stores",
+        "label": "Stores",
+        "range": "orion:CleanTheMetalPeel"
+      },
+      {
+        "domain": "orion:Sofia",
+        "iri": "orion:stores",
+        "label": "Stores",
+        "range": "orion:ProofingBox"
+      },
+      {
+        "domain": "orion:Sofia",
+        "iri": "orion:stretches",
+        "label": "Stretches",
+        "range": "orion:DoughMadeFromCaputoFlour"
+      },
+      {
+        "domain": "orion:Sofia",
+        "iri": "orion:stretches",
+        "label": "Stretches",
+        "range": "orion:SeaSalt"
+      },
+      {
+        "domain": "orion:Sofia",
+        "iri": "orion:stretches",
+        "label": "Stretches",
+        "range": "orion:SlowSourdoughStarter"
+      },
+      {
+        "domain": "orion:Sofia",
+        "iri": "orion:stretches",
+        "label": "Stretches",
+        "range": "orion:WarmWater"
+      },
+      {
+        "domain": "orion:RecipeCard",
+        "iri": "orion:supports",
+        "label": "Supports",
+        "range": "orion:NextSaturdayService"
+      },
+      {
+        "domain": "orion:ThreeSlice",
+        "iri": "orion:supports",
+        "label": "Supports",
+        "range": "orion:FrontCounterStaff"
+      },
+      {
+        "domain": "orion:Nina",
+        "iri": "orion:tells",
+        "label": "Tells",
+        "range": "orion:Luigi"
+      },
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:thes",
+        "label": "Thes",
+        "range": "orion:BasilAromaMatchTheRequest"
+      },
+      {
+        "domain": "orion:Luigi",
+        "iri": "orion:thes",
+        "label": "Thes",
+        "range": "orion:LuigiRecordTheDeliveryAsCompleted"
+      },
+      {
+        "domain": "orion:Luca",
+        "iri": "orion:turns",
+        "label": "Turns",
+        "range": "orion:PizzaTwice"
+      },
+      {
+        "domain": "orion:Sofia",
+        "iri": "orion:updates",
+        "label": "Updates",
+        "range": "orion:RecipeCard"
+      }
+    ]
+  },
+  "subclass_facts": [
+    {
+      "object": "orion:MargheritaPizzaCalledTheVesuvioPie",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Centerpiece"
+    },
+    {
+      "object": "orion:SuppliedByRiverDairyAndEachSliceIsMarkedOnThePrepBoardAsFreshFiorDiLatte",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:Mozzarella"
+    }
+  ],
+  "type_assertions": []
+}

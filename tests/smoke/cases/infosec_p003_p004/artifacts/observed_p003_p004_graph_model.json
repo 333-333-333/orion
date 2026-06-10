@@ -1,10 +1,6 @@
 {
   "classes": [
     {
-      "iri": "orion:AdvisoryDocument",
-      "label": "AdvisoryDocument"
-    },
-    {
       "iri": "orion:Application",
       "label": "Application"
     },
@@ -48,10 +44,6 @@
       "label": "Control"
     },
     {
-      "iri": "orion:ControlDocument",
-      "label": "ControlDocument"
-    },
-    {
       "comments": [
         "The end user accesses systems and must follow security policies."
       ],
@@ -61,10 +53,6 @@
     {
       "iri": "orion:Expectation",
       "label": "Expectation"
-    },
-    {
-      "iri": "orion:FormalDocument",
-      "label": "FormalDocument"
     },
     {
       "iri": "orion:GoodPractice",
@@ -110,10 +98,6 @@
       "label": "MandatoryRequirement"
     },
     {
-      "iri": "orion:MinimumSetOfControls",
-      "label": "MinimumSetOfControls"
-    },
-    {
       "iri": "orion:MonitoringMechanism",
       "label": "MonitoringMechanism"
     },
@@ -124,10 +108,6 @@
     {
       "iri": "orion:OperatingSystem",
       "label": "OperatingSystem"
-    },
-    {
-      "iri": "orion:OperationalDocument",
-      "label": "OperationalDocument"
     },
     {
       "comments": [
@@ -247,8 +227,418 @@
       "label": "TechnicalService"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:Information",
+      "predicate": "orion:protects",
+      "source_evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "subject": "orion:Organization"
+    },
+    {
+      "object": "orion:Governance",
+      "predicate": "orion:implements",
+      "source_evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "subject": "orion:Organization"
+    },
+    {
+      "object": "orion:SecurityPolicy",
+      "predicate": "orion:implements",
+      "source_evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "subject": "orion:Organization"
+    },
+    {
+      "object": "orion:SecurityProcedure",
+      "predicate": "orion:implements",
+      "source_evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "subject": "orion:Organization"
+    },
+    {
+      "object": "orion:Control",
+      "predicate": "orion:implements",
+      "source_evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "subject": "orion:Organization"
+    },
+    {
+      "object": "orion:MonitoringMechanism",
+      "predicate": "orion:implements",
+      "source_evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "subject": "orion:Organization"
+    },
+    {
+      "object": "orion:IncidentResponseProcess",
+      "predicate": "orion:implements",
+      "source_evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "subject": "orion:Organization"
+    },
+    {
+      "object": "orion:Rule",
+      "predicate": "orion:defines",
+      "source_evidence": "A security policy is a formal document that defines rules and expectations for protecting information.",
+      "subject": "orion:SecurityPolicy"
+    },
+    {
+      "object": "orion:Expectation",
+      "predicate": "orion:defines",
+      "source_evidence": "A security policy is a formal document that defines rules and expectations for protecting information.",
+      "subject": "orion:SecurityPolicy"
+    },
+    {
+      "object": "orion:Information",
+      "predicate": "orion:protects",
+      "source_evidence": "A security policy is a formal document that defines rules and expectations for protecting information.",
+      "subject": "orion:SecurityPolicy"
+    },
+    {
+      "object": "orion:MandatoryRequirement",
+      "predicate": "orion:defines",
+      "source_evidence": "A security standard is a type of control document that defines mandatory requirements.",
+      "subject": "orion:SecurityStandard"
+    },
+    {
+      "object": "orion:StepByStepActivity",
+      "predicate": "orion:defines",
+      "source_evidence": "A security procedure is a type of operational document that defines step-by-step activities.",
+      "subject": "orion:SecurityProcedure"
+    },
+    {
+      "object": "orion:GoodPractice",
+      "predicate": "orion:recommends",
+      "source_evidence": "A security guideline is a type of advisory document that recommends good practices.",
+      "subject": "orion:SecurityGuideline"
+    },
+    {
+      "object": "orion:System",
+      "predicate": "orion:requiredFor",
+      "source_evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
+      "subject": "orion:SecurityBaseline"
+    },
+    {
+      "object": "orion:Application",
+      "predicate": "orion:requiredFor",
+      "source_evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
+      "subject": "orion:SecurityBaseline"
+    },
+    {
+      "object": "orion:InfrastructureComponent",
+      "predicate": "orion:requiredFor",
+      "source_evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
+      "subject": "orion:SecurityBaseline"
+    },
+    {
+      "object": "orion:InformationSecurity",
+      "predicate": "orion:providesOversightFor",
+      "source_evidence": "The board of directors provides strategic oversight for information security.",
+      "subject": "orion:BoardOfDirectors"
+    },
+    {
+      "object": "orion:SecurityPolicy",
+      "predicate": "orion:approves",
+      "source_evidence": "Senior management approves security policies and allocates resources for security initiatives.",
+      "subject": "orion:SeniorManagement"
+    },
+    {
+      "object": "orion:Resource",
+      "predicate": "orion:allocates",
+      "source_evidence": "Senior management approves security policies and allocates resources for security initiatives.",
+      "subject": "orion:SeniorManagement"
+    },
+    {
+      "object": "orion:SecurityInitiative",
+      "predicate": "orion:supports",
+      "source_evidence": "Senior management approves security policies and allocates resources for security initiatives.",
+      "subject": "orion:Resource"
+    },
+    {
+      "object": "orion:InformationSecurityProgram",
+      "predicate": "orion:coordinates",
+      "source_evidence": "The information security manager coordinates the information security program.",
+      "subject": "orion:InformationSecurityManager"
+    },
+    {
+      "object": "orion:InformationAsset",
+      "predicate": "orion:classifies",
+      "source_evidence": "The asset owner classifies information assets and defines protection requirements.",
+      "subject": "orion:AssetOwner"
+    },
+    {
+      "object": "orion:ProtectionRequirement",
+      "predicate": "orion:defines",
+      "source_evidence": "The asset owner classifies information assets and defines protection requirements.",
+      "subject": "orion:AssetOwner"
+    },
+    {
+      "object": "orion:TechnicalEnvironment",
+      "predicate": "orion:operates",
+      "source_evidence": "The asset custodian operates and maintains the technical environment that stores or processes information.",
+      "subject": "orion:AssetCustodian"
+    },
+    {
+      "object": "orion:TechnicalEnvironment",
+      "predicate": "orion:maintains",
+      "source_evidence": "The asset custodian operates and maintains the technical environment that stores or processes information.",
+      "subject": "orion:AssetCustodian"
+    },
+    {
+      "object": "orion:Information",
+      "predicate": "orion:stores",
+      "source_evidence": "The asset custodian operates and maintains the technical environment that stores or processes information.",
+      "subject": "orion:TechnicalEnvironment"
+    },
+    {
+      "object": "orion:Information",
+      "predicate": "orion:processes",
+      "source_evidence": "The asset custodian operates and maintains the technical environment that stores or processes information.",
+      "subject": "orion:TechnicalEnvironment"
+    },
+    {
+      "object": "orion:Server",
+      "predicate": "orion:manages",
+      "source_evidence": "The system administrator manages servers, networks, operating systems, and technical services.",
+      "subject": "orion:SystemAdministrator"
+    },
+    {
+      "object": "orion:Network",
+      "predicate": "orion:manages",
+      "source_evidence": "The system administrator manages servers, networks, operating systems, and technical services.",
+      "subject": "orion:SystemAdministrator"
+    },
+    {
+      "object": "orion:OperatingSystem",
+      "predicate": "orion:manages",
+      "source_evidence": "The system administrator manages servers, networks, operating systems, and technical services.",
+      "subject": "orion:SystemAdministrator"
+    },
+    {
+      "object": "orion:TechnicalService",
+      "predicate": "orion:manages",
+      "source_evidence": "The system administrator manages servers, networks, operating systems, and technical services.",
+      "subject": "orion:SystemAdministrator"
+    },
+    {
+      "object": "orion:SecurityEvent",
+      "predicate": "orion:monitors",
+      "source_evidence": "The security analyst monitors security events and investigates suspicious activity.",
+      "subject": "orion:SecurityAnalyst"
+    },
+    {
+      "object": "orion:SuspiciousActivity",
+      "predicate": "orion:investigates",
+      "source_evidence": "The security analyst monitors security events and investigates suspicious activity.",
+      "subject": "orion:SecurityAnalyst"
+    },
+    {
+      "object": "orion:Compliance",
+      "predicate": "orion:evaluates",
+      "source_evidence": "The auditor evaluates compliance with security requirements.",
+      "subject": "orion:Auditor"
+    },
+    {
+      "object": "orion:SecurityRequirement",
+      "predicate": "orion:checkedAgainst",
+      "source_evidence": "The auditor evaluates compliance with security requirements.",
+      "subject": "orion:Compliance"
+    },
+    {
+      "object": "orion:System",
+      "predicate": "orion:accesses",
+      "source_evidence": "The end user accesses systems and must follow security policies.",
+      "subject": "orion:EndUser"
+    },
+    {
+      "object": "orion:SecurityPolicy",
+      "predicate": "orion:follows",
+      "source_evidence": "The end user accesses systems and must follow security policies.",
+      "subject": "orion:EndUser"
+    }
+  ],
   "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:EndUser",
+      "predicate": "orion:accesses",
+      "range": "orion:System"
+    },
+    {
+      "domain": "orion:SeniorManagement",
+      "predicate": "orion:allocates",
+      "range": "orion:Resource"
+    },
+    {
+      "domain": "orion:SeniorManagement",
+      "predicate": "orion:approves",
+      "range": "orion:SecurityPolicy"
+    },
+    {
+      "domain": "orion:Compliance",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:SecurityRequirement"
+    },
+    {
+      "domain": "orion:AssetOwner",
+      "predicate": "orion:classifies",
+      "range": "orion:InformationAsset"
+    },
+    {
+      "domain": "orion:InformationSecurityManager",
+      "predicate": "orion:coordinates",
+      "range": "orion:InformationSecurityProgram"
+    },
+    {
+      "domain": "orion:AssetOwner",
+      "predicate": "orion:defines",
+      "range": "orion:ProtectionRequirement"
+    },
+    {
+      "domain": "orion:SecurityPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:Expectation"
+    },
+    {
+      "domain": "orion:SecurityPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:Rule"
+    },
+    {
+      "domain": "orion:SecurityProcedure",
+      "predicate": "orion:defines",
+      "range": "orion:StepByStepActivity"
+    },
+    {
+      "domain": "orion:SecurityStandard",
+      "predicate": "orion:defines",
+      "range": "orion:MandatoryRequirement"
+    },
+    {
+      "domain": "orion:Auditor",
+      "predicate": "orion:evaluates",
+      "range": "orion:Compliance"
+    },
+    {
+      "domain": "orion:EndUser",
+      "predicate": "orion:follows",
+      "range": "orion:SecurityPolicy"
+    },
+    {
+      "domain": "orion:Organization",
+      "predicate": "orion:implements",
+      "range": "orion:Control"
+    },
+    {
+      "domain": "orion:Organization",
+      "predicate": "orion:implements",
+      "range": "orion:Governance"
+    },
+    {
+      "domain": "orion:Organization",
+      "predicate": "orion:implements",
+      "range": "orion:IncidentResponseProcess"
+    },
+    {
+      "domain": "orion:Organization",
+      "predicate": "orion:implements",
+      "range": "orion:MonitoringMechanism"
+    },
+    {
+      "domain": "orion:Organization",
+      "predicate": "orion:implements",
+      "range": "orion:SecurityPolicy"
+    },
+    {
+      "domain": "orion:Organization",
+      "predicate": "orion:implements",
+      "range": "orion:SecurityProcedure"
+    },
+    {
+      "domain": "orion:SecurityAnalyst",
+      "predicate": "orion:investigates",
+      "range": "orion:SuspiciousActivity"
+    },
+    {
+      "domain": "orion:AssetCustodian",
+      "predicate": "orion:maintains",
+      "range": "orion:TechnicalEnvironment"
+    },
+    {
+      "domain": "orion:SystemAdministrator",
+      "predicate": "orion:manages",
+      "range": "orion:Network"
+    },
+    {
+      "domain": "orion:SystemAdministrator",
+      "predicate": "orion:manages",
+      "range": "orion:OperatingSystem"
+    },
+    {
+      "domain": "orion:SystemAdministrator",
+      "predicate": "orion:manages",
+      "range": "orion:Server"
+    },
+    {
+      "domain": "orion:SystemAdministrator",
+      "predicate": "orion:manages",
+      "range": "orion:TechnicalService"
+    },
+    {
+      "domain": "orion:SecurityAnalyst",
+      "predicate": "orion:monitors",
+      "range": "orion:SecurityEvent"
+    },
+    {
+      "domain": "orion:AssetCustodian",
+      "predicate": "orion:operates",
+      "range": "orion:TechnicalEnvironment"
+    },
+    {
+      "domain": "orion:TechnicalEnvironment",
+      "predicate": "orion:processes",
+      "range": "orion:Information"
+    },
+    {
+      "domain": "orion:Organization",
+      "predicate": "orion:protects",
+      "range": "orion:Information"
+    },
+    {
+      "domain": "orion:SecurityPolicy",
+      "predicate": "orion:protects",
+      "range": "orion:Information"
+    },
+    {
+      "domain": "orion:BoardOfDirectors",
+      "predicate": "orion:providesOversightFor",
+      "range": "orion:InformationSecurity"
+    },
+    {
+      "domain": "orion:SecurityGuideline",
+      "predicate": "orion:recommends",
+      "range": "orion:GoodPractice"
+    },
+    {
+      "domain": "orion:SecurityBaseline",
+      "predicate": "orion:requiredFor",
+      "range": "orion:Application"
+    },
+    {
+      "domain": "orion:SecurityBaseline",
+      "predicate": "orion:requiredFor",
+      "range": "orion:InfrastructureComponent"
+    },
+    {
+      "domain": "orion:SecurityBaseline",
+      "predicate": "orion:requiredFor",
+      "range": "orion:System"
+    },
+    {
+      "domain": "orion:TechnicalEnvironment",
+      "predicate": "orion:stores",
+      "range": "orion:Information"
+    },
+    {
+      "domain": "orion:Resource",
+      "predicate": "orion:supports",
+      "range": "orion:SecurityInitiative"
+    }
+  ],
   "object_property_schema": [
     {
       "domain": "orion:EndUser",
@@ -438,48 +828,48 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-6991670b41be76e6",
-      "claim-6328d85f4ca98eae",
-      "claim-9070ab8b41e0ea0e",
-      "claim-41db245d823afb38",
-      "claim-fac71eaf43337e67",
-      "claim-d39b8efc647ce843",
-      "claim-84e69de12122a477",
-      "claim-9ca4c46899761085",
-      "claim-e08ac978f313ec85",
-      "claim-dad715adc92f539f",
-      "claim-078f4fa001c61ffb",
-      "claim-921bff6b4dff9014",
-      "claim-98cad457713ccaae",
-      "claim-1db73b8541c2eb4e",
-      "claim-8d7ff6918356501f",
-      "claim-0733b809f26f47d9",
-      "claim-6184c37b1398a324",
-      "claim-4264b636940cdb02",
-      "claim-1eef4cf2f1381226",
-      "claim-85b201bdb42aff72",
-      "claim-43c48b228e48b1c4",
-      "claim-5e5c112e8a733739",
-      "claim-f9afa86717076de3",
-      "claim-0a5795c304d33ad9",
-      "claim-68e7d199d4817265",
-      "claim-258017e186671a8a",
-      "claim-9e1c6f266887ef47",
-      "claim-9b5c51630375ca77",
-      "claim-7ba7b163d3751612",
-      "claim-adde87f45850e4ee",
-      "claim-d889318d7eeb06ad",
-      "claim-712832f808b6eb11",
-      "claim-f8db17cf468db551",
-      "claim-43a41bd54d02e8cc",
-      "claim-433ca7f7c730b46b",
-      "claim-e6383de840301a98",
-      "claim-87c9dfe380f485cf",
-      "claim-2a8ad4ad97686ffa",
-      "claim-76013cfdbced9821",
-      "claim-baac18fab8aa75db",
-      "claim-d2cb409327ba38e8",
-      "claim-54f174491c72af33"
+      "claim-77c1a8876afb63c3",
+      "claim-4df30a8493d0c25e",
+      "claim-d1be94be987ddf94",
+      "claim-1dc29da02f201fca",
+      "claim-c2d5e41b9e9f258e",
+      "claim-21f2c399590270e1",
+      "claim-671bf668afeef1ae",
+      "claim-81cc1bfca3793b80",
+      "claim-9ec13620edf248d2",
+      "claim-473970054542881c",
+      "claim-240f0f75980dbf5f",
+      "claim-24e6f24d4702dbca",
+      "claim-dae32e0622b1735f",
+      "claim-e1d2dcf2f83e3ca0",
+      "claim-2d9825136d0192b0",
+      "claim-28c69750e3fc47e1",
+      "claim-75ec1467feb80eed",
+      "claim-1e1f482710de4ed6",
+      "claim-29470e2a5a71a783",
+      "claim-1dfee59394acd2e1",
+      "claim-70fc543376de97c6",
+      "claim-5c0f02da3585594f",
+      "claim-16a2903300740c17",
+      "claim-ab3dbb310c6676ca",
+      "claim-1013b7fe84734800",
+      "claim-c93183da861de2e2",
+      "claim-fdbe7016b248dec2",
+      "claim-3e679c81d5cdcab9",
+      "claim-472f620d92fd0dd9",
+      "claim-53ce4824dd2cf603",
+      "claim-f97abebd9dcfa349",
+      "claim-f4aa67b1b934c64b",
+      "claim-49d2963509377c51",
+      "claim-b462d941c5ae2f34",
+      "claim-a1884c7bcf5b6f85",
+      "claim-e9db513b85929d8d",
+      "claim-4e7af6570e5e2294",
+      "claim-06035fc5671fb5a5",
+      "claim-65c53daa06e10504",
+      "claim-48cc9ca07be21def",
+      "claim-48040cea1c1abde8",
+      "claim-009e54c9479f440a"
     ],
     "source_stage": "semantic_claims"
   },
@@ -673,10 +1063,6 @@
   "schema": {
     "classes": [
       {
-        "iri": "orion:AdvisoryDocument",
-        "label": "AdvisoryDocument"
-      },
-      {
         "iri": "orion:Application",
         "label": "Application"
       },
@@ -720,10 +1106,6 @@
         "label": "Control"
       },
       {
-        "iri": "orion:ControlDocument",
-        "label": "ControlDocument"
-      },
-      {
         "comments": [
           "The end user accesses systems and must follow security policies."
         ],
@@ -733,10 +1115,6 @@
       {
         "iri": "orion:Expectation",
         "label": "Expectation"
-      },
-      {
-        "iri": "orion:FormalDocument",
-        "label": "FormalDocument"
       },
       {
         "iri": "orion:GoodPractice",
@@ -782,10 +1160,6 @@
         "label": "MandatoryRequirement"
       },
       {
-        "iri": "orion:MinimumSetOfControls",
-        "label": "MinimumSetOfControls"
-      },
-      {
         "iri": "orion:MonitoringMechanism",
         "label": "MonitoringMechanism"
       },
@@ -796,10 +1170,6 @@
       {
         "iri": "orion:OperatingSystem",
         "label": "OperatingSystem"
-      },
-      {
-        "iri": "orion:OperationalDocument",
-        "label": "OperationalDocument"
       },
       {
         "comments": [
@@ -1144,32 +1514,6 @@
       }
     ]
   },
-  "subclass_facts": [
-    {
-      "object": "orion:MinimumSetOfControls",
-      "predicate": "rdfs:subClassOf",
-      "subject": "orion:SecurityBaseline"
-    },
-    {
-      "object": "orion:AdvisoryDocument",
-      "predicate": "rdfs:subClassOf",
-      "subject": "orion:SecurityGuideline"
-    },
-    {
-      "object": "orion:FormalDocument",
-      "predicate": "rdfs:subClassOf",
-      "subject": "orion:SecurityPolicy"
-    },
-    {
-      "object": "orion:OperationalDocument",
-      "predicate": "rdfs:subClassOf",
-      "subject": "orion:SecurityProcedure"
-    },
-    {
-      "object": "orion:ControlDocument",
-      "predicate": "rdfs:subClassOf",
-      "subject": "orion:SecurityStandard"
-    }
-  ],
+  "subclass_facts": [],
   "type_assertions": []
 }

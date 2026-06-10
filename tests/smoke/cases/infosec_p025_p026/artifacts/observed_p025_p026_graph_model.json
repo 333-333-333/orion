@@ -105,10 +105,6 @@
       "label": "Monitored"
     },
     {
-      "iri": "orion:MonitoringControl",
-      "label": "MonitoringControl"
-    },
-    {
       "iri": "orion:MustBeApproved",
       "label": "MustBeApproved"
     },
@@ -133,10 +129,6 @@
       ],
       "iri": "orion:Physical",
       "label": "Physical"
-    },
-    {
-      "iri": "orion:PhysicalAccessControl",
-      "label": "PhysicalAccessControl"
     },
     {
       "iri": "orion:PhysicalAsset",
@@ -168,6 +160,10 @@
     {
       "iri": "orion:ResponsibilityRelatedToPersonalData",
       "label": "ResponsibilityRelatedToPersonalData"
+    },
+    {
+      "iri": "orion:RestrictedAreaMustBeAuthorized",
+      "label": "RestrictedAreaMustBeAuthorized"
     },
     {
       "iri": "orion:RevokedWhenNoLonger",
@@ -242,10 +238,6 @@
       "label": "ThirdParty"
     },
     {
-      "iri": "orion:ToRestrictedAreaMustBeAuthorized",
-      "label": "ToRestrictedAreaMustBeAuthorized"
-    },
-    {
       "comments": [
         "A visitor log records external persons entering a facility."
       ],
@@ -253,8 +245,308 @@
       "label": "VisitorLog"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:RiskAssociated",
+      "predicate": "orion:manages",
+      "source_evidence": "Supplier security manages risks associated with external parties.",
+      "subject": "orion:SupplierSecurity"
+    },
+    {
+      "object": "orion:ExternalParty",
+      "predicate": "orion:checkedAgainst",
+      "source_evidence": "Supplier security manages risks associated with external parties.",
+      "subject": "orion:RiskAssociated"
+    },
+    {
+      "object": "orion:Good",
+      "predicate": "orion:provides",
+      "source_evidence": "A supplier is an external entity that provides goods or services.",
+      "subject": "orion:Supplier"
+    },
+    {
+      "object": "orion:Service",
+      "predicate": "orion:provides",
+      "source_evidence": "A supplier is an external entity that provides goods or services.",
+      "subject": "orion:Supplier"
+    },
+    {
+      "object": "orion:SecurityPostureOfASupplier",
+      "predicate": "orion:evaluates",
+      "source_evidence": "A supplier assessment evaluates the security posture of a supplier.",
+      "subject": "orion:SupplierAssessment"
+    },
+    {
+      "object": "orion:ObligationBetweenTheOrganization",
+      "predicate": "orion:defines",
+      "source_evidence": "A contract defines obligations between the organization and the supplier.",
+      "subject": "orion:Contract"
+    },
+    {
+      "object": "orion:Supplier",
+      "predicate": "orion:defines",
+      "source_evidence": "A contract defines obligations between the organization and the supplier.",
+      "subject": "orion:Contract"
+    },
+    {
+      "object": "orion:ResponsibilityRelatedToPersonalData",
+      "predicate": "orion:defines",
+      "source_evidence": "A data processing agreement defines responsibilities related to personal data.",
+      "subject": "orion:DataProcessingAgreement"
+    },
+    {
+      "object": "orion:ExpectedServicePerformance",
+      "predicate": "orion:defines",
+      "source_evidence": "A service-level agreement defines expected service performance and availability.",
+      "subject": "orion:ServiceLevelAgreement"
+    },
+    {
+      "object": "orion:Availability",
+      "predicate": "orion:defines",
+      "source_evidence": "A service-level agreement defines expected service performance and availability.",
+      "subject": "orion:ServiceLevelAgreement"
+    },
+    {
+      "object": "orion:MustBeApproved",
+      "predicate": "orion:access",
+      "source_evidence": "Third-party access must be approved, monitored, and revoked when no longer required.",
+      "subject": "orion:ThirdParty"
+    },
+    {
+      "object": "orion:Monitored",
+      "predicate": "orion:access",
+      "source_evidence": "Third-party access must be approved, monitored, and revoked when no longer required.",
+      "subject": "orion:ThirdParty"
+    },
+    {
+      "object": "orion:RevokedWhenNoLonger",
+      "predicate": "orion:access",
+      "source_evidence": "Third-party access must be approved, monitored, and revoked when no longer required.",
+      "subject": "orion:ThirdParty"
+    },
+    {
+      "object": "orion:Facility",
+      "predicate": "orion:protects",
+      "source_evidence": "Physical security protects facilities, equipment, people, and physical assets.",
+      "subject": "orion:PhysicalSecurity"
+    },
+    {
+      "object": "orion:Equipment",
+      "predicate": "orion:protects",
+      "source_evidence": "Physical security protects facilities, equipment, people, and physical assets.",
+      "subject": "orion:PhysicalSecurity"
+    },
+    {
+      "object": "orion:People",
+      "predicate": "orion:protects",
+      "source_evidence": "Physical security protects facilities, equipment, people, and physical assets.",
+      "subject": "orion:PhysicalSecurity"
+    },
+    {
+      "object": "orion:PhysicalAsset",
+      "predicate": "orion:protects",
+      "source_evidence": "Physical security protects facilities, equipment, people, and physical assets.",
+      "subject": "orion:PhysicalSecurity"
+    },
+    {
+      "object": "orion:ComputingInfrastructure",
+      "predicate": "orion:hosts",
+      "source_evidence": "A data center is a type of facility that hosts computing infrastructure.",
+      "subject": "orion:DataCenter"
+    },
+    {
+      "object": "orion:ExternalPersonEnteringAFacility",
+      "predicate": "orion:records",
+      "source_evidence": "A visitor log records external persons entering a facility.",
+      "subject": "orion:VisitorLog"
+    },
+    {
+      "object": "orion:PhysicalDocument",
+      "predicate": "orion:protects",
+      "source_evidence": "A locked cabinet protects physical documents and removable media.",
+      "subject": "orion:LockedCabinet"
+    },
+    {
+      "object": "orion:RemovableMedia",
+      "predicate": "orion:protects",
+      "source_evidence": "A locked cabinet protects physical documents and removable media.",
+      "subject": "orion:LockedCabinet"
+    },
+    {
+      "object": "orion:ProtectEquipmentFromFire",
+      "predicate": "orion:controls",
+      "source_evidence": "Environmental controls protect equipment from fire, humidity, temperature, and power failures.",
+      "subject": "orion:Environmental"
+    },
+    {
+      "object": "orion:Humidity",
+      "predicate": "orion:controls",
+      "source_evidence": "Environmental controls protect equipment from fire, humidity, temperature, and power failures.",
+      "subject": "orion:Environmental"
+    },
+    {
+      "object": "orion:Temperature",
+      "predicate": "orion:controls",
+      "source_evidence": "Environmental controls protect equipment from fire, humidity, temperature, and power failures.",
+      "subject": "orion:Environmental"
+    },
+    {
+      "object": "orion:PowerFailure",
+      "predicate": "orion:controls",
+      "source_evidence": "Environmental controls protect equipment from fire, humidity, temperature, and power failures.",
+      "subject": "orion:Environmental"
+    },
+    {
+      "object": "orion:RestrictedAreaMustBeAuthorized",
+      "predicate": "orion:access",
+      "source_evidence": "Physical access to restricted areas must be authorized and monitored.",
+      "subject": "orion:Physical"
+    },
+    {
+      "object": "orion:Monitored",
+      "predicate": "orion:access",
+      "source_evidence": "Physical access to restricted areas must be authorized and monitored.",
+      "subject": "orion:Physical"
+    }
+  ],
   "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:Physical",
+      "predicate": "orion:access",
+      "range": "orion:Monitored"
+    },
+    {
+      "domain": "orion:Physical",
+      "predicate": "orion:access",
+      "range": "orion:RestrictedAreaMustBeAuthorized"
+    },
+    {
+      "domain": "orion:ThirdParty",
+      "predicate": "orion:access",
+      "range": "orion:Monitored"
+    },
+    {
+      "domain": "orion:ThirdParty",
+      "predicate": "orion:access",
+      "range": "orion:MustBeApproved"
+    },
+    {
+      "domain": "orion:ThirdParty",
+      "predicate": "orion:access",
+      "range": "orion:RevokedWhenNoLonger"
+    },
+    {
+      "domain": "orion:RiskAssociated",
+      "predicate": "orion:checkedAgainst",
+      "range": "orion:ExternalParty"
+    },
+    {
+      "domain": "orion:Environmental",
+      "predicate": "orion:controls",
+      "range": "orion:Humidity"
+    },
+    {
+      "domain": "orion:Environmental",
+      "predicate": "orion:controls",
+      "range": "orion:PowerFailure"
+    },
+    {
+      "domain": "orion:Environmental",
+      "predicate": "orion:controls",
+      "range": "orion:ProtectEquipmentFromFire"
+    },
+    {
+      "domain": "orion:Environmental",
+      "predicate": "orion:controls",
+      "range": "orion:Temperature"
+    },
+    {
+      "domain": "orion:Contract",
+      "predicate": "orion:defines",
+      "range": "orion:ObligationBetweenTheOrganization"
+    },
+    {
+      "domain": "orion:Contract",
+      "predicate": "orion:defines",
+      "range": "orion:Supplier"
+    },
+    {
+      "domain": "orion:DataProcessingAgreement",
+      "predicate": "orion:defines",
+      "range": "orion:ResponsibilityRelatedToPersonalData"
+    },
+    {
+      "domain": "orion:ServiceLevelAgreement",
+      "predicate": "orion:defines",
+      "range": "orion:Availability"
+    },
+    {
+      "domain": "orion:ServiceLevelAgreement",
+      "predicate": "orion:defines",
+      "range": "orion:ExpectedServicePerformance"
+    },
+    {
+      "domain": "orion:SupplierAssessment",
+      "predicate": "orion:evaluates",
+      "range": "orion:SecurityPostureOfASupplier"
+    },
+    {
+      "domain": "orion:DataCenter",
+      "predicate": "orion:hosts",
+      "range": "orion:ComputingInfrastructure"
+    },
+    {
+      "domain": "orion:SupplierSecurity",
+      "predicate": "orion:manages",
+      "range": "orion:RiskAssociated"
+    },
+    {
+      "domain": "orion:LockedCabinet",
+      "predicate": "orion:protects",
+      "range": "orion:PhysicalDocument"
+    },
+    {
+      "domain": "orion:LockedCabinet",
+      "predicate": "orion:protects",
+      "range": "orion:RemovableMedia"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:Equipment"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:Facility"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:People"
+    },
+    {
+      "domain": "orion:PhysicalSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:PhysicalAsset"
+    },
+    {
+      "domain": "orion:Supplier",
+      "predicate": "orion:provides",
+      "range": "orion:Good"
+    },
+    {
+      "domain": "orion:Supplier",
+      "predicate": "orion:provides",
+      "range": "orion:Service"
+    },
+    {
+      "domain": "orion:VisitorLog",
+      "predicate": "orion:records",
+      "range": "orion:ExternalPersonEnteringAFacility"
+    }
+  ],
   "object_property_schema": [
     {
       "domain": "orion:Physical",
@@ -264,7 +556,7 @@
     {
       "domain": "orion:Physical",
       "predicate": "orion:access",
-      "range": "orion:ToRestrictedAreaMustBeAuthorized"
+      "range": "orion:RestrictedAreaMustBeAuthorized"
     },
     {
       "domain": "orion:ThirdParty",
@@ -394,41 +686,41 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-f4d42b1db0ad60bf",
-      "claim-c5702acc7ce2b695",
-      "claim-c91a1856ef356fc3",
-      "claim-7f213ea06f9565d6",
-      "claim-727cebdfb94a7cac",
-      "claim-c7614867da35876b",
-      "claim-27be9520939e810c",
-      "claim-e25fa87ec0d7eed3",
-      "claim-99a22eb3ac68d35d",
-      "claim-af1707ef65049c3b",
-      "claim-32aede8046e0e5dc",
-      "claim-03ff01091987e1a8",
-      "claim-c81990a65f5e9970",
-      "claim-922e6f1138fa83bc",
-      "claim-361cd9501f713175",
-      "claim-6fd9c5ba61fd8a0b",
-      "claim-d4db8a30b10c697b",
-      "claim-6819aeb8984a87db",
-      "claim-e4e1185dec40d299",
-      "claim-94a0f399f16ccdbf",
-      "claim-8dd03096f1b1f7f2",
-      "claim-eaf0ae796e698451",
-      "claim-87a97bfbc8a3dc06",
-      "claim-7a07e7d44d08db11",
-      "claim-3550796a4a0a30f6",
-      "claim-cb5a9df30c437c78",
-      "claim-c89fcc082b35f358",
-      "claim-1dc75532b85b9179",
-      "claim-478e2f0dddfb3e97",
-      "claim-4af21d1b3cafd3fe",
-      "claim-717561ee0ca8a5eb",
-      "claim-d0fe043d81ce60de",
-      "claim-bc39f8f0e4748c45",
-      "claim-c43f1a5b866f8d02",
-      "claim-254b78dcb967f5f3"
+      "claim-f25ba0406c4103dd",
+      "claim-251baba83beedc77",
+      "claim-6c077dae3a540932",
+      "claim-78b24e05bbb993f5",
+      "claim-2944e402d8f70dc9",
+      "claim-f81e5ded5ec1ffcd",
+      "claim-299ae38216ea01bc",
+      "claim-42c1402c6b0e87db",
+      "claim-08146abd841f58c5",
+      "claim-2b14e2deaefbe666",
+      "claim-40d74360d8682216",
+      "claim-32a302253961fe47",
+      "claim-9f4802dd29976ac6",
+      "claim-3e0ce9ff2a494594",
+      "claim-8271893aac8d7af2",
+      "claim-bd510b212049083e",
+      "claim-181c648f3dd02476",
+      "claim-de89ded4679a47a2",
+      "claim-578c59c6607140c9",
+      "claim-5e71e06b2be27695",
+      "claim-f65eebb8863735c8",
+      "claim-cc3f2a6006a7d9d4",
+      "claim-059851f3912ae583",
+      "claim-6b940770218cc8d2",
+      "claim-1730236e8e08dc36",
+      "claim-a7dba8d93f3ac661",
+      "claim-94681254e794e952",
+      "claim-42c7fc7f5f312925",
+      "claim-0f5b780f33403b13",
+      "claim-c4af2d746505bd86",
+      "claim-0792206fe8b33d4e",
+      "claim-0c6ee8993438b5ea",
+      "claim-8c3f14c9e493449a",
+      "claim-9dcb679b238a5c7f",
+      "claim-b1969e347d530032"
     ],
     "source_stage": "semantic_claims"
   },
@@ -441,7 +733,7 @@
     {
       "domain": "orion:Physical",
       "property": "orion:access",
-      "range": "orion:ToRestrictedAreaMustBeAuthorized"
+      "range": "orion:RestrictedAreaMustBeAuthorized"
     },
     {
       "domain": "orion:ThirdParty",
@@ -676,10 +968,6 @@
         "label": "Monitored"
       },
       {
-        "iri": "orion:MonitoringControl",
-        "label": "MonitoringControl"
-      },
-      {
         "iri": "orion:MustBeApproved",
         "label": "MustBeApproved"
       },
@@ -704,10 +992,6 @@
         ],
         "iri": "orion:Physical",
         "label": "Physical"
-      },
-      {
-        "iri": "orion:PhysicalAccessControl",
-        "label": "PhysicalAccessControl"
       },
       {
         "iri": "orion:PhysicalAsset",
@@ -739,6 +1023,10 @@
       {
         "iri": "orion:ResponsibilityRelatedToPersonalData",
         "label": "ResponsibilityRelatedToPersonalData"
+      },
+      {
+        "iri": "orion:RestrictedAreaMustBeAuthorized",
+        "label": "RestrictedAreaMustBeAuthorized"
       },
       {
         "iri": "orion:RevokedWhenNoLonger",
@@ -813,10 +1101,6 @@
         "label": "ThirdParty"
       },
       {
-        "iri": "orion:ToRestrictedAreaMustBeAuthorized",
-        "label": "ToRestrictedAreaMustBeAuthorized"
-      },
-      {
         "comments": [
           "A visitor log records external persons entering a facility."
         ],
@@ -835,7 +1119,7 @@
         "domain": "orion:Physical",
         "iri": "orion:access",
         "label": "Access",
-        "range": "orion:ToRestrictedAreaMustBeAuthorized"
+        "range": "orion:RestrictedAreaMustBeAuthorized"
       },
       {
         "domain": "orion:ThirdParty",
@@ -991,11 +1275,6 @@
   },
   "subclass_facts": [
     {
-      "object": "orion:PhysicalAccessControl",
-      "predicate": "rdfs:subClassOf",
-      "subject": "orion:BadgeReader"
-    },
-    {
       "object": "orion:Supplier",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:CloudProvider"
@@ -1014,11 +1293,6 @@
       "object": "orion:FacilityWhereEmployeePerformBusinessActivity",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:Office"
-    },
-    {
-      "object": "orion:MonitoringControl",
-      "predicate": "rdfs:subClassOf",
-      "subject": "orion:SecurityCamera"
     },
     {
       "object": "orion:Supplier",

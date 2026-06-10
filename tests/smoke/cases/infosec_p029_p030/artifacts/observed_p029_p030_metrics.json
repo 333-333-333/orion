@@ -16,7 +16,11 @@
     "p029",
     "p030"
   ],
-  "rdf_bytes": 20341,
+  "rdf_bytes": 22546,
   "rdf_generated": true,
-  "subclass_fact_count": 11
+  "semantic_debug_ir_generated": true,
+  "semantic_debug_ir_path": "artifacts/observed_p029_p030_semantic_debug_ir.json",
+  "subclass_fact_count": 11,
+  "ttl_bytes": 1873,
+  "ttl_generated": true
 }

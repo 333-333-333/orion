@@ -192,8 +192,198 @@
       "label": "WhetherAssignedPermissionRemainNecessary"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:ActionOverAResource",
+      "predicate": "orion:grants",
+      "source_evidence": "A permission grants an action over a resource.",
+      "subject": "orion:Permission"
+    },
+    {
+      "object": "orion:CommonPermission",
+      "predicate": "orion:shares",
+      "source_evidence": "A user group is a collection of identities that share common permissions.",
+      "subject": "orion:UserGroup"
+    },
+    {
+      "object": "orion:RoleToAnIdentity",
+      "predicate": "orion:links",
+      "source_evidence": "A role assignment links a role to an identity.",
+      "subject": "orion:RoleAssignment"
+    },
+    {
+      "object": "orion:WhetherAssignedPermissionRemainNecessary",
+      "predicate": "orion:verifies",
+      "source_evidence": "A permission review verifies whether assigned permissions remain necessary.",
+      "subject": "orion:PermissionReview"
+    },
+    {
+      "object": "orion:PreventOnePersonFromControllingIncompatibleActivity",
+      "predicate": "orion:duties",
+      "source_evidence": "Segregation of duties prevents one person from controlling incompatible activities.",
+      "subject": "orion:SegregationOf"
+    },
+    {
+      "object": "orion:ManagementControlTheLifecycleOfIdentities",
+      "predicate": "orion:access",
+      "source_evidence": "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials.",
+      "subject": "orion:IdentityAnd"
+    },
+    {
+      "object": "orion:Account",
+      "predicate": "orion:access",
+      "source_evidence": "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials.",
+      "subject": "orion:IdentityAnd"
+    },
+    {
+      "object": "orion:Role",
+      "predicate": "orion:access",
+      "source_evidence": "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials.",
+      "subject": "orion:IdentityAnd"
+    },
+    {
+      "object": "orion:Permission",
+      "predicate": "orion:access",
+      "source_evidence": "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials.",
+      "subject": "orion:IdentityAnd"
+    },
+    {
+      "object": "orion:Credential",
+      "predicate": "orion:access",
+      "source_evidence": "Identity and access management controls the lifecycle of identities, accounts, roles, permissions, and credentials.",
+      "subject": "orion:IdentityAnd"
+    },
+    {
+      "object": "orion:NewUserAccount",
+      "predicate": "orion:creates",
+      "source_evidence": "User provisioning creates a new user account.",
+      "subject": "orion:UserProvisioning"
+    },
+    {
+      "object": "orion:RemoveAccessForAUser",
+      "predicate": "orion:disables",
+      "source_evidence": "User deprovisioning disables or removes access for a user who no longer requires it.",
+      "subject": "orion:UserDeprovisioning"
+    },
+    {
+      "object": "orion:PermissionAssignedToAnIdentity",
+      "predicate": "orion:changes",
+      "source_evidence": "Access modification changes the permissions assigned to an identity.",
+      "subject": "orion:AccessModification"
+    },
+    {
+      "object": "orion:CreateAccessForANewEmployee",
+      "predicate": "orion:process",
+      "source_evidence": "A joiner process creates access for a new employee.",
+      "subject": "orion:Joiner"
+    },
+    {
+      "object": "orion:ChangeAccessWhenAPersonChangeRole",
+      "predicate": "orion:process",
+      "source_evidence": "A mover process changes access when a person changes role.",
+      "subject": "orion:Mover"
+    },
+    {
+      "object": "orion:RemoveAccessWhenAPersonLeaveTheOrganization",
+      "predicate": "orion:process",
+      "source_evidence": "A leaver process removes access when a person leaves the organization.",
+      "subject": "orion:Leaver"
+    },
+    {
+      "object": "orion:IdentityRecord",
+      "predicate": "orion:stores",
+      "source_evidence": "The identity management system stores identity records.",
+      "subject": "orion:IdentityManagementSystem"
+    }
+  ],
   "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:IdentityAnd",
+      "predicate": "orion:access",
+      "range": "orion:Account"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "predicate": "orion:access",
+      "range": "orion:Credential"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "predicate": "orion:access",
+      "range": "orion:ManagementControlTheLifecycleOfIdentities"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "predicate": "orion:access",
+      "range": "orion:Permission"
+    },
+    {
+      "domain": "orion:IdentityAnd",
+      "predicate": "orion:access",
+      "range": "orion:Role"
+    },
+    {
+      "domain": "orion:AccessModification",
+      "predicate": "orion:changes",
+      "range": "orion:PermissionAssignedToAnIdentity"
+    },
+    {
+      "domain": "orion:UserProvisioning",
+      "predicate": "orion:creates",
+      "range": "orion:NewUserAccount"
+    },
+    {
+      "domain": "orion:UserDeprovisioning",
+      "predicate": "orion:disables",
+      "range": "orion:RemoveAccessForAUser"
+    },
+    {
+      "domain": "orion:SegregationOf",
+      "predicate": "orion:duties",
+      "range": "orion:PreventOnePersonFromControllingIncompatibleActivity"
+    },
+    {
+      "domain": "orion:Permission",
+      "predicate": "orion:grants",
+      "range": "orion:ActionOverAResource"
+    },
+    {
+      "domain": "orion:RoleAssignment",
+      "predicate": "orion:links",
+      "range": "orion:RoleToAnIdentity"
+    },
+    {
+      "domain": "orion:Joiner",
+      "predicate": "orion:process",
+      "range": "orion:CreateAccessForANewEmployee"
+    },
+    {
+      "domain": "orion:Leaver",
+      "predicate": "orion:process",
+      "range": "orion:RemoveAccessWhenAPersonLeaveTheOrganization"
+    },
+    {
+      "domain": "orion:Mover",
+      "predicate": "orion:process",
+      "range": "orion:ChangeAccessWhenAPersonChangeRole"
+    },
+    {
+      "domain": "orion:UserGroup",
+      "predicate": "orion:shares",
+      "range": "orion:CommonPermission"
+    },
+    {
+      "domain": "orion:IdentityManagementSystem",
+      "predicate": "orion:stores",
+      "range": "orion:IdentityRecord"
+    },
+    {
+      "domain": "orion:PermissionReview",
+      "predicate": "orion:verifies",
+      "range": "orion:WhetherAssignedPermissionRemainNecessary"
+    }
+  ],
   "object_property_schema": [
     {
       "domain": "orion:IdentityAnd",
@@ -283,30 +473,30 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-cb452672b8360ef2",
-      "claim-81ea42fc319fe239",
-      "claim-b212683b167e8948",
-      "claim-55f3056f0e5eda93",
-      "claim-ef985381d4289510",
-      "claim-df6cad6f064487c6",
-      "claim-ee108fa035797f6b",
-      "claim-550878bf2c095f04",
-      "claim-cfc2c07662791cd2",
-      "claim-bb8f1bd92a269135",
-      "claim-e71fd8c90d4c7745",
-      "claim-2f02a7bb3309aed0",
-      "claim-11156caeb9200f58",
-      "claim-7616287ae64dae82",
-      "claim-6e0de673f74edcde",
-      "claim-96834dfcf80abc9d",
-      "claim-6af8937ba0d74b03",
-      "claim-f6a7c1d4f44d0eef",
-      "claim-c96ebeaddb181b1c",
-      "claim-bac965ed945e526d",
-      "claim-3630a293fe7fb6ba",
-      "claim-31d28e91de0c7bef",
-      "claim-0b107eba9ae7c303",
-      "claim-fb4625e80cce1f23"
+      "claim-5b834c5e49eddfe5",
+      "claim-61ca37410d41280f",
+      "claim-8afa98bf2bb2499f",
+      "claim-32e29ee6904ecd79",
+      "claim-7ab0e136ecd5aee0",
+      "claim-d162e89f418f5d84",
+      "claim-0d6a15a895c301d1",
+      "claim-7c5586012beeccfb",
+      "claim-1f42c31abe17e7c3",
+      "claim-e56d7607d315cb78",
+      "claim-f6c26fd1ca4e79b5",
+      "claim-18e345a74861df0e",
+      "claim-420bb06369de8737",
+      "claim-3191dc71abbb7138",
+      "claim-8804a50e9223e484",
+      "claim-2ee23f5b497af28b",
+      "claim-8b3901d83b41cb3f",
+      "claim-561fde5598ce9dc1",
+      "claim-e3152c51eeda6b66",
+      "claim-2eae638ef871cdcb",
+      "claim-dc9601462d3f359a",
+      "claim-a8f49e66be90b6d9",
+      "claim-29fade8f4f38a05d",
+      "claim-51a8f82c1ad7d85a"
     ],
     "source_stage": "semantic_claims"
   },

@@ -1,12 +1,12 @@
 {
   "case_id": "infosec_full_text",
-  "claim_count": 573,
-  "class_count": 722,
+  "claim_count": 591,
+  "class_count": 702,
   "evidence_precision_proxy": 1.0,
-  "evidence_supported_claim_count": 573,
+  "evidence_supported_claim_count": 591,
   "evidence_unsupported_claim_ids": [],
   "graph_generated": true,
-  "object_property_count": 408,
+  "object_property_count": 403,
   "observed_stage": "semantic_claims",
   "paragraph_claim_distribution": {
     "p001": 13,
@@ -14,9 +14,9 @@
     "p003": 21,
     "p004": 21,
     "p005": 16,
-    "p006": 13,
+    "p006": 15,
     "p007": 13,
-    "p008": 9,
+    "p008": 11,
     "p009": 7,
     "p010": 10,
     "p011": 10,
@@ -32,10 +32,10 @@
     "p021": 13,
     "p022": 19,
     "p023": 10,
-    "p024": 13,
+    "p024": 18,
     "p025": 17,
     "p026": 18,
-    "p027": 11,
+    "p027": 13,
     "p028": 14,
     "p029": 13,
     "p030": 12,
@@ -46,12 +46,12 @@
     "p035": 13,
     "p036": 2,
     "p037": 11,
-    "p038": 9,
-    "p039": 12,
-    "p040": 12,
+    "p038": 10,
+    "p039": 13,
+    "p040": 13,
     "p041": 13,
-    "p042": 7,
-    "p043": 19
+    "p042": 21,
+    "p043": 9
   },
   "paragraph_ids": [
     "p001",
@@ -98,7 +98,11 @@
     "p042",
     "p043"
   ],
-  "rdf_bytes": 387036,
+  "rdf_bytes": 450122,
   "rdf_generated": true,
-  "subclass_fact_count": 154
+  "semantic_debug_ir_generated": true,
+  "semantic_debug_ir_path": "artifacts/observed_infosec_full_text_semantic_debug_ir.json",
+  "subclass_fact_count": 155,
+  "ttl_bytes": 36761,
+  "ttl_generated": true
 }

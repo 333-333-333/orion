@@ -1,16 +1,8 @@
 from __future__ import annotations
 
-import hashlib
-import re
 from typing import Any
 
-_BR_TOKEN_PATTERN = re.compile(r"\w+|[^\w\s]", re.UNICODE)
-
-
-def _build_token_id(source_text_id: str, index: int, sentence_id: str, start_offset: int, end_offset: int, text: str) -> str:
-    stable_key = f"{source_text_id}|{index}|{sentence_id}|{start_offset}|{end_offset}|{text}".encode("utf-8")
-    digest = hashlib.sha256(stable_key).hexdigest()[:16]
-    return f"tok-{digest}"
+from pipeline.step_004_tokenization.rules import TOKEN_PATTERN, build_token_id
 
 
 def tokenize_sentences(input_payload: dict[str, Any]) -> dict[str, Any]:
@@ -24,7 +16,7 @@ def tokenize_sentences(input_payload: dict[str, Any]) -> dict[str, Any]:
         sentence_id = sentence["sentence_id"]
         sentence_start_offset = sentence["start_offset"]
 
-        for match in _BR_TOKEN_PATTERN.finditer(sentence_text):
+        for match in TOKEN_PATTERN.finditer(sentence_text):
             token_text = match.group(0)
             if token_text == "":
                 continue
@@ -35,7 +27,7 @@ def tokenize_sentences(input_payload: dict[str, Any]) -> dict[str, Any]:
 
             tokens.append(
                 {
-                    "token_id": _build_token_id(source_text_id, token_index, sentence_id, start_offset, end_offset, token_text),
+                    "token_id": build_token_id(source_text_id, token_index, sentence_id, start_offset, end_offset, token_text),
                     "text": token_text,
                     "index": token_index,
                     "sentence_id": sentence_id,

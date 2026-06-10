@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/backuppolicy">
+    <orion:defines rdf:resource="https://orion.local/resource/backupfrequency"/>
+    <orion:defines rdf:resource="https://orion.local/resource/retention"/>
+    <orion:defines rdf:resource="https://orion.local/resource/protection"/>
+    <orion:defines rdf:resource="https://orion.local/resource/restorationrequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/businesscontinuity">
+    <orion:is rdf:resource="https://orion.local/resource/capabilitytocontinuecriticaloperation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/capability">
+    <orion:continues rdf:resource="https://orion.local/resource/criticaloperationduringdisruption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/capabilitytocontinuecriticaloperation">
+    <orion:appliesduring rdf:resource="https://orion.local/resource/disruption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/databreach">
+    <orion:involves rdf:resource="https://orion.local/resource/unauthorizedaccessto"/>
+    <orion:involves rdf:resource="https://orion.local/resource/disclosureofdata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/disasterrecovery">
+    <orion:is rdf:resource="https://orion.local/resource/processofrestoringtechnologyservice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/disasterrecoverytest">
+    <orion:verifies rdf:resource="https://orion.local/resource/whetherrecoveryprocedureworkasexpected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/processofrestoringtechnologyservice">
+    <orion:appliesafter rdf:resource="https://orion.local/resource/disruptiveevent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/recoverypointobjective">
+    <orion:defines rdf:resource="https://orion.local/resource/maximumacceptableamountofdatalossmeasuredintime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/recoverytimeobjective">
+    <orion:defines rdf:resource="https://orion.local/resource/maximumacceptabletimetorestoreaservice"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/availabilityincident">
     <rdfs:label>AvailabilityIncident</rdfs:label>
   </owl:Class>
@@ -18,14 +52,23 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/businesscontinuity">
     <rdfs:label>BusinessContinuity</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/capabilitytocontinuecriticaloperationduringdisruption"/>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/capability"/>
     <rdfs:comment>Business continuity is the capability to continue critical operations during disruption.</rdfs:comment>
   </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/capabilitytocontinuecriticaloperationduringdisruption">
-    <rdfs:label>CapabilityToContinueCriticalOperationDuringDisruption</rdfs:label>
+  <owl:Class rdf:about="https://orion.local/resource/capability">
+    <rdfs:label>Capability</rdfs:label>
+    <rdfs:comment>Business continuity is the capability to continue critical operations during disruption.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/capabilitytocontinuecriticaloperation">
+    <rdfs:label>CapabilityToContinueCriticalOperation</rdfs:label>
+    <rdfs:label>CapabilityToContinueCriticalOperation roles subject object</rdfs:label>
+    <rdfs:comment>Business continuity is the capability to continue critical operations during disruption.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/copyofdata">
     <rdfs:label>CopyOfData</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/criticaloperationduringdisruption">
+    <rdfs:label>CriticalOperationDuringDisruption</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/databreach">
     <rdfs:label>DataBreach</rdfs:label>
@@ -48,6 +91,12 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/disclosureofdata">
     <rdfs:label>DisclosureOfData</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/disruption">
+    <rdfs:label>Disruption</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/disruptiveevent">
+    <rdfs:label>DisruptiveEvent</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/insidermisuse">
     <rdfs:label>InsiderMisuse</rdfs:label>
@@ -80,6 +129,11 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/physicalandinformationsecurityincident">
     <rdfs:label>PhysicalAndInformationSecurityIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/processofrestoringtechnologyservice">
+    <rdfs:label>ProcessOfRestoringTechnologyService</rdfs:label>
+    <rdfs:label>ProcessOfRestoringTechnologyService roles subject object</rdfs:label>
+    <rdfs:comment>Disaster recovery is the process of restoring technology services after a disruptive event.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/processofrestoringtechnologyserviceafteradisruptiveevent">
     <rdfs:label>ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent</rdfs:label>
@@ -129,6 +183,21 @@
   <owl:Class rdf:about="https://orion.local/resource/whetherrecoveryprocedureworkasexpected">
     <rdfs:label>WhetherRecoveryProcedureWorkAsExpected</rdfs:label>
   </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/appliesAfter">
+    <rdfs:label>appliesAfter</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/processofrestoringtechnologyservice"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/disruptiveevent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/appliesDuring">
+    <rdfs:label>appliesDuring</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/capabilitytocontinuecriticaloperation"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/disruption"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/continues">
+    <rdfs:label>Continues</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/capability"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/criticaloperationduringdisruption"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://orion.local/resource/defines">
     <rdfs:label>Defines</rdfs:label>
     <rdfs:domain rdf:resource="https://orion.local/resource/backuppolicy"/>
@@ -169,6 +238,16 @@
     <rdfs:domain rdf:resource="https://orion.local/resource/databreach"/>
     <rdfs:range rdf:resource="https://orion.local/resource/unauthorizedaccessto"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/is">
+    <rdfs:label>Is</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/businesscontinuity"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/capabilitytocontinuecriticaloperation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/is">
+    <rdfs:label>Is</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/disasterrecovery"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/processofrestoringtechnologyservice"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://orion.local/resource/verifies">
     <rdfs:label>Verifies</rdfs:label>
     <rdfs:domain rdf:resource="https://orion.local/resource/disasterrecoverytest"/>
@@ -189,11 +268,18 @@
   <rdf:Description rdf:about="https://orion.local/resource/businesscontinuity">
     <rdfs:label>BusinessContinuity</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/capabilitytocontinuecriticaloperationduringdisruption">
-    <rdfs:label>CapabilityToContinueCriticalOperationDuringDisruption</rdfs:label>
+  <rdf:Description rdf:about="https://orion.local/resource/capability">
+    <rdfs:label>Capability</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/capabilitytocontinuecriticaloperation">
+    <rdfs:label>CapabilityToContinueCriticalOperation</rdfs:label>
+    <rdfs:label>CapabilityToContinueCriticalOperation roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/copyofdata">
     <rdfs:label>CopyOfData</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/criticaloperationduringdisruption">
+    <rdfs:label>CriticalOperationDuringDisruption</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/databreach">
     <rdfs:label>DataBreach</rdfs:label>
@@ -209,6 +295,12 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/disclosureofdata">
     <rdfs:label>DisclosureOfData</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/disruption">
+    <rdfs:label>Disruption</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/disruptiveevent">
+    <rdfs:label>DisruptiveEvent</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/insidermisuse">
     <rdfs:label>InsiderMisuse</rdfs:label>
@@ -233,6 +325,10 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/physicalandinformationsecurityincident">
     <rdfs:label>PhysicalAndInformationSecurityIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/processofrestoringtechnologyservice">
+    <rdfs:label>ProcessOfRestoringTechnologyService</rdfs:label>
+    <rdfs:label>ProcessOfRestoringTechnologyService roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/processofrestoringtechnologyserviceafteradisruptiveevent">
     <rdfs:label>ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent</rdfs:label>

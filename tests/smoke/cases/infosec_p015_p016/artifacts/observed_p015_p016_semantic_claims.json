@@ -2,7 +2,7 @@
   "claim_count": 26,
   "claims": [
     {
-      "claim_id": "claim-1d5917ca6d413153",
+      "claim_id": "claim-eec73321189cc07d",
       "kind": "relation",
       "normalized_statement": "ApplicationSecurity protects SoftwareSystemThroughoutTheirLifecycle",
       "object": "SoftwareSystemThroughoutTheirLifecycle",
@@ -12,14 +12,14 @@
         "asset_id": "p015",
         "evidence": "Application security protects software systems throughout their lifecycle.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-a63cac0e280eb67f",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-3ad6993ea82415b3",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "ApplicationSecurity protects SoftwareSystemThroughoutTheirLifecycle",
       "subject": "ApplicationSecurity"
     },
     {
-      "claim_id": "claim-17252f38ab3ecfdb",
+      "claim_id": "claim-643190f7761116cb",
       "kind": "definition",
       "normalized_statement": "SoftwareVulnerability is a WeaknessInApplicationCodeConfigurationOrDesign",
       "object": "WeaknessInApplicationCodeConfigurationOrDesign",
@@ -29,14 +29,14 @@
         "asset_id": "p015",
         "evidence": "A software vulnerability is a weakness in application code, configuration, or design.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-9b60f1ade220f14a",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-7c14f67a3aa631b9",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "SoftwareVulnerability is a WeaknessInApplicationCodeConfigurationOrDesign",
       "subject": "SoftwareVulnerability"
     },
     {
-      "claim_id": "claim-02dfa95c66431ce8",
+      "claim_id": "claim-ca30cc0eac61991b",
       "kind": "relation",
       "normalized_statement": "InputValidation prevents Malicious",
       "object": "Malicious",
@@ -46,14 +46,14 @@
         "asset_id": "p015",
         "evidence": "Input validation prevents malicious or malformed data from entering an application.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-b7e177a8d1323e64",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-3a9e72bd0be3a90a",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "InputValidation prevents Malicious",
       "subject": "InputValidation"
     },
     {
-      "claim_id": "claim-71babf57523c78fc",
+      "claim_id": "claim-4d7ee852afadf6b2",
       "kind": "relation",
       "normalized_statement": "InputValidation prevents MalformedDataFromEnteringAnApplication",
       "object": "MalformedDataFromEnteringAnApplication",
@@ -63,14 +63,14 @@
         "asset_id": "p015",
         "evidence": "Input validation prevents malicious or malformed data from entering an application.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-b7e177a8d1323e64",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-3a9e72bd0be3a90a",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "InputValidation prevents MalformedDataFromEnteringAnApplication",
       "subject": "InputValidation"
     },
     {
-      "claim_id": "claim-5041a11d8aadc6fa",
+      "claim_id": "claim-0b4cbb37c2d65b55",
       "kind": "relation",
       "normalized_statement": "OutputEncoding reduces RiskOfInjection",
       "object": "RiskOfInjection",
@@ -80,14 +80,14 @@
         "asset_id": "p015",
         "evidence": "Output encoding reduces the risk of injection and cross-site scripting.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-8140d07220fd4876",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-672abe676f1fbac4",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "OutputEncoding reduces RiskOfInjection",
       "subject": "OutputEncoding"
     },
     {
-      "claim_id": "claim-aba12c4db0983359",
+      "claim_id": "claim-6c70d591f3a4a255",
       "kind": "relation",
       "normalized_statement": "OutputEncoding reduces CrossSiteScripting",
       "object": "CrossSiteScripting",
@@ -97,14 +97,14 @@
         "asset_id": "p015",
         "evidence": "Output encoding reduces the risk of injection and cross-site scripting.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-8140d07220fd4876",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-672abe676f1fbac4",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "OutputEncoding reduces CrossSiteScripting",
       "subject": "OutputEncoding"
     },
     {
-      "claim_id": "claim-ad7196129440d87f",
+      "claim_id": "claim-71c0dbdbd8478dac",
       "kind": "relation",
       "normalized_statement": "SecureAuthentication protects UserLoginProcess",
       "object": "UserLoginProcess",
@@ -114,14 +114,14 @@
         "asset_id": "p015",
         "evidence": "Secure authentication protects user login processes.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-2bbfbafe34b47f20",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-f25624b5c9fd75d1",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "SecureAuthentication protects UserLoginProcess",
       "subject": "SecureAuthentication"
     },
     {
-      "claim_id": "claim-98cea566f8cbd86c",
+      "claim_id": "claim-68dd59dff910a487",
       "kind": "relation",
       "normalized_statement": "SecureSessionManagement protects SessionToken",
       "object": "SessionToken",
@@ -131,14 +131,14 @@
         "asset_id": "p015",
         "evidence": "Secure session management protects session tokens and user state.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-10267e2858aa4ad6",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-d730684febd9e76f",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "SecureSessionManagement protects SessionToken",
       "subject": "SecureSessionManagement"
     },
     {
-      "claim_id": "claim-c6d48ca37ceb550b",
+      "claim_id": "claim-8e1616fcab6ddbfc",
       "kind": "relation",
       "normalized_statement": "SecureSessionManagement protects UserState",
       "object": "UserState",
@@ -148,14 +148,14 @@
         "asset_id": "p015",
         "evidence": "Secure session management protects session tokens and user state.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-10267e2858aa4ad6",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-d730684febd9e76f",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "SecureSessionManagement protects UserState",
       "subject": "SecureSessionManagement"
     },
     {
-      "claim_id": "claim-db73f6ab509c63cb",
+      "claim_id": "claim-2ad617da8872befb",
       "kind": "relation",
       "normalized_statement": "SecureErrorHandling prevents SensitiveInformationFromBeingExposedThroughErrorMessage",
       "object": "SensitiveInformationFromBeingExposedThroughErrorMessage",
@@ -165,14 +165,14 @@
         "asset_id": "p015",
         "evidence": "Secure error handling prevents sensitive information from being exposed through error messages.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-bd8268bb68f5f40a",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-7aad2d76aa584b42",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "SecureErrorHandling prevents SensitiveInformationFromBeingExposedThroughErrorMessage",
       "subject": "SecureErrorHandling"
     },
     {
-      "claim_id": "claim-b70394b1c0f64c4c",
+      "claim_id": "claim-194c524c5397d38c",
       "kind": "relation",
       "normalized_statement": "SecurityRequirement defines ProtectionNeedForAnApplication",
       "object": "ProtectionNeedForAnApplication",
@@ -182,14 +182,14 @@
         "asset_id": "p015",
         "evidence": "A security requirement defines a protection need for an application.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-4ecb68e77faf105f",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-4098542256cd16b4",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "SecurityRequirement defines ProtectionNeedForAnApplication",
       "subject": "SecurityRequirement"
     },
     {
-      "claim_id": "claim-da7587a4facba963",
+      "claim_id": "claim-f0f873e281982342",
       "kind": "definition",
       "normalized_statement": "SecurityTestVerifyWhetherASecurityRequirement is a ImplementedCorrectly",
       "object": "ImplementedCorrectly",
@@ -199,14 +199,14 @@
         "asset_id": "p015",
         "evidence": "A security test verifies whether a security requirement is implemented correctly.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-61511c30299d7d41",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-6c1466f014d0360c",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "SecurityTestVerifyWhetherASecurityRequirement is a ImplementedCorrectly",
       "subject": "SecurityTestVerifyWhetherASecurityRequirement"
     },
     {
-      "claim_id": "claim-2fff9cce2d766f05",
+      "claim_id": "claim-564b64414eed292b",
       "kind": "relation",
       "normalized_statement": "CodeReview examines SourceCodeToDetectDefect",
       "object": "SourceCodeToDetectDefect",
@@ -216,14 +216,14 @@
         "asset_id": "p015",
         "evidence": "A code review examines source code to detect defects, weaknesses, and policy violations.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-3199bcd8978bb8b0",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-45b7231ba1f8de64",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "CodeReview examines SourceCodeToDetectDefect",
       "subject": "CodeReview"
     },
     {
-      "claim_id": "claim-5dbd1fefbcae2054",
+      "claim_id": "claim-9a3cf3745f800043",
       "kind": "relation",
       "normalized_statement": "CodeReview examines Weakness",
       "object": "Weakness",
@@ -233,14 +233,14 @@
         "asset_id": "p015",
         "evidence": "A code review examines source code to detect defects, weaknesses, and policy violations.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-3199bcd8978bb8b0",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-45b7231ba1f8de64",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "CodeReview examines Weakness",
       "subject": "CodeReview"
     },
     {
-      "claim_id": "claim-e5b05919a30ab970",
+      "claim_id": "claim-0176951f34136d14",
       "kind": "relation",
       "normalized_statement": "CodeReview examines PolicyViolation",
       "object": "PolicyViolation",
@@ -250,48 +250,48 @@
         "asset_id": "p015",
         "evidence": "A code review examines source code to detect defects, weaknesses, and policy violations.",
         "paragraph_id": "p015",
-        "sentence_id": "sent-3199bcd8978bb8b0",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-45b7231ba1f8de64",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "CodeReview examines PolicyViolation",
       "subject": "CodeReview"
     },
     {
-      "claim_id": "claim-48adb79e02bb621e",
+      "claim_id": "claim-292344a6fe978010",
       "kind": "definition",
-      "normalized_statement": "WebApplication is_a WebApplication",
-      "object": "WebApplication",
+      "normalized_statement": "WebApplication is a Application",
+      "object": "Application",
       "paragraph_id": "p016",
       "predicate": "is_a",
       "source": {
         "asset_id": "p016",
         "evidence": "A web application is a type of application.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-82896a5761ab3dd4",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-dca82ea44bc54d78",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
-      "statement": "WebApplication is_a WebApplication",
+      "statement": "WebApplication is a Application",
       "subject": "WebApplication"
     },
     {
-      "claim_id": "claim-f1111bbd0ec64136",
+      "claim_id": "claim-6b41aff0afcc4054",
       "kind": "definition",
-      "normalized_statement": "MobileApplication is_a WebApplication",
-      "object": "WebApplication",
+      "normalized_statement": "MobileApplication is a Application",
+      "object": "Application",
       "paragraph_id": "p016",
       "predicate": "is_a",
       "source": {
         "asset_id": "p016",
         "evidence": "A mobile application is a type of application.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-66623d26c406abcb",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-1f4d96467729beb4",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
-      "statement": "MobileApplication is_a WebApplication",
+      "statement": "MobileApplication is a Application",
       "subject": "MobileApplication"
     },
     {
-      "claim_id": "claim-c06d81adf6b32034",
+      "claim_id": "claim-483a9cdd35f86ffd",
       "kind": "definition",
       "normalized_statement": "API is a ApplicationInterface",
       "object": "ApplicationInterface",
@@ -301,14 +301,14 @@
         "asset_id": "p016",
         "evidence": "An API is a type of application interface.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-0e4cd58f3ad4898f",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-f98d31aaa939613f",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "API is a ApplicationInterface",
       "subject": "API"
     },
     {
-      "claim_id": "claim-4dc634787ce5ed31",
+      "claim_id": "claim-648d31d458c39d6e",
       "kind": "definition",
       "normalized_statement": "Database is a DataStorageSystem",
       "object": "DataStorageSystem",
@@ -318,14 +318,14 @@
         "asset_id": "p016",
         "evidence": "A database is a type of data storage system.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-025d21e44f85298a",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-89e468387d732acc",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "Database is a DataStorageSystem",
       "subject": "Database"
     },
     {
-      "claim_id": "claim-133919e36223bedc",
+      "claim_id": "claim-fed27ba038982b44",
       "kind": "relation",
       "normalized_statement": "WebServer hosts WebApplication",
       "object": "WebApplication",
@@ -335,14 +335,14 @@
         "asset_id": "p016",
         "evidence": "A web server hosts web applications.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-a5916f5da8f2820a",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-3df0224eb442ad60",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "WebServer hosts WebApplication",
       "subject": "WebServer"
     },
     {
-      "claim_id": "claim-fc41b8392c22d940",
+      "claim_id": "claim-573dcda8352682d0",
       "kind": "relation",
       "normalized_statement": "ApplicationServer executes BusinessLogic",
       "object": "BusinessLogic",
@@ -352,14 +352,14 @@
         "asset_id": "p016",
         "evidence": "An application server executes business logic.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-0f58e4cbd67d8374",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-e2b4345b5e6a66fe",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "ApplicationServer executes BusinessLogic",
       "subject": "ApplicationServer"
     },
     {
-      "claim_id": "claim-1d0938cb2e77f484",
+      "claim_id": "claim-76e24327b233fcaf",
       "kind": "relation",
       "normalized_statement": "DatabaseServer stores StructuredData",
       "object": "StructuredData",
@@ -369,14 +369,14 @@
         "asset_id": "p016",
         "evidence": "A database server stores structured data.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-50f52d29379aff5c",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-92092f1710b27491",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "DatabaseServer stores StructuredData",
       "subject": "DatabaseServer"
     },
     {
-      "claim_id": "claim-437a52bfc57228d3",
+      "claim_id": "claim-06f00d73dd9e78ce",
       "kind": "relation",
       "normalized_statement": "LoadBalancer distributes TrafficAcrossMultipleServer",
       "object": "TrafficAcrossMultipleServer",
@@ -386,14 +386,14 @@
         "asset_id": "p016",
         "evidence": "A load balancer distributes traffic across multiple servers.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-f532f78083469e95",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-742ecfad38211773",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "LoadBalancer distributes TrafficAcrossMultipleServer",
       "subject": "LoadBalancer"
     },
     {
-      "claim_id": "claim-f5d7724ec800278e",
+      "claim_id": "claim-2af12410c83c8288",
       "kind": "relation",
       "normalized_statement": "APIGateway controls AccessToBackendService",
       "object": "AccessToBackendService",
@@ -403,14 +403,14 @@
         "asset_id": "p016",
         "evidence": "An API gateway controls access to backend services.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-37c16b613a26a955",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-3e3fd4a6dc171293",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "APIGateway controls AccessToBackendService",
       "subject": "APIGateway"
     },
     {
-      "claim_id": "claim-2c0e4a5da615389a",
+      "claim_id": "claim-c36cb6c73f4f09d6",
       "kind": "relation",
       "normalized_statement": "ContentDeliveryNetwork improves Availability",
       "object": "Availability",
@@ -420,14 +420,14 @@
         "asset_id": "p016",
         "evidence": "A content delivery network improves availability and performance for distributed users.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-35efae6f7fc5ac6f",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-d125a398479ddc95",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "ContentDeliveryNetwork improves Availability",
       "subject": "ContentDeliveryNetwork"
     },
     {
-      "claim_id": "claim-4b0c966e12402c76",
+      "claim_id": "claim-c53fa98b0e4a8a1f",
       "kind": "relation",
       "normalized_statement": "ContentDeliveryNetwork improves PerformanceForDistributedUser",
       "object": "PerformanceForDistributedUser",
@@ -437,8 +437,8 @@
         "asset_id": "p016",
         "evidence": "A content delivery network improves availability and performance for distributed users.",
         "paragraph_id": "p016",
-        "sentence_id": "sent-35efae6f7fc5ac6f",
-        "source_text_id": "24301c935ead502c4c12751e9169c0d7797920b597615482589fc5252d576048"
+        "sentence_id": "sent-d125a398479ddc95",
+        "source_text_id": "dea09240804d7d7bbc8fa3dd865d47da19476286272416f1806b6d0aaded1b14"
       },
       "statement": "ContentDeliveryNetwork improves PerformanceForDistributedUser",
       "subject": "ContentDeliveryNetwork"

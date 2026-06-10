@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <owl:Class rdf:about="https://orion.local/resource/application">
+    <rdfs:label>Application</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/mobileapplication">
+    <rdfs:label>MobileApplication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/application"/>
+    <rdfs:comment>A mobile application is a type of application.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/webapplication">
+    <rdfs:label>WebApplication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/application"/>
+    <rdfs:comment>A web application is a type of application.</rdfs:comment>
+  </owl:Class>
+  <rdf:Description rdf:about="https://orion.local/resource/application">
+    <rdfs:label>Application</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/mobileapplication">
+    <rdfs:label>MobileApplication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/webapplication">
+    <rdfs:label>WebApplication</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

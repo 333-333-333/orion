@@ -2,7 +2,7 @@
   "claim_count": 25,
   "claims": [
     {
-      "claim_id": "claim-b27d007f03b0723a",
+      "claim_id": "claim-d643dfea39c88222",
       "kind": "relation",
       "normalized_statement": "Compliance ensures Regulatory",
       "object": "Regulatory",
@@ -12,14 +12,14 @@
         "asset_id": "p029",
         "evidence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-182261eb459d2405",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-276fdcd4d4f73501",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "Compliance ensures Regulatory",
       "subject": "Compliance"
     },
     {
-      "claim_id": "claim-983a09417bc897e6",
+      "claim_id": "claim-e22e36a602ac2220",
       "kind": "relation",
       "normalized_statement": "Compliance ensures Contractual",
       "object": "Contractual",
@@ -29,14 +29,14 @@
         "asset_id": "p029",
         "evidence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-182261eb459d2405",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-276fdcd4d4f73501",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "Compliance ensures Contractual",
       "subject": "Compliance"
     },
     {
-      "claim_id": "claim-a513166c29b15e7c",
+      "claim_id": "claim-ae2dcd1001f759c3",
       "kind": "relation",
       "normalized_statement": "Compliance ensures InternalRequirement",
       "object": "InternalRequirement",
@@ -46,14 +46,14 @@
         "asset_id": "p029",
         "evidence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-182261eb459d2405",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-276fdcd4d4f73501",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "Compliance ensures InternalRequirement",
       "subject": "Compliance"
     },
     {
-      "claim_id": "claim-3bc5ea64bf4c7332",
+      "claim_id": "claim-2679aa1dc3a01027",
       "kind": "definition",
       "normalized_statement": "ComplianceRequirement is a Obligation",
       "object": "Obligation",
@@ -63,14 +63,14 @@
         "asset_id": "p029",
         "evidence": "A compliance requirement is an obligation that must be satisfied.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-4ce1f2daed4b7820",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-f935e54abe9640a4",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "ComplianceRequirement is a Obligation",
       "subject": "ComplianceRequirement"
     },
     {
-      "claim_id": "claim-d52b3f82b73b41bb",
+      "claim_id": "claim-78a631e1ab2c234a",
       "kind": "relation",
       "normalized_statement": "ComplianceRequirement musts BeSatisfied",
       "object": "BeSatisfied",
@@ -80,14 +80,14 @@
         "asset_id": "p029",
         "evidence": "A compliance requirement is an obligation that must be satisfied.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-4ce1f2daed4b7820",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-f935e54abe9640a4",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "ComplianceRequirement musts BeSatisfied",
       "subject": "ComplianceRequirement"
     },
     {
-      "claim_id": "claim-7329effe7b3fea82",
+      "claim_id": "claim-0bc0493f007d15ba",
       "kind": "definition",
       "normalized_statement": "LegalRequirement is a ComplianceRequirementDerivedFromLaw",
       "object": "ComplianceRequirementDerivedFromLaw",
@@ -97,14 +97,14 @@
         "asset_id": "p029",
         "evidence": "A legal requirement is a type of compliance requirement derived from law.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-70a6055556219c11",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-9bb1b548d7fc8350",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "LegalRequirement is a ComplianceRequirementDerivedFromLaw",
       "subject": "LegalRequirement"
     },
     {
-      "claim_id": "claim-d443eb070b177a41",
+      "claim_id": "claim-e5a664697f1d559b",
       "kind": "definition",
       "normalized_statement": "RegulatoryRequirement is a ComplianceRequirementImposedByARegulator",
       "object": "ComplianceRequirementImposedByARegulator",
@@ -114,14 +114,14 @@
         "asset_id": "p029",
         "evidence": "A regulatory requirement is a type of compliance requirement imposed by a regulator.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-5d864a1862991924",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-a01116f209a55f8b",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "RegulatoryRequirement is a ComplianceRequirementImposedByARegulator",
       "subject": "RegulatoryRequirement"
     },
     {
-      "claim_id": "claim-72d9731d06edd2b9",
+      "claim_id": "claim-97f4dfcae0640911",
       "kind": "definition",
       "normalized_statement": "ContractualRequirement is a ComplianceRequirementDefinedInAnAgreement",
       "object": "ComplianceRequirementDefinedInAnAgreement",
@@ -131,14 +131,14 @@
         "asset_id": "p029",
         "evidence": "A contractual requirement is a type of compliance requirement defined in an agreement.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-6bf342f44eec3034",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-8c5569b84e184447",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "ContractualRequirement is a ComplianceRequirementDefinedInAnAgreement",
       "subject": "ContractualRequirement"
     },
     {
-      "claim_id": "claim-5bfcfd27250abf7f",
+      "claim_id": "claim-97d8b25b630438d2",
       "kind": "definition",
       "normalized_statement": "InternalRequirement is a ComplianceRequirementDefinedByTheOrganization",
       "object": "ComplianceRequirementDefinedByTheOrganization",
@@ -148,14 +148,14 @@
         "asset_id": "p029",
         "evidence": "An internal requirement is a type of compliance requirement defined by the organization.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-c46e3234e86a7704",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-b51169afff85e711",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "InternalRequirement is a ComplianceRequirementDefinedByTheOrganization",
       "subject": "InternalRequirement"
     },
     {
-      "claim_id": "claim-471430997dcc4129",
+      "claim_id": "claim-b4b79e00b0890a9e",
       "kind": "relation",
       "normalized_statement": "Evidence supports DemonstrationOfCompliance",
       "object": "DemonstrationOfCompliance",
@@ -165,14 +165,14 @@
         "asset_id": "p029",
         "evidence": "Evidence supports the demonstration of compliance.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-f6e86caa5294f8ee",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-97c1910fa6caced6",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "Evidence supports DemonstrationOfCompliance",
       "subject": "Evidence"
     },
     {
-      "claim_id": "claim-d236c0ddfaf51567",
+      "claim_id": "claim-112560db480c3516",
       "kind": "relation",
       "normalized_statement": "Audit evaluates WhetherControlSatisfyRequirement",
       "object": "WhetherControlSatisfyRequirement",
@@ -182,14 +182,14 @@
         "asset_id": "p029",
         "evidence": "An audit evaluates whether controls satisfy requirements.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-00b59b38ffbd650d",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-73b7565da0163a18",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "Audit evaluates WhetherControlSatisfyRequirement",
       "subject": "Audit"
     },
     {
-      "claim_id": "claim-13262878226785a0",
+      "claim_id": "claim-223da57d9f1aba30",
       "kind": "definition",
       "normalized_statement": "Nonconformity is a FailureToMeetARequirement",
       "object": "FailureToMeetARequirement",
@@ -199,14 +199,14 @@
         "asset_id": "p029",
         "evidence": "A nonconformity is a failure to meet a requirement.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-61c5ea7b49407273",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-bba2431eca948040",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "Nonconformity is a FailureToMeetARequirement",
       "subject": "Nonconformity"
     },
     {
-      "claim_id": "claim-4cb7238ec457abcb",
+      "claim_id": "claim-c44cfa170bc1d0ad",
       "kind": "relation",
       "normalized_statement": "CorrectiveAction addresses Nonconformity",
       "object": "Nonconformity",
@@ -216,14 +216,14 @@
         "asset_id": "p029",
         "evidence": "A corrective action addresses a nonconformity.",
         "paragraph_id": "p029",
-        "sentence_id": "sent-f1533e665c640fd0",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-a1a3279fe505ca96",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "CorrectiveAction addresses Nonconformity",
       "subject": "CorrectiveAction"
     },
     {
-      "claim_id": "claim-233e14227354ebc0",
+      "claim_id": "claim-7d288ac020ab391b",
       "kind": "relation",
       "normalized_statement": "Privacy protects PersonalData",
       "object": "PersonalData",
@@ -233,14 +233,14 @@
         "asset_id": "p030",
         "evidence": "Privacy protects personal data and the rights of individuals.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-d5183ff7d79c7e2f",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-16def589a11f957a",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "Privacy protects PersonalData",
       "subject": "Privacy"
     },
     {
-      "claim_id": "claim-527d27a31a068528",
+      "claim_id": "claim-348feb50046e5477",
       "kind": "relation",
       "normalized_statement": "Privacy protects RightOfIndividuals",
       "object": "RightOfIndividuals",
@@ -250,14 +250,14 @@
         "asset_id": "p030",
         "evidence": "Privacy protects personal data and the rights of individuals.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-d5183ff7d79c7e2f",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-16def589a11f957a",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "Privacy protects RightOfIndividuals",
       "subject": "Privacy"
     },
     {
-      "claim_id": "claim-02ba3819286f15c8",
+      "claim_id": "claim-86bbbf0949505888",
       "kind": "definition",
       "normalized_statement": "DataSubject is a PersonWhosePersonalDataIsProcessed",
       "object": "PersonWhosePersonalDataIsProcessed",
@@ -267,14 +267,14 @@
         "asset_id": "p030",
         "evidence": "A data subject is a person whose personal data is processed.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-ccb394d5881965b1",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-a5eb84bbf31c5650",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "DataSubject is a PersonWhosePersonalDataIsProcessed",
       "subject": "DataSubject"
     },
     {
-      "claim_id": "claim-7d825889cc318e7f",
+      "claim_id": "claim-84911f0c94641056",
       "kind": "relation",
       "normalized_statement": "DataController determines Purpos",
       "object": "Purpos",
@@ -284,14 +284,14 @@
         "asset_id": "p030",
         "evidence": "A data controller determines the purposes and means of processing personal data.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-dc82197dfec30739",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-2f9e0c4e21eecd9c",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "DataController determines Purpos",
       "subject": "DataController"
     },
     {
-      "claim_id": "claim-d1f553524741937a",
+      "claim_id": "claim-ec8d338991f9d619",
       "kind": "relation",
       "normalized_statement": "DataController means OfProcessingPersonalData",
       "object": "OfProcessingPersonalData",
@@ -301,14 +301,14 @@
         "asset_id": "p030",
         "evidence": "A data controller determines the purposes and means of processing personal data.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-dc82197dfec30739",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-2f9e0c4e21eecd9c",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "DataController means OfProcessingPersonalData",
       "subject": "DataController"
     },
     {
-      "claim_id": "claim-a74e0fbc70b856ac",
+      "claim_id": "claim-0b5393a8e33b5632",
       "kind": "relation",
       "normalized_statement": "DataProcessor processes PersonalDataOnBehalfOfAController",
       "object": "PersonalDataOnBehalfOfAController",
@@ -318,14 +318,14 @@
         "asset_id": "p030",
         "evidence": "A data processor processes personal data on behalf of a controller.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-498398806911b9e7",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-95d552fb014e60a5",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "DataProcessor processes PersonalDataOnBehalfOfAController",
       "subject": "DataProcessor"
     },
     {
-      "claim_id": "claim-d415cbef71cd00fc",
+      "claim_id": "claim-5239b509cc62dac8",
       "kind": "relation",
       "normalized_statement": "PrivacyNotice informs DataSubjectAboutProcessingActivity",
       "object": "DataSubjectAboutProcessingActivity",
@@ -335,14 +335,14 @@
         "asset_id": "p030",
         "evidence": "A privacy notice informs data subjects about processing activities.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-cdbb9793c3d23287",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-9eaf355149ea3893",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "PrivacyNotice informs DataSubjectAboutProcessingActivity",
       "subject": "PrivacyNotice"
     },
     {
-      "claim_id": "claim-3d15f02631062dd9",
+      "claim_id": "claim-04c10477cc644a30",
       "kind": "definition",
       "normalized_statement": "Consent is a LawfulBasisForProcessingInSomeContext",
       "object": "LawfulBasisForProcessingInSomeContext",
@@ -352,14 +352,14 @@
         "asset_id": "p030",
         "evidence": "Consent is a lawful basis for processing in some contexts.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-80ab7c83ffbda134",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-f091be1a9346e6af",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "Consent is a LawfulBasisForProcessingInSomeContext",
       "subject": "Consent"
     },
     {
-      "claim_id": "claim-1d0d9c017145f262",
+      "claim_id": "claim-c630e9cd4f63722b",
       "kind": "definition",
       "normalized_statement": "DataMinimizationLimitPersonalDataToWhat is a Necessary",
       "object": "Necessary",
@@ -369,14 +369,14 @@
         "asset_id": "p030",
         "evidence": "Data minimization limits personal data to what is necessary.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-7052b9f93d5995b9",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-7fc34eef85b19014",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "DataMinimizationLimitPersonalDataToWhat is a Necessary",
       "subject": "DataMinimizationLimitPersonalDataToWhat"
     },
     {
-      "claim_id": "claim-cb0070baa9cec4c7",
+      "claim_id": "claim-8bcea36e708d9744",
       "kind": "relation",
       "normalized_statement": "PurposeLimitation restricts ProcessingToDefinedPurpos",
       "object": "ProcessingToDefinedPurpos",
@@ -386,14 +386,14 @@
         "asset_id": "p030",
         "evidence": "Purpose limitation restricts processing to defined purposes.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-7c90dcca0c5657db",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-574e7dec76587dee",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "PurposeLimitation restricts ProcessingToDefinedPurpos",
       "subject": "PurposeLimitation"
     },
     {
-      "claim_id": "claim-3699495ef7b46a90",
+      "claim_id": "claim-74b4c0e19df5ef2d",
       "kind": "definition",
       "normalized_statement": "RetentionLimitationRestrictHowLongPersonalData is a Stored",
       "object": "Stored",
@@ -403,14 +403,14 @@
         "asset_id": "p030",
         "evidence": "Retention limitation restricts how long personal data is stored.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-ae220789ab6034bb",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-abed6bcf829c3932",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "RetentionLimitationRestrictHowLongPersonalData is a Stored",
       "subject": "RetentionLimitationRestrictHowLongPersonalData"
     },
     {
-      "claim_id": "claim-59efabb15e5e7c62",
+      "claim_id": "claim-53a3157b9d9ab35d",
       "kind": "definition",
       "normalized_statement": "DataDeletionRemovePersonalDataWhenIt is a NoLongerNeeded",
       "object": "NoLongerNeeded",
@@ -420,8 +420,8 @@
         "asset_id": "p030",
         "evidence": "Data deletion removes personal data when it is no longer needed.",
         "paragraph_id": "p030",
-        "sentence_id": "sent-9b1f8903730c5160",
-        "source_text_id": "4d779cdf1f5a090e14263a27b37d9ab3b26b3a1593bd4e4b3ba568c831b74446"
+        "sentence_id": "sent-533c3f30a1e40343",
+        "source_text_id": "c25b730044d9abbc9ed3dda5e615f6cb4c54fe364a220e236c90a8ba57e6b3c4"
       },
       "statement": "DataDeletionRemovePersonalDataWhenIt is a NoLongerNeeded",
       "subject": "DataDeletionRemovePersonalDataWhenIt"

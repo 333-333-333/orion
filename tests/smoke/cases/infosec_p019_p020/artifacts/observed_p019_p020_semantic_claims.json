@@ -2,7 +2,7 @@
   "claim_count": 25,
   "claims": [
     {
-      "claim_id": "claim-3b9804a2379f5ea3",
+      "claim_id": "claim-540124fd12c1a77e",
       "kind": "relation",
       "normalized_statement": "KeyManagement protects CryptographicKeyAcrossTheirLifecycle",
       "object": "CryptographicKeyAcrossTheirLifecycle",
@@ -12,14 +12,14 @@
         "asset_id": "p019",
         "evidence": "Key management protects cryptographic keys across their lifecycle.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-a0c3f5d665a4fda1",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-ae43418410b65dbb",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "KeyManagement protects CryptographicKeyAcrossTheirLifecycle",
       "subject": "KeyManagement"
     },
     {
-      "claim_id": "claim-617fe7470aeb9f26",
+      "claim_id": "claim-144c329051cfb101",
       "kind": "relation",
       "normalized_statement": "KeyGeneration creates CryptographicKey",
       "object": "CryptographicKey",
@@ -29,14 +29,14 @@
         "asset_id": "p019",
         "evidence": "Key generation creates a cryptographic key.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-a28d67c42cabdab3",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-72c4a8d74874bc42",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "KeyGeneration creates CryptographicKey",
       "subject": "KeyGeneration"
     },
     {
-      "claim_id": "claim-e5b0d1d346eb1134",
+      "claim_id": "claim-ddc99e65aa32971e",
       "kind": "relation",
       "normalized_statement": "KeyStorage protects CryptographicKeyFromUnauthorizedAccess",
       "object": "CryptographicKeyFromUnauthorizedAccess",
@@ -46,14 +46,14 @@
         "asset_id": "p019",
         "evidence": "Key storage protects a cryptographic key from unauthorized access.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-a73bf1e0f6cf912f",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-e4fa6a730c74a293",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "KeyStorage protects CryptographicKeyFromUnauthorizedAccess",
       "subject": "KeyStorage"
     },
     {
-      "claim_id": "claim-81f3283467f79272",
+      "claim_id": "claim-f6054c192964d7d3",
       "kind": "relation",
       "normalized_statement": "KeyRotation replaces ExistingKey",
       "object": "ExistingKey",
@@ -63,14 +63,14 @@
         "asset_id": "p019",
         "evidence": "Key rotation replaces an existing key with a new key.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-afbd586a48df31ee",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-a9b88ba4975a96fa",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "KeyRotation replaces ExistingKey",
       "subject": "KeyRotation"
     },
     {
-      "claim_id": "claim-9b4e57519ed38067",
+      "claim_id": "claim-5ea02e56007a5e77",
       "kind": "relation",
       "normalized_statement": "ExistingKey checked_against NewKey",
       "object": "NewKey",
@@ -80,14 +80,14 @@
         "asset_id": "p019",
         "evidence": "Key rotation replaces an existing key with a new key.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-afbd586a48df31ee",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-a9b88ba4975a96fa",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "ExistingKey checked_against NewKey",
       "subject": "ExistingKey"
     },
     {
-      "claim_id": "claim-8175b8e00138a6a5",
+      "claim_id": "claim-4865f81844960afa",
       "kind": "relation",
       "normalized_statement": "KeyRevocation invalidates Compromised",
       "object": "Compromised",
@@ -97,14 +97,14 @@
         "asset_id": "p019",
         "evidence": "Key revocation invalidates a compromised or obsolete key.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-08f5a05831cade43",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-754e9b3218c324e2",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "KeyRevocation invalidates Compromised",
       "subject": "KeyRevocation"
     },
     {
-      "claim_id": "claim-190800a8aaaec2d8",
+      "claim_id": "claim-08f8c2421764ba76",
       "kind": "relation",
       "normalized_statement": "KeyRevocation invalidates ObsoleteKey",
       "object": "ObsoleteKey",
@@ -114,14 +114,14 @@
         "asset_id": "p019",
         "evidence": "Key revocation invalidates a compromised or obsolete key.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-08f5a05831cade43",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-754e9b3218c324e2",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "KeyRevocation invalidates ObsoleteKey",
       "subject": "KeyRevocation"
     },
     {
-      "claim_id": "claim-e953dfaabfb32d56",
+      "claim_id": "claim-76c3f375818ba264",
       "kind": "relation",
       "normalized_statement": "KeyDestructionPermanently removes KeyFromUse",
       "object": "KeyFromUse",
@@ -131,14 +131,14 @@
         "asset_id": "p019",
         "evidence": "Key destruction permanently removes a key from use.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-21b9493ac5d3e084",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-b406b76af8089df3",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "KeyDestructionPermanently removes KeyFromUse",
       "subject": "KeyDestructionPermanently"
     },
     {
-      "claim_id": "claim-4f5e38aec98ce35b",
+      "claim_id": "claim-b54c038926b7a0f5",
       "kind": "definition",
       "normalized_statement": "HardwareSecurityModule is a Device",
       "object": "Device",
@@ -148,14 +148,14 @@
         "asset_id": "p019",
         "evidence": "A hardware security module is a type of device designed to protect cryptographic keys.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-6bf47e0f8d6d5ca4",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-05d77331190a54d0",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "HardwareSecurityModule is a Device",
       "subject": "HardwareSecurityModule"
     },
     {
-      "claim_id": "claim-e98b600f15b688c0",
+      "claim_id": "claim-2662abbfe224d22c",
       "kind": "relation",
       "normalized_statement": "KeyManagementService stores AccessToCryptographicKey",
       "object": "AccessToCryptographicKey",
@@ -165,14 +165,14 @@
         "asset_id": "p019",
         "evidence": "A key management service stores and controls access to cryptographic keys.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-998210a54b552894",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-2336e7d3d395113e",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "KeyManagementService stores AccessToCryptographicKey",
       "subject": "KeyManagementService"
     },
     {
-      "claim_id": "claim-a0e93d76787c54c1",
+      "claim_id": "claim-c93e4e5396256641",
       "kind": "relation",
       "normalized_statement": "KeyManagementService controls AccessToCryptographicKey",
       "object": "AccessToCryptographicKey",
@@ -182,14 +182,14 @@
         "asset_id": "p019",
         "evidence": "A key management service stores and controls access to cryptographic keys.",
         "paragraph_id": "p019",
-        "sentence_id": "sent-998210a54b552894",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-2336e7d3d395113e",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "KeyManagementService controls AccessToCryptographicKey",
       "subject": "KeyManagementService"
     },
     {
-      "claim_id": "claim-905cd6958033d24f",
+      "claim_id": "claim-9a804bef70406ec9",
       "kind": "definition",
       "normalized_statement": "LogRecord is a RecordOfAnEventGeneratedByASystem",
       "object": "RecordOfAnEventGeneratedByASystem",
@@ -199,31 +199,31 @@
         "asset_id": "p020",
         "evidence": "A log record is a record of an event generated by a system.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-cea5c458cc16c549",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-a0b056c402573070",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "LogRecord is a RecordOfAnEventGeneratedByASystem",
       "subject": "LogRecord"
     },
     {
-      "claim_id": "claim-d87735cfb5cea318",
+      "claim_id": "claim-fe2576322e0a61f1",
       "kind": "definition",
-      "normalized_statement": "AuditLog is_a AuditLog",
-      "object": "AuditLog",
+      "normalized_statement": "AuditLog is a Log",
+      "object": "Log",
       "paragraph_id": "p020",
       "predicate": "is_a",
       "source": {
         "asset_id": "p020",
         "evidence": "An audit log is a type of log that supports accountability and compliance.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-f96e9adf39e15ad5",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-4fe3f339f6fa6930",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
-      "statement": "AuditLog is_a AuditLog",
+      "statement": "AuditLog is a Log",
       "subject": "AuditLog"
     },
     {
-      "claim_id": "claim-40e5cf7cd653ba27",
+      "claim_id": "claim-9360929215ec7a89",
       "kind": "relation",
       "normalized_statement": "AuditLog supports Accountability",
       "object": "Accountability",
@@ -233,14 +233,14 @@
         "asset_id": "p020",
         "evidence": "An audit log is a type of log that supports accountability and compliance.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-f96e9adf39e15ad5",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-4fe3f339f6fa6930",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "AuditLog supports Accountability",
       "subject": "AuditLog"
     },
     {
-      "claim_id": "claim-ec90d6b7e2859fe7",
+      "claim_id": "claim-05e54914058cc241",
       "kind": "relation",
       "normalized_statement": "AuditLog supports Compliance",
       "object": "Compliance",
@@ -250,14 +250,14 @@
         "asset_id": "p020",
         "evidence": "An audit log is a type of log that supports accountability and compliance.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-f96e9adf39e15ad5",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-4fe3f339f6fa6930",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "AuditLog supports Compliance",
       "subject": "AuditLog"
     },
     {
-      "claim_id": "claim-6756e72399ad6660",
+      "claim_id": "claim-17d4a4f8cb5e5d4b",
       "kind": "definition",
       "normalized_statement": "SecurityEvent is a ObservableOccurrence",
       "object": "ObservableOccurrence",
@@ -267,14 +267,14 @@
         "asset_id": "p020",
         "evidence": "A security event is an observable occurrence that may be relevant to security.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-7ad8bcf90739e446",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-20bf153ba5a3ae80",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "SecurityEvent is a ObservableOccurrence",
       "subject": "SecurityEvent"
     },
     {
-      "claim_id": "claim-1b1427b5eb2ee4a6",
+      "claim_id": "claim-5998f1d030c847d4",
       "kind": "relation",
       "normalized_statement": "SecurityEvent maies BeRelevantToSecurity",
       "object": "BeRelevantToSecurity",
@@ -284,14 +284,14 @@
         "asset_id": "p020",
         "evidence": "A security event is an observable occurrence that may be relevant to security.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-7ad8bcf90739e446",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-20bf153ba5a3ae80",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "SecurityEvent maies BeRelevantToSecurity",
       "subject": "SecurityEvent"
     },
     {
-      "claim_id": "claim-e58d36ed88697512",
+      "claim_id": "claim-dd0eeed533c0471d",
       "kind": "definition",
       "normalized_statement": "SecurityAlert is a NotificationGeneratedWhenADetectionRuleIdentifySuspiciousActivity",
       "object": "NotificationGeneratedWhenADetectionRuleIdentifySuspiciousActivity",
@@ -301,31 +301,31 @@
         "asset_id": "p020",
         "evidence": "A security alert is a notification generated when a detection rule identifies suspicious activity.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-197ed71602911668",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-49ba8d3d714916f7",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "SecurityAlert is a NotificationGeneratedWhenADetectionRuleIdentifySuspiciousActivity",
       "subject": "SecurityAlert"
     },
     {
-      "claim_id": "claim-a958618c9de67650",
+      "claim_id": "claim-094afbdd3af21623",
       "kind": "definition",
-      "normalized_statement": "SecurityIncident is_a SecurityEvent",
-      "object": "SecurityEvent",
+      "normalized_statement": "SecurityIncident is a Event",
+      "object": "Event",
       "paragraph_id": "p020",
       "predicate": "is_a",
       "source": {
         "asset_id": "p020",
         "evidence": "A security incident is an event that compromises or threatens confidentiality, integrity, or availability.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-6549231954ee47ef",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-a148a0a75ffe35d3",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
-      "statement": "SecurityIncident is_a SecurityEvent",
+      "statement": "SecurityIncident is a Event",
       "subject": "SecurityIncident"
     },
     {
-      "claim_id": "claim-c70f5a3d13693ba7",
+      "claim_id": "claim-4aa76c608afc6274",
       "kind": "relation",
       "normalized_statement": "SecurityIncident compromises ThreatenConfidentiality",
       "object": "ThreatenConfidentiality",
@@ -335,14 +335,14 @@
         "asset_id": "p020",
         "evidence": "A security incident is an event that compromises or threatens confidentiality, integrity, or availability.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-6549231954ee47ef",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-a148a0a75ffe35d3",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "SecurityIncident compromises ThreatenConfidentiality",
       "subject": "SecurityIncident"
     },
     {
-      "claim_id": "claim-80c75016501ce19a",
+      "claim_id": "claim-6557a17cf4347ff9",
       "kind": "relation",
       "normalized_statement": "SecurityIncident compromises Integrity",
       "object": "Integrity",
@@ -352,14 +352,14 @@
         "asset_id": "p020",
         "evidence": "A security incident is an event that compromises or threatens confidentiality, integrity, or availability.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-6549231954ee47ef",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-a148a0a75ffe35d3",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "SecurityIncident compromises Integrity",
       "subject": "SecurityIncident"
     },
     {
-      "claim_id": "claim-f7ac1e8f2c521c94",
+      "claim_id": "claim-462f63d2c83f5907",
       "kind": "relation",
       "normalized_statement": "SecurityIncident compromises Availability",
       "object": "Availability",
@@ -369,31 +369,31 @@
         "asset_id": "p020",
         "evidence": "A security incident is an event that compromises or threatens confidentiality, integrity, or availability.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-6549231954ee47ef",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-a148a0a75ffe35d3",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "SecurityIncident compromises Availability",
       "subject": "SecurityIncident"
     },
     {
-      "claim_id": "claim-67dfd956838054da",
+      "claim_id": "claim-47a9a0d7ce4a21d6",
       "kind": "definition",
-      "normalized_statement": "FalsePositive is_a SecurityAlert",
-      "object": "SecurityAlert",
+      "normalized_statement": "FalsePositive is a Alert",
+      "object": "Alert",
       "paragraph_id": "p020",
       "predicate": "is_a",
       "source": {
         "asset_id": "p020",
         "evidence": "A false positive is an alert that does not represent a real threat.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-3b5bc7bf8ebd1133",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-69c570cd5b2d11e2",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
-      "statement": "FalsePositive is_a SecurityAlert",
+      "statement": "FalsePositive is a Alert",
       "subject": "FalsePositive"
     },
     {
-      "claim_id": "claim-ccd33c1902528689",
+      "claim_id": "claim-cd024837d5067244",
       "kind": "relation",
       "normalized_statement": "FalsePositive does NotRepresentARealThreat",
       "object": "NotRepresentARealThreat",
@@ -403,14 +403,14 @@
         "asset_id": "p020",
         "evidence": "A false positive is an alert that does not represent a real threat.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-3b5bc7bf8ebd1133",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-69c570cd5b2d11e2",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "FalsePositive does NotRepresentARealThreat",
       "subject": "FalsePositive"
     },
     {
-      "claim_id": "claim-2cca0d2503534f92",
+      "claim_id": "claim-0682a58dd87118a3",
       "kind": "definition",
       "normalized_statement": "FalseNegative is a MissedDetectionOfARealThreat",
       "object": "MissedDetectionOfARealThreat",
@@ -420,8 +420,8 @@
         "asset_id": "p020",
         "evidence": "A false negative is a missed detection of a real threat.",
         "paragraph_id": "p020",
-        "sentence_id": "sent-1d86a63107aa0dd7",
-        "source_text_id": "fa83243997592abb6994cd1c1f45537ac8492ddc55161414b00102935c36aaf0"
+        "sentence_id": "sent-020f94f9c48e2437",
+        "source_text_id": "2032660756eaac9eb32b02034d2637a4b45428695c6070517d2333e643157d7a"
       },
       "statement": "FalseNegative is a MissedDetectionOfARealThreat",
       "subject": "FalseNegative"

@@ -233,8 +233,165 @@
       "label": "WhetherControlSatisfyRequirement"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:Regulatory",
+      "predicate": "orion:ensures",
+      "source_evidence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
+      "subject": "orion:Compliance"
+    },
+    {
+      "object": "orion:Contractual",
+      "predicate": "orion:ensures",
+      "source_evidence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
+      "subject": "orion:Compliance"
+    },
+    {
+      "object": "orion:InternalRequirement",
+      "predicate": "orion:ensures",
+      "source_evidence": "Compliance ensures that the organization meets legal, regulatory, contractual, and internal requirements.",
+      "subject": "orion:Compliance"
+    },
+    {
+      "object": "orion:BeSatisfied",
+      "predicate": "orion:musts",
+      "source_evidence": "A compliance requirement is an obligation that must be satisfied.",
+      "subject": "orion:ComplianceRequirement"
+    },
+    {
+      "object": "orion:DemonstrationOfCompliance",
+      "predicate": "orion:supports",
+      "source_evidence": "Evidence supports the demonstration of compliance.",
+      "subject": "orion:Evidence"
+    },
+    {
+      "object": "orion:WhetherControlSatisfyRequirement",
+      "predicate": "orion:evaluates",
+      "source_evidence": "An audit evaluates whether controls satisfy requirements.",
+      "subject": "orion:Audit"
+    },
+    {
+      "object": "orion:Nonconformity",
+      "predicate": "orion:addresses",
+      "source_evidence": "A corrective action addresses a nonconformity.",
+      "subject": "orion:CorrectiveAction"
+    },
+    {
+      "object": "orion:PersonalData",
+      "predicate": "orion:protects",
+      "source_evidence": "Privacy protects personal data and the rights of individuals.",
+      "subject": "orion:Privacy"
+    },
+    {
+      "object": "orion:RightOfIndividuals",
+      "predicate": "orion:protects",
+      "source_evidence": "Privacy protects personal data and the rights of individuals.",
+      "subject": "orion:Privacy"
+    },
+    {
+      "object": "orion:Purpos",
+      "predicate": "orion:determines",
+      "source_evidence": "A data controller determines the purposes and means of processing personal data.",
+      "subject": "orion:DataController"
+    },
+    {
+      "object": "orion:OfProcessingPersonalData",
+      "predicate": "orion:means",
+      "source_evidence": "A data controller determines the purposes and means of processing personal data.",
+      "subject": "orion:DataController"
+    },
+    {
+      "object": "orion:PersonalDataOnBehalfOfAController",
+      "predicate": "orion:processes",
+      "source_evidence": "A data processor processes personal data on behalf of a controller.",
+      "subject": "orion:DataProcessor"
+    },
+    {
+      "object": "orion:DataSubjectAboutProcessingActivity",
+      "predicate": "orion:informs",
+      "source_evidence": "A privacy notice informs data subjects about processing activities.",
+      "subject": "orion:PrivacyNotice"
+    },
+    {
+      "object": "orion:ProcessingToDefinedPurpos",
+      "predicate": "orion:restricts",
+      "source_evidence": "Purpose limitation restricts processing to defined purposes.",
+      "subject": "orion:PurposeLimitation"
+    }
+  ],
   "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:CorrectiveAction",
+      "predicate": "orion:addresses",
+      "range": "orion:Nonconformity"
+    },
+    {
+      "domain": "orion:DataController",
+      "predicate": "orion:determines",
+      "range": "orion:Purpos"
+    },
+    {
+      "domain": "orion:Compliance",
+      "predicate": "orion:ensures",
+      "range": "orion:Contractual"
+    },
+    {
+      "domain": "orion:Compliance",
+      "predicate": "orion:ensures",
+      "range": "orion:InternalRequirement"
+    },
+    {
+      "domain": "orion:Compliance",
+      "predicate": "orion:ensures",
+      "range": "orion:Regulatory"
+    },
+    {
+      "domain": "orion:Audit",
+      "predicate": "orion:evaluates",
+      "range": "orion:WhetherControlSatisfyRequirement"
+    },
+    {
+      "domain": "orion:PrivacyNotice",
+      "predicate": "orion:informs",
+      "range": "orion:DataSubjectAboutProcessingActivity"
+    },
+    {
+      "domain": "orion:DataController",
+      "predicate": "orion:means",
+      "range": "orion:OfProcessingPersonalData"
+    },
+    {
+      "domain": "orion:ComplianceRequirement",
+      "predicate": "orion:musts",
+      "range": "orion:BeSatisfied"
+    },
+    {
+      "domain": "orion:DataProcessor",
+      "predicate": "orion:processes",
+      "range": "orion:PersonalDataOnBehalfOfAController"
+    },
+    {
+      "domain": "orion:Privacy",
+      "predicate": "orion:protects",
+      "range": "orion:PersonalData"
+    },
+    {
+      "domain": "orion:Privacy",
+      "predicate": "orion:protects",
+      "range": "orion:RightOfIndividuals"
+    },
+    {
+      "domain": "orion:PurposeLimitation",
+      "predicate": "orion:restricts",
+      "range": "orion:ProcessingToDefinedPurpos"
+    },
+    {
+      "domain": "orion:Evidence",
+      "predicate": "orion:supports",
+      "range": "orion:DemonstrationOfCompliance"
+    }
+  ],
   "object_property_schema": [
     {
       "domain": "orion:CorrectiveAction",
@@ -309,31 +466,31 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-b27d007f03b0723a",
-      "claim-983a09417bc897e6",
-      "claim-a513166c29b15e7c",
-      "claim-3bc5ea64bf4c7332",
-      "claim-d52b3f82b73b41bb",
-      "claim-7329effe7b3fea82",
-      "claim-d443eb070b177a41",
-      "claim-72d9731d06edd2b9",
-      "claim-5bfcfd27250abf7f",
-      "claim-471430997dcc4129",
-      "claim-d236c0ddfaf51567",
-      "claim-13262878226785a0",
-      "claim-4cb7238ec457abcb",
-      "claim-233e14227354ebc0",
-      "claim-527d27a31a068528",
-      "claim-02ba3819286f15c8",
-      "claim-7d825889cc318e7f",
-      "claim-d1f553524741937a",
-      "claim-a74e0fbc70b856ac",
-      "claim-d415cbef71cd00fc",
-      "claim-3d15f02631062dd9",
-      "claim-1d0d9c017145f262",
-      "claim-cb0070baa9cec4c7",
-      "claim-3699495ef7b46a90",
-      "claim-59efabb15e5e7c62"
+      "claim-d643dfea39c88222",
+      "claim-e22e36a602ac2220",
+      "claim-ae2dcd1001f759c3",
+      "claim-2679aa1dc3a01027",
+      "claim-78a631e1ab2c234a",
+      "claim-0bc0493f007d15ba",
+      "claim-e5a664697f1d559b",
+      "claim-97f4dfcae0640911",
+      "claim-97d8b25b630438d2",
+      "claim-b4b79e00b0890a9e",
+      "claim-112560db480c3516",
+      "claim-223da57d9f1aba30",
+      "claim-c44cfa170bc1d0ad",
+      "claim-7d288ac020ab391b",
+      "claim-348feb50046e5477",
+      "claim-86bbbf0949505888",
+      "claim-84911f0c94641056",
+      "claim-ec8d338991f9d619",
+      "claim-0b5393a8e33b5632",
+      "claim-5239b509cc62dac8",
+      "claim-04c10477cc644a30",
+      "claim-c630e9cd4f63722b",
+      "claim-8bcea36e708d9744",
+      "claim-74b4c0e19df5ef2d",
+      "claim-53a3157b9d9ab35d"
     ],
     "source_stage": "semantic_claims"
   },

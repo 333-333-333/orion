@@ -1,22 +1,26 @@
 {
   "case_id": "p037_p038",
-  "claim_count": 21,
-  "class_count": 38,
+  "claim_count": 22,
+  "class_count": 37,
   "evidence_precision_proxy": 1.0,
-  "evidence_supported_claim_count": 21,
+  "evidence_supported_claim_count": 22,
   "evidence_unsupported_claim_ids": [],
   "graph_generated": true,
-  "object_property_count": 15,
+  "object_property_count": 16,
   "observed_stage": "semantic_claims",
   "paragraph_claim_distribution": {
     "p037": 11,
-    "p038": 10
+    "p038": 11
   },
   "paragraph_ids": [
     "p037",
     "p038"
   ],
-  "rdf_bytes": 18718,
+  "rdf_bytes": 21710,
   "rdf_generated": true,
-  "subclass_fact_count": 6
+  "semantic_debug_ir_generated": true,
+  "semantic_debug_ir_path": "artifacts/observed_p037_p038_semantic_debug_ir.json",
+  "subclass_fact_count": 6,
+  "ttl_bytes": 1646,
+  "ttl_generated": true
 }

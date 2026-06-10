@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/indicatorofcompromise">
+    <orion:as rdf:resource="https://orion.local/resource/systemmaybecompromised"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/remediation">
+    <orion:removes rdf:resource="https://orion.local/resource/fixavulnerability"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/riskrating">
+    <orion:combines rdf:resource="https://orion.local/resource/severity"/>
+    <orion:combines rdf:resource="https://orion.local/resource/exposure"/>
+    <orion:combines rdf:resource="https://orion.local/resource/likelihood"/>
+    <orion:business rdf:resource="https://orion.local/resource/impact"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/severityrating">
+    <orion:estimates rdf:resource="https://orion.local/resource/technicalseriousnessofavulnerability"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/tactic">
+    <orion:describes rdf:resource="https://orion.local/resource/threatactorobjective"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/technique">
+    <orion:describes rdf:resource="https://orion.local/resource/howathreatactorachieveanobjective"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/threatactor">
+    <orion:cans rdf:resource="https://orion.local/resource/intentionallycauseharm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/threatintelligence">
+    <orion:provides rdf:resource="https://orion.local/resource/informationaboutthreat"/>
+    <orion:provides rdf:resource="https://orion.local/resource/threatactor"/>
+    <orion:provides rdf:resource="https://orion.local/resource/tactic"/>
+    <orion:provides rdf:resource="https://orion.local/resource/technique"/>
+    <orion:provides rdf:resource="https://orion.local/resource/indicator"/>
+    <orion:supports rdf:resource="https://orion.local/resource/detection"/>
+    <orion:supports rdf:resource="https://orion.local/resource/prevention"/>
+    <orion:supports rdf:resource="https://orion.local/resource/responseactivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerability">
+    <orion:exceptions rdf:resource="https://orion.local/resource/mustbedocumented"/>
+    <orion:exceptions rdf:resource="https://orion.local/resource/approved"/>
+    <orion:exceptions rdf:resource="https://orion.local/resource/reviewed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerabilityfinding">
+    <orion:describes rdf:resource="https://orion.local/resource/detectedweakness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerabilitymanagementidentifyevaluateprioritizand">
+    <orion:remediates rdf:resource="https://orion.local/resource/weakness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/vulnerabilityscan">
+    <orion:detects rdf:resource="https://orion.local/resource/knownvulnerabilityinsystem"/>
+    <orion:detects rdf:resource="https://orion.local/resource/application"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/application">
     <rdfs:label>Application</rdfs:label>
   </owl:Class>
@@ -121,6 +170,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/tactic">
     <rdfs:label>Tactic</rdfs:label>
+    <rdfs:label>Tactic roles subject object</rdfs:label>
     <rdfs:comment>A tactic describes a threat actor objective.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/technicalseriousnessofavulnerability">
@@ -128,10 +178,12 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/technique">
     <rdfs:label>Technique</rdfs:label>
+    <rdfs:label>Technique roles subject object</rdfs:label>
     <rdfs:comment>A technique describes how a threat actor achieves an objective.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/threatactor">
     <rdfs:label>ThreatActor</rdfs:label>
+    <rdfs:label>ThreatActor roles subject object</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://orion.local/resource/entity"/>
     <rdfs:comment>A threat actor is an entity that can intentionally cause harm.</rdfs:comment>
   </owl:Class>
@@ -388,15 +440,18 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/tactic">
     <rdfs:label>Tactic</rdfs:label>
+    <rdfs:label>Tactic roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/technicalseriousnessofavulnerability">
     <rdfs:label>TechnicalSeriousnessOfAVulnerability</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/technique">
     <rdfs:label>Technique</rdfs:label>
+    <rdfs:label>Technique roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/threatactor">
     <rdfs:label>ThreatActor</rdfs:label>
+    <rdfs:label>ThreatActor roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/threatactorobjective">
     <rdfs:label>ThreatActorObjective</rdfs:label>

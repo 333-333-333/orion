@@ -1,12 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/contract">
+    <orion:defines rdf:resource="https://orion.local/resource/obligationbetweentheorganization"/>
+    <orion:defines rdf:resource="https://orion.local/resource/supplier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/datacenter">
+    <orion:hosts rdf:resource="https://orion.local/resource/computinginfrastructure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/dataprocessingagreement">
+    <orion:defines rdf:resource="https://orion.local/resource/responsibilityrelatedtopersonaldata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/environmental">
+    <orion:controls rdf:resource="https://orion.local/resource/protectequipmentfromfire"/>
+    <orion:controls rdf:resource="https://orion.local/resource/humidity"/>
+    <orion:controls rdf:resource="https://orion.local/resource/temperature"/>
+    <orion:controls rdf:resource="https://orion.local/resource/powerfailure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/lockedcabinet">
+    <orion:protects rdf:resource="https://orion.local/resource/physicaldocument"/>
+    <orion:protects rdf:resource="https://orion.local/resource/removablemedia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/physical">
+    <orion:access rdf:resource="https://orion.local/resource/restrictedareamustbeauthorized"/>
+    <orion:access rdf:resource="https://orion.local/resource/monitored"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/physicalsecurity">
+    <orion:protects rdf:resource="https://orion.local/resource/facility"/>
+    <orion:protects rdf:resource="https://orion.local/resource/equipment"/>
+    <orion:protects rdf:resource="https://orion.local/resource/people"/>
+    <orion:protects rdf:resource="https://orion.local/resource/physicalasset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/riskassociated">
+    <orion:checkedagainst rdf:resource="https://orion.local/resource/externalparty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/servicelevelagreement">
+    <orion:defines rdf:resource="https://orion.local/resource/expectedserviceperformance"/>
+    <orion:defines rdf:resource="https://orion.local/resource/availability"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/supplier">
+    <orion:provides rdf:resource="https://orion.local/resource/good"/>
+    <orion:provides rdf:resource="https://orion.local/resource/service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/supplierassessment">
+    <orion:evaluates rdf:resource="https://orion.local/resource/securitypostureofasupplier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/suppliersecurity">
+    <orion:manages rdf:resource="https://orion.local/resource/riskassociated"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/thirdparty">
+    <orion:access rdf:resource="https://orion.local/resource/mustbeapproved"/>
+    <orion:access rdf:resource="https://orion.local/resource/monitored"/>
+    <orion:access rdf:resource="https://orion.local/resource/revokedwhennolonger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/visitorlog">
+    <orion:records rdf:resource="https://orion.local/resource/externalpersonenteringafacility"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/availability">
     <rdfs:label>Availability</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/badgereader">
     <rdfs:label>BadgeReader</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/physicalaccesscontrol"/>
     <rdfs:comment>A badge reader is a type of physical access control.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/cloudprovider">
@@ -73,9 +127,6 @@
   <owl:Class rdf:about="https://orion.local/resource/monitored">
     <rdfs:label>Monitored</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/monitoringcontrol">
-    <rdfs:label>MonitoringControl</rdfs:label>
-  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/mustbeapproved">
     <rdfs:label>MustBeApproved</rdfs:label>
   </owl:Class>
@@ -93,9 +144,6 @@
   <owl:Class rdf:about="https://orion.local/resource/physical">
     <rdfs:label>Physical</rdfs:label>
     <rdfs:comment>Physical access to restricted areas must be authorized and monitored.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/physicalaccesscontrol">
-    <rdfs:label>PhysicalAccessControl</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/physicalasset">
     <rdfs:label>PhysicalAsset</rdfs:label>
@@ -119,16 +167,19 @@
   <owl:Class rdf:about="https://orion.local/resource/responsibilityrelatedtopersonaldata">
     <rdfs:label>ResponsibilityRelatedToPersonalData</rdfs:label>
   </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/restrictedareamustbeauthorized">
+    <rdfs:label>RestrictedAreaMustBeAuthorized</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/revokedwhennolonger">
     <rdfs:label>RevokedWhenNoLonger</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/riskassociated">
     <rdfs:label>RiskAssociated</rdfs:label>
+    <rdfs:label>RiskAssociated roles subject object</rdfs:label>
     <rdfs:comment>Supplier security manages risks associated with external parties.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securitycamera">
     <rdfs:label>SecurityCamera</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/monitoringcontrol"/>
     <rdfs:comment>A security camera is a type of monitoring control.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securitypostureofasupplier">
@@ -148,6 +199,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/supplier">
     <rdfs:label>Supplier</rdfs:label>
+    <rdfs:label>Supplier roles subject object</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://orion.local/resource/externalentity"/>
     <rdfs:comment>A supplier is an external entity that provides goods or services.</rdfs:comment>
   </owl:Class>
@@ -166,9 +218,6 @@
     <rdfs:label>ThirdParty</rdfs:label>
     <rdfs:comment>Third-party access must be approved, monitored, and revoked when no longer required.</rdfs:comment>
   </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/torestrictedareamustbeauthorized">
-    <rdfs:label>ToRestrictedAreaMustBeAuthorized</rdfs:label>
-  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/visitorlog">
     <rdfs:label>VisitorLog</rdfs:label>
     <rdfs:comment>A visitor log records external persons entering a facility.</rdfs:comment>
@@ -181,7 +230,7 @@
   <owl:ObjectProperty rdf:about="https://orion.local/resource/access">
     <rdfs:label>Access</rdfs:label>
     <rdfs:domain rdf:resource="https://orion.local/resource/physical"/>
-    <rdfs:range rdf:resource="https://orion.local/resource/torestrictedareamustbeauthorized"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/restrictedareamustbeauthorized"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://orion.local/resource/access">
     <rdfs:label>Access</rdfs:label>
@@ -368,9 +417,6 @@
   <rdf:Description rdf:about="https://orion.local/resource/monitored">
     <rdfs:label>Monitored</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/monitoringcontrol">
-    <rdfs:label>MonitoringControl</rdfs:label>
-  </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/mustbeapproved">
     <rdfs:label>MustBeApproved</rdfs:label>
   </rdf:Description>
@@ -385,9 +431,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/physical">
     <rdfs:label>Physical</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/physicalaccesscontrol">
-    <rdfs:label>PhysicalAccessControl</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/physicalasset">
     <rdfs:label>PhysicalAsset</rdfs:label>
@@ -410,11 +453,15 @@
   <rdf:Description rdf:about="https://orion.local/resource/responsibilityrelatedtopersonaldata">
     <rdfs:label>ResponsibilityRelatedToPersonalData</rdfs:label>
   </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/restrictedareamustbeauthorized">
+    <rdfs:label>RestrictedAreaMustBeAuthorized</rdfs:label>
+  </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/revokedwhennolonger">
     <rdfs:label>RevokedWhenNoLonger</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/riskassociated">
     <rdfs:label>RiskAssociated</rdfs:label>
+    <rdfs:label>RiskAssociated roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/securitycamera">
     <rdfs:label>SecurityCamera</rdfs:label>
@@ -433,6 +480,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/supplier">
     <rdfs:label>Supplier</rdfs:label>
+    <rdfs:label>Supplier roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/supplierassessment">
     <rdfs:label>SupplierAssessment</rdfs:label>
@@ -445,9 +493,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/thirdparty">
     <rdfs:label>ThirdParty</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/torestrictedareamustbeauthorized">
-    <rdfs:label>ToRestrictedAreaMustBeAuthorized</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/visitorlog">
     <rdfs:label>VisitorLog</rdfs:label>

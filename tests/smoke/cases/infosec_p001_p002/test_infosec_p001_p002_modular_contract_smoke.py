@@ -6,6 +6,7 @@ from typing import Any
 
 from observability import JsonlFileLogSink
 from orion import ORION
+from infosec_pair_case_harness import _serialize_visual_turtle
 from pipeline.step_013_output_generation.rdf_strategy import serialize_graph_to_rdf_xml
 
 _CASE_DIR = Path(__file__).parent
@@ -14,6 +15,7 @@ _PARAGRAPH_DIR = _SMOKE_DIR / "fixtures" / "infosec_3k_paragraphs"
 _ARTIFACT_DIR = _CASE_DIR / "artifacts"
 _CANONICAL_ARTIFACT_PATH = _ARTIFACT_DIR / "observed_p001_p002_canonical_claims.json"
 _RDF_ARTIFACT_PATH = _ARTIFACT_DIR / "observed_p001_p002_output.rdf"
+_TTL_ARTIFACT_PATH = _ARTIFACT_DIR / "observed_p001_p002_output.ttl"
 _RESOURCE_PREFIX = "https://orion.local/resource/"
 
 _EXPECTED_CLASSES = {
@@ -40,7 +42,6 @@ _EXPECTED_CLASSES = {
     "authorized-entity",
     "system",
     "cia-triad",
-    "foundational-model",
 }
 
 _EXPECTED_DIRECT_SUBCLASSES = {
@@ -57,7 +58,6 @@ _EXPECTED_DIRECT_SUBCLASSES = {
     ("confidentiality", "security-property"),
     ("integrity", "security-property"),
     ("availability", "security-property"),
-    ("cia-triad", "foundational-model"),
 }
 
 _EXPECTED_OBJECT_PROPERTIES = {
@@ -83,7 +83,6 @@ _EXPECTED_COMMENTS = {
     "integrity": "Integrity is a security property that ensures information is accurate, complete, and protected against unauthorized modification.",
     "availability": "Availability is a security property that ensures information and systems are accessible when needed.",
     "cia-triad": "Confidentiality, integrity, and availability form the CIA triad.",
-    "foundational-model": "The CIA triad is a foundational model for information security.",
 }
 
 _BANNED_TOKENS = {
@@ -101,6 +100,14 @@ _BANNED_TOKENS = {
 }
 
 _DETERMINERS = re.compile(r"^(?:a|an|the|any)-")
+
+_ALIAS_ONLY_DEFINITIONAL_CLASS_SLUGS = {
+    "foundational-model",
+}
+
+_ALIAS_ONLY_DEFINITIONAL_SUBCLASS_PAIRS = {
+    ("cia-triad", "foundational-model"),
+}
 
 
 def _slug(value: Any) -> str:
@@ -188,8 +195,9 @@ def _run_p001_p002(tmp_path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     runtime_log = tmp_path / "p001-p002-runtime-events.jsonl"
     if _CANONICAL_ARTIFACT_PATH.exists():
         _CANONICAL_ARTIFACT_PATH.unlink()
-    if _RDF_ARTIFACT_PATH.exists():
-        _RDF_ARTIFACT_PATH.unlink()
+    for path in (_RDF_ARTIFACT_PATH, _TTL_ARTIFACT_PATH):
+        if path.exists():
+            path.unlink()
     _ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
     sut = ORION(config={"logging": {"sink": JsonlFileLogSink(runtime_log)}, "spacy_model": "en_core_web_lg", "output_strategy": "rdf", "canonical_claims": {"artifact_path": _CANONICAL_ARTIFACT_PATH, "paragraph_asset_ids": ["p001", "p002"]}})
     result = sut.process(text)
@@ -199,6 +207,7 @@ def _run_p001_p002(tmp_path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     rdf_xml = serialize_graph_to_rdf_xml(graph)
     assert "<rdf:RDF" in rdf_xml
     _RDF_ARTIFACT_PATH.write_text(rdf_xml, encoding="utf-8")
+    _TTL_ARTIFACT_PATH.write_text(_serialize_visual_turtle(graph), encoding="utf-8")
     return result, graph
 
 
@@ -241,3 +250,17 @@ def test_p001_p002_modular_contract_has_expected_object_properties_with_domain_r
     missing = sorted(_EXPECTED_OBJECT_PROPERTIES - actual)
     assert not missing, f"missing object properties with domain/range: {missing}"
     assert all(predicate not in {"be", "type"} for predicate, _, _ in actual)
+
+
+
+def test_p001_p002_modular_contract_rejects_alias_only_subclass_taxonomy(tmp_path: Path):
+    # TASK-ONT-002 | FUN-SMOKE-P001-P002 AC-5 | CON-SMOKE-P001-P002 AC-5 | BR-SMOKE-P001-P002-005
+    result, graph = _run_p001_p002(tmp_path)
+    classes = _class_slugs(graph)
+    subclass_pairs = _subclass_pairs(result, graph)
+
+    leaked_classes = sorted(_ALIAS_ONLY_DEFINITIONAL_CLASS_SLUGS & classes)
+    leaked_pairs = sorted(_ALIAS_ONLY_DEFINITIONAL_SUBCLASS_PAIRS & subclass_pairs)
+
+    assert not leaked_classes, f"alias-only definitions leaked as owl:Class: {leaked_classes}"
+    assert not leaked_pairs, f"alias-only definitions leaked as rdfs:subClassOf: {leaked_pairs}"

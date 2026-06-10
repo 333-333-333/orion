@@ -1,0 +1,25 @@
+{
+  "case_id": "pizza_short",
+  "contract_type": "observational_metrics_only",
+  "deterministic_expectations": {
+    "paragraph_ids": [
+      "pizza_001"
+    ],
+    "required_artifacts": [
+      "artifacts/observed_pizza_short_semantic_claims.json",
+      "artifacts/observed_pizza_short_graph_model.json",
+      "artifacts/observed_pizza_short_output.rdf",
+      "artifacts/observed_pizza_short_metrics.json"
+    ],
+    "required_claim_stage": "semantic_claims"
+  },
+  "domain_expected_claims": [],
+  "domain_expected_reason": "Pizza smoke mide shape/artifacts y evidencia observada con fixture modular de aproximadamente 500 palabras; no fija expected domain inventado.",
+  "fixture_sha256": {
+    "pizza_001": "1c9c314b18e05a989e8ffcfb323771a9239cc02abd5e11b9d2136403cc06ae44"
+  },
+  "paragraph_ids": [
+    "pizza_001"
+  ],
+  "schema_version": 1
+}

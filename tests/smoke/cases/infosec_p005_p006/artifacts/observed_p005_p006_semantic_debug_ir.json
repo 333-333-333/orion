@@ -1,0 +1,651 @@
+{
+  "entities": [
+    {
+      "id": "RiskManagement",
+      "label": "RiskManagement",
+      "source_sentence": "Risk management is a core process in information security."
+    },
+    {
+      "id": "CoreProcessInInformationSecurity",
+      "label": "CoreProcessInInformationSecurity",
+      "source_sentence": "Risk management is a core process in information security."
+    },
+    {
+      "id": "Risk",
+      "label": "Risk",
+      "source_sentence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset."
+    },
+    {
+      "id": "Possibility",
+      "label": "Possibility",
+      "source_sentence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset."
+    },
+    {
+      "id": "ThreatExploitAVulnerability",
+      "label": "ThreatExploitAVulnerability",
+      "source_sentence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset."
+    },
+    {
+      "id": "CausHarmToAnAsset",
+      "label": "CausHarmToAnAsset",
+      "source_sentence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset."
+    },
+    {
+      "id": "Threat",
+      "label": "Threat",
+      "source_sentence": "A threat is a potential cause of an unwanted incident."
+    },
+    {
+      "id": "PotentialCauseOfAnUnwantedIncident",
+      "label": "PotentialCauseOfAnUnwantedIncident",
+      "source_sentence": "A threat is a potential cause of an unwanted incident."
+    },
+    {
+      "id": "Vulnerability",
+      "label": "Vulnerability",
+      "source_sentence": "A vulnerability is a weakness that can be exploited by a threat."
+    },
+    {
+      "id": "Weakness",
+      "label": "Weakness",
+      "source_sentence": "A vulnerability is a weakness that can be exploited by a threat."
+    },
+    {
+      "id": "BeExploitedByAThreat",
+      "label": "BeExploitedByAThreat",
+      "source_sentence": "A vulnerability is a weakness that can be exploited by a threat."
+    },
+    {
+      "id": "Impact",
+      "label": "Impact",
+      "source_sentence": "An impact is the consequence produced by a security event or incident."
+    },
+    {
+      "id": "ConsequenceProducedByASecurityEventOrIncident",
+      "label": "ConsequenceProducedByASecurityEventOrIncident",
+      "source_sentence": "An impact is the consequence produced by a security event or incident."
+    },
+    {
+      "id": "Likelihood",
+      "label": "Likelihood",
+      "source_sentence": "A likelihood is the probability that a risk scenario occurs."
+    },
+    {
+      "id": "Probability",
+      "label": "Probability",
+      "source_sentence": "A likelihood is the probability that a risk scenario occurs."
+    },
+    {
+      "id": "RiskScenarioOccur",
+      "label": "RiskScenarioOccur",
+      "source_sentence": "A likelihood is the probability that a risk scenario occurs."
+    },
+    {
+      "id": "RiskScenario",
+      "label": "RiskScenario",
+      "source_sentence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset."
+    },
+    {
+      "id": "HowAThreatMayExploitAVulnerability",
+      "label": "HowAThreatMayExploitAVulnerability",
+      "source_sentence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset."
+    },
+    {
+      "id": "AffectAnAsset",
+      "label": "AffectAnAsset",
+      "source_sentence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset."
+    },
+    {
+      "id": "Control",
+      "label": "Control",
+      "source_sentence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses."
+    },
+    {
+      "id": "RiskByPreventing",
+      "label": "RiskByPreventing",
+      "source_sentence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses."
+    },
+    {
+      "id": "Detecting",
+      "label": "Detecting",
+      "source_sentence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses."
+    },
+    {
+      "id": "Correcting",
+      "label": "Correcting",
+      "source_sentence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses."
+    },
+    {
+      "id": "CompensatingForSecurityWeakness",
+      "label": "CompensatingForSecurityWeakness",
+      "source_sentence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses."
+    },
+    {
+      "id": "PreventiveControl",
+      "label": "PreventiveControl",
+      "source_sentence": "A preventive control is a type of security control that reduces the probability of an incident."
+    },
+    {
+      "id": "SecurityControl",
+      "label": "SecurityControl",
+      "source_sentence": "A preventive control is a type of security control that reduces the probability of an incident."
+    },
+    {
+      "id": "ProbabilityOfAnIncident",
+      "label": "ProbabilityOfAnIncident",
+      "source_sentence": "A preventive control is a type of security control that reduces the probability of an incident."
+    },
+    {
+      "id": "DetectiveControl",
+      "label": "DetectiveControl",
+      "source_sentence": "A detective control is a type of security control that identifies suspicious activity or policy violations."
+    },
+    {
+      "id": "SuspiciousActivity",
+      "label": "SuspiciousActivity",
+      "source_sentence": "A detective control is a type of security control that identifies suspicious activity or policy violations."
+    },
+    {
+      "id": "PolicyViolation",
+      "label": "PolicyViolation",
+      "source_sentence": "A detective control is a type of security control that identifies suspicious activity or policy violations."
+    },
+    {
+      "id": "CorrectiveControl",
+      "label": "CorrectiveControl",
+      "source_sentence": "A corrective control is a type of security control that restores normal operations after an incident."
+    },
+    {
+      "id": "NormalOperationAfterAnIncident",
+      "label": "NormalOperationAfterAnIncident",
+      "source_sentence": "A corrective control is a type of security control that restores normal operations after an incident."
+    },
+    {
+      "id": "CompensatingControl",
+      "label": "CompensatingControl",
+      "source_sentence": "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented."
+    },
+    {
+      "id": "AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented",
+      "label": "AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented",
+      "source_sentence": "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented."
+    },
+    {
+      "id": "AccessControl",
+      "label": "AccessControl",
+      "source_sentence": "Access control is a preventive control."
+    },
+    {
+      "id": "Logging",
+      "label": "Logging",
+      "source_sentence": "Logging is a detective control."
+    },
+    {
+      "id": "BackupRestoration",
+      "label": "BackupRestoration",
+      "source_sentence": "Backup restoration is a corrective control."
+    },
+    {
+      "id": "ManualApproval",
+      "label": "ManualApproval",
+      "source_sentence": "Manual approval is a compensating control when automated enforcement is not available."
+    },
+    {
+      "id": "CompensatingControlWhenAutomatedEnforcementIsNotAvailable",
+      "label": "CompensatingControlWhenAutomatedEnforcementIsNotAvailable",
+      "source_sentence": "Manual approval is a compensating control when automated enforcement is not available."
+    },
+    {
+      "id": "TypeOfSecurityControl",
+      "label": "TypeOfSecurityControl",
+      "source_sentence": "A corrective control is a type of security control that restores normal operations after an incident."
+    },
+    {
+      "id": "Incident",
+      "label": "Incident",
+      "source_sentence": "A corrective control is a type of security control that restores normal operations after an incident."
+    }
+  ],
+  "relations": [
+    {
+      "id": "claim-fb813c79b2cdd86b",
+      "object": "CoreProcessInInformationSecurity",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "Risk management is a core process in information security.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-9bd2fc9827511ca8",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "Risk management is a core process in information security.",
+      "subject": "RiskManagement"
+    },
+    {
+      "id": "claim-ff11564f0a4c038b",
+      "object": "Possibility",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-d863df58d3d5cb55",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
+      "subject": "Risk"
+    },
+    {
+      "id": "claim-a60afc7bd924eac6",
+      "object": "ThreatExploitAVulnerability",
+      "predicate": "as",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-d863df58d3d5cb55",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
+      "subject": "Risk"
+    },
+    {
+      "id": "claim-02f1d572fbcf7d66",
+      "object": "CausHarmToAnAsset",
+      "predicate": "as",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-d863df58d3d5cb55",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
+      "subject": "Risk"
+    },
+    {
+      "id": "claim-9db2c09f65879060",
+      "object": "PotentialCauseOfAnUnwantedIncident",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A threat is a potential cause of an unwanted incident.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-34189d5a57dbcb8c",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A threat is a potential cause of an unwanted incident.",
+      "subject": "Threat"
+    },
+    {
+      "id": "claim-b2a24e624e887ec3",
+      "object": "Weakness",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A vulnerability is a weakness that can be exploited by a threat.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-2481167601d76997",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A vulnerability is a weakness that can be exploited by a threat.",
+      "subject": "Vulnerability"
+    },
+    {
+      "id": "claim-1c5e9f29d4f7c41c",
+      "object": "BeExploitedByAThreat",
+      "predicate": "cans",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A vulnerability is a weakness that can be exploited by a threat.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-2481167601d76997",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A vulnerability is a weakness that can be exploited by a threat.",
+      "subject": "Vulnerability"
+    },
+    {
+      "id": "claim-62020d3c210b0e27",
+      "object": "ConsequenceProducedByASecurityEventOrIncident",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "An impact is the consequence produced by a security event or incident.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-c17365cd81116baf",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "An impact is the consequence produced by a security event or incident.",
+      "subject": "Impact"
+    },
+    {
+      "id": "claim-6d497d7166717b4b",
+      "object": "Probability",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A likelihood is the probability that a risk scenario occurs.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-2183787b9f5f4148",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A likelihood is the probability that a risk scenario occurs.",
+      "subject": "Likelihood"
+    },
+    {
+      "id": "claim-ea38fff49e9734ae",
+      "object": "RiskScenarioOccur",
+      "predicate": "as",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A likelihood is the probability that a risk scenario occurs.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-2183787b9f5f4148",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A likelihood is the probability that a risk scenario occurs.",
+      "subject": "Likelihood"
+    },
+    {
+      "id": "claim-9c049b524ebf74af",
+      "object": "HowAThreatMayExploitAVulnerability",
+      "predicate": "describes",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-474ae1e1b7759849",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset.",
+      "subject": "RiskScenario"
+    },
+    {
+      "id": "claim-bdc56cb868a91853",
+      "object": "AffectAnAsset",
+      "predicate": "describes",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-474ae1e1b7759849",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset.",
+      "subject": "RiskScenario"
+    },
+    {
+      "id": "claim-1a4001a2c4f90add",
+      "object": "RiskByPreventing",
+      "predicate": "reduces",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-a3daeb482863923a",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+      "subject": "Control"
+    },
+    {
+      "id": "claim-7f5806aeddb40ba1",
+      "object": "Detecting",
+      "predicate": "reduces",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-a3daeb482863923a",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+      "subject": "Control"
+    },
+    {
+      "id": "claim-ce2f612c7e914045",
+      "object": "Correcting",
+      "predicate": "reduces",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-a3daeb482863923a",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+      "subject": "Control"
+    },
+    {
+      "id": "claim-b4259fac1115211d",
+      "object": "CompensatingForSecurityWeakness",
+      "predicate": "reduces",
+      "source": {
+        "asset_id": "p005",
+        "evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+        "paragraph_id": "p005",
+        "sentence_id": "sent-a3daeb482863923a",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+      "subject": "Control"
+    },
+    {
+      "id": "claim-c50cf8e73af2ffd4",
+      "object": "SecurityControl",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A preventive control is a type of security control that reduces the probability of an incident.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-c89764d360fcbdab",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A preventive control is a type of security control that reduces the probability of an incident.",
+      "subject": "PreventiveControl"
+    },
+    {
+      "id": "claim-d8fb396ae98b3cc3",
+      "object": "ProbabilityOfAnIncident",
+      "predicate": "reduces",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A preventive control is a type of security control that reduces the probability of an incident.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-c89764d360fcbdab",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A preventive control is a type of security control that reduces the probability of an incident.",
+      "subject": "PreventiveControl"
+    },
+    {
+      "id": "claim-6c92abf4381342f5",
+      "object": "SecurityControl",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-b1bff6b4aa8edcf8",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
+      "subject": "DetectiveControl"
+    },
+    {
+      "id": "claim-a9e2214a7698c6b5",
+      "object": "SuspiciousActivity",
+      "predicate": "identifies",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-b1bff6b4aa8edcf8",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
+      "subject": "DetectiveControl"
+    },
+    {
+      "id": "claim-2a8c6d395ed5fabf",
+      "object": "PolicyViolation",
+      "predicate": "identifies",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-b1bff6b4aa8edcf8",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
+      "subject": "DetectiveControl"
+    },
+    {
+      "id": "claim-0904d1c6d83ad3b8",
+      "object": "SecurityControl",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A corrective control is a type of security control that restores normal operations after an incident.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-a65ec8c73d80403a",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A corrective control is a type of security control that restores normal operations after an incident.",
+      "subject": "CorrectiveControl"
+    },
+    {
+      "id": "claim-f8be8e306b328fef",
+      "object": "NormalOperationAfterAnIncident",
+      "predicate": "restores",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A corrective control is a type of security control that restores normal operations after an incident.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-a65ec8c73d80403a",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A corrective control is a type of security control that restores normal operations after an incident.",
+      "subject": "CorrectiveControl"
+    },
+    {
+      "id": "claim-da561ce979418a22",
+      "object": "SecurityControl",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-0d77e35dbe183ad2",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented.",
+      "subject": "CompensatingControl"
+    },
+    {
+      "id": "claim-c5f6db9ace8669f3",
+      "object": "AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented",
+      "predicate": "provides",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-0d77e35dbe183ad2",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented.",
+      "subject": "CompensatingControl"
+    },
+    {
+      "id": "claim-11bbdd463584a6fe",
+      "object": "PreventiveControl",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "Access control is a preventive control.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-8027df4391faba05",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "Access control is a preventive control.",
+      "subject": "AccessControl"
+    },
+    {
+      "id": "claim-95087ad9f77e1df6",
+      "object": "DetectiveControl",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "Logging is a detective control.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-2345bfded289e730",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "Logging is a detective control.",
+      "subject": "Logging"
+    },
+    {
+      "id": "claim-963b7f3a73f35351",
+      "object": "CorrectiveControl",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "Backup restoration is a corrective control.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-4311e2f16687d407",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "Backup restoration is a corrective control.",
+      "subject": "BackupRestoration"
+    },
+    {
+      "id": "claim-d508d1d85dfab2e0",
+      "object": "CompensatingControlWhenAutomatedEnforcementIsNotAvailable",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "Manual approval is a compensating control when automated enforcement is not available.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-5595362d117a9a18",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "Manual approval is a compensating control when automated enforcement is not available.",
+      "subject": "ManualApproval"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-292f31e1b252fc93",
+      "object": "TypeOfSecurityControl",
+      "predicate": "is",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A corrective control is a type of security control that restores normal operations after an incident.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-a65ec8c73d80403a",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_sentence": "A corrective control is a type of security control that restores normal operations after an incident.",
+      "subject": "CorrectiveControl"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "derivation": "temporal_scope:after",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-9e73b1f4602573b8",
+      "object": "Incident",
+      "predicate": "applies_after",
+      "source": {
+        "asset_id": "p006",
+        "evidence": "A corrective control is a type of security control that restores normal operations after an incident.",
+        "paragraph_id": "p006",
+        "sentence_id": "sent-a65ec8c73d80403a",
+        "source_text_id": "e373c827ec5f8a68070f6b70205a3ce64bd66703e563430c4a693625f6beebe2"
+      },
+      "source_claim_id": "claim-292f31e1b252fc93",
+      "source_sentence": "A corrective control is a type of security control that restores normal operations after an incident.",
+      "subject": "TypeOfSecurityControl"
+    }
+  ]
+}

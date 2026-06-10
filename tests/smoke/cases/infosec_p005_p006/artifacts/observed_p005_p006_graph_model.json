@@ -94,6 +94,10 @@
       "label": "Impact"
     },
     {
+      "iri": "orion:Incident",
+      "label": "Incident"
+    },
+    {
       "comments": [
         "A likelihood is the probability that a risk scenario occurs."
       ],
@@ -205,8 +209,176 @@
       "label": "Weakness"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:ThreatExploitAVulnerability",
+      "predicate": "orion:as",
+      "source_evidence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
+      "subject": "orion:Risk"
+    },
+    {
+      "object": "orion:CausHarmToAnAsset",
+      "predicate": "orion:as",
+      "source_evidence": "A risk is the possibility that a threat exploits a vulnerability and causes harm to an asset.",
+      "subject": "orion:Risk"
+    },
+    {
+      "object": "orion:BeExploitedByAThreat",
+      "predicate": "orion:cans",
+      "source_evidence": "A vulnerability is a weakness that can be exploited by a threat.",
+      "subject": "orion:Vulnerability"
+    },
+    {
+      "object": "orion:RiskScenarioOccur",
+      "predicate": "orion:as",
+      "source_evidence": "A likelihood is the probability that a risk scenario occurs.",
+      "subject": "orion:Likelihood"
+    },
+    {
+      "object": "orion:HowAThreatMayExploitAVulnerability",
+      "predicate": "orion:describes",
+      "source_evidence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset.",
+      "subject": "orion:RiskScenario"
+    },
+    {
+      "object": "orion:AffectAnAsset",
+      "predicate": "orion:describes",
+      "source_evidence": "A risk scenario describes how a threat may exploit a vulnerability and affect an asset.",
+      "subject": "orion:RiskScenario"
+    },
+    {
+      "object": "orion:RiskByPreventing",
+      "predicate": "orion:reduces",
+      "source_evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+      "subject": "orion:Control"
+    },
+    {
+      "object": "orion:Detecting",
+      "predicate": "orion:reduces",
+      "source_evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+      "subject": "orion:Control"
+    },
+    {
+      "object": "orion:Correcting",
+      "predicate": "orion:reduces",
+      "source_evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+      "subject": "orion:Control"
+    },
+    {
+      "object": "orion:CompensatingForSecurityWeakness",
+      "predicate": "orion:reduces",
+      "source_evidence": "A control reduces risk by preventing, detecting, correcting, or compensating for security weaknesses.",
+      "subject": "orion:Control"
+    },
+    {
+      "object": "orion:ProbabilityOfAnIncident",
+      "predicate": "orion:reduces",
+      "source_evidence": "A preventive control is a type of security control that reduces the probability of an incident.",
+      "subject": "orion:PreventiveControl"
+    },
+    {
+      "object": "orion:SuspiciousActivity",
+      "predicate": "orion:identifies",
+      "source_evidence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
+      "subject": "orion:DetectiveControl"
+    },
+    {
+      "object": "orion:PolicyViolation",
+      "predicate": "orion:identifies",
+      "source_evidence": "A detective control is a type of security control that identifies suspicious activity or policy violations.",
+      "subject": "orion:DetectiveControl"
+    },
+    {
+      "object": "orion:NormalOperationAfterAnIncident",
+      "predicate": "orion:restores",
+      "source_evidence": "A corrective control is a type of security control that restores normal operations after an incident.",
+      "subject": "orion:CorrectiveControl"
+    },
+    {
+      "object": "orion:AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented",
+      "predicate": "orion:provides",
+      "source_evidence": "A compensating control is a type of security control that provides an alternative protection mechanism when a primary control cannot be implemented.",
+      "subject": "orion:CompensatingControl"
+    }
+  ],
   "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:Likelihood",
+      "predicate": "orion:as",
+      "range": "orion:RiskScenarioOccur"
+    },
+    {
+      "domain": "orion:Risk",
+      "predicate": "orion:as",
+      "range": "orion:CausHarmToAnAsset"
+    },
+    {
+      "domain": "orion:Risk",
+      "predicate": "orion:as",
+      "range": "orion:ThreatExploitAVulnerability"
+    },
+    {
+      "domain": "orion:Vulnerability",
+      "predicate": "orion:cans",
+      "range": "orion:BeExploitedByAThreat"
+    },
+    {
+      "domain": "orion:RiskScenario",
+      "predicate": "orion:describes",
+      "range": "orion:AffectAnAsset"
+    },
+    {
+      "domain": "orion:RiskScenario",
+      "predicate": "orion:describes",
+      "range": "orion:HowAThreatMayExploitAVulnerability"
+    },
+    {
+      "domain": "orion:DetectiveControl",
+      "predicate": "orion:identifies",
+      "range": "orion:PolicyViolation"
+    },
+    {
+      "domain": "orion:DetectiveControl",
+      "predicate": "orion:identifies",
+      "range": "orion:SuspiciousActivity"
+    },
+    {
+      "domain": "orion:CompensatingControl",
+      "predicate": "orion:provides",
+      "range": "orion:AlternativeProtectionMechanismWhenAPrimaryControlCannotBeImplemented"
+    },
+    {
+      "domain": "orion:Control",
+      "predicate": "orion:reduces",
+      "range": "orion:CompensatingForSecurityWeakness"
+    },
+    {
+      "domain": "orion:Control",
+      "predicate": "orion:reduces",
+      "range": "orion:Correcting"
+    },
+    {
+      "domain": "orion:Control",
+      "predicate": "orion:reduces",
+      "range": "orion:Detecting"
+    },
+    {
+      "domain": "orion:Control",
+      "predicate": "orion:reduces",
+      "range": "orion:RiskByPreventing"
+    },
+    {
+      "domain": "orion:PreventiveControl",
+      "predicate": "orion:reduces",
+      "range": "orion:ProbabilityOfAnIncident"
+    },
+    {
+      "domain": "orion:CorrectiveControl",
+      "predicate": "orion:restores",
+      "range": "orion:NormalOperationAfterAnIncident"
+    }
+  ],
   "object_property_schema": [
     {
       "domain": "orion:Likelihood",
@@ -286,35 +458,37 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-850298a0c2803a89",
-      "claim-b8e8b7dd59bcee97",
-      "claim-5f3f6b7b23dd19e1",
-      "claim-bdbe056e2b09ebba",
-      "claim-56da0086f7d64739",
-      "claim-7d7db9243aaeb3fd",
-      "claim-ccccf9bbcc5751b9",
-      "claim-9edaba4f5a3e41f0",
-      "claim-07e18b34ccfe5fd5",
-      "claim-91b5d2062d2ee708",
-      "claim-71520af5a8551d24",
-      "claim-f31c0b8bc7d00644",
-      "claim-0dfc614ad3567f40",
-      "claim-159e51209c2c12c6",
-      "claim-603cb76b75012472",
-      "claim-e860cd0793f0046f",
-      "claim-e01092c3401fd09d",
-      "claim-310cf68794440098",
-      "claim-2e3cd1a773f84cb2",
-      "claim-ec0f32dbf98d4557",
-      "claim-37f8855310c4b941",
-      "claim-7c53b60af96421e3",
-      "claim-7e0d5dd89396ec0b",
-      "claim-8d4f101c3f5dcacf",
-      "claim-b273a03246bc929f",
-      "claim-1c3e9ed7348befd3",
-      "claim-2af527aed853737d",
-      "claim-c23b210bc8dbde17",
-      "claim-5471c296982db0b0"
+      "claim-fb813c79b2cdd86b",
+      "claim-ff11564f0a4c038b",
+      "claim-a60afc7bd924eac6",
+      "claim-02f1d572fbcf7d66",
+      "claim-9db2c09f65879060",
+      "claim-b2a24e624e887ec3",
+      "claim-1c5e9f29d4f7c41c",
+      "claim-62020d3c210b0e27",
+      "claim-6d497d7166717b4b",
+      "claim-ea38fff49e9734ae",
+      "claim-9c049b524ebf74af",
+      "claim-bdc56cb868a91853",
+      "claim-1a4001a2c4f90add",
+      "claim-7f5806aeddb40ba1",
+      "claim-ce2f612c7e914045",
+      "claim-b4259fac1115211d",
+      "claim-c50cf8e73af2ffd4",
+      "claim-d8fb396ae98b3cc3",
+      "claim-6c92abf4381342f5",
+      "claim-a9e2214a7698c6b5",
+      "claim-2a8c6d395ed5fabf",
+      "claim-0904d1c6d83ad3b8",
+      "claim-f8be8e306b328fef",
+      "claim-da561ce979418a22",
+      "claim-c5f6db9ace8669f3",
+      "claim-11bbdd463584a6fe",
+      "claim-95087ad9f77e1df6",
+      "claim-963b7f3a73f35351",
+      "claim-d508d1d85dfab2e0",
+      "claim-292f31e1b252fc93",
+      "claim-9e73b1f4602573b8"
     ],
     "source_stage": "semantic_claims"
   },
@@ -489,6 +663,10 @@
         ],
         "iri": "orion:Impact",
         "label": "Impact"
+      },
+      {
+        "iri": "orion:Incident",
+        "label": "Incident"
       },
       {
         "comments": [

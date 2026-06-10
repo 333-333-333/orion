@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/identityandaccessmanagement">
+    <orion:governs rdf:resource="https://orion.local/resource/accessdecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/keymanagementservice">
+    <orion:stores rdf:resource="https://orion.local/resource/cryptographickey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/physicalaccess">
+    <orion:requires rdf:resource="https://orion.local/resource/badgeapproval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/recoverypointobjective">
+    <orion:defines rdf:resource="https://orion.local/resource/maximumtolerabledataloss"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/unauthorizedaccess">
+    <orion:triggers rdf:resource="https://orion.local/resource/securityincident"/>
+  </rdf:Description>
+  <owl:Class rdf:about="https://orion.local/resource/accessdecision">
+    <rdfs:label>AccessDecision</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/badgeapproval">
+    <rdfs:label>BadgeApproval</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/cryptographickey">
+    <rdfs:label>CryptographicKey</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/identityandaccessmanagement">
+    <rdfs:label>IdentityAndAccessManagement</rdfs:label>
+    <rdfs:comment>Identity and access management governs access decisions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/keymanagementservice">
+    <rdfs:label>KeyManagementService</rdfs:label>
+    <rdfs:comment>A key management service stores a cryptographic key.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/maximumtolerabledataloss">
+    <rdfs:label>MaximumTolerableDataLoss</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/physicalaccess">
+    <rdfs:label>PhysicalAccess</rdfs:label>
+    <rdfs:comment>Physical access requires badge approval.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/recoverypointobjective">
+    <rdfs:label>RecoveryPointObjective</rdfs:label>
+    <rdfs:comment>A recovery point objective defines maximum tolerable data loss.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/securityincident">
+    <rdfs:label>SecurityIncident</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/unauthorizedaccess">
+    <rdfs:label>UnauthorizedAccess</rdfs:label>
+    <rdfs:comment>Unauthorized access triggers a security incident.</rdfs:comment>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/defines">
+    <rdfs:label>Defines</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/recoverypointobjective"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/maximumtolerabledataloss"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/governs">
+    <rdfs:label>Governs</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/identityandaccessmanagement"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/accessdecision"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/requires">
+    <rdfs:label>Requires</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/physicalaccess"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/badgeapproval"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/stores">
+    <rdfs:label>Stores</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/keymanagementservice"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/cryptographickey"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/triggers">
+    <rdfs:label>Triggers</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/unauthorizedaccess"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/securityincident"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="https://orion.local/resource/accessdecision">
+    <rdfs:label>AccessDecision</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/badgeapproval">
+    <rdfs:label>BadgeApproval</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/cryptographickey">
+    <rdfs:label>CryptographicKey</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/identityandaccessmanagement">
+    <rdfs:label>IdentityAndAccessManagement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/keymanagementservice">
+    <rdfs:label>KeyManagementService</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/maximumtolerabledataloss">
+    <rdfs:label>MaximumTolerableDataLoss</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/physicalaccess">
+    <rdfs:label>PhysicalAccess</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/recoverypointobjective">
+    <rdfs:label>RecoveryPointObjective</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityincident">
+    <rdfs:label>SecurityIncident</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/unauthorizedaccess">
+    <rdfs:label>UnauthorizedAccess</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

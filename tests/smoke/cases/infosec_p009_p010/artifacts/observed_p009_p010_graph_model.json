@@ -134,8 +134,44 @@
       "label": "ThanOneVerificationFactor"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:AuthenticationStrength",
+      "predicate": "orion:improves",
+      "source_evidence": "Multi-factor authentication improves authentication strength by requiring more than one verification factor.",
+      "subject": "orion:MultiFactorAuthentication"
+    },
+    {
+      "object": "orion:ThanOneVerificationFactor",
+      "predicate": "orion:requirs",
+      "source_evidence": "Multi-factor authentication improves authentication strength by requiring more than one verification factor.",
+      "subject": "orion:MultiFactorAuthentication"
+    },
+    {
+      "object": "orion:RiskOfUnauthorizedAccessCausedByStolenPassword",
+      "predicate": "orion:reduces",
+      "source_evidence": "Multi-factor authentication reduces the risk of unauthorized access caused by stolen passwords.",
+      "subject": "orion:MultiFactorAuthentication"
+    }
+  ],
   "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:MultiFactorAuthentication",
+      "predicate": "orion:improves",
+      "range": "orion:AuthenticationStrength"
+    },
+    {
+      "domain": "orion:MultiFactorAuthentication",
+      "predicate": "orion:reduces",
+      "range": "orion:RiskOfUnauthorizedAccessCausedByStolenPassword"
+    },
+    {
+      "domain": "orion:MultiFactorAuthentication",
+      "predicate": "orion:requirs",
+      "range": "orion:ThanOneVerificationFactor"
+    }
+  ],
   "object_property_schema": [
     {
       "domain": "orion:MultiFactorAuthentication",
@@ -155,23 +191,23 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-8605b10b41cc2a70",
-      "claim-ce17cc52d26cbea1",
-      "claim-01fdc25a305bf36a",
-      "claim-1e4670d88c1e5241",
-      "claim-aa7529dc1e6b52b6",
-      "claim-1f39f043ac9a739a",
-      "claim-b2b238135ba6df0f",
-      "claim-1be215a51d9d9681",
-      "claim-75b6536601192bbc",
-      "claim-4b70be5df746613e",
-      "claim-d3df207bfd215ee1",
-      "claim-c180270fb10df3d7",
-      "claim-e78df765770b5730",
-      "claim-2e4d54dc53138c4e",
-      "claim-391befa51764a4ad",
-      "claim-12a236268883572c",
-      "claim-9b8fc6a2d63f9d64"
+      "claim-752fcdde77350519",
+      "claim-dd5c552cfbe74b9b",
+      "claim-51434333fbad9b0e",
+      "claim-c0a21360a7258029",
+      "claim-3f6b7c500d04cb4b",
+      "claim-f037612ed908866f",
+      "claim-2fa7dfe21d878faa",
+      "claim-754f0029eb404a06",
+      "claim-3ea692ab02f334ff",
+      "claim-c08e07f6bf7e419b",
+      "claim-40188227f28e964b",
+      "claim-99412bf21f272b93",
+      "claim-a004d396e572c6d2",
+      "claim-5dfd761e9ee7c209",
+      "claim-b13af62ec7c42f53",
+      "claim-1fe8cafd78c61afa",
+      "claim-ce2fef79a3c52193"
     ],
     "source_stage": "semantic_claims"
   },

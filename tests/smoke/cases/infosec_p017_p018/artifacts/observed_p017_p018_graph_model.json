@@ -147,6 +147,10 @@
       "label": "HashFunction"
     },
     {
+      "iri": "orion:Identity",
+      "label": "Identity"
+    },
+    {
       "iri": "orion:InformationThroughMathematicalTechnique",
       "label": "InformationThroughMathematicalTechnique"
     },
@@ -222,8 +226,220 @@
       "label": "VirtualMachine"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:CloudService",
+      "predicate": "orion:protects",
+      "source_evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
+      "subject": "orion:CloudSecurity"
+    },
+    {
+      "object": "orion:CloudInfrastructure",
+      "predicate": "orion:protects",
+      "source_evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
+      "subject": "orion:CloudSecurity"
+    },
+    {
+      "object": "orion:CloudWorkload",
+      "predicate": "orion:protects",
+      "source_evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
+      "subject": "orion:CloudSecurity"
+    },
+    {
+      "object": "orion:CloudData",
+      "predicate": "orion:protects",
+      "source_evidence": "Cloud security protects cloud services, cloud infrastructure, cloud workloads, and cloud data.",
+      "subject": "orion:CloudSecurity"
+    },
+    {
+      "object": "orion:MisconfigurationInCloudEnvironment",
+      "predicate": "orion:detects",
+      "source_evidence": "A cloud security posture management tool detects misconfigurations in cloud environments.",
+      "subject": "orion:CloudSecurityPostureManagementTool"
+    },
+    {
+      "object": "orion:SecurityBrokerMonitor",
+      "predicate": "orion:access",
+      "source_evidence": "A cloud access security broker monitors and controls cloud service usage.",
+      "subject": "orion:Cloud"
+    },
+    {
+      "object": "orion:CloudServiceUsage",
+      "predicate": "orion:controls",
+      "source_evidence": "A cloud access security broker monitors and controls cloud service usage.",
+      "subject": "orion:Cloud"
+    },
+    {
+      "object": "orion:InformationThroughMathematicalTechnique",
+      "predicate": "orion:protects",
+      "source_evidence": "Cryptography protects information through mathematical techniques.",
+      "subject": "orion:Cryptography"
+    },
+    {
+      "object": "orion:Confidentiality",
+      "predicate": "orion:protects",
+      "source_evidence": "Encryption is a cryptographic mechanism that protects confidentiality.",
+      "subject": "orion:Encryption"
+    },
+    {
+      "object": "orion:EncryptedDataBackIntoReadableData",
+      "predicate": "orion:converts",
+      "source_evidence": "Decryption is the process that converts encrypted data back into readable data.",
+      "subject": "orion:Decryption"
+    },
+    {
+      "object": "orion:SameKeyForEncryption",
+      "predicate": "orion:uses",
+      "source_evidence": "Symmetric encryption is a type of encryption that uses the same key for encryption and decryption.",
+      "subject": "orion:SymmetricEncryption"
+    },
+    {
+      "object": "orion:Decryption",
+      "predicate": "orion:uses",
+      "source_evidence": "Symmetric encryption is a type of encryption that uses the same key for encryption and decryption.",
+      "subject": "orion:SymmetricEncryption"
+    },
+    {
+      "object": "orion:PublicKey",
+      "predicate": "orion:uses",
+      "source_evidence": "Asymmetric encryption is a type of encryption that uses a public key and a private key.",
+      "subject": "orion:AsymmetricEncryption"
+    },
+    {
+      "object": "orion:PrivateKey",
+      "predicate": "orion:uses",
+      "source_evidence": "Asymmetric encryption is a type of encryption that uses a public key and a private key.",
+      "subject": "orion:AsymmetricEncryption"
+    },
+    {
+      "object": "orion:Authenticity",
+      "predicate": "orion:verifies",
+      "source_evidence": "A digital signature is a cryptographic mechanism that verifies authenticity and integrity.",
+      "subject": "orion:DigitalSignature"
+    },
+    {
+      "object": "orion:Integrity",
+      "predicate": "orion:verifies",
+      "source_evidence": "A digital signature is a cryptographic mechanism that verifies authenticity and integrity.",
+      "subject": "orion:DigitalSignature"
+    },
+    {
+      "object": "orion:FixedLengthDigestFromInputData",
+      "predicate": "orion:generates",
+      "source_evidence": "A hash function generates a fixed-length digest from input data.",
+      "subject": "orion:HashFunction"
+    },
+    {
+      "object": "orion:MessageIntegrity",
+      "predicate": "orion:verifies",
+      "source_evidence": "A message authentication code verifies message integrity and authenticity.",
+      "subject": "orion:MessageAuthenticationCode"
+    },
+    {
+      "object": "orion:Authenticity",
+      "predicate": "orion:verifies",
+      "source_evidence": "A message authentication code verifies message integrity and authenticity.",
+      "subject": "orion:MessageAuthenticationCode"
+    }
+  ],
   "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:Cloud",
+      "predicate": "orion:access",
+      "range": "orion:SecurityBrokerMonitor"
+    },
+    {
+      "domain": "orion:Cloud",
+      "predicate": "orion:controls",
+      "range": "orion:CloudServiceUsage"
+    },
+    {
+      "domain": "orion:Decryption",
+      "predicate": "orion:converts",
+      "range": "orion:EncryptedDataBackIntoReadableData"
+    },
+    {
+      "domain": "orion:CloudSecurityPostureManagementTool",
+      "predicate": "orion:detects",
+      "range": "orion:MisconfigurationInCloudEnvironment"
+    },
+    {
+      "domain": "orion:HashFunction",
+      "predicate": "orion:generates",
+      "range": "orion:FixedLengthDigestFromInputData"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:CloudData"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:CloudInfrastructure"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:CloudService"
+    },
+    {
+      "domain": "orion:CloudSecurity",
+      "predicate": "orion:protects",
+      "range": "orion:CloudWorkload"
+    },
+    {
+      "domain": "orion:Cryptography",
+      "predicate": "orion:protects",
+      "range": "orion:InformationThroughMathematicalTechnique"
+    },
+    {
+      "domain": "orion:Encryption",
+      "predicate": "orion:protects",
+      "range": "orion:Confidentiality"
+    },
+    {
+      "domain": "orion:AsymmetricEncryption",
+      "predicate": "orion:uses",
+      "range": "orion:PrivateKey"
+    },
+    {
+      "domain": "orion:AsymmetricEncryption",
+      "predicate": "orion:uses",
+      "range": "orion:PublicKey"
+    },
+    {
+      "domain": "orion:SymmetricEncryption",
+      "predicate": "orion:uses",
+      "range": "orion:Decryption"
+    },
+    {
+      "domain": "orion:SymmetricEncryption",
+      "predicate": "orion:uses",
+      "range": "orion:SameKeyForEncryption"
+    },
+    {
+      "domain": "orion:DigitalSignature",
+      "predicate": "orion:verifies",
+      "range": "orion:Authenticity"
+    },
+    {
+      "domain": "orion:DigitalSignature",
+      "predicate": "orion:verifies",
+      "range": "orion:Integrity"
+    },
+    {
+      "domain": "orion:MessageAuthenticationCode",
+      "predicate": "orion:verifies",
+      "range": "orion:Authenticity"
+    },
+    {
+      "domain": "orion:MessageAuthenticationCode",
+      "predicate": "orion:verifies",
+      "range": "orion:MessageIntegrity"
+    }
+  ],
   "object_property_schema": [
     {
       "domain": "orion:Cloud",
@@ -323,38 +539,38 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-c31b40dddbc667be",
-      "claim-d2fc70961298b26a",
-      "claim-7faede951e674fff",
-      "claim-ef7ce44336b938ec",
-      "claim-2b28df5a9e425bf8",
-      "claim-a0068a5f5ed56131",
-      "claim-385e3dcc6abefda8",
-      "claim-da42bc0d134859aa",
-      "claim-e3e98ead8f730049",
-      "claim-6ba2c5708b2c2c13",
-      "claim-fce4e6c4efbab35b",
-      "claim-6532bad308bf42ec",
-      "claim-f122521d21add244",
-      "claim-503dbb4aa1b70b32",
-      "claim-a0b6d3c238ea1034",
-      "claim-5f18b14b654b4a4b",
-      "claim-4017ea82a72a1456",
-      "claim-13b94e0ed041768f",
-      "claim-e55f406fd894511b",
-      "claim-20939a75600dc52c",
-      "claim-a1e59b08efb80ac1",
-      "claim-e2bc922e80e68152",
-      "claim-b248cc8b310a8dd5",
-      "claim-150e6fe27d6848bc",
-      "claim-c6b3a0c3398dba70",
-      "claim-7ea78f5aeb431a2e",
-      "claim-c6fc3c82d6fe764e",
-      "claim-43bc36fc41f1c2f6",
-      "claim-5fe4e87ab5420f5b",
-      "claim-58cd96b0bacb0aac",
-      "claim-40d091bab8974700",
-      "claim-16b527bc129cbe31"
+      "claim-3f1a2e7ba9f6ee50",
+      "claim-4f5a55b6adc17d10",
+      "claim-acf8f14db5c75e28",
+      "claim-c003bd7b9bd3c76c",
+      "claim-7265cedb931dc907",
+      "claim-ecbfe723fcd138ea",
+      "claim-6e4dc322e7181b58",
+      "claim-b70b63020fabf606",
+      "claim-f560aaae4c8d5c93",
+      "claim-61c11be5336e97f2",
+      "claim-893308a71354f25c",
+      "claim-ac56ce0fd39638d8",
+      "claim-72f98fdffbab8c1d",
+      "claim-6fdc14e43b48dc4f",
+      "claim-3724177ca3eac30a",
+      "claim-ab171b1c9d116c32",
+      "claim-2e17c987404fa6de",
+      "claim-2c7e4d35be91e8e3",
+      "claim-bed9153c2df88b44",
+      "claim-164ef68558b7a450",
+      "claim-104d5d67007e96d7",
+      "claim-205f4cdf6e219b0d",
+      "claim-af94e64d6b27a0db",
+      "claim-8977a9c6c1a22452",
+      "claim-be62ab78ec1ccbda",
+      "claim-b58da826fa29ac49",
+      "claim-c058bd4671c6702f",
+      "claim-c26155f32e66b431",
+      "claim-ad6fe763f4391b01",
+      "claim-9a4198a7f2f0fe79",
+      "claim-2b97781a3367ed6c",
+      "claim-b8e35ab9801502c0"
     ],
     "source_stage": "semantic_claims"
   },
@@ -604,6 +820,10 @@
         "label": "HashFunction"
       },
       {
+        "iri": "orion:Identity",
+        "label": "Identity"
+      },
+      {
         "iri": "orion:InformationThroughMathematicalTechnique",
         "label": "InformationThroughMathematicalTechnique"
       },
@@ -806,6 +1026,11 @@
       "object": "orion:AdministrativeBoundaryForCloudResource",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:CloudAccount"
+    },
+    {
+      "object": "orion:Identity",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:CloudIdentity"
     },
     {
       "object": "orion:ComputingResourceHostedInACloudEnvironment",

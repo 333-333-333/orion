@@ -67,7 +67,6 @@
   },
   "rdf": {
     "classes": [
-      "advisory-document",
       "application",
       "asset-custodian",
       "asset-owner",
@@ -75,10 +74,8 @@
       "board-of-directors",
       "compliance",
       "control",
-      "control-document",
       "end-user",
       "expectation",
-      "formal-document",
       "good-practice",
       "governance",
       "incident-response-process",
@@ -89,11 +86,9 @@
       "information-security-program",
       "infrastructure-component",
       "mandatory-requirement",
-      "minimum-set-of-controls",
       "monitoring-mechanism",
       "network",
       "operating-system",
-      "operational-document",
       "organization",
       "protection-requirement",
       "resource",
@@ -116,28 +111,7 @@
       "technical-environment",
       "technical-service"
     ],
-    "direct_subclasses": [
-      [
-        "security-policy",
-        "formal-document"
-      ],
-      [
-        "security-standard",
-        "control-document"
-      ],
-      [
-        "security-procedure",
-        "operational-document"
-      ],
-      [
-        "security-guideline",
-        "advisory-document"
-      ],
-      [
-        "security-baseline",
-        "minimum-set-of-controls"
-      ]
-    ],
+    "direct_subclasses": [],
     "object_properties": [
       [
         "protects",
@@ -353,15 +327,10 @@
   ],
   "rdf_quality": {
     "max_class_count": 48,
-    "min_subclass_count": 5,
-    "min_subclass_density": 0.1,
+    "min_subclass_count": 0,
+    "min_subclass_density": 0.0,
     "prohibited_classes": [],
     "justified_orphan_classes": [
-      "advisory-document",
-      "control-document",
-      "formal-document",
-      "minimum-set-of-controls",
-      "operational-document",
       "step-by-step-activity"
     ],
     "noun_chunk_residue_tokens": [

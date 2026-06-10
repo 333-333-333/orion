@@ -40,7 +40,12 @@ _SMOKE_TESTS = (
     "tests/smoke/cases/infosec_p039_p040/test_infosec_p039_p040_observational_smoke.py",
     "tests/smoke/cases/infosec_p041_p042/test_infosec_p041_p042_observational_smoke.py",
     "tests/smoke/cases/infosec_p043/test_infosec_p043_observational_smoke.py",
+    "tests/smoke/cases/infosec_compound_entities_red/test_infosec_compound_entities_red_smoke.py",
     "tests/smoke/cases/infosec_full_text/test_infosec_full_text_observational_smoke.py",
+    "tests/smoke/cases/application_types_minimal/test_application_types_minimal_observational_smoke.py",
+    "tests/smoke/cases/pizza_short/test_pizza_short_observational_smoke.py",
+    "tests/smoke/test_all_rdf_smoke_cases_emit_ttl.py",
+    "tests/smoke/test_readme_public_library_contract_red.py",
 )
 _INFOSEC_3K_DENYLIST = ("infosec_3k", "3k_pipeline", "3k_paragraphs")
 

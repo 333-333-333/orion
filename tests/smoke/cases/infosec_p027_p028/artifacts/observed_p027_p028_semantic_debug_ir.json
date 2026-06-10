@@ -1,0 +1,633 @@
+{
+  "entities": [
+    {
+      "id": "ConfidentialityAgreement",
+      "label": "ConfidentialityAgreement",
+      "source_sentence": "A confidentiality agreement defines obligations related to sensitive information."
+    },
+    {
+      "id": "ObligationRelatedToSensitiveInformation",
+      "label": "ObligationRelatedToSensitiveInformation",
+      "source_sentence": "A confidentiality agreement defines obligations related to sensitive information."
+    },
+    {
+      "id": "Security",
+      "label": "Security",
+      "source_sentence": "Security awareness training educates users about policies, threats, and expected behavior."
+    },
+    {
+      "id": "TrainingEducateUserAboutPolicy",
+      "label": "TrainingEducateUserAboutPolicy",
+      "source_sentence": "Security awareness training educates users about policies, threats, and expected behavior."
+    },
+    {
+      "id": "Threat",
+      "label": "Threat",
+      "source_sentence": "Security awareness training educates users about policies, threats, and expected behavior."
+    },
+    {
+      "id": "ExpectedBehavior",
+      "label": "ExpectedBehavior",
+      "source_sentence": "Security awareness training educates users about policies, threats, and expected behavior."
+    },
+    {
+      "id": "RoleBasedTraining",
+      "label": "RoleBasedTraining",
+      "source_sentence": "Role-based training provides specialized security knowledge for specific responsibilities."
+    },
+    {
+      "id": "SpecializedSecurityKnowledgeForSpecificResponsibility",
+      "label": "SpecializedSecurityKnowledgeForSpecificResponsibility",
+      "source_sentence": "Role-based training provides specialized security knowledge for specific responsibilities."
+    },
+    {
+      "id": "Disciplinary",
+      "label": "Disciplinary",
+      "source_sentence": "Disciplinary process defines consequences for policy violations."
+    },
+    {
+      "id": "DefineConsequenceForPolicyViolation",
+      "label": "DefineConsequenceForPolicyViolation",
+      "source_sentence": "Disciplinary process defines consequences for policy violations."
+    },
+    {
+      "id": "TerminationProcedure",
+      "label": "TerminationProcedure",
+      "source_sentence": "Termination procedure removes access when employment ends."
+    },
+    {
+      "id": "AccessWhenEmploymentEnd",
+      "label": "AccessWhenEmploymentEnd",
+      "source_sentence": "Termination procedure removes access when employment ends."
+    },
+    {
+      "id": "ReduceHumanRelatedSecurityRisk",
+      "label": "ReduceHumanRelatedSecurityRisk",
+      "source_sentence": "Security awareness reduces human-related security risks."
+    },
+    {
+      "id": "Phishing",
+      "label": "Phishing",
+      "source_sentence": "Phishing awareness teaches users to identify suspicious messages."
+    },
+    {
+      "id": "TeachUserToIdentifySuspiciousMessage",
+      "label": "TeachUserToIdentifySuspiciousMessage",
+      "source_sentence": "Phishing awareness teaches users to identify suspicious messages."
+    },
+    {
+      "id": "Password",
+      "label": "Password",
+      "source_sentence": "Password awareness teaches users to create and protect strong passwords."
+    },
+    {
+      "id": "TeachUserToCreate",
+      "label": "TeachUserToCreate",
+      "source_sentence": "Password awareness teaches users to create and protect strong passwords."
+    },
+    {
+      "id": "ProtectStrongPassword",
+      "label": "ProtectStrongPassword",
+      "source_sentence": "Password awareness teaches users to create and protect strong passwords."
+    },
+    {
+      "id": "DataHandling",
+      "label": "DataHandling",
+      "source_sentence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely."
+    },
+    {
+      "id": "TeachUserToClassify",
+      "label": "TeachUserToClassify",
+      "source_sentence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely."
+    },
+    {
+      "id": "Store",
+      "label": "Store",
+      "source_sentence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely."
+    },
+    {
+      "id": "Transmit",
+      "label": "Transmit",
+      "source_sentence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely."
+    },
+    {
+      "id": "DisposeOfInformationSafely",
+      "label": "DisposeOfInformationSafely",
+      "source_sentence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely."
+    },
+    {
+      "id": "RemoteWork",
+      "label": "RemoteWork",
+      "source_sentence": "Remote work awareness teaches users to protect devices and networks outside the office."
+    },
+    {
+      "id": "TeachUserToProtectDevice",
+      "label": "TeachUserToProtectDevice",
+      "source_sentence": "Remote work awareness teaches users to protect devices and networks outside the office."
+    },
+    {
+      "id": "OutsideTheOffice",
+      "label": "OutsideTheOffice",
+      "source_sentence": "Remote work awareness teaches users to protect devices and networks outside the office."
+    },
+    {
+      "id": "SocialEngineering",
+      "label": "SocialEngineering",
+      "source_sentence": "Social engineering awareness teaches users to recognize manipulation attempts."
+    },
+    {
+      "id": "TeachUserToRecognizeManipulationAttempt",
+      "label": "TeachUserToRecognizeManipulationAttempt",
+      "source_sentence": "Social engineering awareness teaches users to recognize manipulation attempts."
+    },
+    {
+      "id": "Awareness",
+      "label": "Awareness",
+      "source_sentence": "Awareness campaigns reinforce secure behavior."
+    },
+    {
+      "id": "ReinforceSecureBehavior",
+      "label": "ReinforceSecureBehavior",
+      "source_sentence": "Awareness campaigns reinforce secure behavior."
+    },
+    {
+      "id": "TrainingCompletion",
+      "label": "TrainingCompletion",
+      "source_sentence": "Training completion metrics measure user participation."
+    },
+    {
+      "id": "MeasureUserParticipation",
+      "label": "MeasureUserParticipation",
+      "source_sentence": "Training completion metrics measure user participation."
+    },
+    {
+      "id": "SimulatedPhishing",
+      "label": "SimulatedPhishing",
+      "source_sentence": "Simulated phishing exercises measure user response to phishing scenarios."
+    },
+    {
+      "id": "MeasureUserResponseToPhishingScenario",
+      "label": "MeasureUserResponseToPhishingScenario",
+      "source_sentence": "Simulated phishing exercises measure user response to phishing scenarios."
+    },
+    {
+      "id": "HumanResourceSecurity",
+      "label": "HumanResourceSecurity",
+      "source_sentence": "Human resource security addresses security responsibilities before, during, and after employment."
+    },
+    {
+      "id": "SecurityResponsibility",
+      "label": "SecurityResponsibility",
+      "source_sentence": "Human resource security addresses security responsibilities before, during, and after employment."
+    },
+    {
+      "id": "Employment",
+      "label": "Employment",
+      "source_sentence": "Human resource security addresses security responsibilities before, during, and after employment."
+    },
+    {
+      "id": "BackgroundCheck",
+      "label": "BackgroundCheck",
+      "source_sentence": "A background check evaluates a candidate before employment."
+    },
+    {
+      "id": "Candidate",
+      "label": "Candidate",
+      "source_sentence": "A background check evaluates a candidate before employment."
+    }
+  ],
+  "rejected": [
+    {
+      "behavior": "decompose_temporal_scope",
+      "claim_id": "claim-6ce94976e276c188",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "source_sentence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "statement": "HumanResourceSecurity addresses SecurityResponsibilityBefore",
+      "type": "temporal_scope_superseded"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "claim_id": "claim-b25c0605a758d566",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "source_sentence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "statement": "HumanResourceSecurity addresses During",
+      "type": "temporal_scope_superseded"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "claim_id": "claim-0bc08101c0d40ca8",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "source_sentence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "statement": "HumanResourceSecurity addresses Employment",
+      "type": "temporal_scope_superseded"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "claim_id": "claim-bbb906973bef4b1f",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "source_sentence": "A background check evaluates a candidate before employment.",
+      "statement": "BackgroundCheck evaluates CandidateBeforeEmployment",
+      "type": "temporal_scope_superseded"
+    }
+  ],
+  "relations": [
+    {
+      "id": "claim-40eedeb61af76ba8",
+      "object": "ObligationRelatedToSensitiveInformation",
+      "predicate": "defines",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "A confidentiality agreement defines obligations related to sensitive information.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-90a5511af0ee2b47",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "A confidentiality agreement defines obligations related to sensitive information.",
+      "subject": "ConfidentialityAgreement"
+    },
+    {
+      "id": "claim-381eed5369397df0",
+      "object": "TrainingEducateUserAboutPolicy",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "Security awareness training educates users about policies, threats, and expected behavior.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-6b651e82f06628ae",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Security awareness training educates users about policies, threats, and expected behavior.",
+      "subject": "Security"
+    },
+    {
+      "id": "claim-28821157747bd6f9",
+      "object": "Threat",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "Security awareness training educates users about policies, threats, and expected behavior.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-6b651e82f06628ae",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Security awareness training educates users about policies, threats, and expected behavior.",
+      "subject": "Security"
+    },
+    {
+      "id": "claim-d7ff3a4631c8f744",
+      "object": "ExpectedBehavior",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "Security awareness training educates users about policies, threats, and expected behavior.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-6b651e82f06628ae",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Security awareness training educates users about policies, threats, and expected behavior.",
+      "subject": "Security"
+    },
+    {
+      "id": "claim-a554a7b8b7bd2ade",
+      "object": "SpecializedSecurityKnowledgeForSpecificResponsibility",
+      "predicate": "provides",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "Role-based training provides specialized security knowledge for specific responsibilities.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-521cd6e7ba5b4f3d",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Role-based training provides specialized security knowledge for specific responsibilities.",
+      "subject": "RoleBasedTraining"
+    },
+    {
+      "id": "claim-aa968851b1dda4bd",
+      "object": "DefineConsequenceForPolicyViolation",
+      "predicate": "process",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "Disciplinary process defines consequences for policy violations.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-42791cbaee493615",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Disciplinary process defines consequences for policy violations.",
+      "subject": "Disciplinary"
+    },
+    {
+      "id": "claim-1c402cd7d7273e6c",
+      "object": "AccessWhenEmploymentEnd",
+      "predicate": "removes",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "Termination procedure removes access when employment ends.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-16bb9e32574c299f",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Termination procedure removes access when employment ends.",
+      "subject": "TerminationProcedure"
+    },
+    {
+      "id": "claim-26c0f6da2eb9036a",
+      "object": "ReduceHumanRelatedSecurityRisk",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Security awareness reduces human-related security risks.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-daf2e26e4294b9e4",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Security awareness reduces human-related security risks.",
+      "subject": "Security"
+    },
+    {
+      "id": "claim-077a1182daacd3e0",
+      "object": "TeachUserToIdentifySuspiciousMessage",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Phishing awareness teaches users to identify suspicious messages.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-08499356e555c620",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Phishing awareness teaches users to identify suspicious messages.",
+      "subject": "Phishing"
+    },
+    {
+      "id": "claim-6262359925e303de",
+      "object": "TeachUserToCreate",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Password awareness teaches users to create and protect strong passwords.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-3bc4e00e86196d4f",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Password awareness teaches users to create and protect strong passwords.",
+      "subject": "Password"
+    },
+    {
+      "id": "claim-822d5e130ecfef60",
+      "object": "ProtectStrongPassword",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Password awareness teaches users to create and protect strong passwords.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-3bc4e00e86196d4f",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Password awareness teaches users to create and protect strong passwords.",
+      "subject": "Password"
+    },
+    {
+      "id": "claim-bad436f7f8b5f5f5",
+      "object": "TeachUserToClassify",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-46b0bc254d9880fb",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+      "subject": "DataHandling"
+    },
+    {
+      "id": "claim-4d221cddb040acff",
+      "object": "Store",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-46b0bc254d9880fb",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+      "subject": "DataHandling"
+    },
+    {
+      "id": "claim-19934f35925659fb",
+      "object": "Transmit",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-46b0bc254d9880fb",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+      "subject": "DataHandling"
+    },
+    {
+      "id": "claim-8e3ba3d4885ff47b",
+      "object": "DisposeOfInformationSafely",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-46b0bc254d9880fb",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+      "subject": "DataHandling"
+    },
+    {
+      "id": "claim-bca31e57f8637541",
+      "object": "TeachUserToProtectDevice",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Remote work awareness teaches users to protect devices and networks outside the office.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-cd4af016ce20fcf8",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Remote work awareness teaches users to protect devices and networks outside the office.",
+      "subject": "RemoteWork"
+    },
+    {
+      "id": "claim-e96e4b6a0681ee21",
+      "object": "OutsideTheOffice",
+      "predicate": "networks",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Remote work awareness teaches users to protect devices and networks outside the office.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-cd4af016ce20fcf8",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Remote work awareness teaches users to protect devices and networks outside the office.",
+      "subject": "RemoteWork"
+    },
+    {
+      "id": "claim-d8390c053a5a4195",
+      "object": "TeachUserToRecognizeManipulationAttempt",
+      "predicate": "awareness",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Social engineering awareness teaches users to recognize manipulation attempts.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-2e9f7af447a32230",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Social engineering awareness teaches users to recognize manipulation attempts.",
+      "subject": "SocialEngineering"
+    },
+    {
+      "id": "claim-cb1bb0b4006a86fb",
+      "object": "ReinforceSecureBehavior",
+      "predicate": "campaigns",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Awareness campaigns reinforce secure behavior.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-b179d838552e4003",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Awareness campaigns reinforce secure behavior.",
+      "subject": "Awareness"
+    },
+    {
+      "id": "claim-8f266399cb7c9d55",
+      "object": "MeasureUserParticipation",
+      "predicate": "metrics",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Training completion metrics measure user participation.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-11e40966beab47eb",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Training completion metrics measure user participation.",
+      "subject": "TrainingCompletion"
+    },
+    {
+      "id": "claim-0b3e1ad7b64fa136",
+      "object": "MeasureUserResponseToPhishingScenario",
+      "predicate": "exercises",
+      "source": {
+        "asset_id": "p028",
+        "evidence": "Simulated phishing exercises measure user response to phishing scenarios.",
+        "paragraph_id": "p028",
+        "sentence_id": "sent-77c630d30d7a975a",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Simulated phishing exercises measure user response to phishing scenarios.",
+      "subject": "SimulatedPhishing"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-f178fb842e4a04c3",
+      "object": "SecurityResponsibility",
+      "predicate": "addresses",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-abce4c79718bde0a",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "subject": "HumanResourceSecurity"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "derivation": "temporal_scope:before",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-a22340916d6b118b",
+      "object": "Employment",
+      "predicate": "applies_before",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-abce4c79718bde0a",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_claim_id": "claim-f178fb842e4a04c3",
+      "source_sentence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "subject": "SecurityResponsibility"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "derivation": "temporal_scope:during",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-d14210d53e8d5a69",
+      "object": "Employment",
+      "predicate": "applies_during",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-abce4c79718bde0a",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_claim_id": "claim-f178fb842e4a04c3",
+      "source_sentence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "subject": "SecurityResponsibility"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "derivation": "temporal_scope:after",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-3a697cd32b491dc1",
+      "object": "Employment",
+      "predicate": "applies_after",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-abce4c79718bde0a",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_claim_id": "claim-f178fb842e4a04c3",
+      "source_sentence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "subject": "SecurityResponsibility"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-6eebf1e2755ad24b",
+      "object": "Candidate",
+      "predicate": "evaluates",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "A background check evaluates a candidate before employment.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-22e25f7e77e01678",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_sentence": "A background check evaluates a candidate before employment.",
+      "subject": "BackgroundCheck"
+    },
+    {
+      "behavior": "decompose_temporal_scope",
+      "derivation": "temporal_scope:before",
+      "extracted_by": "RULE-SEMANTIC-TEMPORAL-EN-001",
+      "id": "claim-3919fad7bdde97a0",
+      "object": "Employment",
+      "predicate": "applies_before",
+      "source": {
+        "asset_id": "p027",
+        "evidence": "A background check evaluates a candidate before employment.",
+        "paragraph_id": "p027",
+        "sentence_id": "sent-22e25f7e77e01678",
+        "source_text_id": "46cc010da8f581b8e4bebeed2a29e1a27e5776d621f6511d64b66bba347c5981"
+      },
+      "source_claim_id": "claim-6eebf1e2755ad24b",
+      "source_sentence": "A background check evaluates a candidate before employment.",
+      "subject": "Candidate"
+    }
+  ]
+}

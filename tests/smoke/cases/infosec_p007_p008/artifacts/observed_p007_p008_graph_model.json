@@ -1,8 +1,11 @@
 {
   "classes": [
     {
-      "iri": "orion:AbilityToTraceActionToASpecificIdentity",
-      "label": "AbilityToTraceActionToASpecificIdentity"
+      "comments": [
+        "Accountability is the ability to trace actions to a specific identity."
+      ],
+      "iri": "orion:Ability",
+      "label": "Ability"
     },
     {
       "comments": [
@@ -10,6 +13,10 @@
       ],
       "iri": "orion:AccessControl",
       "label": "AccessControl"
+    },
+    {
+      "iri": "orion:Account",
+      "label": "Account"
     },
     {
       "iri": "orion:AccountWithElevatedPermission",
@@ -21,6 +28,13 @@
       ],
       "iri": "orion:Accountability",
       "label": "Accountability"
+    },
+    {
+      "comments": [
+        "Accountability is the ability to trace actions to a specific identity."
+      ],
+      "iri": "orion:Action",
+      "label": "Action"
     },
     {
       "comments": [
@@ -79,6 +93,14 @@
       ],
       "iri": "orion:Identification",
       "label": "Identification"
+    },
+    {
+      "iri": "orion:Identity",
+      "label": "Identity"
+    },
+    {
+      "iri": "orion:Information",
+      "label": "Information"
     },
     {
       "comments": [
@@ -196,8 +218,121 @@
       "label": "UserAccount"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation",
+      "predicate": "orion:helps",
+      "source_evidence": "Information classification helps organizations apply appropriate protection levels to different kinds of information.",
+      "subject": "orion:InformationClassification"
+    },
+    {
+      "object": "orion:BeDisclosedWithoutCausingHarm",
+      "predicate": "orion:cans",
+      "source_evidence": "Public information is a type of information that can be disclosed without causing harm.",
+      "subject": "orion:PublicInformation"
+    },
+    {
+      "object": "orion:StrictAccess",
+      "predicate": "orion:requires",
+      "source_evidence": "Restricted information is a type of highly sensitive information that requires strict access, storage, and transmission controls.",
+      "subject": "orion:RestrictedInformation"
+    },
+    {
+      "object": "orion:Storage",
+      "predicate": "orion:requires",
+      "source_evidence": "Restricted information is a type of highly sensitive information that requires strict access, storage, and transmission controls.",
+      "subject": "orion:RestrictedInformation"
+    },
+    {
+      "object": "orion:TransmissionControl",
+      "predicate": "orion:requires",
+      "source_evidence": "Restricted information is a type of highly sensitive information that requires strict access, storage, and transmission controls.",
+      "subject": "orion:RestrictedInformation"
+    },
+    {
+      "object": "orion:CanIdentifyANaturalPerson",
+      "predicate": "orion:identifies",
+      "source_evidence": "Personal data is a type of sensitive information that identifies or can identify a natural person.",
+      "subject": "orion:PersonalData"
+    },
+    {
+      "object": "orion:Under",
+      "predicate": "orion:regulates",
+      "source_evidence": "Access control regulates who can access which resource and under which conditions.",
+      "subject": "orion:AccessControl"
+    },
+    {
+      "object": "orion:Action",
+      "predicate": "orion:traces",
+      "source_evidence": "Accountability is the ability to trace actions to a specific identity.",
+      "subject": "orion:Ability"
+    },
+    {
+      "object": "orion:Identity",
+      "predicate": "orion:tracesTo",
+      "source_evidence": "Accountability is the ability to trace actions to a specific identity.",
+      "subject": "orion:Action"
+    },
+    {
+      "object": "orion:DigitalIdentity",
+      "predicate": "orion:represents",
+      "source_evidence": "A user account represents a digital identity.",
+      "subject": "orion:UserAccount"
+    }
+  ],
   "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:PublicInformation",
+      "predicate": "orion:cans",
+      "range": "orion:BeDisclosedWithoutCausingHarm"
+    },
+    {
+      "domain": "orion:InformationClassification",
+      "predicate": "orion:helps",
+      "range": "orion:OrganizationApplyAppropriateProtectionLevelToDifferentKindOfInformation"
+    },
+    {
+      "domain": "orion:PersonalData",
+      "predicate": "orion:identifies",
+      "range": "orion:CanIdentifyANaturalPerson"
+    },
+    {
+      "domain": "orion:AccessControl",
+      "predicate": "orion:regulates",
+      "range": "orion:Under"
+    },
+    {
+      "domain": "orion:UserAccount",
+      "predicate": "orion:represents",
+      "range": "orion:DigitalIdentity"
+    },
+    {
+      "domain": "orion:RestrictedInformation",
+      "predicate": "orion:requires",
+      "range": "orion:Storage"
+    },
+    {
+      "domain": "orion:RestrictedInformation",
+      "predicate": "orion:requires",
+      "range": "orion:StrictAccess"
+    },
+    {
+      "domain": "orion:RestrictedInformation",
+      "predicate": "orion:requires",
+      "range": "orion:TransmissionControl"
+    },
+    {
+      "domain": "orion:Ability",
+      "predicate": "orion:traces",
+      "range": "orion:Action"
+    },
+    {
+      "domain": "orion:Action",
+      "predicate": "orion:tracesTo",
+      "range": "orion:Identity"
+    }
+  ],
   "object_property_schema": [
     {
       "domain": "orion:PublicInformation",
@@ -238,32 +373,44 @@
       "domain": "orion:RestrictedInformation",
       "predicate": "orion:requires",
       "range": "orion:TransmissionControl"
+    },
+    {
+      "domain": "orion:Ability",
+      "predicate": "orion:traces",
+      "range": "orion:Action"
+    },
+    {
+      "domain": "orion:Action",
+      "predicate": "orion:tracesTo",
+      "range": "orion:Identity"
     }
   ],
   "projection": {
     "claim_ids": [
-      "claim-fa04e2384168ce03",
-      "claim-9c3a2951065c926e",
-      "claim-d2e9773d14d0ea7f",
-      "claim-7cd49bbbe731cfa6",
-      "claim-909d1dfa3dfc11df",
-      "claim-4487145b4e1dc156",
-      "claim-a2ad3fabfa31fbf6",
-      "claim-bef5cb9c666de08e",
-      "claim-4e6ab13c4daf6750",
-      "claim-38b0cb28e1441f27",
-      "claim-f4ce08d18a466856",
-      "claim-38c82c87a88fd2ce",
-      "claim-38bd4b54f527095a",
-      "claim-72c226839eca9f6a",
-      "claim-473f61d9043c1bbe",
-      "claim-7cbd25f1fefb3d4c",
-      "claim-011803f7c61b2b51",
-      "claim-743cdb38fa7ab16d",
-      "claim-3b6b13c582fd4740",
-      "claim-6cf6baa6d08eb0c2",
-      "claim-64d1993b58aa614b",
-      "claim-69a2b75cb0be5fcc"
+      "claim-ed9b28ed3722d9bb",
+      "claim-32e1f44216bf1958",
+      "claim-7b5d906fd6c2492c",
+      "claim-da1b3595b7291277",
+      "claim-a5f0eaa0ddc7c30c",
+      "claim-6900187cd62d4e20",
+      "claim-fe1bc60303796c35",
+      "claim-87bb6fa5ae75344f",
+      "claim-b78a5838f61712af",
+      "claim-12302480d7c1d4a3",
+      "claim-7262ca154dcc858a",
+      "claim-081e57f9d11ec83d",
+      "claim-27bcd9a4b21fd95d",
+      "claim-a9c4b29634545d1f",
+      "claim-16f998dbdd09ff3f",
+      "claim-4656ff20db439b1e",
+      "claim-6fd78b496b6a9a87",
+      "claim-951e9ff8b48a46b3",
+      "claim-60e665cba1cef6b5",
+      "claim-af65964286d90c54",
+      "claim-20001a48560167c7",
+      "claim-d01bd19fb9adea6e",
+      "claim-edf94b187965cb11",
+      "claim-bfd8b13c75959f98"
     ],
     "source_stage": "semantic_claims"
   },
@@ -307,13 +454,26 @@
       "domain": "orion:RestrictedInformation",
       "property": "orion:requires",
       "range": "orion:TransmissionControl"
+    },
+    {
+      "domain": "orion:Ability",
+      "property": "orion:traces",
+      "range": "orion:Action"
+    },
+    {
+      "domain": "orion:Action",
+      "property": "orion:tracesTo",
+      "range": "orion:Identity"
     }
   ],
   "schema": {
     "classes": [
       {
-        "iri": "orion:AbilityToTraceActionToASpecificIdentity",
-        "label": "AbilityToTraceActionToASpecificIdentity"
+        "comments": [
+          "Accountability is the ability to trace actions to a specific identity."
+        ],
+        "iri": "orion:Ability",
+        "label": "Ability"
       },
       {
         "comments": [
@@ -321,6 +481,10 @@
         ],
         "iri": "orion:AccessControl",
         "label": "AccessControl"
+      },
+      {
+        "iri": "orion:Account",
+        "label": "Account"
       },
       {
         "iri": "orion:AccountWithElevatedPermission",
@@ -332,6 +496,13 @@
         ],
         "iri": "orion:Accountability",
         "label": "Accountability"
+      },
+      {
+        "comments": [
+          "Accountability is the ability to trace actions to a specific identity."
+        ],
+        "iri": "orion:Action",
+        "label": "Action"
       },
       {
         "comments": [
@@ -390,6 +561,14 @@
         ],
         "iri": "orion:Identification",
         "label": "Identification"
+      },
+      {
+        "iri": "orion:Identity",
+        "label": "Identity"
+      },
+      {
+        "iri": "orion:Information",
+        "label": "Information"
       },
       {
         "comments": [
@@ -555,12 +734,24 @@
         "iri": "orion:requires",
         "label": "Requires",
         "range": "orion:TransmissionControl"
+      },
+      {
+        "domain": "orion:Ability",
+        "iri": "orion:traces",
+        "label": "Traces",
+        "range": "orion:Action"
+      },
+      {
+        "domain": "orion:Action",
+        "iri": "orion:tracesTo",
+        "label": "tracesTo",
+        "range": "orion:Identity"
       }
     ]
   },
   "subclass_facts": [
     {
-      "object": "orion:AbilityToTraceActionToASpecificIdentity",
+      "object": "orion:Ability",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:Accountability"
     },
@@ -595,7 +786,7 @@
       "subject": "orion:Identification"
     },
     {
-      "object": "orion:PublicInformation",
+      "object": "orion:Information",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:InternalInformation"
     },
@@ -610,6 +801,11 @@
       "subject": "orion:PrivilegedAccount"
     },
     {
+      "object": "orion:Information",
+      "predicate": "rdfs:subClassOf",
+      "subject": "orion:PublicInformation"
+    },
+    {
       "object": "orion:HighlySensitiveInformation",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:RestrictedInformation"
@@ -620,7 +816,7 @@
       "subject": "orion:ServiceAccount"
     },
     {
-      "object": "orion:UserAccount",
+      "object": "orion:Account",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:SharedAccount"
     }

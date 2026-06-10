@@ -1,28 +1,9 @@
 from __future__ import annotations
 
-from typing import Any, Protocol
-
-from pipeline.step_001_input_intake import OrionError
+from typing import Any
 
 from .namespace import validate_and_resolve_prefixes, validate_base_iri
-from .owl_strategy import OwlOutputStrategy
-from .rdf_strategy import RdfOutputStrategy
-
-_BR_OUTPUT_STRATEGY_RDF = 'rdf'
-_BR_OUTPUT_STRATEGY_OWL = 'owl'
-
-
-class OutputStrategy(Protocol):
-    def generate(self, payload: dict[str, Any]) -> dict[str, Any]:
-        ...
-
-
-def _resolve_strategy(strategy_name: str, base_iri: str, prefixes: dict[str, str]) -> OutputStrategy:
-    if strategy_name == _BR_OUTPUT_STRATEGY_RDF:
-        return RdfOutputStrategy(base_iri=base_iri, prefixes=prefixes)
-    if strategy_name == _BR_OUTPUT_STRATEGY_OWL:
-        return OwlOutputStrategy(base_iri=base_iri, prefixes=prefixes)
-    raise OrionError('ORION config error: output_strategy must be one of: rdf, owl')
+from .rules import resolve_strategy
 
 
 def generate_output_from_payload(
@@ -33,4 +14,4 @@ def generate_output_from_payload(
 ) -> dict[str, Any]:
     resolved_base_iri = validate_base_iri(base_iri)
     resolved_prefixes = validate_and_resolve_prefixes(resolved_base_iri, prefixes)
-    return _resolve_strategy(output_strategy, resolved_base_iri, resolved_prefixes).generate(input_payload)
+    return resolve_strategy(output_strategy, resolved_base_iri, resolved_prefixes).generate(input_payload)

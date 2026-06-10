@@ -30,12 +30,26 @@
       "label": "BusinessContinuity"
     },
     {
-      "iri": "orion:CapabilityToContinueCriticalOperationDuringDisruption",
-      "label": "CapabilityToContinueCriticalOperationDuringDisruption"
+      "comments": [
+        "Business continuity is the capability to continue critical operations during disruption."
+      ],
+      "iri": "orion:Capability",
+      "label": "Capability"
+    },
+    {
+      "comments": [
+        "Business continuity is the capability to continue critical operations during disruption."
+      ],
+      "iri": "orion:CapabilityToContinueCriticalOperation",
+      "label": "CapabilityToContinueCriticalOperation"
     },
     {
       "iri": "orion:CopyOfData",
       "label": "CopyOfData"
+    },
+    {
+      "iri": "orion:CriticalOperationDuringDisruption",
+      "label": "CriticalOperationDuringDisruption"
     },
     {
       "comments": [
@@ -68,6 +82,14 @@
     {
       "iri": "orion:DisclosureOfData",
       "label": "DisclosureOfData"
+    },
+    {
+      "iri": "orion:Disruption",
+      "label": "Disruption"
+    },
+    {
+      "iri": "orion:DisruptiveEvent",
+      "label": "DisruptiveEvent"
     },
     {
       "comments": [
@@ -112,6 +134,13 @@
     {
       "iri": "orion:PhysicalAndInformationSecurityIncident",
       "label": "PhysicalAndInformationSecurityIncident"
+    },
+    {
+      "comments": [
+        "Disaster recovery is the process of restoring technology services after a disruptive event."
+      ],
+      "iri": "orion:ProcessOfRestoringTechnologyService",
+      "label": "ProcessOfRestoringTechnologyService"
     },
     {
       "iri": "orion:ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
@@ -182,9 +211,109 @@
       "label": "WhetherRecoveryProcedureWorkAsExpected"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:UnauthorizedAccessTo",
+      "predicate": "orion:involves",
+      "source_evidence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+      "subject": "orion:DataBreach"
+    },
+    {
+      "object": "orion:DisclosureOfData",
+      "predicate": "orion:involves",
+      "source_evidence": "A data breach is a type of security incident that involves unauthorized access to or disclosure of data.",
+      "subject": "orion:DataBreach"
+    },
+    {
+      "object": "orion:CriticalOperationDuringDisruption",
+      "predicate": "orion:continues",
+      "source_evidence": "Business continuity is the capability to continue critical operations during disruption.",
+      "subject": "orion:Capability"
+    },
+    {
+      "object": "orion:MaximumAcceptableTimeToRestoreAService",
+      "predicate": "orion:defines",
+      "source_evidence": "A recovery time objective defines the maximum acceptable time to restore a service.",
+      "subject": "orion:RecoveryTimeObjective"
+    },
+    {
+      "object": "orion:MaximumAcceptableAmountOfDataLossMeasuredInTime",
+      "predicate": "orion:defines",
+      "source_evidence": "A recovery point objective defines the maximum acceptable amount of data loss measured in time.",
+      "subject": "orion:RecoveryPointObjective"
+    },
+    {
+      "object": "orion:BackupFrequency",
+      "predicate": "orion:defines",
+      "source_evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+      "subject": "orion:BackupPolicy"
+    },
+    {
+      "object": "orion:Retention",
+      "predicate": "orion:defines",
+      "source_evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+      "subject": "orion:BackupPolicy"
+    },
+    {
+      "object": "orion:Protection",
+      "predicate": "orion:defines",
+      "source_evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+      "subject": "orion:BackupPolicy"
+    },
+    {
+      "object": "orion:RestorationRequirement",
+      "predicate": "orion:defines",
+      "source_evidence": "A backup policy defines backup frequency, retention, protection, and restoration requirements.",
+      "subject": "orion:BackupPolicy"
+    },
+    {
+      "object": "orion:WhetherRecoveryProcedureWorkAsExpected",
+      "predicate": "orion:verifies",
+      "source_evidence": "A disaster recovery test verifies whether recovery procedures work as expected.",
+      "subject": "orion:DisasterRecoveryTest"
+    },
+    {
+      "object": "orion:CapabilityToContinueCriticalOperation",
+      "predicate": "orion:is",
+      "source_evidence": "Business continuity is the capability to continue critical operations during disruption.",
+      "subject": "orion:BusinessContinuity"
+    },
+    {
+      "object": "orion:Disruption",
+      "predicate": "orion:appliesDuring",
+      "source_evidence": "Business continuity is the capability to continue critical operations during disruption.",
+      "subject": "orion:CapabilityToContinueCriticalOperation"
+    },
+    {
+      "object": "orion:ProcessOfRestoringTechnologyService",
+      "predicate": "orion:is",
+      "source_evidence": "Disaster recovery is the process of restoring technology services after a disruptive event.",
+      "subject": "orion:DisasterRecovery"
+    },
+    {
+      "object": "orion:DisruptiveEvent",
+      "predicate": "orion:appliesAfter",
+      "source_evidence": "Disaster recovery is the process of restoring technology services after a disruptive event.",
+      "subject": "orion:ProcessOfRestoringTechnologyService"
+    }
+  ],
   "instance_facts": [],
-  "object_property_schema": [
+  "object_property_facts": [
+    {
+      "domain": "orion:ProcessOfRestoringTechnologyService",
+      "predicate": "orion:appliesAfter",
+      "range": "orion:DisruptiveEvent"
+    },
+    {
+      "domain": "orion:CapabilityToContinueCriticalOperation",
+      "predicate": "orion:appliesDuring",
+      "range": "orion:Disruption"
+    },
+    {
+      "domain": "orion:Capability",
+      "predicate": "orion:continues",
+      "range": "orion:CriticalOperationDuringDisruption"
+    },
     {
       "domain": "orion:BackupPolicy",
       "predicate": "orion:defines",
@@ -224,6 +353,88 @@
       "domain": "orion:DataBreach",
       "predicate": "orion:involves",
       "range": "orion:UnauthorizedAccessTo"
+    },
+    {
+      "domain": "orion:BusinessContinuity",
+      "predicate": "orion:is",
+      "range": "orion:CapabilityToContinueCriticalOperation"
+    },
+    {
+      "domain": "orion:DisasterRecovery",
+      "predicate": "orion:is",
+      "range": "orion:ProcessOfRestoringTechnologyService"
+    },
+    {
+      "domain": "orion:DisasterRecoveryTest",
+      "predicate": "orion:verifies",
+      "range": "orion:WhetherRecoveryProcedureWorkAsExpected"
+    }
+  ],
+  "object_property_schema": [
+    {
+      "domain": "orion:ProcessOfRestoringTechnologyService",
+      "predicate": "orion:appliesAfter",
+      "range": "orion:DisruptiveEvent"
+    },
+    {
+      "domain": "orion:CapabilityToContinueCriticalOperation",
+      "predicate": "orion:appliesDuring",
+      "range": "orion:Disruption"
+    },
+    {
+      "domain": "orion:Capability",
+      "predicate": "orion:continues",
+      "range": "orion:CriticalOperationDuringDisruption"
+    },
+    {
+      "domain": "orion:BackupPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:BackupFrequency"
+    },
+    {
+      "domain": "orion:BackupPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:Protection"
+    },
+    {
+      "domain": "orion:BackupPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:RestorationRequirement"
+    },
+    {
+      "domain": "orion:BackupPolicy",
+      "predicate": "orion:defines",
+      "range": "orion:Retention"
+    },
+    {
+      "domain": "orion:RecoveryPointObjective",
+      "predicate": "orion:defines",
+      "range": "orion:MaximumAcceptableAmountOfDataLossMeasuredInTime"
+    },
+    {
+      "domain": "orion:RecoveryTimeObjective",
+      "predicate": "orion:defines",
+      "range": "orion:MaximumAcceptableTimeToRestoreAService"
+    },
+    {
+      "domain": "orion:DataBreach",
+      "predicate": "orion:involves",
+      "range": "orion:DisclosureOfData"
+    },
+    {
+      "domain": "orion:DataBreach",
+      "predicate": "orion:involves",
+      "range": "orion:UnauthorizedAccessTo"
+    },
+    {
+      "domain": "orion:BusinessContinuity",
+      "predicate": "orion:is",
+      "range": "orion:CapabilityToContinueCriticalOperation"
+    },
+    {
+      "domain": "orion:DisasterRecovery",
+      "predicate": "orion:is",
+      "range": "orion:ProcessOfRestoringTechnologyService"
     },
     {
       "domain": "orion:DisasterRecoveryTest",
@@ -233,33 +444,53 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-1e078d37c66d2446",
-      "claim-ceafbb3a13fd6cdc",
-      "claim-a74e9424b5525a3a",
-      "claim-337ff004579e1f1e",
-      "claim-fe4c8326d45ba65d",
-      "claim-e08f74f2d3d96181",
-      "claim-7e716a005f6d3fec",
-      "claim-5b83c3ce7c173e4e",
-      "claim-671653be9e2e0712",
-      "claim-447147ad8f886f2e",
-      "claim-63c519a2a1256df6",
-      "claim-018948388c28bcff",
-      "claim-ec8b20e48d9d231b",
-      "claim-5c0af1d8ad2fbc62",
-      "claim-2f68344b381379bb",
-      "claim-7b007cbcdb905966",
-      "claim-08cbe9b6aca86549",
-      "claim-e318adee620dfcd1",
-      "claim-d238422f16a98cd0",
-      "claim-e6667434319487fb",
-      "claim-f9eafb254dc473a4",
-      "claim-9c7dc557333d61f2",
-      "claim-3dc85c2405360e0d"
+      "claim-77c546f85c9ca837",
+      "claim-a87c2aac2a3208da",
+      "claim-953b39773e4b621b",
+      "claim-25137467a9b1f58b",
+      "claim-926729c7975082bb",
+      "claim-64c7f09dc6365557",
+      "claim-55f11859b42d84e8",
+      "claim-3a355c35596aaab2",
+      "claim-cabee5b68ef0e8b7",
+      "claim-d10673f3e57a1dce",
+      "claim-d3df29881966b142",
+      "claim-ac2c0ec6357af13f",
+      "claim-a916a45d2d831d27",
+      "claim-4992308c8c207444",
+      "claim-6cf8ea5cfd464eeb",
+      "claim-dcae68f077b2f0ef",
+      "claim-3370f19170b1288d",
+      "claim-edfc6b174e0405aa",
+      "claim-9154209c9272241b",
+      "claim-017ed9cea8eab167",
+      "claim-fd86ba282e585845",
+      "claim-45b7b9bc4c5a50b6",
+      "claim-003ca7446531f147",
+      "claim-567681bcb5877172",
+      "claim-0f5c518eef9cd7e5",
+      "claim-ad575a21e3c10640",
+      "claim-4218887c1d0824b2",
+      "claim-701b021e5eee1730"
     ],
     "source_stage": "semantic_claims"
   },
   "restrictions": [
+    {
+      "domain": "orion:ProcessOfRestoringTechnologyService",
+      "property": "orion:appliesAfter",
+      "range": "orion:DisruptiveEvent"
+    },
+    {
+      "domain": "orion:CapabilityToContinueCriticalOperation",
+      "property": "orion:appliesDuring",
+      "range": "orion:Disruption"
+    },
+    {
+      "domain": "orion:Capability",
+      "property": "orion:continues",
+      "range": "orion:CriticalOperationDuringDisruption"
+    },
     {
       "domain": "orion:BackupPolicy",
       "property": "orion:defines",
@@ -299,6 +530,16 @@
       "domain": "orion:DataBreach",
       "property": "orion:involves",
       "range": "orion:UnauthorizedAccessTo"
+    },
+    {
+      "domain": "orion:BusinessContinuity",
+      "property": "orion:is",
+      "range": "orion:CapabilityToContinueCriticalOperation"
+    },
+    {
+      "domain": "orion:DisasterRecovery",
+      "property": "orion:is",
+      "range": "orion:ProcessOfRestoringTechnologyService"
     },
     {
       "domain": "orion:DisasterRecoveryTest",
@@ -338,12 +579,26 @@
         "label": "BusinessContinuity"
       },
       {
-        "iri": "orion:CapabilityToContinueCriticalOperationDuringDisruption",
-        "label": "CapabilityToContinueCriticalOperationDuringDisruption"
+        "comments": [
+          "Business continuity is the capability to continue critical operations during disruption."
+        ],
+        "iri": "orion:Capability",
+        "label": "Capability"
+      },
+      {
+        "comments": [
+          "Business continuity is the capability to continue critical operations during disruption."
+        ],
+        "iri": "orion:CapabilityToContinueCriticalOperation",
+        "label": "CapabilityToContinueCriticalOperation"
       },
       {
         "iri": "orion:CopyOfData",
         "label": "CopyOfData"
+      },
+      {
+        "iri": "orion:CriticalOperationDuringDisruption",
+        "label": "CriticalOperationDuringDisruption"
       },
       {
         "comments": [
@@ -376,6 +631,14 @@
       {
         "iri": "orion:DisclosureOfData",
         "label": "DisclosureOfData"
+      },
+      {
+        "iri": "orion:Disruption",
+        "label": "Disruption"
+      },
+      {
+        "iri": "orion:DisruptiveEvent",
+        "label": "DisruptiveEvent"
       },
       {
         "comments": [
@@ -420,6 +683,13 @@
       {
         "iri": "orion:PhysicalAndInformationSecurityIncident",
         "label": "PhysicalAndInformationSecurityIncident"
+      },
+      {
+        "comments": [
+          "Disaster recovery is the process of restoring technology services after a disruptive event."
+        ],
+        "iri": "orion:ProcessOfRestoringTechnologyService",
+        "label": "ProcessOfRestoringTechnologyService"
       },
       {
         "iri": "orion:ProcessOfRestoringTechnologyServiceAfterADisruptiveEvent",
@@ -492,6 +762,24 @@
     ],
     "object_properties": [
       {
+        "domain": "orion:ProcessOfRestoringTechnologyService",
+        "iri": "orion:appliesAfter",
+        "label": "appliesAfter",
+        "range": "orion:DisruptiveEvent"
+      },
+      {
+        "domain": "orion:CapabilityToContinueCriticalOperation",
+        "iri": "orion:appliesDuring",
+        "label": "appliesDuring",
+        "range": "orion:Disruption"
+      },
+      {
+        "domain": "orion:Capability",
+        "iri": "orion:continues",
+        "label": "Continues",
+        "range": "orion:CriticalOperationDuringDisruption"
+      },
+      {
         "domain": "orion:BackupPolicy",
         "iri": "orion:defines",
         "label": "Defines",
@@ -540,6 +828,18 @@
         "range": "orion:UnauthorizedAccessTo"
       },
       {
+        "domain": "orion:BusinessContinuity",
+        "iri": "orion:is",
+        "label": "Is",
+        "range": "orion:CapabilityToContinueCriticalOperation"
+      },
+      {
+        "domain": "orion:DisasterRecovery",
+        "iri": "orion:is",
+        "label": "Is",
+        "range": "orion:ProcessOfRestoringTechnologyService"
+      },
+      {
         "domain": "orion:DisasterRecoveryTest",
         "iri": "orion:verifies",
         "label": "Verifies",
@@ -554,7 +854,7 @@
       "subject": "orion:Backup"
     },
     {
-      "object": "orion:CapabilityToContinueCriticalOperationDuringDisruption",
+      "object": "orion:Capability",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:BusinessContinuity"
     },

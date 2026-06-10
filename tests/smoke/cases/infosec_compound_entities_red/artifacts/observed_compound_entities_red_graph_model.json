@@ -1,0 +1,276 @@
+{
+  "classes": [
+    {
+      "iri": "orion:AccessDecision",
+      "label": "AccessDecision"
+    },
+    {
+      "iri": "orion:BadgeApproval",
+      "label": "BadgeApproval"
+    },
+    {
+      "iri": "orion:CryptographicKey",
+      "label": "CryptographicKey"
+    },
+    {
+      "comments": [
+        "Identity and access management governs access decisions."
+      ],
+      "iri": "orion:IdentityAndAccessManagement",
+      "label": "IdentityAndAccessManagement"
+    },
+    {
+      "comments": [
+        "A key management service stores a cryptographic key."
+      ],
+      "iri": "orion:KeyManagementService",
+      "label": "KeyManagementService"
+    },
+    {
+      "iri": "orion:MaximumTolerableDataLoss",
+      "label": "MaximumTolerableDataLoss"
+    },
+    {
+      "comments": [
+        "Physical access requires badge approval."
+      ],
+      "iri": "orion:PhysicalAccess",
+      "label": "PhysicalAccess"
+    },
+    {
+      "comments": [
+        "A recovery point objective defines maximum tolerable data loss."
+      ],
+      "iri": "orion:RecoveryPointObjective",
+      "label": "RecoveryPointObjective"
+    },
+    {
+      "iri": "orion:SecurityIncident",
+      "label": "SecurityIncident"
+    },
+    {
+      "comments": [
+        "Unauthorized access triggers a security incident."
+      ],
+      "iri": "orion:UnauthorizedAccess",
+      "label": "UnauthorizedAccess"
+    }
+  ],
+  "facts": [
+    {
+      "object": "orion:AccessDecision",
+      "predicate": "orion:governs",
+      "source_evidence": "Identity and access management governs access decisions.",
+      "subject": "orion:IdentityAndAccessManagement"
+    },
+    {
+      "object": "orion:BadgeApproval",
+      "predicate": "orion:requires",
+      "source_evidence": "Physical access requires badge approval.",
+      "subject": "orion:PhysicalAccess"
+    },
+    {
+      "object": "orion:SecurityIncident",
+      "predicate": "orion:triggers",
+      "source_evidence": "Unauthorized access triggers a security incident.",
+      "subject": "orion:UnauthorizedAccess"
+    },
+    {
+      "object": "orion:MaximumTolerableDataLoss",
+      "predicate": "orion:defines",
+      "source_evidence": "A recovery point objective defines maximum tolerable data loss.",
+      "subject": "orion:RecoveryPointObjective"
+    },
+    {
+      "object": "orion:CryptographicKey",
+      "predicate": "orion:stores",
+      "source_evidence": "A key management service stores a cryptographic key.",
+      "subject": "orion:KeyManagementService"
+    }
+  ],
+  "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:RecoveryPointObjective",
+      "predicate": "orion:defines",
+      "range": "orion:MaximumTolerableDataLoss"
+    },
+    {
+      "domain": "orion:IdentityAndAccessManagement",
+      "predicate": "orion:governs",
+      "range": "orion:AccessDecision"
+    },
+    {
+      "domain": "orion:PhysicalAccess",
+      "predicate": "orion:requires",
+      "range": "orion:BadgeApproval"
+    },
+    {
+      "domain": "orion:KeyManagementService",
+      "predicate": "orion:stores",
+      "range": "orion:CryptographicKey"
+    },
+    {
+      "domain": "orion:UnauthorizedAccess",
+      "predicate": "orion:triggers",
+      "range": "orion:SecurityIncident"
+    }
+  ],
+  "object_property_schema": [
+    {
+      "domain": "orion:RecoveryPointObjective",
+      "predicate": "orion:defines",
+      "range": "orion:MaximumTolerableDataLoss"
+    },
+    {
+      "domain": "orion:IdentityAndAccessManagement",
+      "predicate": "orion:governs",
+      "range": "orion:AccessDecision"
+    },
+    {
+      "domain": "orion:PhysicalAccess",
+      "predicate": "orion:requires",
+      "range": "orion:BadgeApproval"
+    },
+    {
+      "domain": "orion:KeyManagementService",
+      "predicate": "orion:stores",
+      "range": "orion:CryptographicKey"
+    },
+    {
+      "domain": "orion:UnauthorizedAccess",
+      "predicate": "orion:triggers",
+      "range": "orion:SecurityIncident"
+    }
+  ],
+  "projection": {
+    "claim_ids": [
+      "claim-cfb20ce51284e5b9",
+      "claim-8337596e2676f86f",
+      "claim-27cf8ef6b44114cf",
+      "claim-dfe8e8923c3c14dd",
+      "claim-b75a19df8a88c04b"
+    ],
+    "source_stage": "semantic_claims"
+  },
+  "restrictions": [
+    {
+      "domain": "orion:RecoveryPointObjective",
+      "property": "orion:defines",
+      "range": "orion:MaximumTolerableDataLoss"
+    },
+    {
+      "domain": "orion:IdentityAndAccessManagement",
+      "property": "orion:governs",
+      "range": "orion:AccessDecision"
+    },
+    {
+      "domain": "orion:PhysicalAccess",
+      "property": "orion:requires",
+      "range": "orion:BadgeApproval"
+    },
+    {
+      "domain": "orion:KeyManagementService",
+      "property": "orion:stores",
+      "range": "orion:CryptographicKey"
+    },
+    {
+      "domain": "orion:UnauthorizedAccess",
+      "property": "orion:triggers",
+      "range": "orion:SecurityIncident"
+    }
+  ],
+  "schema": {
+    "classes": [
+      {
+        "iri": "orion:AccessDecision",
+        "label": "AccessDecision"
+      },
+      {
+        "iri": "orion:BadgeApproval",
+        "label": "BadgeApproval"
+      },
+      {
+        "iri": "orion:CryptographicKey",
+        "label": "CryptographicKey"
+      },
+      {
+        "comments": [
+          "Identity and access management governs access decisions."
+        ],
+        "iri": "orion:IdentityAndAccessManagement",
+        "label": "IdentityAndAccessManagement"
+      },
+      {
+        "comments": [
+          "A key management service stores a cryptographic key."
+        ],
+        "iri": "orion:KeyManagementService",
+        "label": "KeyManagementService"
+      },
+      {
+        "iri": "orion:MaximumTolerableDataLoss",
+        "label": "MaximumTolerableDataLoss"
+      },
+      {
+        "comments": [
+          "Physical access requires badge approval."
+        ],
+        "iri": "orion:PhysicalAccess",
+        "label": "PhysicalAccess"
+      },
+      {
+        "comments": [
+          "A recovery point objective defines maximum tolerable data loss."
+        ],
+        "iri": "orion:RecoveryPointObjective",
+        "label": "RecoveryPointObjective"
+      },
+      {
+        "iri": "orion:SecurityIncident",
+        "label": "SecurityIncident"
+      },
+      {
+        "comments": [
+          "Unauthorized access triggers a security incident."
+        ],
+        "iri": "orion:UnauthorizedAccess",
+        "label": "UnauthorizedAccess"
+      }
+    ],
+    "object_properties": [
+      {
+        "domain": "orion:RecoveryPointObjective",
+        "iri": "orion:defines",
+        "label": "Defines",
+        "range": "orion:MaximumTolerableDataLoss"
+      },
+      {
+        "domain": "orion:IdentityAndAccessManagement",
+        "iri": "orion:governs",
+        "label": "Governs",
+        "range": "orion:AccessDecision"
+      },
+      {
+        "domain": "orion:PhysicalAccess",
+        "iri": "orion:requires",
+        "label": "Requires",
+        "range": "orion:BadgeApproval"
+      },
+      {
+        "domain": "orion:KeyManagementService",
+        "iri": "orion:stores",
+        "label": "Stores",
+        "range": "orion:CryptographicKey"
+      },
+      {
+        "domain": "orion:UnauthorizedAccess",
+        "iri": "orion:triggers",
+        "label": "Triggers",
+        "range": "orion:SecurityIncident"
+      }
+    ]
+  },
+  "subclass_facts": [],
+  "type_assertions": []
+}

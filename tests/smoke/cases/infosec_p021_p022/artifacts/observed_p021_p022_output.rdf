@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/analysis">
+    <orion:determines rdf:resource="https://orion.local/resource/scope"/>
+    <orion:determines rdf:resource="https://orion.local/resource/cause"/>
+    <orion:determines rdf:resource="https://orion.local/resource/impactofanincident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/condition">
+    <orion:generates rdf:resource="https://orion.local/resource/alert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/containment">
+    <orion:limits rdf:resource="https://orion.local/resource/spread"/>
+    <orion:limits rdf:resource="https://orion.local/resource/damageofanincident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/dashboard">
+    <orion:presents rdf:resource="https://orion.local/resource/securitymetric"/>
+    <orion:presents rdf:resource="https://orion.local/resource/operationalstatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/detection">
+    <orion:identifies rdf:resource="https://orion.local/resource/potentialincident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/detectionrule">
+    <orion:defines rdf:resource="https://orion.local/resource/condition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/eradication">
+    <orion:removes rdf:resource="https://orion.local/resource/rootcauseofanincident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/incidentresponseplan">
+    <orion:defines rdf:resource="https://orion.local/resource/process"/>
+    <orion:handls rdf:resource="https://orion.local/resource/incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/logcollection">
+    <orion:gathers rdf:resource="https://orion.local/resource/recordfromsystem"/>
+    <orion:gathers rdf:resource="https://orion.local/resource/application"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/logcorrelation">
+    <orion:identifies rdf:resource="https://orion.local/resource/relationshipbetweenevent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/lognormalization">
+    <orion:converts rdf:resource="https://orion.local/resource/differentlogformatintoacommonstructure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/logretentionpolicy">
+    <orion:defines rdf:resource="https://orion.local/resource/howlonglogmustbestored"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/postincidentreview">
+    <orion:identifies rdf:resource="https://orion.local/resource/lessonlearned"/>
+    <orion:identifies rdf:resource="https://orion.local/resource/improvementaction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/preparation">
+    <orion:establishes rdf:resource="https://orion.local/resource/incidentresponseplan"/>
+    <orion:establishes rdf:resource="https://orion.local/resource/tool"/>
+    <orion:establishes rdf:resource="https://orion.local/resource/role"/>
+    <orion:establishes rdf:resource="https://orion.local/resource/communicationchannel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/recovery">
+    <orion:restores rdf:resource="https://orion.local/resource/system"/>
+    <orion:services rdf:resource="https://orion.local/resource/normaloperation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/scenario">
+    <orion:monitors rdf:resource="https://orion.local/resource/shoulddetect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityanalyst">
+    <orion:investigates rdf:resource="https://orion.local/resource/alertproducedbythemonitoringsystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityinformationandeventmanagementsystemcollectnormalizcorrelateand">
+    <orion:analyzes rdf:resource="https://orion.local/resource/securitylog"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/usecase">
+    <orion:describes rdf:resource="https://orion.local/resource/scenario"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/alert">
     <rdfs:label>Alert</rdfs:label>
   </owl:Class>
@@ -22,6 +90,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/condition">
     <rdfs:label>Condition</rdfs:label>
+    <rdfs:label>Condition roles subject object</rdfs:label>
     <rdfs:comment>A detection rule defines conditions that generate an alert.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/containment">
@@ -72,6 +141,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/incidentresponseplan">
     <rdfs:label>IncidentResponsePlan</rdfs:label>
+    <rdfs:label>IncidentResponsePlan roles subject object</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://orion.local/resource/document"/>
     <rdfs:comment>An incident response plan is a document that defines the process for handling incidents.</rdfs:comment>
   </owl:Class>
@@ -93,6 +163,9 @@
   <owl:Class rdf:about="https://orion.local/resource/logretentionpolicy">
     <rdfs:label>LogRetentionPolicy</rdfs:label>
     <rdfs:comment>A log retention policy defines how long logs must be stored.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/normaloperation">
+    <rdfs:label>NormalOperation</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/operationalstatus">
     <rdfs:label>OperationalStatus</rdfs:label>
@@ -132,6 +205,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/scenario">
     <rdfs:label>Scenario</rdfs:label>
+    <rdfs:label>Scenario roles subject object</rdfs:label>
     <rdfs:comment>A use case describes a scenario that monitoring should detect.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/scope">
@@ -159,9 +233,6 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/system">
     <rdfs:label>System</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/tonormaloperation">
-    <rdfs:label>ToNormalOperation</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/tool">
     <rdfs:label>Tool</rdfs:label>
@@ -318,7 +389,7 @@
   <owl:ObjectProperty rdf:about="https://orion.local/resource/services">
     <rdfs:label>Services</rdfs:label>
     <rdfs:domain rdf:resource="https://orion.local/resource/recovery"/>
-    <rdfs:range rdf:resource="https://orion.local/resource/tonormaloperation"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/normaloperation"/>
   </owl:ObjectProperty>
   <rdf:Description rdf:about="https://orion.local/resource/alert">
     <rdfs:label>Alert</rdfs:label>
@@ -340,6 +411,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/condition">
     <rdfs:label>Condition</rdfs:label>
+    <rdfs:label>Condition roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/containment">
     <rdfs:label>Containment</rdfs:label>
@@ -382,6 +454,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/incidentresponseplan">
     <rdfs:label>IncidentResponsePlan</rdfs:label>
+    <rdfs:label>IncidentResponsePlan roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/lessonlearned">
     <rdfs:label>LessonLearned</rdfs:label>
@@ -397,6 +470,9 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/logretentionpolicy">
     <rdfs:label>LogRetentionPolicy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/normaloperation">
+    <rdfs:label>NormalOperation</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/operationalstatus">
     <rdfs:label>OperationalStatus</rdfs:label>
@@ -433,6 +509,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/scenario">
     <rdfs:label>Scenario</rdfs:label>
+    <rdfs:label>Scenario roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/scope">
     <rdfs:label>Scope</rdfs:label>
@@ -457,9 +534,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/system">
     <rdfs:label>System</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/tonormaloperation">
-    <rdfs:label>ToNormalOperation</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/tool">
     <rdfs:label>Tool</rdfs:label>

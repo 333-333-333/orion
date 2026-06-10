@@ -1,0 +1,1 @@
+Identity and access management governs access decisions. Physical access requires badge approval. Unauthorized access triggers a security incident. A recovery point objective defines maximum tolerable data loss. A key management service stores a cryptographic key.

@@ -5,10 +5,6 @@
       "label": "AccessWhenEmploymentEnd"
     },
     {
-      "iri": "orion:AfterEmployment",
-      "label": "AfterEmployment"
-    },
-    {
       "comments": [
         "Awareness campaigns reinforce secure behavior."
       ],
@@ -23,8 +19,11 @@
       "label": "BackgroundCheck"
     },
     {
-      "iri": "orion:CandidateBeforeEmployment",
-      "label": "CandidateBeforeEmployment"
+      "comments": [
+        "A background check evaluates a candidate before employment."
+      ],
+      "iri": "orion:Candidate",
+      "label": "Candidate"
     },
     {
       "comments": [
@@ -56,8 +55,8 @@
       "label": "DisposeOfInformationSafely"
     },
     {
-      "iri": "orion:During",
-      "label": "During"
+      "iri": "orion:Employment",
+      "label": "Employment"
     },
     {
       "iri": "orion:ExpectedBehavior",
@@ -135,8 +134,11 @@
       "label": "Security"
     },
     {
-      "iri": "orion:SecurityResponsibilityBefore",
-      "label": "SecurityResponsibilityBefore"
+      "comments": [
+        "Human resource security addresses security responsibilities before, during, and after employment."
+      ],
+      "iri": "orion:SecurityResponsibility",
+      "label": "SecurityResponsibility"
     },
     {
       "comments": [
@@ -207,23 +209,196 @@
       "label": "Transmit"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:ObligationRelatedToSensitiveInformation",
+      "predicate": "orion:defines",
+      "source_evidence": "A confidentiality agreement defines obligations related to sensitive information.",
+      "subject": "orion:ConfidentialityAgreement"
+    },
+    {
+      "object": "orion:TrainingEducateUserAboutPolicy",
+      "predicate": "orion:awareness",
+      "source_evidence": "Security awareness training educates users about policies, threats, and expected behavior.",
+      "subject": "orion:Security"
+    },
+    {
+      "object": "orion:Threat",
+      "predicate": "orion:awareness",
+      "source_evidence": "Security awareness training educates users about policies, threats, and expected behavior.",
+      "subject": "orion:Security"
+    },
+    {
+      "object": "orion:ExpectedBehavior",
+      "predicate": "orion:awareness",
+      "source_evidence": "Security awareness training educates users about policies, threats, and expected behavior.",
+      "subject": "orion:Security"
+    },
+    {
+      "object": "orion:SpecializedSecurityKnowledgeForSpecificResponsibility",
+      "predicate": "orion:provides",
+      "source_evidence": "Role-based training provides specialized security knowledge for specific responsibilities.",
+      "subject": "orion:RoleBasedTraining"
+    },
+    {
+      "object": "orion:DefineConsequenceForPolicyViolation",
+      "predicate": "orion:process",
+      "source_evidence": "Disciplinary process defines consequences for policy violations.",
+      "subject": "orion:Disciplinary"
+    },
+    {
+      "object": "orion:AccessWhenEmploymentEnd",
+      "predicate": "orion:removes",
+      "source_evidence": "Termination procedure removes access when employment ends.",
+      "subject": "orion:TerminationProcedure"
+    },
+    {
+      "object": "orion:ReduceHumanRelatedSecurityRisk",
+      "predicate": "orion:awareness",
+      "source_evidence": "Security awareness reduces human-related security risks.",
+      "subject": "orion:Security"
+    },
+    {
+      "object": "orion:TeachUserToIdentifySuspiciousMessage",
+      "predicate": "orion:awareness",
+      "source_evidence": "Phishing awareness teaches users to identify suspicious messages.",
+      "subject": "orion:Phishing"
+    },
+    {
+      "object": "orion:TeachUserToCreate",
+      "predicate": "orion:awareness",
+      "source_evidence": "Password awareness teaches users to create and protect strong passwords.",
+      "subject": "orion:Password"
+    },
+    {
+      "object": "orion:ProtectStrongPassword",
+      "predicate": "orion:awareness",
+      "source_evidence": "Password awareness teaches users to create and protect strong passwords.",
+      "subject": "orion:Password"
+    },
+    {
+      "object": "orion:TeachUserToClassify",
+      "predicate": "orion:awareness",
+      "source_evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+      "subject": "orion:DataHandling"
+    },
+    {
+      "object": "orion:Store",
+      "predicate": "orion:awareness",
+      "source_evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+      "subject": "orion:DataHandling"
+    },
+    {
+      "object": "orion:Transmit",
+      "predicate": "orion:awareness",
+      "source_evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+      "subject": "orion:DataHandling"
+    },
+    {
+      "object": "orion:DisposeOfInformationSafely",
+      "predicate": "orion:awareness",
+      "source_evidence": "Data handling awareness teaches users to classify, store, transmit, and dispose of information safely.",
+      "subject": "orion:DataHandling"
+    },
+    {
+      "object": "orion:TeachUserToProtectDevice",
+      "predicate": "orion:awareness",
+      "source_evidence": "Remote work awareness teaches users to protect devices and networks outside the office.",
+      "subject": "orion:RemoteWork"
+    },
+    {
+      "object": "orion:OutsideTheOffice",
+      "predicate": "orion:networks",
+      "source_evidence": "Remote work awareness teaches users to protect devices and networks outside the office.",
+      "subject": "orion:RemoteWork"
+    },
+    {
+      "object": "orion:TeachUserToRecognizeManipulationAttempt",
+      "predicate": "orion:awareness",
+      "source_evidence": "Social engineering awareness teaches users to recognize manipulation attempts.",
+      "subject": "orion:SocialEngineering"
+    },
+    {
+      "object": "orion:ReinforceSecureBehavior",
+      "predicate": "orion:campaigns",
+      "source_evidence": "Awareness campaigns reinforce secure behavior.",
+      "subject": "orion:Awareness"
+    },
+    {
+      "object": "orion:MeasureUserParticipation",
+      "predicate": "orion:metrics",
+      "source_evidence": "Training completion metrics measure user participation.",
+      "subject": "orion:TrainingCompletion"
+    },
+    {
+      "object": "orion:MeasureUserResponseToPhishingScenario",
+      "predicate": "orion:exercises",
+      "source_evidence": "Simulated phishing exercises measure user response to phishing scenarios.",
+      "subject": "orion:SimulatedPhishing"
+    },
+    {
+      "object": "orion:SecurityResponsibility",
+      "predicate": "orion:addresses",
+      "source_evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "subject": "orion:HumanResourceSecurity"
+    },
+    {
+      "object": "orion:Employment",
+      "predicate": "orion:appliesBefore",
+      "source_evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "subject": "orion:SecurityResponsibility"
+    },
+    {
+      "object": "orion:Employment",
+      "predicate": "orion:appliesDuring",
+      "source_evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "subject": "orion:SecurityResponsibility"
+    },
+    {
+      "object": "orion:Employment",
+      "predicate": "orion:appliesAfter",
+      "source_evidence": "Human resource security addresses security responsibilities before, during, and after employment.",
+      "subject": "orion:SecurityResponsibility"
+    },
+    {
+      "object": "orion:Candidate",
+      "predicate": "orion:evaluates",
+      "source_evidence": "A background check evaluates a candidate before employment.",
+      "subject": "orion:BackgroundCheck"
+    },
+    {
+      "object": "orion:Employment",
+      "predicate": "orion:appliesBefore",
+      "source_evidence": "A background check evaluates a candidate before employment.",
+      "subject": "orion:Candidate"
+    }
+  ],
   "instance_facts": [],
-  "object_property_schema": [
+  "object_property_facts": [
     {
       "domain": "orion:HumanResourceSecurity",
       "predicate": "orion:addresses",
-      "range": "orion:AfterEmployment"
+      "range": "orion:SecurityResponsibility"
     },
     {
-      "domain": "orion:HumanResourceSecurity",
-      "predicate": "orion:addresses",
-      "range": "orion:During"
+      "domain": "orion:SecurityResponsibility",
+      "predicate": "orion:appliesAfter",
+      "range": "orion:Employment"
     },
     {
-      "domain": "orion:HumanResourceSecurity",
-      "predicate": "orion:addresses",
-      "range": "orion:SecurityResponsibilityBefore"
+      "domain": "orion:Candidate",
+      "predicate": "orion:appliesBefore",
+      "range": "orion:Employment"
+    },
+    {
+      "domain": "orion:SecurityResponsibility",
+      "predicate": "orion:appliesBefore",
+      "range": "orion:Employment"
+    },
+    {
+      "domain": "orion:SecurityResponsibility",
+      "predicate": "orion:appliesDuring",
+      "range": "orion:Employment"
     },
     {
       "domain": "orion:DataHandling",
@@ -303,7 +478,144 @@
     {
       "domain": "orion:BackgroundCheck",
       "predicate": "orion:evaluates",
-      "range": "orion:CandidateBeforeEmployment"
+      "range": "orion:Candidate"
+    },
+    {
+      "domain": "orion:SimulatedPhishing",
+      "predicate": "orion:exercises",
+      "range": "orion:MeasureUserResponseToPhishingScenario"
+    },
+    {
+      "domain": "orion:TrainingCompletion",
+      "predicate": "orion:metrics",
+      "range": "orion:MeasureUserParticipation"
+    },
+    {
+      "domain": "orion:RemoteWork",
+      "predicate": "orion:networks",
+      "range": "orion:OutsideTheOffice"
+    },
+    {
+      "domain": "orion:Disciplinary",
+      "predicate": "orion:process",
+      "range": "orion:DefineConsequenceForPolicyViolation"
+    },
+    {
+      "domain": "orion:RoleBasedTraining",
+      "predicate": "orion:provides",
+      "range": "orion:SpecializedSecurityKnowledgeForSpecificResponsibility"
+    },
+    {
+      "domain": "orion:TerminationProcedure",
+      "predicate": "orion:removes",
+      "range": "orion:AccessWhenEmploymentEnd"
+    }
+  ],
+  "object_property_schema": [
+    {
+      "domain": "orion:HumanResourceSecurity",
+      "predicate": "orion:addresses",
+      "range": "orion:SecurityResponsibility"
+    },
+    {
+      "domain": "orion:SecurityResponsibility",
+      "predicate": "orion:appliesAfter",
+      "range": "orion:Employment"
+    },
+    {
+      "domain": "orion:Candidate",
+      "predicate": "orion:appliesBefore",
+      "range": "orion:Employment"
+    },
+    {
+      "domain": "orion:SecurityResponsibility",
+      "predicate": "orion:appliesBefore",
+      "range": "orion:Employment"
+    },
+    {
+      "domain": "orion:SecurityResponsibility",
+      "predicate": "orion:appliesDuring",
+      "range": "orion:Employment"
+    },
+    {
+      "domain": "orion:DataHandling",
+      "predicate": "orion:awareness",
+      "range": "orion:DisposeOfInformationSafely"
+    },
+    {
+      "domain": "orion:DataHandling",
+      "predicate": "orion:awareness",
+      "range": "orion:Store"
+    },
+    {
+      "domain": "orion:DataHandling",
+      "predicate": "orion:awareness",
+      "range": "orion:TeachUserToClassify"
+    },
+    {
+      "domain": "orion:DataHandling",
+      "predicate": "orion:awareness",
+      "range": "orion:Transmit"
+    },
+    {
+      "domain": "orion:Password",
+      "predicate": "orion:awareness",
+      "range": "orion:ProtectStrongPassword"
+    },
+    {
+      "domain": "orion:Password",
+      "predicate": "orion:awareness",
+      "range": "orion:TeachUserToCreate"
+    },
+    {
+      "domain": "orion:Phishing",
+      "predicate": "orion:awareness",
+      "range": "orion:TeachUserToIdentifySuspiciousMessage"
+    },
+    {
+      "domain": "orion:RemoteWork",
+      "predicate": "orion:awareness",
+      "range": "orion:TeachUserToProtectDevice"
+    },
+    {
+      "domain": "orion:Security",
+      "predicate": "orion:awareness",
+      "range": "orion:ExpectedBehavior"
+    },
+    {
+      "domain": "orion:Security",
+      "predicate": "orion:awareness",
+      "range": "orion:ReduceHumanRelatedSecurityRisk"
+    },
+    {
+      "domain": "orion:Security",
+      "predicate": "orion:awareness",
+      "range": "orion:Threat"
+    },
+    {
+      "domain": "orion:Security",
+      "predicate": "orion:awareness",
+      "range": "orion:TrainingEducateUserAboutPolicy"
+    },
+    {
+      "domain": "orion:SocialEngineering",
+      "predicate": "orion:awareness",
+      "range": "orion:TeachUserToRecognizeManipulationAttempt"
+    },
+    {
+      "domain": "orion:Awareness",
+      "predicate": "orion:campaigns",
+      "range": "orion:ReinforceSecureBehavior"
+    },
+    {
+      "domain": "orion:ConfidentialityAgreement",
+      "predicate": "orion:defines",
+      "range": "orion:ObligationRelatedToSensitiveInformation"
+    },
+    {
+      "domain": "orion:BackgroundCheck",
+      "predicate": "orion:evaluates",
+      "range": "orion:Candidate"
     },
     {
       "domain": "orion:SimulatedPhishing",
@@ -338,31 +650,33 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-483627771e2c92a5",
-      "claim-a155ac5c976282cd",
-      "claim-47bea9f1103562db",
-      "claim-5e279d620990dff6",
-      "claim-d27a44ab14e6c9b4",
-      "claim-3fc30fa8d5063813",
-      "claim-b3e21d53c1396717",
-      "claim-ea907214247d3353",
-      "claim-ca4701d2290e5554",
-      "claim-d03d9b1d3a5090a9",
-      "claim-a3709bf3182afb8e",
-      "claim-e53ae98242cd92e6",
-      "claim-22e72a0e3b7e59c7",
-      "claim-b3219bd2941adfad",
-      "claim-c903b0cddd88d1f3",
-      "claim-2881699fba0e16d2",
-      "claim-1b476c6a668d1dc3",
-      "claim-22682e4bbb979382",
-      "claim-acfe89f99835ba15",
-      "claim-bead3b9a3c7d0d84",
-      "claim-eb4132d2b82bf40c",
-      "claim-02dc643285392c04",
-      "claim-7d952a98d15780f2",
-      "claim-eec21aa84a5b90d9",
-      "claim-df8221fdf5861567"
+      "claim-40eedeb61af76ba8",
+      "claim-381eed5369397df0",
+      "claim-28821157747bd6f9",
+      "claim-d7ff3a4631c8f744",
+      "claim-a554a7b8b7bd2ade",
+      "claim-aa968851b1dda4bd",
+      "claim-1c402cd7d7273e6c",
+      "claim-26c0f6da2eb9036a",
+      "claim-077a1182daacd3e0",
+      "claim-6262359925e303de",
+      "claim-822d5e130ecfef60",
+      "claim-bad436f7f8b5f5f5",
+      "claim-4d221cddb040acff",
+      "claim-19934f35925659fb",
+      "claim-8e3ba3d4885ff47b",
+      "claim-bca31e57f8637541",
+      "claim-e96e4b6a0681ee21",
+      "claim-d8390c053a5a4195",
+      "claim-cb1bb0b4006a86fb",
+      "claim-8f266399cb7c9d55",
+      "claim-0b3e1ad7b64fa136",
+      "claim-f178fb842e4a04c3",
+      "claim-a22340916d6b118b",
+      "claim-d14210d53e8d5a69",
+      "claim-3a697cd32b491dc1",
+      "claim-6eebf1e2755ad24b",
+      "claim-3919fad7bdde97a0"
     ],
     "source_stage": "semantic_claims"
   },
@@ -370,17 +684,27 @@
     {
       "domain": "orion:HumanResourceSecurity",
       "property": "orion:addresses",
-      "range": "orion:AfterEmployment"
+      "range": "orion:SecurityResponsibility"
     },
     {
-      "domain": "orion:HumanResourceSecurity",
-      "property": "orion:addresses",
-      "range": "orion:During"
+      "domain": "orion:SecurityResponsibility",
+      "property": "orion:appliesAfter",
+      "range": "orion:Employment"
     },
     {
-      "domain": "orion:HumanResourceSecurity",
-      "property": "orion:addresses",
-      "range": "orion:SecurityResponsibilityBefore"
+      "domain": "orion:Candidate",
+      "property": "orion:appliesBefore",
+      "range": "orion:Employment"
+    },
+    {
+      "domain": "orion:SecurityResponsibility",
+      "property": "orion:appliesBefore",
+      "range": "orion:Employment"
+    },
+    {
+      "domain": "orion:SecurityResponsibility",
+      "property": "orion:appliesDuring",
+      "range": "orion:Employment"
     },
     {
       "domain": "orion:DataHandling",
@@ -460,7 +784,7 @@
     {
       "domain": "orion:BackgroundCheck",
       "property": "orion:evaluates",
-      "range": "orion:CandidateBeforeEmployment"
+      "range": "orion:Candidate"
     },
     {
       "domain": "orion:SimulatedPhishing",
@@ -500,10 +824,6 @@
         "label": "AccessWhenEmploymentEnd"
       },
       {
-        "iri": "orion:AfterEmployment",
-        "label": "AfterEmployment"
-      },
-      {
         "comments": [
           "Awareness campaigns reinforce secure behavior."
         ],
@@ -518,8 +838,11 @@
         "label": "BackgroundCheck"
       },
       {
-        "iri": "orion:CandidateBeforeEmployment",
-        "label": "CandidateBeforeEmployment"
+        "comments": [
+          "A background check evaluates a candidate before employment."
+        ],
+        "iri": "orion:Candidate",
+        "label": "Candidate"
       },
       {
         "comments": [
@@ -551,8 +874,8 @@
         "label": "DisposeOfInformationSafely"
       },
       {
-        "iri": "orion:During",
-        "label": "During"
+        "iri": "orion:Employment",
+        "label": "Employment"
       },
       {
         "iri": "orion:ExpectedBehavior",
@@ -630,8 +953,11 @@
         "label": "Security"
       },
       {
-        "iri": "orion:SecurityResponsibilityBefore",
-        "label": "SecurityResponsibilityBefore"
+        "comments": [
+          "Human resource security addresses security responsibilities before, during, and after employment."
+        ],
+        "iri": "orion:SecurityResponsibility",
+        "label": "SecurityResponsibility"
       },
       {
         "comments": [
@@ -707,19 +1033,31 @@
         "domain": "orion:HumanResourceSecurity",
         "iri": "orion:addresses",
         "label": "Addresses",
-        "range": "orion:AfterEmployment"
+        "range": "orion:SecurityResponsibility"
       },
       {
-        "domain": "orion:HumanResourceSecurity",
-        "iri": "orion:addresses",
-        "label": "Addresses",
-        "range": "orion:During"
+        "domain": "orion:SecurityResponsibility",
+        "iri": "orion:appliesAfter",
+        "label": "appliesAfter",
+        "range": "orion:Employment"
       },
       {
-        "domain": "orion:HumanResourceSecurity",
-        "iri": "orion:addresses",
-        "label": "Addresses",
-        "range": "orion:SecurityResponsibilityBefore"
+        "domain": "orion:Candidate",
+        "iri": "orion:appliesBefore",
+        "label": "appliesBefore",
+        "range": "orion:Employment"
+      },
+      {
+        "domain": "orion:SecurityResponsibility",
+        "iri": "orion:appliesBefore",
+        "label": "appliesBefore",
+        "range": "orion:Employment"
+      },
+      {
+        "domain": "orion:SecurityResponsibility",
+        "iri": "orion:appliesDuring",
+        "label": "appliesDuring",
+        "range": "orion:Employment"
       },
       {
         "domain": "orion:DataHandling",
@@ -815,7 +1153,7 @@
         "domain": "orion:BackgroundCheck",
         "iri": "orion:evaluates",
         "label": "Evaluates",
-        "range": "orion:CandidateBeforeEmployment"
+        "range": "orion:Candidate"
       },
       {
         "domain": "orion:SimulatedPhishing",

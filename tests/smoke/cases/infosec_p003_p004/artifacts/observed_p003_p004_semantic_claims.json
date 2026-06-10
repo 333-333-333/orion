@@ -2,7 +2,7 @@
   "claim_count": 42,
   "claims": [
     {
-      "claim_id": "claim-6991670b41be76e6",
+      "claim_id": "claim-77c1a8876afb63c3",
       "kind": "relation",
       "normalized_statement": "Organization protects Information",
       "object": "Information",
@@ -12,14 +12,14 @@
         "asset_id": "p003",
         "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-04c6336f7d5812e3",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-97ab032d1321c422",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "Organization protects Information",
       "subject": "Organization"
     },
     {
-      "claim_id": "claim-6328d85f4ca98eae",
+      "claim_id": "claim-4df30a8493d0c25e",
       "kind": "relation",
       "normalized_statement": "Organization implements Governance",
       "object": "Governance",
@@ -29,14 +29,14 @@
         "asset_id": "p003",
         "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-04c6336f7d5812e3",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-97ab032d1321c422",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "Organization implements Governance",
       "subject": "Organization"
     },
     {
-      "claim_id": "claim-9070ab8b41e0ea0e",
+      "claim_id": "claim-d1be94be987ddf94",
       "kind": "relation",
       "normalized_statement": "Organization implements SecurityPolicy",
       "object": "SecurityPolicy",
@@ -46,14 +46,14 @@
         "asset_id": "p003",
         "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-04c6336f7d5812e3",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-97ab032d1321c422",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "Organization implements SecurityPolicy",
       "subject": "Organization"
     },
     {
-      "claim_id": "claim-41db245d823afb38",
+      "claim_id": "claim-1dc29da02f201fca",
       "kind": "relation",
       "normalized_statement": "Organization implements SecurityProcedure",
       "object": "SecurityProcedure",
@@ -63,14 +63,14 @@
         "asset_id": "p003",
         "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-04c6336f7d5812e3",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-97ab032d1321c422",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "Organization implements SecurityProcedure",
       "subject": "Organization"
     },
     {
-      "claim_id": "claim-fac71eaf43337e67",
+      "claim_id": "claim-c2d5e41b9e9f258e",
       "kind": "relation",
       "normalized_statement": "Organization implements Control",
       "object": "Control",
@@ -80,14 +80,14 @@
         "asset_id": "p003",
         "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-04c6336f7d5812e3",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-97ab032d1321c422",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "Organization implements Control",
       "subject": "Organization"
     },
     {
-      "claim_id": "claim-d39b8efc647ce843",
+      "claim_id": "claim-21f2c399590270e1",
       "kind": "relation",
       "normalized_statement": "Organization implements MonitoringMechanism",
       "object": "MonitoringMechanism",
@@ -97,14 +97,14 @@
         "asset_id": "p003",
         "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-04c6336f7d5812e3",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-97ab032d1321c422",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "Organization implements MonitoringMechanism",
       "subject": "Organization"
     },
     {
-      "claim_id": "claim-84e69de12122a477",
+      "claim_id": "claim-671bf668afeef1ae",
       "kind": "relation",
       "normalized_statement": "Organization implements IncidentResponseProcess",
       "object": "IncidentResponseProcess",
@@ -114,14 +114,14 @@
         "asset_id": "p003",
         "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-04c6336f7d5812e3",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-97ab032d1321c422",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "Organization implements IncidentResponseProcess",
       "subject": "Organization"
     },
     {
-      "claim_id": "claim-9ca4c46899761085",
+      "claim_id": "claim-81cc1bfca3793b80",
       "kind": "definition",
       "normalized_statement": "SecurityPolicy is a FormalDocument",
       "object": "FormalDocument",
@@ -131,14 +131,14 @@
         "asset_id": "p003",
         "evidence": "A security policy is a formal document that defines rules and expectations for protecting information.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-f82cb4ac79e0dbd0",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ba1f49aa18d314ae",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityPolicy is a FormalDocument",
       "subject": "SecurityPolicy"
     },
     {
-      "claim_id": "claim-e08ac978f313ec85",
+      "claim_id": "claim-9ec13620edf248d2",
       "kind": "relation",
       "normalized_statement": "SecurityPolicy defines Rule",
       "object": "Rule",
@@ -148,14 +148,14 @@
         "asset_id": "p003",
         "evidence": "A security policy is a formal document that defines rules and expectations for protecting information.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-f82cb4ac79e0dbd0",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ba1f49aa18d314ae",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityPolicy defines Rule",
       "subject": "SecurityPolicy"
     },
     {
-      "claim_id": "claim-dad715adc92f539f",
+      "claim_id": "claim-473970054542881c",
       "kind": "relation",
       "normalized_statement": "SecurityPolicy defines Expectation",
       "object": "Expectation",
@@ -165,14 +165,14 @@
         "asset_id": "p003",
         "evidence": "A security policy is a formal document that defines rules and expectations for protecting information.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-f82cb4ac79e0dbd0",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ba1f49aa18d314ae",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityPolicy defines Expectation",
       "subject": "SecurityPolicy"
     },
     {
-      "claim_id": "claim-078f4fa001c61ffb",
+      "claim_id": "claim-240f0f75980dbf5f",
       "kind": "relation",
       "normalized_statement": "SecurityPolicy protects Information",
       "object": "Information",
@@ -182,14 +182,14 @@
         "asset_id": "p003",
         "evidence": "A security policy is a formal document that defines rules and expectations for protecting information.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-f82cb4ac79e0dbd0",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ba1f49aa18d314ae",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityPolicy protects Information",
       "subject": "SecurityPolicy"
     },
     {
-      "claim_id": "claim-921bff6b4dff9014",
+      "claim_id": "claim-24e6f24d4702dbca",
       "kind": "definition",
       "normalized_statement": "SecurityStandard is a ControlDocument",
       "object": "ControlDocument",
@@ -199,14 +199,14 @@
         "asset_id": "p003",
         "evidence": "A security standard is a type of control document that defines mandatory requirements.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-a4bbc18b0dad26c3",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-33730fd0849456ef",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityStandard is a ControlDocument",
       "subject": "SecurityStandard"
     },
     {
-      "claim_id": "claim-98cad457713ccaae",
+      "claim_id": "claim-dae32e0622b1735f",
       "kind": "relation",
       "normalized_statement": "SecurityStandard defines MandatoryRequirement",
       "object": "MandatoryRequirement",
@@ -216,14 +216,14 @@
         "asset_id": "p003",
         "evidence": "A security standard is a type of control document that defines mandatory requirements.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-a4bbc18b0dad26c3",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-33730fd0849456ef",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityStandard defines MandatoryRequirement",
       "subject": "SecurityStandard"
     },
     {
-      "claim_id": "claim-1db73b8541c2eb4e",
+      "claim_id": "claim-e1d2dcf2f83e3ca0",
       "kind": "definition",
       "normalized_statement": "SecurityProcedure is a OperationalDocument",
       "object": "OperationalDocument",
@@ -233,14 +233,14 @@
         "asset_id": "p003",
         "evidence": "A security procedure is a type of operational document that defines step-by-step activities.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-950687cf1b7d6b62",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-c7c6d28c20a009a5",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityProcedure is a OperationalDocument",
       "subject": "SecurityProcedure"
     },
     {
-      "claim_id": "claim-8d7ff6918356501f",
+      "claim_id": "claim-2d9825136d0192b0",
       "kind": "relation",
       "normalized_statement": "SecurityProcedure defines StepByStepActivity",
       "object": "StepByStepActivity",
@@ -250,14 +250,14 @@
         "asset_id": "p003",
         "evidence": "A security procedure is a type of operational document that defines step-by-step activities.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-950687cf1b7d6b62",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-c7c6d28c20a009a5",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityProcedure defines StepByStepActivity",
       "subject": "SecurityProcedure"
     },
     {
-      "claim_id": "claim-0733b809f26f47d9",
+      "claim_id": "claim-28c69750e3fc47e1",
       "kind": "definition",
       "normalized_statement": "SecurityGuideline is a AdvisoryDocument",
       "object": "AdvisoryDocument",
@@ -267,14 +267,14 @@
         "asset_id": "p003",
         "evidence": "A security guideline is a type of advisory document that recommends good practices.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-ef44b0f04cb486c0",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-c9ca74ad63f937bf",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityGuideline is a AdvisoryDocument",
       "subject": "SecurityGuideline"
     },
     {
-      "claim_id": "claim-6184c37b1398a324",
+      "claim_id": "claim-75ec1467feb80eed",
       "kind": "relation",
       "normalized_statement": "SecurityGuideline recommends GoodPractice",
       "object": "GoodPractice",
@@ -284,14 +284,14 @@
         "asset_id": "p003",
         "evidence": "A security guideline is a type of advisory document that recommends good practices.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-ef44b0f04cb486c0",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-c9ca74ad63f937bf",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityGuideline recommends GoodPractice",
       "subject": "SecurityGuideline"
     },
     {
-      "claim_id": "claim-4264b636940cdb02",
+      "claim_id": "claim-1e1f482710de4ed6",
       "kind": "definition",
       "normalized_statement": "SecurityBaseline is a MinimumSetOfControls",
       "object": "MinimumSetOfControls",
@@ -301,14 +301,14 @@
         "asset_id": "p003",
         "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-64a46807b33c3132",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-20eb3651de3b392c",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityBaseline is a MinimumSetOfControls",
       "subject": "SecurityBaseline"
     },
     {
-      "claim_id": "claim-1eef4cf2f1381226",
+      "claim_id": "claim-29470e2a5a71a783",
       "kind": "relation",
       "normalized_statement": "SecurityBaseline required_for System",
       "object": "System",
@@ -318,14 +318,14 @@
         "asset_id": "p003",
         "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-64a46807b33c3132",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-20eb3651de3b392c",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityBaseline required_for System",
       "subject": "SecurityBaseline"
     },
     {
-      "claim_id": "claim-85b201bdb42aff72",
+      "claim_id": "claim-1dfee59394acd2e1",
       "kind": "relation",
       "normalized_statement": "SecurityBaseline required_for Application",
       "object": "Application",
@@ -335,14 +335,14 @@
         "asset_id": "p003",
         "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-64a46807b33c3132",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-20eb3651de3b392c",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityBaseline required_for Application",
       "subject": "SecurityBaseline"
     },
     {
-      "claim_id": "claim-43c48b228e48b1c4",
+      "claim_id": "claim-70fc543376de97c6",
       "kind": "relation",
       "normalized_statement": "SecurityBaseline required_for InfrastructureComponent",
       "object": "InfrastructureComponent",
@@ -352,14 +352,14 @@
         "asset_id": "p003",
         "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
         "paragraph_id": "p003",
-        "sentence_id": "sent-64a46807b33c3132",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-20eb3651de3b392c",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityBaseline required_for InfrastructureComponent",
       "subject": "SecurityBaseline"
     },
     {
-      "claim_id": "claim-5e5c112e8a733739",
+      "claim_id": "claim-5c0f02da3585594f",
       "kind": "relation",
       "normalized_statement": "BoardOfDirectors provides oversight for InformationSecurity",
       "object": "InformationSecurity",
@@ -369,14 +369,14 @@
         "asset_id": "p004",
         "evidence": "The board of directors provides strategic oversight for information security.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-99f72d442d1405c9",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-53b36bcf1338d795",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "BoardOfDirectors provides oversight for InformationSecurity",
       "subject": "BoardOfDirectors"
     },
     {
-      "claim_id": "claim-f9afa86717076de3",
+      "claim_id": "claim-16a2903300740c17",
       "kind": "relation",
       "normalized_statement": "SeniorManagement approves SecurityPolicy",
       "object": "SecurityPolicy",
@@ -386,14 +386,14 @@
         "asset_id": "p004",
         "evidence": "Senior management approves security policies and allocates resources for security initiatives.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-d1b8444423235c24",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-89b8d439467e1257",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SeniorManagement approves SecurityPolicy",
       "subject": "SeniorManagement"
     },
     {
-      "claim_id": "claim-0a5795c304d33ad9",
+      "claim_id": "claim-ab3dbb310c6676ca",
       "kind": "relation",
       "normalized_statement": "SeniorManagement allocates Resource",
       "object": "Resource",
@@ -403,14 +403,14 @@
         "asset_id": "p004",
         "evidence": "Senior management approves security policies and allocates resources for security initiatives.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-d1b8444423235c24",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-89b8d439467e1257",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SeniorManagement allocates Resource",
       "subject": "SeniorManagement"
     },
     {
-      "claim_id": "claim-68e7d199d4817265",
+      "claim_id": "claim-1013b7fe84734800",
       "kind": "relation",
       "normalized_statement": "Resource supports SecurityInitiative",
       "object": "SecurityInitiative",
@@ -420,14 +420,14 @@
         "asset_id": "p004",
         "evidence": "Senior management approves security policies and allocates resources for security initiatives.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-d1b8444423235c24",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-89b8d439467e1257",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "Resource supports SecurityInitiative",
       "subject": "Resource"
     },
     {
-      "claim_id": "claim-258017e186671a8a",
+      "claim_id": "claim-c93183da861de2e2",
       "kind": "relation",
       "normalized_statement": "InformationSecurityManager coordinates InformationSecurityProgram",
       "object": "InformationSecurityProgram",
@@ -437,14 +437,14 @@
         "asset_id": "p004",
         "evidence": "The information security manager coordinates the information security program.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-f9ec887262219d1d",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ddaaaf0eb5de25e1",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "InformationSecurityManager coordinates InformationSecurityProgram",
       "subject": "InformationSecurityManager"
     },
     {
-      "claim_id": "claim-9e1c6f266887ef47",
+      "claim_id": "claim-fdbe7016b248dec2",
       "kind": "relation",
       "normalized_statement": "AssetOwner classifies InformationAsset",
       "object": "InformationAsset",
@@ -454,14 +454,14 @@
         "asset_id": "p004",
         "evidence": "The asset owner classifies information assets and defines protection requirements.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-33e9be30e4d8fced",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-aff1984d1ec23dcf",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "AssetOwner classifies InformationAsset",
       "subject": "AssetOwner"
     },
     {
-      "claim_id": "claim-9b5c51630375ca77",
+      "claim_id": "claim-3e679c81d5cdcab9",
       "kind": "relation",
       "normalized_statement": "AssetOwner defines ProtectionRequirement",
       "object": "ProtectionRequirement",
@@ -471,14 +471,14 @@
         "asset_id": "p004",
         "evidence": "The asset owner classifies information assets and defines protection requirements.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-33e9be30e4d8fced",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-aff1984d1ec23dcf",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "AssetOwner defines ProtectionRequirement",
       "subject": "AssetOwner"
     },
     {
-      "claim_id": "claim-7ba7b163d3751612",
+      "claim_id": "claim-472f620d92fd0dd9",
       "kind": "relation",
       "normalized_statement": "AssetCustodian operates TechnicalEnvironment",
       "object": "TechnicalEnvironment",
@@ -488,14 +488,14 @@
         "asset_id": "p004",
         "evidence": "The asset custodian operates and maintains the technical environment that stores or processes information.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-4aeffc096fc13530",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ae6eda16f951a346",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "AssetCustodian operates TechnicalEnvironment",
       "subject": "AssetCustodian"
     },
     {
-      "claim_id": "claim-adde87f45850e4ee",
+      "claim_id": "claim-53ce4824dd2cf603",
       "kind": "relation",
       "normalized_statement": "AssetCustodian maintains TechnicalEnvironment",
       "object": "TechnicalEnvironment",
@@ -505,14 +505,14 @@
         "asset_id": "p004",
         "evidence": "The asset custodian operates and maintains the technical environment that stores or processes information.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-4aeffc096fc13530",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ae6eda16f951a346",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "AssetCustodian maintains TechnicalEnvironment",
       "subject": "AssetCustodian"
     },
     {
-      "claim_id": "claim-d889318d7eeb06ad",
+      "claim_id": "claim-f97abebd9dcfa349",
       "kind": "relation",
       "normalized_statement": "TechnicalEnvironment stores Information",
       "object": "Information",
@@ -522,14 +522,14 @@
         "asset_id": "p004",
         "evidence": "The asset custodian operates and maintains the technical environment that stores or processes information.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-4aeffc096fc13530",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ae6eda16f951a346",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "TechnicalEnvironment stores Information",
       "subject": "TechnicalEnvironment"
     },
     {
-      "claim_id": "claim-712832f808b6eb11",
+      "claim_id": "claim-f4aa67b1b934c64b",
       "kind": "relation",
       "normalized_statement": "TechnicalEnvironment processes Information",
       "object": "Information",
@@ -539,14 +539,14 @@
         "asset_id": "p004",
         "evidence": "The asset custodian operates and maintains the technical environment that stores or processes information.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-4aeffc096fc13530",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ae6eda16f951a346",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "TechnicalEnvironment processes Information",
       "subject": "TechnicalEnvironment"
     },
     {
-      "claim_id": "claim-f8db17cf468db551",
+      "claim_id": "claim-49d2963509377c51",
       "kind": "relation",
       "normalized_statement": "SystemAdministrator manages Server",
       "object": "Server",
@@ -556,14 +556,14 @@
         "asset_id": "p004",
         "evidence": "The system administrator manages servers, networks, operating systems, and technical services.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-8f137f89bfe671f4",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ab02e18937e0b10c",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SystemAdministrator manages Server",
       "subject": "SystemAdministrator"
     },
     {
-      "claim_id": "claim-43a41bd54d02e8cc",
+      "claim_id": "claim-b462d941c5ae2f34",
       "kind": "relation",
       "normalized_statement": "SystemAdministrator manages Network",
       "object": "Network",
@@ -573,14 +573,14 @@
         "asset_id": "p004",
         "evidence": "The system administrator manages servers, networks, operating systems, and technical services.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-8f137f89bfe671f4",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ab02e18937e0b10c",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SystemAdministrator manages Network",
       "subject": "SystemAdministrator"
     },
     {
-      "claim_id": "claim-433ca7f7c730b46b",
+      "claim_id": "claim-a1884c7bcf5b6f85",
       "kind": "relation",
       "normalized_statement": "SystemAdministrator manages OperatingSystem",
       "object": "OperatingSystem",
@@ -590,14 +590,14 @@
         "asset_id": "p004",
         "evidence": "The system administrator manages servers, networks, operating systems, and technical services.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-8f137f89bfe671f4",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ab02e18937e0b10c",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SystemAdministrator manages OperatingSystem",
       "subject": "SystemAdministrator"
     },
     {
-      "claim_id": "claim-e6383de840301a98",
+      "claim_id": "claim-e9db513b85929d8d",
       "kind": "relation",
       "normalized_statement": "SystemAdministrator manages TechnicalService",
       "object": "TechnicalService",
@@ -607,14 +607,14 @@
         "asset_id": "p004",
         "evidence": "The system administrator manages servers, networks, operating systems, and technical services.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-8f137f89bfe671f4",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-ab02e18937e0b10c",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SystemAdministrator manages TechnicalService",
       "subject": "SystemAdministrator"
     },
     {
-      "claim_id": "claim-87c9dfe380f485cf",
+      "claim_id": "claim-4e7af6570e5e2294",
       "kind": "relation",
       "normalized_statement": "SecurityAnalyst monitors SecurityEvent",
       "object": "SecurityEvent",
@@ -624,14 +624,14 @@
         "asset_id": "p004",
         "evidence": "The security analyst monitors security events and investigates suspicious activity.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-304f0c14f1d67fc9",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-64762b5dacdf3c92",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityAnalyst monitors SecurityEvent",
       "subject": "SecurityAnalyst"
     },
     {
-      "claim_id": "claim-2a8ad4ad97686ffa",
+      "claim_id": "claim-06035fc5671fb5a5",
       "kind": "relation",
       "normalized_statement": "SecurityAnalyst investigates SuspiciousActivity",
       "object": "SuspiciousActivity",
@@ -641,14 +641,14 @@
         "asset_id": "p004",
         "evidence": "The security analyst monitors security events and investigates suspicious activity.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-304f0c14f1d67fc9",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-64762b5dacdf3c92",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "SecurityAnalyst investigates SuspiciousActivity",
       "subject": "SecurityAnalyst"
     },
     {
-      "claim_id": "claim-76013cfdbced9821",
+      "claim_id": "claim-65c53daa06e10504",
       "kind": "relation",
       "normalized_statement": "Auditor evaluates Compliance",
       "object": "Compliance",
@@ -658,14 +658,14 @@
         "asset_id": "p004",
         "evidence": "The auditor evaluates compliance with security requirements.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-c79f7b7699a10742",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-9330afc40e083f5e",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "Auditor evaluates Compliance",
       "subject": "Auditor"
     },
     {
-      "claim_id": "claim-baac18fab8aa75db",
+      "claim_id": "claim-48cc9ca07be21def",
       "kind": "relation",
       "normalized_statement": "Compliance checked_against SecurityRequirement",
       "object": "SecurityRequirement",
@@ -675,14 +675,14 @@
         "asset_id": "p004",
         "evidence": "The auditor evaluates compliance with security requirements.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-c79f7b7699a10742",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-9330afc40e083f5e",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "Compliance checked_against SecurityRequirement",
       "subject": "Compliance"
     },
     {
-      "claim_id": "claim-d2cb409327ba38e8",
+      "claim_id": "claim-48040cea1c1abde8",
       "kind": "relation",
       "normalized_statement": "EndUser accesses System",
       "object": "System",
@@ -692,14 +692,14 @@
         "asset_id": "p004",
         "evidence": "The end user accesses systems and must follow security policies.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-aa125f6b05a5e7f6",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-4b1c771902386060",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "EndUser accesses System",
       "subject": "EndUser"
     },
     {
-      "claim_id": "claim-54f174491c72af33",
+      "claim_id": "claim-009e54c9479f440a",
       "kind": "relation",
       "normalized_statement": "EndUser follows SecurityPolicy",
       "object": "SecurityPolicy",
@@ -709,8 +709,8 @@
         "asset_id": "p004",
         "evidence": "The end user accesses systems and must follow security policies.",
         "paragraph_id": "p004",
-        "sentence_id": "sent-aa125f6b05a5e7f6",
-        "source_text_id": "832e20e7daeb30bfa384bde1d122912ea294f5438ad634478133e67406ea7c81"
+        "sentence_id": "sent-4b1c771902386060",
+        "source_text_id": "438a5d2fc78d6cc2333586e9a7589d6e7a5d764d0890353aaf50485d9e6474f4"
       },
       "statement": "EndUser follows SecurityPolicy",
       "subject": "EndUser"

@@ -1,0 +1,24 @@
+{
+  "case_id": "compound_entities_red",
+  "claim_count": 5,
+  "class_count": 10,
+  "evidence_precision_proxy": 1.0,
+  "evidence_supported_claim_count": 5,
+  "evidence_unsupported_claim_ids": [],
+  "graph_generated": true,
+  "object_property_count": 5,
+  "observed_stage": "semantic_claims",
+  "paragraph_claim_distribution": {
+    "p044": 5
+  },
+  "paragraph_ids": [
+    "p044"
+  ],
+  "rdf_bytes": 6173,
+  "rdf_generated": true,
+  "semantic_debug_ir_generated": true,
+  "semantic_debug_ir_path": "artifacts/observed_compound_entities_red_semantic_debug_ir.json",
+  "subclass_fact_count": 0,
+  "ttl_bytes": 441,
+  "ttl_generated": true
+}

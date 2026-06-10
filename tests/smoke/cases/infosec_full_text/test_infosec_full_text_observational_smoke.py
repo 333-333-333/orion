@@ -139,3 +139,34 @@ def test_full_text_has_no_known_noun_chunk_residues_and_reasonable_metrics(tmp_p
     assert metrics["claim_count"] >= 100
     assert metrics["subclass_fact_count"] >= 20
     assert metrics["rdf_bytes"] >= 5000
+
+
+def test_full_text_filters_orion_meta_instruction_from_semantics_graph_and_ttl(tmp_path: Path):
+    # TASK-INFOSEC-P042-META-FILTER | AC-P042-META-FILTER-002 | BR-INFOSEC-FULL-TEXT-SMOKE-005
+    _metrics(tmp_path)
+    semantic = _semantic_payload()
+    graph = _graph_payload()
+    ttl = (_ARTIFACT_DIR / "observed_infosec_full_text_output.ttl").read_text(encoding="utf-8")
+
+    forbidden_subject = "OrionShouldBeAbleToIdentifySecurityConceptClassifyHierarchicalRelationshipAndExtractMeaningful"
+    forbidden_triple = "orion:orionshouldbeabletoidentifysecurityconceptclassifyhierarchicalrelationshipandextractmeaningful orion:relationships orion:thistext ."
+
+    forbidden_claims = [
+        claim
+        for claim in semantic.get("claims", [])
+        if str(claim.get("paragraph_id")) == "p042"
+        and str(claim.get("subject")) == forbidden_subject
+        and str(claim.get("predicate")) == "relationships"
+        and str(claim.get("object")) == "ThisText"
+    ]
+    forbidden_facts = [
+        fact
+        for fact in graph.get("facts", [])
+        if str(fact.get("subject", "")).endswith(forbidden_subject)
+        and str(fact.get("predicate", "")).endswith("relationships")
+        and str(fact.get("object", "")).endswith("ThisText")
+    ]
+
+    assert forbidden_claims == []
+    assert forbidden_facts == []
+    assert forbidden_triple not in ttl

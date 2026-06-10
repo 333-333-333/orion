@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/auditlog">
+    <orion:supports rdf:resource="https://orion.local/resource/accountability"/>
+    <orion:supports rdf:resource="https://orion.local/resource/compliance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/existingkey">
+    <orion:checkedagainst rdf:resource="https://orion.local/resource/newkey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/falsepositive">
+    <orion:does rdf:resource="https://orion.local/resource/notrepresentarealthreat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/keydestructionpermanently">
+    <orion:removes rdf:resource="https://orion.local/resource/keyfromuse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/keygeneration">
+    <orion:creates rdf:resource="https://orion.local/resource/cryptographickey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/keymanagement">
+    <orion:protects rdf:resource="https://orion.local/resource/cryptographickeyacrosstheirlifecycle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/keymanagementservice">
+    <orion:stores rdf:resource="https://orion.local/resource/accesstocryptographickey"/>
+    <orion:controls rdf:resource="https://orion.local/resource/accesstocryptographickey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/keyrevocation">
+    <orion:invalidates rdf:resource="https://orion.local/resource/compromised"/>
+    <orion:invalidates rdf:resource="https://orion.local/resource/obsoletekey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/keyrotation">
+    <orion:replaces rdf:resource="https://orion.local/resource/existingkey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/keystorage">
+    <orion:protects rdf:resource="https://orion.local/resource/cryptographickeyfromunauthorizedaccess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityevent">
+    <orion:maies rdf:resource="https://orion.local/resource/berelevanttosecurity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityincident">
+    <orion:compromises rdf:resource="https://orion.local/resource/threatenconfidentiality"/>
+    <orion:compromises rdf:resource="https://orion.local/resource/integrity"/>
+    <orion:compromises rdf:resource="https://orion.local/resource/availability"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/accesstocryptographickey">
     <rdfs:label>AccessToCryptographicKey</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/accountability">
     <rdfs:label>Accountability</rdfs:label>
   </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/alert">
+    <rdfs:label>Alert</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/auditlog">
     <rdfs:label>AuditLog</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/log"/>
     <rdfs:comment>An audit log is a type of log that supports accountability and compliance.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/availability">
@@ -35,8 +80,12 @@
   <owl:Class rdf:about="https://orion.local/resource/device">
     <rdfs:label>Device</rdfs:label>
   </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/event">
+    <rdfs:label>Event</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/existingkey">
     <rdfs:label>ExistingKey</rdfs:label>
+    <rdfs:label>ExistingKey roles subject object</rdfs:label>
     <rdfs:comment>Key rotation replaces an existing key with a new key.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/falsenegative">
@@ -46,7 +95,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/falsepositive">
     <rdfs:label>FalsePositive</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securityalert"/>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/alert"/>
     <rdfs:comment>A false positive is an alert that does not represent a real threat.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/hardwaresecuritymodule">
@@ -88,6 +137,9 @@
     <rdfs:label>KeyStorage</rdfs:label>
     <rdfs:comment>Key storage protects a cryptographic key from unauthorized access.</rdfs:comment>
   </owl:Class>
+  <owl:Class rdf:about="https://orion.local/resource/log">
+    <rdfs:label>Log</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/logrecord">
     <rdfs:label>LogRecord</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://orion.local/resource/recordofaneventgeneratedbyasystem"/>
@@ -126,7 +178,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/securityincident">
     <rdfs:label>SecurityIncident</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://orion.local/resource/securityevent"/>
+    <rdfs:subClassOf rdf:resource="https://orion.local/resource/event"/>
     <rdfs:comment>A security incident is an event that compromises or threatens confidentiality, integrity, or availability.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/threatenconfidentiality">
@@ -223,6 +275,9 @@
   <rdf:Description rdf:about="https://orion.local/resource/accountability">
     <rdfs:label>Accountability</rdfs:label>
   </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/alert">
+    <rdfs:label>Alert</rdfs:label>
+  </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/auditlog">
     <rdfs:label>AuditLog</rdfs:label>
   </rdf:Description>
@@ -250,8 +305,12 @@
   <rdf:Description rdf:about="https://orion.local/resource/device">
     <rdfs:label>Device</rdfs:label>
   </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/event">
+    <rdfs:label>Event</rdfs:label>
+  </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/existingkey">
     <rdfs:label>ExistingKey</rdfs:label>
+    <rdfs:label>ExistingKey roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/falsenegative">
     <rdfs:label>FalseNegative</rdfs:label>
@@ -288,6 +347,9 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/keystorage">
     <rdfs:label>KeyStorage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/log">
+    <rdfs:label>Log</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/logrecord">
     <rdfs:label>LogRecord</rdfs:label>

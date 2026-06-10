@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/audit">
+    <orion:evaluates rdf:resource="https://orion.local/resource/whethercontrolsatisfyrequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/compliance">
+    <orion:ensures rdf:resource="https://orion.local/resource/regulatory"/>
+    <orion:ensures rdf:resource="https://orion.local/resource/contractual"/>
+    <orion:ensures rdf:resource="https://orion.local/resource/internalrequirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/compliancerequirement">
+    <orion:musts rdf:resource="https://orion.local/resource/besatisfied"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/correctiveaction">
+    <orion:addresses rdf:resource="https://orion.local/resource/nonconformity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/datacontroller">
+    <orion:determines rdf:resource="https://orion.local/resource/purpos"/>
+    <orion:means rdf:resource="https://orion.local/resource/ofprocessingpersonaldata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/dataprocessor">
+    <orion:processes rdf:resource="https://orion.local/resource/personaldataonbehalfofacontroller"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/evidence">
+    <orion:supports rdf:resource="https://orion.local/resource/demonstrationofcompliance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/privacy">
+    <orion:protects rdf:resource="https://orion.local/resource/personaldata"/>
+    <orion:protects rdf:resource="https://orion.local/resource/rightofindividuals"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/privacynotice">
+    <orion:informs rdf:resource="https://orion.local/resource/datasubjectaboutprocessingactivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/purposelimitation">
+    <orion:restricts rdf:resource="https://orion.local/resource/processingtodefinedpurpos"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/audit">
     <rdfs:label>Audit</rdfs:label>
     <rdfs:comment>An audit evaluates whether controls satisfy requirements.</rdfs:comment>

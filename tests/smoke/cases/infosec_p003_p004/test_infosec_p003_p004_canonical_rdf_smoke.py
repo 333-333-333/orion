@@ -8,6 +8,7 @@ from typing import Any
 
 from observability import JsonlFileLogSink
 from orion import ORION
+from infosec_pair_case_harness import _serialize_visual_turtle
 from pipeline.step_013_output_generation.rdf_strategy import serialize_graph_to_rdf_xml
 
 _CASE_DIR = Path(__file__).parent
@@ -18,9 +19,27 @@ _ARTIFACT_DIR = _CASE_DIR / "artifacts"
 _CANONICAL_ARTIFACT_PATH = _ARTIFACT_DIR / "observed_p003_p004_canonical_claims.json"
 _SEMANTIC_ARTIFACT_PATH = _ARTIFACT_DIR / "observed_p003_p004_semantic_claims.json"
 _RDF_ARTIFACT_PATH = _ARTIFACT_DIR / "observed_p003_p004_output.rdf"
+_TTL_ARTIFACT_PATH = _ARTIFACT_DIR / "observed_p003_p004_output.ttl"
 _GRAPH_MODEL_ARTIFACT_PATH = _ARTIFACT_DIR / "observed_p003_p004_graph_model.json"
 _RESOURCE_PREFIX = "https://orion.local/resource/"
 _DETERMINERS = re.compile(r"^(?:a|an|the|any)-")
+
+_ALIAS_ONLY_DEFINITIONAL_CLASS_SLUGS = {
+    "advisory-document",
+    "control-document",
+    "formal-document",
+    "minimum-set-of-controls",
+    "operational-document",
+}
+
+_ALIAS_ONLY_DEFINITIONAL_SUBCLASS_PAIRS = {
+    ("security-baseline", "minimum-set-of-controls"),
+    ("security-guideline", "advisory-document"),
+    ("security-policy", "formal-document"),
+    ("security-procedure", "operational-document"),
+    ("security-standard", "control-document"),
+}
+
 _KNOWN_TERM_SLUGS = {
     "advisorydocument": "advisory-document",
     "assetcustodian": "asset-custodian",
@@ -88,7 +107,7 @@ def _slug(value: Any) -> str:
 
 
 def _run_p003_p004(tmp_path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
-    for path in (_CANONICAL_ARTIFACT_PATH, _SEMANTIC_ARTIFACT_PATH, _RDF_ARTIFACT_PATH, _GRAPH_MODEL_ARTIFACT_PATH):
+    for path in (_CANONICAL_ARTIFACT_PATH, _SEMANTIC_ARTIFACT_PATH, _RDF_ARTIFACT_PATH, _TTL_ARTIFACT_PATH, _GRAPH_MODEL_ARTIFACT_PATH):
         if path.exists():
             path.unlink()
     _ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
@@ -109,6 +128,7 @@ def _run_p003_p004(tmp_path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
         rdf_xml = serialize_graph_to_rdf_xml(graph)
         if "<rdf:RDF" in rdf_xml:
             _RDF_ARTIFACT_PATH.write_text(rdf_xml, encoding="utf-8")
+            _TTL_ARTIFACT_PATH.write_text(_serialize_visual_turtle(graph), encoding="utf-8")
     return result, graph
 
 
@@ -383,3 +403,17 @@ def test_p003_p004_rdf_has_no_noun_chunk_residue(tmp_path: Path):
     residues = _contract()["rdf_quality"]["noun_chunk_residue_tokens"]
 
     assert not sorted(token for token in residues if token in graph_text), "RDF contains noun-chunk residue tokens"
+
+
+
+def test_p003_p004_rdf_rejects_definition_only_taxonomy_without_differentiator(tmp_path: Path):
+    # TASK-ONT-003 | FUN-CANONICAL-RDF-P003-P004 AC-8 | CON-CANONICAL-RDF-P003-P004 AC-8 | BR-CANONICAL-RDF-P003-P004-007
+    result, graph = _run_p003_p004(tmp_path)
+    classes = _class_slugs(graph)
+    subclass_pairs = _subclass_pairs(result, graph)
+
+    leaked_classes = sorted(_ALIAS_ONLY_DEFINITIONAL_CLASS_SLUGS & classes)
+    leaked_pairs = sorted(_ALIAS_ONLY_DEFINITIONAL_SUBCLASS_PAIRS & subclass_pairs)
+
+    assert not leaked_classes, f"definition-only taxonomy leaked as owl:Class: {leaked_classes}"
+    assert not leaked_pairs, f"definition-only taxonomy leaked as rdfs:subClassOf: {leaked_pairs}"

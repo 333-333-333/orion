@@ -17,6 +17,10 @@
       "label": "Assessment"
     },
     {
+      "iri": "orion:Change",
+      "label": "Change"
+    },
+    {
       "comments": [
         "Change approval verifies that a change is acceptable."
       ],
@@ -230,8 +234,231 @@
       "label": "UseInformation"
     }
   ],
-  "facts": [],
+  "facts": [
+    {
+      "object": "orion:InformationFromCreationToDisposal",
+      "predicate": "orion:protects",
+      "source_evidence": "Data lifecycle management protects information from creation to disposal.",
+      "subject": "orion:DataLifecycleManagement"
+    },
+    {
+      "object": "orion:NewInformation",
+      "predicate": "orion:produces",
+      "source_evidence": "Data creation produces new information.",
+      "subject": "orion:DataCreation"
+    },
+    {
+      "object": "orion:InformationInARepository",
+      "predicate": "orion:keeps",
+      "source_evidence": "Data storage keeps information in a repository.",
+      "subject": "orion:DataStorage"
+    },
+    {
+      "object": "orion:UseInformation",
+      "predicate": "orion:transforms",
+      "source_evidence": "Data processing transforms or uses information.",
+      "subject": "orion:DataProcessing"
+    },
+    {
+      "object": "orion:InformationBetweenSystem",
+      "predicate": "orion:moves",
+      "source_evidence": "Data transmission moves information between systems or people.",
+      "subject": "orion:DataTransmission"
+    },
+    {
+      "object": "orion:People",
+      "predicate": "orion:moves",
+      "source_evidence": "Data transmission moves information between systems or people.",
+      "subject": "orion:DataTransmission"
+    },
+    {
+      "object": "orion:InformationToAnotherParty",
+      "predicate": "orion:provides",
+      "source_evidence": "Data sharing provides information to another party.",
+      "subject": "orion:DataSharing"
+    },
+    {
+      "object": "orion:InformationForLongTermRetention",
+      "predicate": "orion:stores",
+      "source_evidence": "Data archival stores information for long-term retention.",
+      "subject": "orion:DataArchival"
+    },
+    {
+      "object": "orion:InformationWhenRetentionExpire",
+      "predicate": "orion:removes",
+      "source_evidence": "Data disposal removes information when retention expires.",
+      "subject": "orion:DataDisposal"
+    },
+    {
+      "object": "orion:RecoveryOfDisposedData",
+      "predicate": "orion:prevents",
+      "source_evidence": "Secure deletion prevents recovery of disposed data.",
+      "subject": "orion:SecureDeletion"
+    },
+    {
+      "object": "orion:LabelToInformation",
+      "predicate": "orion:applies",
+      "source_evidence": "Data classification applies labels to information.",
+      "subject": "orion:DataClassification"
+    },
+    {
+      "object": "orion:DefineHowEachClassificationLevelMustBeProtected",
+      "predicate": "orion:rules",
+      "source_evidence": "Data handling rules define how each classification level must be protected.",
+      "subject": "orion:DataHandling"
+    },
+    {
+      "object": "orion:ModificationToSystem",
+      "predicate": "orion:controls",
+      "source_evidence": "Change management controls modifications to systems, applications, infrastructure, and configurations.",
+      "subject": "orion:ChangeManagement"
+    },
+    {
+      "object": "orion:Application",
+      "predicate": "orion:controls",
+      "source_evidence": "Change management controls modifications to systems, applications, infrastructure, and configurations.",
+      "subject": "orion:ChangeManagement"
+    },
+    {
+      "object": "orion:Infrastructure",
+      "predicate": "orion:controls",
+      "source_evidence": "Change management controls modifications to systems, applications, infrastructure, and configurations.",
+      "subject": "orion:ChangeManagement"
+    },
+    {
+      "object": "orion:Configuration",
+      "predicate": "orion:controls",
+      "source_evidence": "Change management controls modifications to systems, applications, infrastructure, and configurations.",
+      "subject": "orion:ChangeManagement"
+    },
+    {
+      "object": "orion:Modification",
+      "predicate": "orion:proposes",
+      "source_evidence": "A change request proposes a modification.",
+      "subject": "orion:ChangeRequest"
+    },
+    {
+      "object": "orion:Assessment",
+      "predicate": "orion:requires",
+      "source_evidence": "A normal change is a type of change that requires assessment and approval.",
+      "subject": "orion:NormalChange"
+    },
+    {
+      "object": "orion:Approval",
+      "predicate": "orion:requires",
+      "source_evidence": "A normal change is a type of change that requires assessment and approval.",
+      "subject": "orion:NormalChange"
+    },
+    {
+      "object": "orion:PreviousStateIfAChangeFail",
+      "predicate": "orion:restores",
+      "source_evidence": "Change rollback restores a previous state if a change fails.",
+      "subject": "orion:ChangeRollback"
+    }
+  ],
   "instance_facts": [],
+  "object_property_facts": [
+    {
+      "domain": "orion:DataClassification",
+      "predicate": "orion:applies",
+      "range": "orion:LabelToInformation"
+    },
+    {
+      "domain": "orion:ChangeManagement",
+      "predicate": "orion:controls",
+      "range": "orion:Application"
+    },
+    {
+      "domain": "orion:ChangeManagement",
+      "predicate": "orion:controls",
+      "range": "orion:Configuration"
+    },
+    {
+      "domain": "orion:ChangeManagement",
+      "predicate": "orion:controls",
+      "range": "orion:Infrastructure"
+    },
+    {
+      "domain": "orion:ChangeManagement",
+      "predicate": "orion:controls",
+      "range": "orion:ModificationToSystem"
+    },
+    {
+      "domain": "orion:DataStorage",
+      "predicate": "orion:keeps",
+      "range": "orion:InformationInARepository"
+    },
+    {
+      "domain": "orion:DataTransmission",
+      "predicate": "orion:moves",
+      "range": "orion:InformationBetweenSystem"
+    },
+    {
+      "domain": "orion:DataTransmission",
+      "predicate": "orion:moves",
+      "range": "orion:People"
+    },
+    {
+      "domain": "orion:SecureDeletion",
+      "predicate": "orion:prevents",
+      "range": "orion:RecoveryOfDisposedData"
+    },
+    {
+      "domain": "orion:DataCreation",
+      "predicate": "orion:produces",
+      "range": "orion:NewInformation"
+    },
+    {
+      "domain": "orion:ChangeRequest",
+      "predicate": "orion:proposes",
+      "range": "orion:Modification"
+    },
+    {
+      "domain": "orion:DataLifecycleManagement",
+      "predicate": "orion:protects",
+      "range": "orion:InformationFromCreationToDisposal"
+    },
+    {
+      "domain": "orion:DataSharing",
+      "predicate": "orion:provides",
+      "range": "orion:InformationToAnotherParty"
+    },
+    {
+      "domain": "orion:DataDisposal",
+      "predicate": "orion:removes",
+      "range": "orion:InformationWhenRetentionExpire"
+    },
+    {
+      "domain": "orion:NormalChange",
+      "predicate": "orion:requires",
+      "range": "orion:Approval"
+    },
+    {
+      "domain": "orion:NormalChange",
+      "predicate": "orion:requires",
+      "range": "orion:Assessment"
+    },
+    {
+      "domain": "orion:ChangeRollback",
+      "predicate": "orion:restores",
+      "range": "orion:PreviousStateIfAChangeFail"
+    },
+    {
+      "domain": "orion:DataHandling",
+      "predicate": "orion:rules",
+      "range": "orion:DefineHowEachClassificationLevelMustBeProtected"
+    },
+    {
+      "domain": "orion:DataArchival",
+      "predicate": "orion:stores",
+      "range": "orion:InformationForLongTermRetention"
+    },
+    {
+      "domain": "orion:DataProcessing",
+      "predicate": "orion:transforms",
+      "range": "orion:UseInformation"
+    }
+  ],
   "object_property_schema": [
     {
       "domain": "orion:DataClassification",
@@ -336,31 +563,31 @@
   ],
   "projection": {
     "claim_ids": [
-      "claim-4e368aa82805d70e",
-      "claim-c7d908ffef768163",
-      "claim-0fef714faed7fe0d",
-      "claim-6d32f3ca3a485fd1",
-      "claim-b5cbb39dc81ba8b3",
-      "claim-7ddc523a040edfda",
-      "claim-b80aac6326108c20",
-      "claim-22b0ce010acf8ddf",
-      "claim-23800456c6c3f70d",
-      "claim-15f9a43fc37dd341",
-      "claim-fdc95edc82fba8b5",
-      "claim-7be2d774ce3df8c4",
-      "claim-e7deeccb2d90e9fe",
-      "claim-926bf46feab2b46e",
-      "claim-97d9f4a22c1f361c",
-      "claim-00eb4404e759c160",
-      "claim-04e65c4156bcf2c1",
-      "claim-0b61eeda0a5bf862",
-      "claim-a6937353ce08c56f",
-      "claim-a41ddeca8d8748c0",
-      "claim-6b8e1b10f0ef972d",
-      "claim-815b54cdc3bb6d76",
-      "claim-49d9c902ad1c777f",
-      "claim-d955b3160540c177",
-      "claim-458892da1fbeeb7b"
+      "claim-553e24a901d9857b",
+      "claim-5add8b762f064308",
+      "claim-ce901933babc751a",
+      "claim-e68f39e64def4b9f",
+      "claim-4b8eafb5b31c6da8",
+      "claim-e864aedbce704a4a",
+      "claim-6cedfd86cce14176",
+      "claim-ceaa351127fb1811",
+      "claim-6481a17332d7deb8",
+      "claim-87e90134ce9ec499",
+      "claim-2820e7487fd267ca",
+      "claim-9390e9a0ce13685e",
+      "claim-040c71a9eb500f7b",
+      "claim-65970cb1f36fd014",
+      "claim-7f1c3beaeed677a7",
+      "claim-5727e34548b52868",
+      "claim-8933c29d063e43fe",
+      "claim-848b2e5069418a1f",
+      "claim-a55bcf3aee4d9652",
+      "claim-c0cbc2fc6d332a0f",
+      "claim-5a7451d8715497a6",
+      "claim-0fad722c43b34129",
+      "claim-0d355373b7bd4410",
+      "claim-f5035e43dd87c08f",
+      "claim-75ba4f05b21e3f61"
     ],
     "source_stage": "semantic_claims"
   },
@@ -483,6 +710,10 @@
       {
         "iri": "orion:Assessment",
         "label": "Assessment"
+      },
+      {
+        "iri": "orion:Change",
+        "label": "Change"
       },
       {
         "comments": [
@@ -833,7 +1064,7 @@
       "subject": "orion:EmergencyChange"
     },
     {
-      "object": "orion:StandardChange",
+      "object": "orion:Change",
       "predicate": "rdfs:subClassOf",
       "subject": "orion:NormalChange"
     },

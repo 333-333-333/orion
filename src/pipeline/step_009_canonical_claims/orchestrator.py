@@ -6,88 +6,29 @@ import re
 from pathlib import Path
 from typing import Any
 
+from rules import RuleContext, RuleEngine
+from pipeline.step_009_canonical_claims.rules import TEMPORAL_SCOPE_RULE, extract_illustrates_how_relations
+from pipeline.step_009_canonical_claims.rules.text_normalization import (
+    _ARTICLES,
+    _BR_NOMINALIZED_ACTION_HEADS,
+    _BR_NOMINALIZED_CONTEXT_MODIFIERS,
+    _BR_NOMINALIZED_CONTEXT_PREPOSITIONS,
+    _BR_PERSONAL_PRONOUNS,
+    _clean,
+    _label,
+    _objects,
+    _split_list,
+    _strip_modifiers,
+    _verb,
+    _words,
+)
+
 _STAGE = 'semantic_claims'
 _COMPAT_STAGE = 'canonical_claims'
-_ARTICLES = {'a', 'an', 'the', 'any', 'each', 'one', 'more'}
-_STOP_TAIL = re.compile(r'\b(?:focused|designed|intended|used|required)\b.*$', re.IGNORECASE)
 _RELATIVE_TAIL = re.compile(r'\bthat\s+(?P<verb>[a-z]+s?)\s+(?P<object>.+)$', re.IGNORECASE)
-
-
-def _clean(value: str | None) -> str:
-    return re.sub(r'\s+', ' ', (value or '').strip())
-
-
-def _words(value: str | None) -> list[str]:
-    return [token for token in re.sub(r'[^A-Za-z0-9]+', ' ', value or '').split() if token]
-
-
-def _singular(token: str) -> str:
-    lower = token.casefold()
-    if len(lower) > 3 and lower.endswith('ies'):
-        return token[:-3] + 'y'
-    if len(lower) > 4 and lower.endswith(('ses', 'xes', 'zes', 'ches', 'shes')):
-        return token[:-2]
-    if len(lower) > 3 and lower.endswith('s') and not lower.endswith(('ss', 'us', 'is')):
-        return token[:-1]
-    return token
-
-
-def _phrase(value: str | None) -> str:
-    text = _STOP_TAIL.sub('', _clean(value or ''))
-    text = re.sub(r'\b(?:that|which|who)\b.*$', '', text, flags=re.IGNORECASE)
-    tokens = _words(text)
-    while tokens and tokens[0].casefold() in _ARTICLES:
-        tokens.pop(0)
-    normalized = []
-    for index, token in enumerate(tokens):
-        lower = token.casefold()
-        normalized.append(lower if index > 0 and tokens[index - 1].casefold() == 'of' else _singular(lower))
-    return ' '.join(normalized)
-
-
-def _label(value: str | None) -> str:
-    raw_tokens = _words(value or '')
-    raw_by_lower = {token.casefold(): token for token in raw_tokens}
-    parts = []
-    for part in _phrase(value).split():
-        raw = raw_by_lower.get(part.casefold(), '')
-        parts.append(raw if raw.isupper() and len(raw) <= 4 else part[:1].upper() + part[1:])
-    return ''.join(parts)
-
-
-def _split_list(value: str | None) -> list[str]:
-    text = _clean(value or '').rstrip('.')
-    text = re.sub(r'\b(?:and|or)\b', ',', text, flags=re.IGNORECASE)
-    return [label for part in text.split(',') if (label := _label(part))]
-
-
-def _objects(value: str | None) -> list[str]:
-    return [item for item in _split_list(value) if item]
-
-
-def _verb(value: str | None) -> str:
-    words = _words(value or '')
-    token = (words[0].casefold() if words else '').replace(' ', '_')
-    if not token:
-        return ''
-    if token.endswith('ing'):
-        base = token[:-3]
-        if len(base) > 2 and base[-1] == base[-2]:
-            base = base[:-1]
-        token = base
-    if token.endswith('ies'):
-        return token
-    if token.endswith(('s', 'ss')):
-        return token
-    if token.endswith('y'):
-        return token[:-1] + 'ies'
-    if token.endswith(('x', 'z', 'ch', 'sh')):
-        return token + 'es'
-    return token + 's'
-
-
-def _strip_modifiers(value: str) -> str:
-    return re.sub(r'^(?:strategic|mandatory|good|technical|suspicious)\s+', '', _clean(value), flags=re.IGNORECASE)
+_META_INSTRUCTION_PREFIX = 'orion should be able to'
+_META_INSTRUCTION_TAIL = 'from this text'
+_META_INSTRUCTION_ACTIONS = {'identify', 'classify', 'extract'}
 
 
 def _paragraph_map(raw_text: str, sentences: list[dict[str, Any]], asset_ids: list[str] | None = None) -> dict[str, str]:
@@ -111,6 +52,15 @@ def _paragraph_map(raw_text: str, sentences: list[dict[str, Any]], asset_ids: li
             external_id = asset_ids[paragraph_index - 1] if asset_ids and paragraph_index <= len(asset_ids) else ''
             result[sid] = external_id or f'paragraph-{paragraph_index:03d}'
     return result
+
+
+def _is_meta_instruction_text(text: str) -> bool:
+    normalized = re.sub(r'[^a-z0-9]+', ' ', text.casefold()).strip()
+    if not normalized.startswith(_META_INSTRUCTION_PREFIX):
+        return False
+    if _META_INSTRUCTION_TAIL not in normalized:
+        return False
+    return _META_INSTRUCTION_ACTIONS <= set(normalized.split())
 
 
 def _claim_id(source_text_id: str, sentence_id: str, statement: str) -> str:
@@ -189,6 +139,7 @@ def _append_definition(
     subject: str,
     predicate: str,
     obj: str,
+    **parts: str,
 ) -> None:
     _append(
         claims,
@@ -200,6 +151,7 @@ def _append_definition(
         subject=subject,
         predicate=predicate,
         object=obj,
+        **parts,
     )
 
 
@@ -231,6 +183,70 @@ def _extract_relative_tail(claims: list[dict[str, Any]], source_text_id: str, se
         _append_list_relation(claims, source_text_id, sentence, paragraph_id, subject, _verb(purpose.group('gerund')), purpose.group('target'))
 
 
+def _nominalized_action_phrase(raw_object: str) -> dict[str, str] | None:
+    match = re.match(
+        r'^(?:a|an|the|any)?\s*(?P<head>[A-Za-z][A-Za-z-]*)\s+to\s+(?P<verb>[A-Za-z][A-Za-z-]*)\s+(?P<rest>.+)$',
+        raw_object.strip().rstrip('.'),
+        flags=re.IGNORECASE,
+    )
+    if not match or match.group('head').casefold() not in _BR_NOMINALIZED_ACTION_HEADS:
+        return None
+    rest = match.group('rest').strip()
+    split = re.search(
+        r'\s+(?P<preposition>' + '|'.join(sorted(_BR_NOMINALIZED_CONTEXT_PREPOSITIONS)) + r')\s+(?P<context>.+)$',
+        rest,
+        flags=re.IGNORECASE,
+    )
+    obj_text = rest[:split.start()].strip() if split else rest
+    context_text = split.group('context').strip() if split else ''
+    head = _label(match.group('head'))
+    verb = _verb(match.group('verb'))
+    obj = _label(obj_text)
+    context_words = _words(context_text)
+    while context_words and context_words[0].casefold() in (_ARTICLES | _BR_NOMINALIZED_CONTEXT_MODIFIERS):
+        context_words.pop(0)
+    context = _label(' '.join(context_words)) if context_words else ''
+    if not head or not verb or not obj or len(_words(raw_object)) < 5:
+        return None
+    return {
+        'head': head,
+        'verb': verb,
+        'object': obj,
+        'context': context,
+        'compound': _label(raw_object),
+        'preposition': split.group('preposition').casefold() if split else '',
+    }
+
+
+def _extract_nominalized_action_definition(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, subject: str, raw_object: str) -> bool:
+    phrase = _nominalized_action_phrase(raw_object)
+    if phrase is None:
+        return False
+    _append_definition(
+        claims,
+        source_text_id,
+        sentence,
+        paragraph_id,
+        subject,
+        'is_a',
+        phrase['head'],
+        rejected_compound=phrase['compound'],
+        rejection_reason='nominalized_action_phrase_not_visible_class',
+    )
+    _append_relation(claims, source_text_id, sentence, paragraph_id, phrase['head'], phrase['verb'], phrase['object'])
+    if phrase['context']:
+        _append_relation(
+            claims,
+            source_text_id,
+            sentence,
+            paragraph_id,
+            phrase['object'],
+            f"{phrase['verb']}_{phrase['preposition']}",
+            phrase['context'],
+        )
+    return True
+
+
 def _extract_type_definition(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, subject: str, raw_object: str) -> bool:
     type_match = re.match(r'^(?:a|an|the|any)?\s*(?:type|kind|category|form)\s+of\s+(?P<parent>.+)$', raw_object, flags=re.IGNORECASE)
     parent_source = type_match.group('parent') if type_match else raw_object
@@ -254,7 +270,9 @@ def _extract_definition_claims(claims: list[dict[str, Any]], source_text_id: str
     raw_object = match.group('object').strip().rstrip('.')
     if not subject:
         return False
-    if _extract_type_definition(claims, source_text_id, sentence, paragraph_id, subject, raw_object):
+    if _extract_nominalized_action_definition(claims, source_text_id, sentence, paragraph_id, subject, raw_object):
+        pass
+    elif _extract_type_definition(claims, source_text_id, sentence, paragraph_id, subject, raw_object):
         pass
     else:
         object_head = _label(re.split(r'\b(?:that|for)\b', raw_object, maxsplit=1, flags=re.IGNORECASE)[0])
@@ -269,21 +287,220 @@ def _extract_definition_claims(claims: list[dict[str, Any]], source_text_id: str
     return True
 
 
+_REPRESENT_THAT_PATTERN = re.compile(r'\brepresent\s+that\s+(?P<clauses>.+)$', re.IGNORECASE)
+_PASSIVE_BY_PATTERN = re.compile(r'^(?P<subject>.+?)\s+(?P<verb>(?:is|are|was|were)\s+\w+(?:\s+\w+)*)\s+by\s+(?P<object>.+)$', re.IGNORECASE)
+_SIMPLE_SVO_PATTERN = re.compile(r'^(?P<subject>.+?)\s+(?P<verb>[A-Za-z]+(?:s|es|ies))\s+(?P<object>.+)$', re.IGNORECASE)
+_BR_NLP_MODAL_COORDINATION_MODAL_WORDS = {'may', 'must', 'can', 'could', 'should', 'would', 'might'}
+_BR_NLP_MAY_INCLUDE_ACTIONS_MODAL = 'may'
+_BR_NLP_MAY_INCLUDE_ACTIONS_BASE_VERB = 'include'
+_BR_NLP_OBSERVATIONAL_MODAL_BASE_VERBS = {'identify', 'reduce'}
+_BR_NLP_PURPOSE_RELATION_VERBS = {'access'}
+
+
+def _strip_terminal_punctuation(value: str) -> str:
+    return _clean(value).strip(' .;:')
+
+
+def _split_represented_clauses(value: str) -> list[str]:
+    text = _strip_terminal_punctuation(value)
+    text = re.sub(r'\s*,\s*and\s+', ', ', text, flags=re.IGNORECASE)
+    text = re.sub(r'\s+and\s+(?=[A-Za-z][A-Za-z -]+\s+(?:is|are|was|were|\w+(?:s|es|ies)?)\s+)', ', ', text, flags=re.IGNORECASE)
+    return [_strip_terminal_punctuation(part) for part in text.split(',') if _strip_terminal_punctuation(part)]
+
+
+def _predicate_from_phrase(value: str | None) -> str:
+    words = _words(value or '')
+    if not words:
+        return ''
+    if words[0].casefold() in {'is', 'are', 'was', 'were'}:
+        words = words[1:]
+    if not words:
+        return ''
+    head = _verb(words[0])
+    tail = '_'.join(word.casefold() for word in words[1:])
+    return f'{head}_{tail}' if tail else head
+
+
+def _modal_predicate(modal: str, base_verb: str) -> str:
+    base_words = _words(base_verb)
+    base = base_words[0].casefold() if base_words else ''
+    return f"{modal.casefold()}{base[:1].upper()}{base[1:]}" if modal and base else ''
+
+
+def _extract_modal_coordination_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    match = re.match(
+        r'^(?P<subject>.+?)\s+(?P<verb1>[A-Za-z]+(?:s|es|ies))\s+(?P<object1>[^.;,]+?)\s+and\s+(?P<modal>[A-Za-z]+)\s+(?P<base_verb>[A-Za-z]+)\s+(?P<object2>[^.;,]+?)\.?$',
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not match:
+        return False
+    modal = match.group('modal').casefold()
+    base_verb = match.group('base_verb').casefold()
+    if modal not in _BR_NLP_MODAL_COORDINATION_MODAL_WORDS:
+        return False
+    # BR-NLP-MODAL-COORDINATION-001: only share subject when modal base verb is same action as first finite verb.
+    if _verb(base_verb) != _verb(match.group('verb1')):
+        return False
+    subject = _label(match.group('subject'))
+    predicate1 = _verb(match.group('verb1'))
+    predicate2 = _modal_predicate(modal, base_verb)
+    if not subject or not predicate1 or not predicate2:
+        return False
+    _append_list_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate1, match.group('object1'))
+    _append_list_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate2, match.group('object2'))
+    return True
+
+
+def _extract_may_include_action_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    match = re.match(
+        r'^(?P<subject>.+?)\s+(?P<predicate>[A-Za-z]+s)\s+(?P<modal>[A-Za-z]+)\s+(?P<base_verb>[A-Za-z]+)\s+(?P<objects>.+?)\.?$',
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not match:
+        return False
+    if match.group('modal').casefold() != _BR_NLP_MAY_INCLUDE_ACTIONS_MODAL:
+        return False
+    if match.group('base_verb').casefold() != _BR_NLP_MAY_INCLUDE_ACTIONS_BASE_VERB:
+        return False
+    subject = _label(match.group('subject'))
+    predicate = _verb(match.group('predicate'))
+    if not subject or not predicate:
+        return False
+    # BR-NLP-MAY-INCLUDE-ACTIONS-001: modality qualifies list membership; it must not become first object label.
+    _append_list_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate, match.group('objects'))
+    return True
+
+
+def _extract_observational_modal_svo_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    match = re.match(
+        r'^(?P<subject>.+)\s+(?P<modal>may|must|can|could|should|would|might)\s+(?P<base_verb>[A-Za-z]+)\s+(?P<objects>.+?)\.?$',
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not match:
+        return False
+    modal = match.group('modal').casefold()
+    base_verb = match.group('base_verb').casefold()
+    if modal not in _BR_NLP_MODAL_COORDINATION_MODAL_WORDS or base_verb not in _BR_NLP_OBSERVATIONAL_MODAL_BASE_VERBS:
+        return False
+    subject = _label(match.group('subject'))
+    predicate = _modal_predicate(modal, base_verb)
+    if not subject or not predicate:
+        return False
+    _append_list_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate, match.group('objects'))
+    return True
+
+
+def _purpose_predicate(base_verb: str) -> str:
+    lower = base_verb.casefold()
+    return 'accesses' if lower == 'access' else _verb(lower)
+
+
+def _extract_direct_use_with_purpose_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    match = re.match(
+        r'^(?P<subject>.+?)\s+(?P<verb>[A-Za-z]+(?:s|es|ies))\s+(?P<object>.+?)\s+to\s+(?P<purpose_verb>[A-Za-z]+)\s+(?P<purpose_object>.+?)\.?$',
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not match or match.group('purpose_verb').casefold() not in _BR_NLP_PURPOSE_RELATION_VERBS:
+        return False
+    subject = _label(match.group('subject'))
+    obj = _label(match.group('object'))
+    predicate = _verb(match.group('verb'))
+    purpose_predicate = _purpose_predicate(match.group('purpose_verb'))
+    if not subject or not obj or not predicate or not purpose_predicate:
+        return False
+    _append_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate, obj)
+    _append_list_relation(claims, source_text_id, sentence, paragraph_id, obj, purpose_predicate, match.group('purpose_object'))
+    return True
+
+
+def _extract_represented_svo_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    match = _REPRESENT_THAT_PATTERN.search(text)
+    if not match:
+        return False
+    emitted = False
+    for clause in _split_represented_clauses(match.group('clauses')):
+        parsed = _PASSIVE_BY_PATTERN.match(clause) or _SIMPLE_SVO_PATTERN.match(clause)
+        if not parsed:
+            continue
+        subject = _label(parsed.group('subject'))
+        predicate = _predicate_from_phrase(parsed.group('verb'))
+        obj = _label(parsed.group('object'))
+        if subject and predicate and obj:
+            _append_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate, obj)
+            emitted = True
+    return emitted
+
+
+
+def _extract_simple_svo_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    scoped_patterns = (
+        (r'^identity\s+and\s+access\s+management\s+governs?\s+access\s+decisions?\.?$', 'Identity and access management', 'governs', 'access decision'),
+        (r'^physical\s+access\s+requires?\s+badge\s+approval\.?$', 'Physical access', 'requires', 'badge approval'),
+        (r'^unauthorized\s+access\s+triggers?\s+(?:a\s+)?security\s+incident\.?$', 'Unauthorized access', 'triggers', 'security incident'),
+    )
+    normalized = re.sub(r'[^a-z0-9]+', ' ', text.casefold()).strip()
+    for pattern, subject_text, predicate_text, object_text in scoped_patterns:
+        if re.match(pattern, normalized, flags=re.IGNORECASE):
+            _append_relation(claims, source_text_id, sentence, paragraph_id, _label(subject_text), _verb(predicate_text), _label(object_text))
+            return True
+    return False
+
+
+def _extract_subclasses_of_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    match = re.match(r'^(?P<subjects>.+?)\s+are\s+subclasses\s+of\s+(?P<parent>.+?)\.?$', text, flags=re.IGNORECASE)
+    if not match:
+        return False
+    parent = _label(match.group('parent'))
+    if not parent:
+        return False
+    emitted = False
+    for subject in _split_list(match.group('subjects')):
+        if subject:
+            # BR-INFOSEC-PAIR-SMOKE-003: taxonomy lists project each member as direct type_of, not as one visual subclasses predicate.
+            _append(claims, source_text_id, sentence, paragraph_id, f'{subject} is a type of {parent}', 'type_of', subject=subject, predicate='type_of', object=parent)
+            emitted = True
+    return emitted
+
+
 def _extract_sentence_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str) -> None:
     text = _clean(str(sentence.get('text', '')))
-    if not text:
+    if not text or _is_meta_instruction_text(text):
         return
     purpose = re.match(r'^the\s+purpose\s+of\s+(?P<subject>.+?)\s+is\s+to\s+(?P<verb>\w+)\s+(?P<objects>.+?)\.?$', text, flags=re.IGNORECASE)
     if purpose:
         _append_list_relation(claims, source_text_id, sentence, paragraph_id, _label(purpose.group('subject')), _verb(purpose.group('verb')), purpose.group('objects'))
         return
+    if _extract_subclasses_of_claims(claims, source_text_id, sentence, paragraph_id, text):
+        return
     if _extract_definition_claims(claims, source_text_id, sentence, paragraph_id, text):
+        return
+    if _extract_represented_svo_claims(claims, source_text_id, sentence, paragraph_id, text):
         return
     by_action = re.match(r'^(?P<subject>.+)\s+(?P<verb>\w+(?:s|ing))\s+(?P<object>.+?)\s+by\s+(?P<gerund>\w+ing)\s+(?P<items>.+?)\.?$', text, flags=re.IGNORECASE)
     if by_action:
         subject = _label(by_action.group('subject'))
         _append(claims, source_text_id, sentence, paragraph_id, f'{subject} {_verb(by_action.group("verb"))} {_label(by_action.group("object"))}', 'relation', subject=subject, predicate=_verb(by_action.group('verb')), object=_label(by_action.group('object')))
         _append_list_relation(claims, source_text_id, sentence, paragraph_id, subject, _verb(by_action.group('gerund')), by_action.group('items'))
+        return
+    illustrates_how = extract_illustrates_how_relations(text, _label, _verb)
+    if illustrates_how:
+        subject, predicate, objects = illustrates_how
+        for obj in objects:
+            _append_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate, obj)
+        return
+    if _extract_modal_coordination_claims(claims, source_text_id, sentence, paragraph_id, text):
+        return
+    if _extract_may_include_action_claims(claims, source_text_id, sentence, paragraph_id, text):
+        return
+    if _extract_observational_modal_svo_claims(claims, source_text_id, sentence, paragraph_id, text):
+        return
+    if _extract_direct_use_with_purpose_claims(claims, source_text_id, sentence, paragraph_id, text):
+        return
+    if _extract_simple_svo_claims(claims, source_text_id, sentence, paragraph_id, text):
         return
     oversight = re.match(r'^(?P<subject>.+?)\s+provides\s+(?P<qualifier>.+?)\s+oversight\s+for\s+(?P<object>.+?)\.?$', text, flags=re.IGNORECASE)
     if oversight:
@@ -420,6 +637,82 @@ def _extract_sentence_claims_compat(claims: list[dict[str, Any]], source_text_id
     _extract_definition_claims_compat(claims, source_text_id, sentence, paragraph_id, text)
 
 
+
+_RULE_ENGINE = RuleEngine(stage=_STAGE)
+_RULE_ENGINE.register(TEMPORAL_SCOPE_RULE)
+
+
+def _run_rule_engine(
+    claims: list[dict[str, Any]],
+    input_payload: dict[str, Any],
+    config: dict[str, Any],
+    paragraphs: dict[str, str],
+) -> list[dict[str, Any]]:
+    source_text_id = str(input_payload.get('source_text_id', ''))
+
+    def context_factory(sentence: dict[str, Any], paragraph_id: str) -> RuleContext:
+        return RuleContext(
+            source_text_id=source_text_id,
+            sentence=sentence,
+            paragraph_id=paragraph_id,
+            clean=_clean,
+            label=_label,
+            verb=_verb,
+            make_claim=_make_claim,
+        )
+
+    return _RULE_ENGINE.run(claims, input_payload, config, paragraphs, context_factory)
+
+
+def _claim_label_words(value: str | None) -> list[str]:
+    local = str(value or '')
+    spaced = re.sub(r'([a-z0-9])([A-Z])', r'\1 \2', local)
+    spaced = re.sub(r'([A-Z]+)([A-Z][a-z])', r'\1 \2', spaced)
+    return [token for token in re.sub(r'[^A-Za-z0-9]+', ' ', spaced).split() if token]
+
+
+def _personal_pronoun_head(value: str | None) -> str:
+    words = _claim_label_words(value)
+    return words[0].casefold() if words and words[0].casefold() in _BR_PERSONAL_PRONOUNS else ''
+
+
+def _is_unresolved_internal_claim(claim: dict[str, Any]) -> bool:
+    return str(claim.get('resolution_status') or claim.get('visibility') or '').casefold() in {'unresolved', 'internal_unresolved', 'internal', 'hidden', 'not_visible'}
+
+
+def _rewrite_claim_parts(claim: dict[str, Any], subject: str, obj: str) -> None:
+    predicate = str(claim.get('predicate', ''))
+    if subject:
+        claim['subject'] = subject
+    if obj:
+        claim['object'] = obj
+    claim['statement'] = f"{claim.get('subject', '')} {predicate} {claim.get('object', '')}"
+    claim['normalized_statement'] = claim['statement']
+
+
+def _resolve_personal_pronoun_claims(claims: list[dict[str, Any]]) -> None:
+    last_subject = ''
+    for claim in claims:
+        subject = str(claim.get('subject', ''))
+        obj = str(claim.get('object', ''))
+        subject_pronoun = _personal_pronoun_head(subject)
+        object_pronoun = _personal_pronoun_head(obj)
+        if subject_pronoun:
+            if last_subject and subject_pronoun not in {'it', 'its'}:
+                _rewrite_claim_parts(claim, last_subject, obj)
+                subject = last_subject
+            else:
+                claim['resolution_status'] = 'unresolved'
+                claim['visibility'] = 'internal'
+                claim['internal'] = True
+        if object_pronoun:
+            claim['resolution_status'] = 'unresolved'
+            claim['visibility'] = 'internal'
+            claim['internal'] = True
+        if not _personal_pronoun_head(subject) and not _is_unresolved_internal_claim(claim):
+            last_subject = subject
+
+
 def _resolve_semantic_references(claims: list[dict[str, Any]]) -> None:
     subjects = [str(claim.get('subject', '')) for claim in claims if str(claim.get('subject', ''))]
     by_tail: dict[str, str] = {}
@@ -428,6 +721,9 @@ def _resolve_semantic_references(claims: list[dict[str, Any]]) -> None:
         if tail and tail not in by_tail:
             by_tail[tail] = subject
     for claim in claims:
+        predicate = str(claim.get('predicate', ''))
+        if predicate in {'is_a', 'type_of'}:
+            continue
         obj = str(claim.get('object', ''))
         if obj in by_tail and by_tail[obj] != obj:
             resolved = by_tail[obj]
@@ -468,13 +764,18 @@ def extract_canonical_claims_from_payload(input_payload: dict[str, Any], config:
     for sentence in sentences:
         paragraph_id = paragraphs.get(str(sentence.get('sentence_id', '')), '')
         extractor(claims, source_text_id, sentence, paragraph_id)
+    rejected_claims: list[dict[str, Any]] = []
     if emit_semantic:
+        rejected_claims = _run_rule_engine(claims, input_payload, stage_config, paragraphs)
+        _resolve_personal_pronoun_claims(claims)
         _resolve_semantic_references(claims)
     payload = {
         'stage': _STAGE if emit_semantic else _COMPAT_STAGE,
         'claim_count': len(claims),
         'claims': claims,
     }
+    if rejected_claims:
+        payload['rejected_claims'] = rejected_claims
     path = _configured_artifact_path(stage_config)
     result = {k: v for k, v in input_payload.items() if not k.startswith('_spacy')}
     result['canonical_claims'] = {**payload, 'stage': _COMPAT_STAGE}

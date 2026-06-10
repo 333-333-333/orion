@@ -9,6 +9,7 @@
     "required_artifacts": [
       "artifacts/observed_p007_p008_semantic_claims.json",
       "artifacts/observed_p007_p008_graph_model.json",
+      "artifacts/observed_p007_p008_semantic_debug_ir.json",
       "artifacts/observed_p007_p008_output.rdf",
       "artifacts/observed_p007_p008_metrics.json"
     ],
@@ -24,5 +25,23 @@
     "p007",
     "p008"
   ],
-  "schema_version": 1
+  "schema_version": 1,
+  "semantic_debug_ir_contract": {
+    "artifact_name": "observed_p007_p008_semantic_debug_ir.json",
+    "entity_required": [
+      "id",
+      "label_or_canonical",
+      "source_or_source_sentence_when_available"
+    ],
+    "nominalized_ability_phrase_invariant": "AbilityToTraceActionToASpecificIdentity must not be emitted as a final visible class/entity; it must be decomposed into evidence-backed Ability, Action, Identity when those words appear in source, or recorded only in debug/rejected/context.",
+    "source_sentence": "Accountability is the ability to trace actions to a specific identity.",
+    "top_level_optional": [
+      "contexts",
+      "rejected"
+    ],
+    "top_level_required": [
+      "entities",
+      "relations"
+    ]
+  }
 }

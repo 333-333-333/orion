@@ -2,7 +2,7 @@
   "claim_count": 17,
   "claims": [
     {
-      "claim_id": "claim-8605b10b41cc2a70",
+      "claim_id": "claim-752fcdde77350519",
       "kind": "definition",
       "normalized_statement": "Credential is a Evidence",
       "object": "Evidence",
@@ -12,14 +12,14 @@
         "asset_id": "p009",
         "evidence": "A credential is evidence used to prove an identity.",
         "paragraph_id": "p009",
-        "sentence_id": "sent-b0cad2de1d7a1b39",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-13a5a606d376cc88",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "Credential is a Evidence",
       "subject": "Credential"
     },
     {
-      "claim_id": "claim-ce17cc52d26cbea1",
+      "claim_id": "claim-dd5c552cfbe74b9b",
       "kind": "definition",
       "normalized_statement": "Password is a Credential",
       "object": "Credential",
@@ -29,14 +29,14 @@
         "asset_id": "p009",
         "evidence": "A password is a type of credential.",
         "paragraph_id": "p009",
-        "sentence_id": "sent-492e2c6024e1f41b",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-8edac7bdb1fe0132",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "Password is a Credential",
       "subject": "Password"
     },
     {
-      "claim_id": "claim-01fdc25a305bf36a",
+      "claim_id": "claim-51434333fbad9b0e",
       "kind": "definition",
       "normalized_statement": "Certificate is a CryptographicCredential",
       "object": "CryptographicCredential",
@@ -46,14 +46,14 @@
         "asset_id": "p009",
         "evidence": "A certificate is a type of cryptographic credential.",
         "paragraph_id": "p009",
-        "sentence_id": "sent-e95c6437f3a54a97",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-27687275fbcc75df",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "Certificate is a CryptographicCredential",
       "subject": "Certificate"
     },
     {
-      "claim_id": "claim-1e4670d88c1e5241",
+      "claim_id": "claim-c0a21360a7258029",
       "kind": "definition",
       "normalized_statement": "AccessToken is a TemporaryCredential",
       "object": "TemporaryCredential",
@@ -63,14 +63,14 @@
         "asset_id": "p009",
         "evidence": "An access token is a type of temporary credential.",
         "paragraph_id": "p009",
-        "sentence_id": "sent-a956717126728896",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-11c9624882aabea9",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "AccessToken is a TemporaryCredential",
       "subject": "AccessToken"
     },
     {
-      "claim_id": "claim-aa7529dc1e6b52b6",
+      "claim_id": "claim-3f6b7c500d04cb4b",
       "kind": "definition",
       "normalized_statement": "APIKey is a Credential",
       "object": "Credential",
@@ -80,14 +80,14 @@
         "asset_id": "p009",
         "evidence": "An API key is a type of credential used by applications to authenticate requests.",
         "paragraph_id": "p009",
-        "sentence_id": "sent-cbc106fa944275d2",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-43a176d415c9802a",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "APIKey is a Credential",
       "subject": "APIKey"
     },
     {
-      "claim_id": "claim-1f39f043ac9a739a",
+      "claim_id": "claim-f037612ed908866f",
       "kind": "definition",
       "normalized_statement": "PrivateKey is a CryptographicSecret",
       "object": "CryptographicSecret",
@@ -97,14 +97,14 @@
         "asset_id": "p009",
         "evidence": "A private key is a type of cryptographic secret.",
         "paragraph_id": "p009",
-        "sentence_id": "sent-818392c83b6dc415",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-6f3e295a1372b43f",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "PrivateKey is a CryptographicSecret",
       "subject": "PrivateKey"
     },
     {
-      "claim_id": "claim-b2b238135ba6df0f",
+      "claim_id": "claim-2fa7dfe21d878faa",
       "kind": "relation",
       "normalized_statement": " access TokenMustExpireAfterADefinedPeriod",
       "object": "TokenMustExpireAfterADefinedPeriod",
@@ -114,13 +114,13 @@
         "asset_id": "p009",
         "evidence": "An access token must expire after a defined period.",
         "paragraph_id": "p009",
-        "sentence_id": "sent-f14bfa21f7fb18e9",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-c182738b4535c55f",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": " access TokenMustExpireAfterADefinedPeriod"
     },
     {
-      "claim_id": "claim-1be215a51d9d9681",
+      "claim_id": "claim-754f0029eb404a06",
       "kind": "relation",
       "normalized_statement": "MultiFactorAuthentication improves AuthenticationStrength",
       "object": "AuthenticationStrength",
@@ -130,14 +130,14 @@
         "asset_id": "p010",
         "evidence": "Multi-factor authentication improves authentication strength by requiring more than one verification factor.",
         "paragraph_id": "p010",
-        "sentence_id": "sent-b7c06b338c480d46",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-b470faa791898d98",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "MultiFactorAuthentication improves AuthenticationStrength",
       "subject": "MultiFactorAuthentication"
     },
     {
-      "claim_id": "claim-75b6536601192bbc",
+      "claim_id": "claim-3ea692ab02f334ff",
       "kind": "relation",
       "normalized_statement": "MultiFactorAuthentication requirs ThanOneVerificationFactor",
       "object": "ThanOneVerificationFactor",
@@ -147,14 +147,14 @@
         "asset_id": "p010",
         "evidence": "Multi-factor authentication improves authentication strength by requiring more than one verification factor.",
         "paragraph_id": "p010",
-        "sentence_id": "sent-b7c06b338c480d46",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-b470faa791898d98",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "MultiFactorAuthentication requirs ThanOneVerificationFactor",
       "subject": "MultiFactorAuthentication"
     },
     {
-      "claim_id": "claim-4b70be5df746613e",
+      "claim_id": "claim-c08e07f6bf7e419b",
       "kind": "definition",
       "normalized_statement": "KnowledgeFactor is a AuthenticationFactorBasedOnSomethingTheUserKnow",
       "object": "AuthenticationFactorBasedOnSomethingTheUserKnow",
@@ -164,14 +164,14 @@
         "asset_id": "p010",
         "evidence": "A knowledge factor is a type of authentication factor based on something the user knows.",
         "paragraph_id": "p010",
-        "sentence_id": "sent-9ff7b8df56cd75c4",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-a6bdcb2e023dbc8d",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "KnowledgeFactor is a AuthenticationFactorBasedOnSomethingTheUserKnow",
       "subject": "KnowledgeFactor"
     },
     {
-      "claim_id": "claim-d3df207bfd215ee1",
+      "claim_id": "claim-40188227f28e964b",
       "kind": "definition",
       "normalized_statement": "PossessionFactor is a AuthenticationFactorBasedOnSomethingTheUserHas",
       "object": "AuthenticationFactorBasedOnSomethingTheUserHas",
@@ -181,14 +181,14 @@
         "asset_id": "p010",
         "evidence": "A possession factor is a type of authentication factor based on something the user has.",
         "paragraph_id": "p010",
-        "sentence_id": "sent-31bf47201e4590c0",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-bab7e1c685d2ffbd",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "PossessionFactor is a AuthenticationFactorBasedOnSomethingTheUserHas",
       "subject": "PossessionFactor"
     },
     {
-      "claim_id": "claim-c180270fb10df3d7",
+      "claim_id": "claim-99412bf21f272b93",
       "kind": "definition",
       "normalized_statement": "InherenceFactor is a AuthenticationFactorBasedOnSomethingTheUserIs",
       "object": "AuthenticationFactorBasedOnSomethingTheUserIs",
@@ -198,14 +198,14 @@
         "asset_id": "p010",
         "evidence": "An inherence factor is a type of authentication factor based on something the user is.",
         "paragraph_id": "p010",
-        "sentence_id": "sent-e01974d23f212067",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-2f89e9f5987e51ab",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "InherenceFactor is a AuthenticationFactorBasedOnSomethingTheUserIs",
       "subject": "InherenceFactor"
     },
     {
-      "claim_id": "claim-e78df765770b5730",
+      "claim_id": "claim-a004d396e572c6d2",
       "kind": "definition",
       "normalized_statement": "Password is a KnowledgeFactor",
       "object": "KnowledgeFactor",
@@ -215,14 +215,14 @@
         "asset_id": "p010",
         "evidence": "A password is a knowledge factor.",
         "paragraph_id": "p010",
-        "sentence_id": "sent-6bfef1bffa92506c",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-93b7e434d445d2a3",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "Password is a KnowledgeFactor",
       "subject": "Password"
     },
     {
-      "claim_id": "claim-2e4d54dc53138c4e",
+      "claim_id": "claim-5dfd761e9ee7c209",
       "kind": "definition",
       "normalized_statement": "HardwareToken is a PossessionFactor",
       "object": "PossessionFactor",
@@ -232,14 +232,14 @@
         "asset_id": "p010",
         "evidence": "A hardware token is a possession factor.",
         "paragraph_id": "p010",
-        "sentence_id": "sent-3d84ed5ed0b855d6",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-868bbb2f6bbafa6c",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "HardwareToken is a PossessionFactor",
       "subject": "HardwareToken"
     },
     {
-      "claim_id": "claim-391befa51764a4ad",
+      "claim_id": "claim-b13af62ec7c42f53",
       "kind": "definition",
       "normalized_statement": "MobileAuthenticatorApplication is a PossessionFactor",
       "object": "PossessionFactor",
@@ -249,14 +249,14 @@
         "asset_id": "p010",
         "evidence": "A mobile authenticator application is a possession factor.",
         "paragraph_id": "p010",
-        "sentence_id": "sent-37243fa5c6990a87",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-558cc7bc53bf5e63",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "MobileAuthenticatorApplication is a PossessionFactor",
       "subject": "MobileAuthenticatorApplication"
     },
     {
-      "claim_id": "claim-12a236268883572c",
+      "claim_id": "claim-1fe8cafd78c61afa",
       "kind": "definition",
       "normalized_statement": "Fingerprint is a InherenceFactor",
       "object": "InherenceFactor",
@@ -266,14 +266,14 @@
         "asset_id": "p010",
         "evidence": "A fingerprint is an inherence factor.",
         "paragraph_id": "p010",
-        "sentence_id": "sent-887b75e515ab6255",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-dee41584c6f3ee3e",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "Fingerprint is a InherenceFactor",
       "subject": "Fingerprint"
     },
     {
-      "claim_id": "claim-9b8fc6a2d63f9d64",
+      "claim_id": "claim-ce2fef79a3c52193",
       "kind": "relation",
       "normalized_statement": "MultiFactorAuthentication reduces RiskOfUnauthorizedAccessCausedByStolenPassword",
       "object": "RiskOfUnauthorizedAccessCausedByStolenPassword",
@@ -283,8 +283,8 @@
         "asset_id": "p010",
         "evidence": "Multi-factor authentication reduces the risk of unauthorized access caused by stolen passwords.",
         "paragraph_id": "p010",
-        "sentence_id": "sent-62efdaefa73b4f39",
-        "source_text_id": "3946271c5abef2d91bf447f96e74f51e05a2bd360c707fa7855e70715e8381b4"
+        "sentence_id": "sent-c45f73fa6392b3ae",
+        "source_text_id": "c653d76ab8c38dccf5ef4fac497c002d59cc9757d4c2ca9e02747d0dab915b30"
       },
       "statement": "MultiFactorAuthentication reduces RiskOfUnauthorizedAccessCausedByStolenPassword",
       "subject": "MultiFactorAuthentication"

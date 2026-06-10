@@ -9,6 +9,7 @@
     "required_artifacts": [
       "artifacts/observed_p015_p016_semantic_claims.json",
       "artifacts/observed_p015_p016_graph_model.json",
+      "artifacts/observed_p015_p016_semantic_debug_ir.json",
       "artifacts/observed_p015_p016_output.rdf",
       "artifacts/observed_p015_p016_metrics.json"
     ],
@@ -24,5 +25,28 @@
     "p015",
     "p016"
   ],
-  "schema_version": 1
+  "schema_version": 1,
+  "semantic_debug_ir_contract": {
+    "artifact_name": "observed_p015_p016_semantic_debug_ir.json",
+    "entity_required": [
+      "id",
+      "label_or_canonical",
+      "source_or_source_sentence_when_available"
+    ],
+    "load_balancer_invariant": "Evidence-backed LoadBalancer distributes Traffic relation must exist; TrafficAcrossMultipleServer must be rejected/context/debug or absent from final entities; flowsAcross property must not be promoted from across multiple servers.",
+    "relation_required": [
+      "subject",
+      "predicate",
+      "object",
+      "source_sentence_or_evidence"
+    ],
+    "top_level_optional": [
+      "contexts",
+      "rejected"
+    ],
+    "top_level_required": [
+      "entities",
+      "relations"
+    ]
+  }
 }

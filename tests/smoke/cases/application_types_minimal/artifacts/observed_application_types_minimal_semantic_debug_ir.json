@@ -1,0 +1,49 @@
+{
+  "entities": [
+    {
+      "id": "WebApplication",
+      "label": "WebApplication",
+      "source_sentence": "A web application is a type of application."
+    },
+    {
+      "id": "Application",
+      "label": "Application",
+      "source_sentence": "A web application is a type of application."
+    },
+    {
+      "id": "MobileApplication",
+      "label": "MobileApplication",
+      "source_sentence": "A mobile application is a type of application."
+    }
+  ],
+  "relations": [
+    {
+      "id": "claim-7345a3735b26b7e8",
+      "object": "Application",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "application_types_001",
+        "evidence": "A web application is a type of application.",
+        "paragraph_id": "application_types_001",
+        "sentence_id": "sent-25e696384c32a3d4",
+        "source_text_id": "c0536708ca200bcaab780bed8b465d7d8e256f8d4a5fabccedd84ba8ba87472a"
+      },
+      "source_sentence": "A web application is a type of application.",
+      "subject": "WebApplication"
+    },
+    {
+      "id": "claim-8a825a22762d63d3",
+      "object": "Application",
+      "predicate": "is_a",
+      "source": {
+        "asset_id": "application_types_001",
+        "evidence": "A mobile application is a type of application.",
+        "paragraph_id": "application_types_001",
+        "sentence_id": "sent-6bbabf775dc96293",
+        "source_text_id": "c0536708ca200bcaab780bed8b465d7d8e256f8d4a5fabccedd84ba8ba87472a"
+      },
+      "source_sentence": "A mobile application is a type of application.",
+      "subject": "MobileApplication"
+    }
+  ]
+}

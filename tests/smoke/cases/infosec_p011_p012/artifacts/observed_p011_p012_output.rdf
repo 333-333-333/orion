@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/accessmodification">
+    <orion:changes rdf:resource="https://orion.local/resource/permissionassignedtoanidentity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/identityand">
+    <orion:access rdf:resource="https://orion.local/resource/managementcontrolthelifecycleofidentities"/>
+    <orion:access rdf:resource="https://orion.local/resource/account"/>
+    <orion:access rdf:resource="https://orion.local/resource/role"/>
+    <orion:access rdf:resource="https://orion.local/resource/permission"/>
+    <orion:access rdf:resource="https://orion.local/resource/credential"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/identitymanagementsystem">
+    <orion:stores rdf:resource="https://orion.local/resource/identityrecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/joiner">
+    <orion:process rdf:resource="https://orion.local/resource/createaccessforanewemployee"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/leaver">
+    <orion:process rdf:resource="https://orion.local/resource/removeaccesswhenapersonleavetheorganization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/mover">
+    <orion:process rdf:resource="https://orion.local/resource/changeaccesswhenapersonchangerole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/permission">
+    <orion:grants rdf:resource="https://orion.local/resource/actionoveraresource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/permissionreview">
+    <orion:verifies rdf:resource="https://orion.local/resource/whetherassignedpermissionremainnecessary"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/roleassignment">
+    <orion:links rdf:resource="https://orion.local/resource/roletoanidentity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/segregationof">
+    <orion:duties rdf:resource="https://orion.local/resource/preventonepersonfromcontrollingincompatibleactivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/userdeprovisioning">
+    <orion:disables rdf:resource="https://orion.local/resource/removeaccessforauser"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/usergroup">
+    <orion:shares rdf:resource="https://orion.local/resource/commonpermission"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/userprovisioning">
+    <orion:creates rdf:resource="https://orion.local/resource/newuseraccount"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/accessmodification">
     <rdfs:label>AccessModification</rdfs:label>
     <rdfs:comment>Access modification changes the permissions assigned to an identity.</rdfs:comment>
@@ -78,6 +121,7 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/permission">
     <rdfs:label>Permission</rdfs:label>
+    <rdfs:label>Permission roles subject object</rdfs:label>
     <rdfs:comment>A permission grants an action over a resource.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/permissionassignedtoanidentity">
@@ -278,6 +322,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/permission">
     <rdfs:label>Permission</rdfs:label>
+    <rdfs:label>Permission roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/permissionassignedtoanidentity">
     <rdfs:label>PermissionAssignedToAnIdentity</rdfs:label>

@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:orion="https://orion.local/resource/" xmlns:meta="https://orion.local/meta/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="https://orion.local/resource"/>
+  <rdf:Description rdf:about="https://orion.local/resource/anotherexample">
+    <orion:involves rdf:resource="https://orion.local/resource/remoteaccess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/assetowner">
+    <orion:classifies rdf:resource="https://orion.local/resource/customerdatabaseasrestrictedinformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/authorizationservice">
+    <orion:grants rdf:resource="https://orion.local/resource/accessbasedonroleassignment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/databaseserver">
+    <orion:runs rdf:resource="https://orion.local/resource/insideaproductionnetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/endpointdetectionandresponsetool">
+    <orion:monitors rdf:resource="https://orion.local/resource/laptop"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/firewall">
+    <orion:enforces rdf:resource="https://orion.local/resource/networkaccessrule"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/forexampleacustomerdatabase">
+    <orion:stores rdf:resource="https://orion.local/resource/personaldata"/>
+    <orion:stores rdf:resource="https://orion.local/resource/financialdata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/identityprovider">
+    <orion:verifies rdf:resource="https://orion.local/resource/employeeidentity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/laptop">
+    <orion:accesses rdf:resource="https://orion.local/resource/corporateapplication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/remoteemployee">
+    <orion:uses rdf:resource="https://orion.local/resource/laptop"/>
+    <orion:authenticates rdf:resource="https://orion.local/resource/throughmultifactorauthentication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityanalyst">
+    <orion:reviews rdf:resource="https://orion.local/resource/alertrelatedtothecustomerdatabase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securityinformationandeventmanagementsystem">
+    <orion:collects rdf:resource="https://orion.local/resource/auditlogfromthedatabaseserver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/securitypolicy">
+    <orion:requires rdf:resource="https://orion.local/resource/remoteemployeetoreportlostdeviceimmediately"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orion.local/resource/virtualprivatenetwork">
+    <orion:encrypts rdf:resource="https://orion.local/resource/communicationchannel"/>
+  </rdf:Description>
   <owl:Class rdf:about="https://orion.local/resource/accessbasedonroleassignment">
     <rdfs:label>AccessBasedOnRoleAssignment</rdfs:label>
   </owl:Class>
@@ -85,11 +129,10 @@
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/laptop">
     <rdfs:label>Laptop</rdfs:label>
+    <rdfs:label>Laptop roles subject object</rdfs:label>
     <rdfs:subClassOf rdf:resource="https://orion.local/resource/endpoint"/>
+    <rdfs:comment>A remote employee uses a laptop to access a corporate application.</rdfs:comment>
     <rdfs:comment>The laptop is an endpoint.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://orion.local/resource/laptoptoaccessacorporateapplication">
-    <rdfs:label>LaptopToAccessACorporateApplication</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://orion.local/resource/networkaccessrule">
     <rdfs:label>NetworkAccessRule</rdfs:label>
@@ -141,6 +184,11 @@
   <owl:Class rdf:about="https://orion.local/resource/webapplication">
     <rdfs:label>WebApplication</rdfs:label>
   </owl:Class>
+  <owl:ObjectProperty rdf:about="https://orion.local/resource/accesses">
+    <rdfs:label>Accesses</rdfs:label>
+    <rdfs:domain rdf:resource="https://orion.local/resource/laptop"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/corporateapplication"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://orion.local/resource/authenticates">
     <rdfs:label>Authenticates</rdfs:label>
     <rdfs:domain rdf:resource="https://orion.local/resource/remoteemployee"/>
@@ -209,7 +257,7 @@
   <owl:ObjectProperty rdf:about="https://orion.local/resource/uses">
     <rdfs:label>Uses</rdfs:label>
     <rdfs:domain rdf:resource="https://orion.local/resource/remoteemployee"/>
-    <rdfs:range rdf:resource="https://orion.local/resource/laptoptoaccessacorporateapplication"/>
+    <rdfs:range rdf:resource="https://orion.local/resource/laptop"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://orion.local/resource/verifies">
     <rdfs:label>Verifies</rdfs:label>
@@ -284,9 +332,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/laptop">
     <rdfs:label>Laptop</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://orion.local/resource/laptoptoaccessacorporateapplication">
-    <rdfs:label>LaptopToAccessACorporateApplication</rdfs:label>
+    <rdfs:label>Laptop roles subject object</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://orion.local/resource/networkaccessrule">
     <rdfs:label>NetworkAccessRule</rdfs:label>

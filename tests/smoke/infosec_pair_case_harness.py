@@ -10,6 +10,7 @@ from orion import ORION
 from pipeline.step_013_output_generation.rdf_strategy import serialize_graph_to_rdf_xml
 
 _RESOURCE_PREFIX = "https://orion.local/resource/"
+_RDFS_SUBCLASS_OF = "rdfs:subClassOf"
 _CAMEL_SPLIT = re.compile(r"([a-z])([A-Z])")
 
 
@@ -82,6 +83,57 @@ def _supported_claims(claims: list[dict[str, Any]], paragraph_texts: dict[str, s
     return supported, unsupported
 
 
+def _ttl_local_name(value: Any) -> str:
+    text = _ttl_resource_name(value)
+    return text.lower()
+
+
+def _ttl_resource_name(value: Any) -> str:
+    text = str(value or "").strip()
+    if text.startswith("orion:"):
+        text = text[len("orion:"):]
+    if text.startswith(_RESOURCE_PREFIX):
+        text = text[len(_RESOURCE_PREFIX):]
+    text = text.rsplit("/", 1)[-1].rsplit("#", 1)[-1]
+    return re.sub(r"[^A-Za-z0-9]", "", text)
+
+
+def _serialize_visual_turtle(graph: dict[str, Any]) -> str:
+    lines = [
+        "@prefix orion: <https://orion.local/resource/> .",
+        "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .",
+        "",
+    ]
+    facts = graph.get("facts") if isinstance(graph.get("facts"), list) else []
+    subclass_facts = graph.get("subclass_facts") if isinstance(graph.get("subclass_facts"), list) else []
+    triples: set[tuple[str, str, str]] = set()
+    subclass_triples: set[tuple[str, str]] = set()
+    for fact in facts:
+        if not isinstance(fact, dict):
+            continue
+        subject = _ttl_local_name(fact.get("subject"))
+        predicate = _ttl_local_name(fact.get("predicate"))
+        obj = _ttl_local_name(fact.get("object"))
+        if subject and predicate and obj:
+            triples.add((subject, predicate, obj))
+    for fact in subclass_facts:
+        if not isinstance(fact, dict) or fact.get("predicate") != _RDFS_SUBCLASS_OF:
+            continue
+        subject = _ttl_resource_name(fact.get("subject"))
+        obj = _ttl_resource_name(fact.get("object"))
+        if subject and obj:
+            subclass_triples.add((subject, obj))
+    lines.extend(
+        f"orion:{subject} orion:{predicate} orion:{obj} ."
+        for subject, predicate, obj in sorted(triples)
+    )
+    lines.extend(
+        f"orion:{subject} {_RDFS_SUBCLASS_OF} orion:{obj} ."
+        for subject, obj in sorted(subclass_triples)
+    )
+    return "\n".join(lines) + "\n"
+
+
 def _schema_counts(graph: dict[str, Any]) -> dict[str, int]:
     schema = graph.get("schema") if isinstance(graph.get("schema"), dict) else {}
     return {
@@ -96,17 +148,20 @@ def run_pair_case(
     paragraph_ids: list[str],
     tmp_path: Path,
     case_id: str | None = None,
+    fixture_dir: Path | None = None,
 ) -> dict[str, Any]:
     smoke_dir = case_dir.parents[1]
-    paragraph_dir = smoke_dir / "fixtures" / "infosec_3k_paragraphs"
+    paragraph_dir = fixture_dir or smoke_dir / "fixtures" / "infosec_3k_paragraphs"
     artifact_dir = case_dir / "artifacts"
     case_id = case_id or "_".join(paragraph_ids)
     semantic_path = artifact_dir / f"observed_{case_id}_semantic_claims.json"
     canonical_path = artifact_dir / f"observed_{case_id}_canonical_claims.json"
     graph_path = artifact_dir / f"observed_{case_id}_graph_model.json"
+    debug_ir_path = artifact_dir / f"observed_{case_id}_semantic_debug_ir.json"
     rdf_path = artifact_dir / f"observed_{case_id}_output.rdf"
+    ttl_path = artifact_dir / f"observed_{case_id}_output.ttl"
     metrics_path = artifact_dir / f"observed_{case_id}_metrics.json"
-    for path in (semantic_path, canonical_path, graph_path, rdf_path, metrics_path):
+    for path in (semantic_path, canonical_path, graph_path, debug_ir_path, rdf_path, ttl_path, metrics_path):
         if path.exists():
             path.unlink()
     artifact_dir.mkdir(parents=True, exist_ok=True)
@@ -121,6 +176,7 @@ def run_pair_case(
             "spacy_model": "en_core_web_lg",
             "output_strategy": "rdf",
             "semantic_claims": {"artifact_path": semantic_path, "paragraph_asset_ids": paragraph_ids},
+            "semantic_debug_ir": {"artifact_path": debug_ir_path, "paragraph_asset_ids": paragraph_ids},
             "canonical_claims": {"artifact_path": canonical_path, "paragraph_asset_ids": paragraph_ids},
         }
     )
@@ -141,6 +197,7 @@ def run_pair_case(
         rdf_xml = serialize_graph_to_rdf_xml(graph)
         if "<rdf:RDF" in rdf_xml:
             rdf_path.write_text(rdf_xml, encoding="utf-8")
+        ttl_path.write_text(_serialize_visual_turtle(graph), encoding="utf-8")
     claims = _claims(payload)
     supported, unsupported = _supported_claims(claims, paragraph_texts)
     counts = _schema_counts(graph)
@@ -161,7 +218,11 @@ def run_pair_case(
         "observed_stage": payload.get("observed_stage"),
         "rdf_generated": rdf_path.exists(),
         "rdf_bytes": rdf_path.stat().st_size if rdf_path.exists() else 0,
+        "ttl_generated": ttl_path.exists(),
+        "ttl_bytes": ttl_path.stat().st_size if ttl_path.exists() else 0,
         "graph_generated": graph_path.exists(),
+        "semantic_debug_ir_generated": debug_ir_path.exists(),
+        "semantic_debug_ir_path": str(debug_ir_path.relative_to(case_dir)),
         **counts,
     }
     metrics_path.write_text(
