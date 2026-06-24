@@ -5,7 +5,7 @@ title: Configure Structured Logging
 status: draft
 version: 0
 created_at: 2026-05-30
-updated_at: 2026-05-30
+updated_at: 2026-06-23
 summary: Host application configures an ORION log sink for traceable pipeline events without changing global logging behavior.
 tags:
   - user-story
@@ -27,6 +27,7 @@ related_ucs:
   - UC-004
   - UC-005
   - UC-006
+related_scenarios: [SCN-007]
 related_reqs:
   - FUN-014
   - FUN-015
@@ -61,6 +62,7 @@ As a host application, I want to configure an ORION log sink so I can observe tr
 - AC-3 (FUN-014, FUN-015, NFR-006, NFR-007, NFR-008, CON-009, CON-010): Enabling the sink does not change global logging behavior outside the ORION library boundary.
 
 ## Traceability
+- Related scenarios: SCN-007
 - Related requirements: FUN-014, FUN-015, NFR-006, NFR-007, NFR-008, CON-009, CON-010
 - Related use cases: UC-001, UC-002, UC-003, UC-004, UC-005, UC-006
 - Source: docs/requirements

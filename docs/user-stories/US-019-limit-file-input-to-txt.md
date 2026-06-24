@@ -5,7 +5,7 @@ title: Limit File Input to TXT
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application fails early on unsupported file types.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-003]
 related_reqs:
   - CON-006
   - FUN-004
@@ -51,6 +52,7 @@ As a host application, I want file input limited to .txt so I can fail early on 
 - AC-3 (CON-006, FUN-004): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-003
 - Related requirements: CON-006, FUN-004
 - Source: docs/requirements
 - Related user stories: None

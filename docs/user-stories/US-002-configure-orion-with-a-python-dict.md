@@ -5,7 +5,7 @@ title: Configure ORION with a Python Dict
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application configures ORION natively with a Python dict.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-001]
 related_reqs:
   - FUN-002
   - CON-007
@@ -52,6 +53,7 @@ As a host application, I want to pass a Python dict at setup so I can configure 
 - AC-3 (FUN-002, CON-007, NFR-004): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-001
 - Related requirements: FUN-002, CON-007, NFR-004
 - Source: docs/requirements
 - Related user stories: None

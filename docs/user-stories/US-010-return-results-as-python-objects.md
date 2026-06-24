@@ -5,7 +5,7 @@ title: Return Results as Python Objects
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application reads results directly without parsing blobs.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-005]
 related_reqs:
   - FUN-010
   - NFR-003
@@ -52,6 +53,7 @@ As a host application, I want Python result objects so I can read output directl
 - AC-3 (FUN-010, NFR-003, NFR-004): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-005
 - Related requirements: FUN-010, NFR-003, NFR-004
 - Source: docs/requirements
 - Related user stories: None

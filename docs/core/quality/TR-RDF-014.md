@@ -1,7 +1,0 @@
-# TR-RDF-014 WebVOWL object property overload RED
-
-- UC-SMOKE-001 AF-24 -> test_infosec_3k_webvowl_objectproperty_must_not_publish_multi_domain_or_multi_range_red_smoke
-- FUN-SMOKE-001 AC-26 -> test_infosec_3k_webvowl_objectproperty_must_not_publish_multi_domain_or_multi_range_red_smoke
-- CON-SMOKE-RDF-021 AC-1 -> test_infosec_3k_webvowl_objectproperty_must_not_publish_multi_domain_or_multi_range_red_smoke
-- BR-SMOKE-055 -> test_infosec_3k_webvowl_objectproperty_must_not_publish_multi_domain_or_multi_range_red_smoke
-- BR-SMOKE-056 -> test_infosec_3k_webvowl_objectproperty_must_not_publish_multi_domain_or_multi_range_red_smoke

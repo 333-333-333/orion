@@ -1,8 +1,0 @@
-@prefix orion: <https://orion.local/resource/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-orion:identityandaccessmanagement orion:governs orion:accessdecision .
-orion:keymanagementservice orion:stores orion:cryptographickey .
-orion:physicalaccess orion:requires orion:badgeapproval .
-orion:recoverypointobjective orion:defines orion:maximumtolerabledataloss .
-orion:unauthorizedaccess orion:triggers orion:securityincident .

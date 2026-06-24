@@ -5,7 +5,7 @@ title: Use Python Dict as Primary Config Format
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application configures ORION with Python-native data.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-001]
 related_reqs:
   - CON-007
   - FUN-002
@@ -51,6 +52,7 @@ As a host application, I want Python dict to be the primary config format so I c
 - AC-3 (CON-007, FUN-002): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-001
 - Related requirements: CON-007, FUN-002
 - Source: docs/requirements
 - Related user stories: None

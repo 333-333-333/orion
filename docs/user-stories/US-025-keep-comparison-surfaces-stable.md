@@ -5,7 +5,7 @@ title: Keep Comparison Surfaces Stable
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application keeps automated tests reliable for outputs and errors.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-004]
 related_reqs:
   - NFR-005
   - FUN-006
@@ -54,6 +55,7 @@ As a host application, I want stable comparison surfaces for outputs and errors 
 - AC-3 (NFR-005, FUN-006, FUN-007, FUN-009, FUN-013): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-004
 - Related requirements: NFR-005, FUN-006, FUN-007, FUN-009, FUN-013
 - Source: docs/requirements
 - Related user stories: None

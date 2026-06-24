@@ -5,7 +5,7 @@ title: Record Traceability for Ontology Elements
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application traces each ontology element back to source text.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-006]
 related_reqs:
   - FUN-011
   - NFR-002
@@ -51,6 +52,7 @@ As a host application, I want ontology elements to carry traceability so I can t
 - AC-3 (FUN-011, NFR-002): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-006
 - Related requirements: FUN-011, NFR-002
 - Source: docs/requirements
 - Related user stories: None

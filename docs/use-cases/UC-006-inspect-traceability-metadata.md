@@ -5,7 +5,7 @@ title: Inspect Traceability Metadata
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host Application inspects traceability metadata attached to ORION outputs.
 tags: [orion, traceability, metadata, host-application]
 domain: orion
@@ -18,6 +18,7 @@ primary_actor: ACT-001
 secondary_actors: []
 priority: High
 related_acts: [ACT-001]
+related_ucm: [UCM-001]
 related_reqs: [FUN-011, FUN-012, NFR-002]
 related_user_stories: [US-011, US-012, US-022]
 related_brs: []
@@ -88,6 +89,7 @@ None; no BR docs exist for this flow.
 - Use ORION-specific exceptions for traceability failures. [FUN-013]
 
 ## Traceability
+- Related model: UCM-001
 - Related reqs: FUN-011, FUN-012, NFR-002
 - Related user stories: US-011, US-012, US-022
 - Related actor: ACT-001
@@ -97,6 +99,7 @@ None; no BR docs exist for this flow.
 None.
 
 ## Cross-References
+- UCM: UCM-001
 - ACT: ACT-001
 - Requirements: FUN-011, FUN-012, NFR-002
 - User stories: US-011, US-012, US-022

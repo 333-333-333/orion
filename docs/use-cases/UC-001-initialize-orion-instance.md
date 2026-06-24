@@ -5,7 +5,7 @@ title: Initialize ORION Instance
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host Application initializes ORION in-process with a valid configuration object.
 tags: [orion, initialization, library-only, host-application]
 domain: orion
@@ -18,6 +18,7 @@ primary_actor: ACT-001
 secondary_actors: []
 priority: High
 related_acts: [ACT-001]
+related_ucm: [UCM-001]
 related_reqs: [FUN-001, FUN-002, FUN-005, CON-001, CON-002, CON-003, CON-004, CON-005, CON-007, CON-008, NFR-004]
 related_user_stories: [US-001, US-002, US-005, US-014, US-015, US-016, US-017, US-018, US-020, US-021, US-024]
 related_brs: []
@@ -88,6 +89,7 @@ None; no BR docs exist for this flow.
 - Failure should use ORION-specific exceptions, not generic runtime errors. [FUN-013]
 
 ## Traceability
+- Related model: UCM-001
 - Related reqs: FUN-001, FUN-002, FUN-005, CON-001, CON-002, CON-003, CON-004, CON-005, CON-007, CON-008, NFR-004
 - Related user stories: US-001, US-002, US-005, US-014, US-015, US-016, US-017, US-018, US-020, US-021, US-024
 - Related actor: ACT-001
@@ -98,6 +100,7 @@ None; no BR docs exist for this flow.
 None.
 
 ## Cross-References
+- UCM: UCM-001
 - ACT: ACT-001
 - Requirements: FUN-001, FUN-002, FUN-005, CON-001, CON-002, CON-003, CON-004, CON-005, CON-007, CON-008, NFR-004
 - User stories: US-001, US-002, US-005, US-014, US-015, US-016, US-017, US-018, US-020, US-021, US-024

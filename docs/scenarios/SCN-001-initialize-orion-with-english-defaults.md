@@ -16,7 +16,7 @@ source: docs/use-cases/UC-001-initialize-orion-instance.md
 change_ref: CHG-SCN-FROM-UC
 related_ucs: [UC-001]
 related_reqs: [FUN-001, FUN-002, FUN-005, CON-001, CON-002, CON-007, CON-008, NFR-004]
-related_user_stories: [US-001, US-002, US-005, US-014, US-015, US-017, US-020, US-021]
+related_user_stories: [US-001, US-002, US-005, US-014, US-015, US-016, US-017, US-018, US-020, US-021, US-024]
 related_brs: []
 related_adrs: []
 owner: herodotus
@@ -81,9 +81,12 @@ ORION returns an initialized in-process instance with English as the default lan
 - US-005
 - US-014
 - US-015
+- US-016
 - US-017
+- US-018
 - US-020
 - US-021
+- US-024
 - FUN-001
 - FUN-002
 - FUN-005

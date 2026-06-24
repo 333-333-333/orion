@@ -5,7 +5,7 @@ title: Use English and Spanish Initially
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application uses the declared initial language set.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-001]
 related_reqs:
   - CON-004
   - FUN-005
@@ -51,6 +52,7 @@ As a host application, I want English and Spanish as the initial languages so I 
 - AC-3 (CON-004, FUN-005): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-001
 - Related requirements: CON-004, FUN-005
 - Source: docs/requirements
 - Related user stories: None

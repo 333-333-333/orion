@@ -5,7 +5,7 @@ title: Process Text from a TXT File
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application sends a .txt file path for file-based text processing.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-003]
 related_reqs:
   - FUN-004
   - CON-006
@@ -53,6 +54,7 @@ As a host application, I want to send a .txt file path as input so I can process
 - AC-3 (FUN-004, CON-006, NFR-001, NFR-005): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-003
 - Related requirements: FUN-004, CON-006, NFR-001, NFR-005
 - Source: docs/requirements
 - Related user stories: None

@@ -1,0 +1,57 @@
+---
+id: MOD-preprocessing
+type: code-module
+title: Preprocessing Pipeline Step
+status: draft
+version: 0
+created_at: 2026-06-23
+updated_at: 2026-06-23
+summary: Domain-agnostic text normalization before sentence segmentation and downstream semantic processing.
+paths:
+  - src/pipeline/step_002_preprocessing/**
+implements:
+  - US-003
+  - US-004
+  - US-025
+  - US-026
+related_requirements:
+  - FUN-003
+  - FUN-004
+  - NFR-001
+  - NFR-005
+related_adrs:
+  []
+owner: herodotus
+---
+
+# MOD-preprocessing — Preprocessing Pipeline Step
+
+## Summary
+
+Domain-agnostic text normalization before sentence segmentation and downstream semantic processing.
+
+## Paths
+
+- `src/pipeline/step_002_preprocessing/**`
+
+## Implements
+
+- US-003
+- US-004
+- US-025
+- US-026
+
+## Related Requirements
+
+- FUN-003
+- FUN-004
+- NFR-001
+- NFR-005
+
+## Related ADRs
+
+- None.
+
+## Traceability Notes
+
+This artifact provides Code -> Knowledge traceability for the listed source paths. Tests are intentionally not represented as persisted test-result artifacts; validation evidence should come from executable tests and CI/run output.

@@ -5,7 +5,7 @@ title: Persist Structured Logs
 status: draft
 version: 0
 created_at: 2026-05-30
-updated_at: 2026-05-30
+updated_at: 2026-06-23
 summary: Host application opts into JSONL persistence for auditable ORION processing events.
 tags:
   - user-story
@@ -27,6 +27,7 @@ related_ucs:
   - UC-004
   - UC-005
   - UC-006
+related_scenarios: [SCN-007]
 related_reqs:
   - FUN-016
   - NFR-006
@@ -59,6 +60,7 @@ As a host application, I want to opt into JSONL log persistence so I can keep au
 - AC-3 (FUN-016, NFR-006, NFR-007, NFR-008, CON-011): Persistence remains optional and only affects ORION library behavior when requested by the host application.
 
 ## Traceability
+- Related scenarios: SCN-007
 - Related requirements: FUN-016, NFR-006, NFR-007, NFR-008, CON-011
 - Related use cases: UC-001, UC-002, UC-003, UC-004, UC-005, UC-006
 - Source: docs/requirements

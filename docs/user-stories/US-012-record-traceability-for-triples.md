@@ -5,7 +5,7 @@ title: Record Traceability for Triples
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application traces each triple back to source context.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-006]
 related_reqs:
   - FUN-012
   - NFR-002
@@ -51,6 +52,7 @@ As a host application, I want triples to carry traceability so I can trace each 
 - AC-3 (FUN-012, NFR-002): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-006
 - Related requirements: FUN-012, NFR-002
 - Source: docs/requirements
 - Related user stories: None

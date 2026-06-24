@@ -1,0 +1,23 @@
+# Python/runtime noise
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# OS/editor noise
+.DS_Store
+.pi/
+
+# Ephemeral local scratch
+.tmp_check_rdf.xml
+tmp.jsonl
+tmp.txt
+
+# Ephemeral generated test results, task breakdowns, and graph cache
+# Canonical knowledge artifacts live under docs/{actors,requirements,use-cases,scenarios,user-stories,...}
+graphify-out/
+docs/core/quality/
+tests/traceability/
+tests/smoke/artifacts/
+tests/smoke/cases/*/artifacts/
+tests/smoke/cases/*/docs/

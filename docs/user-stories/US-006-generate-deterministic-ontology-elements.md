@@ -5,7 +5,7 @@ title: Generate Deterministic Ontology Elements
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application compares ontology elements across repeated runs.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-004]
 related_reqs:
   - FUN-006
   - NFR-001
@@ -52,6 +53,7 @@ As a host application, I want deterministic ontology elements so I can compare r
 - AC-3 (FUN-006, NFR-001, NFR-005): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-004
 - Related requirements: FUN-006, NFR-001, NFR-005
 - Source: docs/requirements
 - Related user stories: None

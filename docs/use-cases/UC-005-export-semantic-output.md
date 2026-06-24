@@ -5,7 +5,7 @@ title: Export Semantic Output
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host Application exports ORION semantic output as a serializable result.
 tags: [orion, export, serialization, host-application]
 domain: orion
@@ -18,6 +18,7 @@ primary_actor: ACT-001
 secondary_actors: []
 priority: High
 related_acts: [ACT-001]
+related_ucm: [UCM-001]
 related_reqs: [FUN-008, FUN-010, NFR-003, NFR-004]
 related_user_stories: [US-008, US-010]
 related_brs: []
@@ -94,6 +95,7 @@ None; no BR docs exist for this flow.
 - Use ORION-specific exceptions for serialization and state failures. [FUN-013]
 
 ## Traceability
+- Related model: UCM-001
 - Related reqs: FUN-008, FUN-010, NFR-003, NFR-004
 - Related user stories: US-008, US-010
 - Related actor: ACT-001
@@ -103,6 +105,7 @@ None; no BR docs exist for this flow.
 None.
 
 ## Cross-References
+- UCM: UCM-001
 - ACT: ACT-001
 - Requirements: FUN-008, FUN-010, NFR-003, NFR-004
 - User stories: US-008, US-010

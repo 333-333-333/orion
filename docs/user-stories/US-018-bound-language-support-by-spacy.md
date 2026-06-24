@@ -5,7 +5,7 @@ title: Bound Language Support by spaCy
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application requests only supported languages bounded by spaCy models.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-001]
 related_reqs:
   - CON-005
   - FUN-005
@@ -51,6 +52,7 @@ As a host application, I want language support bounded by spaCy models so I can 
 - AC-3 (CON-005, FUN-005): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-001
 - Related requirements: CON-005, FUN-005
 - Source: docs/requirements
 - Related user stories: None

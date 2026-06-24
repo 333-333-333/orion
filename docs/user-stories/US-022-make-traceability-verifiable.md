@@ -5,7 +5,7 @@ title: Make Traceability Verifiable
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application tests provenance data directly.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-006]
 related_reqs:
   - NFR-002
   - FUN-011
@@ -52,6 +53,7 @@ As a host application, I want traceability to be verifiable so I can test proven
 - AC-3 (NFR-002, FUN-011, FUN-012): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-006
 - Related requirements: NFR-002, FUN-011, FUN-012
 - Source: docs/requirements
 - Related user stories: None

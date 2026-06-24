@@ -1,7 +1,0 @@
-# TR-REL-005 Coreference Stage Integration Before Relation Extraction
-
-- UC-COREF-PIPE-001 MF-1 -> test_orion_process_inserts_coreference_stage_before_relation_and_propagates_coref_artifacts_red
-- FUN-COREF-PIPE-001 AC-1 -> test_orion_process_inserts_coreference_stage_before_relation_and_propagates_coref_artifacts_red
-- FUN-COREF-PIPE-001 AC-2 -> test_orion_process_inserts_coreference_stage_before_relation_and_propagates_coref_artifacts_red
-- BR-COREF-PIPE-001 -> test_orion_process_inserts_coreference_stage_before_relation_and_propagates_coref_artifacts_red
-- BR-REL-007 -> test_orion_process_inserts_coreference_stage_before_relation_and_propagates_coref_artifacts_red

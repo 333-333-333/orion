@@ -5,7 +5,7 @@ title: Select Language with English Default
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application chooses a processing language with English as the default.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-001]
 related_reqs:
   - FUN-005
   - CON-004
@@ -53,6 +54,7 @@ As a host application, I want to choose the processing language and get English 
 - AC-3 (FUN-005, CON-004, CON-005, NFR-001): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-001
 - Related requirements: FUN-005, CON-004, CON-005, NFR-001
 - Source: docs/requirements
 - Related user stories: None

@@ -1,5 +1,0 @@
-@prefix orion: <https://orion.local/resource/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-orion:MobileApplication rdfs:subClassOf orion:Application .
-orion:WebApplication rdfs:subClassOf orion:Application .

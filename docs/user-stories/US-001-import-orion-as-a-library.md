@@ -5,7 +5,7 @@ title: Import ORION as a Library
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application imports and instantiates ORION in-process without a separate process.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-001]
 related_reqs:
   - FUN-001
   - CON-001
@@ -53,6 +54,7 @@ As a host application, I want to import and instantiate ORION in-process so I ca
 - AC-3 (FUN-001, CON-001, CON-002, NFR-004): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-001
 - Related requirements: FUN-001, CON-001, CON-002, NFR-004
 - Source: docs/requirements
 - Related user stories: None

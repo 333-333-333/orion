@@ -5,7 +5,7 @@ title: Process TXT File Input
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host Application submits a TXT file and ORION processes its text content in-process.
 tags: [orion, txt-file, file-input, host-application]
 domain: orion
@@ -18,6 +18,7 @@ primary_actor: ACT-001
 secondary_actors: []
 priority: High
 related_acts: [ACT-001]
+related_ucm: [UCM-001]
 related_reqs: [FUN-004, CON-006, NFR-001, NFR-005]
 related_user_stories: [US-004, US-019]
 related_brs: []
@@ -89,6 +90,7 @@ None; no BR docs exist for this flow.
 - Use ORION-specific exceptions for file validation and runtime failures. [FUN-013]
 
 ## Traceability
+- Related model: UCM-001
 - Related reqs: FUN-004, CON-006, NFR-001, NFR-005
 - Related user stories: US-004, US-019
 - Related actor: ACT-001
@@ -98,6 +100,7 @@ None; no BR docs exist for this flow.
 None.
 
 ## Cross-References
+- UCM: UCM-001
 - ACT: ACT-001
 - Requirements: FUN-004, CON-006, NFR-001, NFR-005
 - User stories: US-004, US-019

@@ -5,7 +5,7 @@ title: Keep Deterministic Reproducibility
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application repeats runs with matching results under pinned inputs and environment.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-004]
 related_reqs:
   - NFR-001
   - CON-003
@@ -54,6 +55,7 @@ As a host application, I want deterministic reproducibility under pinned inputs 
 - AC-3 (NFR-001, CON-003, FUN-006, FUN-007, FUN-009): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-004
 - Related requirements: NFR-001, CON-003, FUN-006, FUN-007, FUN-009
 - Source: docs/requirements
 - Related user stories: None

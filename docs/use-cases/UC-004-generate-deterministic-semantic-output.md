@@ -5,7 +5,7 @@ title: Generate Deterministic Semantic Output
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host Application requests deterministic semantic generation and ORION returns stable semantic output.
 tags: [orion, semantic-generation, deterministic, rdf, owl]
 domain: orion
@@ -18,6 +18,7 @@ primary_actor: ACT-001
 secondary_actors: []
 priority: High
 related_acts: [ACT-001]
+related_ucm: [UCM-001]
 related_reqs: [FUN-006, FUN-007, FUN-009, NFR-001, NFR-003, NFR-005]
 related_user_stories: [US-006, US-007, US-009, US-023, US-025, US-026]
 related_brs: []
@@ -94,6 +95,7 @@ None; no BR docs exist for this flow.
 - Use ORION-specific exceptions for generation failures. [FUN-013]
 
 ## Traceability
+- Related model: UCM-001
 - Related reqs: FUN-006, FUN-007, FUN-009, NFR-001, NFR-003, NFR-005
 - Related user stories: US-006, US-007, US-009, US-023, US-025, US-026
 - Related actor: ACT-001
@@ -103,6 +105,7 @@ None; no BR docs exist for this flow.
 None.
 
 ## Cross-References
+- UCM: UCM-001
 - ACT: ACT-001
 - Requirements: FUN-006, FUN-007, FUN-009, NFR-001, NFR-003, NFR-005
 - User stories: US-006, US-007, US-009, US-023, US-025, US-026

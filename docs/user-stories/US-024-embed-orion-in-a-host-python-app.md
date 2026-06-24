@@ -5,7 +5,7 @@ title: Embed ORION in a Host Python App
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application calls ORION in-process from another Python app.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-001]
 related_reqs:
   - NFR-004
   - FUN-001
@@ -54,6 +55,7 @@ As a host application, I want ORION to be easy to embed in another Python app so
 - AC-3 (NFR-004, FUN-001, FUN-002, FUN-008, FUN-010): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-001
 - Related requirements: NFR-004, FUN-001, FUN-002, FUN-008, FUN-010
 - Source: docs/requirements
 - Related user stories: None

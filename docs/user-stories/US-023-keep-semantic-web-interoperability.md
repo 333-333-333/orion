@@ -5,7 +5,7 @@ title: Keep Semantic Web Interoperability
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application uses standard RDF/OWL tooling with ORION output.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-004]
 related_reqs:
   - NFR-003
   - FUN-007
@@ -53,6 +54,7 @@ As a host application, I want semantic-web interoperable outputs so I can use st
 - AC-3 (NFR-003, FUN-007, FUN-008, CON-003): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-004
 - Related requirements: NFR-003, FUN-007, FUN-008, CON-003
 - Source: docs/requirements
 - Related user stories: None

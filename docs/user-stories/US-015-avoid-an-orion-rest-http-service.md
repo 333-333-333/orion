@@ -5,7 +5,7 @@ title: Avoid an ORION REST/HTTP Service
 status: draft
 version: 0
 created_at: 2026-05-29
-updated_at: 2026-05-29
+updated_at: 2026-06-23
 summary: Host application embeds ORION without network plumbing.
 tags:
   - user-story
@@ -20,6 +20,7 @@ systems:
 source: docs/requirements
 change_ref: CHG-US-FROM-REQS
 related_ucs: []
+related_scenarios: [SCN-001]
 related_reqs:
   - CON-002
   - FUN-001
@@ -51,6 +52,7 @@ As a host application, I want ORION to avoid its own REST/HTTP service so I can 
 - AC-3 (CON-002, FUN-001): The host application can use the described behavior from Python code.
 
 ## Traceability
+- Related scenarios: SCN-001
 - Related requirements: CON-002, FUN-001
 - Source: docs/requirements
 - Related user stories: None
