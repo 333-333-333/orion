@@ -35,9 +35,8 @@ def _annotate_tokens_with_cached_active_doc(self: Any, input_payload: dict[str, 
     doc_tokens = _extract_doc_tokens(doc)
 
     annotated_tokens: list[dict[str, Any]] = []
-    fallback_index = 0
     for token in input_payload["tokens"]:
-        matched_doc_token, fallback_index = _find_matching_doc_token(token, doc_tokens, fallback_index)
+        matched_doc_token = _find_matching_doc_token(token, doc_tokens)
         lemma = token["text"]
         pos = ""
         tag = ""

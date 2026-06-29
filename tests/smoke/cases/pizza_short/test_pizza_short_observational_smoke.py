@@ -105,6 +105,44 @@ def test_task_pizza_red_001_pm_abbreviation_stays_in_single_sentence(tmp_path: P
     assert any("12:18 p.m." in text for text in texts)
 
 
+def test_task_pizza_red_001_possessive_suffix_does_not_shift_linguistic_annotation(tmp_path: Path):
+    # TASK-PIZZA-RED-001 | FUN-PIZZA-SMOKE AC-5 | BR-PIZZA-POSSESSIVE-001
+    _metrics(tmp_path)
+    token_payload = _read_json_artifact("pipeline_outputs/observed_pizza_short_04_tokenization.json")
+    annotated_payload = _read_json_artifact("pipeline_outputs/observed_pizza_short_05_linguistic_annotation.json")
+    token_texts = [str(token.get("text") or "") for token in token_payload.get("tokens", [])]
+    annotated_tokens = annotated_payload.get("tokens", [])
+    annotated_texts = [str(token.get("text") or "") for token in annotated_tokens]
+
+    possessive_windows = [
+        index
+        for index in range(len(token_texts) - 2)
+        if token_texts[index : index + 3] == ["Mario", "'s", "Pizzeria"]
+    ]
+    legacy_split_windows = [
+        index
+        for index in range(len(token_texts) - 3)
+        if token_texts[index : index + 4] == ["Mario", "'", "s", "Pizzeria"]
+    ]
+
+    assert possessive_windows
+    assert legacy_split_windows == []
+    assert annotated_texts == token_texts
+
+    expected_next_pos = {"in": "ADP", ".": "PUNCT", "on": "ADP", ",": "PUNCT"}
+    for index in possessive_windows:
+        mario, suffix, pizzeria = annotated_tokens[index : index + 3]
+        assert mario["lemma"] == "Mario"
+        assert mario["pos"] == "PROPN"
+        assert suffix["lemma"] == "'s"
+        assert suffix["tag"] == "POS"
+        assert pizzeria["lemma"] == "Pizzeria"
+        assert pizzeria["pos"] == "PROPN"
+
+        next_token = annotated_tokens[index + 3]
+        assert next_token["pos"] == expected_next_pos[next_token["text"]]
+
+
 def test_task_pizza_red_001_pronoun_he_is_not_visible_as_rdf_node_or_class(tmp_path: Path):
     # TASK-PIZZA-RED-001 | CON-RDF-VISIBILITY AC-2 | BR-PIZZA-PRONOUN-001
     _metrics(tmp_path)

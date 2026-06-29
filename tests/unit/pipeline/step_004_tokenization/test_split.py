@@ -28,6 +28,36 @@ def test_tokenization_splits_words_and_punctuation_deterministically_and_preserv
     assert token_texts == ["Hola", ",", "mundo", ".", "Chau", "!"]
 
 
+# UC-002 MF-4 | FUN-017 AC-2 | CON-010 AC-1 | BR-TOK-003 | TASK-TOK-003 | TB-TOK-001
+def test_tokenization_keeps_english_possessive_suffix_as_single_token():
+    from pipeline.step_004_tokenization import tokenize_sentences
+
+    payload = {
+        "raw_text": "Mario's Pizzeria. Sofia’s oven.",
+        "preprocessed_text": "Mario's Pizzeria. Sofia’s oven.",
+        "source_text_id": "src-tok-possessive-001",
+        "metadata": {"source": {"kind": "string"}},
+        "operations_applied": ["unicode_normalization", "collapse_repeated_spaces", "normalize_newlines"],
+        "sentences": [
+            {"sentence_id": "sent-0001", "text": "Mario's Pizzeria.", "index": 0, "start_offset": 0, "end_offset": 17},
+            {"sentence_id": "sent-0002", "text": "Sofia’s oven.", "index": 1, "start_offset": 18, "end_offset": 31},
+        ],
+    }
+
+    result = tokenize_sentences(payload)
+
+    assert [token["text"] for token in result["tokens"]] == [
+        "Mario",
+        "'s",
+        "Pizzeria",
+        ".",
+        "Sofia",
+        "’s",
+        "oven",
+        ".",
+    ]
+
+
 # UC-006 AF-2 | FUN-018 AC-1 | NFR-001 AC-2 | NFR-002 AC-2 | BR-TOK-001 | TASK-TOK-001 | TB-TOK-001
 def test_tokenization_is_deterministic_with_stable_token_ids_and_indices():
     from pipeline.step_004_tokenization import tokenize_sentences

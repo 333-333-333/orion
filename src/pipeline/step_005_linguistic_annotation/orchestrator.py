@@ -10,28 +10,36 @@ def _extract_doc_tokens(doc: Any) -> list[dict[str, Any]]:
         if text is None:
             continue
         start = getattr(token, "idx", None)
-        extracted.append({"token": token, "text": text, "start": start, "index": index})
+        if not isinstance(start, int):
+            continue
+        extracted.append({"token": token, "text": text, "start": start, "end": start + len(text), "index": index})
     return extracted
 
 
-def _find_matching_doc_token(orion_token: dict[str, Any], doc_tokens: list[dict[str, Any]], fallback_index: int) -> tuple[Any | None, int]:
+def _find_matching_doc_token(orion_token: dict[str, Any], doc_tokens: list[dict[str, Any]]) -> Any | None:
     start_offset = orion_token.get("start_offset")
+    end_offset = orion_token.get("end_offset")
     text = orion_token.get("text")
+    if not isinstance(start_offset, int) or not isinstance(end_offset, int):
+        return None
 
-    for idx in range(fallback_index, len(doc_tokens)):
-        candidate = doc_tokens[idx]
-        if candidate["start"] == start_offset and candidate["text"] == text:
-            return candidate["token"], idx + 1
+    for candidate in doc_tokens:
+        if (
+            candidate["start"] == start_offset
+            and candidate["end"] == end_offset
+            and candidate["text"] == text
+        ):
+            return candidate["token"]
 
-    for idx in range(fallback_index, len(doc_tokens)):
-        candidate = doc_tokens[idx]
-        if candidate["start"] == start_offset:
-            return candidate["token"], idx + 1
+    for candidate in doc_tokens:
+        if candidate["start"] == start_offset and candidate["end"] == end_offset:
+            return candidate["token"]
 
-    if fallback_index < len(doc_tokens):
-        return doc_tokens[fallback_index]["token"], fallback_index + 1
+    for candidate in doc_tokens:
+        if candidate["start"] <= start_offset and end_offset <= candidate["end"]:
+            return candidate["token"]
 
-    return None, fallback_index
+    return None
 
 
 def annotate_tokens(input_payload: dict[str, Any], nlp_model: Any) -> dict[str, Any]:
@@ -40,10 +48,9 @@ def annotate_tokens(input_payload: dict[str, Any], nlp_model: Any) -> dict[str, 
     doc_tokens = _extract_doc_tokens(doc)
 
     annotated_tokens: list[dict[str, Any]] = []
-    fallback_index = 0
 
     for token in input_payload["tokens"]:
-        matched_doc_token, fallback_index = _find_matching_doc_token(token, doc_tokens, fallback_index)
+        matched_doc_token = _find_matching_doc_token(token, doc_tokens)
 
         lemma = token["text"]
         pos = ""
