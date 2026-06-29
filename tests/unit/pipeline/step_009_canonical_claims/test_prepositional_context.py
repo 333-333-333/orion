@@ -60,3 +60,18 @@ def test_canonical_claims_split_list_objects_before_contextual_tail():
     } <= statements
     assert "MarioSPizzeriaLuigiBianchiCentralCafeNinaPatelOrderCAFE17AndTheVesuvioPie" not in objects
     assert "VesuvioPieInTheSameDeliveryRecord" not in objects
+
+
+# UC-009 MF-4 | FUN-CANON-004 AC-4 | BR-CANON-REPORTING-THAT-001 | TASK-PIZZA-RED-004 | TB-CANON-004
+def test_canonical_claims_decompose_reporting_that_clauses_without_that_predicate():
+    claims = _claims_for("Nina tells Luigi that the basil aroma matches the request, and Luigi records the delivery as completed.")
+    statements = {claim["statement"] for claim in claims}
+    predicates = {claim.get("predicate", "") for claim in claims}
+    objects = {claim.get("object", "") for claim in claims}
+
+    assert "Nina tells Luigi" in statements
+    assert "BasilAroma matches Request" in statements
+    assert "Luigi records Delivery" in statements
+    assert "thes" not in predicates
+    assert "BasilAromaMatchTheRequest" not in objects
+    assert "LuigiRecordTheDeliveryAsCompleted" not in objects

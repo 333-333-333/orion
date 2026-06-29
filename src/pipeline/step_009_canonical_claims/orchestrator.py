@@ -305,6 +305,11 @@ def _extract_definition_claims(claims: list[dict[str, Any]], source_text_id: str
 
 
 _REPRESENT_THAT_PATTERN = re.compile(r'\brepresent\s+that\s+(?P<clauses>.+)$', re.IGNORECASE)
+_REPORTING_THAT_PATTERN = re.compile(
+    r'^(?P<subject>.+?)\s+(?P<verb>tells?|says?|reports?|notes?|indicates?)'
+    r'(?:\s+(?P<recipient>.+?))?\s+that\s+(?P<clauses>.+?)\.?$',
+    re.IGNORECASE,
+)
 _PASSIVE_BY_PATTERN = re.compile(r'^(?P<subject>.+?)\s+(?P<verb>(?:is|are|was|were)\s+\w+(?:\s+\w+)*)\s+by\s+(?P<object>.+)$', re.IGNORECASE)
 _SIMPLE_SVO_PATTERN = re.compile(r'^(?P<subject>.+?)\s+(?P<verb>[A-Za-z]+(?:s|es|ies))\s+(?P<object>.+)$', re.IGNORECASE)
 _BR_NLP_MODAL_COORDINATION_MODAL_WORDS = {'may', 'must', 'can', 'could', 'should', 'would', 'might'}
@@ -434,23 +439,43 @@ def _extract_direct_use_with_purpose_claims(claims: list[dict[str, Any]], source
     return True
 
 
-def _extract_represented_svo_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
-    match = _REPRESENT_THAT_PATTERN.search(text)
-    if not match:
-        return False
+def _strip_reported_object_tail(raw_object: str) -> str:
+    return re.split(r'\s+as\s+', raw_object.strip().rstrip('.'), maxsplit=1, flags=re.IGNORECASE)[0].strip()
+
+
+def _append_svo_clause_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, raw_clauses: str) -> bool:
     emitted = False
-    for clause in _split_represented_clauses(match.group('clauses')):
+    for clause in _split_represented_clauses(raw_clauses):
         parsed = _PASSIVE_BY_PATTERN.match(clause) or _SIMPLE_SVO_PATTERN.match(clause)
         if not parsed:
             continue
         subject = _label(parsed.group('subject'))
         predicate = _predicate_from_phrase(parsed.group('verb'))
-        obj = _label(parsed.group('object'))
+        obj = _label(_strip_reported_object_tail(parsed.group('object')))
         if subject and predicate and obj:
             _append_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate, obj)
             emitted = True
     return emitted
 
+
+def _extract_represented_svo_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    match = _REPRESENT_THAT_PATTERN.search(text)
+    if not match:
+        return False
+    return _append_svo_clause_claims(claims, source_text_id, sentence, paragraph_id, match.group('clauses'))
+
+
+def _extract_reporting_that_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    match = _REPORTING_THAT_PATTERN.match(text)
+    if not match:
+        return False
+    subject = _label(match.group('subject'))
+    predicate = _verb(match.group('verb'))
+    recipient = _label(match.group('recipient') or '')
+    if subject and predicate and recipient:
+        _append_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate, recipient)
+    _append_svo_clause_claims(claims, source_text_id, sentence, paragraph_id, match.group('clauses'))
+    return True
 
 
 def _extract_simple_svo_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
@@ -552,6 +577,8 @@ def _extract_sentence_claims(claims: list[dict[str, Any]], source_text_id: str, 
     if _extract_definition_claims(claims, source_text_id, sentence, paragraph_id, text):
         return
     if _extract_represented_svo_claims(claims, source_text_id, sentence, paragraph_id, text):
+        return
+    if _extract_reporting_that_claims(claims, source_text_id, sentence, paragraph_id, text):
         return
     by_action = re.match(r'^(?P<subject>.+)\s+(?P<verb>\w+(?:s|ing))\s+(?P<object>.+?)\s+by\s+(?P<gerund>\w+ing)\s+(?P<items>.+?)\.?$', text, flags=re.IGNORECASE)
     if by_action:

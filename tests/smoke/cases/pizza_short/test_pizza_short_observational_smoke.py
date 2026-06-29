@@ -194,6 +194,38 @@ def test_task_pizza_red_002_prepositional_context_is_not_visible_compound_class(
     assert has_fact("links", "Tablet", "VesuvioPie")
 
 
+def test_task_pizza_red_004_reporting_that_clause_is_decomposed(tmp_path: Path):
+    # TASK-PIZZA-RED-004 | FUN-PIZZA-SMOKE AC-7 | BR-CANON-REPORTING-THAT-001
+    _metrics(tmp_path)
+    payload = _read_json_artifact("observed_pizza_short_semantic_claims.json")
+    graph = _read_json_artifact("observed_pizza_short_graph_model.json")
+    claims = [claim for claim in payload.get("claims", []) if isinstance(claim, dict)]
+    statements = {str(claim.get("statement") or "") for claim in claims}
+    predicates = {str(claim.get("predicate") or "") for claim in claims}
+    objects = {str(claim.get("object") or "") for claim in claims}
+
+    assert "Nina tells Luigi" in statements
+    assert "BasilAroma matches Request" in statements
+    assert "Luigi records Delivery" in statements
+    assert "thes" not in predicates
+    assert "BasilAromaMatchTheRequest" not in objects
+    assert "LuigiRecordTheDeliveryAsCompleted" not in objects
+
+    facts = graph.get("object_property_facts", [])
+
+    def has_fact(predicate: str, domain: str, range_: str) -> bool:
+        return any(
+            isinstance(fact, dict)
+            and _iri_tail(fact.get("predicate")) == predicate
+            and _iri_tail(fact.get("domain")) == domain
+            and _iri_tail(fact.get("range")) == range_
+            for fact in facts
+        )
+
+    assert has_fact("matches", "BasilAroma", "Request")
+    assert has_fact("records", "Luigi", "Delivery")
+
+
 def test_task_pizza_red_001_pronoun_he_is_not_visible_as_rdf_node_or_class(tmp_path: Path):
     # TASK-PIZZA-RED-001 | CON-RDF-VISIBILITY AC-2 | BR-PIZZA-PRONOUN-001
     _metrics(tmp_path)

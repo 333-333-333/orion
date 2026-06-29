@@ -24,7 +24,7 @@ It is designed to be imported and used by a host application. For example, a tra
 - Legacy `infosec_3k` smoke stays disabled.
 - Full-text modular smoke is observational/proxy.
 - Strict contracts stay on `p001-p002` and `p003-p004`.
-- Latest validation: `145 passed`.
+- Latest validation: `146 passed`.
 - No hardcode in `src`; contract and smoke truth live in docs and tests.
 
 ## Pipeline contract
