@@ -6,6 +6,7 @@ from typing import Any
 
 from observability import JsonlFileLogSink
 from orion import ORION
+from infosec_pair_case_harness import process_with_pipeline_json_artifacts
 
 _CASE_DIR = Path(__file__).parent
 _SMOKE_DIR = Path(__file__).parents[2]
@@ -73,7 +74,7 @@ def _run_p001_p002(tmp_path: Path, artifact_path: Path = _ARTIFACT_PATH) -> tupl
     text = "\n\n".join(paragraph_texts[key] for key in ("p001", "p002"))
     runtime_log = tmp_path / "p001-p002-canonical-claims-runtime-events.jsonl"
     sut = ORION(config={"logging": {"sink": JsonlFileLogSink(runtime_log)}, "spacy_model": "en_core_web_lg", "output_strategy": "rdf", "canonical_claims": {"artifact_path": artifact_path, "paragraph_asset_ids": ["p001", "p002"]}})
-    result = sut.process(text)
+    result, _ = process_with_pipeline_json_artifacts(sut, text, _ARTIFACT_DIR, "p001_p002")
     events = [json.loads(line) for line in runtime_log.read_text(encoding="utf-8").splitlines() if line.strip()]
     return result, events
 

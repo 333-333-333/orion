@@ -7,6 +7,7 @@ from typing import Any
 
 from observability import JsonlFileLogSink
 from orion import ORION
+from infosec_pair_case_harness import process_with_pipeline_json_artifacts
 
 _CASE_DIR = Path(__file__).parent
 _SMOKE_DIR = Path(__file__).parents[2]
@@ -56,7 +57,12 @@ def _run_p003_p004(tmp_path: Path) -> dict[str, Any]:
         "semantic_claims": {"artifact_path": _OBSERVED_PATH, "paragraph_asset_ids": ["p003", "p004"]},
         "canonical_claims": {"artifact_path": _CANONICAL_COMPAT_PATH, "paragraph_asset_ids": ["p003", "p004"]},
     })
-    result = sut.process("\n\n".join(paragraph_texts[key] for key in ("p003", "p004")))
+    result, _ = process_with_pipeline_json_artifacts(
+        sut,
+        "\n\n".join(paragraph_texts[key] for key in ("p003", "p004")),
+        _ARTIFACT_DIR,
+        "p003_p004",
+    )
     observed = _observed_payload(result)
     observed.setdefault("contract_required_stage", "semantic_claims")
     observed.setdefault("observed_from_result_keys", sorted(str(key) for key in result.keys()))

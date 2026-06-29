@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 from typing import Any
 
+import orion as orion_module
 from observability import JsonlFileLogSink
 from orion import ORION
 from pipeline.step_013_output_generation.rdf_strategy import serialize_graph_to_rdf_xml
@@ -12,6 +13,30 @@ from pipeline.step_013_output_generation.rdf_strategy import serialize_graph_to_
 _RESOURCE_PREFIX = "https://orion.local/resource/"
 _RDFS_SUBCLASS_OF = "rdfs:subClassOf"
 _CAMEL_SPLIT = re.compile(r"([a-z])([A-Z])")
+_PIPELINE_MODULE_STAGE_ARTIFACTS: tuple[tuple[int, str, str], ...] = (
+    (1, "input_intake", "process_input_intake"),
+    (2, "preprocessing", "preprocess_input"),
+)
+_PIPELINE_METHOD_STAGE_ARTIFACTS: tuple[tuple[int, str, str], ...] = (
+    (3, "sentence_segmentation", "_run_sentence_segmentation"),
+    (4, "tokenization", "_run_tokenization"),
+    (5, "linguistic_annotation", "_run_linguistic_annotation"),
+    (6, "entity_extraction", "_run_entity_extraction"),
+    (7, "concept_extraction", "_run_concept_extraction"),
+    (8, "coreference_resolution", "_run_coreference_resolution"),
+    (9, "relation_extraction", "_run_relation_extraction"),
+    (10, "canonical_claims", "_run_canonical_claims"),
+    (11, "semantic_debug_ir", "_run_semantic_debug_ir"),
+    (12, "triple_extraction", "_run_triple_extraction"),
+    (13, "taxonomy_induction", "_run_taxonomy_induction"),
+    (14, "type_assertion", "_run_type_assertion"),
+    (15, "semantic_quality", "_run_semantic_quality"),
+    (16, "output_generation", "_run_output_generation"),
+)
+PIPELINE_JSON_STAGES: tuple[tuple[int, str], ...] = tuple(
+    (sequence, stage)
+    for sequence, stage, _ in _PIPELINE_MODULE_STAGE_ARTIFACTS + _PIPELINE_METHOD_STAGE_ARTIFACTS
+)
 
 
 def slug(value: Any) -> str:
@@ -24,6 +49,114 @@ def slug(value: Any) -> str:
     text = _CAMEL_SPLIT.sub(r"\1-\2", text)
     text = re.sub(r"[^A-Za-z0-9]+", "-", text).strip("-").lower()
     return re.sub(r"-+", "-", text)
+
+
+def pipeline_json_artifact_path(artifact_dir: Path, case_id: str, sequence: int, stage: str) -> Path:
+    return artifact_dir / "pipeline_outputs" / f"observed_{case_id}_{sequence:02d}_{stage}.json"
+
+
+def _json_safe(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {str(key): _json_safe(item) for key, item in value.items() if not str(key).startswith("_spacy")}
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(item) for item in value]
+    if isinstance(value, (set, frozenset)):
+        return [_json_safe(item) for item in sorted(value, key=repr)]
+    if isinstance(value, Path):
+        return str(value)
+    if isinstance(value, (str, int, float, bool)) or value is None:
+        return value
+    return repr(value)
+
+
+def _stage_output_only(previous_payload: Any, output: Any) -> Any:
+    if not isinstance(previous_payload, dict) or not isinstance(output, dict):
+        return output
+    delta: dict[str, Any] = {}
+    for key, value in output.items():
+        key_text = str(key)
+        if key_text.startswith("_spacy"):
+            continue
+        if key not in previous_payload:
+            delta[key_text] = value
+            continue
+        previous_value = previous_payload[key]
+        if value == previous_value:
+            continue
+        if isinstance(previous_value, dict) and isinstance(value, dict):
+            nested_delta = _stage_output_only(previous_value, value)
+            if nested_delta:
+                delta[key_text] = nested_delta
+        else:
+            delta[key_text] = value
+    return delta
+
+
+def _write_pipeline_json_artifact(
+    artifact_dir: Path,
+    case_id: str,
+    sequence: int,
+    stage: str,
+    previous_payload: Any,
+    output: Any,
+) -> Path:
+    path = pipeline_json_artifact_path(artifact_dir, case_id, sequence, stage)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = _json_safe(_stage_output_only(previous_payload, output))
+    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
+    return path
+
+
+def _clear_pipeline_json_artifacts(artifact_dir: Path, case_id: str) -> None:
+    pipeline_dir = artifact_dir / "pipeline_outputs"
+    if not pipeline_dir.exists():
+        return
+    for path in pipeline_dir.glob(f"observed_{case_id}_*.json"):
+        path.unlink()
+
+
+def process_with_pipeline_json_artifacts(
+    sut: ORION,
+    input_data: Any,
+    artifact_dir: Path,
+    case_id: str,
+) -> tuple[dict[str, Any], list[Path]]:
+    _clear_pipeline_json_artifacts(artifact_dir, case_id)
+    pipeline_paths: list[Path] = []
+    original_module_functions: dict[str, Any] = {}
+    original_methods: dict[str, Any] = {}
+
+    def capture(sequence: int, stage: str, previous_payload: Any, output: Any) -> Any:
+        pipeline_paths.append(_write_pipeline_json_artifact(artifact_dir, case_id, sequence, stage, previous_payload, output))
+        return output
+
+    for sequence, stage, function_name in _PIPELINE_MODULE_STAGE_ARTIFACTS:
+        original = getattr(orion_module, function_name)
+        original_module_functions[function_name] = original
+
+        def wrapped_module_function(*args: Any, _original: Any = original, _sequence: int = sequence, _stage: str = stage, **kwargs: Any) -> Any:
+            previous_payload = None if _stage == "input_intake" else (args[0] if args else kwargs.get("input_payload"))
+            return capture(_sequence, _stage, previous_payload, _original(*args, **kwargs))
+
+        setattr(orion_module, function_name, wrapped_module_function)
+
+    for sequence, stage, method_name in _PIPELINE_METHOD_STAGE_ARTIFACTS:
+        original = getattr(sut, method_name)
+        original_methods[method_name] = original
+
+        def wrapped_method(*args: Any, _original: Any = original, _sequence: int = sequence, _stage: str = stage, **kwargs: Any) -> Any:
+            previous_payload = args[0] if args else kwargs.get("payload") or kwargs.get("input_payload")
+            return capture(_sequence, _stage, previous_payload, _original(*args, **kwargs))
+
+        setattr(sut, method_name, wrapped_method)
+
+    try:
+        return sut.process(input_data), pipeline_paths
+    finally:
+        for function_name, original in original_module_functions.items():
+            setattr(orion_module, function_name, original)
+        for method_name, original in original_methods.items():
+            setattr(sut, method_name, original)
 
 
 def _observed_payload(result: dict[str, Any], semantic_path: Path, canonical_path: Path) -> dict[str, Any]:
@@ -161,9 +294,11 @@ def run_pair_case(
     rdf_path = artifact_dir / f"observed_{case_id}_output.rdf"
     ttl_path = artifact_dir / f"observed_{case_id}_output.ttl"
     metrics_path = artifact_dir / f"observed_{case_id}_metrics.json"
+    pipeline_json_dir = artifact_dir / "pipeline_outputs"
     for path in (semantic_path, canonical_path, graph_path, debug_ir_path, rdf_path, ttl_path, metrics_path):
         if path.exists():
             path.unlink()
+    _clear_pipeline_json_artifacts(artifact_dir, case_id)
     artifact_dir.mkdir(parents=True, exist_ok=True)
     paragraph_texts = {
         pid: (paragraph_dir / f"{pid}.txt").read_text(encoding="utf-8").strip()
@@ -180,7 +315,12 @@ def run_pair_case(
             "canonical_claims": {"artifact_path": canonical_path, "paragraph_asset_ids": paragraph_ids},
         }
     )
-    result = sut.process("\n\n".join(paragraph_texts[pid] for pid in paragraph_ids))
+    result, pipeline_json_paths = process_with_pipeline_json_artifacts(
+        sut,
+        "\n\n".join(paragraph_texts[pid] for pid in paragraph_ids),
+        artifact_dir,
+        case_id,
+    )
     payload = _observed_payload(result, semantic_path, canonical_path)
     payload.setdefault("contract_required_stage", "semantic_claims")
     payload.setdefault("paragraph_asset_ids", paragraph_ids)
@@ -223,6 +363,11 @@ def run_pair_case(
         "graph_generated": graph_path.exists(),
         "semantic_debug_ir_generated": debug_ir_path.exists(),
         "semantic_debug_ir_path": str(debug_ir_path.relative_to(case_dir)),
+        "pipeline_output_json_generated": len(pipeline_json_paths) == len(PIPELINE_JSON_STAGES),
+        "pipeline_output_json_count": len(pipeline_json_paths),
+        "pipeline_output_json_expected_count": len(PIPELINE_JSON_STAGES),
+        "pipeline_output_json_dir": str(pipeline_json_dir.relative_to(case_dir)),
+        "pipeline_output_json_paths": [str(path.relative_to(case_dir)) for path in pipeline_json_paths],
         **counts,
     }
     metrics_path.write_text(

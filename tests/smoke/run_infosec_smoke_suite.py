@@ -44,6 +44,8 @@ _SMOKE_TESTS = (
     "tests/smoke/cases/infosec_full_text/test_infosec_full_text_observational_smoke.py",
     "tests/smoke/cases/application_types_minimal/test_application_types_minimal_observational_smoke.py",
     "tests/smoke/cases/pizza_short/test_pizza_short_observational_smoke.py",
+    "tests/smoke/test_pipeline_step_runner_contracts.py",
+    "tests/smoke/test_all_pipeline_outputs_emit_json.py",
     "tests/smoke/test_all_rdf_smoke_cases_emit_ttl.py",
     "tests/smoke/test_readme_public_library_contract_red.py",
 )

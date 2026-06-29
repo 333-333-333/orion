@@ -8,7 +8,7 @@ from typing import Any
 
 from observability import JsonlFileLogSink
 from orion import ORION
-from infosec_pair_case_harness import _serialize_visual_turtle
+from infosec_pair_case_harness import _serialize_visual_turtle, process_with_pipeline_json_artifacts
 from pipeline.step_013_output_generation.rdf_strategy import serialize_graph_to_rdf_xml
 
 _CASE_DIR = Path(__file__).parent
@@ -121,7 +121,7 @@ def _run_p003_p004(tmp_path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
         "semantic_claims": {"artifact_path": _SEMANTIC_ARTIFACT_PATH, "paragraph_asset_ids": ["p003", "p004"]},
         "canonical_claims": {"artifact_path": _CANONICAL_ARTIFACT_PATH, "paragraph_asset_ids": ["p003", "p004"]},
     })
-    result = sut.process(text)
+    result, _ = process_with_pipeline_json_artifacts(sut, text, _ARTIFACT_DIR, "p003_p004")
     graph = _graph(result)
     if graph:
         _GRAPH_MODEL_ARTIFACT_PATH.write_text(json.dumps(graph, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8")
