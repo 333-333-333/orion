@@ -7,6 +7,8 @@ from typing import Any
 _BR_REL_CONFIDENCE_SVO = 0.9
 _BR_REL_CONFIDENCE_COPULA = 0.88
 _PHRASE_ARTICLES = {'a', 'an', 'the'}
+_PREPOSITIONAL_RELATION_PREPOSITIONS = {'from', 'to'}
+_NOMINAL_LEFT_DEPENDENCIES = {'amod', 'compound', 'nummod', 'poss'}
 _META_INSTRUCTION_PREFIXES = ('orion should be able to',)
 _META_INSTRUCTION_TAILS = ('from this text',)
 
@@ -194,6 +196,77 @@ def _object_text_from_nominals(tokens: list[dict[str, Any]], object_token: dict[
     return _normalize_fact_phrase(' '.join(token.get('text', '') for token in phrase_tokens) or object_token.get('text', ''))
 
 
+def _nominal_phrase_for_head(tokens: list[dict[str, Any]], head_token: dict[str, Any]) -> tuple[str, int, int]:
+    head_text = str(head_token.get('text', ''))
+    phrase_tokens = [
+        token for token in tokens
+        if token is head_token
+        or (
+            token.get('head_text') == head_text
+            and token.get('dependency') in _NOMINAL_LEFT_DEPENDENCIES
+            and token.get('end_offset', 0) <= head_token.get('start_offset', 0)
+        )
+    ]
+    phrase_tokens = sorted(phrase_tokens, key=lambda token: (token.get('start_offset', 0), token.get('end_offset', 0)))
+    if not phrase_tokens:
+        return _normalize_fact_phrase(head_text), head_token.get('start_offset', -1), head_token.get('end_offset', -1)
+    text = _normalize_fact_phrase(' '.join(str(token.get('text', '')) for token in phrase_tokens))
+    return text, phrase_tokens[0].get('start_offset', -1), phrase_tokens[-1].get('end_offset', -1)
+
+
+def _extract_prepositional_relations(
+    source_text_id: str,
+    sentence_id: str,
+    sentence_tokens: list[dict[str, Any]],
+    verb: dict[str, Any],
+    subjects: list[dict[str, Any]],
+    ref_lookup: dict[tuple[int, int, str], str],
+    coref_lookup: dict[tuple[int, int, str], dict[str, Any]],
+    sentence_start: int,
+    sentence_end: int,
+) -> list[dict[str, Any]]:
+    relations: list[dict[str, Any]] = []
+    verb_text = str(verb.get('text', ''))
+    verb_lemma = str(verb.get('lemma') or verb_text)
+    prepositions = [
+        token for token in sentence_tokens
+        if token.get('dependency') == 'prep'
+        and token.get('head_text') == verb_text
+        and _normalize_phrase(token.get('text', '')) in _PREPOSITIONAL_RELATION_PREPOSITIONS
+    ]
+    for subject in subjects:
+        resolved_subject_text, resolved_subject_start, resolved_subject_end = _resolve_subject_from_coreference(subject, coref_lookup)
+        resolved_subject_text = _normalize_fact_phrase(resolved_subject_text)
+        for preposition in prepositions:
+            prep_text = _normalize_phrase(preposition.get('text', ''))
+            objects = [
+                token for token in sentence_tokens
+                if token.get('dependency') == 'pobj'
+                and token.get('head_text') == preposition.get('text')
+                and _is_relation_nominal(token)
+            ]
+            for obj in objects:
+                object_text, object_start, object_end = _nominal_phrase_for_head(sentence_tokens, obj)
+                predicate = f'{_normalize_fact_phrase(verb_lemma)}_{prep_text}'
+                relations.append(
+                    {
+                        'relation_id': _build_relation_id(source_text_id, sentence_id, resolved_subject_text, predicate, object_text),
+                        'subject_text': resolved_subject_text,
+                        'subject_ref': _resolve_ref(ref_lookup, resolved_subject_text, resolved_subject_start, resolved_subject_end),
+                        'predicate': predicate,
+                        'object_text': object_text,
+                        'object_ref': _resolve_ref(ref_lookup, object_text, object_start, object_end),
+                        'sentence_id': sentence_id,
+                        'source_text_id': source_text_id,
+                        'confidence': _BR_REL_CONFIDENCE_SVO,
+                        'evidence_span': {'start_offset': sentence_start, 'end_offset': sentence_end},
+                        'start_offset': sentence_start,
+                        'end_offset': sentence_end,
+                    }
+                )
+    return relations
+
+
 def _extract_segmented_active_relations(
     source_text_id: str,
     sentence_id: str,
@@ -286,6 +359,20 @@ def _extract_svo_relations(input_payload: dict[str, Any]) -> list[dict[str, Any]
             active_subjects = [s for s in subjects if s.get('dependency') == 'nsubj']
             passive_subjects = [s for s in subjects if s.get('dependency') == 'nsubjpass']
             objects = [t for t in sentence_tokens if t.get('dependency') in {'dobj', 'obj', 'pobj'} and t.get('head_text') == verb_head]
+
+            relations.extend(
+                _extract_prepositional_relations(
+                    source_text_id,
+                    sentence_id,
+                    sentence_tokens,
+                    verb,
+                    active_subjects,
+                    ref_lookup,
+                    coref_lookup,
+                    sentence_start,
+                    sentence_end,
+                )
+            )
 
             for subject in active_subjects:
                 resolved_subject_text, resolved_subject_start, resolved_subject_end = _resolve_subject_from_coreference(subject, coref_lookup)

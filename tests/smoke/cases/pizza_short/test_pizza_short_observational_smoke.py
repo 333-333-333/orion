@@ -95,6 +95,7 @@ def test_pizza_short_rdf_projection_has_visible_structure(tmp_path: Path):
     assert metrics["class_count"] > 0
     assert metrics["object_property_count"] > 0
 
+
 def test_task_pizza_red_001_pm_abbreviation_stays_in_single_sentence(tmp_path: Path):
     # TASK-PIZZA-RED-001 | FUN-PIZZA-SMOKE AC-4 | BR-PIZZA-TIME-001
     _metrics(tmp_path)
@@ -141,6 +142,47 @@ def test_task_pizza_red_001_possessive_suffix_does_not_shift_linguistic_annotati
 
         next_token = annotated_tokens[index + 3]
         assert next_token["pos"] == expected_next_pos[next_token["text"]]
+
+
+def test_task_pizza_red_002_prepositional_context_is_not_visible_compound_class(tmp_path: Path):
+    # TASK-PIZZA-RED-002 | FUN-PIZZA-SMOKE AC-6 | BR-CON-PP-BOUNDARY-001 | BR-REL-PREP-ROUTE-001
+    _metrics(tmp_path)
+    concept_payload = _read_json_artifact("pipeline_outputs/observed_pizza_short_07_concept_extraction.json")
+    graph = _read_json_artifact("observed_pizza_short_graph_model.json")
+    labels = _visible_labels(graph)
+    concept_texts = {str(concept.get("text") or "") for concept in concept_payload.get("concepts", []) if isinstance(concept, dict)}
+
+    assert "delivery orders for Mario's Pizzeria" not in concept_texts
+    assert "Harbor Market to Pine Street" not in concept_texts
+    assert "Central Cafe at 12:18 p.m." not in concept_texts
+    assert "aged parmesan over the edge" not in concept_texts
+    assert {"delivery orders", "Mario's Pizzeria", "Harbor Market", "Pine Street", "Central Cafe", "aged parmesan"} <= concept_texts
+
+    forbidden_visible_labels = {
+        "AgedParmesanOverTheEdge",
+        "CentralCafeAt1218Pm",
+        "DeliveryOrderForMarioSPizzeria",
+        "HarborMarketToPineStreet",
+        "MarioSPizzeriaOnABlueBicycle",
+    }
+    assert labels.isdisjoint(forbidden_visible_labels)
+
+    facts = graph.get("object_property_facts", [])
+
+    def has_fact(predicate: str, domain: str, range_: str) -> bool:
+        return any(
+            isinstance(fact, dict)
+            and _iri_tail(fact.get("predicate")) == predicate
+            and _iri_tail(fact.get("domain")) == domain
+            and _iri_tail(fact.get("range")) == range_
+            for fact in facts
+        )
+
+    assert has_fact("ridesFrom", "Luigi", "HarborMarket")
+    assert has_fact("ridesTo", "Luigi", "PineStreet")
+    assert has_fact("reaches", "Luigi", "CentralCafe")
+    assert has_fact("manages", "LuigiBianchi", "DeliveryOrder")
+    assert has_fact("grates", "Luca", "AgedParmesan")
 
 
 def test_task_pizza_red_001_pronoun_he_is_not_visible_as_rdf_node_or_class(tmp_path: Path):

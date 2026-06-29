@@ -29,6 +29,23 @@ _RELATIVE_TAIL = re.compile(r'\bthat\s+(?P<verb>[a-z]+s?)\s+(?P<object>.+)$', re
 _META_INSTRUCTION_PREFIX = 'orion should be able to'
 _META_INSTRUCTION_TAIL = 'from this text'
 _META_INSTRUCTION_ACTIONS = {'identify', 'classify', 'extract'}
+_CONTEXTUAL_OBJECT_PREPOSITIONS = {'at', 'by', 'for', 'from', 'in', 'into', 'near', 'on', 'over', 'to'}
+_LEXICALIZED_CONTEXT_OBJECTS = {'data at rest', 'data in transit', 'defense in depth'}
+_ROUTE_VERBS = {'drive', 'drives', 'go', 'goes', 'move', 'moves', 'ride', 'rides', 'travel', 'travels', 'walk', 'walks'}
+_CONTEXTUAL_OBJECT_PATTERN = re.compile(
+    r'^(?P<subject>.+?)\s+(?P<verb>[A-Za-z]+(?:s|es|ies))\s+(?P<object>.+?)\s+'
+    r'(?P<preposition>' + '|'.join(sorted(_CONTEXTUAL_OBJECT_PREPOSITIONS, key=len, reverse=True)) + r')\s+'
+    r'(?P<context>[^,.;]+)(?P<tail>[,.;].*)?$',
+    re.IGNORECASE,
+)
+_ROUTE_PATTERN = re.compile(
+    r'^(?P<subject>.+?)\s+(?P<verb>[A-Za-z]+(?:s|es|ies)?)\s+from\s+(?P<origin>.+?)\s+to\s+(?P<destination>[^,.;]+)(?P<tail>.*)$',
+    re.IGNORECASE,
+)
+_ROUTE_TAIL_PATTERN = re.compile(
+    r'\b(?P<verb>passes|pass|reaches|reach)\s+(?P<object>[^,.;]+?)(?=\s*,|\s+and\b|\.|$)',
+    re.IGNORECASE,
+)
 
 
 def _paragraph_map(raw_text: str, sentences: list[dict[str, Any]], asset_ids: list[str] | None = None) -> dict[str, str]:
@@ -466,6 +483,62 @@ def _extract_subclasses_of_claims(claims: list[dict[str, Any]], source_text_id: 
     return emitted
 
 
+def _normalized_words(value: str | None) -> str:
+    return ' '.join(word.casefold() for word in _words(value or ''))
+
+
+def _strip_contextual_object_tail(value: str) -> str:
+    match = _CONTEXTUAL_OBJECT_PATTERN.match(f'X does {value}')
+    return match.group('object').strip() if match else value.strip()
+
+
+def _is_lexicalized_context_object(value: str) -> bool:
+    return _normalized_words(value) in _LEXICALIZED_CONTEXT_OBJECTS
+
+
+def _append_contextual_tail_relations(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, subject: str, tail: str) -> None:
+    for match in _ROUTE_TAIL_PATTERN.finditer(tail):
+        raw_object = _strip_contextual_object_tail(match.group('object'))
+        _append_relation(claims, source_text_id, sentence, paragraph_id, subject, _verb(match.group('verb')), _label(raw_object))
+
+
+def _extract_route_preposition_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    match = _ROUTE_PATTERN.match(text)
+    if not match or match.group('verb').casefold() not in _ROUTE_VERBS:
+        return False
+    subject = _label(match.group('subject'))
+    predicate = _verb(match.group('verb'))
+    origin = _label(match.group('origin'))
+    destination = _label(match.group('destination'))
+    if not subject or not predicate or not origin or not destination:
+        return False
+    _append_relation(claims, source_text_id, sentence, paragraph_id, subject, f'{predicate}_from', origin)
+    _append_relation(claims, source_text_id, sentence, paragraph_id, subject, f'{predicate}_to', destination)
+    _append_contextual_tail_relations(claims, source_text_id, sentence, paragraph_id, subject, match.group('tail') or '')
+    return True
+
+
+def _extract_contextual_object_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str, text: str) -> bool:
+    match = _CONTEXTUAL_OBJECT_PATTERN.match(text)
+    if not match:
+        return False
+    if match.group('verb').casefold() in {'become', 'becomes', 'is', 'are', 'was', 'were'}:
+        return False
+    context_words = _words(match.group('context'))
+    if match.group('preposition').casefold() == 'from' and context_words and context_words[0].casefold() in {'being', 'entering', 'exiting', 'leaving'}:
+        return False
+    compound_object = f"{match.group('object')} {match.group('preposition')} {match.group('context')}"
+    if _is_lexicalized_context_object(compound_object):
+        return False
+    subject = _label(match.group('subject'))
+    predicate = _verb(match.group('verb'))
+    obj = _label(match.group('object'))
+    if not subject or not predicate or not obj:
+        return False
+    _append_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate, obj)
+    return True
+
+
 def _extract_sentence_claims(claims: list[dict[str, Any]], source_text_id: str, sentence: dict[str, Any], paragraph_id: str) -> None:
     text = _clean(str(sentence.get('text', '')))
     if not text or _is_meta_instruction_text(text):
@@ -500,6 +573,8 @@ def _extract_sentence_claims(claims: list[dict[str, Any]], source_text_id: str, 
         return
     if _extract_direct_use_with_purpose_claims(claims, source_text_id, sentence, paragraph_id, text):
         return
+    if _extract_route_preposition_claims(claims, source_text_id, sentence, paragraph_id, text):
+        return
     if _extract_simple_svo_claims(claims, source_text_id, sentence, paragraph_id, text):
         return
     oversight = re.match(r'^(?P<subject>.+?)\s+provides\s+(?P<qualifier>.+?)\s+oversight\s+for\s+(?P<object>.+?)\.?$', text, flags=re.IGNORECASE)
@@ -522,7 +597,9 @@ def _extract_sentence_claims(claims: list[dict[str, Any]], source_text_id: str, 
             for resource in _objects(support.group('resource')):
                 _append_list_relation(claims, source_text_id, sentence, paragraph_id, resource, 'supports', support.group('target'))
         else:
-            _append_list_relation(claims, source_text_id, sentence, paragraph_id, subject, _verb(two_actions.group('verb2')), object2)
+            _append_list_relation(claims, source_text_id, sentence, paragraph_id, subject, _verb(two_actions.group('verb2')), _strip_contextual_object_tail(object2))
+        return
+    if _extract_contextual_object_claims(claims, source_text_id, sentence, paragraph_id, text):
         return
     form = re.match(r'^(?P<subjects>.+?)\s+form\s+(?P<object>.+?)\.?$', text, flags=re.IGNORECASE)
     if form:
