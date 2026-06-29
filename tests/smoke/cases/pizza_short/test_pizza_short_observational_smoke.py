@@ -95,6 +95,16 @@ def test_pizza_short_rdf_projection_has_visible_structure(tmp_path: Path):
     assert metrics["class_count"] > 0
     assert metrics["object_property_count"] > 0
 
+def test_task_pizza_red_001_pm_abbreviation_stays_in_single_sentence(tmp_path: Path):
+    # TASK-PIZZA-RED-001 | FUN-PIZZA-SMOKE AC-4 | BR-PIZZA-TIME-001
+    _metrics(tmp_path)
+    payload = _read_json_artifact("pipeline_outputs/observed_pizza_short_03_sentence_segmentation.json")
+    texts = [str(sentence.get("text") or "") for sentence in payload.get("sentences", [])]
+
+    assert "m." not in texts
+    assert any("12:18 p.m." in text for text in texts)
+
+
 def test_task_pizza_red_001_pronoun_he_is_not_visible_as_rdf_node_or_class(tmp_path: Path):
     # TASK-PIZZA-RED-001 | CON-RDF-VISIBILITY AC-2 | BR-PIZZA-PRONOUN-001
     _metrics(tmp_path)

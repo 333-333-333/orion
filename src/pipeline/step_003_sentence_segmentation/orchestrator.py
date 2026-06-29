@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from pipeline.step_003_sentence_segmentation.rules import SENTENCE_DELIMITERS, append_sentence
+from pipeline.step_003_sentence_segmentation.rules import append_sentence, is_sentence_delimiter
 
 
 def segment_sentences(input_payload: dict[str, Any]) -> dict[str, Any]:
@@ -12,8 +12,8 @@ def segment_sentences(input_payload: dict[str, Any]) -> dict[str, Any]:
     sentences: list[dict[str, Any]] = []
     sentence_start = 0
 
-    for idx, char in enumerate(preprocessed_text):
-        if char in SENTENCE_DELIMITERS:
+    for idx in range(len(preprocessed_text)):
+        if is_sentence_delimiter(preprocessed_text, idx):
             append_sentence(sentences, source_text_id, preprocessed_text, sentence_start, idx + 1)
             sentence_start = idx + 1
 
