@@ -24,7 +24,7 @@ It is designed to be imported and used by a host application. For example, a tra
 - Legacy `infosec_3k` smoke stays disabled.
 - Full-text modular smoke is observational/proxy.
 - Strict contracts stay on `p001-p002` and `p003-p004`.
-- Latest validation: `142 passed`.
+- Latest validation: `145 passed`.
 - No hardcode in `src`; contract and smoke truth live in docs and tests.
 
 ## Pipeline contract
@@ -56,22 +56,110 @@ Per-step smoke JSON artifacts use this naming convention:
 tests/smoke/cases/<case>/artifacts/pipeline_outputs/observed_<case>_<NN>_<stage>.json
 ```
 
-### Smoke runner for one pipeline step
+### Pipeline step runner contracts and execution
 
-Specific steps can be executed from validated JSON input files without changing `src`:
+Specific steps can be executed from validated JSON input files without changing `src`.
+
+Print the machine-readable contract for every stage:
 
 ```bash
 python3 tests/smoke/pipeline_step_runner.py --contracts
+```
+
+Contract JSON excerpt:
+
+```json
+{
+  "sentence_segmentation": {
+    "sequence": 3,
+    "stage": "sentence_segmentation",
+    "required": [
+      "raw_text",
+      "source_text_id",
+      "metadata",
+      "preprocessed_text",
+      "operations_applied"
+    ],
+    "optional": [],
+    "runner_optional": ["config", "description", "schema_version"],
+    "description": "Cumulative preprocessed payload before sentence segmentation."
+  }
+}
+```
+
+Runnable input JSON example for the first step:
+
+```json
+{
+  "schema_version": 1,
+  "description": "Minimal ORION pipeline-step runner input.",
+  "config": {
+    "spacy_model": "en_core_web_lg",
+    "output_strategy": "rdf"
+  },
+  "input_data": "Mario's Pizzeria serves a Vesuvio pie."
+}
+```
+
+Runner metadata keys (`schema_version`, `description`, `config`) are allowed in input files but are not passed as pipeline payload fields. `config` can also be provided with `--config-json`.
+
+#### Execute every step linearly
+
+Use `--output-mode payload` when you want each step output to be the complete cumulative payload for the next step:
+
+```bash
+WORK=/tmp/orion-step-demo
+RUN="python3 tests/smoke/pipeline_step_runner.py"
+mkdir -p "$WORK"
+
+cat > "$WORK/00-input.json" <<'JSON'
+{
+  "schema_version": 1,
+  "description": "Minimal ORION pipeline-step runner input.",
+  "config": {
+    "spacy_model": "en_core_web_lg",
+    "output_strategy": "rdf"
+  },
+  "input_data": "Mario's Pizzeria serves a Vesuvio pie."
+}
+JSON
+
+$RUN 01_input_intake --input-json "$WORK/00-input.json" --output-json "$WORK/01_input_intake.json" --output-mode payload
+$RUN 02_preprocessing --input-json "$WORK/01_input_intake.json" --output-json "$WORK/02_preprocessing.json" --output-mode payload
+$RUN 03_sentence_segmentation --input-json "$WORK/02_preprocessing.json" --output-json "$WORK/03_sentence_segmentation.json" --output-mode payload
+$RUN 04_tokenization --input-json "$WORK/03_sentence_segmentation.json" --output-json "$WORK/04_tokenization.json" --output-mode payload
+$RUN 05_linguistic_annotation --input-json "$WORK/04_tokenization.json" --output-json "$WORK/05_linguistic_annotation.json" --output-mode payload
+$RUN 06_entity_extraction --input-json "$WORK/05_linguistic_annotation.json" --output-json "$WORK/06_entity_extraction.json" --output-mode payload
+$RUN 07_concept_extraction --input-json "$WORK/06_entity_extraction.json" --output-json "$WORK/07_concept_extraction.json" --output-mode payload
+$RUN 08_coreference_resolution --input-json "$WORK/07_concept_extraction.json" --output-json "$WORK/08_coreference_resolution.json" --output-mode payload
+$RUN 09_relation_extraction --input-json "$WORK/08_coreference_resolution.json" --output-json "$WORK/09_relation_extraction.json" --output-mode payload
+$RUN 10_canonical_claims --input-json "$WORK/09_relation_extraction.json" --output-json "$WORK/10_canonical_claims.json" --output-mode payload
+$RUN 11_semantic_debug_ir --input-json "$WORK/10_canonical_claims.json" --output-json "$WORK/11_semantic_debug_ir.json" --output-mode payload
+$RUN 12_triple_extraction --input-json "$WORK/11_semantic_debug_ir.json" --output-json "$WORK/12_triple_extraction.json" --output-mode payload
+$RUN 13_taxonomy_induction --input-json "$WORK/12_triple_extraction.json" --output-json "$WORK/13_taxonomy_induction.json" --output-mode payload
+$RUN 14_type_assertion --input-json "$WORK/13_taxonomy_induction.json" --output-json "$WORK/14_type_assertion.json" --output-mode payload
+$RUN 15_semantic_quality --input-json "$WORK/14_type_assertion.json" --output-json "$WORK/15_semantic_quality.json" --output-mode payload
+$RUN 16_output_generation --input-json "$WORK/15_semantic_quality.json" --output-json "$WORK/16_output_generation.json" --output-mode payload
+```
+
+Stage names, numbers, and aliases are accepted; for example `sentence_segmentation`, `3`, `03`, and `03_sentence_segmentation` all refer to the same step.
+
+#### Execute one step from stage-only JSON artifacts
+
+By default the runner writes only the selected step's own output. In that mode, repeat `--input-json` to shallow-merge prior stage-only files into the cumulative payload required by the target step:
+
+```bash
 python3 tests/smoke/pipeline_step_runner.py preprocessing \
   --input-json input_intake.json \
   --output-json preprocessing.json
+
 python3 tests/smoke/pipeline_step_runner.py sentence_segmentation \
   --input-json input_intake.json \
   --input-json preprocessing.json \
   --output-json sentences.json
 ```
 
-`--contracts` prints the required, optional, and runner-only optional attributes for every stage. `--input-json` can be repeated; files are shallow-merged in order so stage-only outputs can be combined into the cumulative payload required by a later step. By default the runner writes only the selected step's own output; use `--output-mode payload` to write the full cumulative payload.
+Per-step smoke JSON artifacts use the same stage-only convention.
 
 ## Quality entrypoints
 
