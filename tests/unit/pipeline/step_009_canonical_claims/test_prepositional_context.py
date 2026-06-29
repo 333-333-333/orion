@@ -42,3 +42,21 @@ def test_canonical_claims_strip_contextual_prepositional_tails_from_objects():
     assert "Luca grates AgedParmesan" in statements
     assert "DeliveryOrderForMarioSPizzeria" not in objects
     assert "AgedParmesanOverTheEdge" not in objects
+
+
+# UC-009 MF-4 | FUN-CANON-004 AC-3 | BR-CANON-LIST-OBJECT-001 | TASK-PIZZA-RED-003 | TB-CANON-003
+def test_canonical_claims_split_list_objects_before_contextual_tail():
+    claims = _claims_for("The tablet links Mario's Pizzeria, Luigi Bianchi, Central Cafe, Nina Patel, order CAFE-17, and the Vesuvio pie in the same delivery record.")
+    statements = {claim["statement"] for claim in claims}
+    objects = {claim.get("object", "") for claim in claims}
+
+    assert {
+        "Tablet links MarioSPizzeria",
+        "Tablet links LuigiBianchi",
+        "Tablet links CentralCafe",
+        "Tablet links NinaPatel",
+        "Tablet links OrderCAFE17",
+        "Tablet links VesuvioPie",
+    } <= statements
+    assert "MarioSPizzeriaLuigiBianchiCentralCafeNinaPatelOrderCAFE17AndTheVesuvioPie" not in objects
+    assert "VesuvioPieInTheSameDeliveryRecord" not in objects

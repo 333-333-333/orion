@@ -535,7 +535,7 @@ def _extract_contextual_object_claims(claims: list[dict[str, Any]], source_text_
     obj = _label(match.group('object'))
     if not subject or not predicate or not obj:
         return False
-    _append_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate, obj)
+    _append_list_relation(claims, source_text_id, sentence, paragraph_id, subject, predicate, match.group('object'))
     return True
 
 

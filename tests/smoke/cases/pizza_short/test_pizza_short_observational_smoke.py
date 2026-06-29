@@ -145,7 +145,7 @@ def test_task_pizza_red_001_possessive_suffix_does_not_shift_linguistic_annotati
 
 
 def test_task_pizza_red_002_prepositional_context_is_not_visible_compound_class(tmp_path: Path):
-    # TASK-PIZZA-RED-002 | FUN-PIZZA-SMOKE AC-6 | BR-CON-PP-BOUNDARY-001 | BR-REL-PREP-ROUTE-001
+    # TASK-PIZZA-RED-002 | TASK-PIZZA-RED-003 | FUN-PIZZA-SMOKE AC-6 | BR-CON-PP-BOUNDARY-001 | BR-REL-PREP-ROUTE-001 | BR-CANON-LIST-OBJECT-001
     _metrics(tmp_path)
     concept_payload = _read_json_artifact("pipeline_outputs/observed_pizza_short_07_concept_extraction.json")
     graph = _read_json_artifact("observed_pizza_short_graph_model.json")
@@ -163,7 +163,10 @@ def test_task_pizza_red_002_prepositional_context_is_not_visible_compound_class(
         "CentralCafeAt1218Pm",
         "DeliveryOrderForMarioSPizzeria",
         "HarborMarketToPineStreet",
+        "MarioSPizzeriaLuigiBianchiCentralCafeNinaPatelOrderCafe17AndTheVesuvioPie",
+        "MarioSPizzeriaLuigiBianchiCentralCAFENinaPatelOrderCAFE17AndTheVesuvioPie",
         "MarioSPizzeriaOnABlueBicycle",
+        "VesuvioPieInTheSameDeliveryRecord",
     }
     assert labels.isdisjoint(forbidden_visible_labels)
 
@@ -183,6 +186,12 @@ def test_task_pizza_red_002_prepositional_context_is_not_visible_compound_class(
     assert has_fact("reaches", "Luigi", "CentralCafe")
     assert has_fact("manages", "LuigiBianchi", "DeliveryOrder")
     assert has_fact("grates", "Luca", "AgedParmesan")
+    assert has_fact("links", "Tablet", "MarioSPizzeria")
+    assert has_fact("links", "Tablet", "LuigiBianchi")
+    assert has_fact("links", "Tablet", "CentralCafe")
+    assert has_fact("links", "Tablet", "NinaPatel")
+    assert has_fact("links", "Tablet", "OrderCafe17")
+    assert has_fact("links", "Tablet", "VesuvioPie")
 
 
 def test_task_pizza_red_001_pronoun_he_is_not_visible_as_rdf_node_or_class(tmp_path: Path):
