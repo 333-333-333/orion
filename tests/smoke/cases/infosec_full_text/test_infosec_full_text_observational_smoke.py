@@ -58,16 +58,12 @@ def _object_properties(graph: dict[str, Any]) -> list[dict[str, Any]]:
 
 def _rdf_object_property_count() -> int:
     rdf = "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}"
-    rdfs = "{http://www.w3.org/2000/01/rdf-schema#}"
     owl = "{http://www.w3.org/2002/07/owl#}"
     root = ET.fromstring(_RDF_PATH.read_text(encoding="utf-8"))
-    count = 0
-    for prop in root.findall(f"{owl}ObjectProperty"):
-        domains = [item.attrib.get(f"{rdf}resource") for item in prop.findall(f"{rdfs}domain")]
-        ranges = [item.attrib.get(f"{rdf}resource") for item in prop.findall(f"{rdfs}range")]
-        if prop.attrib.get(f"{rdf}about") and any(domains) and any(ranges):
-            count += 1
-    return count
+    return sum(
+        1 for prop in root.findall(f"{owl}ObjectProperty")
+        if prop.attrib.get(f"{rdf}about")
+    )
 
 
 def test_full_text_pipeline_generates_case_local_artifacts(tmp_path: Path):
@@ -110,7 +106,7 @@ def test_full_text_evidence_proxy_and_projection_are_consistent(tmp_path: Path):
     assert claim_ids.issubset(projected_ids)
 
 
-def test_full_text_rdf_object_properties_have_domain_and_range(tmp_path: Path):
+def test_full_text_rdf_object_properties_preserve_observed_signatures_without_false_global_ranges(tmp_path: Path):
     # TASK-INFOSEC-FULL-TEXT-SMOKE | FUN-INFOSEC-FULL-TEXT-SMOKE AC-4 | CON-RDF-VISIBILITY AC-1 | BR-INFOSEC-FULL-TEXT-SMOKE-004
     metrics = _metrics(tmp_path)
     graph = _graph_payload()
@@ -119,7 +115,17 @@ def test_full_text_rdf_object_properties_have_domain_and_range(tmp_path: Path):
     assert metrics["class_count"] >= 40
     assert metrics["object_property_count"] >= 40
     assert object_properties
-    assert all(slug(item.get("domain")) and slug(item.get("range")) for item in object_properties)
+    assert all(
+        (slug(item.get("domain")) and slug(item.get("range")))
+        or (item.get("observed_domains") and item.get("observed_ranges"))
+        or (item.get("semantics") == "declared_from_scoped_claim" and item.get("scoped_domains") and item.get("scoped_ranges"))
+        for item in object_properties
+    )
+    ambiguous = [
+        item for item in object_properties
+        if len(item.get("observed_domains", [])) > 1 or len(item.get("observed_ranges", [])) > 1
+    ]
+    assert all(not item.get("domain") or not item.get("range") for item in ambiguous)
     assert _rdf_object_property_count() >= max(1, len(object_properties) // 2)
 
 

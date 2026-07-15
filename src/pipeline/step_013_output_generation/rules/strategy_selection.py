@@ -1,3 +1,5 @@
+"""Define and select supported output-generation strategies."""
+
 from __future__ import annotations
 
 from typing import Any, Protocol
@@ -11,11 +13,14 @@ _BR_OUTPUT_STRATEGY_OWL = 'owl'
 
 
 class OutputStrategy(Protocol):
+    """Protocol implemented by pipeline output generators."""
     def generate(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Generate an output payload from completed pipeline data."""
         ...
 
 
 def resolve_strategy(strategy_name: str, base_iri: str, prefixes: dict[str, str]) -> OutputStrategy:
+    """Return the configured output strategy or raise OrionError for an unsupported name."""
     if strategy_name == _BR_OUTPUT_STRATEGY_RDF:
         return RdfOutputStrategy(base_iri=base_iri, prefixes=prefixes)
     if strategy_name == _BR_OUTPUT_STRATEGY_OWL:

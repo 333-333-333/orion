@@ -47,3 +47,42 @@ def test_p033_p034_rdf_projection_has_visible_structure(tmp_path: Path):
 
     assert metrics["class_count"] > 0
     assert metrics["object_property_count"] > 0
+
+
+def test_p033_p034_preserves_coordination_conditions_and_information_scope(tmp_path: Path):
+    import json
+
+    _metrics(tmp_path)
+    claims_payload = json.loads(
+        (_CASE_DIR / "artifacts" / "observed_p033_p034_semantic_claims.json").read_text(encoding="utf-8")
+    )
+    claims = claims_payload["claims"]
+    vulnerability_actions = {
+        claim["predicate"]
+        for claim in claims
+        if claim["subject"] == "VulnerabilityManagement" and claim["object"] == "Weakness"
+    }
+
+    assert vulnerability_actions == {"identifies", "evaluates", "prioritizes", "remediates"}
+    mitigation = next(claim for claim in claims if claim["subject"] == "Mitigation")
+    assert mitigation["predicate"] == "reduces"
+    assert mitigation["condition_polarity"] == "negative"
+    assert mitigation["condition_subject"] == "Remediation"
+    exceptions = [claim for claim in claims if claim["subject"] == "VulnerabilityException"]
+    assert {claim["predicate"] for claim in exceptions} == {
+        "requires_documentation", "requires_approval", "requires_review"
+    }
+    assert all(claim["modality"] == "must" for claim in exceptions)
+    threat_information = next(
+        claim for claim in claims
+        if claim["subject"] == "ThreatIntelligence" and claim["predicate"] == "provides"
+    )
+    assert threat_information["object"] == "Information"
+    assert "ThreatActor" in threat_information["topics"]
+    assert not any(claim["subject"].startswith("MitigationReduce") for claim in claims)
+
+    graph = json.loads(
+        (_CASE_DIR / "artifacts" / "observed_p033_p034_graph_model.json").read_text(encoding="utf-8")
+    )
+    assert not any("mitigationreduce" in fact["subject"].lower() for fact in graph["subclass_facts"])
+    assert graph["restrictions"] == []

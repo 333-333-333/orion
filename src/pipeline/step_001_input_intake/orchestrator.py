@@ -1,3 +1,5 @@
+"""Orchestrate the input intake pipeline stage while preserving the payload contract."""
+
 from __future__ import annotations
 
 from typing import Any
@@ -18,6 +20,7 @@ def process_input_intake(
     string_strategy: InputIntakeStrategy | None = None,
     txt_file_strategy: InputIntakeStrategy | None = None,
 ) -> dict[str, Any]:
+    """Select an intake strategy and return validated text with deterministic source metadata."""
     effective_string_strategy = string_strategy or StringInputStrategy()
     effective_txt_file_strategy = txt_file_strategy or TxtFileInputStrategy()
 

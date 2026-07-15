@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 import json
+import re
 import sys
 import xml.etree.ElementTree as ET
 
@@ -36,6 +37,11 @@ def _ttl_text() -> str:
     return _artifact_path("observed_p039_p040_output.ttl").read_text(encoding="utf-8")
 
 
+def _observation_iri(label: str) -> str:
+    local = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", "-", label).casefold()
+    return f"orion:{local}"
+
+
 def _has_direct_orion_triple(root: ET.Element, subject: str, predicate: str, obj: str) -> bool:
     subject_iri = f"{_ORION_NS}{subject}"
     object_iri = f"{_ORION_NS}{obj}"
@@ -51,10 +57,12 @@ def _has_direct_orion_triple(root: ET.Element, subject: str, predicate: str, obj
 
 _PHISHING_SCENARIO_EVIDENCE = "A phishing scenario illustrates how threats, vulnerabilities, controls, and incidents relate to each other."
 _PHISHING_SCENARIO_RELATIONS = {
-    ("PhishingScenario", "illustrates", "Threat"),
-    ("PhishingScenario", "illustrates", "Vulnerability"),
-    ("PhishingScenario", "illustrates", "Control"),
-    ("PhishingScenario", "illustrates", "Incident"),
+    ("Threat", "relatesTo", "Vulnerability"),
+    ("Threat", "relatesTo", "Control"),
+    ("Threat", "relatesTo", "Incident"),
+    ("Vulnerability", "relatesTo", "Control"),
+    ("Vulnerability", "relatesTo", "Incident"),
+    ("Control", "relatesTo", "Incident"),
 }
 _EVENT_MODAL_COORDINATION_EVIDENCE = "The event affects availability and may affect integrity."
 _EVENT_MODAL_COORDINATION_RELATIONS = {
@@ -64,9 +72,9 @@ _EVENT_MODAL_COORDINATION_RELATIONS = {
 _FORBIDDEN_MODAL_COORDINATION_NODE = "MayAffectIntegrity"
 _CORRECTIVE_ACTIONS_EVIDENCE = "Corrective actions may include patch deployment, privilege reduction, and improved detection rules."
 _CORRECTIVE_ACTIONS_RELATIONS = {
-    ("Corrective", "actions", "PatchDeployment"),
-    ("Corrective", "actions", "PrivilegeReduction"),
-    ("Corrective", "actions", "ImprovedDetectionRule"),
+    ("CorrectiveAction", "mayInclude", "PatchDeployment"),
+    ("CorrectiveAction", "mayInclude", "PrivilegeReduction"),
+    ("CorrectiveAction", "mayInclude", "ImprovedDetectionRule"),
 }
 _FORBIDDEN_CORRECTIVE_ACTIONS_NODE = "MayIncludePatchDeployment"
 _LOG_MONITORING_EVIDENCE = "Log monitoring may identify suspicious login activity."
@@ -83,7 +91,7 @@ _FORBIDDEN_SECURITY_AWARENESS_TRAINING_OBJECT = "LikelihoodOfClickingTheMaliciou
 _COMPROMISED_CREDENTIAL_EVIDENCE = "The attacker uses the compromised credential to access a cloud account."
 _COMPROMISED_CREDENTIAL_RELATIONS = {
     ("Attacker", "uses", "CompromisedCredential"),
-    ("CompromisedCredential", "accesses", "CloudAccount"),
+    ("Attacker", "accesses", "CloudAccount"),
 }
 _FORBIDDEN_OBSERVATIONAL_NODES = {
     "LogMonitoringMayIdentify",
@@ -138,7 +146,7 @@ def test_p039_p040_rdf_projection_has_visible_structure(tmp_path: Path):
     # TASK-INFOSEC-PAIR-SMOKE-P039_P040 | FUN-INFOSEC-PAIR-SMOKE AC-3 | CON-RDF-VISIBILITY AC-1 | BR-INFOSEC-PAIR-SMOKE-003
     metrics = _metrics(tmp_path)
 
-    assert metrics["class_count"] > 0
+    assert metrics["class_count"] == 0
     assert metrics["claim_count"] > 0
 
 
@@ -148,8 +156,10 @@ def test_p039_p040_rdf_visual_uses_direct_facts_not_predicate_bridge_nodes(tmp_p
     _metrics(tmp_path)
     root = _rdf_root()
 
-    assert _has_direct_orion_triple(root, "submittedpassword", "becomes", "compromisedcredential")
-    assert _has_direct_orion_triple(root, "fileserver", "becomes", "unavailabletobusinessuser")
+    assert _has_direct_orion_triple(root, "submitted-password", "becomes", "compromised-credential")
+    assert _has_direct_orion_triple(root, "file-server", "becomes", "unavailable")
+    assert _has_direct_orion_triple(root, "file-server", "unavailableto", "business-user")
+    assert _has_direct_orion_triple(root, "phishing-email", "sentto", "employee")
 
     becomes_iri = f"{_ORION_NS}becomes"
     becomes_properties = [
@@ -171,11 +181,10 @@ def test_p039_p040_visual_artifact_is_turtle_with_direct_triples(tmp_path: Path)
     assert metrics["ttl_bytes"] > 0
     assert "@prefix orion: <https://orion.local/resource/> ." in ttl
     assert "orion:submittedpassword orion:becomes orion:compromisedcredential ." in ttl
-    assert "orion:fileserver orion:becomes orion:unavailabletobusinessuser ." in ttl
-    assert "orion:phishingscenario orion:illustrates orion:threat ." in ttl
-    assert "orion:phishingscenario orion:illustrates orion:vulnerability ." in ttl
-    assert "orion:phishingscenario orion:illustrates orion:control ." in ttl
-    assert "orion:phishingscenario orion:illustrates orion:incident ." in ttl
+    assert "orion:fileserver orion:becomes orion:unavailable ." in ttl
+    assert "orion:fileserver orion:unavailableto orion:businessuser ." in ttl
+    assert "orion:phishingemail orion:sentto orion:employee ." in ttl
+    assert "orion:phishingscenario orion:illustrates" not in ttl
     assert "[]" not in ttl
     assert "rdf:Statement" not in ttl
     assert "owl:ObjectProperty" not in ttl
@@ -189,16 +198,16 @@ def test_p039_p040_relation_evidence_remains_in_sidecars(tmp_path: Path):
 
     graph_facts = graph.get("facts", [])
     assert any(
-        fact.get("subject") == "orion:SubmittedPassword"
+        fact.get("subject") == "orion:submitted-password"
         and fact.get("predicate") == "orion:becomes"
-        and fact.get("object") == "orion:CompromisedCredential"
+        and fact.get("object") == "orion:compromised-credential"
         and fact.get("source_evidence") == "The submitted password becomes a compromised credential."
         for fact in graph_facts
     )
     assert any(
-        fact.get("subject") == "orion:FileServer"
+        fact.get("subject") == "orion:file-server"
         and fact.get("predicate") == "orion:becomes"
-        and fact.get("object") == "orion:UnavailableToBusinessUser"
+        and fact.get("object") == "orion:unavailable"
         and fact.get("source_evidence") == "The file server becomes unavailable to business users."
         for fact in graph_facts
     )
@@ -214,7 +223,7 @@ def test_p039_p040_relation_evidence_remains_in_sidecars(tmp_path: Path):
     assert any(
         rel.get("subject") == "FileServer"
         and rel.get("predicate") == "becomes"
-        and rel.get("object") == "UnavailableToBusinessUser"
+        and rel.get("object") == "Unavailable"
         and rel.get("source", {}).get("evidence") == "The file server becomes unavailable to business users."
         for rel in relations
     )
@@ -236,38 +245,41 @@ def test_p039_p040_event_modal_coordination_semantic_claims_use_shared_subject_d
     assert all(claim.get("subject") != _FORBIDDEN_MODAL_COORDINATION_NODE for claim in claims)
 
 
-def test_p039_p040_event_modal_coordination_graph_model_uses_direct_relation_not_node(tmp_path: Path):
+def test_p039_p040_event_modal_coordination_graph_model_scopes_only_modal_branch(tmp_path: Path):
     # TASK-NLP-MODAL-COORDINATION-P040 | CON-RDF-VISIBILITY AC-6 | BR-NLP-MODAL-COORDINATION-001
     _metrics(tmp_path)
+    graph = json.loads(_artifact_path("observed_p039_p040_graph_model.json").read_text(encoding="utf-8"))
     facts = _graph_facts()
-    observed = {
-        (fact.get("subject"), fact.get("predicate"), fact.get("object"))
-        for fact in facts
-        if fact.get("source_evidence") == _EVENT_MODAL_COORDINATION_EVIDENCE
-    }
-    expected = {
-        (f"orion:{subject}", f"orion:{predicate}", f"orion:{obj}")
-        for subject, predicate, obj in _EVENT_MODAL_COORDINATION_RELATIONS
-    }
+    scoped = graph.get("scoped_relations", [])
 
-    assert expected <= observed
-    assert ("orion:Event", "orion:affects", f"orion:{_FORBIDDEN_MODAL_COORDINATION_NODE}") not in observed
-    assert all(fact.get("object") != f"orion:{_FORBIDDEN_MODAL_COORDINATION_NODE}" for fact in facts)
-    assert all(fact.get("subject") != f"orion:{_FORBIDDEN_MODAL_COORDINATION_NODE}" for fact in facts)
+    assert any(
+        item.get("subject") == "orion:event"
+        and item.get("predicate") == "orion:affects"
+        and item.get("object") == "orion:availability"
+        for item in facts
+    )
+    assert any(
+        item.get("subject") == "orion:event"
+        and item.get("predicate") == "orion:mayAffect"
+        and item.get("object") == "orion:integrity"
+        and item.get("modality") == "may"
+        for item in scoped
+    )
+    assert all(item.get("object") != f"orion:{_FORBIDDEN_MODAL_COORDINATION_NODE}" for item in [*facts, *scoped])
 
 
-def test_p039_p040_event_modal_coordination_rdf_and_ttl_use_direct_relation_not_node(tmp_path: Path):
+def test_p039_p040_event_modal_coordination_rdf_and_ttl_do_not_assert_possibility_as_fact(tmp_path: Path):
     # TASK-NLP-MODAL-COORDINATION-P040 | CON-RDF-VISIBILITY AC-7 | BR-NLP-MODAL-COORDINATION-001
     _metrics(tmp_path)
     root = _rdf_root()
     ttl = _ttl_text()
 
     assert _has_direct_orion_triple(root, "event", "affects", "availability")
-    assert _has_direct_orion_triple(root, "event", "mayaffect", "integrity")
+    assert not _has_direct_orion_triple(root, "event", "mayaffect", "integrity")
     assert not _has_direct_orion_triple(root, "event", "affects", "mayaffectintegrity")
     assert "MayAffectIntegrity" not in ET.tostring(root, encoding="unicode")
     assert "orion:event orion:affects orion:availability ." in ttl
-    assert "orion:event orion:mayaffect orion:integrity ." in ttl
+    assert "orion:event orion:mayaffect orion:integrity ." not in ttl
     assert "mayaffectintegrity" not in ttl.casefold()
 
 
@@ -287,40 +299,40 @@ def test_p039_p040_phishing_scenario_semantic_claims_decompose_illustrates_how_l
     assert all(claim.get("predicate") != "incidents" for claim in claims)
 
 
-def test_p039_p040_phishing_scenario_graph_model_uses_direct_illustrates_facts(tmp_path: Path):
+def test_p039_p040_phishing_scenario_graph_model_keeps_relations_context_scoped(tmp_path: Path):
     # TASK-INFOSEC-PAIR-SMOKE-P039_P040 | CON-RDF-VISIBILITY AC-3 | BR-INFOSEC-PAIR-SMOKE-004
     _metrics(tmp_path)
-    facts = _graph_facts()
+    graph = json.loads(_artifact_path("observed_p039_p040_graph_model.json").read_text(encoding="utf-8"))
     observed = {
-        (fact.get("subject"), fact.get("predicate"), fact.get("object"))
-        for fact in facts
-        if fact.get("source_evidence") == _PHISHING_SCENARIO_EVIDENCE
+        (item.get("subject"), item.get("predicate"), item.get("object"))
+        for item in graph.get("scoped_relations", [])
+        if item.get("source_evidence") == _PHISHING_SCENARIO_EVIDENCE
+        and item.get("context") == "orion:phishing-scenario"
     }
     expected = {
-        (f"orion:{subject}", f"orion:{predicate}", f"orion:{obj}")
+        (_observation_iri(subject), f"orion:{predicate}", _observation_iri(obj))
         for subject, predicate, obj in _PHISHING_SCENARIO_RELATIONS
     }
 
-    assert expected <= observed
-    assert ("orion:PhishingScenario", "orion:incidents", "orion:RelateToEachOther") not in observed
-    assert all(fact.get("object") != "orion:RelateToEachOther" for fact in facts)
-    assert all(fact.get("predicate") != "orion:incidents" for fact in facts)
+    assert expected == observed
+    assert not any(
+        fact.get("source_evidence") == _PHISHING_SCENARIO_EVIDENCE
+        for fact in graph.get("facts", [])
+    )
 
 
-def test_p039_p040_phishing_scenario_rdf_uses_direct_illustrates_triples(tmp_path: Path):
+def test_p039_p040_phishing_scenario_rdf_does_not_promote_context_to_facts(tmp_path: Path):
     # TASK-INFOSEC-PAIR-SMOKE-P039_P040 | CON-RDF-VISIBILITY AC-4 | BR-INFOSEC-PAIR-SMOKE-004
     _metrics(tmp_path)
     root = _rdf_root()
 
-    assert _has_direct_orion_triple(root, "phishingscenario", "illustrates", "threat")
-    assert _has_direct_orion_triple(root, "phishingscenario", "illustrates", "vulnerability")
-    assert _has_direct_orion_triple(root, "phishingscenario", "illustrates", "control")
-    assert _has_direct_orion_triple(root, "phishingscenario", "illustrates", "incident")
-    assert not _has_direct_orion_triple(root, "phishingscenario", "incidents", "relatetoeachother")
-    incidents_iri = f"{_ORION_NS}incidents"
-    assert all(
-        prop.attrib.get(f"{{{_RDF_NS}}}about") != incidents_iri
-        for prop in root.findall("owl:ObjectProperty", _NS)
+    assert not any(
+        _has_direct_orion_triple(root, left.casefold(), "relatesto", right.casefold())
+        for left, _, right in _PHISHING_SCENARIO_RELATIONS
+    )
+    assert not any(
+        _has_direct_orion_triple(root, "phishingscenario", "illustrates", obj)
+        for obj in ("threat", "vulnerability", "control", "incident")
     )
 
 def test_p039_p040_corrective_actions_semantic_claims_use_direct_action_objects(tmp_path: Path):
@@ -339,41 +351,37 @@ def test_p039_p040_corrective_actions_semantic_claims_use_direct_action_objects(
     assert all(claim.get("subject") != _FORBIDDEN_CORRECTIVE_ACTIONS_NODE for claim in claims)
 
 
-def test_p039_p040_corrective_actions_graph_model_uses_direct_action_facts(tmp_path: Path):
+def test_p039_p040_corrective_actions_graph_model_keeps_may_include_scoped(tmp_path: Path):
     # TASK-NLP-MAY-INCLUDE-ACTIONS-P040 | CON-RDF-VISIBILITY AC-8 | BR-NLP-MAY-INCLUDE-ACTIONS-001
     _metrics(tmp_path)
-    facts = _graph_facts()
+    graph = json.loads(_artifact_path("observed_p039_p040_graph_model.json").read_text(encoding="utf-8"))
     observed = {
-        (fact.get("subject"), fact.get("predicate"), fact.get("object"))
-        for fact in facts
-        if fact.get("source_evidence") == _CORRECTIVE_ACTIONS_EVIDENCE
+        (item.get("subject"), item.get("predicate"), item.get("object"))
+        for item in graph.get("scoped_relations", [])
+        if item.get("source_evidence") == _CORRECTIVE_ACTIONS_EVIDENCE and item.get("modality") == "may"
     }
     expected = {
-        (f"orion:{subject}", f"orion:{predicate}", f"orion:{obj}")
+        (_observation_iri(subject), f"orion:{predicate}", _observation_iri(obj))
         for subject, predicate, obj in _CORRECTIVE_ACTIONS_RELATIONS
     }
 
     assert expected <= observed
-    assert ("orion:Corrective", "orion:actions", f"orion:{_FORBIDDEN_CORRECTIVE_ACTIONS_NODE}") not in observed
-    assert all(fact.get("object") != f"orion:{_FORBIDDEN_CORRECTIVE_ACTIONS_NODE}" for fact in facts)
-    assert all(fact.get("subject") != f"orion:{_FORBIDDEN_CORRECTIVE_ACTIONS_NODE}" for fact in facts)
+    assert not any(
+        fact.get("source_evidence") == _CORRECTIVE_ACTIONS_EVIDENCE
+        for fact in graph.get("facts", [])
+    )
 
 
-def test_p039_p040_corrective_actions_rdf_and_ttl_use_direct_action_objects(tmp_path: Path):
+def test_p039_p040_corrective_actions_rdf_and_ttl_do_not_assert_possible_members(tmp_path: Path):
     # TASK-NLP-MAY-INCLUDE-ACTIONS-P040 | CON-RDF-VISIBILITY AC-9 | BR-NLP-MAY-INCLUDE-ACTIONS-001
     _metrics(tmp_path)
     root = _rdf_root()
     ttl = _ttl_text()
 
-    assert _has_direct_orion_triple(root, "corrective", "actions", "patchdeployment")
-    assert _has_direct_orion_triple(root, "corrective", "actions", "privilegereduction")
-    assert _has_direct_orion_triple(root, "corrective", "actions", "improveddetectionrule")
-    assert not _has_direct_orion_triple(root, "corrective", "actions", "mayincludepatchdeployment")
-    assert _FORBIDDEN_CORRECTIVE_ACTIONS_NODE not in ET.tostring(root, encoding="unicode")
-    assert "orion:corrective orion:actions orion:patchdeployment ." in ttl
-    assert "orion:corrective orion:actions orion:privilegereduction ." in ttl
-    assert "orion:corrective orion:actions orion:improveddetectionrule ." in ttl
-    assert "mayincludepatchdeployment" not in ttl.casefold()
+    assert not _has_direct_orion_triple(root, "correctiveaction", "mayinclude", "patchdeployment")
+    assert not _has_direct_orion_triple(root, "correctiveaction", "mayinclude", "privilegereduction")
+    assert not _has_direct_orion_triple(root, "correctiveaction", "mayinclude", "improveddetectionrule")
+    assert "orion:correctiveaction orion:mayinclude" not in ttl
 
 def _claims_for_evidence(evidence: str) -> set[tuple[Any, Any, Any]]:
     return {
@@ -389,6 +397,22 @@ def _facts_for_evidence(evidence: str) -> set[tuple[Any, Any, Any]]:
         for fact in _graph_facts()
         if fact.get("source_evidence") == evidence
     }
+
+
+def _scoped_for_evidence(evidence: str) -> set[tuple[Any, Any, Any]]:
+    graph = json.loads(_artifact_path("observed_p039_p040_graph_model.json").read_text(encoding="utf-8"))
+    scoped = {
+        (item.get("subject"), item.get("predicate"), item.get("object"))
+        for item in graph.get("scoped_relations", [])
+        if item.get("source_evidence") == evidence
+    }
+    alternatives = {
+        (item.get("subject"), item.get("predicate"), item.get("object"))
+        for group in graph.get("logical_alternatives", [])
+        if group.get("source_evidence") == evidence
+        for item in group.get("alternatives", [])
+    }
+    return scoped | alternatives
 
 
 def test_p039_p040_observational_modal_svo_semantic_claims_stay_clean(tmp_path: Path):
@@ -410,33 +434,155 @@ def test_p039_p040_observational_modal_svo_graph_and_ttl_stay_clean(tmp_path: Pa
     _metrics(tmp_path)
     root = _rdf_root()
     ttl = _ttl_text()
-    expected_facts = {
-        (f"orion:{subject}", f"orion:{predicate}", f"orion:{obj}")
+    expected_scoped = {
+        (_observation_iri(subject), f"orion:{predicate}", _observation_iri(obj))
         for subject, predicate, obj in (
             _LOG_MONITORING_RELATIONS
             | _POST_INCIDENT_REVIEW_RELATIONS
             | _SECURITY_AWARENESS_TRAINING_RELATIONS
-            | _COMPROMISED_CREDENTIAL_RELATIONS
+            | {("Attacker", "accesses", "CloudAccount")}
         )
     }
-    observed_facts = (
-        _facts_for_evidence(_LOG_MONITORING_EVIDENCE)
-        | _facts_for_evidence(_POST_INCIDENT_REVIEW_EVIDENCE)
-        | _facts_for_evidence(_SECURITY_AWARENESS_TRAINING_EVIDENCE)
-        | _facts_for_evidence(_COMPROMISED_CREDENTIAL_EVIDENCE)
+    observed_scoped = (
+        _scoped_for_evidence(_LOG_MONITORING_EVIDENCE)
+        | _scoped_for_evidence(_POST_INCIDENT_REVIEW_EVIDENCE)
+        | _scoped_for_evidence(_SECURITY_AWARENESS_TRAINING_EVIDENCE)
+        | _scoped_for_evidence(_COMPROMISED_CREDENTIAL_EVIDENCE)
     )
 
-    assert expected_facts <= observed_facts
-    assert _has_direct_orion_triple(root, "logmonitoring", "mayidentify", "suspiciousloginactivity")
-    assert _has_direct_orion_triple(root, "postincidentreview", "mayidentify", "missingpatch")
-    assert _has_direct_orion_triple(root, "postincidentreview", "mayidentify", "weakaccesscontrol")
-    assert _has_direct_orion_triple(root, "postincidentreview", "mayidentify", "insufficientmonitoring")
-    assert _has_direct_orion_triple(root, "securityawarenesstraining", "mayreduce", "maliciouslinkclickinglikelihood")
-    assert not _has_direct_orion_triple(root, "securityawarenesstraining", "mayreduce", "likelihoodofclickingthemaliciouslink")
-    assert _has_direct_orion_triple(root, "attacker", "uses", "compromisedcredential")
-    assert _has_direct_orion_triple(root, "compromisedcredential", "accesses", "cloudaccount")
+    assert expected_scoped <= observed_scoped
+    assert _has_direct_orion_triple(root, "attacker", "uses", "compromised-credential")
+    assert not _has_direct_orion_triple(root, "attacker", "accesses", "cloudaccount")
+    assert not _has_direct_orion_triple(root, "compromisedcredential", "accesses", "cloudaccount")
     rdf_text = ET.tostring(root, encoding="unicode")
     assert all(node not in rdf_text for node in _FORBIDDEN_OBSERVATIONAL_NODES)
-    assert "orion:securityawarenesstraining orion:mayreduce orion:maliciouslinkclickinglikelihood ." in ttl
+    assert "orion:securityawarenesstraining orion:mayreduce orion:maliciouslinkclickinglikelihood ." not in ttl
     assert all(node.casefold() not in ttl.casefold() for node in _FORBIDDEN_OBSERVATIONAL_NODES)
+
+
+def test_p039_p040_roles_compound_subjects_and_modal_quality_are_preserved(tmp_path: Path):
+    _metrics(tmp_path)
+    claims = _semantic_claims()
+
+    access = [
+        item for item in claims
+        if (item.get("source") or {}).get("evidence") == _COMPROMISED_CREDENTIAL_EVIDENCE
+    ]
+    assert any(
+        item.get("subject") == "Attacker"
+        and item.get("predicate") == "accesses"
+        and item.get("object") == "CloudAccount"
+        and item.get("instrument") == "CompromisedCredential"
+        for item in access
+    )
+    assert not any(item.get("subject") == "CompromisedCredential" and item.get("predicate") == "accesses" for item in claims)
+
+    endpoint = [
+        item for item in claims
+        if (item.get("source") or {}).get("evidence") == "Endpoint detection and response may detect the malware activity."
+    ]
+    assert {(item.get("subject"), item.get("predicate"), item.get("object")) for item in endpoint} == {
+        ("EndpointDetectionAndResponse", "mayDetect", "MalwareActivity")
+    }
+    assert endpoint[0].get("modality") == "may"
+
+    quality = json.loads(
+        _artifact_path("pipeline_outputs/observed_p039_p040_15_semantic_quality.json").read_text(encoding="utf-8")
+    )["semantic_quality_report"]
+    assert quality["semantic_integrity_checks"]["logical_scope_structured"]
+    assert quality["semantic_integrity_checks"]["claim_scope_preserved_in_triples"]
+    assert not any("propositional_resources" in issue for issue in quality["semantic_integrity_issues"])
+
+
+def test_p039_p040_introductory_relations_and_generic_ransomware_terms_are_preserved(tmp_path: Path):
+    _metrics(tmp_path)
+    claims = _semantic_claims()
+
+    phishing = {
+        (item.get("subject"), item.get("predicate"), item.get("object"))
+        for item in claims
+        if (item.get("source") or {}).get("evidence") == _PHISHING_SCENARIO_EVIDENCE
+    }
+    assert {
+        ("Threat", "relatesTo", "Vulnerability"),
+        ("Threat", "relatesTo", "Control"),
+        ("Threat", "relatesTo", "Incident"),
+        ("Vulnerability", "relatesTo", "Control"),
+        ("Vulnerability", "relatesTo", "Incident"),
+        ("Control", "relatesTo", "Incident"),
+    } <= phishing
+
+    ransomware_evidence = "A ransomware scenario illustrates the importance of backups, monitoring, and response."
+    ransomware = {
+        (item.get("subject"), item.get("predicate"), item.get("object"))
+        for item in claims
+        if (item.get("source") or {}).get("evidence") == ransomware_evidence
+    }
+    assert ransomware == {
+        ("RansomwareScenario", "illustratesImportanceOf", "Backup"),
+        ("RansomwareScenario", "illustratesImportanceOf", "Monitoring"),
+        ("RansomwareScenario", "illustratesImportanceOf", "Response"),
+    }
+    assert not any(
+        item.get("object") in {"LogMonitoring", "IncidentResponse"}
+        for item in claims
+        if (item.get("source") or {}).get("evidence") == ransomware_evidence
+    )
+
+
+def test_p039_p040_scenario_observations_do_not_create_ontology_schema(tmp_path: Path):
+    _metrics(tmp_path)
+    claims = _semantic_claims()
+    graph = json.loads(_artifact_path("observed_p039_p040_graph_model.json").read_text(encoding="utf-8"))
+    pipeline_dir = _artifact_path("pipeline_outputs")
+    taxonomy = json.loads(
+        (pipeline_dir / "observed_p039_p040_13_taxonomy_induction.json").read_text(encoding="utf-8")
+    )
+    type_stage = json.loads(
+        (pipeline_dir / "observed_p039_p040_14_type_assertion.json").read_text(encoding="utf-8")
+    )
+
+    assert claims and all(claim.get("observation_scope") == "illustrative_example" for claim in claims)
+    assert taxonomy["taxonomy_relations"] == []
+    assert type_stage["type_assertions"] == []
+    assert graph["classes"] == []
+    assert graph["schema"]["classes"] == []
+    assert graph["object_property_facts"] == []
+    assert all("domain" not in row and "range" not in row for row in graph["schema"]["object_properties"])
+
+
+def test_p039_p040_recipient_and_unresolved_discourse_are_auditable(tmp_path: Path):
+    _metrics(tmp_path)
+    claims = _semantic_claims()
+    graph = json.loads(_artifact_path("observed_p039_p040_graph_model.json").read_text(encoding="utf-8"))
+    quality = json.loads(
+        _artifact_path("pipeline_outputs/observed_p039_p040_15_semantic_quality.json").read_text(encoding="utf-8")
+    )["semantic_quality_report"]
+
+    sending = [
+        claim for claim in claims
+        if (claim.get("source") or {}).get("evidence") == "A threat actor sends a phishing email to an employee."
+    ]
+    assert any(
+        claim.get("subject") == "ThreatActor"
+        and claim.get("predicate") == "sends"
+        and claim.get("object") == "PhishingEmail"
+        and claim.get("recipient") == "Employee"
+        for claim in sending
+    )
+    assert any(
+        fact.get("subject") == "orion:phishing-email"
+        and fact.get("predicate") == "orion:sentTo"
+        and fact.get("object") == "orion:employee"
+        for fact in graph["facts"]
+    )
+
+    ambiguity_candidates = {
+        item.get("candidate_subjects")
+        for item in quality["semantic_ambiguities"]
+    }
+    assert {"ThreatActor", "CloudAccount", "Malware", "FileServer"} <= ambiguity_candidates
+    assert "source_ambiguity_preserved" in quality["warnings"]
+    assert quality["quality_score"] < 0.95
+    assert quality["semantic_integrity_checks"]["ambiguous_interpretations_scoped"]
 

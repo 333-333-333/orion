@@ -1,3 +1,5 @@
+"""Infer guarded subclass relations from concepts and sentence patterns."""
+
 from __future__ import annotations
 
 import hashlib
@@ -23,10 +25,12 @@ _INCLUDING_PATTERN = re.compile(r'\b(?P<sup>(?:[A-Za-z][A-Za-z\-]*\s+){0,5}[A-Za
 
 
 def _normalize_text(value: str | None) -> str:
+    """Normalize text."""
     return (value or '').casefold().strip()
 
 
 def _strip_leading_articles(value: str) -> str:
+    """Remove leading articles."""
     tokens = [token for token in value.split(' ') if token]
     while tokens and tokens[0] in _PHRASE_ARTICLES:
         tokens.pop(0)
@@ -34,6 +38,7 @@ def _strip_leading_articles(value: str) -> str:
 
 
 def _singularize_token(token: str) -> str:
+    """Apply the deterministic, suffix-based singularization rules to one token."""
     if len(token) > 3 and token.endswith('ies'):
         return token[:-3] + 'y'
     if len(token) > 4 and token.endswith(('ses', 'xes', 'zes', 'ches', 'shes')):
@@ -44,6 +49,7 @@ def _singularize_token(token: str) -> str:
 
 
 def _normalize_phrase(value: str | None) -> str:
+    """Normalize phrase."""
     normalized = re.sub(r'[^a-z0-9]+', ' ', _normalize_text(value or ''))
     normalized = re.sub(r'\s+', ' ', normalized).strip()
     normalized = _strip_leading_articles(normalized)
@@ -51,6 +57,7 @@ def _normalize_phrase(value: str | None) -> str:
 
 
 def _is_definition_only_parent_candidate(value: str | None) -> bool:
+    """Return whether a multiword parent ends in a definition-only generic head."""
     spaced = re.sub(r'([a-z0-9])([A-Z])', r'\1 \2', str(value or ''))
     spaced = re.sub(r'([A-Z]+)([A-Z][a-z])', r'\1 \2', spaced)
     tokens = [token for token in _normalize_phrase(spaced).split(' ') if token]
@@ -58,6 +65,7 @@ def _is_definition_only_parent_candidate(value: str | None) -> bool:
 
 
 def _canonicalize_head_phrase(value: str | None) -> str:
+    """Canonicalize head phrase."""
     tokens = [token for token in _normalize_phrase(value).split(' ') if token]
     if not tokens:
         return ''
@@ -82,10 +90,12 @@ def _canonicalize_head_phrase(value: str | None) -> str:
 
 
 def _phrase_tokens(value: str | None) -> list[str]:
+    """Return normalized content tokens for phrase comparison."""
     return [token for token in _normalize_phrase(value).split(' ') if token and token not in _PHRASE_ARTICLES]
 
 
 def _phrase_match_score(query: str | None, candidate: str | None) -> float:
+    """Score normalized phrase overlap for deterministic reference resolution."""
     normalized_query = _normalize_phrase(query)
     normalized_candidate = _normalize_phrase(candidate)
     if not normalized_query or not normalized_candidate:
@@ -105,6 +115,7 @@ def _phrase_match_score(query: str | None, candidate: str | None) -> float:
     if query_join and f' {query_join} ' in f' {candidate_join} ':
         return 0.92
 
+    # Modifier expansion makes containment stronger evidence than incidental token overlap.
     query_set = set(query_tokens)
     candidate_set = set(candidate_tokens)
     if query_set <= candidate_set:
@@ -119,12 +130,14 @@ def _phrase_match_score(query: str | None, candidate: str | None) -> float:
 
 
 def _build_taxonomy_relation_id(source_text_id: str, sentence_id: str, subclass: str, superclass: str) -> str:
+    """Build taxonomy relation ID."""
     stable_key = f"{source_text_id}|{sentence_id}|{subclass}|{superclass}|{_BR_TAX_RELATION_TYPE_SUBCLASS_OF}".encode('utf-8')
     digest = hashlib.sha256(stable_key).hexdigest()[:16]
     return f'tax-{digest}'
 
 
 def _concept_lookup(input_payload: dict[str, Any]) -> dict[str, str]:
+    """Build a deterministic normalized-concept lookup."""
     entries: list[tuple[str, str]] = []
     for concept in input_payload.get('concepts', []):
         if not isinstance(concept, dict):
@@ -146,6 +159,7 @@ def _concept_lookup(input_payload: dict[str, Any]) -> dict[str, str]:
 
 
 def _resolve_phrase_text(value: str | None, concept_lookup: dict[str, str]) -> str:
+    """Resolve phrase text."""
     normalized_query = _normalize_phrase(value)
     if not normalized_query:
         return ''
@@ -161,15 +175,18 @@ def _resolve_phrase_text(value: str | None, concept_lookup: dict[str, str]) -> s
             best_score = score
             best_size = len(_phrase_tokens(normalized_candidate))
             best_text = normalized_candidate
+    # Reject weak fuzzy matches rather than inventing a subclass endpoint.
     return best_text if best_score >= 0.75 else ''
 
 
 def _resolve_concept_ref(value: str | None, concept_lookup: dict[str, str]) -> str:
+    """Resolve concept ref."""
     resolved_text = _resolve_phrase_text(value, concept_lookup)
     return concept_lookup.get(resolved_text, '') if resolved_text else ''
 
 
 def _entity_text_set(input_payload: dict[str, Any]) -> set[str]:
+    """Collect normalized entity labels from the payload."""
     values: set[str] = set()
     for entity in input_payload.get('entities', []):
         if not isinstance(entity, dict):
@@ -182,6 +199,7 @@ def _entity_text_set(input_payload: dict[str, Any]) -> set[str]:
 
 
 def _sentence_span(sentence: dict[str, Any], fallback_text: str) -> dict[str, int]:
+    """Return sentence offsets, falling back to the supplied text length."""
     start_offset = sentence.get('start_offset')
     end_offset = sentence.get('end_offset')
     if isinstance(start_offset, int) and isinstance(end_offset, int):
@@ -190,10 +208,12 @@ def _sentence_span(sentence: dict[str, Any], fallback_text: str) -> dict[str, in
 
 
 def _is_instance_like(subclass: str, entity_set: set[str], concept_lookup: dict[str, str]) -> bool:
+    """Return whether a taxonomy subject is entity-only rather than a known concept."""
     return subclass in entity_set and subclass not in concept_lookup
 
 
 def _candidate_from_match(match: re.Match[str], sentence: dict[str, Any], source_text_id: str, concept_lookup: dict[str, str], entity_set: set[str], source: str, confidence: float) -> dict[str, Any] | None:
+    """Build a taxonomy candidate from a regex match when semantic guards pass."""
     subclass = _resolve_phrase_text(match.group('sub'), concept_lookup) or _normalize_phrase(match.group('sub'))
     superclass_head = _canonicalize_head_phrase(match.group('sup'))
     superclass = _resolve_phrase_text(superclass_head, concept_lookup) or superclass_head
@@ -201,6 +221,7 @@ def _candidate_from_match(match: re.Match[str], sentence: dict[str, Any], source
         return None
     if subclass == superclass:
         return None
+    # Generic multiword definition heads and entity-only subjects are not safe class-to-class evidence.
     if _is_definition_only_parent_candidate(superclass):
         return None
     if _is_instance_like(subclass, entity_set, concept_lookup):
@@ -229,8 +250,10 @@ def _candidate_from_match(match: re.Match[str], sentence: dict[str, Any], source
 
 
 def _type_scaffold_candidate(match: re.Match[str], sentence: dict[str, Any], source_text_id: str, concept_lookup: dict[str, str]) -> dict[str, Any] | None:
+    """Build a guarded taxonomy scaffold candidate for explicit type phrases."""
     if ' type of ' not in match.group(0).casefold() and ' kind of ' not in match.group(0).casefold():
         return None
+    # Keep this compatibility scaffold only when its compact subject resolves to a known concept.
     sub_tokens = _phrase_tokens(match.group('sub'))
     if not sub_tokens:
         return None
@@ -255,6 +278,7 @@ def _type_scaffold_candidate(match: re.Match[str], sentence: dict[str, Any], sou
 
 
 def _extract_candidates(input_payload: dict[str, Any]) -> list[dict[str, Any]]:
+    """Extract candidates."""
     source_text_id = input_payload.get('source_text_id', '')
     concept_lookup = _concept_lookup(input_payload)
     entity_set = _entity_text_set(input_payload)
@@ -288,6 +312,7 @@ def _extract_candidates(input_payload: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def _dedupe_stable(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Deduplicate taxonomy relations by endpoints and relation type in deterministic order."""
     ordered = sorted(
         candidates,
         key=lambda rel: (

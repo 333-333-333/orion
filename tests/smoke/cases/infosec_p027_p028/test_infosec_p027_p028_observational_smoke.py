@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Any
 import sys
@@ -13,6 +14,7 @@ from infosec_pair_case_harness import run_pair_case
 _CASE_DIR = Path(__file__).parent
 _PARAGRAPH_IDS = ['p027', 'p028']
 _METRICS: dict[str, Any] | None = None
+_ARTIFACT_DIR = _CASE_DIR / 'artifacts'
 
 
 def _metrics(tmp_path: Path) -> dict[str, Any]:
@@ -39,6 +41,35 @@ def test_p027_p028_semantic_claims_preserve_source_evidence(tmp_path: Path):
     assert metrics["observed_stage"] in {"semantic_claims", "semantic_claims_artifact"}
     assert not metrics["evidence_unsupported_claim_ids"]
     assert all(count > 0 for count in metrics["paragraph_claim_distribution"].values())
+
+
+def test_p027_p028_claims_preserve_compound_subjects_actions_and_scope(tmp_path: Path):
+    _metrics(tmp_path)
+    payload = json.loads((_ARTIFACT_DIR / 'observed_p027_p028_semantic_claims.json').read_text(encoding='utf-8'))
+    claims = payload['claims']
+    observed = {(item.get('subject'), item.get('predicate'), item.get('object')) for item in claims}
+
+    assert {
+        ('SecurityAwarenessTraining', 'educates', 'User'),
+        ('DataHandlingAwareness', 'teaches', 'User'),
+        ('AwarenessCampaign', 'reinforces', 'SecureBehavior'),
+        ('TrainingCompletionMetric', 'measures', 'UserParticipation'),
+        ('SimulatedPhishingExercise', 'measures', 'UserResponse'),
+    } <= observed
+    taught = {item.get('predicate') for item in claims if item.get('modality') == 'taught_action'}
+    assert {'identifies', 'creates', 'protects', 'classifies', 'stores', 'transmits', 'disposes_of', 'recognizes'} <= taught
+    assert any(item.get('temporal_relation') == 'before' and item.get('temporal_object') == 'Employment' and item.get('subject') == 'BackgroundCheck' for item in claims)
+    assert any(item.get('condition_subject') == 'Employment' and item.get('condition_predicate') == 'ends' for item in claims)
+    assert not ({'awareness', 'process', 'campaigns', 'metrics', 'exercises', 'networks', 'applies_before'} & {str(item.get('predicate')) for item in claims})
+
+
+def test_p027_p028_output_uses_scoped_views_without_unjustified_restrictions(tmp_path: Path):
+    _metrics(tmp_path)
+    graph = json.loads((_ARTIFACT_DIR / 'observed_p027_p028_graph_model.json').read_text(encoding='utf-8'))
+    assert graph.get('restrictions') == []
+    assert any(item.get('temporal_relation') == 'before' for item in graph.get('scoped_relations', []))
+    assert any(item.get('modality') == 'taught_action' for item in graph.get('scoped_relations', []))
+    assert not any(item.get('predicate') in {'orion:awareness', 'orion:campaigns', 'orion:metrics', 'orion:exercises', 'orion:networks'} for item in graph.get('facts', []))
 
 
 def test_p027_p028_rdf_projection_has_visible_structure(tmp_path: Path):

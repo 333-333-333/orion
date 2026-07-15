@@ -49,6 +49,9 @@ def _object_property_edges(graph: dict[str, Any]) -> list[tuple[str, str, str]]:
     for item in schema.get("object_properties", []):
         if isinstance(item, dict):
             edges.append((slug(item.get("domain")), slug(item.get("predicate") or item.get("iri") or item.get("label")), slug(item.get("range"))))
+    for item in graph.get("scoped_relations", []):
+        if isinstance(item, dict):
+            edges.append((slug(item.get("subject")), slug(item.get("predicate")), slug(item.get("object"))))
     return edges
 
 
@@ -133,6 +136,82 @@ def test_p043_task_001_access_is_object_property_between_users_and_systems(tmp_p
         and range_ in {"system", "systems"}
         for domain, predicate, range_ in edges
     ), f"missing explicit users access systems object property; edges={edges}"
+
+
+def test_p043_audited_relations_keep_should_scope_and_discourse_closure(tmp_path: Path):
+    _metrics(tmp_path)
+    payload = _load_json_artifact("observed_p043_semantic_claims.json")
+    claims = [item for item in payload.get("claims", []) if isinstance(item, dict)]
+
+    represented = [item for item in claims if item.get("relation_role") == "represented_content"]
+    assert len(represented) == 14
+    assert all(item.get("modality") == "should" and item.get("scope") == "ResultingOntology" for item in represented)
+    assert ("backup", "supports", "availability") in {
+        (slug(item.get("subject")), slug(item.get("predicate")), slug(item.get("object"))) for item in represented
+    }
+    assert not any(item.get("subject") == "Encryption" and item.get("predicate") == "backups" for item in claims)
+    requirement_claims = [item for item in represented if item.get("subject") == "Requirement"]
+    assert [(item.get("predicate"), item.get("object")) for item in requirement_claims] == [("beSatisfiedBy", "Control")]
+
+    assert not any(item.get("subject") == "RelationshipSet" for item in claims)
+    suitability = [
+        item for item in claims
+        if item.get("subject") == "GeneratedGraph"
+        and item.get("predicate") == "suitable_for"
+        and item.get("relation_role") == "discourse_consequence"
+    ]
+    assert {item.get("object") for item in suitability} == {"Querying", "Validation", "Reasoning", "Mining"}
+    assert all(
+        item.get("graph_format_alternatives") == "RDF,OWL"
+        and item.get("graph_format_operator") == "or"
+        and item.get("antecedent_scope") == "represented_relationships"
+        for item in suitability
+    )
+
+    graph = _load_json_artifact("observed_p043_graph_model.json")
+    assert any(
+        slug(item.get("subject")) == "backup"
+        and slug(item.get("predicate")) == "supports"
+        and slug(item.get("object")) == "availability"
+        for item in graph.get("scoped_relations", [])
+    )
+    assert graph.get("restrictions") == []
+
+
+def test_p043_suitability_and_support_pairs_survive_projection(tmp_path: Path):
+    _metrics(tmp_path)
+    graph = _load_json_artifact("observed_p043_graph_model.json")
+    suitability_relations = [
+        item for item in graph.get("scoped_relations", [])
+        if slug(item.get("subject")) == "generated-graph"
+        and slug(item.get("predicate")) == "suitable-for"
+    ]
+    assert {slug(item.get("object")) for item in suitability_relations} == {
+        "querying", "validation", "reasoning", "mining",
+    }
+    assert all(
+        item.get("graph_format_alternatives") == "RDF,OWL"
+        and item.get("graph_format_operator") == "or"
+        and item.get("relation_role") == "discourse_consequence"
+        for item in suitability_relations
+    )
+    assert not any(slug(item.get("predicate")) == "suitable-for" for item in graph.get("facts", []))
+
+    supports_schema = next(
+        item for item in graph.get("object_property_schema", [])
+        if slug(item.get("predicate")) == "supports"
+    )
+    scoped_pairs = {
+        (slug(item.get("domain")), slug(item.get("range")))
+        for item in supports_schema.get("scoped_pairs", [])
+    }
+    assert scoped_pairs == {("backup", "availability"), ("logging", "accountability")}
+
+    quality = _load_json_artifact("pipeline_outputs/observed_p043_15_semantic_quality.json")["semantic_quality_report"]
+    assert "missing_graph_suitability_inventory" not in quality.get("semantic_integrity_issues", [])
+    assert any(item.get("reason") == "predicate_absorbed_into_concept" for item in quality.get("concept_noise", []))
+    assert quality.get("quality_score", 1.0) < 1.0
+    assert quality.get("rdf_readiness") is False
 
 
 def test_p043_task_001_no_compound_relation_classes_or_meta_hub(tmp_path: Path):

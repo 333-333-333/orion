@@ -142,3 +142,105 @@ def test_p041_p042_filters_orion_meta_instruction_from_semantics_graph_and_ttl(t
     assert forbidden_claims == []
     assert forbidden_facts == []
     assert forbidden_triple not in ttl
+
+
+def test_p041_p042_repairs_narrative_roles_purpose_and_embedded_obligation(tmp_path: Path):
+    _metrics(tmp_path)
+    semantic = _artifact_json("observed_p041_p042_semantic_claims.json")
+    claims = [item for item in semantic.get("claims", []) if isinstance(item, dict)]
+    observed = {(item.get("subject"), item.get("predicate"), item.get("object")) for item in claims}
+
+    assert ("UnauthorizedAccessOccurrence", "violates", "AccessControlPolicy") in observed
+    assert ("AuditLogs", "record", "AccessEvent") in observed
+    assert ("SecurityAnalyst", "investigates", "SecurityAlert") in observed
+    assert ("CorrectiveAction", "prevents", "Recurrence") in observed
+    assert not any(item.get("object") in {"ViolateTheAccessControlPolicy", "RecordTheAccessEvent"} for item in claims)
+
+    notification = next(item for item in claims if item.get("predicate") == "assessesWhetherNotificationIsRequiredFor")
+    assert notification.get("subject") == "PrivacyOfficer"
+    assert notification.get("object") == "DataSubject"
+    assert notification.get("modality") == "whether"
+    assert notification.get("embedded_modality") == "must"
+    assert not any(item.get("object") in {"Notification", "NotificationRequirement"} for item in claims)
+
+
+def test_p041_p042_orion_capabilities_and_important_class_declarations_survive_projection(tmp_path: Path):
+    _metrics(tmp_path)
+    semantic = _artifact_json("observed_p041_p042_semantic_claims.json")
+    graph = _artifact_json("observed_p041_p042_graph_model.json")
+    claims = [item for item in semantic.get("claims", []) if isinstance(item, dict)]
+
+    capabilities = {
+        (item.get("predicate"), item.get("object"))
+        for item in claims
+        if item.get("subject") == "ORION" and item.get("modality") == "should"
+    }
+    assert capabilities == {
+        ("identifies", "SecurityConcept"),
+        ("classifies", "HierarchicalRelationship"),
+        ("extracts", "MeaningfulRelationship"),
+    }
+
+    declared = {
+        item.get("subject")
+        for item in claims
+        if item.get("predicate") == "declared_as" and item.get("object") == "ImportantClass"
+    }
+    assert declared == {
+        "InformationAsset", "SecurityControl", "SecurityIncident", "AuthenticationFactor",
+        "ThreatActor", "ComplianceRequirement", "CloudWorkload", "Endpoint", "Supplier",
+    }
+    scoped = graph.get("scoped_relations", [])
+    assert len([item for item in scoped if item.get("subject") == "orion:Orion" and item.get("modality") == "should"]) == 3
+    assert not any(
+        item.get("object") == "orion:ImportantClass"
+        for item in graph.get("subclass_facts", [])
+    )
+
+
+def test_p041_p042_quality_no_longer_certifies_propositional_resources(tmp_path: Path):
+    _metrics(tmp_path)
+    quality = _artifact_json("pipeline_outputs/observed_p041_p042_15_semantic_quality.json")["semantic_quality_report"]
+
+    assert quality["semantic_integrity_checks"]["canonical_predicates"]
+    assert quality["semantic_integrity_checks"]["no_propositional_resources"]
+    assert quality["semantic_integrity_checks"]["logical_scope_structured"]
+    assert quality["semantic_integrity_checks"]["claim_scope_preserved_in_triples"]
+    assert quality["semantic_integrity_checks"]["scenario_resources_distinct_from_classes"]
+
+
+def test_p041_p042_scenario_occurrences_are_distinct_from_declared_classes(tmp_path: Path):
+    _metrics(tmp_path)
+    semantic = _artifact_json("observed_p041_p042_semantic_claims.json")
+    graph = _artifact_json("observed_p041_p042_graph_model.json")
+    claims = [item for item in semantic.get("claims", []) if isinstance(item, dict)]
+
+    assert any(
+        item.get("subject") == "IncidentResponseTeam"
+        and item.get("predicate") == "confirms"
+        and item.get("object") == "DataBreachOccurrence"
+        and item.get("observation_scope") == "illustrative_example"
+        for item in claims
+    )
+    assert {
+        ("UnauthorizedAccessOccurrence", "UnauthorizedAccess"),
+        ("DataBreachOccurrence", "DataBreach"),
+    } <= {
+        (item.get("subject"), item.get("object"))
+        for item in claims
+        if item.get("predicate") == "instance_of"
+    }
+
+    instance_facts = {
+        (item.get("subject"), item.get("object"))
+        for item in graph.get("instance_facts", [])
+    }
+    assert {
+        ("orion:UnauthorizedAccessOccurrence", "orion:UnauthorizedAccess"),
+        ("orion:DataBreachOccurrence", "orion:DataBreach"),
+    } <= instance_facts
+    class_labels = {item.get("label") for item in graph.get("classes", [])}
+    assert "DataBreach" in class_labels
+    assert "UnauthorizedAccess" in class_labels
+    assert "DataBreachOccurrence" not in class_labels
+    assert "UnauthorizedAccessOccurrence" not in class_labels

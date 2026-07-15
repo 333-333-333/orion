@@ -47,3 +47,82 @@ def test_p037_p038_rdf_projection_has_visible_structure(tmp_path: Path):
 
     assert metrics["class_count"] > 0
     assert metrics["object_property_count"] > 0
+
+
+def test_p037_p038_keeps_example_relations_as_observations_and_instance_types(tmp_path: Path):
+    import json
+
+    _metrics(tmp_path)
+    claims_payload = json.loads(
+        (_CASE_DIR / "artifacts" / "observed_p037_p038_semantic_claims.json").read_text(encoding="utf-8")
+    )
+    claims = claims_payload["claims"]
+    spo = {(claim["subject"], claim["predicate"], claim["object"]) for claim in claims}
+
+    assert ("CustomerDatabase", "hosted_on", "DatabaseServer") in spo
+    assert ("DatabaseServer", "runs_inside", "ProductionNetwork") in spo
+    assert ("CustomerDatabase", "encrypted_using", "CryptographicKey") in spo
+    assert ("AuthorizationService", "grants", "Access") in spo
+    assert ("RemoteEmployee", "accesses", "CorporateApplication") in spo
+    assert ("Laptop", "accesses", "CorporateApplication") not in spo
+    assert ("Laptop", "instance_of", "Endpoint") in spo
+    assert ("CorporateApplication", "instance_of", "WebApplication") in spo
+    assert all(
+        claim.get("observation_scope") == "illustrative_example"
+        for claim in claims
+        if claim["paragraph_id"] in {"p037", "p038"}
+    )
+
+    graph = json.loads(
+        (_CASE_DIR / "artifacts" / "observed_p037_p038_graph_model.json").read_text(encoding="utf-8")
+    )
+    assert len(graph["instance_facts"]) == 2
+    assert not any(
+        fact["subject"].lower().endswith(("laptop", "corporateapplication"))
+        for fact in graph["subclass_facts"]
+    )
+    assert graph["restrictions"] == []
+
+
+def test_p037_p038_projects_example_participants_as_individuals_and_keeps_stage_types(tmp_path: Path):
+    import json
+
+    _metrics(tmp_path)
+    pipeline_dir = _CASE_DIR / "artifacts" / "pipeline_outputs"
+    taxonomy = json.loads(
+        (pipeline_dir / "observed_p037_p038_13_taxonomy_induction.json").read_text(encoding="utf-8")
+    )
+    type_stage = json.loads(
+        (pipeline_dir / "observed_p037_p038_14_type_assertion.json").read_text(encoding="utf-8")
+    )
+    quality = json.loads(
+        (pipeline_dir / "observed_p037_p038_15_semantic_quality.json").read_text(encoding="utf-8")
+    )["semantic_quality_report"]
+
+    assert taxonomy["taxonomy_relations"] == []
+    assert {
+        (item["instance"], item["class"])
+        for item in type_stage["type_assertions"]
+    } == {("laptop", "endpoint"), ("corporate application", "web application")}
+    assert quality["semantic_integrity_checks"]["canonical_types_projected"]
+    assert quality["semantic_integrity_checks"]["instance_taxonomy_consistent"]
+    assert quality["quality_score"] < 1.0
+    assert "concept_noise_detected" in quality["warnings"]
+
+    graph = json.loads(
+        (_CASE_DIR / "artifacts" / "observed_p037_p038_graph_model.json").read_text(encoding="utf-8")
+    )
+    class_iris = {item["iri"] for item in graph["classes"]}
+    instance_iris = {item["subject"] for item in graph["instance_facts"]}
+    illustrative_participants = {
+        endpoint
+        for fact in graph["facts"]
+        if fact.get("observation_scope") == "illustrative_example"
+        for endpoint in (fact["subject"], fact["object"])
+    }
+
+    assert instance_iris == {"orion:laptop", "orion:corporate-application"}
+    assert class_iris.isdisjoint(instance_iris)
+    assert class_iris.isdisjoint(illustrative_participants)
+    assert "orion:Laptop" not in class_iris
+    assert "orion:CustomerDatabase" not in class_iris

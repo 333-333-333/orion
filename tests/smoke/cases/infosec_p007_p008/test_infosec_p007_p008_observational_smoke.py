@@ -42,6 +42,48 @@ def test_p007_p008_semantic_claims_preserve_source_evidence(tmp_path: Path):
     assert all(count > 0 for count in metrics["paragraph_claim_distribution"].values())
 
 
+def test_p007_p008_claims_preserve_modal_relatives_variables_and_account_taxonomy(tmp_path: Path):
+    _metrics(tmp_path)
+    payload = json.loads(_artifact_path('observed_p007_p008_semantic_claims.json').read_text(encoding='utf-8'))
+    claims = payload['claims']
+    observed = {(item.get('subject'), item.get('predicate'), item.get('object')) for item in claims}
+
+    assert {
+        ('InternalInformation', 'is_a', 'Information'),
+        ('FinancialData', 'is_a', 'SensitiveInformation'),
+        ('AuthenticationData', 'is_a', 'RestrictedInformation'),
+        ('ServiceAccount', 'is_a', 'NonHumanAccount'),
+        ('PrivilegedAccount', 'is_a', 'Account'),
+        ('SharedAccount', 'is_a', 'Account'),
+        ('SharedAccount', 'creates', 'AccountabilityRisk'),
+        ('AccessControl', 'regulates', 'Access'),
+    } <= observed
+    assert not ({'cans', 'unauthorizeds'} & {str(item.get('predicate')) for item in claims})
+    harms = [item for item in claims if item.get('subject') == 'UnauthorizedDisclosure' and item.get('predicate') == 'harms']
+    assert {item.get('object') for item in harms} == {'Organization', 'Customer', 'Employee', 'Partner'}
+    assert all(item.get('modality') == 'may' for item in harms)
+    identifies = [item for item in claims if item.get('subject') == 'PersonalData' and item.get('predicate') == 'identifies']
+    assert len(identifies) == 2 and {item.get('modality') for item in identifies} == {'explicit', 'can'}
+    access = next(item for item in claims if item.get('subject') == 'AccessControl' and item.get('predicate') == 'regulates')
+    assert access.get('actor_variable') == 'who' and access.get('condition_variable') == 'which conditions'
+    financial = [item for item in claims if item.get('subject') == 'FinancialData' and item.get('predicate') == 'related_to']
+    assert 'FinancialAccount' in {item.get('object') for item in financial}
+    assert not ({'Account', 'UserAccount'} & {item.get('object') for item in financial})
+    assert any(item.get('source_term') == 'Account' and item.get('semantic_scope') == 'financial_data_topic' for item in financial)
+    assert ('Authorization', 'determines', 'Action') in observed
+    assert ('AuthenticatedIdentity', 'performs', 'Action') in observed
+    assert any(item.get('subject') == 'AuthenticatedIdentity' and item.get('modality') == 'may' for item in claims)
+
+
+def test_p007_p008_output_preserves_enabled_and_specific_scope(tmp_path: Path):
+    _metrics(tmp_path)
+    graph = json.loads(_artifact_path('observed_p007_p008_graph_model.json').read_text(encoding='utf-8'))
+    scoped = graph.get('scoped_relations', [])
+    assert any(item.get('relation_role') == 'enabled_action' and item.get('predicate') == 'orion:applies' for item in scoped)
+    assert any(item.get('predicate') == 'orion:tracesActionTo' and item.get('qualifier') == 'specific' for item in scoped)
+    assert not any(item.get('subject') == 'orion:Organization' and item.get('predicate') == 'orion:applies' for item in graph.get('facts', []))
+
+
 def test_p007_p008_rdf_projection_has_visible_structure(tmp_path: Path):
     # TASK-INFOSEC-PAIR-SMOKE-P007_P008 | FUN-INFOSEC-PAIR-SMOKE AC-3 | CON-RDF-VISIBILITY AC-1 | BR-INFOSEC-PAIR-SMOKE-003
     metrics = _metrics(tmp_path)

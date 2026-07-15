@@ -5,7 +5,7 @@ title: Semantic Quality Pipeline Step
 status: draft
 version: 0
 created_at: 2026-06-23
-updated_at: 2026-06-23
+updated_at: 2026-07-10
 summary: Quality filtering and reporting for noisy concepts, entities, and semantic structures.
 paths:
   - src/pipeline/step_012_semantic_quality/**
@@ -20,7 +20,7 @@ related_requirements:
   - NFR-002
   - NFR-005
 related_adrs:
-  []
+  - ADR-003
 owner: herodotus
 ---
 
@@ -50,7 +50,7 @@ Quality filtering and reporting for noisy concepts, entities, and semantic struc
 
 ## Related ADRs
 
-- None.
+- ADR-003
 
 ## Traceability Notes
 

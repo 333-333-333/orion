@@ -1,3 +1,5 @@
+"""Provide a deterministic AST linter for function documentation and complexity."""
+
 from __future__ import annotations
 
 import argparse
@@ -36,6 +38,7 @@ CONTROL_FLOW_NODES = (
 
 @dataclass(frozen=True)
 class WarningItem:
+    """Immutable static-analysis diagnostic."""
     file_path: str
     line: int
     function_name: str
@@ -43,15 +46,19 @@ class WarningItem:
     message: str
 
     def format(self) -> str:
+        """Format the warning as a stable, compiler-style diagnostic line."""
         return f"{self.file_path}:{self.line}:{self.function_name}: {self.code}: {self.message}"
 
 
 class _ControlFlowDepthVisitor(ast.NodeVisitor):
+    """AST visitor that measures control-flow nesting within one function."""
     def __init__(self) -> None:
+        """Initialize the _ControlFlowDepthVisitor."""
         self.current_depth = 0
         self.max_depth = 0
 
     def generic_visit(self, node: ast.AST) -> None:
+        """Track control-flow depth while excluding nested function bodies."""
         if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.Lambda)):
             return
 
@@ -67,6 +74,7 @@ class _ControlFlowDepthVisitor(ast.NodeVisitor):
 
 
 def _iter_python_files(paths: Sequence[str], excluded_dirs: set[str]) -> Iterable[Path]:
+    """Yield unique Python files while honoring excluded directory names."""
     seen: set[Path] = set()
     for raw_path in paths:
         candidate = Path(raw_path)
@@ -90,11 +98,13 @@ def _iter_python_files(paths: Sequence[str], excluded_dirs: set[str]) -> Iterabl
 
 
 def _function_line_count(node: ast.FunctionDef | ast.AsyncFunctionDef) -> int:
+    """Return the inclusive source-line count for a function."""
     end_line = getattr(node, "end_lineno", node.lineno)
     return max(1, end_line - node.lineno + 1)
 
 
 def _control_flow_depth(node: ast.FunctionDef | ast.AsyncFunctionDef) -> int:
+    """Measure the maximum control-flow nesting within a function body."""
     visitor = _ControlFlowDepthVisitor()
     for statement in node.body:
         visitor.visit(statement)
@@ -102,6 +112,7 @@ def _control_flow_depth(node: ast.FunctionDef | ast.AsyncFunctionDef) -> int:
 
 
 def analyze_source(source: str, file_path: str = "<memory>") -> list[WarningItem]:
+    """Parse Python source and report function documentation, size, and nesting violations."""
     tree = ast.parse(source)
     warnings: list[WarningItem] = []
 
@@ -151,6 +162,7 @@ def analyze_source(source: str, file_path: str = "<memory>") -> list[WarningItem
 
 
 def analyze_paths(paths: Sequence[str], excluded_dirs: set[str] | None = None) -> list[WarningItem]:
+    """Analyze Python files under the supplied paths and return deterministic lint warnings."""
     effective_excluded = excluded_dirs or set(DEFAULT_EXCLUDED_DIRS)
     warnings: list[WarningItem] = []
 
@@ -162,6 +174,7 @@ def analyze_paths(paths: Sequence[str], excluded_dirs: set[str] | None = None) -
 
 
 def build_parser() -> argparse.ArgumentParser:
+    """Build the command-line parser for the AST linter."""
     parser = argparse.ArgumentParser(description="Static AST linter for Python functions")
     parser.add_argument("paths", nargs="+", help="File or directory paths to scan")
     parser.add_argument(
@@ -174,6 +187,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: Sequence[str] | None = None) -> int:
+    """Run the AST linter command and return a process-compatible status code."""
     parser = build_parser()
     args = parser.parse_args(argv)
 

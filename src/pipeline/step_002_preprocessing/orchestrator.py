@@ -1,3 +1,5 @@
+"""Orchestrate the preprocessing pipeline stage while preserving the payload contract."""
+
 from __future__ import annotations
 
 from typing import Any
@@ -7,6 +9,7 @@ from pipeline.step_002_preprocessing.rules import collapse_repeated_spaces, norm
 
 
 def preprocess_input(input_payload: dict[str, Any]) -> dict[str, Any]:
+    """Normalize accepted input text and return the preprocessing payload."""
     raw_text = input_payload["raw_text"]
 
     preprocessed_text = normalize_unicode(raw_text)

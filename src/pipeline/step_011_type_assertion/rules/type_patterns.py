@@ -1,3 +1,5 @@
+"""Infer guarded instance-to-class assertions from available evidence."""
+
 from __future__ import annotations
 
 import hashlib
@@ -24,10 +26,12 @@ _COPULA_PATTERN = re.compile(
 
 
 def _normalize_text(value: str | None) -> str:
+    """Normalize text."""
     return (value or '').casefold().strip()
 
 
 def _strip_leading_articles(value: str) -> str:
+    """Remove leading articles."""
     tokens = [token for token in value.split(' ') if token]
     while tokens and tokens[0] in _PHRASE_ARTICLES:
         tokens.pop(0)
@@ -35,6 +39,7 @@ def _strip_leading_articles(value: str) -> str:
 
 
 def _singularize_token(token: str) -> str:
+    """Apply the deterministic, suffix-based singularization rules to one token."""
     if len(token) > 3 and token.endswith('ies'):
         return token[:-3] + 'y'
     if len(token) > 4 and token.endswith(('ses', 'xes', 'zes', 'ches', 'shes')):
@@ -45,6 +50,7 @@ def _singularize_token(token: str) -> str:
 
 
 def _normalize_phrase(value: str | None) -> str:
+    """Normalize phrase."""
     normalized = re.sub(r'[^a-z0-9]+', ' ', _normalize_text(value or ''))
     normalized = re.sub(r'\s+', ' ', normalized).strip()
     normalized = _strip_leading_articles(normalized)
@@ -52,10 +58,12 @@ def _normalize_phrase(value: str | None) -> str:
 
 
 def _phrase_tokens(value: str | None) -> list[str]:
+    """Return normalized content tokens for phrase comparison."""
     return [token for token in _normalize_phrase(value).split(' ') if token and token not in _PHRASE_ARTICLES]
 
 
 def _phrase_match_score(query: str | None, candidate: str | None) -> float:
+    """Score normalized phrase overlap for deterministic reference resolution."""
     normalized_query = _normalize_phrase(query)
     normalized_candidate = _normalize_phrase(candidate)
     if not normalized_query or not normalized_candidate:
@@ -75,6 +83,7 @@ def _phrase_match_score(query: str | None, candidate: str | None) -> float:
     if query_join and f' {query_join} ' in f' {candidate_join} ':
         return 0.92
 
+    # Expanded phrases may add modifiers, so containment outranks incidental overlap.
     query_set = set(query_tokens)
     candidate_set = set(candidate_tokens)
     if query_set <= candidate_set:
@@ -89,12 +98,14 @@ def _phrase_match_score(query: str | None, candidate: str | None) -> float:
 
 
 def _build_type_assertion_id(source_text_id: str, sentence_id: str, instance: str, class_name: str, source: str) -> str:
+    """Build type assertion ID."""
     stable_key = f"{source_text_id}|{sentence_id}|{instance}|{class_name}|{_BR_TYPE_RELATION_INSTANCE_OF}|{source}".encode('utf-8')
     digest = hashlib.sha256(stable_key).hexdigest()[:16]
     return f'ta-{digest}'
 
 
 def _concept_lookup(input_payload: dict[str, Any]) -> dict[str, str]:
+    """Build a deterministic normalized-concept lookup."""
     entries: list[tuple[str, str]] = []
     for concept in input_payload.get('concepts', []):
         if not isinstance(concept, dict):
@@ -116,6 +127,7 @@ def _concept_lookup(input_payload: dict[str, Any]) -> dict[str, str]:
 
 
 def _entity_lookup(input_payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    """Build a deterministic normalized-entity lookup."""
     entities: list[tuple[str, dict[str, Any]]] = []
     for entity in input_payload.get('entities', []):
         if not isinstance(entity, dict):
@@ -134,6 +146,7 @@ def _entity_lookup(input_payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
 
 
 def _resolve_phrase_lookup(value: str | None, lookup: dict[str, Any]) -> Any:
+    """Resolve phrase lookup."""
     normalized_query = _normalize_phrase(value)
     if not normalized_query:
         return None
@@ -150,15 +163,18 @@ def _resolve_phrase_lookup(value: str | None, lookup: dict[str, Any]) -> Any:
             best_score = score
             best_size = len(_phrase_tokens(normalized_candidate))
             best_value = candidate_value
+    # A missing assertion is safer than assigning an instance through a weak fuzzy match.
     return best_value if best_score >= 0.75 else None
 
 
 def _is_taxonomy_scaffold(value: str | None) -> bool:
+    """Return whether a label is a type, kind, category, or form-of scaffold."""
     tokens = _phrase_tokens(value)
     return len(tokens) >= 3 and tokens[0] in {'type', 'kind', 'category', 'form'} and tokens[1] == 'of'
 
 
 def _sentence_span(sentence: dict[str, Any], fallback_text: str) -> dict[str, int]:
+    """Return sentence offsets, falling back to the supplied text length."""
     start_offset = sentence.get('start_offset')
     end_offset = sentence.get('end_offset')
     if isinstance(start_offset, int) and isinstance(end_offset, int):
@@ -167,6 +183,7 @@ def _sentence_span(sentence: dict[str, Any], fallback_text: str) -> dict[str, in
 
 
 def _build_type_assertion(*, source_text_id: str, sentence_id: str, instance: str, class_name: str, instance_ref: str, class_ref: str, source: str, confidence: float, evidence_span: dict[str, int]) -> dict[str, Any]:
+    """Build type assertion."""
     return {
         'type_assertion_id': _build_type_assertion_id(source_text_id, sentence_id, instance, class_name, source),
         'instance': instance,
@@ -183,6 +200,7 @@ def _build_type_assertion(*, source_text_id: str, sentence_id: str, instance: st
 
 
 def _extract_from_copula(input_payload: dict[str, Any], concept_lookup: dict[str, str], entity_lookup: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    """Extract from copula."""
     source_text_id = input_payload.get('source_text_id', '')
     candidates: list[dict[str, Any]] = []
 
@@ -201,6 +219,7 @@ def _extract_from_copula(input_payload: dict[str, Any], concept_lookup: dict[str
                 continue
             entity = _resolve_phrase_lookup(instance, entity_lookup)
             class_ref = _resolve_phrase_lookup(class_name, concept_lookup)
+            # Copular text becomes instance_of only with entity evidence for the instance and concept evidence for the class.
             if entity is None or class_ref is None:
                 continue
             instance_ref = entity.get('entity_id', '')
@@ -223,6 +242,7 @@ def _extract_from_copula(input_payload: dict[str, Any], concept_lookup: dict[str
 
 
 def _extract_from_entity_label(input_payload: dict[str, Any], concept_lookup: dict[str, str]) -> list[dict[str, Any]]:
+    """Extract from entity label."""
     source_text_id = input_payload.get('source_text_id', '')
     candidates: list[dict[str, Any]] = []
 
@@ -256,6 +276,7 @@ def _extract_from_entity_label(input_payload: dict[str, Any], concept_lookup: di
 
 
 def _extract_from_relation_pattern(input_payload: dict[str, Any], concept_lookup: dict[str, str], entity_lookup: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    """Extract from relation pattern."""
     source_text_id = input_payload.get('source_text_id', '')
     candidates: list[dict[str, Any]] = []
 
@@ -298,6 +319,7 @@ def _extract_from_relation_pattern(input_payload: dict[str, Any], concept_lookup
 
 
 def _extract_from_short_taxonomy_subjects(input_payload: dict[str, Any]) -> list[dict[str, Any]]:
+    """Extract from short taxonomy subjects."""
     source_text_id = input_payload.get('source_text_id', '')
     candidates: list[dict[str, Any]] = []
     for relation in input_payload.get('taxonomy_relations', []):
@@ -305,6 +327,7 @@ def _extract_from_short_taxonomy_subjects(input_payload: dict[str, Any]) -> list
             continue
         instance = _normalize_phrase(relation.get('subclass') or relation.get('child'))
         class_name = _normalize_phrase(relation.get('superclass') or relation.get('parent'))
+        # Only compact symbolic subjects are compatibility instances; longer terms remain taxonomy classes.
         if not instance or not class_name or class_name == 'type' or len(instance.replace(' ', '')) > 4:
             continue
         instance_ref = relation.get('subclass_ref') or ''
@@ -326,6 +349,7 @@ def _extract_from_short_taxonomy_subjects(input_payload: dict[str, Any]) -> list
 
 
 def _dedupe_stable(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Deduplicate type assertions by instance, class, and relation type in deterministic order."""
     ordered = sorted(
         candidates,
         key=lambda item: (

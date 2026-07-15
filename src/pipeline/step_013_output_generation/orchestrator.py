@@ -1,3 +1,5 @@
+"""Orchestrate the output generation pipeline stage while preserving the payload contract."""
+
 from __future__ import annotations
 
 from typing import Any
@@ -12,6 +14,7 @@ def generate_output_from_payload(
     base_iri: str = 'https://orion.local/resource/',
     prefixes: dict[str, str] | None = None,
 ) -> dict[str, Any]:
+    """Validate namespace configuration and generate output with the selected RDF or OWL strategy."""
     resolved_base_iri = validate_base_iri(base_iri)
     resolved_prefixes = validate_and_resolve_prefixes(resolved_base_iri, prefixes)
     return resolve_strategy(output_strategy, resolved_base_iri, resolved_prefixes).generate(input_payload)

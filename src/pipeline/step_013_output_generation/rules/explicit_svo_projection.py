@@ -1,3 +1,5 @@
+"""Recover explicit SVO endpoint classes from supported source evidence."""
+
 from __future__ import annotations
 
 import re
@@ -9,6 +11,7 @@ def explicit_svo_entity_labels_from_evidence(
     normalize_label: Callable[[str], str],
     dedupe_values: Callable[[list[str]], list[str]],
 ) -> list[str]:
+    """Extract distinct subject and object labels from the supported explicit-SVO evidence form."""
     text = re.sub(r'\s+', ' ', str(evidence or '').strip())
     if not text:
         return []

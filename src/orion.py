@@ -1,3 +1,5 @@
+"""Expose the ORION configuration, result, and end-to-end pipeline facade."""
+
 from __future__ import annotations
 
 import importlib
@@ -31,11 +33,13 @@ _BR_SEMANTIC_DEBUG_CONTEXT_PREPOSITIONS = frozenset({'across'})
 
 
 def _semantic_debug_words(value: str) -> list[str]:
+    """Split a semantic-debug identifier into lexical words."""
     split = re.sub(r'([a-z])([A-Z])', r'\1 \2', value or '')
     return [token for token in re.sub(r'[^A-Za-z0-9]+', ' ', split).split() if token]
 
 
 def _semantic_debug_label(value: str) -> str:
+    """Convert a semantic-debug value to a class-style label."""
     words = _semantic_debug_words(value)
     parts = []
     for word in words:
@@ -44,6 +48,7 @@ def _semantic_debug_label(value: str) -> str:
 
 
 def _semantic_debug_relation_object(claim: dict[str, Any]) -> tuple[str, dict[str, Any] | None]:
+    """Separate a direct object from supported prepositional debug context."""
     obj = str(claim.get('object') or '')
     source = claim.get('source') if isinstance(claim.get('source'), dict) else {}
     evidence = str(source.get('evidence') or '').strip()
@@ -73,6 +78,7 @@ def _semantic_debug_relation_object(claim: dict[str, Any]) -> tuple[str, dict[st
 
 
 def _build_semantic_debug_ir(payload: dict[str, Any]) -> dict[str, Any]:
+    """Build semantic debug IR."""
     semantic = payload.get('semantic_claims') if isinstance(payload.get('semantic_claims'), dict) else payload.get('canonical_claims')
     claims = semantic.get('claims', []) if isinstance(semantic, dict) else []
     entities: dict[str, dict[str, Any]] = {}
@@ -95,19 +101,50 @@ def _build_semantic_debug_ir(payload: dict[str, Any]) -> dict[str, Any]:
             'source_sentence': evidence,
             'source': source,
         }
-        for key in ('extracted_by', 'behavior', 'derivation', 'source_claim_id'):
-            if claim.get(key):
+        for key in (
+            'extracted_by', 'behavior', 'derivation', 'source_claim_id', 'modality',
+            'voice', 'patient', 'condition', 'condition_subject', 'condition_predicate',
+            'condition_modality', 'condition_polarity', 'coordination', 'coordination_scope',
+            'alternative_group', 'members', 'context', 'scope', 'scope_relation',
+            'scope_owner', 'scope_owner_relation', 'target', 'proposition_group',
+            'proposition_role', 'temporal_relation', 'temporal_object', 'relation_role',
+            'goal', 'means', 'means_group', 'content_group', 'topics', 'manner',
+            'location', 'location_relation', 'event_predicate', 'prevented_event',
+            'event_target', 'context_relation', 'beneficiary', 'channel', 'required_roles',
+            'graph_format_alternatives', 'graph_format_operator',
+            'graph_format_group', 'antecedent_scope', 'projection_scope', 'recipient',
+            'destination', 'instrument', 'purpose', 'embedded_modality', 'capability',
+            'scope_from', 'scope_to', 'metamodel', 'importance', 'discourse_resolution',
+            'evaluated_outcome', 'observation_scope', 'quantifier', 'actor',
+            'measurement_unit', 'expected_state', 'rdf_projection', 'interpretation_status',
+            'attachment_scope', 'candidate_subjects', 'filler_kind', 'filler_quantification',
+        ):
+            if claim.get(key) not in (None, ''):
                 relation[key] = claim.get(key)
         relations.append(relation)
-        for label in (subject, obj):
-            entities.setdefault(
+        related_labels = [subject, obj]
+        for qualifier in (
+            'patient', 'target', 'condition_subject', 'temporal_object', 'context', 'actor',
+            'location', 'scope', 'scope_owner', 'recipient', 'destination', 'instrument',
+            'purpose', 'scope_from', 'scope_to', 'beneficiary', 'channel',
+        ):
+            value = str(claim.get(qualifier) or '').strip()
+            if value and value not in related_labels:
+                related_labels.append(value)
+        for label in related_labels:
+            entity = entities.setdefault(
                 label,
                 {
                     'id': label,
                     'label': label,
                     'source_sentence': evidence,
+                    'source_sentences': [evidence] if evidence else [],
                 },
             )
+            source_sentences = entity.setdefault('source_sentences', [])
+            if evidence and evidence not in source_sentences:
+                source_sentences.append(evidence)
+                entity['source_sentence'] = '\n'.join(source_sentences)
         rejected_compound = str(claim.get('rejected_compound') or '').strip()
         if rejected_compound:
             rejected.append({
@@ -132,7 +169,9 @@ def _build_semantic_debug_ir(payload: dict[str, Any]) -> dict[str, Any]:
 
 
 class ORIONResult(dict):
+    """Dictionary-compatible pipeline result with convenience ontology and serialization attributes."""
     def __init__(self, payload: dict[str, Any]) -> None:
+        """Initialize the ORIONResult."""
         super().__init__(payload)
         output = payload.get('output') if isinstance(payload.get('output'), dict) else {}
         graph = output.get('ontology') or output.get('graph') or {}
@@ -146,6 +185,7 @@ class ORIONResult(dict):
         self.inferred_triples = payload.get('inferred_triples') if isinstance(payload.get('inferred_triples'), list) else []
 
     def __getattr__(self, name: str) -> Any:
+        """Expose payload keys as attributes and translate missing keys to AttributeError."""
         try:
             return self[name]
         except KeyError as exc:
@@ -153,6 +193,7 @@ class ORIONResult(dict):
 
 @dataclass(frozen=True)
 class ORIONConfig:
+    """Validated immutable configuration for the ORION pipeline."""
     spacy_model: str = _BR_DEFAULT_SPACY_MODEL
     output_strategy: str = 'rdf'
     base_iri: str = _BR_DEFAULT_BASE_IRI
@@ -171,6 +212,7 @@ class ORIONConfig:
         semantic_claims: dict[str, Any] | None = None,
         semantic_debug_ir: dict[str, Any] | None = None,
     ) -> None:
+        """Initialize the ORIONConfig."""
         resolved_model = _BR_DEFAULT_SPACY_MODEL if spacy_model is None else spacy_model
         if not isinstance(resolved_model, str) or resolved_model.strip() == "":
             raise OrionError("ORION config error: spacy_model must be a non-empty string")
@@ -195,6 +237,7 @@ class ORIONConfig:
 
     @classmethod
     def from_mapping(cls, config: dict[str, Any]) -> "ORIONConfig":
+        """Validate and construct ORION configuration from a mapping."""
         if not isinstance(config, dict):
             raise OrionError("ORION config error: config must be a dict")
         return cls(
@@ -209,7 +252,9 @@ class ORIONConfig:
 
 
 class ORION:
+    """Facade that executes every ORION pipeline stage and emits lifecycle events."""
     def __init__(self, config: dict[str, Any] | None = None, log_sink: LogSink | None = None) -> None:
+        """Initialize the ORION."""
         active_sink = self._resolve_sink(config=config if isinstance(config, dict) else None, log_sink=log_sink)
         if not isinstance(active_sink, JsonlFileLogSink):
             active_sink.emit(
@@ -251,6 +296,7 @@ class ORION:
 
     @staticmethod
     def _resolve_sink(config: dict[str, Any] | None, log_sink: LogSink | None) -> LogSink:
+        """Select an explicit, configured, or null logging sink."""
         if log_sink is not None:
             return log_sink
         if isinstance(config, dict):
@@ -260,12 +306,15 @@ class ORION:
         return NullLogSink()
 
     def _run_sentence_segmentation(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run sentence segmentation."""
         return segment_sentences(payload)
 
     def _run_tokenization(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run tokenization."""
         return tokenize_sentences(payload)
 
     def _load_spacy_model(self) -> Any:
+        """Load and cache the configured spaCy model, translating failures to OrionError."""
         if self._nlp_model is not None:
             return self._nlp_model
         try:
@@ -278,27 +327,33 @@ class ORION:
             ) from exc
 
     def _run_linguistic_annotation(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run linguistic annotation."""
         return annotate_tokens(payload, self._load_spacy_model())
 
     def _run_entity_extraction(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run entity extraction."""
         doc = getattr(self, "_active_doc", None)
         if doc is None:
             doc = self._load_spacy_model()(payload["preprocessed_text"])
         return extract_entities_from_doc(payload, doc)
 
     def _run_concept_extraction(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run concept extraction."""
         doc = getattr(self, "_active_doc", None)
         if doc is None:
             doc = self._load_spacy_model()(payload["preprocessed_text"])
         return extract_concepts_from_payload(payload, doc)
 
     def _run_coreference_resolution(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run coreference resolution."""
         return resolve_coreferences_from_payload(payload)
 
     def _run_relation_extraction(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run relation extraction."""
         return extract_relations_from_payload(payload)
 
     def _run_canonical_claims(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run canonical claims."""
         if self._orion_config.semantic_claims:
             stage_config = {**self._orion_config.semantic_claims, 'emit_semantic_claims': True}
         else:
@@ -306,6 +361,7 @@ class ORION:
         return extract_canonical_claims_from_payload(payload, config=stage_config)
 
     def _run_semantic_debug_ir(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run semantic debug IR."""
         stage_config = self._orion_config.semantic_debug_ir
         raw_path = stage_config.get('artifact_path') or stage_config.get('output_path')
         if raw_path in (None, ''):
@@ -319,18 +375,23 @@ class ORION:
         return result
 
     def _run_triple_extraction(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run triple extraction."""
         return extract_triples_from_payload(payload)
 
     def _run_taxonomy_induction(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run taxonomy induction."""
         return extract_taxonomy_relations_from_payload(payload)
 
     def _run_type_assertion(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run type assertion."""
         return extract_type_assertions_from_payload(payload)
 
     def _run_semantic_quality(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run semantic quality."""
         return assess_semantic_quality_from_payload(payload)
 
     def _run_output_generation(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Run output generation."""
         return generate_output_from_payload(
             payload,
             self._orion_config.output_strategy,
@@ -339,6 +400,7 @@ class ORION:
         )
 
     def process(self, input_data: Any) -> dict[str, Any]:
+        """Run the complete ORION pipeline with structured lifecycle logging."""
         self._log_sink.emit(
             LogEvent(
                 phase="input_intake",

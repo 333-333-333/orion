@@ -142,6 +142,41 @@ def _graph_path() -> Path:
     return _CASE_DIR / "artifacts" / "observed_p015_p016_graph_model.json"
 
 
+def _semantic_claims() -> list[dict[str, Any]]:
+    payload = json.loads((_CASE_DIR / "artifacts" / "observed_p015_p016_semantic_claims.json").read_text(encoding="utf-8"))
+    return [item for item in payload.get("claims", []) if isinstance(item, dict)]
+
+
+def test_p015_p016_audited_scope_and_coordination_are_source_faithful(tmp_path: Path):
+    _metrics(tmp_path)
+    claims = _semantic_claims()
+    edges = {(_local(row.get("subject")), _local(row.get("predicate")), _local(row.get("object"))) for row in claims}
+
+    assert ("securitytest", "verifies", "securityrequirementimplementation") in edges
+    verification = next(row for row in claims if _local(row.get("subject")) == "securitytest")
+    assert verification.get("modality") == "whether"
+    assert not any(_local(row.get("object")) in {"malicious", "correctly", "crosssitescripting"} for row in claims)
+    assert {
+        ("inputvalidation", "prevents", "enteringevent"),
+        ("enteringevent", "hastarget", "application"),
+        ("outputencoding", "reduces", "riskofinjection"),
+        ("outputencoding", "reduces", "riskofcrosssitescripting"),
+    }.issubset(edges)
+    event_patients = [
+        row for row in claims
+        if _local(row.get("subject")) == "enteringevent"
+        and _local(row.get("predicate")) == "haspatient"
+    ]
+    assert {_local(row.get("object")) for row in event_patients} == {"maliciousdata", "malformeddata"}
+    assert len({row.get("alternative_group") for row in event_patients}) == 1
+    assert all(row.get("modality") == "disjunctive_alternative" for row in event_patients)
+    purpose_objects = {
+        _local(row.get("object")) for row in claims
+        if _local(row.get("subject")) == "codereview" and row.get("modality") == "purpose"
+    }
+    assert purpose_objects == {"defect", "weakness", "policyviolation"}
+
+
 def _rdf_path() -> Path:
     return _CASE_DIR / "artifacts" / "observed_p015_p016_output.rdf"
 
@@ -162,12 +197,12 @@ def test_p015_p016_prevents_claims_keep_relation_identity_by_source(tmp_path: Pa
     expected = {
         (
             "inputvalidation",
-            "malformeddatafromenteringanapplication",
+            "enteringevent",
             "input validation prevents malicious or malformed data from entering an application.",
         ),
         (
             "secureerrorhandling",
-            "sensitiveinformationfrombeingexposedthrougherrormessage",
+            "exposureevent",
             "secure error handling prevents sensitive information from being exposed through error messages.",
         ),
     }
@@ -177,6 +212,61 @@ def test_p015_p016_prevents_claims_keep_relation_identity_by_source(tmp_path: Pa
     }
 
     assert expected.issubset(observed), f"prevents facts lost claim identity/source metadata: observed={sorted(observed)}"
+
+
+def test_p015_p016_prevention_event_and_roles_project_as_connected_resources(tmp_path: Path):
+    _metrics(tmp_path)
+    claims = _semantic_claims()
+    claim_edges = {
+        (_local(row.get("subject")), _local(row.get("predicate")), _local(row.get("object")))
+        for row in claims
+    }
+    expected_edges = {
+        ("secureerrorhandling", "prevents", "exposureevent"),
+        ("exposureevent", "haspatient", "sensitiveinformation"),
+        ("exposureevent", "haschannel", "errormessage"),
+        ("protectionneed", "hasbeneficiary", "application"),
+        ("loadbalancer", "distributesacross", "server"),
+        ("access", "hastarget", "backendservice"),
+        ("contentdeliverynetwork", "improvesfor", "distributeduser"),
+    }
+    assert expected_edges.issubset(claim_edges)
+    assert ("secureerrorhandling", "prevents", "sensitiveinformation") not in claim_edges
+
+    graph = json.loads(_graph_path().read_text(encoding="utf-8"))
+    fact_edges = {
+        (_local(row.get("subject")), _local(row.get("predicate")), _local(row.get("object")))
+        for row in graph.get("facts", [])
+    }
+    assert expected_edges.issubset(fact_edges)
+    assert ("secureerrorhandling", "prevents", "sensitiveinformation") not in fact_edges
+    classes = {_local(row.get("iri")) for row in graph.get("classes", [])}
+    assert {"exposureevent", "sensitiveinformation", "errormessage", "distributeduser"}.issubset(classes)
+
+
+def test_p015_p016_quality_gates_event_shape_and_preserves_role_qualifiers(tmp_path: Path):
+    _metrics(tmp_path)
+    triples_payload = json.loads(
+        (_CASE_DIR / "artifacts" / "pipeline_outputs" / "observed_p015_p016_12_triple_extraction.json").read_text(encoding="utf-8")
+    )
+    triples = [row for row in triples_payload.get("triples", []) if isinstance(row, dict)]
+    exposure = next(
+        row for row in triples
+        if _term(row.get("subject")) == "secureerrorhandling"
+        and _term(row.get("predicate")) == "prevents"
+    )
+    assert _term(exposure.get("object")) == "exposureevent"
+    assert _term(exposure.get("patient")) == "sensitiveinformation"
+    assert _term(exposure.get("channel")) == "errormessage"
+
+    quality = json.loads(
+        (_CASE_DIR / "artifacts" / "pipeline_outputs" / "observed_p015_p016_15_semantic_quality.json").read_text(encoding="utf-8")
+    )["semantic_quality_report"]
+    assert not any("invalid_prevention_event_structure" in issue for issue in quality.get("semantic_integrity_issues", []))
+    assert quality["semantic_integrity_checks"]["claim_scope_preserved_in_triples"] is True
+    assert not {
+        _term(value) for value in quality.get("excluded_concepts", [])
+    }.intersection({"lifecycle", "theirlifecycle"})
 
 
 def _rdf_root() -> ET.Element:
@@ -282,13 +372,58 @@ def test_p015_p016_same_predicate_relations_remain_distinct_without_visible_midd
     expected = {
         (
             "inputvalidation",
-            "malformeddatafromenteringanapplication",
+            "enteringevent",
             "input validation prevents malicious or malformed data from entering an application.",
         ),
         (
             "secureerrorhandling",
-            "sensitiveinformationfrombeingexposedthrougherrormessage",
+            "exposureevent",
             "secure error handling prevents sensitive information from being exposed through error messages.",
         ),
     }
     assert expected.issubset(set(rows)), f"same-label prevents relations collapsed or lost metadata: {rows}"
+
+
+def test_p015_p016_disjunction_and_lifecycle_scope_project_structurally(tmp_path: Path):
+    _metrics(tmp_path)
+    claims = _semantic_claims()
+    location_claims = [
+        row for row in claims
+        if _local(row.get("subject")) == "softwarevulnerability"
+        and _local(row.get("predicate")) == "haslocation"
+    ]
+    assert {_local(row.get("object")) for row in location_claims} == {
+        "applicationcode", "configuration", "design",
+    }
+    assert len({row.get("alternative_group") for row in location_claims}) == 1
+
+    graph = json.loads(_graph_path().read_text(encoding="utf-8"))
+    assert not any(_local(row.get("predicate")) == "haslocation" for row in graph.get("facts", []))
+    location_groups = [
+        group for group in graph.get("logical_alternatives", [])
+        if {_local(item.get("object")) for item in group.get("alternatives", [])}
+        == {"applicationcode", "configuration", "design"}
+    ]
+    assert len(location_groups) == 1 and location_groups[0].get("operator") == "or"
+
+    lifecycle = next(
+        row for row in graph.get("scoped_relations", [])
+        if _local(row.get("subject")) == "applicationsecurity"
+        and _local(row.get("predicate")) == "protects"
+    )
+    assert _local(lifecycle.get("scope")) == "lifecycle"
+    assert lifecycle.get("scope_relation") == "throughout"
+    assert _local(lifecycle.get("scope_owner")) == "softwaresystem"
+    assert lifecycle.get("scope_owner_relation") == "lifecycle_of"
+    assert "lifecycle" in {_local(row.get("iri")) for row in graph.get("classes", [])}
+
+
+def test_p015_p016_quality_flags_upstream_propositional_concepts(tmp_path: Path):
+    _metrics(tmp_path)
+    quality = json.loads(
+        (_CASE_DIR / "artifacts" / "pipeline_outputs" / "observed_p015_p016_15_semantic_quality.json").read_text(encoding="utf-8")
+    )["semantic_quality_report"]
+    reasons = {row.get("reason") for row in quality.get("concept_noise", [])}
+    assert "predicate_absorbed_into_concept" in reasons
+    assert quality.get("quality_score", 1.0) < 1.0
+    assert quality.get("rdf_readiness") is False

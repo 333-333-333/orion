@@ -46,6 +46,8 @@ _SMOKE_TESTS = (
     "tests/smoke/cases/pizza_short/test_pizza_short_observational_smoke.py",
     "tests/smoke/test_pipeline_step_runner_contracts.py",
     "tests/smoke/test_all_pipeline_outputs_emit_json.py",
+    "tests/smoke/test_semantic_claim_acceptance_smoke.py",
+    "tests/smoke/test_source_semantic_fidelity_smoke.py",
     "tests/smoke/test_all_rdf_smoke_cases_emit_ttl.py",
     "tests/smoke/test_readme_public_library_contract_red.py",
 )

@@ -19,23 +19,24 @@
   ],
   "expected_statements_by_paragraph": {
     "p003": [
+      "Control required_for Application",
+      "Control required_for InfrastructureComponent",
+      "Control required_for System",
+      "Expectation has_purpose_to_protect Information",
       "Organization implements Control",
       "Organization implements Governance",
       "Organization implements IncidentResponseProcess",
       "Organization implements MonitoringMechanism",
-      "Organization implements SecurityPolicy",
-      "Organization implements SecurityProcedure",
+      "Organization implements Policy",
+      "Organization implements Procedure",
       "Organization protects Information",
+      "Rule has_purpose_to_protect Information",
       "SecurityBaseline is a MinimumSetOfControls",
-      "SecurityBaseline required_for Application",
-      "SecurityBaseline required_for InfrastructureComponent",
-      "SecurityBaseline required_for System",
       "SecurityGuideline is a AdvisoryDocument",
       "SecurityGuideline recommends GoodPractice",
       "SecurityPolicy defines Expectation",
       "SecurityPolicy defines Rule",
       "SecurityPolicy is a FormalDocument",
-      "SecurityPolicy protects Information",
       "SecurityProcedure defines StepByStepActivity",
       "SecurityProcedure is a OperationalDocument",
       "SecurityStandard defines MandatoryRequirement",
@@ -46,13 +47,12 @@
       "AssetCustodian operates TechnicalEnvironment",
       "AssetOwner classifies InformationAsset",
       "AssetOwner defines ProtectionRequirement",
-      "Auditor evaluates Compliance",
-      "BoardOfDirectors provides oversight for InformationSecurity",
-      "Compliance checked_against SecurityRequirement",
+      "Auditor evaluates ComplianceWithSecurityRequirement",
+      "BoardOfDirectors provides strategic oversight for InformationSecurity",
       "EndUser accesses System",
-      "EndUser follows SecurityPolicy",
+      "EndUser must follow SecurityPolicy",
       "InformationSecurityManager coordinates InformationSecurityProgram",
-      "Resource supports SecurityInitiative",
+      "Resource is allocated for SecurityInitiative",
       "SecurityAnalyst investigates SuspiciousActivity",
       "SecurityAnalyst monitors SecurityEvent",
       "SeniorManagement allocates Resource",
@@ -67,15 +67,18 @@
   },
   "rdf": {
     "classes": [
+      "advisory-document",
       "application",
       "asset-custodian",
       "asset-owner",
       "auditor",
       "board-of-directors",
-      "compliance",
+      "compliance-with-security-requirement",
       "control",
+      "control-document",
       "end-user",
       "expectation",
+      "formal-document",
       "good-practice",
       "governance",
       "incident-response-process",
@@ -86,10 +89,14 @@
       "information-security-program",
       "infrastructure-component",
       "mandatory-requirement",
+      "minimum-set-of-controls",
       "monitoring-mechanism",
       "network",
       "operating-system",
+      "operational-document",
       "organization",
+      "policy",
+      "procedure",
       "protection-requirement",
       "resource",
       "rule",
@@ -100,7 +107,6 @@
       "security-initiative",
       "security-policy",
       "security-procedure",
-      "security-requirement",
       "security-standard",
       "senior-management",
       "server",
@@ -111,27 +117,98 @@
       "technical-environment",
       "technical-service"
     ],
-    "direct_subclasses": [],
+    "direct_subclasses": [
+      [
+        "security-baseline",
+        "minimum-set-of-controls"
+      ],
+      [
+        "security-guideline",
+        "advisory-document"
+      ],
+      [
+        "security-policy",
+        "formal-document"
+      ],
+      [
+        "security-procedure",
+        "operational-document"
+      ],
+      [
+        "security-standard",
+        "control-document"
+      ]
+    ],
     "object_properties": [
       [
-        "protects",
-        "organization",
-        "information"
+        "accesses",
+        "end-user",
+        "system"
       ],
       [
-        "implements",
-        "organization",
-        "governance"
+        "allocated-for",
+        "resource",
+        "security-initiative"
       ],
       [
-        "implements",
-        "organization",
+        "allocates",
+        "senior-management",
+        "resource"
+      ],
+      [
+        "approves",
+        "senior-management",
         "security-policy"
       ],
       [
-        "implements",
-        "organization",
-        "security-procedure"
+        "classifies",
+        "asset-owner",
+        "information-asset"
+      ],
+      [
+        "coordinates",
+        "information-security-manager",
+        "information-security-program"
+      ],
+      [
+        "defines",
+        "asset-owner",
+        "protection-requirement"
+      ],
+      [
+        "defines",
+        "security-policy",
+        "expectation"
+      ],
+      [
+        "defines",
+        "security-policy",
+        "rule"
+      ],
+      [
+        "defines",
+        "security-procedure",
+        "step-by-step-activity"
+      ],
+      [
+        "defines",
+        "security-standard",
+        "mandatory-requirement"
+      ],
+      [
+        "evaluates",
+        "auditor",
+        "compliance-with-security-requirement"
+      ],
+      [
+        "has-purpose-to-protect",
+        "expectation",
+        "information"
+      ],
+      [
+        "has-purpose-to-protect",
+        "rule",
+        "information"
       ],
       [
         "implements",
@@ -141,7 +218,7 @@
       [
         "implements",
         "organization",
-        "monitoring-mechanism"
+        "governance"
       ],
       [
         "implements",
@@ -149,109 +226,29 @@
         "incident-response-process"
       ],
       [
-        "defines",
-        "security-policy",
-        "rule"
+        "implements",
+        "organization",
+        "monitoring-mechanism"
       ],
       [
-        "defines",
-        "security-policy",
-        "expectation"
+        "implements",
+        "organization",
+        "policy"
       ],
       [
-        "protects",
-        "security-policy",
-        "information"
+        "implements",
+        "organization",
+        "procedure"
       ],
       [
-        "defines",
-        "security-standard",
-        "mandatory-requirement"
-      ],
-      [
-        "defines",
-        "security-procedure",
-        "step-by-step-activity"
-      ],
-      [
-        "recommends",
-        "security-guideline",
-        "good-practice"
-      ],
-      [
-        "required-for",
-        "security-baseline",
-        "system"
-      ],
-      [
-        "required-for",
-        "security-baseline",
-        "application"
-      ],
-      [
-        "required-for",
-        "security-baseline",
-        "infrastructure-component"
-      ],
-      [
-        "provides-oversight-for",
-        "board-of-directors",
-        "information-security"
-      ],
-      [
-        "approves",
-        "senior-management",
-        "security-policy"
-      ],
-      [
-        "allocates",
-        "senior-management",
-        "resource"
-      ],
-      [
-        "supports",
-        "resource",
-        "security-initiative"
-      ],
-      [
-        "coordinates",
-        "information-security-manager",
-        "information-security-program"
-      ],
-      [
-        "classifies",
-        "asset-owner",
-        "information-asset"
-      ],
-      [
-        "defines",
-        "asset-owner",
-        "protection-requirement"
-      ],
-      [
-        "operates",
-        "asset-custodian",
-        "technical-environment"
+        "investigates",
+        "security-analyst",
+        "suspicious-activity"
       ],
       [
         "maintains",
         "asset-custodian",
         "technical-environment"
-      ],
-      [
-        "stores",
-        "technical-environment",
-        "information"
-      ],
-      [
-        "processes",
-        "technical-environment",
-        "information"
-      ],
-      [
-        "manages",
-        "system-administrator",
-        "server"
       ],
       [
         "manages",
@@ -266,6 +263,11 @@
       [
         "manages",
         "system-administrator",
+        "server"
+      ],
+      [
+        "manages",
+        "system-administrator",
         "technical-service"
       ],
       [
@@ -274,29 +276,29 @@
         "security-event"
       ],
       [
-        "investigates",
-        "security-analyst",
-        "suspicious-activity"
-      ],
-      [
-        "evaluates",
-        "auditor",
-        "compliance"
-      ],
-      [
-        "checked-against",
-        "compliance",
-        "security-requirement"
-      ],
-      [
-        "accesses",
-        "end-user",
-        "system"
-      ],
-      [
-        "follows",
+        "must-follow",
         "end-user",
         "security-policy"
+      ],
+      [
+        "operates",
+        "asset-custodian",
+        "technical-environment"
+      ],
+      [
+        "protects",
+        "organization",
+        "information"
+      ],
+      [
+        "provides-strategic-oversight-for",
+        "board-of-directors",
+        "information-security"
+      ],
+      [
+        "recommends",
+        "security-guideline",
+        "good-practice"
       ]
     ],
     "comments": {
@@ -326,9 +328,9 @@
     "technical-environment-that-stores"
   ],
   "rdf_quality": {
-    "max_class_count": 48,
-    "min_subclass_count": 0,
-    "min_subclass_density": 0.0,
+    "max_class_count": 56,
+    "min_subclass_count": 5,
+    "min_subclass_density": 0.09,
     "prohibited_classes": [],
     "justified_orphan_classes": [
       "step-by-step-activity"
@@ -344,48 +346,49 @@
     ],
     "max_unjustified_connectivity_orphans": 0,
     "central_connected_classes": [
-      "organization",
-      "information",
-      "governance",
-      "security-policy",
-      "security-procedure",
-      "control",
-      "monitoring-mechanism",
-      "incident-response-process",
-      "rule",
-      "expectation",
-      "security-standard",
-      "mandatory-requirement",
-      "security-guideline",
-      "good-practice",
-      "security-baseline",
-      "system",
       "application",
-      "infrastructure-component",
+      "asset-custodian",
+      "asset-owner",
+      "auditor",
       "board-of-directors",
+      "compliance-with-security-requirement",
+      "control",
+      "end-user",
+      "expectation",
+      "good-practice",
+      "governance",
+      "incident-response-process",
+      "information",
+      "information-asset",
       "information-security",
-      "senior-management",
-      "resource",
-      "security-initiative",
       "information-security-manager",
       "information-security-program",
-      "asset-owner",
-      "information-asset",
-      "protection-requirement",
-      "asset-custodian",
-      "technical-environment",
-      "system-administrator",
-      "server",
+      "infrastructure-component",
+      "mandatory-requirement",
+      "monitoring-mechanism",
       "network",
       "operating-system",
-      "technical-service",
+      "organization",
+      "policy",
+      "procedure",
+      "protection-requirement",
+      "resource",
+      "rule",
       "security-analyst",
+      "security-baseline",
       "security-event",
+      "security-guideline",
+      "security-initiative",
+      "security-policy",
+      "security-procedure",
+      "security-standard",
+      "senior-management",
+      "server",
       "suspicious-activity",
-      "auditor",
-      "compliance",
-      "security-requirement",
-      "end-user"
+      "system",
+      "system-administrator",
+      "technical-environment",
+      "technical-service"
     ]
   }
 }

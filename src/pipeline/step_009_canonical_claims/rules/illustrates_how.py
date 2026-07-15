@@ -1,3 +1,5 @@
+"""Parse the supported illustrates-how relation construction."""
+
 from __future__ import annotations
 
 import re
@@ -14,6 +16,7 @@ def extract_illustrates_how_relations(
     label: Callable[[str | None], str],
     verb: Callable[[str | None], str],
 ) -> tuple[str, str, list[str]] | None:
+    """Parse the supported 'illustrates how ... relate' construction into relation components."""
     match = _ILLUSTRATES_HOW_RELATE_PATTERN.match(text)
     if not match:
         return None

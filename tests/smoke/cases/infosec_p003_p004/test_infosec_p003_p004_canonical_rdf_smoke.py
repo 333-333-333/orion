@@ -24,7 +24,7 @@ _GRAPH_MODEL_ARTIFACT_PATH = _ARTIFACT_DIR / "observed_p003_p004_graph_model.jso
 _RESOURCE_PREFIX = "https://orion.local/resource/"
 _DETERMINERS = re.compile(r"^(?:a|an|the|any)-")
 
-_ALIAS_ONLY_DEFINITIONAL_CLASS_SLUGS = {
+_REQUIRED_LITERAL_DEFINITIONAL_CLASS_SLUGS = {
     "advisory-document",
     "control-document",
     "formal-document",
@@ -32,7 +32,7 @@ _ALIAS_ONLY_DEFINITIONAL_CLASS_SLUGS = {
     "operational-document",
 }
 
-_ALIAS_ONLY_DEFINITIONAL_SUBCLASS_PAIRS = {
+_REQUIRED_LITERAL_DEFINITIONAL_SUBCLASS_PAIRS = {
     ("security-baseline", "minimum-set-of-controls"),
     ("security-guideline", "advisory-document"),
     ("security-policy", "formal-document"),
@@ -45,6 +45,7 @@ _KNOWN_TERM_SLUGS = {
     "assetcustodian": "asset-custodian",
     "assetowner": "asset-owner",
     "boardofdirectors": "board-of-directors",
+    "compliancewithsecurityrequirement": "compliance-with-security-requirement",
     "controldocument": "control-document",
     "enduser": "end-user",
     "formaldocument": "formal-document",
@@ -207,8 +208,19 @@ def _object_property_rows(graph: dict[str, Any]) -> list[dict[str, Any]]:
 def _object_property_triples(graph: dict[str, Any]) -> set[tuple[str, str, str]]:
     triples: set[tuple[str, str, str]] = set()
     for item in _object_property_rows(graph):
-        triples.add((_slug(item.get("iri") or item.get("label")), _slug(item.get("domain")), _slug(item.get("range"))))
+        domain = _slug(item.get("domain"))
+        range_ = _slug(item.get("range"))
+        if domain and range_:
+            triples.add((_slug(item.get("iri") or item.get("label")), domain, range_))
     return triples
+
+
+def _object_property_usage_triples(graph: dict[str, Any]) -> set[tuple[str, str, str]]:
+    return {
+        (_slug(item.get("predicate")), _slug(item.get("domain")), _slug(item.get("range")))
+        for item in graph.get("object_property_facts", [])
+        if isinstance(item, dict) and item.get("semantics") == "observed_usage"
+    }
 
 
 def _serialized_object_property_triples() -> set[tuple[str, str, str]]:
@@ -362,18 +374,15 @@ def test_p003_p004_rdf_preserves_definition_sentences_as_comments(tmp_path: Path
 def test_p003_p004_rdf_has_expected_object_properties_with_domain_range(tmp_path: Path):
     # TASK-CANONICAL-RDF-P003-P004 | FUN-CANONICAL-RDF-P003-P004 AC-5 | CON-CANONICAL-RDF-P003-P004 AC-5 | BR-CANONICAL-RDF-P003-P004-004
     _, graph = _run_p003_p004(tmp_path)
-    actual = _object_property_triples(graph)
+    usages = _object_property_usage_triples(graph)
     serialized = _serialized_object_property_triples()
     expected = {tuple(item) for item in _contract()["rdf"]["object_properties"]}
 
-    rows = _object_property_rows(graph)
-    malformed = [row for row in rows if not _slug(row.get("iri") or row.get("label")) or not _slug(row.get("domain")) or not _slug(row.get("range"))]
-    missing_graph = sorted(expected - actual)
-    missing_serialized = sorted(expected - serialized)
-    assert not malformed, f"object properties missing predicate/domain/range: {malformed}"
-    assert not missing_graph, f"missing graph object properties with domain/range: {missing_graph}"
-    assert not missing_serialized, f"missing serialized RDF object properties with domain/range: {missing_serialized}"
-    assert all(predicate not in {"be", "type"} for predicate, _, _ in actual | serialized)
+    missing_usages = sorted(expected - usages)
+    assert not missing_usages, f"missing observed object-property usages: {missing_usages}"
+
+    assert not serialized, f"observed usages leaked as global domain/range axioms: {sorted(serialized)}"
+    assert all(predicate not in {"be", "type"} for predicate, _, _ in usages | serialized)
 
 
 def test_p003_p004_rdf_keeps_central_entities_relation_connected(tmp_path: Path):
@@ -381,7 +390,14 @@ def test_p003_p004_rdf_keeps_central_entities_relation_connected(tmp_path: Path)
     _, graph = _run_p003_p004(tmp_path)
     quality = _contract()["rdf_quality"]
     expected_central = {_slug(item) for item in quality["central_connected_classes"]}
-    relation_linked = {item for triple in _object_property_triples(graph) for item in triple[1:]}
+    relation_linked = {item for triple in _object_property_usage_triples(graph) for item in triple[1:]}
+    relation_linked.update(item for pair in _subclass_pairs({}, graph) for item in pair)
+    for group in graph.get("logical_alternatives", []):
+        if not isinstance(group, dict):
+            continue
+        for item in group.get("alternatives", []):
+            if isinstance(item, dict):
+                relation_linked.update({_slug(item.get("subject")), _slug(item.get("object"))})
     missing = sorted(expected_central - relation_linked)
 
     assert len(missing) <= quality["max_unjustified_connectivity_orphans"], f"central classes missing object-property connectivity: {missing}"
@@ -406,14 +422,14 @@ def test_p003_p004_rdf_has_no_noun_chunk_residue(tmp_path: Path):
 
 
 
-def test_p003_p004_rdf_rejects_definition_only_taxonomy_without_differentiator(tmp_path: Path):
+def test_p003_p004_rdf_preserves_literal_definitional_taxonomy(tmp_path: Path):
     # TASK-ONT-003 | FUN-CANONICAL-RDF-P003-P004 AC-8 | CON-CANONICAL-RDF-P003-P004 AC-8 | BR-CANONICAL-RDF-P003-P004-007
     result, graph = _run_p003_p004(tmp_path)
     classes = _class_slugs(graph)
     subclass_pairs = _subclass_pairs(result, graph)
 
-    leaked_classes = sorted(_ALIAS_ONLY_DEFINITIONAL_CLASS_SLUGS & classes)
-    leaked_pairs = sorted(_ALIAS_ONLY_DEFINITIONAL_SUBCLASS_PAIRS & subclass_pairs)
+    missing_classes = sorted(_REQUIRED_LITERAL_DEFINITIONAL_CLASS_SLUGS - classes)
+    missing_pairs = sorted(_REQUIRED_LITERAL_DEFINITIONAL_SUBCLASS_PAIRS - subclass_pairs)
 
-    assert not leaked_classes, f"definition-only taxonomy leaked as owl:Class: {leaked_classes}"
-    assert not leaked_pairs, f"definition-only taxonomy leaked as rdfs:subClassOf: {leaked_pairs}"
+    assert not missing_classes, f"literal definition classes missing from owl:Class: {missing_classes}"
+    assert not missing_pairs, f"literal definitions missing from rdfs:subClassOf: {missing_pairs}"

@@ -1,3 +1,5 @@
+"""Orchestrate the sentence segmentation pipeline stage while preserving the payload contract."""
+
 from __future__ import annotations
 
 from typing import Any
@@ -6,6 +8,7 @@ from pipeline.step_003_sentence_segmentation.rules import append_sentence, is_se
 
 
 def segment_sentences(input_payload: dict[str, Any]) -> dict[str, Any]:
+    """Segment preprocessed text while preserving deterministic source offsets and identifiers."""
     preprocessed_text = input_payload["preprocessed_text"]
     source_text_id = input_payload["source_text_id"]
 

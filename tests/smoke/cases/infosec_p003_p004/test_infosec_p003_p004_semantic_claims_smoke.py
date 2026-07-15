@@ -2,12 +2,14 @@ from __future__ import annotations
 
 import json
 import re
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any
 
 from observability import JsonlFileLogSink
 from orion import ORION
 from infosec_pair_case_harness import process_with_pipeline_json_artifacts
+from pipeline.step_013_output_generation.rdf_strategy import serialize_graph_to_rdf_xml
 
 _CASE_DIR = Path(__file__).parent
 _SMOKE_DIR = Path(__file__).parents[2]
@@ -17,6 +19,9 @@ _ARTIFACT_DIR = _CASE_DIR / "artifacts"
 _OBSERVED_PATH = _ARTIFACT_DIR / "observed_p003_p004_semantic_claims.json"
 _CANONICAL_COMPAT_PATH = _ARTIFACT_DIR / "observed_p003_p004_canonical_claims.json"
 _CAMEL_SPLIT = re.compile(r"([a-z])([A-Z])")
+_RDF_NS = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+_OWL_NS = "http://www.w3.org/2002/07/owl#"
+_RESOURCE_NS = "https://orion.local/resource/"
 
 
 def _contract() -> dict[str, Any]:
@@ -130,6 +135,105 @@ def _combined_text(*values: Any) -> str:
     return json.dumps(values, ensure_ascii=False, sort_keys=True, default=str).lower()
 
 
+def _term_key(value: Any) -> str:
+    return _norm(value).replace("_", "")
+
+
+def _spo(subject: Any, predicate: Any, obj: Any) -> tuple[str, str, str]:
+    return (_term_key(subject), _term_key(predicate), _term_key(obj))
+
+
+def _semantic_relation_spo(claims: list[dict[str, Any]], *, alternatives: bool = False) -> set[tuple[str, str, str]]:
+    return {
+        _spo(claim.get("subject"), claim.get("predicate"), claim.get("object"))
+        for claim in claims
+        if _norm(claim.get("kind")) == "relation"
+        and (_norm(claim.get("coordination")) == "or") == alternatives
+    }
+
+
+def _graph_alternative_spo(graph: dict[str, Any]) -> set[tuple[str, str, str]]:
+    return {
+        _spo(item.get("subject"), item.get("predicate"), item.get("object"))
+        for group in graph.get("logical_alternatives", [])
+        if isinstance(group, dict) and group.get("operator") == "or"
+        for item in group.get("alternatives", [])
+        if isinstance(item, dict)
+    }
+
+
+def _graph_fact_spo(graph: dict[str, Any]) -> set[tuple[str, str, str]]:
+    facts = graph.get("facts")
+    assert isinstance(facts, list), "RDF graph must expose its direct facts as a list"
+    return {
+        _spo(fact.get("subject"), fact.get("predicate"), fact.get("object"))
+        for fact in facts
+        if isinstance(fact, dict)
+    }
+
+
+def _rdf_observations(graph: dict[str, Any]) -> tuple[set[tuple[str, str, str]], set[str]]:
+    root = ET.fromstring(serialize_graph_to_rdf_xml(graph))
+    facts: set[tuple[str, str, str]] = set()
+    for description in root.findall(f"{{{_RDF_NS}}}Description"):
+        subject = description.attrib.get(f"{{{_RDF_NS}}}about")
+        for child in description:
+            obj = child.attrib.get(f"{{{_RDF_NS}}}resource")
+            if subject and obj and child.tag.startswith(f"{{{_RESOURCE_NS}}}"):
+                facts.add(_spo(subject, child.tag, obj))
+    classes = {
+        _term_key(item.attrib.get(f"{{{_RDF_NS}}}about"))
+        for item in root.findall(f"{{{_OWL_NS}}}Class")
+        if item.attrib.get(f"{{{_RDF_NS}}}about")
+    }
+    return facts, classes
+
+
+def _inflection_variants(token: str) -> set[str]:
+    variants = {token}
+    if token.endswith("ies") and len(token) > 3:
+        variants.add(token[:-3] + "y")
+    if token.endswith("es") and len(token) > 2:
+        variants.update({token[:-2], token[:-1]})
+    if token.endswith("s") and len(token) > 1:
+        variants.add(token[:-1])
+    return variants
+
+
+def _term_variants(value: Any) -> set[str]:
+    parts = _norm(value).split("_")
+    if not parts:
+        return set()
+    prefix = "_".join(parts[:-1])
+    return {
+        _term_key(f"{prefix}_{candidate}" if prefix else candidate)
+        for candidate in _inflection_variants(parts[-1])
+    }
+
+
+def _predicate_variants(value: Any) -> set[str]:
+    parts = _norm(value).split("_")
+    head = parts[0] if parts else ""
+    suffix = "_".join(parts[1:])
+    return {
+        _term_key(f"{candidate}_{suffix}" if suffix else candidate)
+        for candidate in _inflection_variants(head)
+    }
+
+
+def _assert_same_spo(
+    stage: str,
+    expected: set[tuple[str, str, str]],
+    observed: set[tuple[str, str, str]],
+) -> None:
+    missing = sorted(expected - observed)
+    extra = sorted(observed - expected)
+    assert not missing and not extra, (
+        f"semantic_claims → triples → RDF contract broken at {stage}: "
+        f"missing semantic relations={missing[:5]}, non-semantic residue={extra[:5]}"
+    )
+
+
 def test_p003_p004_semantic_claims_exist_before_triples_or_rdf(tmp_path: Path):
     # TASK-SEMANTIC-CLAIMS-P003-P004 | FUN-SEMANTIC-CLAIMS-P003-P004 AC-1 | CON-SEMANTIC-CLAIMS-P003-P004 AC-1 | BR-SEMANTIC-CLAIMS-P003-P004-001
     result = _run_p003_p004(tmp_path)
@@ -204,17 +308,86 @@ def test_p003_p004_ontology_projection_uses_semantic_claims_not_noun_chunks(tmp_
     # TASK-SEMANTIC-CLAIMS-P003-P004 | FUN-SEMANTIC-CLAIMS-P003-P004 AC-5 | CON-SEMANTIC-CLAIMS-P003-P004 AC-5 | BR-SEMANTIC-CLAIMS-P003-P004-006
     result = _run_p003_p004(tmp_path)
     payload = _semantic_payload(result)
+    claims = _claims(payload)
     graph = _graph(result)
     projection = graph.get("projection") if isinstance(graph.get("projection"), dict) else {}
     graph_text = _combined_text(graph, result.get("output"))
 
     assert projection.get("source_stage") == _contract()["projection"]["required_source_stage"], (
-        "ontology/RDF graph must declare projection source_stage=semantic_claims"
+        "semantic_claims → triples → RDF contract broken: projection must declare source_stage=semantic_claims"
     )
     for forbidden in _contract()["projection"]["forbidden_source_stages"]:
         assert forbidden not in graph_text, f"ontology projection must not come from {forbidden}"
-    for token in _contract()["banned_tokens"]:
-        assert token.lower() not in graph_text
-    claim_ids = {claim.get("claim_id") for claim in _claims(payload)}
-    projected_claim_ids = set(projection.get("claim_ids", [])) if isinstance(projection.get("claim_ids"), list) else set()
-    assert projected_claim_ids and projected_claim_ids <= claim_ids
+    residues = sorted(token for token in _contract()["banned_tokens"] if token.lower() in graph_text)
+    assert not residues, f"ontology/RDF projection contains known noun-chunk residue: {residues}"
+
+    claim_by_id = {str(claim.get("claim_id")): claim for claim in claims if claim.get("claim_id")}
+    assert len(claim_by_id) == len(claims), (
+        "semantic_claims → triples contract broken: every claim needs one unique, non-empty claim_id"
+    )
+    triples = result.get("triples")
+    assert isinstance(triples, list) and all(isinstance(item, dict) for item in triples), (
+        "semantic_claims → triples contract broken: observable triples list is missing or malformed"
+    )
+    triple_by_claim_id = {str(item.get("relation_id")): item for item in triples if item.get("relation_id")}
+    projected_claim_ids = {
+        str(item) for item in projection.get("claim_ids", []) if str(item)
+    } if isinstance(projection.get("claim_ids"), list) else set()
+    claim_ids = set(claim_by_id)
+    assert set(triple_by_claim_id) == claim_ids == projected_claim_ids, (
+        "semantic_claims → triples → RDF lineage is incomplete: "
+        f"claims_without_triples={sorted(claim_ids - set(triple_by_claim_id))[:5]}, "
+        f"foreign_triples={sorted(set(triple_by_claim_id) - claim_ids)[:5]}, "
+        f"claims_without_projection={sorted(claim_ids - projected_claim_ids)[:5]}, "
+        f"foreign_projected_ids={sorted(projected_claim_ids - claim_ids)[:5]}"
+    )
+    assert len(triple_by_claim_id) == len(triples), (
+        "semantic_claims → triples contract broken: duplicate or missing triple relation_id"
+    )
+    for claim_id, claim in claim_by_id.items():
+        triple = triple_by_claim_id[claim_id]
+        refs = {triple.get("subject_ref"), triple.get("predicate_ref"), triple.get("object_ref")}
+        assert refs == {claim_id}, (
+            f"semantic_claims → triples contract broken for {claim_id}: refs={sorted(str(item) for item in refs)}"
+        )
+        assert _term_variants(triple.get("subject")) & _term_variants(claim.get("subject")), (
+            f"semantic_claims → triples subject changed for {claim_id}: "
+            f"claim={claim.get('subject')!r}, triple={triple.get('subject')!r}"
+        )
+        assert _term_variants(triple.get("object")) & _term_variants(claim.get("object")), (
+            f"semantic_claims → triples object changed for {claim_id}: "
+            f"claim={claim.get('object')!r}, triple={triple.get('object')!r}"
+        )
+        assert _term_key(triple.get("predicate")) in _predicate_variants(claim.get("predicate")), (
+            f"semantic_claims → triples predicate changed for {claim_id}: "
+            f"claim={claim.get('predicate')!r}, triple={triple.get('predicate')!r}"
+        )
+
+    semantic_spo = _semantic_relation_spo(claims)
+    semantic_alternatives = _semantic_relation_spo(claims, alternatives=True)
+    graph_spo = _graph_fact_spo(graph)
+    graph_alternatives = _graph_alternative_spo(graph)
+    rdf_spo, rdf_classes = _rdf_observations(graph)
+    assert semantic_spo, "semantic_claims → RDF contract cannot be verified without semantic relations"
+    _assert_same_spo("graph facts", semantic_spo, graph_spo)
+    _assert_same_spo("serialized RDF direct facts", semantic_spo, rdf_spo)
+    _assert_same_spo("logical alternatives", semantic_alternatives, graph_alternatives)
+
+    must_follow = [claim for claim in claims if _norm(claim.get("predicate")) == "must_follow"]
+    assert len(must_follow) == 1 and must_follow[0].get("modality") == "must"
+    assert semantic_alternatives and all(
+        claim.get("alternative_group") and claim.get("modality") == "disjunctive_alternative"
+        for claim in claims if _norm(claim.get("coordination")) == "or"
+    )
+
+    semantic_terms = {
+        _term_key(claim.get(field))
+        for claim in claims
+        for field in ("subject", "object")
+        if claim.get(field)
+    }
+    foreign_rdf_classes = sorted(rdf_classes - semantic_terms)
+    assert not foreign_rdf_classes, (
+        "semantic_claims → RDF contract broken: visible RDF classes not licensed by any semantic claim; "
+        f"possible noun-chunk residue={foreign_rdf_classes[:8]}"
+    )

@@ -1,2 +1,4 @@
+"""Define exceptions shared by ORION input and pipeline processing."""
+
 class OrionError(Exception):
-    """Base ORION exception for input intake errors."""
+    """Base exception for ORION processing errors."""

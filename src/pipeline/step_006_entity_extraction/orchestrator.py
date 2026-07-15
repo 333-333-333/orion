@@ -1,3 +1,5 @@
+"""Orchestrate the entity extraction pipeline stage while preserving the payload contract."""
+
 from __future__ import annotations
 
 import hashlib
@@ -5,12 +7,14 @@ from typing import Any
 
 
 def _build_entity_id(source_text_id: str, label: str, start_offset: int, end_offset: int, text: str) -> str:
+    """Build entity ID."""
     stable_key = f"{source_text_id}|{label}|{start_offset}|{end_offset}|{text}".encode("utf-8")
     digest = hashlib.sha256(stable_key).hexdigest()[:16]
     return f"ent-{digest}"
 
 
 def _resolve_sentence_id(sentences: list[dict[str, Any]], start_offset: int, end_offset: int) -> str:
+    """Return the sentence containing a source span, or an empty identifier."""
     for sentence in sentences:
         if sentence["start_offset"] <= start_offset and end_offset <= sentence["end_offset"]:
             return sentence["sentence_id"]
@@ -18,6 +22,7 @@ def _resolve_sentence_id(sentences: list[dict[str, Any]], start_offset: int, end
 
 
 def _normalize_offsets(preprocessed_text: str, text: str, start_offset: int, end_offset: int) -> tuple[int, int]:
+    """Normalize offsets."""
     if text and preprocessed_text[start_offset:end_offset] == text:
         return start_offset, end_offset
 
@@ -32,6 +37,7 @@ def _normalize_offsets(preprocessed_text: str, text: str, start_offset: int, end
 
 
 def extract_entities_from_doc(input_payload: dict[str, Any], doc: Any) -> dict[str, Any]:
+    """Attach the entity-extraction result while generic NER remains intentionally disabled."""
     source_text_id = input_payload["source_text_id"]
     sentences = input_payload["sentences"]
     preprocessed_text = input_payload["preprocessed_text"]

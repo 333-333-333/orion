@@ -1,3 +1,5 @@
+"""Extract deterministic SVO, passive, prepositional, and copular relations."""
+
 from __future__ import annotations
 
 import hashlib
@@ -15,15 +17,18 @@ _META_INSTRUCTION_TAILS = ('from this text',)
 
 
 def _normalize_text(value: str) -> str:
+    """Normalize text."""
     return value.casefold().strip()
 
 
 def _normalize_phrase(value: str | None) -> str:
+    """Normalize phrase."""
     normalized = re.sub(r'[^a-z0-9]+', ' ', _normalize_text(value or ''))
     return re.sub(r'\s+', ' ', normalized).strip()
 
 
 def _singularize_token(token: str) -> str:
+    """Apply the deterministic, suffix-based singularization rules to one token."""
     if len(token) > 3 and token.endswith('ies'):
         return token[:-3] + 'y'
     if len(token) > 4 and token.endswith(('ses', 'xes', 'zes', 'ches', 'shes')):
@@ -34,6 +39,7 @@ def _singularize_token(token: str) -> str:
 
 
 def _normalize_fact_phrase(value: str | None) -> str:
+    """Normalize fact phrase."""
     normalized = _normalize_phrase(value)
     if not normalized:
         return ''
@@ -41,10 +47,12 @@ def _normalize_fact_phrase(value: str | None) -> str:
 
 
 def _phrase_tokens(value: str | None) -> list[str]:
+    """Return normalized content tokens for phrase comparison."""
     return [token for token in _normalize_phrase(value).split(' ') if token and token not in _PHRASE_ARTICLES]
 
 
 def _is_meta_instruction_sentence(sentence_tokens: list[dict[str, Any]]) -> bool:
+    """Return whether tokens encode the supported ORION extraction meta-instruction."""
     sentence_text = _normalize_phrase(' '.join(str(token.get('text', '')) for token in sentence_tokens))
     if not sentence_text.startswith(_META_INSTRUCTION_PREFIXES):
         return False
@@ -55,6 +63,7 @@ def _is_meta_instruction_sentence(sentence_tokens: list[dict[str, Any]]) -> bool
 
 
 def _phrase_match_score(query: str | None, candidate: str | None) -> float:
+    """Score normalized phrase overlap for deterministic reference resolution."""
     normalized_query = _normalize_phrase(query)
     normalized_candidate = _normalize_phrase(candidate)
     if not normalized_query or not normalized_candidate:
@@ -74,6 +83,7 @@ def _phrase_match_score(query: str | None, candidate: str | None) -> float:
     if query_join and f' {query_join} ' in f' {candidate_join} ':
         return 0.92
 
+    # Containment scores above incidental overlap because expanded noun chunks often add modifiers.
     query_set = set(query_tokens)
     candidate_set = set(candidate_tokens)
     if query_set <= candidate_set:
@@ -88,12 +98,14 @@ def _phrase_match_score(query: str | None, candidate: str | None) -> float:
 
 
 def _build_relation_id(source_text_id: str, sentence_id: str, subject_text: str, predicate: str, object_text: str) -> str:
+    """Build relation ID."""
     stable_key = f"{source_text_id}|{sentence_id}|{_normalize_fact_phrase(subject_text)}|{_normalize_text(predicate)}|{_normalize_fact_phrase(object_text)}".encode('utf-8')
     digest = hashlib.sha256(stable_key).hexdigest()[:16]
     return f"rel-{digest}"
 
 
 def _make_ref_lookup(input_payload: dict[str, Any]) -> dict[tuple[int, int, str], str]:
+    """Index entity and concept references by span and normalized label."""
     lookup: dict[tuple[int, int, str], str] = {}
     for entity in input_payload.get('entities', []):
         start_offset = entity.get('start_offset', -1)
@@ -107,12 +119,14 @@ def _make_ref_lookup(input_payload: dict[str, Any]) -> dict[tuple[int, int, str]
         end_offset = concept.get('end_offset', -1)
         for value in (concept.get('normalized_text'), concept.get('lemma'), concept.get('text')):
             normalized = _normalize_fact_phrase(value if isinstance(value, str) else None)
+            # Exact entity references win when an entity and concept occupy the same span.
             if normalized and (start_offset, end_offset, normalized) not in lookup:
                 lookup[(start_offset, end_offset, normalized)] = concept.get('concept_id', '')
     return lookup
 
 
 def _resolve_ref(lookup: dict[tuple[int, int, str], str], text: str, start_offset: int, end_offset: int) -> str:
+    """Resolve ref."""
     normalized_query = _normalize_fact_phrase(text)
     if not normalized_query:
         return ''
@@ -132,11 +146,13 @@ def _resolve_ref(lookup: dict[tuple[int, int, str], str], text: str, start_offse
             best_score = score
             best_size = len(_phrase_tokens(norm_text))
             best_ref = ref_id
+    # Below this threshold, leaving the endpoint unlinked is safer than attaching a fuzzy false match.
     return best_ref if best_score >= 0.75 else ''
 
 
 
 def _make_coref_lookup(input_payload: dict[str, Any]) -> dict[tuple[int, int, str], dict[str, Any]]:
+    """Index resolved coreferences by mention span and normalized text."""
     lookup: dict[tuple[int, int, str], dict[str, Any]] = {}
     for coref in input_payload.get('coreferences', []):
         if coref.get('status') != 'resolved':
@@ -153,6 +169,7 @@ def _make_coref_lookup(input_payload: dict[str, Any]) -> dict[tuple[int, int, st
 
 
 def _resolve_subject_from_coreference(subject: dict[str, Any], coref_lookup: dict[tuple[int, int, str], dict[str, Any]]) -> tuple[str, int, int]:
+    """Resolve subject from coreference."""
     key = (
         subject.get('start_offset', -1),
         subject.get('end_offset', -1),
@@ -169,6 +186,7 @@ def _resolve_subject_from_coreference(subject: dict[str, Any], coref_lookup: dic
 
 
 def _group_tokens_by_sentence(tokens: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    """Group tokens by sentence and sort each group by stable source position."""
     grouped: dict[str, list[dict[str, Any]]] = {}
     for token in tokens:
         grouped.setdefault(token.get('sentence_id', ''), []).append(token)
@@ -178,15 +196,18 @@ def _group_tokens_by_sentence(tokens: list[dict[str, Any]]) -> dict[str, list[di
 
 
 def _is_relation_nominal(token: dict[str, Any]) -> bool:
+    """Return whether a token can serve as a nominal relation endpoint."""
     return token.get('pos') in {'NOUN', 'PROPN', 'PRON'} and _normalize_phrase(token.get('text', '')) not in {'', 'that'}
 
 
 def _is_relation_predicate_candidate(token: dict[str, Any]) -> bool:
+    """Return whether a token is a non-copular verbal predicate candidate."""
     normalized = _normalize_phrase(token.get('lemma') or token.get('text', ''))
-    return bool(normalized) and normalized not in {'be'} and token.get('pos') in {'VERB', 'NOUN'}
+    return bool(normalized) and normalized not in {'be'} and token.get('pos') == 'VERB'
 
 
 def _object_text_from_nominals(tokens: list[dict[str, Any]], object_token: dict[str, Any]) -> str:
+    """Build normalized object text from nominals inside the object span."""
     phrase_tokens = [
         token for token in tokens
         if token.get('start_offset', -1) >= object_token.get('start_offset', -1)
@@ -197,14 +218,24 @@ def _object_text_from_nominals(tokens: list[dict[str, Any]], object_token: dict[
 
 
 def _nominal_phrase_for_head(tokens: list[dict[str, Any]], head_token: dict[str, Any]) -> tuple[str, int, int]:
+    """Build a normalized nominal phrase and source span around a dependency head."""
     head_text = str(head_token.get('text', ''))
+    head_start = int(head_token.get('start_offset', 0))
+    previous_same_heads = [
+        token for token in tokens
+        if token is not head_token
+        and str(token.get('text', '')) == head_text
+        and int(token.get('end_offset', 0)) <= head_start
+    ]
+    lower_bound = max((int(token.get('end_offset', 0)) for token in previous_same_heads), default=-1)
     phrase_tokens = [
         token for token in tokens
         if token is head_token
         or (
             token.get('head_text') == head_text
             and token.get('dependency') in _NOMINAL_LEFT_DEPENDENCIES
-            and token.get('end_offset', 0) <= head_token.get('start_offset', 0)
+            and lower_bound <= int(token.get('start_offset', 0))
+            and token.get('end_offset', 0) <= head_start
         )
     ]
     phrase_tokens = sorted(phrase_tokens, key=lambda token: (token.get('start_offset', 0), token.get('end_offset', 0)))
@@ -225,6 +256,7 @@ def _extract_prepositional_relations(
     sentence_start: int,
     sentence_end: int,
 ) -> list[dict[str, Any]]:
+    """Extract prepositional relations."""
     relations: list[dict[str, Any]] = []
     verb_text = str(verb.get('text', ''))
     verb_lemma = str(verb.get('lemma') or verb_text)
@@ -274,7 +306,9 @@ def _extract_segmented_active_relations(
     ref_lookup: dict[tuple[int, int, str], str],
     coref_lookup: dict[tuple[int, int, str], dict[str, Any]],
 ) -> list[dict[str, Any]]:
+    """Extract segmented active relations."""
     relations: list[dict[str, Any]] = []
+    # This fallback isolates comma/semicolon clauses before looking for a minimal nominal-verb-nominal sequence.
     segments: list[list[dict[str, Any]]] = []
     current: list[dict[str, Any]] = []
     for token in sentence_tokens:
@@ -327,6 +361,7 @@ def _extract_segmented_active_relations(
 
 
 def _extract_svo_relations(input_payload: dict[str, Any]) -> list[dict[str, Any]]:
+    """Extract SVO relations."""
     source_text_id = input_payload['source_text_id']
     tokens = input_payload.get('tokens', [])
     ref_lookup = _make_ref_lookup(input_payload)
@@ -342,6 +377,7 @@ def _extract_svo_relations(input_payload: dict[str, Any]) -> list[dict[str, Any]
         sentence_end = max((t.get('end_offset', 0) for t in sentence_tokens), default=0)
 
         def _subjects_for(verb_token: dict[str, Any]) -> list[dict[str, Any]]:
+            """Return direct subjects or subjects inherited by a coordinated verb."""
             verb_text = verb_token.get('text', '')
             direct = [t for t in sentence_tokens if t.get('dependency') in {'nsubj', 'nsubjpass'} and t.get('head_text') == verb_text]
             if direct:
@@ -351,14 +387,32 @@ def _extract_svo_relations(input_payload: dict[str, Any]) -> list[dict[str, Any]
                 return [t for t in sentence_tokens if t.get('dependency') in {'nsubj', 'nsubjpass'} and t.get('head_text') == head_text]
             return []
 
-        relations.extend(_extract_segmented_active_relations(source_text_id, sentence_id, sentence_tokens, ref_lookup, coref_lookup))
-
         for verb in verbs:
             verb_head = verb.get('text', '')
             subjects = _subjects_for(verb)
             active_subjects = [s for s in subjects if s.get('dependency') == 'nsubj']
             passive_subjects = [s for s in subjects if s.get('dependency') == 'nsubjpass']
-            objects = [t for t in sentence_tokens if t.get('dependency') in {'dobj', 'obj', 'pobj'} and t.get('head_text') == verb_head]
+            direct_objects = [t for t in sentence_tokens if t.get('dependency') in {'dobj', 'obj', 'pobj'} and t.get('head_text') == verb_head]
+            # Some spaCy parses encode the left side of "X or Y" as nmod instead of conj.
+            coordinated_objects = [
+                token for token in sentence_tokens
+                if (
+                    token.get('dependency') == 'conj'
+                    or (
+                        token.get('dependency') == 'nmod'
+                        and any(token.get('head_text') == direct.get('text') for direct in direct_objects)
+                        and any(
+                            str(marker.get('text', '')).casefold() == 'or'
+                            and int(token.get('end_offset', 0)) <= int(marker.get('start_offset', 0))
+                            and any(int(marker.get('end_offset', 0)) <= int(direct.get('start_offset', 0)) for direct in direct_objects)
+                            for marker in sentence_tokens
+                        )
+                    )
+                )
+                and any(token.get('head_text') == direct.get('text') for direct in direct_objects)
+                and _is_relation_nominal(token)
+            ]
+            objects = [*direct_objects, *coordinated_objects]
 
             relations.extend(
                 _extract_prepositional_relations(
@@ -378,7 +432,7 @@ def _extract_svo_relations(input_payload: dict[str, Any]) -> list[dict[str, Any]
                 resolved_subject_text, resolved_subject_start, resolved_subject_end = _resolve_subject_from_coreference(subject, coref_lookup)
                 resolved_subject_text = _normalize_fact_phrase(resolved_subject_text)
                 for obj in objects:
-                    object_text = _normalize_fact_phrase(obj.get('text', ''))
+                    object_text, object_start, object_end = _nominal_phrase_for_head(sentence_tokens, obj)
                     relations.append(
                         {
                             'relation_id': _build_relation_id(source_text_id, sentence_id, resolved_subject_text, verb.get('lemma', verb.get('text', '')), object_text),
@@ -386,7 +440,7 @@ def _extract_svo_relations(input_payload: dict[str, Any]) -> list[dict[str, Any]
                             'subject_ref': _resolve_ref(ref_lookup, resolved_subject_text, resolved_subject_start, resolved_subject_end),
                             'predicate': verb.get('lemma', verb.get('text', '')),
                             'object_text': object_text,
-                            'object_ref': _resolve_ref(ref_lookup, object_text, obj.get('start_offset', -1), obj.get('end_offset', -1)),
+                            'object_ref': _resolve_ref(ref_lookup, object_text, object_start, object_end),
                             'sentence_id': sentence_id,
                             'source_text_id': source_text_id,
                             'confidence': _BR_REL_CONFIDENCE_SVO,
@@ -401,7 +455,8 @@ def _extract_svo_relations(input_payload: dict[str, Any]) -> list[dict[str, Any]
                 for passive_subject in passive_subjects:
                     for agent in agents:
                         subject_text = _normalize_fact_phrase(agent.get('text', ''))
-                        object_text = _normalize_fact_phrase(passive_subject.get('text', ''))
+                        resolved_object_text, resolved_object_start, resolved_object_end = _resolve_subject_from_coreference(passive_subject, coref_lookup)
+                        object_text = _normalize_fact_phrase(resolved_object_text)
                         relations.append(
                             {
                                 'relation_id': _build_relation_id(source_text_id, sentence_id, subject_text, verb.get('lemma', verb.get('text', '')), object_text),
@@ -409,7 +464,7 @@ def _extract_svo_relations(input_payload: dict[str, Any]) -> list[dict[str, Any]
                                 'subject_ref': _resolve_ref(ref_lookup, subject_text, agent.get('start_offset', -1), agent.get('end_offset', -1)),
                                 'predicate': verb.get('lemma', verb.get('text', '')),
                                 'object_text': object_text,
-                                'object_ref': _resolve_ref(ref_lookup, object_text, passive_subject.get('start_offset', -1), passive_subject.get('end_offset', -1)),
+                                'object_ref': _resolve_ref(ref_lookup, object_text, resolved_object_start, resolved_object_end),
                                 'sentence_id': sentence_id,
                                 'source_text_id': source_text_id,
                                 'confidence': _BR_REL_CONFIDENCE_SVO,
@@ -422,6 +477,7 @@ def _extract_svo_relations(input_payload: dict[str, Any]) -> list[dict[str, Any]
 
 
 def _extract_copula_relations(input_payload: dict[str, Any]) -> list[dict[str, Any]]:
+    """Extract copula relations."""
     source_text_id = input_payload['source_text_id']
     tokens = input_payload.get('tokens', [])
     ref_lookup = _make_ref_lookup(input_payload)
@@ -431,25 +487,30 @@ def _extract_copula_relations(input_payload: dict[str, Any]) -> list[dict[str, A
     for sentence_id, sentence_tokens in grouped.items():
         if _is_meta_instruction_sentence(sentence_tokens):
             continue
-        copulas = [t for t in sentence_tokens if t.get('lemma') == 'be' and t.get('pos') in {'AUX', 'VERB'}]
+        when_index = next(
+            (index for index, token in enumerate(sentence_tokens) if str(token.get('text', '')).casefold() == 'when'),
+            len(sentence_tokens),
+        )
+        main_clause_tokens = sentence_tokens[:when_index]
+        copulas = [t for t in main_clause_tokens if t.get('lemma') == 'be' and t.get('pos') in {'AUX', 'VERB'}]
         for copula in copulas:
             copula_head = copula.get('text', '')
-            subjects = [t for t in sentence_tokens if t.get('dependency') == 'nsubj' and t.get('head_text') == copula_head]
-            attrs = [t for t in sentence_tokens if t.get('dependency') in {'attr', 'acomp'} and t.get('head_text') == copula_head]
+            subjects = [t for t in main_clause_tokens if t.get('dependency') == 'nsubj' and t.get('head_text') == copula_head]
+            attrs = [t for t in main_clause_tokens if t.get('dependency') in {'attr', 'acomp'} and t.get('head_text') == copula_head]
             for subject in subjects:
                 for attr in attrs:
-                    subject_text = _normalize_fact_phrase(subject.get('text', ''))
-                    object_text = _normalize_fact_phrase(attr.get('text', ''))
+                    subject_text, subject_start, subject_end = _nominal_phrase_for_head(main_clause_tokens, subject)
+                    object_text, object_start, object_end = _nominal_phrase_for_head(main_clause_tokens, attr)
                     start_offset = min(subject.get('start_offset', 0), copula.get('start_offset', 0), attr.get('start_offset', 0))
                     end_offset = max(subject.get('end_offset', 0), copula.get('end_offset', 0), attr.get('end_offset', 0))
                     relations.append(
                         {
                             'relation_id': _build_relation_id(source_text_id, sentence_id, subject_text, copula.get('lemma', copula.get('text', '')), object_text),
                             'subject_text': subject_text,
-                            'subject_ref': _resolve_ref(ref_lookup, subject_text, subject.get('start_offset', -1), subject.get('end_offset', -1)),
+                            'subject_ref': _resolve_ref(ref_lookup, subject_text, subject_start, subject_end),
                             'predicate': copula.get('lemma', copula.get('text', '')),
                             'object_text': object_text,
-                            'object_ref': _resolve_ref(ref_lookup, object_text, attr.get('start_offset', -1), attr.get('end_offset', -1)),
+                            'object_ref': _resolve_ref(ref_lookup, object_text, object_start, object_end),
                             'sentence_id': sentence_id,
                             'source_text_id': source_text_id,
                             'confidence': _BR_REL_CONFIDENCE_COPULA,
@@ -462,6 +523,7 @@ def _extract_copula_relations(input_payload: dict[str, Any]) -> list[dict[str, A
 
 
 def _dedupe_stable(relations: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Deduplicate relations by semantic identity in deterministic order."""
     unique: list[dict[str, Any]] = []
     seen: set[str] = set()
     sorted_relations = sorted(relations, key=lambda r: (r['sentence_id'], r['start_offset'], r['end_offset'], r['relation_id']))

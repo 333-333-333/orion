@@ -42,6 +42,8 @@ _EXPECTED_CLASSES = {
     "authorized-entity",
     "system",
     "cia-triad",
+    "foundational-model",
+    "unauthorized-modification",
 }
 
 _EXPECTED_DIRECT_SUBCLASSES = {
@@ -58,21 +60,21 @@ _EXPECTED_DIRECT_SUBCLASSES = {
     ("confidentiality", "security-property"),
     ("integrity", "security-property"),
     ("availability", "security-property"),
+    ("cia-triad", "foundational-model"),
 }
 
 _EXPECTED_OBJECT_PROPERTIES = {
-    ("protects", "information-security", "information-asset"),
-    ("protects-against", "information-security", "threat"),
-    ("has-value-for", "resource", "organization"),
-    ("stores", "information-asset", "information"),
-    ("processes", "information-asset", "information"),
-    ("transmits", "information-asset", "information"),
-    ("represents", "information-asset", "information"),
-    ("preserves", "information-security", "security-property"),
-    ("ensures-accessible-to", "confidentiality", "authorized-entity"),
+    ("focused-on-protecting", "information-security", "information-asset"),
+    ("focused-on-protecting-against", "information-security", "threat"),
+    ("has-value-for", "information-asset", "organization"),
+    ("has-purpose-to-preserve", "information-security", "security-property"),
+    ("ensures-accessible-only-to", "confidentiality", "authorized-entity"),
     ("ensures-accuracy-of", "integrity", "information"),
+    ("ensures-completeness-of", "integrity", "information"),
+    ("protects-against", "integrity", "unauthorized-modification"),
+    ("ensures-availability-of", "availability", "information"),
     ("ensures-availability-of", "availability", "system"),
-    ("forms", "security-property", "cia-triad"),
+    ("has-member", "cia-triad", "security-property"),
     ("models", "cia-triad", "information-security"),
 }
 
@@ -101,11 +103,11 @@ _BANNED_TOKENS = {
 
 _DETERMINERS = re.compile(r"^(?:a|an|the|any)-")
 
-_ALIAS_ONLY_DEFINITIONAL_CLASS_SLUGS = {
+_REQUIRED_LITERAL_DEFINITIONAL_CLASS_SLUGS = {
     "foundational-model",
 }
 
-_ALIAS_ONLY_DEFINITIONAL_SUBCLASS_PAIRS = {
+_REQUIRED_LITERAL_DEFINITIONAL_SUBCLASS_PAIRS = {
     ("cia-triad", "foundational-model"),
 }
 
@@ -155,11 +157,13 @@ def _subclass_pairs(result: dict[str, Any], graph: dict[str, Any]) -> set[tuple[
 
 
 def _object_property_triples(graph: dict[str, Any]) -> set[tuple[str, str, str]]:
-    schema = graph.get("schema", {}) if isinstance(graph.get("schema"), dict) else {}
     triples: set[tuple[str, str, str]] = set()
-    for item in schema.get("object_properties", []):
+    for item in graph.get("object_property_facts", []):
         if isinstance(item, dict):
-            triples.add((_slug(item.get("iri") or item.get("label")), _slug(item.get("domain")), _slug(item.get("range"))))
+            triples.add((_slug(item.get("predicate")), _slug(item.get("domain")), _slug(item.get("range"))))
+    for item in graph.get("scoped_relations", []):
+        if isinstance(item, dict):
+            triples.add((_slug(item.get("predicate")), _slug(item.get("subject")), _slug(item.get("object"))))
     return triples
 
 
@@ -233,6 +237,26 @@ def test_p001_p002_modular_contract_maps_type_statements_to_direct_subclassof(tm
     assert not [pair for pair in actual if pair[1].startswith("type-of-") or pair[1] == "type"]
 
 
+def test_p001_p002_modular_contract_preserves_operation_disjunction(tmp_path: Path):
+    _, graph = _run_p001_p002(tmp_path)
+    groups = graph.get("logical_alternatives", [])
+    assert len(groups) == 1
+    assert groups[0].get("operator") == "or"
+    alternatives = {
+        (_slug(item.get("subject")), _slug(item.get("predicate")), _slug(item.get("object")))
+        for item in groups[0].get("alternatives", [])
+        if isinstance(item, dict)
+    }
+    assert alternatives == {
+        ("information-asset", "stores", "information"),
+        ("information-asset", "processes", "information"),
+        ("information-asset", "transmits", "information"),
+        ("information-asset", "represents", "information"),
+    }
+    asserted_predicates = {_slug(item.get("predicate")) for item in graph.get("facts", []) if isinstance(item, dict)}
+    assert not ({"stores", "processes", "transmits", "represents"} & asserted_predicates)
+
+
 def test_p001_p002_modular_contract_keeps_definitions_as_comments(tmp_path: Path):
     # TASK-SMOKE-P001-P002 | FUN-SMOKE-P001-P002 AC-3 | CON-SMOKE-P001-P002 AC-3 | BR-SMOKE-P001-P002-003
     _, graph = _run_p001_p002(tmp_path)
@@ -253,14 +277,14 @@ def test_p001_p002_modular_contract_has_expected_object_properties_with_domain_r
 
 
 
-def test_p001_p002_modular_contract_rejects_alias_only_subclass_taxonomy(tmp_path: Path):
+def test_p001_p002_modular_contract_preserves_literal_definitional_taxonomy(tmp_path: Path):
     # TASK-ONT-002 | FUN-SMOKE-P001-P002 AC-5 | CON-SMOKE-P001-P002 AC-5 | BR-SMOKE-P001-P002-005
     result, graph = _run_p001_p002(tmp_path)
     classes = _class_slugs(graph)
     subclass_pairs = _subclass_pairs(result, graph)
 
-    leaked_classes = sorted(_ALIAS_ONLY_DEFINITIONAL_CLASS_SLUGS & classes)
-    leaked_pairs = sorted(_ALIAS_ONLY_DEFINITIONAL_SUBCLASS_PAIRS & subclass_pairs)
+    missing_classes = sorted(_REQUIRED_LITERAL_DEFINITIONAL_CLASS_SLUGS - classes)
+    missing_pairs = sorted(_REQUIRED_LITERAL_DEFINITIONAL_SUBCLASS_PAIRS - subclass_pairs)
 
-    assert not leaked_classes, f"alias-only definitions leaked as owl:Class: {leaked_classes}"
-    assert not leaked_pairs, f"alias-only definitions leaked as rdfs:subClassOf: {leaked_pairs}"
+    assert not missing_classes, f"literal definition classes missing from owl:Class: {missing_classes}"
+    assert not missing_pairs, f"literal definitions missing from rdfs:subClassOf: {missing_pairs}"

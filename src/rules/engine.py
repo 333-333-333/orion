@@ -1,3 +1,5 @@
+"""Define the deterministic semantic-rule registry and execution context."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -6,6 +8,7 @@ from typing import Any, Callable
 
 @dataclass(frozen=True)
 class RuleContext:
+    """Dependencies and source context supplied to a semantic rule."""
     source_text_id: str
     sentence: dict[str, Any]
     paragraph_id: str
@@ -16,6 +19,7 @@ class RuleContext:
 
 
 class Rule:
+    """Base semantic rule with deterministic ordering and language metadata."""
     rule_id: str = ''
     stage: str = ''
     languages: tuple[str, ...] = ('en',)
@@ -24,15 +28,19 @@ class Rule:
     behavior: str = ''
 
     def apply(self, claims: list[dict[str, Any]], context: RuleContext) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+        """Return claims emitted and superseded by this rule for one context."""
         return [], []
 
 
 class RuleEngine:
+    """Registry that executes configured semantic rules in stable order."""
     def __init__(self, stage: str) -> None:
+        """Initialize the RuleEngine."""
         self._stage = stage
         self._registry: list[Rule] = []
 
     def register(self, rule: Rule) -> Rule:
+        """Register a rule and return it for decorator-style use."""
         self._registry.append(rule)
         return rule
 
@@ -44,10 +52,12 @@ class RuleEngine:
         paragraphs: dict[str, str],
         context_factory: Callable[[dict[str, Any], str], RuleContext],
     ) -> list[dict[str, Any]]:
+        """Run enabled rules in deterministic priority order and return rejected claims."""
         if config.get('rules_enabled', True) is False:
             return []
         language = self._language(config, input_payload)
         rejected: list[dict[str, Any]] = []
+        # Rule ID breaks priority ties so registration order cannot change semantic output.
         rules = sorted(self._registry, key=lambda rule: (self._rule_config(config, rule.rule_id).get('priority', rule.priority), rule.rule_id))
         for rule in rules:
             if rule.stage != self._stage or language not in rule.languages or not self._rule_enabled(rule, config):
@@ -61,6 +71,7 @@ class RuleEngine:
         return rejected
 
     def _rule_config(self, config: dict[str, Any], rule_id: str) -> dict[str, Any]:
+        """Return per-rule configuration when it is a mapping."""
         rules = config.get('rules')
         if not isinstance(rules, dict):
             return {}
@@ -68,16 +79,19 @@ class RuleEngine:
         return value if isinstance(value, dict) else {}
 
     def _rule_enabled(self, rule: Rule, config: dict[str, Any]) -> bool:
+        """Apply global, allow-list, deny-list, and per-rule enablement controls."""
         local = self._rule_config(config, rule.rule_id)
         enabled = local.get('enabled', rule.enabled)
         enabled_rules = self._config_list(config, 'enabled_rules')
         disabled_rules = self._config_list(config, 'disabled_rules')
+        # A non-empty allow-list is restrictive; the deny-list always wins over defaults and local enablement.
         if enabled_rules and rule.rule_id not in enabled_rules:
             return False
         return bool(enabled) and rule.rule_id not in disabled_rules
 
     @staticmethod
     def _config_list(config: dict[str, Any], key: str) -> set[str]:
+        """Normalize a list-valued rule configuration entry into a set."""
         value = config.get(key)
         if not isinstance(value, list):
             return set()
@@ -85,5 +99,6 @@ class RuleEngine:
 
     @staticmethod
     def _language(config: dict[str, Any], input_payload: dict[str, Any]) -> str:
+        """Resolve the base language code from configuration or payload metadata."""
         raw = config.get('language') or input_payload.get('language') or input_payload.get('lang') or 'en'
         return str(raw).split('-', 1)[0].casefold()

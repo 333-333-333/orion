@@ -5,7 +5,7 @@ title: Semantic Claims Pipeline Step
 status: draft
 version: 0
 created_at: 2026-06-23
-updated_at: 2026-06-23
+updated_at: 2026-07-10
 summary: Canonical and semantic claim extraction, generic claim normalization, and hook point for domain rule behavior.
 paths:
   - src/pipeline/step_009_canonical_claims/**
@@ -34,6 +34,7 @@ related_requirements:
   - NFR-010
 related_adrs:
   - ADR-001
+  - ADR-003
 owner: herodotus
 ---
 
@@ -41,7 +42,7 @@ owner: herodotus
 
 ## Summary
 
-Canonical and semantic claim extraction, generic claim normalization, and hook point for domain rule behavior.
+Canonical and semantic claim extraction, generic claim normalization, and hook point for domain rule behavior. ADR-003 proposes stronger source-faithful modal, passive, coordinated, and reported SVO handling.
 
 ## Paths
 
@@ -77,6 +78,7 @@ Canonical and semantic claim extraction, generic claim normalization, and hook p
 ## Related ADRs
 
 - ADR-001
+- ADR-003
 
 ## Traceability Notes
 

@@ -50,7 +50,8 @@
       "subject": "Organization",
       "predicate": "protects",
       "object": "Information",
-      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "means": "implementing"
     },
     {
       "paragraph_id": "p003",
@@ -58,23 +59,29 @@
       "subject": "Organization",
       "predicate": "implements",
       "object": "Governance",
-      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "relation_role": "means_for",
+      "goal": "protects Information"
     },
     {
       "paragraph_id": "p003",
       "kind": "relation",
       "subject": "Organization",
       "predicate": "implements",
-      "object": "SecurityPolicy",
-      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+      "object": "Policy",
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "relation_role": "means_for",
+      "goal": "protects Information"
     },
     {
       "paragraph_id": "p003",
       "kind": "relation",
       "subject": "Organization",
       "predicate": "implements",
-      "object": "SecurityProcedure",
-      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+      "object": "Procedure",
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "relation_role": "means_for",
+      "goal": "protects Information"
     },
     {
       "paragraph_id": "p003",
@@ -82,7 +89,9 @@
       "subject": "Organization",
       "predicate": "implements",
       "object": "Control",
-      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "relation_role": "means_for",
+      "goal": "protects Information"
     },
     {
       "paragraph_id": "p003",
@@ -90,7 +99,9 @@
       "subject": "Organization",
       "predicate": "implements",
       "object": "MonitoringMechanism",
-      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "relation_role": "means_for",
+      "goal": "protects Information"
     },
     {
       "paragraph_id": "p003",
@@ -98,7 +109,9 @@
       "subject": "Organization",
       "predicate": "implements",
       "object": "IncidentResponseProcess",
-      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes."
+      "evidence": "An organization protects information by implementing governance, policies, procedures, controls, monitoring mechanisms, and incident response processes.",
+      "relation_role": "means_for",
+      "goal": "protects Information"
     },
     {
       "paragraph_id": "p003",
@@ -122,14 +135,6 @@
       "subject": "SecurityPolicy",
       "predicate": "defines",
       "object": "Expectation",
-      "evidence": "A security policy is a formal document that defines rules and expectations for protecting information."
-    },
-    {
-      "paragraph_id": "p003",
-      "kind": "relation",
-      "subject": "SecurityPolicy",
-      "predicate": "protects",
-      "object": "Information",
       "evidence": "A security policy is a formal document that defines rules and expectations for protecting information."
     },
     {
@@ -191,34 +196,41 @@
     {
       "paragraph_id": "p003",
       "kind": "relation",
-      "subject": "SecurityBaseline",
+      "subject": "Control",
       "predicate": "required_for",
       "object": "System",
-      "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component."
+      "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
+      "patient": "Control",
+      "context": "SecurityBaseline"
     },
     {
       "paragraph_id": "p003",
       "kind": "relation",
-      "subject": "SecurityBaseline",
+      "subject": "Control",
       "predicate": "required_for",
       "object": "Application",
-      "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component."
+      "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
+      "patient": "Control",
+      "context": "SecurityBaseline"
     },
     {
       "paragraph_id": "p003",
       "kind": "relation",
-      "subject": "SecurityBaseline",
+      "subject": "Control",
       "predicate": "required_for",
       "object": "InfrastructureComponent",
-      "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component."
+      "evidence": "A security baseline is a minimum set of controls required for a system, application, or infrastructure component.",
+      "patient": "Control",
+      "context": "SecurityBaseline"
     },
     {
       "paragraph_id": "p004",
       "kind": "relation",
       "subject": "BoardOfDirectors",
-      "predicate": "provides_oversight_for",
+      "predicate": "provides_strategic_oversight_for",
       "object": "InformationSecurity",
-      "evidence": "The board of directors provides strategic oversight for information security."
+      "evidence": "The board of directors provides strategic oversight for information security.",
+      "qualifier": "Strategic"
     },
     {
       "paragraph_id": "p004",
@@ -234,14 +246,6 @@
       "subject": "SeniorManagement",
       "predicate": "allocates",
       "object": "Resource",
-      "evidence": "Senior management approves security policies and allocates resources for security initiatives."
-    },
-    {
-      "paragraph_id": "p004",
-      "kind": "relation",
-      "subject": "Resource",
-      "predicate": "supports",
-      "object": "SecurityInitiative",
       "evidence": "Senior management approves security policies and allocates resources for security initiatives."
     },
     {
@@ -351,33 +355,53 @@
     {
       "paragraph_id": "p004",
       "kind": "relation",
-      "subject": "Auditor",
-      "predicate": "evaluates",
-      "object": "Compliance",
-      "evidence": "The auditor evaluates compliance with security requirements."
-    },
-    {
-      "paragraph_id": "p004",
-      "kind": "relation",
-      "subject": "Compliance",
-      "predicate": "checked_against",
-      "object": "SecurityRequirement",
-      "evidence": "The auditor evaluates compliance with security requirements."
-    },
-    {
-      "paragraph_id": "p004",
-      "kind": "relation",
       "subject": "EndUser",
       "predicate": "accesses",
       "object": "System",
       "evidence": "The end user accesses systems and must follow security policies."
     },
     {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "Rule",
+      "predicate": "has_purpose_to_protect",
+      "object": "Information",
+      "modality": "purpose",
+      "evidence": "A security policy is a formal document that defines rules and expectations for protecting information."
+    },
+    {
+      "paragraph_id": "p003",
+      "kind": "relation",
+      "subject": "Expectation",
+      "predicate": "has_purpose_to_protect",
+      "object": "Information",
+      "modality": "purpose",
+      "evidence": "A security policy is a formal document that defines rules and expectations for protecting information."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "Resource",
+      "predicate": "allocated_for",
+      "object": "SecurityInitiative",
+      "voice": "passive",
+      "evidence": "Senior management approves security policies and allocates resources for security initiatives."
+    },
+    {
+      "paragraph_id": "p004",
+      "kind": "relation",
+      "subject": "Auditor",
+      "predicate": "evaluates",
+      "object": "ComplianceWithSecurityRequirement",
+      "evidence": "The auditor evaluates compliance with security requirements."
+    },
+    {
       "paragraph_id": "p004",
       "kind": "relation",
       "subject": "EndUser",
-      "predicate": "follows",
+      "predicate": "mustFollow",
       "object": "SecurityPolicy",
+      "modality": "must",
       "evidence": "The end user accesses systems and must follow security policies."
     }
   ],
@@ -394,10 +418,9 @@
     "defines",
     "recommends",
     "required_for",
-    "provides_oversight_for",
+    "provides_strategic_oversight_for",
     "approves",
     "allocates",
-    "supports",
     "coordinates",
     "classifies",
     "operates",
@@ -408,9 +431,10 @@
     "monitors",
     "investigates",
     "evaluates",
-    "checked_against",
     "accesses",
-    "follows"
+    "has_purpose_to_protect",
+    "allocated_for",
+    "mustFollow"
   ],
   "projection": {
     "required_source_stage": "semantic_claims",

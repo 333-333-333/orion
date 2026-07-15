@@ -1,3 +1,5 @@
+"""Validate namespaces and create deterministic resource IRIs."""
+
 from __future__ import annotations
 
 import re
@@ -14,11 +16,13 @@ _PHRASE_ARTICLES = {'a', 'an', 'the', 'any', 'each', 'one', 'more'}
 
 
 def _is_absolute_http_iri(value: str) -> bool:
+    """Return whether a value is an absolute HTTP or HTTPS IRI with an authority."""
     parsed = urlparse(value)
     return parsed.scheme in {'http', 'https'} and bool(parsed.netloc)
 
 
 def validate_base_iri(base_iri: str) -> str:
+    """Validate and return an absolute HTTP(S) base IRI."""
     if not isinstance(base_iri, str) or base_iri.strip() == '':
         raise ValueError('base_iri must be a non-empty string')
     candidate = base_iri.strip()
@@ -28,6 +32,7 @@ def validate_base_iri(base_iri: str) -> str:
 
 
 def validate_and_resolve_prefixes(base_iri: str, custom_prefixes: dict[str, str] | None = None) -> dict[str, str]:
+    """Validate custom prefixes and merge them with reserved and ORION namespaces."""
     resolved = dict(_RESERVED_PREFIXES)
     resolved[_DEFAULT_PREFIX] = base_iri
 
@@ -57,6 +62,7 @@ def validate_and_resolve_prefixes(base_iri: str, custom_prefixes: dict[str, str]
 
 
 def slugify_iri_part(text: str, style: str) -> str:
+    """Convert text into the requested class, predicate, or individual IRI style."""
     normalized = re.sub(r'[^a-z0-9]+', ' ', (text or '').casefold()).strip()
     parts = [part for part in normalized.split(' ') if part]
     if not parts:
@@ -78,6 +84,7 @@ def slugify_iri_part(text: str, style: str) -> str:
 
 
 def make_iri(text: str, kind: str, base_iri: str = _DEFAULT_BASE_IRI) -> str:
+    """Create an absolute IRI for a class, predicate, or individual label."""
     style = {'class': 'class', 'predicate': 'predicate', 'individual': 'individual'}.get(kind)
     if style is None:
         raise ValueError('kind must be one of: class, predicate, individual')
@@ -86,6 +93,7 @@ def make_iri(text: str, kind: str, base_iri: str = _DEFAULT_BASE_IRI) -> str:
 
 
 def compact_iri(iri: str, prefixes: dict[str, str] | None = None) -> str:
+    """Compact an absolute IRI with the first matching namespace prefix."""
     mapping = prefixes or {**_RESERVED_PREFIXES, _DEFAULT_PREFIX: _DEFAULT_BASE_IRI}
     for prefix, namespace in mapping.items():
         if iri.startswith(namespace):

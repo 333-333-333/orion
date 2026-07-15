@@ -1,3 +1,5 @@
+"""Orchestrate the tokenization pipeline stage while preserving the payload contract."""
+
 from __future__ import annotations
 
 from typing import Any
@@ -6,6 +8,7 @@ from pipeline.step_004_tokenization.rules import TOKEN_PATTERN, build_token_id
 
 
 def tokenize_sentences(input_payload: dict[str, Any]) -> dict[str, Any]:
+    """Tokenize sentence spans and return offset-preserving token records."""
     preprocessed_text = input_payload["preprocessed_text"]
     source_text_id = input_payload["source_text_id"]
 

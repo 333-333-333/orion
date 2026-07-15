@@ -1,3 +1,5 @@
+"""Expose the public API for the step 011 type assertion rules package."""
+
 from .type_patterns import (
     _concept_lookup,
     _dedupe_stable,

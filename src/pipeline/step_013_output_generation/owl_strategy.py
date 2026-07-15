@@ -1,3 +1,5 @@
+"""Generate the compatibility OWL graph representation."""
+
 from __future__ import annotations
 
 import re
@@ -7,10 +9,12 @@ from .namespace import compact_iri, make_iri, validate_and_resolve_prefixes, val
 
 
 def _normalize_text(value: str | None) -> str:
+    """Normalize text."""
     return (value or '').strip().casefold()
 
 
 def _normalize_predicate(value: str | None) -> str:
+    """Normalize predicate."""
     normalized = _normalize_text(value)
     if not normalized:
         return ''
@@ -22,6 +26,7 @@ _PHRASE_ARTICLES = {'a', 'an', 'the'}
 
 
 def _is_taxonomy_scaffold(value: str | None) -> bool:
+    """Return whether a label is a type, kind, category, or form-of scaffold."""
     normalized = _normalize_text(value)
     if not normalized:
         return False
@@ -32,6 +37,7 @@ def _is_taxonomy_scaffold(value: str | None) -> bool:
 
 
 def _dedupe_strings(values: list[str]) -> list[str]:
+    """Deduplicate strings while preserving deterministic order."""
     seen: set[str] = set()
     unique: list[str] = []
     for value in values:
@@ -43,6 +49,7 @@ def _dedupe_strings(values: list[str]) -> list[str]:
 
 
 def _dedupe_pairs(items: list[dict[str, str]], key_fields: tuple[str, ...]) -> list[dict[str, str]]:
+    """Deduplicate pairs while preserving deterministic order."""
     seen: set[tuple[str, ...]] = set()
     unique: list[dict[str, str]] = []
     for item in items:
@@ -55,11 +62,13 @@ def _dedupe_pairs(items: list[dict[str, str]], key_fields: tuple[str, ...]) -> l
 
 
 class OwlOutputStrategy:
+    """Compatibility strategy that builds the lightweight OWL graph representation."""
     def __init__(
         self,
         base_iri: str | None = None,
         prefixes: dict[str, str] | None = None,
     ) -> None:
+        """Initialize the OwlOutputStrategy."""
         self._namespace_mode = base_iri is not None or prefixes is not None
         if self._namespace_mode:
             resolved_base_iri = validate_base_iri(base_iri or 'https://orion.local/resource/')
@@ -70,9 +79,11 @@ class OwlOutputStrategy:
             self._prefixes = {}
 
     def _compact(self, text: str, kind: str) -> str:
+        """Create and compact an IRI in the strategy namespace."""
         return compact_iri(make_iri(text, kind=kind, base_iri=self._base_iri), self._prefixes)
 
     def generate(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Generate the compatibility OWL graph without mutating the input payload."""
         if self._namespace_mode:
             classes = _dedupe_strings([
                 self._compact(concept.get('normalized_text') or concept.get('lemma') or concept.get('text') or '', 'class')

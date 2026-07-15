@@ -1,3 +1,5 @@
+"""Preserve English temporal scope in semantic claims."""
+
 from __future__ import annotations
 
 import re
@@ -10,16 +12,16 @@ _TEMPORAL_SCOPE_PATTERN = re.compile(
     r'^(?P<subject>.+?)\s+(?P<verb>[A-Za-z]+(?:s|es|ies))\s+(?P<object>.+?)\s+(?P<scopes>before\s*,\s*during\s*,\s*(?:and\s*)?after|before\s+and\s+after|before|during|after)\s+(?P<context>.+?)\.?$',
     re.IGNORECASE,
 )
-_TEMPORAL_SCOPE_PREDICATES = {'before': 'applies_before', 'during': 'applies_during', 'after': 'applies_after'}
-
 
 class TemporalScopeRule(Rule):
+    """Rule that preserves before, during, and after scope as relation metadata."""
     rule_id = _TEMPORAL_RULE_ID
     stage = 'semantic_claims'
     priority = 10
     behavior = 'decompose_temporal_scope'
 
     def apply(self, claims: list[dict[str, Any]], context: RuleContext) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+        """Replace matching unscoped claims with one temporally qualified relation."""
         text = context.clean(str(context.sentence.get('text', '')))
         match = _TEMPORAL_SCOPE_PATTERN.match(text)
         if not match:
@@ -30,6 +32,10 @@ class TemporalScopeRule(Rule):
         scope_context = context.label(match.group('context'))
         if not subject or not predicate or not obj or not scope_context:
             return [], []
+        scopes = [
+            scope for scope in ('before', 'during', 'after')
+            if re.search(rf'\b{scope}\b', match.group('scopes'), flags=re.IGNORECASE)
+        ]
         base = context.make_claim(
             context.source_text_id,
             context.sentence,
@@ -41,24 +47,10 @@ class TemporalScopeRule(Rule):
             object=obj,
             extracted_by=self.rule_id,
             behavior=self.behavior,
+            temporal_relation=','.join(scopes),
+            temporal_object=scope_context,
         )
         emitted = [base]
-        for scope in ('before', 'during', 'after'):
-            if re.search(rf'\b{scope}\b', match.group('scopes'), flags=re.IGNORECASE):
-                emitted.append(context.make_claim(
-                    context.source_text_id,
-                    context.sentence,
-                    context.paragraph_id,
-                    f'{obj} {_TEMPORAL_SCOPE_PREDICATES[scope]} {scope_context}',
-                    'relation',
-                    subject=obj,
-                    predicate=_TEMPORAL_SCOPE_PREDICATES[scope],
-                    object=scope_context,
-                    extracted_by=self.rule_id,
-                    behavior=self.behavior,
-                    derivation=f'temporal_scope:{scope}',
-                    source_claim_id=str(base.get('claim_id', '')),
-                ))
         rejected = []
         sentence_id = str(context.sentence.get('sentence_id', ''))
         for claim in claims:

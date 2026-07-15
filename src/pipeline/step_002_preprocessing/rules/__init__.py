@@ -1,3 +1,5 @@
+"""Expose the public API for the step 002 preprocessing rules package."""
+
 from .normalization import normalize_newlines, normalize_unicode, collapse_repeated_spaces
 
 __all__ = [

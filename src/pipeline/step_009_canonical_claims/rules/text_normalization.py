@@ -1,3 +1,5 @@
+"""Normalize semantic claim labels, predicates, and object lists."""
+
 from __future__ import annotations
 
 import re
@@ -5,7 +7,7 @@ import re
 _ARTICLES = {'a', 'an', 'the', 'any', 'each', 'one', 'more'}
 _STOP_TAIL = re.compile(r'\b(?:focused|designed|intended|used|required)\b.*$', re.IGNORECASE)
 _BR_PERSONAL_PRONOUNS = {'he', 'she', 'they', 'it', 'we', 'his', 'her', 'their', 'its', 'them'}
-_BR_LEADING_CONTEXT_PREPOSITIONS = {'from', 'to', 'at', 'in', 'on', 'during', 'after', 'before'}
+_BR_LEADING_CONTEXT_PREPOSITIONS = {'from', 'to', 'at', 'in', 'inside', 'outside', 'on', 'during', 'after', 'before'}
 _BR_POSSESSIVE_PRONOUNS = {'his', 'her', 'their', 'its'}
 _BR_NOMINALIZED_ACTION_HEADS = {'ability', 'capability', 'capacity'}
 _BR_NOMINALIZED_CONTEXT_PREPOSITIONS = {'to', 'for', 'with', 'from', 'in', 'on', 'at'}
@@ -15,19 +17,24 @@ _BR_NLP_MODAL_OBJECT_NOMINALIZATION_PREPOSITION = 'of'
 
 
 def _clean(value: str | None) -> str:
+    """Trim text and collapse internal whitespace."""
     return re.sub(r'\s+', ' ', (value or '').strip())
 
 
 def _words(value: str | None) -> list[str]:
+    """Split text into non-empty alphanumeric word tokens."""
     return [token for token in re.sub(r'[^A-Za-z0-9]+', ' ', value or '').split() if token]
 
 
 def _strip_endpoint_context(value: str | None) -> str:
+    """Remove endpoint context."""
     text = _clean(value or '')
     if not text:
         return ''
+    text = re.sub(r'^(?:for\s+example|for\s+instance)\s*,\s*', '', text, count=1, flags=re.IGNORECASE)
     contextual = '|'.join(sorted(_BR_LEADING_CONTEXT_PREPOSITIONS))
     pronouns = '|'.join(sorted(_BR_PERSONAL_PRONOUNS))
+    # A comma-delimited leading phrase is sentence context, not part of the semantic endpoint.
     comma_match = re.match(rf'^(?:{contextual})\b[^,]*,\s*(?P<rest>.+)$', text, flags=re.IGNORECASE)
     if comma_match:
         text = comma_match.group('rest').strip()
@@ -45,9 +52,12 @@ def _strip_endpoint_context(value: str | None) -> str:
 
 
 def _singular(token: str) -> str:
+    """Apply deterministic singularization to one token while preserving its casing."""
     lower = token.casefold()
     if len(lower) > 3 and lower.endswith('ies'):
         return token[:-3] + 'y'
+    if lower.endswith('cises'):
+        return token[:-1]
     if len(lower) > 4 and lower.endswith(('ses', 'xes', 'zes', 'ches', 'shes')):
         return token[:-2]
     if len(lower) > 3 and lower.endswith('s') and not lower.endswith(('ss', 'us', 'is')):
@@ -57,6 +67,7 @@ def _singular(token: str) -> str:
 
 
 def _reorder_nominalized_action_object(value: str) -> str:
+    """Reorder nominalized action object."""
     pattern = (
         r'^(?:a|an|the)?\s*'
         r'(?P<head>' + '|'.join(sorted(_BR_NLP_MODAL_OBJECT_NOMINALIZATION_HEADS)) + r')\s+'
@@ -66,6 +77,7 @@ def _reorder_nominalized_action_object(value: str) -> str:
     match = re.match(pattern, _clean(value), flags=re.IGNORECASE)
     if not match:
         return value
+    # Put the domain object first so labels describe the concept rather than preserving nominalized word order.
     object_words = _words(match.group('object'))
     while object_words and object_words[0].casefold() in _ARTICLES:
         object_words.pop(0)
@@ -74,6 +86,7 @@ def _reorder_nominalized_action_object(value: str) -> str:
     return ' '.join([*object_words, match.group('action'), match.group('head')])
 
 def _phrase(value: str | None) -> str:
+    """Normalize a phrase, remove clause noise, and singularize semantic tokens."""
     text = _STOP_TAIL.sub('', _clean(value or ''))
     text = re.sub(r'\b(?:that|which|who)\b.*$', '', text, flags=re.IGNORECASE)
     # TASK-NLP-P039-P040-OBSERVATIONAL-CLEANUP: keep modal object as domain concept, not literal word order.
@@ -89,6 +102,7 @@ def _phrase(value: str | None) -> str:
 
 
 def _label(value: str | None) -> str:
+    """Convert normalized phrase text to a class-style semantic label."""
     value = _strip_endpoint_context(value)
     raw_tokens = _words(value or '')
     raw_by_lower = {token.casefold(): token for token in raw_tokens}
@@ -100,20 +114,24 @@ def _label(value: str | None) -> str:
 
 
 def _split_list(value: str | None) -> list[str]:
+    """Split list."""
     text = _clean(value or '').rstrip('.')
     text = re.sub(r'\b(?:and|or)\b', ',', text, flags=re.IGNORECASE)
     return [label for part in text.split(',') if (label := _label(part))]
 
 
 def _objects(value: str | None) -> list[str]:
+    """Return non-empty semantic labels parsed from an object list."""
     return [item for item in _split_list(value) if item]
 
 
 def _verb(value: str | None) -> str:
+    """Convert a verb token to the canonical third-person predicate form."""
     words = _words(value or '')
     token = (words[0].casefold() if words else '').replace(' ', '_')
     if not token:
         return ''
+    # These intentionally small inflection rules keep predicates deterministic without a morphology dependency.
     if token.endswith('ing'):
         base = token[:-3]
         if len(base) > 2 and base[-1] == base[-2]:
@@ -131,4 +149,5 @@ def _verb(value: str | None) -> str:
 
 
 def _strip_modifiers(value: str) -> str:
+    """Remove modifiers."""
     return re.sub(r'^(?:strategic|mandatory|good|technical|suspicious)\s+', '', _clean(value), flags=re.IGNORECASE)
